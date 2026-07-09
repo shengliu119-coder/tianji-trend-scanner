@@ -3,15 +3,30 @@ feishu:
   webhook_env: FEISHU_WEBHOOK
   dry_run_env: DRY_RUN
 
+model:
+  name: 天机伏击·A/B趋势起爆模型
+  output_grade: A类
+
+models:
+  - name: 天机伏击·趋势回踩模型
+    variant: legacy
+    output_grade: A类
+  - name: 天机伏击·A/B趋势起爆模型
+    variant: breakout
+    output_grade: A类
+
 scan:
   timezone: Asia/Shanghai
   min_rr: 2.0
   max_distance_to_entry_pct: 2.5
+  expiry_hours: 12
   state_file: state/signals.json
+  trade_ledger_file: state/trades.jsonl
+  performance_file: state/performance.json
+  performance_report: reports/performance.md
 
 crypto:
   enabled: true
-  market: OKX first, Binance fallback
   symbols:
     - FARTCOINUSDT
     - UNIUSDT
@@ -52,60 +67,3 @@ crypto:
   symbol_map:
     PEPEUSDT: 1000PEPEUSDT
     BONKUSDT: 1000BONKUSDT
-
-us_stocks:
-  enabled: true
-  market: 美股
-  index_symbols: [QQQ, SPY, ^NDX]
-  symbols:
-    - NVDA
-    - AMD
-    - AVGO
-    - TSM
-    - ARM
-    - MU
-    - SMCI
-    - PLTR
-    - MSFT
-    - META
-    - SNDK
-    - SPCX
-    - TSLA
-  earnings_blackout_days: 2
-
-cn_stocks:
-  enabled: true
-  market: A股
-  indexes:
-    上证指数: "1.000001"
-    深证成指: "0.399001"
-    创业板指: "0.399006"
-    科创50: "1.000688"
-    沪深300: "1.000300"
-  symbols:
-    中际旭创: "0.300308"
-    新易盛: "0.300502"
-    工业富联: "1.601138"
-    寒武纪: "1.688256"
-    沪电股份: "0.002463"
-    宁德时代: "0.300750"
-    比亚迪: "0.002594"
-    阳光电源: "0.300274"
-    立讯精密: "0.002475"
-    北方华创: "0.002371"
-    华海诚科: "1.688535"
-    深科技: "0.000021"
-    中芯国际: "1.688981"
-    兆易创新: "1.603986"
-    雅克科技: "0.002409"
-    华大九天: "0.301269"
-    北京君正: "0.300223"
-    同花顺: "0.300033"
-    指南针: "0.300803"
-    瑞芯微: "1.603893"
-    江波龙: "0.301308"
-    长光华芯: "1.688048"
-    晶方科技: "1.603005"
-    天奈科技: "1.688116"
-    多氟多: "0.002407"
-    晶盛机电: "0.300316"
