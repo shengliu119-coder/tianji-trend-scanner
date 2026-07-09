@@ -294,20 +294,85 @@ def binance_mark_klines(symbol: str, interval: str, limit: int = 220) -> list[Ca
     ]
 
 
+def okx_inst_id(symbol: str) -> str:
+    base = symbol.upper()
+    if base.startswith("1000PEPE"):
+        base = "PEPEUSDT"
+    if base.startswith("1000BONK"):
+        base = "BONKUSDT"
+    if base.endswith("USDT"):
+        base = base[:-4]
+    return f"{base}-USDT-SWAP"
+
+
+def okx_bar(interval: str) -> str:
+    return {
+        "1d": "1D",
+        "4h": "4H",
+        "2h": "2H",
+        "1h": "1H",
+        "30m": "30m",
+        "15m": "15m",
+    }.get(interval, interval)
+
+
+def okx_mark_klines(symbol: str, interval: str, limit: int = 220) -> list[Candle]:
+    qs = urllib.parse.urlencode({"instId": okx_inst_id(symbol), "bar": okx_bar(interval), "limit": limit})
+    url = f"https://www.okx.com/api/v5/market/candles?{qs}"
+    payload = http_json(url, retries=3)
+    if str(payload.get("code")) != "0":
+        raise RuntimeError(f"OKX candles failed: {payload.get('msg') or payload.get('code')}")
+    rows = list(reversed(payload.get("data", [])))
+    return [
+        Candle(int(r[0]), float(r[1]), float(r[2]), float(r[3]), float(r[4]), float(r[5] or 0.0))
+        for r in rows
+    ]
+
+
+def crypto_klines(symbol: str, interval: str, limit: int = 220) -> list[Candle]:
+    try:
+        return okx_mark_klines(symbol, interval, limit)
+    except Exception as okx_exc:  # noqa: BLE001
+        try:
+            return binance_mark_klines(symbol, interval, limit)
+        except Exception as binance_exc:  # noqa: BLE001
+            raise RuntimeError(f"OKX and Binance both failed: OKX={okx_exc}; Binance={binance_exc}") from binance_exc
+
+
 def binance_24h_tickers() -> dict[str, dict[str, Any]]:
-    rows = http_json("https://fapi.binance.com/fapi/v1/ticker/24hr", retries=2)
     out: dict[str, dict[str, Any]] = {}
-    for row in rows:
-        symbol = row.get("symbol")
-        if symbol:
-            out[symbol] = row
+    try:
+        rows = http_json("https://fapi.binance.com/fapi/v1/ticker/24hr", retries=2)
+        for row in rows:
+            symbol = row.get("symbol")
+            if symbol:
+                out[symbol] = row
+    except Exception as exc:  # noqa: BLE001
+        print(f"Binance 24h ticker unavailable, using OKX fallback: {exc}", file=sys.stderr)
+
+    try:
+        payload = http_json("https://www.okx.com/api/v5/market/tickers?instType=SWAP", retries=3)
+        if str(payload.get("code")) == "0":
+            for row in payload.get("data", []):
+                inst_id = str(row.get("instId", ""))
+                if inst_id.endswith("-USDT-SWAP"):
+                    base = inst_id.replace("-USDT-SWAP", "")
+                    symbol = f"{base}USDT"
+                    out.setdefault(symbol, row)
+                    if symbol == "PEPEUSDT":
+                        out.setdefault("1000PEPEUSDT", row)
+                    if symbol == "BONKUSDT":
+                        out.setdefault("1000BONKUSDT", row)
+    except Exception as exc:  # noqa: BLE001
+        print(f"OKX 24h ticker fallback unavailable: {exc}", file=sys.stderr)
+
     return out
 
 
 def fetch_bundle(symbol: str) -> dict[str, dict[str, float]]:
     bundle: dict[str, dict[str, float]] = {}
     for interval in ("1d", "4h", "2h", "1h", "30m", "15m"):
-        candles = binance_mark_klines(symbol, interval)
+        candles = crypto_klines(symbol, interval)
         bundle[interval] = summarize(candles)
     return bundle
 
@@ -444,73 +509,4 @@ def evaluate_vegas_pullback_long(display_symbol: str, actual_symbol: str, bundle
     score = 48
     score += 16 if macd_repairing_to_zero(h4) else 0
     score += 12 if h2_low * 0.995 <= price <= h2_high * 1.025 else 6
-    score += 12 if trigger_ok else (6 if partial_trigger else 0)
-    score += 6 if volume_ok else 0
-    score += 10 if rr >= 2.0 else 0
-
-    if score >= 85 and trigger_ok and volume_ok and current_near_entry:
-        grade = "A类"
-        status = "入场区内" if entry_low <= price <= entry_high else "接近入场"
-        action = "等待触发确认后按失效位管理"
-    elif score >= 70 and partial_trigger and current_near_entry:
-        grade = "B类观察"
-        status = "入场区内" if entry_low <= price <= entry_high else "接近入场"
-        action = "观察，不追单；跌破Vegas通道下沿取消"
-    else:
-        return None
-
-    return Signal(
-        market="币圈",
-        symbol=display_symbol,
-        direction="做多",
-        grade=grade,
-        stage="Vegas回踩修复",
-        status=status,
-        price=price,
-        entry_low=entry_low,
-        entry_high=entry_high,
-        invalid=invalid,
-        target1=target1,
-        market_state=market_state,
-        setup_state="2H回踩Vegas通道",
-        reason="4H动能回归0轴；2H回踩EMA144/169；小级别出现修复/反转结构",
-        action=action,
-        score=int(score),
-        actual_symbol=actual_symbol,
-    )
-
-
-def evaluate_long(display_symbol: str, actual_symbol: str, bundle: dict[str, dict[str, float]], market_state: str, max_distance_pct: float, min_rr: float) -> Signal | None:
-    daily = bundle["1d"]
-    h4 = bundle["4h"]
-    h1 = bundle["1h"]
-    m15 = bundle["15m"]
-    price = h1["close"]
-
-    vegas_signal = evaluate_vegas_pullback_long(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr)
-    if vegas_signal is not None:
-        return vegas_signal
-
-    if market_state in {"弱", "急跌"}:
-        return None
-    if h1["rsi"] > 75:
-        return None
-
-    pullbacks, higher_low = pullback_quality_from_bundle(bundle)
-    near_band = min(abs(pct(price, h1["ema20"])), abs(pct(price, h1["ema52"]))) <= max_distance_pct
-    daily_ok = daily["close"] > daily["ema20"] or daily["close"] > daily["ema52"]
-    hourly_ok = h1["close"] > h1["ema20"] and h1["hist"] >= h1["hist_prev"]
-    trigger_ok = m15["close"] > m15["ema20"] and m15["hist"] >= m15["hist_prev"] and m15["rsi"] >= 45
-    volume_ok = m15["vol"] >= m15["vol_ma10"] * 0.8
-
-    if not daily_ok or not near_band or pullbacks < 1 or not higher_low:
-        return None
-
-    entry_low = min(h1["ema20"], h1["ema52"]) * 0.995
-    entry_high = max(h1["ema20"], h1["ema52"]) * 1.012
-    if price > entry_high * 1.025:
-        return None
-
-    invalid = min(h1["low20"], entry_low * 0.975)
-    target1 = min(h1["high20"], price + (price - invalid) * 2.2)
-    rr = risk_reward_long(price, entry
+    score += 12 if trigger_ok else (6 if partial_trigger
