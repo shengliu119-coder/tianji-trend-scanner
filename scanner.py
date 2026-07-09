@@ -1,22 +1,20 @@
 from __future__ import annotations
 
 import json
-import math
 import os
 import sys
 import time
-import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 import yaml
 
 
-USER_AGENT = "tianji-trend-scanner/1.0"
+USER_AGENT = "tianji-trend-scanner/1.1"
+HTTP_TIMEOUT = 20
 
 
 @dataclass
@@ -41,6 +39,8 @@ class Signal:
     entry_high: float
     invalid: float
     target1: float
+    index_state: str
+    sector_state: str
     reason: str
     action: str
     score: int
@@ -50,21 +50,26 @@ class Signal:
         return f"{self.market}:{self.symbol}:{self.direction}"
 
 
-def http_json(url: str, timeout: int = 20) -> Any:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=timeout) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+def http_json(url: str, timeout: int = HTTP_TIMEOUT, retries: int = 3, sleep_s: float = 0.8) -> Any:
+    last_error: Exception | None = None
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except Exception as exc:
+            last_error = exc
+            if attempt + 1 < retries:
+                time.sleep(sleep_s * (attempt + 1))
+    raise RuntimeError(f"request failed: {last_error}")
 
 
-def http_post_json(url: str, payload: dict[str, Any], timeout: int = 20) -> Any:
+def http_post_json(url: str, payload: dict[str, Any], timeout: int = HTTP_TIMEOUT) -> Any:
     body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
     req = urllib.request.Request(
         url,
         data=body,
-        headers={
-            "Content-Type": "application/json; charset=utf-8",
-            "User-Agent": USER_AGENT,
-        },
+        headers={"Content-Type": "application/json; charset=utf-8", "User-Agent": USER_AGENT},
         method="POST",
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -107,14 +112,14 @@ def rsi(values: list[float], period: int = 14) -> list[float]:
     if len(values) < period + 1:
         return [50.0] * len(values)
     out = [50.0] * period
-    gains = []
-    losses = []
+    avg_gain = 0.0
+    avg_loss = 0.0
     for i in range(1, period + 1):
         diff = values[i] - values[i - 1]
-        gains.append(max(diff, 0))
-        losses.append(abs(min(diff, 0)))
-    avg_gain = sum(gains) / period
-    avg_loss = sum(losses) / period
+        avg_gain += max(diff, 0)
+        avg_loss += abs(min(diff, 0))
+    avg_gain /= period
+    avg_loss /= period
     for i in range(period, len(values)):
         if i > period:
             diff = values[i] - values[i - 1]
@@ -147,6 +152,8 @@ def fmt_price(x: float) -> str:
 
 
 def summarize(candles: list[Candle]) -> dict[str, float]:
+    if len(candles) < 60:
+        raise ValueError("not enough candles")
     closes = [c.close for c in candles]
     vols = [c.volume for c in candles]
     dif, dea, hist = macd(closes)
@@ -172,24 +179,53 @@ def summarize(candles: list[Candle]) -> dict[str, float]:
 def binance_klines(symbol: str, interval: str, limit: int = 220) -> list[Candle]:
     qs = urllib.parse.urlencode({"symbol": symbol, "interval": interval, "limit": limit})
     url = f"https://fapi.binance.com/fapi/v1/markPriceKlines?{qs}"
-    rows = http_json(url)
+    rows = http_json(url, retries=2)
     return [
-        Candle(
-            ts=int(r[0]),
-            open=float(r[1]),
-            high=float(r[2]),
-            low=float(r[3]),
-            close=float(r[4]),
-            volume=0.0,
-        )
+        Candle(int(r[0]), float(r[1]), float(r[2]), float(r[3]), float(r[4]), 0.0)
         for r in rows
     ]
 
 
+def okx_inst_id(symbol: str) -> str:
+    base = symbol.removesuffix("USDT")
+    if base == "1000PEPE":
+        base = "PEPE"
+    if base == "1000BONK":
+        base = "BONK"
+    return f"{base}-USDT-SWAP"
+
+
+def okx_bar(interval: str) -> str:
+    return {"15m": "15m", "1h": "1H", "4h": "4H", "1d": "1D"}.get(interval, interval)
+
+
+def okx_klines(symbol: str, interval: str, limit: int = 220) -> list[Candle]:
+    qs = urllib.parse.urlencode({"instId": okx_inst_id(symbol), "bar": okx_bar(interval), "limit": limit})
+    url = f"https://www.okx.com/api/v5/market/candles?{qs}"
+    data = http_json(url)
+    if data.get("code") != "0":
+        raise RuntimeError(data.get("msg") or f"OKX error for {symbol}")
+    rows = list(reversed(data.get("data", [])))
+    return [
+        Candle(int(r[0]), float(r[1]), float(r[2]), float(r[3]), float(r[4]), float(r[5] or 0))
+        for r in rows
+    ]
+
+
+def crypto_klines(symbol: str, interval: str, limit: int = 220) -> list[Candle]:
+    errors = []
+    for source in (okx_klines, binance_klines):
+        try:
+            candles = source(symbol, interval, limit)
+            if len(candles) >= min(60, limit):
+                return candles
+        except Exception as exc:
+            errors.append(f"{source.__name__}: {exc}")
+    raise RuntimeError("; ".join(errors))
+
+
 def yahoo_chart(symbol: str, interval: str, range_: str) -> list[Candle]:
-    qs = urllib.parse.urlencode(
-        {"interval": interval, "range": range_, "includePrePost": "false", "events": "div,splits"}
-    )
+    qs = urllib.parse.urlencode({"interval": interval, "range": range_, "includePrePost": "false"})
     url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(symbol)}?{qs}"
     data = http_json(url)
     result = data["chart"]["result"][0]
@@ -215,7 +251,7 @@ def eastmoney_klines(secid: str, klt: int, limit: int = 220) -> list[Candle]:
         "lmt": limit,
     }
     url = "https://push2his.eastmoney.com/api/qt/stock/kline/get?" + urllib.parse.urlencode(params)
-    data = http_json(url)
+    data = http_json(url, retries=4, sleep_s=1.2)
     rows = (data.get("data") or {}).get("klines") or []
     out = []
     for row in rows:
@@ -227,9 +263,7 @@ def eastmoney_klines(secid: str, klt: int, limit: int = 220) -> list[Candle]:
 def market_state(summaries: list[dict[str, float]]) -> str:
     if not summaries:
         return "震荡"
-    strong = 0
-    weak = 0
-    acute = 0
+    strong = weak = acute = 0
     for s in summaries:
         c = s["close"]
         if c > s["ema20"] > s["ema52"]:
@@ -248,8 +282,6 @@ def market_state(summaries: list[dict[str, float]]) -> str:
 
 
 def recent_pullback_quality(candles: list[Candle]) -> tuple[int, bool]:
-    if len(candles) < 30:
-        return 0, False
     lows = [c.low for c in candles[-30:]]
     pivots = []
     for i in range(2, len(lows) - 2):
@@ -278,9 +310,7 @@ def evaluate_long(
 
     if battlefield in ("弱", "急跌"):
         return None
-    if h["rsi"] > 75:
-        return None
-    if price < h["low20"] * 1.01:
+    if h["rsi"] > 75 or price < h["low20"] * 1.01:
         return None
 
     pullbacks, higher_low = recent_pullback_quality(h60)
@@ -290,9 +320,7 @@ def evaluate_long(
     trigger_ok = m["close"] > m["ema20"] and m["hist"] > m["hist_prev"] and m["rsi"] >= 45
     volume_ok = m["vol"] >= m["vol_ma10"] * 0.8
 
-    if not daily_ok or not near_ema:
-        return None
-    if pullbacks < 1 or not higher_low:
+    if not daily_ok or not near_ema or pullbacks < 1 or not higher_low:
         return None
 
     entry_low = min(h["ema20"], h["ema52"]) * 0.995
@@ -306,8 +334,7 @@ def evaluate_long(
     if risk <= 0 or reward / risk < 2:
         return None
 
-    score = 0
-    score += {"强": 20, "震荡": 12}.get(battlefield, 0)
+    score = {"强": 20, "震荡": 12}.get(battlefield, 0)
     score += 18 if daily_ok else 0
     score += 7 if price > d["ema20"] else 0
     score += 15 if pullbacks >= 2 else 8
@@ -338,6 +365,8 @@ def evaluate_long(
         entry_high=entry_high,
         invalid=invalid,
         target1=target1,
+        index_state=battlefield,
+        sector_state="强势/不冲突",
         reason=f"{battlefield}环境；日线不冲突；{pullbacks}段回踩；30M动能{'确认' if trigger_ok else '待确认'}",
         action="观察，不追单" if grade.startswith("B") else "等待触发后按失效位管理",
         score=int(score),
@@ -352,8 +381,8 @@ def render_signal(sig: Signal) -> str:
         f"入场区：{fmt_price(sig.entry_low)}-{fmt_price(sig.entry_high)}\n"
         f"失效位：{fmt_price(sig.invalid)}\n"
         f"目标1：{fmt_price(sig.target1)}\n"
-        f"指数：按模型过滤通过\n"
-        f"板块：强势/不冲突\n"
+        f"指数：{sig.index_state}\n"
+        f"板块：{sig.sector_state}\n"
         f"原因：{sig.reason}\n"
         f"处理：{sig.action}"
     )
@@ -361,12 +390,9 @@ def render_signal(sig: Signal) -> str:
 
 def feishu_send(config: dict[str, Any], text: str) -> None:
     feishu = config.get("feishu", {})
-    if not feishu.get("enabled", True):
-        print(text)
-        return
     webhook = os.environ.get(feishu.get("webhook_env", "FEISHU_WEBHOOK"), "")
     dry_run = os.environ.get(feishu.get("dry_run_env", "DRY_RUN"), "").lower() in ("1", "true", "yes")
-    if dry_run or not webhook:
+    if not feishu.get("enabled", True) or dry_run or not webhook:
         print("DRY_RUN or missing FEISHU_WEBHOOK; message:")
         print(text)
         return
@@ -394,16 +420,16 @@ def scan_crypto(config: dict[str, Any]) -> list[Signal]:
     if not section.get("enabled", False):
         return []
     mapping = section.get("symbol_map", {})
-    btc = summarize(binance_klines("BTCUSDT", "4h"))
-    eth = summarize(binance_klines("ETHUSDT", "4h"))
+    btc = summarize(crypto_klines("BTCUSDT", "4h"))
+    eth = summarize(crypto_klines("ETHUSDT", "4h"))
     battlefield = market_state([btc, eth])
     signals: list[Signal] = []
     for display in section.get("symbols", []):
         actual = mapping.get(display, display)
         try:
-            daily = binance_klines(actual, "1d")
-            h60 = binance_klines(actual, "1h")
-            h30 = binance_klines(actual, "15m")
+            daily = crypto_klines(actual, "1d")
+            h60 = crypto_klines(actual, "1h")
+            h30 = crypto_klines(actual, "15m")
             sig = evaluate_long("币圈", display, daily, h60, h30, battlefield)
             if sig:
                 signals.append(sig)
