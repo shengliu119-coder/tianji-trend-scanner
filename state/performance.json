@@ -3,12 +3,12 @@
     "做多": {
       "avg_r": 0.0,
       "families": 15,
-      "triggered": 2,
+      "triggered": 3,
       "win_rate": 0.0
     },
     "做空": {
       "avg_r": 0.0,
-      "families": 18,
+      "families": 19,
       "triggered": 1,
       "win_rate": 0.0
     }
@@ -17,12 +17,12 @@
     "B类观察，不追单": {
       "avg_r": 0.0,
       "families": 15,
-      "triggered": 2,
+      "triggered": 3,
       "win_rate": 0.0
     },
     "B类观察，不追空": {
       "avg_r": 0.0,
-      "families": 18,
+      "families": 19,
       "triggered": 1,
       "win_rate": 0.0
     }
@@ -30,46 +30,46 @@
   "by_market_state": {
     "震荡": {
       "avg_r": 0.0,
-      "families": 33,
-      "triggered": 3,
+      "families": 34,
+      "triggered": 4,
       "win_rate": 0.0
     }
   },
   "by_model": {
     "天机伏击·A/B趋势起爆模型": {
       "avg_r": 0.0,
-      "families": 33,
-      "triggered": 3,
+      "families": 34,
+      "triggered": 4,
       "win_rate": 0.0
     }
   },
   "by_stage": {
     "反弹承压": {
       "avg_r": 0.0,
-      "families": 18,
+      "families": 19,
       "triggered": 1,
       "win_rate": 0.0
     },
     "平台突破回踩": {
       "avg_r": 0.0,
       "families": 15,
-      "triggered": 2,
+      "triggered": 3,
       "win_rate": 0.0
     }
   },
   "model_name": "天机伏击·A/B趋势起爆模型",
   "overall": {
     "avg_r": 0.0,
-    "effective_rate": 0.3,
+    "effective_rate": 0.3077,
     "expired": 0,
-    "families": 33,
+    "families": 34,
     "losses": 0,
     "max_drawdown_r": -0.2969,
     "max_floating_r": 0.3691,
-    "pushed": 10,
-    "triggered": 3,
+    "pushed": 13,
+    "triggered": 4,
     "win_rate": 0.0,
     "wins": 0
   },
-  "updated_at": "2026-07-10T04:02:15+08:00"
+  "updated_at": "2026-07-10T05:39:26+08:00"
 }
