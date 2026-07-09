@@ -11,7 +11,7 @@ scan:
 
 crypto:
   enabled: true
-  market: Binance USDT-M
+  market: OKX first, Binance fallback
   symbols:
     - FARTCOINUSDT
     - UNIUSDT
