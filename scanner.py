@@ -7,14 +7,34 @@ import time
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 import yaml
 
 
-USER_AGENT = "tianji-trend-scanner/1.1"
+USER_AGENT = "tianji-trend-scanner/2.0"
 HTTP_TIMEOUT = 20
+CN_TZ = ZoneInfo("Asia/Shanghai")
+FINAL_STATES = {"目标1达成", "失效", "过期"}
+NOTIFY_EVENTS = {"push", "upgrade", "touch_entry", "trigger", "target1", "invalid", "expire"}
+COMPARE_FIELDS = (
+    "signal_id",
+    "grade",
+    "status",
+    "entry_low",
+    "entry_high",
+    "invalid",
+    "target1",
+    "push_price",
+    "trigger_price",
+    "open",
+    "triggered",
+    "final_r",
+    "last_event",
+)
 
 
 @dataclass
@@ -33,21 +53,32 @@ class Signal:
     symbol: str
     direction: str
     grade: str
+    stage: str
     status: str
     price: float
     entry_low: float
     entry_high: float
     invalid: float
     target1: float
-    index_state: str
-    sector_state: str
+    market_state: str
+    setup_state: str
     reason: str
     action: str
     score: int
+    actual_symbol: str
 
     @property
-    def key(self) -> str:
+    def family_key(self) -> str:
         return f"{self.market}:{self.symbol}:{self.direction}"
+
+    @property
+    def signal_id(self) -> str:
+        ts = datetime.now(CN_TZ).strftime("%Y%m%d%H%M%S")
+        return f"{ts}:{self.symbol}:{self.direction}:{self.grade}"
+
+
+def now_iso() -> str:
+    return datetime.now(CN_TZ).isoformat(timespec="seconds")
 
 
 def http_json(url: str, timeout: int = HTTP_TIMEOUT, retries: int = 3, sleep_s: float = 0.8) -> Any:
@@ -56,8 +87,9 @@ def http_json(url: str, timeout: int = HTTP_TIMEOUT, retries: int = 3, sleep_s: 
         try:
             req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
             with urllib.request.urlopen(req, timeout=timeout) as resp:
-                return json.loads(resp.read().decode("utf-8"))
-        except Exception as exc:
+                raw = resp.read().decode("utf-8")
+                return json.loads(raw)
+        except Exception as exc:  # noqa: BLE001
             last_error = exc
             if attempt + 1 < retries:
                 time.sleep(sleep_s * (attempt + 1))
@@ -79,23 +111,95 @@ def http_post_json(url: str, payload: dict[str, Any], timeout: int = HTTP_TIMEOU
 
 def load_config() -> dict[str, Any]:
     with open("config.yaml", "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        config = yaml.safe_load(f) or {}
+
+    config.setdefault("feishu", {})
+    config.setdefault("scan", {})
+    config.setdefault("crypto", {})
+    config.setdefault("us_stocks", {})
+    config.setdefault("cn_stocks", {})
+
+    config["feishu"].setdefault("enabled", True)
+    config["feishu"].setdefault("webhook_env", "FEISHU_WEBHOOK")
+    config["feishu"].setdefault("dry_run_env", "DRY_RUN")
+
+    config["scan"].setdefault("state_file", "state/signals.json")
+    config["scan"].setdefault("trade_ledger_file", "state/trades.jsonl")
+    config["scan"].setdefault("performance_file", "state/performance.json")
+    config["scan"].setdefault("performance_report", "reports/performance.md")
+    config["scan"].setdefault("expiry_hours", 12)
+    config["scan"].setdefault("min_rr", 2.0)
+    config["scan"].setdefault("max_distance_to_entry_pct", 2.5)
+
+    config["crypto"].setdefault("enabled", True)
+    config["crypto"].setdefault("symbols", [])
+    config["crypto"].setdefault("symbol_map", {})
+
+    config["us_stocks"].setdefault("enabled", False)
+    config["cn_stocks"].setdefault("enabled", False)
+    return config
+
+
+def ensure_parent(path: str | Path) -> None:
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
 
 
 def load_state(path: str) -> dict[str, Any]:
     p = Path(path)
     if not p.exists():
-        return {"signals": {}}
+        return {"signals": {}, "meta": {"schema": 1, "updated_at": None}}
     with p.open("r", encoding="utf-8") as f:
-        return json.load(f)
+        state = json.load(f)
+    if "signals" not in state or not isinstance(state["signals"], dict):
+        state["signals"] = {}
+    state.setdefault("meta", {"schema": 1, "updated_at": None})
+    return state
 
 
 def save_state(path: str, state: dict[str, Any]) -> None:
-    p = Path(path)
-    p.parent.mkdir(parents=True, exist_ok=True)
-    with p.open("w", encoding="utf-8") as f:
+    ensure_parent(path)
+    state.setdefault("meta", {})
+    state["meta"]["updated_at"] = now_iso()
+    with Path(path).open("w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2, sort_keys=True)
         f.write("\n")
+
+
+def load_jsonl(path: str) -> list[dict[str, Any]]:
+    p = Path(path)
+    if not p.exists():
+        return []
+    rows: list[dict[str, Any]] = []
+    with p.open("r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rows.append(json.loads(line))
+            except json.JSONDecodeError:
+                continue
+    return rows
+
+
+def append_jsonl(path: str, row: dict[str, Any]) -> None:
+    ensure_parent(path)
+    with Path(path).open("a", encoding="utf-8") as f:
+        f.write(json.dumps(row, ensure_ascii=False, sort_keys=True))
+        f.write("\n")
+
+
+def write_json(path: str, payload: dict[str, Any]) -> None:
+    ensure_parent(path)
+    with Path(path).open("w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2, sort_keys=True)
+        f.write("\n")
+
+
+def write_text(path: str, text: str) -> None:
+    ensure_parent(path)
+    with Path(path).open("w", encoding="utf-8") as f:
+        f.write(text)
 
 
 def ema(values: list[float], period: int) -> list[float]:
@@ -158,12 +262,16 @@ def summarize(candles: list[Candle]) -> dict[str, float]:
     vols = [c.volume for c in candles]
     dif, dea, hist = macd(closes)
     return {
+        "open": candles[-1].open,
+        "high": candles[-1].high,
+        "low": candles[-1].low,
         "close": closes[-1],
         "ema10": ema(closes, 10)[-1],
         "ema20": ema(closes, 20)[-1],
         "ema24": ema(closes, 24)[-1],
         "ema52": ema(closes, 52)[-1],
         "ema144": ema(closes, 144)[-1],
+        "ema169": ema(closes, 169)[-1],
         "rsi": rsi(closes)[-1],
         "dif": dif[-1],
         "dea": dea[-1],
@@ -176,7 +284,7 @@ def summarize(candles: list[Candle]) -> dict[str, float]:
     }
 
 
-def binance_klines(symbol: str, interval: str, limit: int = 220) -> list[Candle]:
+def binance_mark_klines(symbol: str, interval: str, limit: int = 220) -> list[Candle]:
     qs = urllib.parse.urlencode({"symbol": symbol, "interval": interval, "limit": limit})
     url = f"https://fapi.binance.com/fapi/v1/markPriceKlines?{qs}"
     rows = http_json(url, retries=2)
@@ -186,329 +294,223 @@ def binance_klines(symbol: str, interval: str, limit: int = 220) -> list[Candle]
     ]
 
 
-def okx_inst_id(symbol: str) -> str:
-    base = symbol.removesuffix("USDT")
-    if base == "1000PEPE":
-        base = "PEPE"
-    if base == "1000BONK":
-        base = "BONK"
-    return f"{base}-USDT-SWAP"
-
-
-def okx_bar(interval: str) -> str:
-    return {"15m": "15m", "1h": "1H", "4h": "4H", "1d": "1D"}.get(interval, interval)
-
-
-def okx_klines(symbol: str, interval: str, limit: int = 220) -> list[Candle]:
-    qs = urllib.parse.urlencode({"instId": okx_inst_id(symbol), "bar": okx_bar(interval), "limit": limit})
-    url = f"https://www.okx.com/api/v5/market/candles?{qs}"
-    data = http_json(url)
-    if data.get("code") != "0":
-        raise RuntimeError(data.get("msg") or f"OKX error for {symbol}")
-    rows = list(reversed(data.get("data", [])))
-    return [
-        Candle(int(r[0]), float(r[1]), float(r[2]), float(r[3]), float(r[4]), float(r[5] or 0))
-        for r in rows
-    ]
-
-
-def crypto_klines(symbol: str, interval: str, limit: int = 220) -> list[Candle]:
-    errors = []
-    for source in (okx_klines, binance_klines):
-        try:
-            candles = source(symbol, interval, limit)
-            if len(candles) >= min(60, limit):
-                return candles
-        except Exception as exc:
-            errors.append(f"{source.__name__}: {exc}")
-    raise RuntimeError("; ".join(errors))
-
-
-def yahoo_chart(symbol: str, interval: str, range_: str) -> list[Candle]:
-    qs = urllib.parse.urlencode({"interval": interval, "range": range_, "includePrePost": "false"})
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(symbol)}?{qs}"
-    data = http_json(url)
-    result = data["chart"]["result"][0]
-    ts = result.get("timestamp") or []
-    q = result["indicators"]["quote"][0]
-    out = []
-    for i, t in enumerate(ts):
-        vals = [q.get(k, [None] * len(ts))[i] for k in ("open", "high", "low", "close", "volume")]
-        if any(v is None for v in vals[:4]):
-            continue
-        out.append(Candle(int(t) * 1000, float(vals[0]), float(vals[1]), float(vals[2]), float(vals[3]), float(vals[4] or 0)))
-    return out
-
-
-def eastmoney_klines(secid: str, klt: int, limit: int = 220) -> list[Candle]:
-    params = {
-        "secid": secid,
-        "fields1": "f1,f2,f3,f4,f5,f6",
-        "fields2": "f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61",
-        "klt": klt,
-        "fqt": 1,
-        "end": "20500101",
-        "lmt": limit,
-    }
-    url = "https://push2his.eastmoney.com/api/qt/stock/kline/get?" + urllib.parse.urlencode(params)
-    data = http_json(url, retries=4, sleep_s=1.2)
-    rows = (data.get("data") or {}).get("klines") or []
-    out = []
+def binance_24h_tickers() -> dict[str, dict[str, Any]]:
+    rows = http_json("https://fapi.binance.com/fapi/v1/ticker/24hr", retries=2)
+    out: dict[str, dict[str, Any]] = {}
     for row in rows:
-        parts = row.split(",")
-        out.append(Candle(0, float(parts[1]), float(parts[3]), float(parts[4]), float(parts[2]), float(parts[5])))
+        symbol = row.get("symbol")
+        if symbol:
+            out[symbol] = row
     return out
 
 
-def market_state(summaries: list[dict[str, float]]) -> str:
-    if not summaries:
-        return "震荡"
-    strong = weak = acute = 0
-    for s in summaries:
-        c = s["close"]
-        if c > s["ema20"] > s["ema52"]:
-            strong += 1
-        if c < s["ema20"] < s["ema52"]:
-            weak += 1
-        if pct(c, s["ema20"]) < -3 and s["rsi"] < 35:
-            acute += 1
-    if acute >= max(1, len(summaries) // 2):
+def fetch_bundle(symbol: str) -> dict[str, dict[str, float]]:
+    bundle: dict[str, dict[str, float]] = {}
+    for interval in ("1d", "4h", "2h", "1h", "30m", "15m"):
+        candles = binance_mark_klines(symbol, interval)
+        bundle[interval] = summarize(candles)
+    return bundle
+
+
+def candle_cache_get(cache: dict[str, dict[str, dict[str, float]]], symbol: str) -> dict[str, dict[str, float]]:
+    if symbol not in cache:
+        cache[symbol] = fetch_bundle(symbol)
+    return cache[symbol]
+
+
+def detect_market_state(btc_4h: dict[str, float], eth_4h: dict[str, float], btc_1h: dict[str, float]) -> str:
+    acute = btc_1h["close"] < btc_1h["ema20"] and btc_1h["rsi"] < 35 and pct(btc_1h["close"], btc_1h["ema20"]) < -2.5
+    weak = btc_4h["close"] < btc_4h["ema20"] and eth_4h["close"] < eth_4h["ema20"] and btc_4h["close"] < btc_4h["ema52"] and eth_4h["close"] < eth_4h["ema52"]
+    strong = btc_4h["close"] > btc_4h["ema20"] and eth_4h["close"] > eth_4h["ema20"] and btc_1h["rsi"] >= 50
+    if acute:
         return "急跌"
-    if strong >= max(1, len(summaries) // 2):
-        return "强"
-    if weak >= max(1, len(summaries) // 2):
+    if weak:
         return "弱"
+    if strong:
+        return "强"
     return "震荡"
 
 
-def recent_pullback_quality(candles: list[Candle]) -> tuple[int, bool]:
-    lows = [c.low for c in candles[-30:]]
-    pivots = []
-    for i in range(2, len(lows) - 2):
-        if lows[i] == min(lows[i - 2 : i + 3]):
-            pivots.append(lows[i])
-    if len(pivots) < 2:
-        return len(pivots), False
-    return min(len(pivots), 3), pivots[-1] >= pivots[-2] * 0.985
+def pivots(values: list[float], side: str) -> list[float]:
+    out: list[float] = []
+    for i in range(2, len(values) - 2):
+        window = values[i - 2 : i + 3]
+        if side == "low" and values[i] == min(window):
+            out.append(values[i])
+        if side == "high" and values[i] == max(window):
+            out.append(values[i])
+    return out
 
 
-def evaluate_long(
-    market: str,
-    symbol: str,
-    daily: list[Candle],
-    h60: list[Candle],
-    h30: list[Candle],
-    battlefield: str,
-    strict_leader: bool = False,
-) -> Signal | None:
-    if len(daily) < 80 or len(h60) < 80 or len(h30) < 50:
-        return None
-    d = summarize(daily)
-    h = summarize(h60)
-    m = summarize(h30)
-    price = h["close"]
+def pullback_quality(candles: list[Candle]) -> tuple[int, bool]:
+    lows = [c.low for c in candles[-40:]]
+    points = pivots(lows, "low")
+    if len(points) < 2:
+        return len(points), False
+    higher_low = points[-1] >= points[-2] * 0.985
+    return min(len(points), 3), higher_low
 
-    if battlefield in ("弱", "急跌"):
-        return None
-    if h["rsi"] > 75 or price < h["low20"] * 1.01:
-        return None
 
-    pullbacks, higher_low = recent_pullback_quality(h60)
-    near_ema = min(abs(pct(price, h["ema20"])), abs(pct(price, h["ema52"]))) <= 2.5
-    daily_ok = d["close"] > d["ema20"] or d["close"] > d["ema52"]
-    hourly_ok = h["close"] > h["ema20"] and h["hist"] >= h["hist_prev"]
-    trigger_ok = m["close"] > m["ema20"] and m["hist"] > m["hist_prev"] and m["rsi"] >= 45
-    volume_ok = m["vol"] >= m["vol_ma10"] * 0.8
+def rebound_quality(candles: list[Candle]) -> tuple[int, bool]:
+    highs = [c.high for c in candles[-40:]]
+    points = pivots(highs, "high")
+    if len(points) < 2:
+        return len(points), False
+    lower_high = points[-1] <= points[-2] * 1.015
+    return min(len(points), 3), lower_high
 
-    if not daily_ok or not near_ema or pullbacks < 1 or not higher_low:
-        return None
 
-    entry_low = min(h["ema20"], h["ema52"]) * 0.995
-    entry_high = max(h["ema20"], h["ema52"]) * 1.012
-    if price > entry_high * 1.025:
-        return None
-    invalid = min(h["low20"], entry_low * 0.975)
-    target1 = min(h["high20"], price + (price - invalid) * 2.2)
+def risk_reward_long(price: float, entry_low: float, invalid: float, target1: float) -> float:
     risk = price - invalid
     reward = target1 - price
-    if risk <= 0 or reward / risk < 2:
+    return reward / risk if risk > 0 else 0.0
+
+
+def risk_reward_short(price: float, entry_high: float, invalid: float, target1: float) -> float:
+    risk = invalid - price
+    reward = price - target1
+    return reward / risk if risk > 0 else 0.0
+
+
+def vegas_bounds(frame: dict[str, float]) -> tuple[float, float]:
+    low = min(frame["ema144"], frame["ema169"])
+    high = max(frame["ema144"], frame["ema169"])
+    return low, high
+
+
+def macd_repairing_to_zero(frame: dict[str, float]) -> bool:
+    improving_hist = frame["hist"] >= frame["hist_prev"]
+    near_zero = abs(frame["dif"]) <= frame["close"] * 0.025
+    bullish_crossing = frame["dif"] >= frame["dea"] or frame["hist"] > 0
+    return improving_hist and (near_zero or bullish_crossing)
+
+
+def small_reversal(frame: dict[str, float]) -> bool:
+    reclaim_fast_ma = frame["close"] >= frame["ema20"] or frame["close"] >= frame["ema24"]
+    momentum_repair = frame["hist"] >= frame["hist_prev"] and frame["rsi"] >= 42
+    return reclaim_fast_ma and momentum_repair
+
+
+def is_long_direction(direction: str) -> bool:
+    return direction in {"做多", "鍋氬"}
+
+
+def is_short_direction(direction: str) -> bool:
+    return direction in {"做空", "鍋氱┖"}
+
+
+def vegas_pullback_long_context(bundle: dict[str, dict[str, float]]) -> bool:
+    h4 = bundle["4h"]
+    h2 = bundle.get("2h", bundle["1h"])
+    price = bundle["1h"]["close"]
+    h2_low, h2_high = vegas_bounds(h2)
+    h4_low, h4_high = vegas_bounds(h4)
+    near_h2_vegas = h2_low * 0.985 <= price <= h2_high * 1.04
+    near_h4_vegas = h4_low * 0.985 <= price <= h4_high * 1.06
+    support_not_broken = price >= h2["low20"] * 1.003 or h2["rsi"] >= 43
+    return (near_h2_vegas or near_h4_vegas) and macd_repairing_to_zero(h4) and support_not_broken
+
+
+def evaluate_vegas_pullback_long(display_symbol: str, actual_symbol: str, bundle: dict[str, dict[str, float]], market_state: str, max_distance_pct: float, min_rr: float) -> Signal | None:
+    h4 = bundle["4h"]
+    h2 = bundle.get("2h", bundle["1h"])
+    h1 = bundle["1h"]
+    m30 = bundle.get("30m", h1)
+    m15 = bundle["15m"]
+    price = h1["close"]
+
+    h2_low, h2_high = vegas_bounds(h2)
+    if not vegas_pullback_long_context(bundle):
         return None
 
-    score = {"强": 20, "震荡": 12}.get(battlefield, 0)
-    score += 18 if daily_ok else 0
-    score += 7 if price > d["ema20"] else 0
-    score += 15 if pullbacks >= 2 else 8
-    score += 5 if higher_low else 0
-    score += 10 if trigger_ok else 3
-    score += 5 if volume_ok else 0
-    score += 10 if reward / risk >= 2 else 0
-    if strict_leader and battlefield != "强":
-        score -= 10
+    entry_low = h2_low * 0.995
+    entry_high = h2_high * 1.018
+    if price > entry_high * (1 + max_distance_pct / 100):
+        return None
+    if price < entry_low * 0.985:
+        return None
 
-    if score >= 85 and trigger_ok and volume_ok and hourly_ok and pullbacks >= 2:
+    invalid = min(h2["low20"], h2_low * 0.982)
+    target1 = max(h2["high20"], h4["high20"], price + (price - invalid) * 2.2)
+    rr = risk_reward_long(price, entry_low, invalid, target1)
+    if rr < min_rr:
+        return None
+
+    trigger_ok = small_reversal(m15) and small_reversal(m30)
+    partial_trigger = small_reversal(m15) or small_reversal(m30) or h1["close"] >= h1["ema24"]
+    volume_ok = m15["vol"] >= m15["vol_ma10"] * 0.75
+    current_near_entry = entry_low * 0.995 <= price <= entry_high * 1.015
+
+    score = 48
+    score += 16 if macd_repairing_to_zero(h4) else 0
+    score += 12 if h2_low * 0.995 <= price <= h2_high * 1.025 else 6
+    score += 12 if trigger_ok else (6 if partial_trigger else 0)
+    score += 6 if volume_ok else 0
+    score += 10 if rr >= 2.0 else 0
+
+    if score >= 85 and trigger_ok and volume_ok and current_near_entry:
         grade = "A类"
         status = "入场区内" if entry_low <= price <= entry_high else "接近入场"
-    elif score >= 70 and entry_low * 0.995 <= price <= entry_high * 1.015:
+        action = "等待触发确认后按失效位管理"
+    elif score >= 70 and partial_trigger and current_near_entry:
         grade = "B类观察"
         status = "入场区内" if entry_low <= price <= entry_high else "接近入场"
+        action = "观察，不追单；跌破Vegas通道下沿取消"
     else:
         return None
 
     return Signal(
-        market=market,
-        symbol=symbol,
+        market="币圈",
+        symbol=display_symbol,
         direction="做多",
         grade=grade,
+        stage="Vegas回踩修复",
         status=status,
         price=price,
         entry_low=entry_low,
         entry_high=entry_high,
         invalid=invalid,
         target1=target1,
-        index_state=battlefield,
-        sector_state="强势/不冲突",
-        reason=f"{battlefield}环境；日线不冲突；{pullbacks}段回踩；30M动能{'确认' if trigger_ok else '待确认'}",
-        action="观察，不追单" if grade.startswith("B") else "等待触发后按失效位管理",
+        market_state=market_state,
+        setup_state="2H回踩Vegas通道",
+        reason="4H动能回归0轴；2H回踩EMA144/169；小级别出现修复/反转结构",
+        action=action,
         score=int(score),
+        actual_symbol=actual_symbol,
     )
 
 
-def render_signal(sig: Signal) -> str:
-    return (
-        f"股票趋势机会｜{sig.market}｜{sig.symbol}｜{sig.direction}｜{sig.grade}\n\n"
-        f"现价：{fmt_price(sig.price)}\n"
-        f"状态：{sig.status}\n"
-        f"入场区：{fmt_price(sig.entry_low)}-{fmt_price(sig.entry_high)}\n"
-        f"失效位：{fmt_price(sig.invalid)}\n"
-        f"目标1：{fmt_price(sig.target1)}\n"
-        f"指数：{sig.index_state}\n"
-        f"板块：{sig.sector_state}\n"
-        f"原因：{sig.reason}\n"
-        f"处理：{sig.action}"
-    )
+def evaluate_long(display_symbol: str, actual_symbol: str, bundle: dict[str, dict[str, float]], market_state: str, max_distance_pct: float, min_rr: float) -> Signal | None:
+    daily = bundle["1d"]
+    h4 = bundle["4h"]
+    h1 = bundle["1h"]
+    m15 = bundle["15m"]
+    price = h1["close"]
 
+    vegas_signal = evaluate_vegas_pullback_long(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr)
+    if vegas_signal is not None:
+        return vegas_signal
 
-def feishu_send(config: dict[str, Any], text: str) -> None:
-    feishu = config.get("feishu", {})
-    webhook = os.environ.get(feishu.get("webhook_env", "FEISHU_WEBHOOK"), "")
-    dry_run = os.environ.get(feishu.get("dry_run_env", "DRY_RUN"), "").lower() in ("1", "true", "yes")
-    if not feishu.get("enabled", True) or dry_run or not webhook:
-        print("DRY_RUN or missing FEISHU_WEBHOOK; message:")
-        print(text)
-        return
-    http_post_json(webhook, {"msg_type": "text", "content": {"text": text}})
+    if market_state in {"弱", "急跌"}:
+        return None
+    if h1["rsi"] > 75:
+        return None
 
+    pullbacks, higher_low = pullback_quality_from_bundle(bundle)
+    near_band = min(abs(pct(price, h1["ema20"])), abs(pct(price, h1["ema52"]))) <= max_distance_pct
+    daily_ok = daily["close"] > daily["ema20"] or daily["close"] > daily["ema52"]
+    hourly_ok = h1["close"] > h1["ema20"] and h1["hist"] >= h1["hist_prev"]
+    trigger_ok = m15["close"] > m15["ema20"] and m15["hist"] >= m15["hist_prev"] and m15["rsi"] >= 45
+    volume_ok = m15["vol"] >= m15["vol_ma10"] * 0.8
 
-def should_notify(sig: Signal, state: dict[str, Any]) -> bool:
-    old = state.setdefault("signals", {}).get(sig.key)
-    snapshot = {
-        "grade": sig.grade,
-        "status": sig.status,
-        "entry_low": round(sig.entry_low, 6),
-        "entry_high": round(sig.entry_high, 6),
-        "invalid": round(sig.invalid, 6),
-        "target1": round(sig.target1, 6),
-    }
-    if old != snapshot:
-        state["signals"][sig.key] = snapshot
-        return True
-    return False
+    if not daily_ok or not near_band or pullbacks < 1 or not higher_low:
+        return None
 
+    entry_low = min(h1["ema20"], h1["ema52"]) * 0.995
+    entry_high = max(h1["ema20"], h1["ema52"]) * 1.012
+    if price > entry_high * 1.025:
+        return None
 
-def scan_crypto(config: dict[str, Any]) -> list[Signal]:
-    section = config.get("crypto", {})
-    if not section.get("enabled", False):
-        return []
-    mapping = section.get("symbol_map", {})
-    btc = summarize(crypto_klines("BTCUSDT", "4h"))
-    eth = summarize(crypto_klines("ETHUSDT", "4h"))
-    battlefield = market_state([btc, eth])
-    signals: list[Signal] = []
-    for display in section.get("symbols", []):
-        actual = mapping.get(display, display)
-        try:
-            daily = crypto_klines(actual, "1d")
-            h60 = crypto_klines(actual, "1h")
-            h30 = crypto_klines(actual, "15m")
-            sig = evaluate_long("币圈", display, daily, h60, h30, battlefield)
-            if sig:
-                signals.append(sig)
-        except Exception as exc:
-            print(f"skip crypto {display}: {exc}", file=sys.stderr)
-    return signals
-
-
-def scan_us(config: dict[str, Any]) -> list[Signal]:
-    section = config.get("us_stocks", {})
-    if not section.get("enabled", False):
-        return []
-    index_summaries = []
-    for idx in section.get("index_symbols", []):
-        try:
-            index_summaries.append(summarize(yahoo_chart(idx, "60m", "3mo")))
-        except Exception as exc:
-            print(f"skip us index {idx}: {exc}", file=sys.stderr)
-    battlefield = market_state(index_summaries)
-    signals: list[Signal] = []
-    for symbol in section.get("symbols", []):
-        try:
-            daily = yahoo_chart(symbol, "1d", "1y")
-            h60 = yahoo_chart(symbol, "60m", "3mo")
-            h30 = yahoo_chart(symbol, "30m", "1mo")
-            sig = evaluate_long("美股", symbol, daily, h60, h30, battlefield, strict_leader=True)
-            if sig:
-                signals.append(sig)
-        except Exception as exc:
-            print(f"skip us {symbol}: {exc}", file=sys.stderr)
-    return signals
-
-
-def scan_cn(config: dict[str, Any]) -> list[Signal]:
-    section = config.get("cn_stocks", {})
-    if not section.get("enabled", False):
-        return []
-    index_summaries = []
-    for name, secid in section.get("indexes", {}).items():
-        try:
-            index_summaries.append(summarize(eastmoney_klines(secid, 60)))
-        except Exception as exc:
-            print(f"skip cn index {name}: {exc}", file=sys.stderr)
-    battlefield = market_state(index_summaries)
-    signals: list[Signal] = []
-    for name, secid in section.get("symbols", {}).items():
-        try:
-            daily = eastmoney_klines(secid, 101)
-            h60 = eastmoney_klines(secid, 60)
-            h30 = eastmoney_klines(secid, 30)
-            sig = evaluate_long("A股", name, daily, h60, h30, battlefield, strict_leader=True)
-            if sig:
-                signals.append(sig)
-        except Exception as exc:
-            print(f"skip cn {name}: {exc}", file=sys.stderr)
-    return signals
-
-
-def main() -> int:
-    config = load_config()
-    state_path = config["scan"]["state_file"]
-    state = load_state(state_path)
-    all_signals: list[Signal] = []
-    for fn in (scan_crypto, scan_us, scan_cn):
-        try:
-            all_signals.extend(fn(config))
-        except Exception as exc:
-            print(f"scan module failed {fn.__name__}: {exc}", file=sys.stderr)
-
-    pushed = 0
-    for sig in sorted(all_signals, key=lambda s: (s.grade != "A类", -s.score)):
-        if should_notify(sig, state):
-            feishu_send(config, render_signal(sig))
-            pushed += 1
-            time.sleep(0.5)
-    save_state(state_path, state)
-    print(f"scan done: candidates={len(all_signals)}, pushed={pushed}")
-    return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+    invalid = min(h1["low20"], entry_low * 0.975)
+    target1 = min(h1["high20"], price + (price - invalid) * 2.2)
+    rr = risk_reward_long(price, entry
