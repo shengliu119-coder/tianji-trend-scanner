@@ -1,9 +1,9 @@
 {
   "by_direction": {
     "做多": {
-      "avg_r": 0.0,
-      "families": 37,
-      "triggered": 10,
+      "avg_r": 0.0369,
+      "families": 41,
+      "triggered": 16,
       "win_rate": 0.0
     },
     "做空": {
@@ -15,9 +15,9 @@
   },
   "by_grade": {
     "B类观察，不追单": {
-      "avg_r": 0.0,
-      "families": 37,
-      "triggered": 10,
+      "avg_r": 0.0369,
+      "families": 41,
+      "triggered": 16,
       "win_rate": 0.0
     },
     "B类观察，不追空": {
@@ -30,28 +30,28 @@
   "by_market_state": {
     "强": {
       "avg_r": 0.0,
-      "families": 29,
-      "triggered": 6,
+      "families": 33,
+      "triggered": 11,
       "win_rate": 0.0
     },
     "震荡": {
-      "avg_r": 0.0,
+      "avg_r": 0.0591,
       "families": 35,
-      "triggered": 6,
+      "triggered": 7,
       "win_rate": 0.0
     }
   },
   "by_model": {
     "天机伏击·A/B趋势起爆模型": {
-      "avg_r": 0.0,
-      "families": 48,
-      "triggered": 11,
+      "avg_r": 0.0394,
+      "families": 50,
+      "triggered": 12,
       "win_rate": 0.0
     },
     "天机伏击·趋势回踩模型": {
       "avg_r": 0.0,
-      "families": 16,
-      "triggered": 1,
+      "families": 18,
+      "triggered": 6,
       "win_rate": 0.0
     }
   },
@@ -63,9 +63,9 @@
       "win_rate": 0.0
     },
     "平台突破回踩": {
-      "avg_r": 0.0,
-      "families": 37,
-      "triggered": 10,
+      "avg_r": 0.0369,
+      "families": 41,
+      "triggered": 16,
       "win_rate": 0.0
     },
     "空头延续": {
@@ -77,17 +77,17 @@
   },
   "model_name": "三模型并行扫描",
   "overall": {
-    "avg_r": 0.0,
-    "effective_rate": 0.3243,
-    "expired": 2,
-    "families": 64,
+    "avg_r": 0.0281,
+    "effective_rate": 0.439,
+    "expired": 4,
+    "families": 68,
     "losses": 0,
-    "max_drawdown_r": -0.5635,
-    "max_floating_r": 0.5695,
-    "pushed": 37,
-    "triggered": 12,
+    "max_drawdown_r": -0.6988,
+    "max_floating_r": 0.69,
+    "pushed": 41,
+    "triggered": 18,
     "win_rate": 0.0,
     "wins": 0
   },
-  "updated_at": "2026-07-10T15:51:00+08:00"
+  "updated_at": "2026-07-10T19:16:49+08:00"
 }
