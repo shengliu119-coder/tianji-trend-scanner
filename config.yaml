@@ -5,15 +5,36 @@ feishu:
 
 model:
   name: 天机伏击·A/B趋势起爆模型
-  output_grade: A类
+  output_grade: A/B类
 
 models:
   - name: 天机伏击·趋势回踩模型
     variant: legacy
-    output_grade: A类
+    output_grade: A/B类
   - name: 天机伏击·A/B趋势起爆模型
     variant: breakout
-    output_grade: A类
+    output_grade: A/B类
+  - name: 天机伏击·主流币大周期反转模型
+    variant: macro
+    output_grade: A/B类
+
+macro:
+  enabled: true
+  min_rr: 2.2
+  max_distance_to_entry_pct: 2.5
+  symbols:
+    - BTCUSDT
+    - ETHUSDT
+    - BNBUSDT
+    - SOLUSDT
+    - XRPUSDT
+    - ADAUSDT
+    - AVAXUSDT
+    - DOGEUSDT
+    - LINKUSDT
+    - LTCUSDT
+    - BCHUSDT
+    - ETCUSDT
 
 scan:
   timezone: Asia/Shanghai
