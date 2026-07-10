@@ -2,33 +2,27 @@
   "by_direction": {
     "做多": {
       "avg_r": 0.0,
-      "families": 22,
-      "triggered": 8,
+      "families": 37,
+      "triggered": 9,
       "win_rate": 0.0
     },
     "做空": {
       "avg_r": 0.0,
-      "families": 26,
+      "families": 27,
       "triggered": 2,
       "win_rate": 0.0
     }
   },
   "by_grade": {
-    "A类": {
-      "avg_r": 0.0,
-      "families": 1,
-      "triggered": 0,
-      "win_rate": 0.0
-    },
     "B类观察，不追单": {
       "avg_r": 0.0,
-      "families": 21,
-      "triggered": 8,
+      "families": 37,
+      "triggered": 9,
       "win_rate": 0.0
     },
     "B类观察，不追空": {
       "avg_r": 0.0,
-      "families": 26,
+      "families": 27,
       "triggered": 2,
       "win_rate": 0.0
     }
@@ -36,13 +30,13 @@
   "by_market_state": {
     "强": {
       "avg_r": 0.0,
-      "families": 17,
-      "triggered": 5,
+      "families": 29,
+      "triggered": 6,
       "win_rate": 0.0
     },
     "震荡": {
       "avg_r": 0.0,
-      "families": 31,
+      "families": 35,
       "triggered": 5,
       "win_rate": 0.0
     }
@@ -51,7 +45,13 @@
     "天机伏击·A/B趋势起爆模型": {
       "avg_r": 0.0,
       "families": 48,
-      "triggered": 10,
+      "triggered": 11,
+      "win_rate": 0.0
+    },
+    "天机伏击·趋势回踩模型": {
+      "avg_r": 0.0,
+      "families": 16,
+      "triggered": 0,
       "win_rate": 0.0
     }
   },
@@ -64,24 +64,30 @@
     },
     "平台突破回踩": {
       "avg_r": 0.0,
-      "families": 22,
-      "triggered": 8,
+      "families": 37,
+      "triggered": 9,
+      "win_rate": 0.0
+    },
+    "空头延续": {
+      "avg_r": 0.0,
+      "families": 1,
+      "triggered": 0,
       "win_rate": 0.0
     }
   },
-  "model_name": "天机伏击·A/B趋势起爆模型",
+  "model_name": "三模型并行扫描",
   "overall": {
     "avg_r": 0.0,
-    "effective_rate": 0.3333,
+    "effective_rate": 0.2821,
     "expired": 2,
-    "families": 48,
+    "families": 64,
     "losses": 0,
     "max_drawdown_r": -0.5635,
     "max_floating_r": 0.1559,
-    "pushed": 30,
-    "triggered": 10,
+    "pushed": 39,
+    "triggered": 11,
     "win_rate": 0.0,
     "wins": 0
   },
-  "updated_at": "2026-07-10T12:07:50+08:00"
+  "updated_at": "2026-07-10T12:35:26+08:00"
 }
