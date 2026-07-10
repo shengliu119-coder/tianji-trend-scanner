@@ -18,6 +18,29 @@ import yaml
 
 MODEL_NAME = "天机伏击·A/B趋势起爆模型"
 LEGACY_MODEL_NAME = "天机伏击·趋势回踩模型"
+MACRO_MODEL_NAME = "天机伏击·主流币大周期反转模型"
+PORTFOLIO_NAME = "三模型并行扫描"
+MODEL_PRIORITY = {
+    LEGACY_MODEL_NAME: 0,
+    MODEL_NAME: 1,
+    MACRO_MODEL_NAME: 2,
+}
+DEFAULT_MACRO_SYMBOLS = (
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "AVAXUSDT",
+    "DOGEUSDT",
+    "LINKUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+)
+SHORT_TIMEFRAMES = ("1d", "4h", "2h", "1h", "30m", "15m")
+MACRO_TIMEFRAMES = ("1w",) + SHORT_TIMEFRAMES
 USER_AGENT = "tianji-trend-scanner/3.0"
 HTTP_TIMEOUT = 20
 CN_TZ = ZoneInfo("Asia/Shanghai")
@@ -26,6 +49,7 @@ FINAL_STATES = {"目标1达成", "失效", "过期"}
 MODEL_SPECS = (
     {"name": LEGACY_MODEL_NAME, "variant": "legacy"},
     {"name": MODEL_NAME, "variant": "breakout"},
+    {"name": MACRO_MODEL_NAME, "variant": "macro"},
 )
 SNAPSHOT_FIELDS = (
     "model_name",
@@ -144,17 +168,26 @@ def load_config() -> dict[str, Any]:
 
     config.setdefault("model", {})
     config.setdefault("models", [])
+    config.setdefault("macro", {})
     config.setdefault("feishu", {})
     config.setdefault("scan", {})
     config.setdefault("crypto", {})
 
     config["model"].setdefault("name", MODEL_NAME)
-    config["model"].setdefault("output_grade", "A类")
+    config["model"].setdefault("output_grade", "A/B类")
     if not config["models"]:
         config["models"] = [
-            {"name": LEGACY_MODEL_NAME, "variant": "legacy", "output_grade": "A类"},
-            {"name": MODEL_NAME, "variant": "breakout", "output_grade": "A类"},
+            {"name": LEGACY_MODEL_NAME, "variant": "legacy", "output_grade": "A/B类"},
+            {"name": MODEL_NAME, "variant": "breakout", "output_grade": "A/B类"},
+            {"name": MACRO_MODEL_NAME, "variant": "macro", "output_grade": "A/B类"},
         ]
+    elif not any(str(model.get("name")) == MACRO_MODEL_NAME for model in config["models"]):
+        config["models"].append({"name": MACRO_MODEL_NAME, "variant": "macro", "output_grade": "A/B类"})
+
+    config["macro"].setdefault("enabled", True)
+    config["macro"].setdefault("symbols", list(DEFAULT_MACRO_SYMBOLS))
+    config["macro"].setdefault("min_rr", 2.2)
+    config["macro"].setdefault("max_distance_to_entry_pct", 2.5)
 
     config["feishu"].setdefault("enabled", True)
     config["feishu"].setdefault("webhook_env", "FEISHU_WEBHOOK")
@@ -168,25 +201,25 @@ def load_config() -> dict[str, Any]:
     config["scan"].setdefault("expiry_hours", 12)
     config["scan"].setdefault("min_rr", 2.0)
     config["scan"].setdefault("max_distance_to_entry_pct", 2.5)
+    config["scan"].setdefault("v2_enabled", True)
+    config["scan"].setdefault("v2_max_distance_to_entry_pct", 2.0)
 
     config["crypto"].setdefault("enabled", True)
     config["crypto"].setdefault("symbols", [])
     config["crypto"].setdefault("symbol_map", {})
 
     return config
-
-
 def load_state(path: str) -> dict[str, Any]:
     p = Path(path)
     if not p.exists():
-        return {"signals": {}, "meta": {"schema": 2, "updated_at": None, "model_name": MODEL_NAME}}
+        return {"signals": {}, "meta": {"schema": 2, "updated_at": None, "model_name": PORTFOLIO_NAME}}
     with p.open("r", encoding="utf-8") as f:
         state = json.load(f)
     if not isinstance(state.get("signals"), dict):
         state["signals"] = {}
     state.setdefault("meta", {})
     state["meta"].setdefault("schema", 2)
-    state["meta"].setdefault("model_name", MODEL_NAME)
+    state["meta"].setdefault("model_name", PORTFOLIO_NAME)
     state["meta"].setdefault("updated_at", None)
     return state
 
@@ -195,7 +228,7 @@ def save_state(path: str, state: dict[str, Any]) -> None:
     ensure_parent(path)
     state.setdefault("meta", {})
     state["meta"]["schema"] = 2
-    state["meta"]["model_name"] = MODEL_NAME
+    state["meta"]["model_name"] = PORTFOLIO_NAME
     state["meta"]["updated_at"] = now_iso()
     with Path(path).open("w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2, sort_keys=True)
@@ -340,6 +373,7 @@ def okx_inst_id(symbol: str) -> str:
 
 def okx_bar(interval: str) -> str:
     return {
+        "1w": "1W",
         "1d": "1D",
         "4h": "4H",
         "2h": "2H",
@@ -402,12 +436,14 @@ def binance_24h_tickers() -> dict[str, dict[str, Any]]:
 def fetch_bundle(symbol: str) -> tuple[dict[str, dict[str, float]], dict[str, list[Candle]]]:
     candle_map: dict[str, list[Candle]] = {}
     bundle: dict[str, dict[str, float]] = {}
-    for interval in ("1d", "4h", "2h", "1h", "30m", "15m"):
+    for interval in MACRO_TIMEFRAMES:
         candles = crypto_klines(symbol, interval)
         candle_map[interval] = candles
         bundle[interval] = summarize(candles)
-    bundle["1h_pullbacks"], bundle["1h_higher_low"] = pullback_quality(candle_map["1h"])
-    bundle["1h_rebounds"], bundle["1h_lower_high"] = rebound_quality(candle_map["1h"])
+    for interval in ("1w", "1d", "4h", "1h"):
+        if interval in candle_map:
+            bundle[f"{interval}_pullbacks"], bundle[f"{interval}_higher_low"] = pullback_quality(candle_map[interval])
+            bundle[f"{interval}_rebounds"], bundle[f"{interval}_lower_high"] = rebound_quality(candle_map[interval])
     return bundle, candle_map
 
 
@@ -448,6 +484,29 @@ def risk_reward_short(price: float, invalid: float, target1: float) -> float:
     risk = invalid - price
     reward = price - target1
     return reward / risk if risk > 0 else 0.0
+
+
+def entry_gap_pct(price: float, entry_low: float, entry_high: float) -> float:
+    if entry_low <= price <= entry_high:
+        return 0.0
+    ref = entry_low if price < entry_low else entry_high
+    return abs(pct(price, ref)) if ref else 999.0
+
+
+def long_structure_broken(bundle: dict[str, dict[str, float]]) -> bool:
+    h1 = bundle["1h"]
+    h2 = bundle["2h"]
+    h4 = bundle["4h"]
+    support = min(h1["low20"], h2["low20"], h4["low20"])
+    return h1["close"] < support * 0.995
+
+
+def short_structure_broken(bundle: dict[str, dict[str, float]]) -> bool:
+    h1 = bundle["1h"]
+    h2 = bundle["2h"]
+    h4 = bundle["4h"]
+    resistance = max(h1["high20"], h2["high20"], h4["high20"])
+    return h1["close"] > resistance * 1.005
 
 
 def vegas_bounds(frame: dict[str, float]) -> tuple[float, float]:
@@ -526,7 +585,7 @@ def evaluate_long(display_symbol: str, actual_symbol: str, bundle: dict[str, dic
     m15 = bundle["15m"]
     price = h1["close"]
 
-    if h1["rsi"] > 75:
+    if h1["rsi"] > 75 and not small_reversal(h1, "做多") and not small_reversal(m15, "做多"):
         return None
     if market_state == "急跌":
         return None
@@ -554,6 +613,12 @@ def evaluate_long(display_symbol: str, actual_symbol: str, bundle: dict[str, dic
     rr = risk_reward_long(price, invalid, target1)
     if rr < min_rr:
         return None
+    if entry_gap_pct(price, entry_low, entry_high) > max_distance_pct:
+        return None
+    if not (daily_ok or h4_ok):
+        return None
+    if long_structure_broken(bundle):
+        return None
 
     score = model_score_base("做多", market_state)
     score += 18 if daily_ok else 0
@@ -565,7 +630,7 @@ def evaluate_long(display_symbol: str, actual_symbol: str, bundle: dict[str, dic
     score += 8 if rr >= 2.0 else 0
     score += 6 if rr >= 3.0 else 0
 
-    if score >= 85 and trigger_ok and volume_ok and h4_ok and pullbacks >= 2 and higher_low and market_state in {"强", "震荡"}:
+    if score >= 85 and trigger_ok and volume_ok and h4_ok and pullbacks >= 2 and higher_low and market_state == "强":
         grade = "A类"
     elif score >= 70 and market_state in {"强", "震荡", "弱"} and (partial_trigger or entry_low <= price <= entry_high):
         grade = "B类观察，不追单"
@@ -608,7 +673,7 @@ def evaluate_short(display_symbol: str, actual_symbol: str, bundle: dict[str, di
     m15 = bundle["15m"]
     price = h1["close"]
 
-    if h1["rsi"] < 25:
+    if h1["rsi"] < 25 and not small_reversal(h1, "做空") and not small_reversal(m15, "做空"):
         return None
     if market_state == "强":
         return None
@@ -635,6 +700,13 @@ def evaluate_short(display_symbol: str, actual_symbol: str, bundle: dict[str, di
     target1 = min(h1["low20"], h4["low20"], price - (invalid - price) * 2.2)
     rr = risk_reward_short(price, invalid, target1)
     if rr < min_rr:
+        return None
+
+    if entry_gap_pct(price, entry_low, entry_high) > max_distance_pct:
+        return None
+    if not (daily_ok or h4_ok):
+        return None
+    if short_structure_broken(bundle):
         return None
 
     score = model_score_base("做空", market_state)
@@ -732,7 +804,7 @@ def evaluate_legacy_long(
     score += 6 if volume_ok else 0
     score += 6 if rr >= 2.0 else 0
 
-    if score >= 82 and trigger_ok and volume_ok and market_state in {"强", "震荡"} and entry_low <= price <= entry_high * 1.01:
+    if score >= 82 and trigger_ok and volume_ok and market_state == "强" and entry_low <= price <= entry_high * 1.01:
         grade = "A类"
     elif score >= 68 and entry_low <= price <= entry_high:
         grade = "B类观察，不追单"
@@ -829,6 +901,219 @@ def evaluate_legacy_short(
     setup_state = f"{rebounds}段反弹 + {'量能确认' if volume_ok else '等待量能'}"
     reason = f"{market_state}环境；{stage}；{'1H承压' if trigger_ok else '等待1H确认'}；4H压力未收回"
     action = "等待反弹承压后按失效位执行" if grade == "A类" else "观察，不追空"
+
+    return Signal(
+        model_name=model_name,
+        market="币圈",
+        symbol=display_symbol,
+        actual_symbol=actual_symbol,
+        direction="做空",
+        grade=grade,
+        stage=stage,
+        setup_state=setup_state,
+        status=status,
+        price=price,
+        entry_low=entry_low,
+        entry_high=entry_high,
+        invalid=invalid,
+        target1=target1,
+        market_state=market_state,
+        reason=reason,
+        action=action,
+        score=int(score),
+    )
+
+
+
+def macro_long_cap_for_market(market_state: str) -> str:
+    if market_state in {"强", "震荡"}:
+        return "A类"
+    return "B类观察，不追单"
+
+
+def macro_short_cap_for_market(market_state: str) -> str:
+    if market_state in {"弱", "急跌"}:
+        return "A类"
+    return "B类观察，不追单"
+
+
+def evaluate_macro_long(
+    display_symbol: str,
+    actual_symbol: str,
+    bundle: dict[str, dict[str, float]],
+    market_state: str,
+    max_distance_pct: float,
+    min_rr: float,
+    model_name: str,
+) -> Signal | None:
+    weekly = bundle["1w"]
+    daily = bundle["1d"]
+    h4 = bundle["4h"]
+    h1 = bundle["1h"]
+    price = h4["close"]
+
+    weekly_pullbacks = int(bundle.get("1w_pullbacks", 0) or 0)
+    daily_pullbacks = int(bundle.get("1d_pullbacks", 0) or 0)
+    h4_pullbacks = int(bundle.get("4h_pullbacks", 0) or 0)
+    weekly_higher_low = bool(bundle.get("1w_higher_low", False))
+    daily_higher_low = bool(bundle.get("1d_higher_low", False))
+    h4_higher_low = bool(bundle.get("4h_higher_low", False))
+
+    weekly_repair = weekly["close"] >= weekly["ema20"] and weekly["hist"] >= weekly["hist_prev"] and weekly["rsi"] >= 44
+    daily_repair = daily["close"] >= daily["ema20"] and daily["hist"] >= daily["hist_prev"] and daily["rsi"] >= 46
+    h4_trigger = h4["close"] >= h4["ema20"] and h4["hist"] >= h4["hist_prev"] and h4["rsi"] >= 42
+    near_band = near_any_band(
+        price,
+        [weekly["ema20"], weekly["ema52"], daily["ema20"], daily["ema52"], h4["ema20"], h4["ema52"]],
+        max_distance_pct,
+    )
+
+    if not weekly_repair:
+        return None
+    if market_state == "急跌" and not (daily_repair and h4_trigger and weekly_higher_low):
+        return None
+
+    structure_ok = weekly_pullbacks >= 1 and daily_pullbacks >= 1 and h4_pullbacks >= 1 and weekly_higher_low and daily_higher_low and h4_higher_low
+    if not structure_ok and not (weekly_higher_low and daily_higher_low and h4_higher_low):
+        return None
+    if not near_band:
+        return None
+    if price > max(weekly["ema20"], weekly["ema52"], daily["ema20"], daily["ema52"], h4["ema20"], h4["ema52"]) * (1 + max_distance_pct / 100):
+        return None
+
+    entry_low = min(weekly["ema20"], daily["ema20"], h4["ema20"], h4["ema52"]) * 0.993
+    entry_high = max(weekly["ema20"], weekly["ema52"], daily["ema20"], daily["ema52"], h4["ema20"], h4["ema52"]) * 1.01
+    invalid = min(weekly["low20"], daily["low20"], h4["low20"], entry_low * 0.968)
+    target1 = max(weekly["high20"], daily["high20"], h4["high20"], price + (price - invalid) * 2.5)
+    rr = risk_reward_long(price, invalid, target1)
+    if rr < min_rr:
+        return None
+    if entry_gap_pct(price, entry_low, entry_high) > max_distance_pct:
+        return None
+
+    score = 0
+    score += 18 if weekly_repair else 0
+    score += 16 if daily_repair else 0
+    score += 14 if h4_trigger else 6
+    score += 8 if structure_ok else 4
+    score += 8 if near_band else 0
+    score += 8 if rr >= 2.0 else 0
+    score += 4 if rr >= 3.0 else 0
+    score += 4 if market_state in {"强", "震荡"} else 0
+
+    if score >= 82 and weekly_repair and daily_repair and h4_trigger and structure_ok and market_state in {"强", "震荡"}:
+        grade = "A类"
+    elif score >= 68 and (daily_repair or h4_trigger):
+        grade = "B类观察，不追单"
+    else:
+        return None
+
+    status = "入场区内" if entry_low <= price <= entry_high else "接近入场"
+    stage = "长期筑底确认" if weekly_higher_low and daily_higher_low and h4_trigger else "周线修复回踩"
+    setup_state = f"周线修复 + 日线{'抬高低点' if daily_higher_low else '待修复'} + 4H{'触发确认' if h4_trigger else '等待确认'}"
+    reason = f"周线修复，日线结构改善，4H回踩确认，目标看向前高区"
+    action = "按失效位执行，等待目标1" if grade == "A类" else "观察，不追单"
+
+    return Signal(
+        model_name=model_name,
+        market="币圈",
+        symbol=display_symbol,
+        actual_symbol=actual_symbol,
+        direction="做多",
+        grade=grade,
+        stage=stage,
+        setup_state=setup_state,
+        status=status,
+        price=price,
+        entry_low=entry_low,
+        entry_high=entry_high,
+        invalid=invalid,
+        target1=target1,
+        market_state=market_state,
+        reason=reason,
+        action=action,
+        score=int(score),
+    )
+
+
+def evaluate_macro_short(
+    display_symbol: str,
+    actual_symbol: str,
+    bundle: dict[str, dict[str, float]],
+    market_state: str,
+    max_distance_pct: float,
+    min_rr: float,
+    model_name: str,
+) -> Signal | None:
+    weekly = bundle["1w"]
+    daily = bundle["1d"]
+    h4 = bundle["4h"]
+    h1 = bundle["1h"]
+    price = h4["close"]
+
+    weekly_rebounds = int(bundle.get("1w_rebounds", 0) or 0)
+    daily_rebounds = int(bundle.get("1d_rebounds", 0) or 0)
+    h4_rebounds = int(bundle.get("4h_rebounds", 0) or 0)
+    weekly_lower_high = bool(bundle.get("1w_lower_high", False))
+    daily_lower_high = bool(bundle.get("1d_lower_high", False))
+    h4_lower_high = bool(bundle.get("4h_lower_high", False))
+
+    weekly_weak = weekly["close"] <= weekly["ema20"] and weekly["hist"] <= weekly["hist_prev"] and weekly["rsi"] <= 58
+    daily_break = daily["close"] < daily["ema20"] and daily["close"] < daily["ema52"] and daily["hist"] <= daily["hist_prev"]
+    h4_reject = h4["close"] <= h4["ema20"] and h4["hist"] <= h4["hist_prev"] and h4["rsi"] <= 58
+    near_band = near_any_band(
+        price,
+        [weekly["ema20"], weekly["ema52"], daily["ema20"], daily["ema52"], h4["ema20"], h4["ema52"]],
+        max_distance_pct,
+    )
+
+    if not weekly_weak:
+        return None
+    if market_state == "强":
+        return None
+    if not near_band:
+        return None
+
+    structure_ok = weekly_rebounds >= 1 and daily_rebounds >= 1 and h4_rebounds >= 1 and weekly_lower_high and daily_lower_high and h4_lower_high
+    if not structure_ok and not (weekly_lower_high and daily_lower_high and h4_lower_high):
+        return None
+    if not (daily_break or h4_reject):
+        return None
+    if price < min(weekly["ema20"], weekly["ema52"], daily["ema20"], daily["ema52"], h4["ema20"], h4["ema52"]) * (1 - max_distance_pct / 100):
+        return None
+
+    entry_low = min(weekly["ema20"], weekly["ema52"], daily["ema20"], daily["ema52"], h4["ema20"], h4["ema52"]) * 0.99
+    entry_high = max(weekly["ema20"], weekly["ema52"], daily["ema20"], daily["ema52"], h4["ema20"], h4["ema52"]) * 1.006
+    invalid = max(weekly["high20"], daily["high20"], h4["high20"], entry_high * 1.03)
+    target1 = min(weekly["low20"], daily["low20"], h4["low20"], price - (invalid - price) * 2.5)
+    rr = risk_reward_short(price, invalid, target1)
+    if rr < min_rr:
+        return None
+    if entry_gap_pct(price, entry_low, entry_high) > max_distance_pct:
+        return None
+
+    score = 0
+    score += 18 if weekly_weak else 0
+    score += 16 if daily_break else 0
+    score += 14 if h4_reject else 6
+    score += 8 if structure_ok else 4
+    score += 8 if near_band else 0
+    score += 8 if rr >= 2.0 else 0
+    score += 4 if rr >= 3.0 else 0
+    score += 4 if market_state in {"弱", "急跌"} else 0
+
+    if score >= 82 and weekly_weak and daily_break and h4_reject and structure_ok and market_state in {"弱", "急跌", "震荡"}:
+        grade = "A类"
+    elif score >= 68 and (daily_break or h4_reject):
+        grade = "B类观察，不追单"
+    else:
+        return None
+
+    status = "入场区内" if entry_low <= price <= entry_high else "接近入场"
+    stage = "长期顶部确认" if weekly_lower_high and daily_lower_high and h4_reject else "周线转弱回抽"
+    setup_state = f"周线转弱 + 日线{'跌破结构' if daily_break else '等待确认'} + 4H{'反抽承压' if h4_reject else '等待确认'}"
+    reason = f"周线转弱，日线破位，4H反抽承压，目标看向前低区"
+    action = "按失效位执行，等待目标1" if grade == "A类" else "观察，不追单"
 
     return Signal(
         model_name=model_name,
@@ -963,7 +1248,45 @@ def ledger_row(snapshot: dict[str, Any]) -> dict[str, Any]:
 
 
 def is_notifiable(snapshot: dict[str, Any]) -> bool:
-    return snapshot.get("grade") == "A类" and snapshot.get("last_event") in NOTIFY_EVENTS
+    return snapshot.get("grade") in {"A类", "B类"} and snapshot.get("last_event") in NOTIFY_EVENTS
+
+
+def event_priority(snapshot: dict[str, Any]) -> int:
+    return {
+        "target1": 5,
+        "invalid": 5,
+        "expire": 4,
+        "trigger": 3,
+        "upgrade": 2,
+        "push": 1,
+        "touch_entry": 0,
+    }.get(str(snapshot.get("last_event")), -1)
+
+
+def external_symbol_key(snapshot: dict[str, Any]) -> str:
+    return str(snapshot.get("symbol") or snapshot.get("actual_symbol") or snapshot.get("family_key") or "")
+
+
+def external_signal_rank(snapshot: dict[str, Any]) -> tuple[int, int, int, int]:
+    grade_rank = 1 if snapshot.get("grade") == "A类" else 0
+    return (
+        grade_rank,
+        event_priority(snapshot),
+        int(snapshot.get("score", 0) or 0),
+        MODEL_PRIORITY.get(str(snapshot.get("model_name")), -1),
+    )
+
+
+def select_external_events(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    winners: dict[str, dict[str, Any]] = {}
+    for event in events:
+        if not is_notifiable(event):
+            continue
+        key = external_symbol_key(event)
+        current = winners.get(key)
+        if current is None or external_signal_rank(event) > external_signal_rank(current):
+            winners[key] = event
+    return list(winners.values())
 
 
 def parse_time(value: str | None) -> datetime | None:
@@ -1076,8 +1399,6 @@ def update_open_signals(state: dict[str, Any], bundle_cache: dict[str, dict[str,
     expiry_hours = int(config["scan"]["expiry_hours"])
     signals = state.setdefault("signals", {})
     for family_key, snapshot in list(signals.items()):
-        if snapshot.get("model_name") != MODEL_NAME:
-            continue
         if not snapshot.get("open", True):
             continue
         actual_symbol = snapshot.get("actual_symbol") or snapshot.get("symbol")
@@ -1097,14 +1418,7 @@ def update_open_signals(state: dict[str, Any], bundle_cache: dict[str, dict[str,
 
 
 def build_bundle(symbol: str) -> dict[str, dict[str, float]]:
-    bundle: dict[str, dict[str, float]] = {}
-    candle_map: dict[str, list[Candle]] = {}
-    for interval in ("1d", "4h", "2h", "1h", "30m", "15m"):
-        candles = crypto_klines(symbol, interval)
-        candle_map[interval] = candles
-        bundle[interval] = summarize(candles)
-    bundle["1h_pullbacks"], bundle["1h_higher_low"] = pullback_quality(candle_map["1h"])
-    bundle["1h_rebounds"], bundle["1h_lower_high"] = rebound_quality(candle_map["1h"])
+    bundle, _ = fetch_bundle(symbol)
     return bundle
 
 
@@ -1121,6 +1435,9 @@ def evaluate_symbol(
     if variant == "legacy":
         long_sig = evaluate_legacy_long(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
         short_sig = evaluate_legacy_short(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
+    elif variant == "macro":
+        long_sig = evaluate_macro_long(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
+        short_sig = evaluate_macro_short(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
     else:
         long_sig = evaluate_long(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
         short_sig = evaluate_short(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
@@ -1129,11 +1446,17 @@ def evaluate_symbol(
 
 def scan_crypto(config: dict[str, Any], state: dict[str, Any], bundle_cache: dict[str, dict[str, dict[str, float]]]) -> tuple[list[Signal], str]:
     crypto_cfg = config.get("crypto", {})
+    macro_cfg = config.get("macro", {})
     if not crypto_cfg.get("enabled", True):
         return [], "震荡"
 
-    models = list(config.get("models", [])) or [{"name": config.get("model", {}).get("name", MODEL_NAME), "variant": "breakout"}]
+    models = list(config.get("models", [])) or [
+        {"name": config.get("model", {}).get("name", MODEL_NAME), "variant": "breakout"},
+        {"name": LEGACY_MODEL_NAME, "variant": "legacy"},
+        {"name": MACRO_MODEL_NAME, "variant": "macro"},
+    ]
     symbols = list(crypto_cfg.get("symbols", []))
+    macro_symbols = list(macro_cfg.get("symbols", DEFAULT_MACRO_SYMBOLS) or DEFAULT_MACRO_SYMBOLS)
     symbol_map = crypto_cfg.get("symbol_map", {})
     ticker_map = binance_24h_tickers()
 
@@ -1151,26 +1474,35 @@ def scan_crypto(config: dict[str, Any], state: dict[str, Any], bundle_cache: dic
 
     market_state = detect_market_state(btc_bundle["4h"], eth_bundle["4h"], btc_bundle["1h"])
     signals: list[Signal] = []
-    for display_symbol in symbols:
-        actual_symbol = symbol_map.get(display_symbol, display_symbol)
-        if actual_symbol not in ticker_map:
+    for model in models:
+        model_name = str(model.get("name", MODEL_NAME))
+        variant = str(model.get("variant", "breakout"))
+        if variant == "macro" and not macro_cfg.get("enabled", True):
             continue
-        try:
-            bundle = get_bundle(actual_symbol)
-        except Exception as exc:  # noqa: BLE001
-            print(f"skip crypto {display_symbol}: {exc}", file=sys.stderr)
-            continue
+        scan_symbols = macro_symbols if variant == "macro" else symbols
+        model_min_rr = float(macro_cfg.get("min_rr", crypto_cfg.get("min_rr", config["scan"]["min_rr"]))) if variant == "macro" else float(crypto_cfg.get("min_rr", config["scan"]["min_rr"]))
+        for display_symbol in scan_symbols:
+            actual_symbol = symbol_map.get(display_symbol, display_symbol)
+            if actual_symbol not in ticker_map:
+                continue
+            try:
+                bundle = get_bundle(actual_symbol)
+            except Exception as exc:  # noqa: BLE001
+                print(f"skip crypto {display_symbol}: {exc}", file=sys.stderr)
+                continue
 
-        for model in models:
-            model_name = str(model.get("name", MODEL_NAME))
-            variant = str(model.get("variant", "breakout"))
             chosen = evaluate_symbol(
                 display_symbol,
                 actual_symbol,
                 bundle,
                 market_state,
-                float(crypto_cfg.get("max_distance_to_entry_pct", config["scan"]["max_distance_to_entry_pct"])),
-                float(crypto_cfg.get("min_rr", config["scan"]["min_rr"])),
+                float(
+                    crypto_cfg.get(
+                        "v2_max_distance_to_entry_pct",
+                        crypto_cfg.get("max_distance_to_entry_pct", config["scan"]["v2_max_distance_to_entry_pct"]),
+                    )
+                ),
+                model_min_rr,
                 model_name,
                 variant,
             )
@@ -1258,8 +1590,6 @@ def render_group(title: str, group: dict[str, dict[str, Any]]) -> str:
 def compute_performance(trades: list[dict[str, Any]]) -> dict[str, Any]:
     latest: dict[str, dict[str, Any]] = {}
     for row in trades:
-        if row.get("model_name") != MODEL_NAME:
-            continue
         family = row.get("family_key")
         if not family:
             continue
@@ -1316,7 +1646,7 @@ def compute_performance(trades: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
     return {
-        "model_name": MODEL_NAME,
+        "model_name": PORTFOLIO_NAME,
         "updated_at": now_iso(),
         "overall": overall,
         "by_model": grouped("model_name"),
@@ -1329,7 +1659,7 @@ def compute_performance(trades: list[dict[str, Any]]) -> dict[str, Any]:
 
 def render_performance_report(perf: dict[str, Any]) -> str:
     overall = perf.get("overall", {})
-    lines = [f"# 飞书机会胜率报告", "", f"更新时刻：{perf.get('updated_at', '')}", f"模型：{perf.get('model_name', MODEL_NAME)}", ""]
+    lines = [f"# 飞书机会胜率报告", "", f"更新时刻：{perf.get('updated_at', '')}", f"模型：{perf.get('model_name', PORTFOLIO_NAME)}", ""]
     lines.append(
         render_table(
             "总体",
@@ -1392,11 +1722,16 @@ def main() -> int:
     pushed = 0
     for event in sorted(all_events, key=lambda r: (r.get("grade") != "A类", -int(r.get("score", 0) or 0))):
         append_jsonl(ledger_path, ledger_row(event))
-        if is_notifiable(event):
-            notify_and_record(config, state, event)
-            event["notified"] = True
-            state["signals"][event["family_key"]] = event
-            pushed += 1
+
+    external_events = select_external_events(all_events)
+    for event in sorted(
+        external_events,
+        key=lambda r: (r.get("grade") != "A类", -event_priority(r), -int(r.get("score", 0) or 0)),
+    ):
+        notify_and_record(config, state, event)
+        event["notified"] = True
+        state["signals"][event["family_key"]] = event
+        pushed += 1
 
     save_state(state_path, state)
 
