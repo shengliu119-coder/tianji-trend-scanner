@@ -1,7 +1,7 @@
 {
   "by_direction": {
     "做多": {
-      "avg_r": 0.0505,
+      "avg_r": 0.1239,
       "families": 44,
       "triggered": 18,
       "win_rate": 0.0556
@@ -14,11 +14,17 @@
     }
   },
   "by_grade": {
+    "A类": {
+      "avg_r": 0.0,
+      "families": 1,
+      "triggered": 1,
+      "win_rate": 0.0
+    },
     "B类观察，不追单": {
-      "avg_r": 0.0505,
-      "families": 44,
-      "triggered": 18,
-      "win_rate": 0.0556
+      "avg_r": 0.1308,
+      "families": 43,
+      "triggered": 17,
+      "win_rate": 0.0588
     },
     "B类观察，不追空": {
       "avg_r": -0.0025,
@@ -29,27 +35,27 @@
   },
   "by_market_state": {
     "强": {
-      "avg_r": 0.0603,
-      "families": 38,
-      "triggered": 15,
-      "win_rate": 0.0667
+      "avg_r": 0.1434,
+      "families": 39,
+      "triggered": 16,
+      "win_rate": 0.0625
     },
     "震荡": {
-      "avg_r": -0.0024,
-      "families": 33,
-      "triggered": 6,
+      "avg_r": -0.0058,
+      "families": 32,
+      "triggered": 5,
       "win_rate": 0.0
     }
   },
   "by_model": {
     "天机伏击·A/B趋势起爆模型": {
-      "avg_r": -0.0016,
+      "avg_r": 0.0405,
       "families": 51,
       "triggered": 15,
       "win_rate": 0.0
     },
     "天机伏击·趋势回踩模型": {
-      "avg_r": 0.1599,
+      "avg_r": 0.1468,
       "families": 20,
       "triggered": 6,
       "win_rate": 0.1667
@@ -63,7 +69,7 @@
       "win_rate": 0.0
     },
     "平台突破回踩": {
-      "avg_r": 0.0505,
+      "avg_r": 0.1239,
       "families": 44,
       "triggered": 18,
       "win_rate": 0.0556
@@ -77,17 +83,17 @@
   },
   "model_name": "三模型并行扫描",
   "overall": {
-    "avg_r": 0.022,
-    "effective_rate": 0.7,
+    "avg_r": 0.056,
+    "effective_rate": 0.7241,
     "expired": 25,
     "families": 71,
     "losses": 0,
     "max_drawdown_r": -1.45,
-    "max_floating_r": 1.2226,
-    "pushed": 30,
+    "max_floating_r": 2.1273,
+    "pushed": 29,
     "triggered": 21,
     "win_rate": 0.0476,
     "wins": 1
   },
-  "updated_at": "2026-07-11T02:42:46+08:00"
+  "updated_at": "2026-07-11T04:40:45+08:00"
 }
