@@ -1524,32 +1524,6 @@ def scan_crypto(config: dict[str, Any], state: dict[str, Any], bundle_cache: dic
     return signals, market_state
 
 
-def render_signal_message(sig: Signal, event: str = "push", previous_status: str | None = None) -> str:
-    title = f"趋势机会｜{sig.model_name}｜{sig.symbol}｜{sig.direction}｜{render_grade(sig)}"
-    lines = [
-        title,
-        "",
-        f"模型：{sig.model_name}",
-        f"现价：{fmt_price(sig.price)}",
-        f"状态：{sig.status}",
-    ]
-    if previous_status:
-        lines.append(f"原状态：{previous_status}")
-    if event != "push":
-        lines.append(f"事件：{event}")
-    lines.extend(
-        [
-            f"入场区：{fmt_price(sig.entry_low)}-{fmt_price(sig.entry_high)}",
-            f"失效位：{fmt_price(sig.invalid)}",
-            f"目标1：{fmt_price(sig.target1)}",
-            f"阶段：{sig.stage}",
-            f"原因：{sig.reason}",
-            f"处理：{sig.action}",
-        ]
-    )
-    return "\n".join(lines)
-
-
 def notify_and_record(config: dict[str, Any], state: dict[str, Any], snapshot: dict[str, Any]) -> None:
     payload = dict(snapshot)
     payload["notified"] = True
@@ -1697,6 +1671,90 @@ def render_performance_report(perf: dict[str, Any]) -> str:
     return "\n".join(lines).strip() + "\n"
 
 
+def render_status_icon(sig: Signal, event: str = "push") -> str:
+    status = str(sig.status)
+    grade = str(sig.grade)
+    if event in {"invalid", "expire"} or status in {"失效", "过期"}:
+        return "🔴"
+    if event == "target1" or status == "目标1达成":
+        return "🔵"
+    if event in {"trigger", "touch_entry", "upgrade"} or status in {"入场区内", "触发确认"}:
+        return "🟢" if grade == "A类" else "🟡"
+    if grade == "A类":
+        return "🟢"
+    return "🟡"
+
+
+def render_signal_message(sig: Signal, event: str = "push", previous_status: str | None = None) -> str:
+    icon = render_status_icon(sig, event)
+    title = f"{icon} 趋势机会｜{sig.model_name}｜{sig.symbol}｜{sig.direction}｜{render_grade(sig)}"
+    lines = [
+        title,
+        "",
+        f"模型：{sig.model_name}",
+        f"现价：{fmt_price(sig.price)}",
+        f"状态：{sig.status}",
+        f"图标：{icon}",
+    ]
+    if previous_status:
+        lines.append(f"原状态：{previous_status}")
+    if event != "push":
+        lines.append(f"事件：{event}")
+    lines.extend(
+        [
+            f"入场区：{fmt_price(sig.entry_low)}-{fmt_price(sig.entry_high)}",
+            f"失效位：{fmt_price(sig.invalid)}",
+            f"目标1：{fmt_price(sig.target1)}",
+            f"阶段：{sig.stage}",
+            f"原因：{sig.reason}",
+            f"处理：{sig.action}",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def render_status_icon(sig: Signal, event: str = "push") -> str:
+    status = str(sig.status)
+    grade = str(sig.grade)
+    if event in {"invalid", "expire"} or status in {"失效", "过期"}:
+        return "🔴"
+    if event == "target1" or status == "目标1达成":
+        return "🔵"
+    if grade == "A类":
+        return "🟢"
+    if event in {"trigger", "touch_entry", "upgrade"} or status in {"入场区内", "触发确认", "接近入场"}:
+        return "🟡"
+    return "⚪"
+
+
+def render_signal_message(sig: Signal, event: str = "push", previous_status: str | None = None) -> str:
+    icon = render_status_icon(sig, event)
+    title = f"{icon} 趋势机会｜{sig.model_name}｜{sig.symbol}｜{sig.direction}｜{render_grade(sig)}"
+    lines = [
+        title,
+        "",
+        f"模型：{sig.model_name}",
+        f"现价：{fmt_price(sig.price)}",
+        f"状态：{sig.status}",
+        f"优先级：{icon}",
+    ]
+    if previous_status:
+        lines.append(f"原状态：{previous_status}")
+    if event != "push":
+        lines.append(f"事件：{event}")
+    lines.extend(
+        [
+            f"入场区：{fmt_price(sig.entry_low)}-{fmt_price(sig.entry_high)}",
+            f"失效位：{fmt_price(sig.invalid)}",
+            f"目标1：{fmt_price(sig.target1)}",
+            f"阶段：{sig.stage}",
+            f"原因：{sig.reason}",
+            f"处理：{sig.action}",
+        ]
+    )
+    return "\n".join(lines)
+
+
 def main() -> int:
     config = load_config()
     state_path = config["scan"]["state_file"]
@@ -1724,51 +1782,4 @@ def main() -> int:
 
     candidate_events: list[dict[str, Any]] = []
     for sig in candidate_signals:
-        old = state.setdefault("signals", {}).get(sig.family_key, {})
-        event_type = "upgrade" if old and old.get("grade") != sig.grade and old.get("open", True) else "push"
-        snapshot = make_snapshot(
-            sig,
-            event_type,
-            previous_status=old.get("status") if old else None,
-            open_=True,
-            triggered=bool(old.get("triggered")) if old else False,
-            notified=bool(old.get("notified")) if old else False,
-            origin_signal_id=old.get("signal_id") if old and old.get("grade") != sig.grade else None,
-        )
-        if old and not snapshot_changed(old, snapshot):
-            continue
-        state["signals"][sig.family_key] = snapshot
-        candidate_events.append(snapshot)
-
-    all_events = updates + candidate_events
-    pushed = 0
-    for event in sorted(all_events, key=lambda r: (r.get("grade") != "A类", -int(r.get("score", 0) or 0))):
-        append_jsonl(ledger_path, ledger_row(event))
-
-    external_events = select_external_events(all_events)
-    for event in sorted(
-        external_events,
-        key=lambda r: (r.get("grade") != "A类", -event_priority(r), -int(r.get("score", 0) or 0)),
-    ):
-        notify_and_record(config, state, event)
-        event["notified"] = True
-        state["signals"][event["family_key"]] = event
-        pushed += 1
-
-    save_state(state_path, state)
-
-    ledger = load_jsonl(ledger_path)
-    perf = compute_performance(ledger)
-    write_json(perf_path, perf)
-    write_text(report_path, render_performance_report(perf))
-
-    print(
-        f"scan done: mode={state.get('meta', {}).get('scan_mode', 'unknown')}, market={market_state}, "
-        f"candidates={len(candidate_signals)}, events={len(all_events)}, pushed={pushed}, "
-        f"open={sum(1 for v in state['signals'].values() if v.get('open', True))}"
-    )
-    return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+        old = state.setdefault("signals", {}).get(sig.family_key, 
