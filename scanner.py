@@ -19,11 +19,13 @@ import yaml
 MODEL_NAME = "天机伏击·A/B趋势起爆模型"
 LEGACY_MODEL_NAME = "天机伏击·趋势回踩模型"
 MACRO_MODEL_NAME = "天机伏击·主流币大周期反转模型"
-PORTFOLIO_NAME = "三模型并行扫描"
+LIQUIDITY_SWEEP_MODEL_NAME = "流动性扫单后顺势策略"
+PORTFOLIO_NAME = "四模型并行扫描"
 MODEL_PRIORITY = {
     LEGACY_MODEL_NAME: 0,
     MODEL_NAME: 1,
     MACRO_MODEL_NAME: 2,
+    LIQUIDITY_SWEEP_MODEL_NAME: 3,
 }
 DEFAULT_MACRO_SYMBOLS = (
     "BTCUSDT",
@@ -50,6 +52,7 @@ MODEL_SPECS = (
     {"name": LEGACY_MODEL_NAME, "variant": "legacy"},
     {"name": MODEL_NAME, "variant": "breakout"},
     {"name": MACRO_MODEL_NAME, "variant": "macro"},
+    {"name": LIQUIDITY_SWEEP_MODEL_NAME, "variant": "liquidity_sweep"},
 )
 SNAPSHOT_FIELDS = (
     "model_name",
@@ -169,6 +172,7 @@ def load_config() -> dict[str, Any]:
     config.setdefault("model", {})
     config.setdefault("models", [])
     config.setdefault("macro", {})
+    config.setdefault("liquidity_sweep", {})
     config.setdefault("feishu", {})
     config.setdefault("scan", {})
     config.setdefault("crypto", {})
@@ -183,11 +187,23 @@ def load_config() -> dict[str, Any]:
         ]
     elif not any(str(model.get("name")) == MACRO_MODEL_NAME for model in config["models"]):
         config["models"].append({"name": MACRO_MODEL_NAME, "variant": "macro", "output_grade": "A/B类"})
+    if not any(str(model.get("name")) == LIQUIDITY_SWEEP_MODEL_NAME for model in config["models"]):
+        config["models"].append(
+            {"name": LIQUIDITY_SWEEP_MODEL_NAME, "variant": "liquidity_sweep", "output_grade": "A/B类"}
+        )
 
     config["macro"].setdefault("enabled", True)
     config["macro"].setdefault("symbols", list(DEFAULT_MACRO_SYMBOLS))
     config["macro"].setdefault("min_rr", 2.2)
     config["macro"].setdefault("max_distance_to_entry_pct", 2.5)
+
+    config["liquidity_sweep"].setdefault("enabled", True)
+    config["liquidity_sweep"].setdefault("min_rr", 2.0)
+    config["liquidity_sweep"].setdefault("max_distance_to_entry_pct", 1.5)
+    config["liquidity_sweep"].setdefault("max_stop_pct", 3.5)
+    config["liquidity_sweep"].setdefault("sweep_lookback", 20)
+    config["liquidity_sweep"].setdefault("min_sweep_pct", 0.12)
+    config["liquidity_sweep"].setdefault("invalidation_atr_buffer", 0.18)
 
     config["feishu"].setdefault("enabled", True)
     config["feishu"].setdefault("webhook_env", "FEISHU_WEBHOOK")
@@ -446,6 +462,7 @@ def fetch_bundle(symbol: str) -> tuple[dict[str, dict[str, float]], dict[str, li
         if interval in candle_map:
             bundle[f"{interval}_pullbacks"], bundle[f"{interval}_higher_low"] = pullback_quality(candle_map[interval])
             bundle[f"{interval}_rebounds"], bundle[f"{interval}_lower_high"] = rebound_quality(candle_map[interval])
+    bundle["_candles"] = candle_map
     return bundle, candle_map
 
 
@@ -486,6 +503,55 @@ def risk_reward_short(price: float, invalid: float, target1: float) -> float:
     risk = invalid - price
     reward = price - target1
     return reward / risk if risk > 0 else 0.0
+
+
+def average_true_range(candles: list[Candle], period: int = 14) -> float:
+    completed = candles[:-1] if len(candles) > period + 1 else candles
+    sample = completed[-period:]
+    if len(sample) < 2:
+        return 0.0
+    ranges: list[float] = []
+    previous_close = completed[-len(sample) - 1].close if len(completed) > len(sample) else sample[0].open
+    for candle in sample:
+        ranges.append(max(candle.high - candle.low, abs(candle.high - previous_close), abs(candle.low - previous_close)))
+        previous_close = candle.close
+    return mean(ranges)
+
+
+def detect_recent_liquidity_sweep(
+    candles: list[Candle],
+    direction: str,
+    lookback: int,
+    min_sweep_pct: float,
+) -> dict[str, float] | None:
+    """Find a completed candle that swept a prior extreme and closed back inside."""
+    if len(candles) < lookback + 6:
+        return None
+    completed = candles[:-1]
+    for sweep_index in range(len(completed) - 1, max(lookback, len(completed) - 4), -1):
+        sweep = completed[sweep_index]
+        prior = completed[sweep_index - lookback : sweep_index]
+        if direction == "做多":
+            level = min(c.low for c in prior)
+            depth_pct = (level - sweep.low) / level * 100 if level else 0.0
+            reclaimed = sweep.low < level and sweep.close > level
+            wick = min(sweep.open, sweep.close) - sweep.low
+            body = abs(sweep.close - sweep.open)
+            rejection = wick >= max(body * 0.45, (sweep.high - sweep.low) * 0.18)
+            held = min(c.close for c in completed[sweep_index:]) >= level * 0.997
+            if reclaimed and rejection and held and depth_pct >= min_sweep_pct:
+                return {"level": level, "extreme": sweep.low, "depth_pct": depth_pct, "ts": float(sweep.ts)}
+        else:
+            level = max(c.high for c in prior)
+            depth_pct = (sweep.high - level) / level * 100 if level else 0.0
+            reclaimed = sweep.high > level and sweep.close < level
+            wick = sweep.high - max(sweep.open, sweep.close)
+            body = abs(sweep.close - sweep.open)
+            rejection = wick >= max(body * 0.45, (sweep.high - sweep.low) * 0.18)
+            held = max(c.close for c in completed[sweep_index:]) <= level * 1.003
+            if reclaimed and rejection and held and depth_pct >= min_sweep_pct:
+                return {"level": level, "extreme": sweep.high, "depth_pct": depth_pct, "ts": float(sweep.ts)}
+    return None
 
 
 def entry_gap_pct(price: float, entry_low: float, entry_high: float) -> float:
@@ -1139,6 +1205,138 @@ def evaluate_macro_short(
     )
 
 
+def evaluate_liquidity_sweep(
+    display_symbol: str,
+    actual_symbol: str,
+    bundle: dict[str, Any],
+    market_state: str,
+    direction: str,
+    settings: dict[str, Any],
+    model_name: str,
+) -> Signal | None:
+    daily = bundle["1d"]
+    h4 = bundle["4h"]
+    h1 = bundle["1h"]
+    m15 = bundle["15m"]
+    candle_map = bundle.get("_candles", {})
+    h1_candles = candle_map.get("1h", [])
+    m15_candles = candle_map.get("15m", [])
+    if not h1_candles or not m15_candles:
+        return None
+
+    lookback = int(settings.get("sweep_lookback", 20))
+    min_sweep_pct = float(settings.get("min_sweep_pct", 0.12))
+    max_distance_pct = float(settings.get("max_distance_to_entry_pct", 1.5))
+    max_stop_pct = float(settings.get("max_stop_pct", 3.5))
+    min_rr = float(settings.get("min_rr", 2.0))
+    atr_buffer = float(settings.get("invalidation_atr_buffer", 0.18))
+    sweep = detect_recent_liquidity_sweep(h1_candles, direction, lookback, min_sweep_pct)
+    if sweep is None:
+        return None
+
+    price = h1["close"]
+    level = float(sweep["level"])
+    extreme = float(sweep["extreme"])
+    atr1h = average_true_range(h1_candles)
+    buffer = max(atr1h * atr_buffer, price * 0.0008)
+    long_side = direction == "做多"
+
+    if long_side:
+        daily_direction = daily["close"] >= daily["ema52"] and daily["ema20"] >= daily["ema52"] * 0.985
+        h4_direction = h4["close"] >= h4["ema52"] and h4["ema20"] >= h4["ema52"] * 0.99
+        h1_structure = h1["close"] >= level and h1["close"] >= min(h1["ema20"], h1["ema52"])
+        trigger = (
+            m15["close"] >= m15["ema20"]
+            and m15["hist"] >= m15["hist_prev"]
+            and m15["rsi"] >= 45
+        )
+        volume_ok = m15["vol"] >= m15["vol_ma10"] * 0.8
+        entry_low = min(level, m15["ema20"], m15["ema24"]) * 0.998
+        entry_high = max(level, m15["ema20"], m15["ema24"]) * 1.004
+        invalid = extreme - buffer
+        structural_target = max(h1["high20"], h4["high20"])
+        target1 = max(structural_target, price + (price - invalid) * min_rr)
+        rr = risk_reward_long(price, invalid, target1)
+        market_allowed = market_state != "急跌"
+    else:
+        daily_direction = daily["close"] <= daily["ema52"] and daily["ema20"] <= daily["ema52"] * 1.015
+        h4_direction = h4["close"] <= h4["ema52"] and h4["ema20"] <= h4["ema52"] * 1.01
+        h1_structure = h1["close"] <= level and h1["close"] <= max(h1["ema20"], h1["ema52"])
+        trigger = (
+            m15["close"] <= m15["ema20"]
+            and m15["hist"] <= m15["hist_prev"]
+            and m15["rsi"] <= 55
+        )
+        volume_ok = m15["vol"] >= m15["vol_ma10"] * 0.8
+        entry_low = min(level, m15["ema20"], m15["ema24"]) * 0.996
+        entry_high = max(level, m15["ema20"], m15["ema24"]) * 1.002
+        invalid = extreme + buffer
+        structural_target = min(h1["low20"], h4["low20"])
+        target1 = min(structural_target, price - (invalid - price) * min_rr)
+        rr = risk_reward_short(price, invalid, target1)
+        market_allowed = market_state != "强"
+
+    higher_timeframe_ok = h4_direction and (daily_direction or market_state in {"强", "弱"})
+    if not higher_timeframe_ok or not h1_structure or not market_allowed:
+        return None
+    if invalid <= 0 or target1 <= 0 or rr < min_rr:
+        return None
+    if abs(price - invalid) / price * 100 > max_stop_pct:
+        return None
+    distance = entry_gap_pct(price, entry_low, entry_high)
+    if distance > max_distance_pct:
+        return None
+
+    score = model_score_base(direction, market_state)
+    score += 12 if daily_direction else 6
+    score += 20 if h4_direction else 0
+    score += 22  # 1H sweep and reclaim is mandatory above.
+    score += 12 if trigger else 5
+    score += 6 if volume_ok else 2
+    score += 10 if rr >= 2.0 else 0
+    score += 5 if rr >= 3.0 else 0
+    score += 5 if float(sweep["depth_pct"]) <= 1.8 else 2
+
+    in_entry = entry_low <= price <= entry_high
+    if score >= 85 and trigger and volume_ok and in_entry:
+        grade = "A类"
+        status = "触发确认"
+        action = "15m确认后按失效位控制风险"
+    elif score >= 70 and (in_entry or distance <= max_distance_pct * 0.6):
+        grade = "B类观察，不追单" if long_side else "B类观察，不追空"
+        status = "入场区内" if in_entry else "接近入场"
+        action = "等待15m确认，不追单" if long_side else "等待15m承压，不追空"
+    else:
+        return None
+
+    side_text = "下方" if long_side else "上方"
+    setup_state = f"1H扫{side_text}流动性并收回 + 15m{'确认' if trigger else '待确认'}"
+    reason = (
+        f"4H顺势，1H刺破关键位{fmt_price(level)}后收回，"
+        f"扫单幅度{float(sweep['depth_pct']):.2f}%，15m{'动能确认' if trigger else '等待触发'}"
+    )
+    return Signal(
+        model_name=model_name,
+        market="币圈",
+        symbol=display_symbol,
+        actual_symbol=actual_symbol,
+        direction=direction,
+        grade=grade,
+        stage="流动性扫单后顺势",
+        setup_state=setup_state,
+        status=status,
+        price=price,
+        entry_low=entry_low,
+        entry_high=entry_high,
+        invalid=invalid,
+        target1=target1,
+        market_state=market_state,
+        reason=reason,
+        action=action,
+        score=min(int(score), 100),
+    )
+
+
 def choose_signal(long_sig: Signal | None, short_sig: Signal | None, market_state: str) -> Signal | None:
     if long_sig and short_sig:
         if long_sig.grade != short_sig.grade:
@@ -1442,6 +1640,7 @@ def evaluate_symbol(
     min_rr: float,
     model_name: str,
     variant: str,
+    model_settings: dict[str, Any] | None = None,
 ) -> Signal | None:
     if variant == "legacy":
         long_sig = evaluate_legacy_long(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
@@ -1449,6 +1648,12 @@ def evaluate_symbol(
     elif variant == "macro":
         long_sig = evaluate_macro_long(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
         short_sig = evaluate_macro_short(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
+    elif variant == "liquidity_sweep":
+        settings = dict(model_settings or {})
+        settings.setdefault("max_distance_to_entry_pct", max_distance_pct)
+        settings.setdefault("min_rr", min_rr)
+        long_sig = evaluate_liquidity_sweep(display_symbol, actual_symbol, bundle, market_state, "做多", settings, model_name)
+        short_sig = evaluate_liquidity_sweep(display_symbol, actual_symbol, bundle, market_state, "做空", settings, model_name)
     else:
         long_sig = evaluate_long(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
         short_sig = evaluate_short(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
@@ -1458,6 +1663,7 @@ def evaluate_symbol(
 def scan_crypto(config: dict[str, Any], state: dict[str, Any], bundle_cache: dict[str, dict[str, dict[str, float]]]) -> tuple[list[Signal], str]:
     crypto_cfg = config.get("crypto", {})
     macro_cfg = config.get("macro", {})
+    sweep_cfg = config.get("liquidity_sweep", {})
     if not crypto_cfg.get("enabled", True):
         return [], "震荡"
 
@@ -1490,8 +1696,15 @@ def scan_crypto(config: dict[str, Any], state: dict[str, Any], bundle_cache: dic
         variant = str(model.get("variant", "breakout"))
         if variant == "macro" and not macro_cfg.get("enabled", True):
             continue
+        if variant == "liquidity_sweep" and not sweep_cfg.get("enabled", True):
+            continue
         scan_symbols = macro_symbols if variant == "macro" else symbols
-        model_min_rr = float(macro_cfg.get("min_rr", crypto_cfg.get("min_rr", config["scan"]["min_rr"]))) if variant == "macro" else float(crypto_cfg.get("min_rr", config["scan"]["min_rr"]))
+        if variant == "macro":
+            model_min_rr = float(macro_cfg.get("min_rr", crypto_cfg.get("min_rr", config["scan"]["min_rr"])))
+        elif variant == "liquidity_sweep":
+            model_min_rr = float(sweep_cfg.get("min_rr", config["scan"]["min_rr"]))
+        else:
+            model_min_rr = float(crypto_cfg.get("min_rr", config["scan"]["min_rr"]))
         for display_symbol in scan_symbols:
             actual_symbol = symbol_map.get(display_symbol, display_symbol)
             if actual_symbol not in ticker_map:
@@ -1516,6 +1729,7 @@ def scan_crypto(config: dict[str, Any], state: dict[str, Any], bundle_cache: dic
                 model_min_rr,
                 model_name,
                 variant,
+                sweep_cfg if variant == "liquidity_sweep" else None,
             )
             if chosen is None:
                 continue
