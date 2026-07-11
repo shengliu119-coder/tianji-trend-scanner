@@ -84,16 +84,16 @@
   "model_name": "三模型并行扫描",
   "overall": {
     "avg_r": 0.0507,
-    "effective_rate": 0.7778,
+    "effective_rate": 1.037,
     "expired": 21,
     "families": 81,
     "losses": 0,
     "max_drawdown_r": -1.45,
     "max_floating_r": 2.1273,
-    "pushed": 36,
+    "pushed": 27,
     "triggered": 28,
     "win_rate": 0.0714,
     "wins": 2
   },
-  "updated_at": "2026-07-11T15:18:35+08:00"
+  "updated_at": "2026-07-11T16:05:35+08:00"
 }
