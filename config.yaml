@@ -40,6 +40,8 @@ scan:
   timezone: Asia/Shanghai
   min_rr: 2.0
   max_distance_to_entry_pct: 2.5
+  full_scan_interval_minutes: 60
+  open_signal_refresh_minutes: 15
   expiry_hours: 12
   state_file: state/signals.json
   trade_ledger_file: state/trades.jsonl
