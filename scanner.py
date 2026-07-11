@@ -201,6 +201,8 @@ def load_config() -> dict[str, Any]:
     config["scan"].setdefault("expiry_hours", 12)
     config["scan"].setdefault("min_rr", 2.0)
     config["scan"].setdefault("max_distance_to_entry_pct", 2.5)
+    config["scan"].setdefault("full_scan_interval_minutes", 60)
+    config["scan"].setdefault("open_signal_refresh_minutes", 15)
     config["scan"].setdefault("v2_enabled", True)
     config["scan"].setdefault("v2_max_distance_to_entry_pct", 2.0)
 
@@ -1298,6 +1300,15 @@ def parse_time(value: str | None) -> datetime | None:
         return None
 
 
+def should_run_full_scan(state: dict[str, Any], config: dict[str, Any]) -> bool:
+    scan_cfg = config.get("scan", {})
+    interval_minutes = int(scan_cfg.get("full_scan_interval_minutes", 60))
+    last_full_scan_at = parse_time(state.get("meta", {}).get("last_full_scan_at"))
+    if last_full_scan_at is None:
+        return True
+    return datetime.now(CN_TZ) - last_full_scan_at >= timedelta(minutes=interval_minutes)
+
+
 def hours_since(value: str | None) -> float | None:
     dt = parse_time(value)
     if dt is None:
@@ -1697,8 +1708,19 @@ def main() -> int:
     ledger = load_jsonl(ledger_path)
     bundle_cache: dict[str, dict[str, dict[str, float]]] = {}
 
+    run_full_scan = should_run_full_scan(state, config)
     updates = update_open_signals(state, bundle_cache, config)
-    candidate_signals, market_state = scan_crypto(config, state, bundle_cache)
+    candidate_signals: list[Signal] = []
+    market_state = str(state.get("meta", {}).get("last_market_state", "未知"))
+    if run_full_scan:
+        candidate_signals, market_state = scan_crypto(config, state, bundle_cache)
+        state.setdefault("meta", {})["last_full_scan_at"] = now_iso()
+        state["meta"]["last_market_state"] = market_state
+        state["meta"]["scan_mode"] = "full"
+    else:
+        state.setdefault("meta", {})["last_open_refresh_at"] = now_iso()
+        state["meta"]["scan_mode"] = "open"
+    state.setdefault("meta", {})["last_cycle_at"] = now_iso()
 
     candidate_events: list[dict[str, Any]] = []
     for sig in candidate_signals:
@@ -1741,8 +1763,9 @@ def main() -> int:
     write_text(report_path, render_performance_report(perf))
 
     print(
-        f"scan done: market={market_state}, candidates={len(candidate_signals)}, "
-        f"events={len(all_events)}, pushed={pushed}, open={sum(1 for v in state['signals'].values() if v.get('open', True))}"
+        f"scan done: mode={state.get('meta', {}).get('scan_mode', 'unknown')}, market={market_state}, "
+        f"candidates={len(candidate_signals)}, events={len(all_events)}, pushed={pushed}, "
+        f"open={sum(1 for v in state['signals'].values() if v.get('open', True))}"
     )
     return 0
 
