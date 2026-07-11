@@ -17,6 +17,18 @@ models:
   - name: 天机伏击·主流币大周期反转模型
     variant: macro
     output_grade: A/B类
+  - name: 流动性扫单后顺势策略
+    variant: liquidity_sweep
+    output_grade: A/B类
+
+liquidity_sweep:
+  enabled: true
+  min_rr: 2.0
+  max_distance_to_entry_pct: 1.5
+  max_stop_pct: 3.5
+  sweep_lookback: 20
+  min_sweep_pct: 0.12
+  invalidation_atr_buffer: 0.18
 
 macro:
   enabled: true
