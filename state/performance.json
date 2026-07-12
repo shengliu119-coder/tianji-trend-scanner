@@ -96,16 +96,16 @@
   "model_name": "四模型并行扫描",
   "overall": {
     "avg_r": -0.0545,
-    "effective_rate": 1.1087,
+    "effective_rate": 1.186,
     "expired": 34,
     "families": 102,
     "losses": 1,
     "max_drawdown_r": -1.221,
     "max_floating_r": 0.9154,
-    "pushed": 46,
+    "pushed": 43,
     "triggered": 51,
     "win_rate": 0.0,
     "wins": 0
   },
-  "updated_at": "2026-07-13T03:33:30+08:00"
+  "updated_at": "2026-07-13T04:26:41+08:00"
 }
