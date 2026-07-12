@@ -1,7 +1,7 @@
 {
   "by_direction": {
     "做多": {
-      "avg_r": -0.0792,
+      "avg_r": -0.067,
       "families": 53,
       "triggered": 31,
       "win_rate": 0.0
@@ -15,15 +15,15 @@
   },
   "by_grade": {
     "A类": {
-      "avg_r": -0.0136,
-      "families": 7,
-      "triggered": 2,
+      "avg_r": -0.0163,
+      "families": 6,
+      "triggered": 1,
       "win_rate": 0.0
     },
     "B类观察，不追单": {
-      "avg_r": -0.0902,
-      "families": 46,
-      "triggered": 29,
+      "avg_r": -0.0739,
+      "families": 47,
+      "triggered": 30,
       "win_rate": 0.0
     },
     "B类观察，不追空": {
@@ -35,15 +35,15 @@
   },
   "by_market_state": {
     "强": {
-      "avg_r": -0.0927,
-      "families": 43,
-      "triggered": 24,
+      "avg_r": -0.0738,
+      "families": 45,
+      "triggered": 26,
       "win_rate": 0.0
     },
     "震荡": {
-      "avg_r": -0.015,
-      "families": 59,
-      "triggered": 27,
+      "avg_r": -0.016,
+      "families": 57,
+      "triggered": 25,
       "win_rate": 0.0
     }
   },
@@ -55,7 +55,7 @@
       "win_rate": 0.0
     },
     "天机伏击·趋势回踩模型": {
-      "avg_r": -0.0925,
+      "avg_r": -0.072,
       "families": 41,
       "triggered": 20,
       "win_rate": 0.0
@@ -75,7 +75,7 @@
       "win_rate": 0.0
     },
     "平台突破回踩": {
-      "avg_r": -0.0812,
+      "avg_r": -0.0686,
       "families": 52,
       "triggered": 30,
       "win_rate": 0.0
@@ -95,17 +95,17 @@
   },
   "model_name": "四模型并行扫描",
   "overall": {
-    "avg_r": -0.0568,
-    "effective_rate": 1.1087,
-    "expired": 24,
+    "avg_r": -0.0489,
+    "effective_rate": 1.0408,
+    "expired": 23,
     "families": 102,
     "losses": 1,
     "max_drawdown_r": -1.221,
     "max_floating_r": 0.9154,
-    "pushed": 46,
+    "pushed": 49,
     "triggered": 51,
     "win_rate": 0.0,
     "wins": 0
   },
-  "updated_at": "2026-07-13T00:14:55+08:00"
+  "updated_at": "2026-07-13T01:18:24+08:00"
 }
