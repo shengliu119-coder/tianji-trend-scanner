@@ -7,9 +7,9 @@
       "win_rate": 0.0
     },
     "做空": {
-      "avg_r": -0.0293,
+      "avg_r": -0.0284,
       "families": 49,
-      "triggered": 20,
+      "triggered": 21,
       "win_rate": 0.0
     }
   },
@@ -27,9 +27,9 @@
       "win_rate": 0.0
     },
     "B类观察，不追空": {
-      "avg_r": -0.0293,
+      "avg_r": -0.0284,
       "families": 49,
-      "triggered": 20,
+      "triggered": 21,
       "win_rate": 0.0
     }
   },
@@ -41,9 +41,9 @@
       "win_rate": 0.0
     },
     "震荡": {
-      "avg_r": -0.0214,
+      "avg_r": -0.0209,
       "families": 69,
-      "triggered": 35,
+      "triggered": 36,
       "win_rate": 0.0
     }
   },
@@ -55,9 +55,9 @@
       "win_rate": 0.0
     },
     "天机伏击·趋势回踩模型": {
-      "avg_r": -0.0667,
+      "avg_r": -0.0643,
       "families": 41,
-      "triggered": 20,
+      "triggered": 21,
       "win_rate": 0.0
     },
     "流动性扫单后顺势策略": {
@@ -87,25 +87,25 @@
       "win_rate": 0.0
     },
     "空头延续": {
-      "avg_r": -0.0385,
+      "avg_r": -0.0353,
       "families": 20,
-      "triggered": 8,
+      "triggered": 9,
       "win_rate": 0.0
     }
   },
   "model_name": "四模型并行扫描",
   "overall": {
-    "avg_r": -0.0513,
-    "effective_rate": 1.0,
+    "avg_r": -0.0506,
+    "effective_rate": 1.1304,
     "expired": 31,
     "families": 102,
     "losses": 1,
     "max_drawdown_r": -1.221,
     "max_floating_r": 0.9154,
-    "pushed": 51,
-    "triggered": 51,
+    "pushed": 46,
+    "triggered": 52,
     "win_rate": 0.0,
     "wins": 0
   },
-  "updated_at": "2026-07-13T05:13:38+08:00"
+  "updated_at": "2026-07-13T06:08:20+08:00"
 }
