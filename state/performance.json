@@ -1,13 +1,13 @@
 {
   "by_direction": {
     "做多": {
-      "avg_r": -0.1032,
+      "avg_r": -0.1079,
       "families": 52,
       "triggered": 29,
       "win_rate": 0.0
     },
     "做空": {
-      "avg_r": -0.0048,
+      "avg_r": -0.0167,
       "families": 48,
       "triggered": 20,
       "win_rate": 0.0
@@ -15,19 +15,19 @@
   },
   "by_grade": {
     "A类": {
-      "avg_r": -0.109,
-      "families": 12,
+      "avg_r": -0.1189,
+      "families": 11,
       "triggered": 4,
       "win_rate": 0.0
     },
     "B类观察，不追单": {
-      "avg_r": -0.1011,
-      "families": 40,
+      "avg_r": -0.1042,
+      "families": 41,
       "triggered": 25,
       "win_rate": 0.0
     },
     "B类观察，不追空": {
-      "avg_r": -0.0048,
+      "avg_r": -0.0167,
       "families": 48,
       "triggered": 20,
       "win_rate": 0.0
@@ -35,27 +35,27 @@
   },
   "by_market_state": {
     "强": {
-      "avg_r": -0.179,
-      "families": 30,
+      "avg_r": -0.1928,
+      "families": 28,
       "triggered": 11,
       "win_rate": 0.0
     },
     "震荡": {
-      "avg_r": 0.0036,
-      "families": 70,
+      "avg_r": -0.0032,
+      "families": 72,
       "triggered": 38,
       "win_rate": 0.0
     }
   },
   "by_model": {
     "天机伏击·A/B趋势起爆模型": {
-      "avg_r": -0.037,
+      "avg_r": -0.038,
       "families": 60,
       "triggered": 29,
       "win_rate": 0.0
     },
     "天机伏击·趋势回踩模型": {
-      "avg_r": -0.1181,
+      "avg_r": -0.133,
       "families": 40,
       "triggered": 20,
       "win_rate": 0.0
@@ -63,19 +63,19 @@
   },
   "by_stage": {
     "反弹承压": {
-      "avg_r": -0.0077,
+      "avg_r": -0.0079,
       "families": 29,
       "triggered": 12,
       "win_rate": 0.0
     },
     "平台突破回踩": {
-      "avg_r": -0.1032,
+      "avg_r": -0.1079,
       "families": 52,
       "triggered": 29,
       "win_rate": 0.0
     },
     "空头延续": {
-      "avg_r": 0.0,
+      "avg_r": -0.0314,
       "families": 19,
       "triggered": 8,
       "win_rate": 0.0
@@ -83,17 +83,17 @@
   },
   "model_name": "四模型并行扫描",
   "overall": {
-    "avg_r": -0.0694,
-    "effective_rate": 1.225,
-    "expired": 34,
+    "avg_r": -0.0757,
+    "effective_rate": 1.3611,
+    "expired": 39,
     "families": 100,
     "losses": 1,
     "max_drawdown_r": -1.221,
     "max_floating_r": 0.9154,
-    "pushed": 40,
+    "pushed": 36,
     "triggered": 49,
     "win_rate": 0.0,
     "wins": 0
   },
-  "updated_at": "2026-07-12T18:15:12+08:00"
+  "updated_at": "2026-07-12T19:32:35+08:00"
 }
