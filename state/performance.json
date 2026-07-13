@@ -1,15 +1,15 @@
 {
   "by_direction": {
     "做多": {
-      "avg_r": -0.067,
+      "avg_r": -0.1795,
       "families": 53,
       "triggered": 31,
       "win_rate": 0.0
     },
     "做空": {
-      "avg_r": -0.028,
-      "families": 49,
-      "triggered": 22,
+      "avg_r": 0.0274,
+      "families": 55,
+      "triggered": 29,
       "win_rate": 0.0
     }
   },
@@ -21,91 +21,91 @@
       "win_rate": 0.0
     },
     "B类观察，不追单": {
-      "avg_r": -0.0739,
+      "avg_r": -0.2004,
       "families": 48,
       "triggered": 30,
       "win_rate": 0.0
     },
     "B类观察，不追空": {
-      "avg_r": -0.028,
-      "families": 49,
-      "triggered": 22,
+      "avg_r": 0.0274,
+      "families": 55,
+      "triggered": 29,
       "win_rate": 0.0
     }
   },
   "by_market_state": {
     "强": {
-      "avg_r": -0.105,
+      "avg_r": -0.2237,
       "families": 32,
       "triggered": 15,
       "win_rate": 0.0
     },
     "震荡": {
-      "avg_r": -0.0207,
-      "families": 70,
-      "triggered": 38,
+      "avg_r": -0.0102,
+      "families": 76,
+      "triggered": 45,
       "win_rate": 0.0
     }
   },
   "by_model": {
     "天机伏击·A/B趋势起爆模型": {
-      "avg_r": -0.0459,
+      "avg_r": -0.0384,
       "families": 60,
-      "triggered": 30,
+      "triggered": 34,
       "win_rate": 0.0
     },
     "天机伏击·趋势回踩模型": {
-      "avg_r": -0.0562,
-      "families": 41,
-      "triggered": 22,
+      "avg_r": -0.115,
+      "families": 43,
+      "triggered": 25,
       "win_rate": 0.0
     },
     "流动性扫单后顺势策略": {
-      "avg_r": 0.0,
-      "families": 1,
+      "avg_r": -1.0,
+      "families": 5,
       "triggered": 1,
       "win_rate": 0.0
     }
   },
   "by_stage": {
     "反弹承压": {
-      "avg_r": -0.0307,
+      "avg_r": 0.0302,
       "families": 29,
-      "triggered": 12,
+      "triggered": 16,
       "win_rate": 0.0
     },
     "平台突破回踩": {
-      "avg_r": -0.0686,
+      "avg_r": -0.1604,
       "families": 52,
       "triggered": 30,
       "win_rate": 0.0
     },
     "流动性扫单后顺势": {
-      "avg_r": 0.0,
-      "families": 1,
+      "avg_r": -1.0,
+      "families": 5,
       "triggered": 1,
       "win_rate": 0.0
     },
     "空头延续": {
-      "avg_r": -0.0244,
-      "families": 20,
-      "triggered": 10,
+      "avg_r": 0.0243,
+      "families": 22,
+      "triggered": 13,
       "win_rate": 0.0
     }
   },
   "model_name": "四模型并行扫描",
   "overall": {
-    "avg_r": -0.0495,
-    "effective_rate": 1.1522,
-    "expired": 33,
-    "families": 102,
-    "losses": 1,
-    "max_drawdown_r": -1.221,
-    "max_floating_r": 0.8614,
-    "pushed": 46,
-    "triggered": 53,
+    "avg_r": -0.0823,
+    "effective_rate": 1.2766,
+    "expired": 41,
+    "families": 108,
+    "losses": 5,
+    "max_drawdown_r": -1.4757,
+    "max_floating_r": 1.1319,
+    "pushed": 47,
+    "triggered": 60,
     "win_rate": 0.0,
     "wins": 0
   },
-  "updated_at": "2026-07-13T08:10:26+08:00"
+  "updated_at": "2026-07-13T11:58:05+08:00"
 }
