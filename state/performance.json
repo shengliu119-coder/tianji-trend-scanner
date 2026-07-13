@@ -1,7 +1,7 @@
 {
   "by_direction": {
     "做多": {
-      "avg_r": -0.1795,
+      "avg_r": -0.1991,
       "families": 53,
       "triggered": 31,
       "win_rate": 0.0
@@ -21,7 +21,7 @@
       "win_rate": 0.0
     },
     "B类观察，不追单": {
-      "avg_r": -0.2004,
+      "avg_r": -0.2226,
       "families": 48,
       "triggered": 30,
       "win_rate": 0.0
@@ -35,7 +35,7 @@
   },
   "by_market_state": {
     "强": {
-      "avg_r": -0.2237,
+      "avg_r": -0.2546,
       "families": 32,
       "triggered": 15,
       "win_rate": 0.0
@@ -49,13 +49,13 @@
   },
   "by_model": {
     "天机伏击·A/B趋势起爆模型": {
-      "avg_r": -0.0379,
+      "avg_r": -0.0445,
       "families": 60,
       "triggered": 36,
       "win_rate": 0.0
     },
     "天机伏击·趋势回踩模型": {
-      "avg_r": -0.1162,
+      "avg_r": -0.1316,
       "families": 43,
       "triggered": 25,
       "win_rate": 0.0
@@ -69,13 +69,13 @@
   },
   "by_stage": {
     "反弹承压": {
-      "avg_r": 0.0253,
-      "families": 29,
-      "triggered": 18,
+      "avg_r": 0.0265,
+      "families": 28,
+      "triggered": 17,
       "win_rate": 0.0
     },
     "平台突破回踩": {
-      "avg_r": -0.1604,
+      "avg_r": -0.1805,
       "families": 52,
       "triggered": 30,
       "win_rate": 0.0
@@ -91,21 +91,27 @@
       "families": 22,
       "triggered": 13,
       "win_rate": 0.0
+    },
+    "空头第2浪反弹确认": {
+      "avg_r": 0.0,
+      "families": 1,
+      "triggered": 1,
+      "win_rate": 0.0
     }
   },
   "model_name": "四模型并行扫描",
   "overall": {
-    "avg_r": -0.0787,
-    "effective_rate": 1.7568,
-    "expired": 44,
+    "avg_r": -0.0885,
+    "effective_rate": 1.6667,
+    "expired": 46,
     "families": 108,
     "losses": 5,
     "max_drawdown_r": -1.4757,
     "max_floating_r": 1.1319,
-    "pushed": 37,
+    "pushed": 39,
     "triggered": 65,
     "win_rate": 0.0,
     "wins": 0
   },
-  "updated_at": "2026-07-13T12:49:42+08:00"
+  "updated_at": "2026-07-13T14:49:36+08:00"
 }
