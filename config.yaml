@@ -11,6 +11,7 @@ models:
   - name: 天机伏击·趋势回踩模型
     variant: legacy
     output_grade: A/B类
+    enabled: false
   - name: 天机伏击·A/B趋势起爆模型
     variant: breakout
     output_grade: A/B类
@@ -29,6 +30,12 @@ liquidity_sweep:
   sweep_lookback: 20
   min_sweep_pct: 0.12
   invalidation_atr_buffer: 0.18
+
+trend_pullback:
+  max_retracement: 0.618
+  min_impulse_atr: 1.5
+  entry_trigger_atr_tolerance: 0.35
+  invalidation_atr_buffer: 0.15
 
 macro:
   enabled: true
