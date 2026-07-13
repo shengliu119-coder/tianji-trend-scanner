@@ -1974,4 +1974,293 @@ def scan_crypto(config: dict[str, Any], state: dict[str, Any], bundle_cache: dic
             try:
                 bundle = get_bundle(actual_symbol)
             except Exception as exc:  # noqa: BLE001
-                print(f"skip crypto {display_symbol}: {exc}", file=sys.stde
+                print(f"skip crypto {display_symbol}: {exc}", file=sys.stderr)
+                continue
+
+            chosen = evaluate_symbol(
+                display_symbol,
+                actual_symbol,
+                bundle,
+                market_state,
+                float(
+                    crypto_cfg.get(
+                        "v2_max_distance_to_entry_pct",
+                        crypto_cfg.get("max_distance_to_entry_pct", config["scan"]["v2_max_distance_to_entry_pct"]),
+                    )
+                ),
+                model_min_rr,
+                model_name,
+                variant,
+                sweep_cfg if variant == "liquidity_sweep" else trend_cfg,
+            )
+            if chosen is None:
+                continue
+            signals.append(chosen)
+
+    return signals, market_state
+
+
+def notify_and_record(config: dict[str, Any], state: dict[str, Any], snapshot: dict[str, Any]) -> None:
+    payload = dict(snapshot)
+    payload["notified"] = True
+    signal = Signal(
+        model_name=payload["model_name"],
+        market=payload["market"],
+        symbol=payload["symbol"],
+        actual_symbol=payload.get("actual_symbol") or payload["symbol"],
+        direction=payload["direction"],
+        grade=payload["grade"],
+        stage=payload["stage"],
+        setup_state=payload["setup_state"],
+        status=payload["status"],
+        price=float(payload["price"]),
+        entry_low=float(payload["entry_low"]),
+        entry_high=float(payload["entry_high"]),
+        invalid=float(payload["invalid"]),
+        target1=float(payload["target1"]),
+        market_state=payload["market_state"],
+        reason=payload["reason"],
+        action=payload["action"],
+        score=int(payload["score"]),
+    )
+    message = render_signal_message(signal, event=payload.get("last_event", "push"), previous_status=payload.get("previous_status"))
+    feishu_send(config, message)
+
+
+def render_table(title: str, rows: list[tuple[str, Any]]) -> str:
+    if not rows:
+        return f"## {title}\n无样本\n"
+    lines = [f"## {title}", "| 项目 | 数值 |", "| --- | --- |"]
+    for key, value in rows:
+        lines.append(f"| {key} | {value} |")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def render_group(title: str, group: dict[str, dict[str, Any]]) -> str:
+    if not group:
+        return f"## {title}\n无样本\n"
+    rows = [f"## {title}", "| 分组 | 样本 | 已触发 | 胜率 | 平均R |", "| --- | --- | --- | --- | --- |"]
+    for key in sorted(group):
+        item = group[key]
+        rows.append(f"| {key} | {item['families']} | {item['triggered']} | {item['win_rate'] * 100:.1f}% | {item['avg_r']:.2f} |")
+    rows.append("")
+    return "\n".join(rows)
+
+
+def compute_performance(trades: list[dict[str, Any]]) -> dict[str, Any]:
+    latest: dict[str, dict[str, Any]] = {}
+    for row in trades:
+        family = row.get("family_key")
+        if not family:
+            continue
+        ts = row.get("updated_at") or row.get("ledger_time") or row.get("created_at") or ""
+        current = latest.get(family)
+        if current is None:
+            latest[family] = row
+            continue
+        current_ts = current.get("updated_at") or current.get("ledger_time") or current.get("created_at") or ""
+        if ts >= current_ts:
+            latest[family] = row
+
+    families = list(latest.values())
+    pushed = [row for row in families if row.get("last_event") in {"push", "upgrade"}]
+    triggered = [row for row in families if row.get("triggered")]
+    wins = [row for row in families if row.get("status") == "目标1达成" and row.get("triggered")]
+    losses = [row for row in families if row.get("status") == "失效" and row.get("triggered")]
+    expired = [row for row in families if row.get("status") == "过期"]
+
+    closed_r = [float(row.get("final_r", 0.0) or 0.0) for row in families if row.get("status") in FINAL_STATES or row.get("triggered")]
+    max_float = [float(row.get("max_floating_r", 0.0) or 0.0) for row in families]
+    max_draw = [float(row.get("max_drawdown_r", 0.0) or 0.0) for row in families]
+
+    def grouped(field: str) -> dict[str, dict[str, Any]]:
+        buckets: dict[str, list[dict[str, Any]]] = {}
+        for row in families:
+            key = str(row.get(field, "未知"))
+            buckets.setdefault(key, []).append(row)
+        summary: dict[str, dict[str, Any]] = {}
+        for key, rows in buckets.items():
+            trig = [r for r in rows if r.get("triggered")]
+            win = [r for r in rows if r.get("status") == "目标1达成" and r.get("triggered")]
+            rvals = [float(r.get("final_r", 0.0) or 0.0) for r in rows if r.get("status") in FINAL_STATES or r.get("triggered")]
+            summary[key] = {
+                "families": len(rows),
+                "triggered": len(trig),
+                "win_rate": round(len(win) / len(trig) if trig else 0.0, 4),
+                "avg_r": round(mean(rvals) if rvals else 0.0, 4),
+            }
+        return summary
+
+    overall = {
+        "families": len(families),
+        "pushed": len(pushed),
+        "triggered": len(triggered),
+        "wins": len(wins),
+        "losses": len(losses),
+        "expired": len(expired),
+        "win_rate": round(len(wins) / len(triggered) if triggered else 0.0, 4),
+        "effective_rate": round(len(triggered) / len(pushed) if pushed else 0.0, 4),
+        "avg_r": round(mean(closed_r) if closed_r else 0.0, 4),
+        "max_floating_r": round(max(max_float) if max_float else 0.0, 4),
+        "max_drawdown_r": round(min(max_draw) if max_draw else 0.0, 4),
+    }
+
+    return {
+        "model_name": PORTFOLIO_NAME,
+        "updated_at": now_iso(),
+        "overall": overall,
+        "by_model": grouped("model_name"),
+        "by_grade": grouped("grade"),
+        "by_direction": grouped("direction"),
+        "by_stage": grouped("stage"),
+        "by_market_state": grouped("market_state"),
+    }
+
+
+def render_performance_report(perf: dict[str, Any]) -> str:
+    overall = perf.get("overall", {})
+    lines = [f"# 飞书机会胜率报告", "", f"更新时刻：{perf.get('updated_at', '')}", f"模型：{perf.get('model_name', PORTFOLIO_NAME)}", ""]
+    lines.append(
+        render_table(
+            "总体",
+            [
+                ("推送链路数", overall.get("families", 0)),
+                ("已推送", overall.get("pushed", 0)),
+                ("已触发", overall.get("triggered", 0)),
+                ("目标1达成", overall.get("wins", 0)),
+                ("失效", overall.get("losses", 0)),
+                ("过期", overall.get("expired", 0)),
+                ("胜率", f"{overall.get('win_rate', 0.0) * 100:.1f}%"),
+                ("机会有效率", f"{overall.get('effective_rate', 0.0) * 100:.1f}%"),
+                ("平均R", f"{overall.get('avg_r', 0.0):.2f}"),
+                ("最大浮盈R", f"{overall.get('max_floating_r', 0.0):.2f}"),
+                ("最大浮亏R", f"{overall.get('max_drawdown_r', 0.0):.2f}"),
+            ],
+        )
+    )
+    lines.append(render_group("按等级", perf.get("by_grade", {})))
+    lines.append(render_group("按模型", perf.get("by_model", {})))
+    lines.append(render_group("按方向", perf.get("by_direction", {})))
+    lines.append(render_group("按阶段", perf.get("by_stage", {})))
+    lines.append(render_group("按大盘环境", perf.get("by_market_state", {})))
+    return "\n".join(lines).strip() + "\n"
+
+
+def render_status_icon(sig: Signal, event: str = "push") -> str:
+    status = str(sig.status)
+    grade = str(sig.grade)
+    if event in {"invalid", "expire"} or status in {"失效", "过期"}:
+        return "🔴"
+    if event == "target1" or status == "目标1达成":
+        return "🔵"
+    if grade == "A类" or event in {"trigger", "touch_entry", "upgrade"} or status in {"入场区内", "触发确认", "接近入场"}:
+        return "🟢"
+    if grade == "B类":
+        return "🟡"
+    return "⚪"
+
+
+def render_signal_message(sig: Signal, event: str = "push", previous_status: str | None = None) -> str:
+    icon = render_status_icon(sig, event)
+    title = f"{icon} 趋势机会｜{sig.model_name}｜{sig.symbol}｜{sig.direction}｜{render_grade(sig)}"
+    lines = [
+        title,
+        "",
+        f"模型：{sig.model_name}",
+        f"现价：{fmt_price(sig.price)}",
+        f"状态：{sig.status}",
+        f"优先级：{icon}",
+    ]
+    if previous_status:
+        lines.append(f"原状态：{previous_status}")
+    if event != "push":
+        lines.append(f"事件：{event}")
+    lines.extend(
+        [
+            f"入场区：{fmt_price(sig.entry_low)}-{fmt_price(sig.entry_high)}",
+            f"失效位：{fmt_price(sig.invalid)}",
+            f"目标1：{fmt_price(sig.target1)}",
+            f"阶段：{sig.stage}",
+            f"原因：{sig.reason}",
+            f"处理：{sig.action}",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def main() -> int:
+    config = load_config()
+    state_path = config["scan"]["state_file"]
+    ledger_path = config["scan"]["trade_ledger_file"]
+    perf_path = config["scan"]["performance_file"]
+    report_path = config["scan"]["performance_report"]
+
+    state = load_state(state_path)
+    ledger = load_jsonl(ledger_path)
+    bundle_cache: dict[str, dict[str, dict[str, float]]] = {}
+
+    run_full_scan = should_run_full_scan(state, config)
+    updates = update_open_signals(state, bundle_cache, config)
+    candidate_signals: list[Signal] = []
+    market_state = str(state.get("meta", {}).get("last_market_state", "未知"))
+    if run_full_scan:
+        candidate_signals, market_state = scan_crypto(config, state, bundle_cache)
+        state.setdefault("meta", {})["last_full_scan_at"] = now_iso()
+        state["meta"]["last_market_state"] = market_state
+        state["meta"]["scan_mode"] = "full"
+    else:
+        state.setdefault("meta", {})["last_open_refresh_at"] = now_iso()
+        state["meta"]["scan_mode"] = "open"
+    state.setdefault("meta", {})["last_cycle_at"] = now_iso()
+
+    candidate_events: list[dict[str, Any]] = []
+    for sig in candidate_signals:
+        old = state.setdefault("signals", {}).get(sig.family_key, {})
+        event_type = "upgrade" if old and old.get("grade") != sig.grade and old.get("open", True) else "push"
+        snapshot = make_snapshot(
+            sig,
+            event_type,
+            previous_status=old.get("status") if old else None,
+            open_=True,
+            triggered=bool(old.get("triggered")) if old else False,
+            notified=bool(old.get("notified")) if old else False,
+            origin_signal_id=old.get("signal_id") if old and old.get("grade") != sig.grade else None,
+        )
+        if old and not snapshot_changed(old, snapshot):
+            continue
+        state["signals"][sig.family_key] = snapshot
+        candidate_events.append(snapshot)
+
+    all_events = updates + candidate_events
+    pushed = 0
+    for event in sorted(all_events, key=lambda r: (r.get("grade") != "A类", -int(r.get("score", 0) or 0))):
+        append_jsonl(ledger_path, ledger_row(event))
+
+    external_events = select_external_events(all_events)
+    for event in sorted(
+        external_events,
+        key=lambda r: (r.get("grade") != "A类", -event_priority(r), -int(r.get("score", 0) or 0)),
+    ):
+        notify_and_record(config, state, event)
+        event["notified"] = True
+        state["signals"][event["family_key"]] = event
+        pushed += 1
+
+    save_state(state_path, state)
+
+    ledger = load_jsonl(ledger_path)
+    perf = compute_performance(ledger)
+    write_json(perf_path, perf)
+    write_text(report_path, render_performance_report(perf))
+
+    print(
+        f"scan done: mode={state.get('meta', {}).get('scan_mode', 'unknown')}, market={market_state}, "
+        f"candidates={len(candidate_signals)}, events={len(all_events)}, pushed={pushed}, "
+        f"open={sum(1 for v in state['signals'].values() if v.get('open', True))}"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
