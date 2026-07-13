@@ -7,9 +7,9 @@
       "win_rate": 0.0
     },
     "做空": {
-      "avg_r": 0.0274,
+      "avg_r": 0.0221,
       "families": 55,
-      "triggered": 29,
+      "triggered": 34,
       "win_rate": 0.0
     }
   },
@@ -27,9 +27,9 @@
       "win_rate": 0.0
     },
     "B类观察，不追空": {
-      "avg_r": 0.0274,
+      "avg_r": 0.0221,
       "families": 55,
-      "triggered": 29,
+      "triggered": 34,
       "win_rate": 0.0
     }
   },
@@ -41,37 +41,37 @@
       "win_rate": 0.0
     },
     "震荡": {
-      "avg_r": -0.0102,
+      "avg_r": -0.011,
       "families": 76,
-      "triggered": 45,
+      "triggered": 50,
       "win_rate": 0.0
     }
   },
   "by_model": {
     "天机伏击·A/B趋势起爆模型": {
-      "avg_r": -0.0384,
+      "avg_r": -0.0379,
       "families": 60,
-      "triggered": 34,
+      "triggered": 36,
       "win_rate": 0.0
     },
     "天机伏击·趋势回踩模型": {
-      "avg_r": -0.115,
+      "avg_r": -0.1162,
       "families": 43,
       "triggered": 25,
       "win_rate": 0.0
     },
     "流动性扫单后顺势策略": {
-      "avg_r": -1.0,
+      "avg_r": -0.25,
       "families": 5,
-      "triggered": 1,
+      "triggered": 4,
       "win_rate": 0.0
     }
   },
   "by_stage": {
     "反弹承压": {
-      "avg_r": 0.0302,
+      "avg_r": 0.0253,
       "families": 29,
-      "triggered": 16,
+      "triggered": 18,
       "win_rate": 0.0
     },
     "平台突破回踩": {
@@ -81,13 +81,13 @@
       "win_rate": 0.0
     },
     "流动性扫单后顺势": {
-      "avg_r": -1.0,
+      "avg_r": -0.25,
       "families": 5,
-      "triggered": 1,
+      "triggered": 4,
       "win_rate": 0.0
     },
     "空头延续": {
-      "avg_r": 0.0243,
+      "avg_r": 0.0218,
       "families": 22,
       "triggered": 13,
       "win_rate": 0.0
@@ -95,17 +95,17 @@
   },
   "model_name": "四模型并行扫描",
   "overall": {
-    "avg_r": -0.0823,
-    "effective_rate": 1.2766,
-    "expired": 41,
+    "avg_r": -0.0787,
+    "effective_rate": 1.7568,
+    "expired": 44,
     "families": 108,
     "losses": 5,
     "max_drawdown_r": -1.4757,
     "max_floating_r": 1.1319,
-    "pushed": 47,
-    "triggered": 60,
+    "pushed": 37,
+    "triggered": 65,
     "win_rate": 0.0,
     "wins": 0
   },
-  "updated_at": "2026-07-13T11:58:05+08:00"
+  "updated_at": "2026-07-13T12:49:42+08:00"
 }
