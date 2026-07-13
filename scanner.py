@@ -130,6 +130,27 @@ class Signal:
         return f"{ts}:{safe_model}:{self.symbol}:{self.direction}:{self.grade}"
 
 
+@dataclass
+class TrendPullbackSetup:
+    direction: str
+    impulse_start: float
+    impulse_extreme: float
+    pullback_extreme: float
+    retracement: float
+    macd_zero_held: bool
+    ema52_held: bool
+    structural_target: float
+
+
+@dataclass
+class EntryTrigger:
+    name: str
+    confirmed: bool
+    trigger_level: float
+    invalid_level: float
+    quality: int
+
+
 def now_iso() -> str:
     return datetime.now(CN_TZ).isoformat(timespec="seconds")
 
@@ -173,6 +194,7 @@ def load_config() -> dict[str, Any]:
     config.setdefault("models", [])
     config.setdefault("macro", {})
     config.setdefault("liquidity_sweep", {})
+    config.setdefault("trend_pullback", {})
     config.setdefault("feishu", {})
     config.setdefault("scan", {})
     config.setdefault("crypto", {})
@@ -204,6 +226,11 @@ def load_config() -> dict[str, Any]:
     config["liquidity_sweep"].setdefault("sweep_lookback", 20)
     config["liquidity_sweep"].setdefault("min_sweep_pct", 0.12)
     config["liquidity_sweep"].setdefault("invalidation_atr_buffer", 0.18)
+
+    config["trend_pullback"].setdefault("max_retracement", 0.618)
+    config["trend_pullback"].setdefault("min_impulse_atr", 1.5)
+    config["trend_pullback"].setdefault("entry_trigger_atr_tolerance", 0.35)
+    config["trend_pullback"].setdefault("invalidation_atr_buffer", 0.15)
 
     config["feishu"].setdefault("enabled", True)
     config["feishu"].setdefault("webhook_env", "FEISHU_WEBHOOK")
@@ -477,20 +504,216 @@ def pivots(values: list[float], side: str) -> list[float]:
     return out
 
 
+def pivot_indices(values: list[float], side: str, radius: int = 2) -> list[int]:
+    points: list[int] = []
+    for i in range(radius, len(values) - radius):
+        window = values[i - radius : i + radius + 1]
+        if side == "low" and values[i] == min(window) and (values[i] < values[i - 1] or values[i] < values[i + 1]):
+            points.append(i)
+        if side == "high" and values[i] == max(window) and (values[i] > values[i - 1] or values[i] > values[i + 1]):
+            points.append(i)
+    return points
+
+
 def pullback_quality(candles: list[Candle]) -> tuple[int, bool]:
-    lows = [c.low for c in candles[-40:]]
-    points = pivots(lows, "low")
-    if len(points) < 2:
-        return len(points), False
-    return min(len(points), 3), points[-1] >= points[-2] * 0.985
+    completed = candles[:-1]
+    lows = [c.low for c in completed[-40:]]
+    points = pivot_indices(lows, "low")
+    if not points:
+        return 0, False
+    recent = points[-2:]
+    higher_low = len(recent) == 2 and lows[recent[-1]] >= lows[recent[-2]] * 0.985
+    return 1, higher_low
 
 
 def rebound_quality(candles: list[Candle]) -> tuple[int, bool]:
-    highs = [c.high for c in candles[-40:]]
-    points = pivots(highs, "high")
-    if len(points) < 2:
-        return len(points), False
-    return min(len(points), 3), points[-1] <= points[-2] * 1.015
+    completed = candles[:-1]
+    highs = [c.high for c in completed[-40:]]
+    points = pivot_indices(highs, "high")
+    if not points:
+        return 0, False
+    recent = points[-2:]
+    lower_high = len(recent) == 2 and highs[recent[-1]] <= highs[recent[-2]] * 1.015
+    return 1, lower_high
+
+
+def analyze_trend_pullback(
+    candles: list[Candle],
+    direction: str,
+    max_retracement: float = 0.618,
+    min_impulse_atr: float = 1.5,
+) -> TrendPullbackSetup | None:
+    completed = candles[:-1]
+    if len(completed) < 80:
+        return None
+    start_at = max(0, len(completed) - 70)
+    sample = completed[start_at:]
+    highs = [c.high for c in sample]
+    lows = [c.low for c in sample]
+    closes = [c.close for c in completed]
+    dif, _, hist = macd(closes)
+    ema52_values = ema(closes, 52)
+    atr = average_true_range(candles)
+    if atr <= 0:
+        return None
+
+    if direction == "做多":
+        candidates = [i for i in pivot_indices(highs, "high") if i <= len(sample) - 4]
+        if not candidates:
+            return None
+        peak_local = max(candidates[-6:], key=lambda i: highs[i])
+        peak_index = start_at + peak_local
+        search_start = max(start_at, peak_index - 30)
+        impulse_start_index = min(range(search_start, peak_index), key=lambda i: completed[i].low)
+        impulse_start = completed[impulse_start_index].low
+        impulse_extreme = completed[peak_index].high
+        amplitude = impulse_extreme - impulse_start
+        if amplitude < atr * min_impulse_atr or peak_index - impulse_start_index < 3:
+            return None
+        prior = completed[max(0, impulse_start_index - 20) : impulse_start_index]
+        if prior and impulse_extreme <= max(c.high for c in prior) + atr * 0.1:
+            return None
+        after = completed[peak_index + 1 :]
+        if len(after) < 2:
+            return None
+        pullback_extreme = min(c.low for c in after)
+        retracement = (impulse_extreme - pullback_extreme) / amplitude
+        if retracement < 0.08 or retracement > max_retracement or pullback_extreme <= impulse_start:
+            return None
+        zero_crossed = max(dif[max(0, impulse_start_index - 4) : peak_index + 1]) > 0
+        macd_zero_held = zero_crossed and min(dif[peak_index + 1 :]) >= -atr * 0.08 and hist[-1] >= hist[-2]
+        ema52_held = min(c.close for c in after) >= min(ema52_values[peak_index + 1 :]) * 0.99 and closes[-1] >= ema52_values[-1]
+        return TrendPullbackSetup(
+            direction=direction,
+            impulse_start=impulse_start,
+            impulse_extreme=impulse_extreme,
+            pullback_extreme=pullback_extreme,
+            retracement=retracement,
+            macd_zero_held=macd_zero_held,
+            ema52_held=ema52_held,
+            structural_target=impulse_extreme,
+        )
+
+    candidates = [i for i in pivot_indices(lows, "low") if i <= len(sample) - 4]
+    if not candidates:
+        return None
+    trough_local = min(candidates[-6:], key=lambda i: lows[i])
+    trough_index = start_at + trough_local
+    search_start = max(start_at, trough_index - 30)
+    impulse_start_index = max(range(search_start, trough_index), key=lambda i: completed[i].high)
+    impulse_start = completed[impulse_start_index].high
+    impulse_extreme = completed[trough_index].low
+    amplitude = impulse_start - impulse_extreme
+    if amplitude < atr * min_impulse_atr or trough_index - impulse_start_index < 3:
+        return None
+    prior = completed[max(0, impulse_start_index - 20) : impulse_start_index]
+    if prior and impulse_extreme >= min(c.low for c in prior) - atr * 0.1:
+        return None
+    after = completed[trough_index + 1 :]
+    if len(after) < 2:
+        return None
+    pullback_extreme = max(c.high for c in after)
+    retracement = (pullback_extreme - impulse_extreme) / amplitude
+    if retracement < 0.08 or retracement > max_retracement or pullback_extreme >= impulse_start:
+        return None
+    zero_crossed = min(dif[max(0, impulse_start_index - 4) : trough_index + 1]) < 0
+    macd_zero_held = zero_crossed and max(dif[trough_index + 1 :]) <= atr * 0.08 and hist[-1] <= hist[-2]
+    ema52_held = max(c.close for c in after) <= max(ema52_values[trough_index + 1 :]) * 1.01 and closes[-1] <= ema52_values[-1]
+    return TrendPullbackSetup(
+        direction=direction,
+        impulse_start=impulse_start,
+        impulse_extreme=impulse_extreme,
+        pullback_extreme=pullback_extreme,
+        retracement=retracement,
+        macd_zero_held=macd_zero_held,
+        ema52_held=ema52_held,
+        structural_target=impulse_extreme,
+    )
+
+
+def detect_entry_trigger(candles: list[Candle], direction: str, tolerance_atr: float = 0.35) -> EntryTrigger | None:
+    completed = candles[:-1]
+    if len(completed) < 30:
+        return None
+    sample = completed[-36:]
+    atr = average_true_range(candles)
+    if atr <= 0:
+        return None
+    highs = [c.high for c in sample]
+    lows = [c.low for c in sample]
+    close = sample[-1].close
+    low_points = pivot_indices(lows, "low", 1)
+    high_points = pivot_indices(highs, "high", 1)
+    candidates: list[EntryTrigger] = []
+
+    if direction == "做多":
+        if len(low_points) >= 2:
+            recent_points = low_points[-7:]
+            recent_pairs = list(zip(recent_points, recent_points[1:]))
+            for first, second in recent_pairs:
+                if second - first < 3 or len(sample) - 1 - second > 12:
+                    continue
+                neckline = max(highs[first + 1 : second])
+                if abs(lows[second] - lows[first]) <= atr * tolerance_atr:
+                    candidates.append(EntryTrigger("15m双底颈线", close > neckline, neckline, min(lows[first], lows[second]), 9))
+                if lows[second] > lows[first] + atr * 0.05:
+                    candidates.append(EntryTrigger("15m更高低点", close > neckline, neckline, lows[second], 8))
+        sweep = detect_recent_liquidity_sweep(candles, direction, 12, 0.05)
+        if sweep:
+            sweep_index = next((i for i, c in enumerate(sample) if c.ts == int(sweep["ts"])), len(sample) - 1)
+            trigger_slice = sample[sweep_index + 1 :]
+            trigger_level = max((c.high for c in trigger_slice[:-1]), default=float(sweep["level"]))
+            candidates.append(EntryTrigger("15m 2B假跌破", bool(trigger_slice) and close > trigger_level, trigger_level, float(sweep["extreme"]), 10))
+        for breakout_index in range(max(12, len(sample) - 9), len(sample) - 2):
+            prior_high = max(highs[breakout_index - 10 : breakout_index])
+            breakout = sample[breakout_index]
+            after_breakout = sample[breakout_index + 1 :]
+            retested = any(c.low <= prior_high + atr * 0.25 and c.close >= prior_high - atr * 0.05 for c in after_breakout)
+            if breakout.close > prior_high + atr * 0.15 and retested and close >= prior_high:
+                candidates.append(
+                    EntryTrigger("15m平台突破回踩", True, prior_high, min(c.low for c in after_breakout), 9)
+                )
+        last, previous = sample[-1], sample[-2]
+        bullish_engulf = last.close > last.open and last.close > previous.high and last.open <= previous.close
+        lower_wick = min(last.open, last.close) - last.low
+        key_bar = bullish_engulf or (last.close > last.open and lower_wick >= abs(last.close - last.open) * 1.2)
+        if key_bar:
+            candidates.append(EntryTrigger("15m金K反包", last.close > previous.high, previous.high, last.low, 6))
+    else:
+        if len(high_points) >= 2:
+            recent_points = high_points[-7:]
+            recent_pairs = list(zip(recent_points, recent_points[1:]))
+            for first, second in recent_pairs:
+                if second - first < 3 or len(sample) - 1 - second > 12:
+                    continue
+                neckline = min(lows[first + 1 : second])
+                if abs(highs[second] - highs[first]) <= atr * tolerance_atr:
+                    candidates.append(EntryTrigger("15m双顶颈线", close < neckline, neckline, max(highs[first], highs[second]), 9))
+                if highs[second] < highs[first] - atr * 0.05:
+                    candidates.append(EntryTrigger("15m更低高点", close < neckline, neckline, highs[second], 8))
+        sweep = detect_recent_liquidity_sweep(candles, direction, 12, 0.05)
+        if sweep:
+            sweep_index = next((i for i, c in enumerate(sample) if c.ts == int(sweep["ts"])), len(sample) - 1)
+            trigger_slice = sample[sweep_index + 1 :]
+            trigger_level = min((c.low for c in trigger_slice[:-1]), default=float(sweep["level"]))
+            candidates.append(EntryTrigger("15m 2B假突破", bool(trigger_slice) and close < trigger_level, trigger_level, float(sweep["extreme"]), 10))
+        for breakout_index in range(max(12, len(sample) - 9), len(sample) - 2):
+            prior_low = min(lows[breakout_index - 10 : breakout_index])
+            breakout = sample[breakout_index]
+            after_breakout = sample[breakout_index + 1 :]
+            retested = any(c.high >= prior_low - atr * 0.25 and c.close <= prior_low + atr * 0.05 for c in after_breakout)
+            if breakout.close < prior_low - atr * 0.15 and retested and close <= prior_low:
+                candidates.append(
+                    EntryTrigger("15m平台跌破反抽", True, prior_low, max(c.high for c in after_breakout), 9)
+                )
+        last, previous = sample[-1], sample[-2]
+        bearish_engulf = last.close < last.open and last.close < previous.low and last.open >= previous.close
+        upper_wick = last.high - max(last.open, last.close)
+        key_bar = bearish_engulf or (last.close < last.open and upper_wick >= abs(last.close - last.open) * 1.2)
+        if key_bar:
+            candidates.append(EntryTrigger("15m阴包阳", last.close < previous.low, previous.low, last.high, 6))
+
+    return max(candidates, key=lambda item: (item.confirmed, item.quality), default=None)
 
 
 def risk_reward_long(price: float, invalid: float, target1: float) -> float:
@@ -528,7 +751,7 @@ def detect_recent_liquidity_sweep(
     if len(candles) < lookback + 6:
         return None
     completed = candles[:-1]
-    for sweep_index in range(len(completed) - 1, max(lookback, len(completed) - 4), -1):
+    for sweep_index in range(len(completed) - 1, max(lookback, len(completed) - 7), -1):
         sweep = completed[sweep_index]
         prior = completed[sweep_index - lookback : sweep_index]
         if direction == "做多":
@@ -645,39 +868,60 @@ def short_cap_for_market(market_state: str) -> str:
     return "A类" if market_state in {"弱", "急跌"} else "B类观察，不追空"
 
 
-def evaluate_long(display_symbol: str, actual_symbol: str, bundle: dict[str, dict[str, float]], market_state: str, max_distance_pct: float, min_rr: float, model_name: str) -> Signal | None:
+def evaluate_long(
+    display_symbol: str,
+    actual_symbol: str,
+    bundle: dict[str, Any],
+    market_state: str,
+    max_distance_pct: float,
+    min_rr: float,
+    model_name: str,
+    settings: dict[str, Any] | None = None,
+) -> Signal | None:
+    settings = settings or {}
     daily = bundle["1d"]
     h4 = bundle["4h"]
-    h2 = bundle["2h"]
     h1 = bundle["1h"]
     m15 = bundle["15m"]
-    price = h1["close"]
+    candle_map = bundle.get("_candles", {})
+    h1_candles = candle_map.get("1h", [])
+    m15_candles = candle_map.get("15m", [])
+    if not h1_candles or not m15_candles:
+        return None
+    price = m15["close"]
 
     if h1["rsi"] > 75 and not small_reversal(h1, "做多") and not small_reversal(m15, "做多"):
         return None
     if market_state == "急跌":
         return None
 
-    pullbacks = int(bundle.get("1h_pullbacks", 0) or 0)
-    higher_low = bool(bundle.get("1h_higher_low", False))
-    near_band = near_any_band(price, [h1["ema24"], h1["ema52"], h1["ema144"], h1["ema169"], h2["ema24"], h2["ema52"]], max_distance_pct)
+    setup = analyze_trend_pullback(
+        h1_candles,
+        "做多",
+        float(settings.get("max_retracement", 0.618)),
+        float(settings.get("min_impulse_atr", 1.5)),
+    )
+    trigger = detect_entry_trigger(
+        m15_candles,
+        "做多",
+        float(settings.get("entry_trigger_atr_tolerance", 0.35)),
+    )
+    if setup is None or trigger is None:
+        return None
+
     daily_ok = daily["close"] >= min(daily["ema20"], daily["ema52"])
     h4_ok = h4["close"] >= min(h4["ema20"], h4["ema52"]) or macd_repairing_to_zero(h4)
-    trigger_ok = small_reversal(m15, "做多") and small_reversal(h1, "做多")
-    partial_trigger = small_reversal(m15, "做多") or small_reversal(h1, "做多")
+    h1_turn = small_reversal(h1, "做多")
+    trigger_ok = trigger.confirmed and small_reversal(m15, "做多") and h1_turn
     volume_ok = m15["vol"] >= m15["vol_ma10"] * 0.8
-
-    if not near_band or pullbacks < 1:
+    atr15 = average_true_range(m15_candles)
+    atr1 = average_true_range(h1_candles)
+    entry_low = trigger.trigger_level - atr15 * 0.18
+    entry_high = trigger.trigger_level + atr15 * 0.25
+    invalid = min(setup.pullback_extreme, trigger.invalid_level) - atr1 * float(settings.get("invalidation_atr_buffer", 0.15))
+    target1 = setup.structural_target
+    if target1 <= price:
         return None
-    if price > max(h1["ema24"], h1["ema52"], h1["ema144"], h1["ema169"]) * (1 + max_distance_pct / 100):
-        return None
-    if price < min(h1["ema24"], h1["ema52"], h1["ema144"], h1["ema169"]) * (1 - max_distance_pct / 100):
-        return None
-
-    entry_low = min(h1["ema24"], h1["ema52"], h1["ema144"], h1["ema169"]) * 0.995
-    entry_high = max(h1["ema24"], h1["ema52"], h1["ema144"], h1["ema169"]) * 1.01
-    invalid = min(h1["low20"], h2["low20"], entry_low * 0.975)
-    target1 = max(h1["high20"], h4["high20"], price + (price - invalid) * 2.2)
     rr = risk_reward_long(price, invalid, target1)
     if rr < min_rr:
         return None
@@ -685,31 +929,31 @@ def evaluate_long(display_symbol: str, actual_symbol: str, bundle: dict[str, dic
         return None
     if not (daily_ok or h4_ok):
         return None
-    if long_structure_broken(bundle):
+    if price <= invalid or setup.retracement > float(settings.get("max_retracement", 0.618)):
         return None
 
     score = model_score_base("做多", market_state)
-    score += 18 if daily_ok else 0
-    score += 10 if h4_ok else 0
-    score += 10 if pullbacks >= 2 else 6
-    score += 6 if higher_low else 0
-    score += 12 if trigger_ok else (6 if partial_trigger else 0)
+    score += 14 if daily_ok else 0
+    score += 12 if h4_ok else 0
+    score += 12 if setup.ema52_held else 4
+    score += 12 if setup.macd_zero_held else 4
+    score += 14 if trigger_ok else 7
     score += 6 if volume_ok else 0
-    score += 8 if rr >= 2.0 else 0
+    score += 10 if rr >= 2.0 else 0
     score += 6 if rr >= 3.0 else 0
 
-    if score >= 85 and trigger_ok and volume_ok and h4_ok and pullbacks >= 2 and higher_low and market_state == "强":
+    if score >= 85 and trigger_ok and volume_ok and h4_ok and setup.ema52_held and setup.macd_zero_held and market_state in {"强", "震荡"}:
         grade = "A类"
-    elif score >= 70 and market_state in {"强", "震荡", "弱"} and (partial_trigger or entry_low <= price <= entry_high):
+    elif score >= 70 and market_state in {"强", "震荡", "弱"} and entry_gap_pct(price, entry_low, entry_high) <= max_distance_pct:
         grade = "B类观察，不追单"
     else:
         return None
 
-    status = "入场区内" if entry_low <= price <= entry_high else "接近入场"
-    stage = "平台突破回踩" if pullbacks >= 2 else "主升回踩"
-    setup_state = f"{pullbacks}段回调 + {'动能修复' if macd_repairing_to_zero(h1) else '等待确认'}"
-    reason = f"{market_state}环境；{setup_state}；{'1H反包确认' if trigger_ok else '等待1H确认'}；2H/4H结构承接"
-    action = "等待触发确认后按失效位执行" if grade == "A类" else "观察，不追单"
+    status = "触发确认" if trigger_ok else ("入场区内" if entry_low <= price <= entry_high else "接近入场")
+    stage = "第3浪启动" if trigger_ok else "第2浪回调确认"
+    setup_state = f"第2浪回撤{setup.retracement * 100:.1f}% + {trigger.name}{'确认' if trigger.confirmed else '待突破'}"
+    reason = f"{market_state}环境；1H启动后回调未超61.8%；MACD{'守住' if setup.macd_zero_held else '接近'}0轴；{trigger.name}"
+    action = "按失效位控制风险，目标先看第1浪高点" if grade == "A类" else "等待15m结构确认，不追单"
 
     return Signal(
         model_name=model_name,
@@ -733,72 +977,87 @@ def evaluate_long(display_symbol: str, actual_symbol: str, bundle: dict[str, dic
     )
 
 
-def evaluate_short(display_symbol: str, actual_symbol: str, bundle: dict[str, dict[str, float]], market_state: str, max_distance_pct: float, min_rr: float, model_name: str) -> Signal | None:
+def evaluate_short(
+    display_symbol: str,
+    actual_symbol: str,
+    bundle: dict[str, Any],
+    market_state: str,
+    max_distance_pct: float,
+    min_rr: float,
+    model_name: str,
+    settings: dict[str, Any] | None = None,
+) -> Signal | None:
+    settings = settings or {}
     daily = bundle["1d"]
     h4 = bundle["4h"]
-    h2 = bundle["2h"]
     h1 = bundle["1h"]
     m15 = bundle["15m"]
-    price = h1["close"]
+    candle_map = bundle.get("_candles", {})
+    h1_candles = candle_map.get("1h", [])
+    m15_candles = candle_map.get("15m", [])
+    if not h1_candles or not m15_candles:
+        return None
+    price = m15["close"]
 
     if h1["rsi"] < 25 and not small_reversal(h1, "做空") and not small_reversal(m15, "做空"):
         return None
     if market_state == "强":
         return None
 
-    rebounds = int(bundle.get("1h_rebounds", 0) or 0)
-    lower_high = bool(bundle.get("1h_lower_high", False))
-    near_band = near_any_band(price, [h1["ema24"], h1["ema52"], h1["ema144"], h1["ema169"], h2["ema24"], h2["ema52"]], max_distance_pct)
+    setup = analyze_trend_pullback(
+        h1_candles,
+        "做空",
+        float(settings.get("max_retracement", 0.618)),
+        float(settings.get("min_impulse_atr", 1.5)),
+    )
+    trigger = detect_entry_trigger(
+        m15_candles,
+        "做空",
+        float(settings.get("entry_trigger_atr_tolerance", 0.35)),
+    )
+    if setup is None or trigger is None:
+        return None
+
     daily_ok = daily["close"] <= max(daily["ema20"], daily["ema52"])
     h4_ok = h4["close"] <= max(h4["ema20"], h4["ema52"]) or h4["hist"] <= h4["hist_prev"]
-    trigger_ok = small_reversal(m15, "做空") and small_reversal(h1, "做空")
-    partial_trigger = small_reversal(m15, "做空") or small_reversal(h1, "做空")
+    trigger_ok = trigger.confirmed and small_reversal(m15, "做空") and small_reversal(h1, "做空")
     volume_ok = m15["vol"] >= m15["vol_ma10"] * 0.8
-
-    if not near_band or rebounds < 1:
+    atr15 = average_true_range(m15_candles)
+    atr1 = average_true_range(h1_candles)
+    entry_low = trigger.trigger_level - atr15 * 0.25
+    entry_high = trigger.trigger_level + atr15 * 0.18
+    invalid = max(setup.pullback_extreme, trigger.invalid_level) + atr1 * float(settings.get("invalidation_atr_buffer", 0.15))
+    target1 = setup.structural_target
+    if target1 >= price:
         return None
-    if price < min(h1["ema24"], h1["ema52"], h1["ema144"], h1["ema169"]) * (1 - max_distance_pct / 100):
-        return None
-    if price > max(h1["ema24"], h1["ema52"], h1["ema144"], h1["ema169"]) * (1 + max_distance_pct / 100):
-        return None
-
-    entry_low = min(h1["ema24"], h1["ema52"], h1["ema144"], h1["ema169"]) * 0.99
-    entry_high = max(h1["ema24"], h1["ema52"], h1["ema144"], h1["ema169"]) * 1.005
-    invalid = max(h1["high20"], h2["high20"], entry_high * 1.025)
-    target1 = min(h1["low20"], h4["low20"], price - (invalid - price) * 2.2)
     rr = risk_reward_short(price, invalid, target1)
-    if rr < min_rr:
+    if rr < min_rr or entry_gap_pct(price, entry_low, entry_high) > max_distance_pct:
         return None
-
-    if entry_gap_pct(price, entry_low, entry_high) > max_distance_pct:
-        return None
-    if not (daily_ok or h4_ok):
-        return None
-    if short_structure_broken(bundle):
+    if not (daily_ok or h4_ok) or price >= invalid:
         return None
 
     score = model_score_base("做空", market_state)
-    score += 18 if daily_ok else 0
-    score += 10 if h4_ok else 0
-    score += 10 if rebounds >= 2 else 6
-    score += 6 if lower_high else 0
-    score += 12 if trigger_ok else (6 if partial_trigger else 0)
+    score += 14 if daily_ok else 0
+    score += 12 if h4_ok else 0
+    score += 12 if setup.ema52_held else 4
+    score += 12 if setup.macd_zero_held else 4
+    score += 14 if trigger_ok else 7
     score += 6 if volume_ok else 0
-    score += 8 if rr >= 2.0 else 0
+    score += 10 if rr >= 2.0 else 0
     score += 6 if rr >= 3.0 else 0
 
-    if score >= 85 and trigger_ok and volume_ok and h4_ok and rebounds >= 2 and lower_high and market_state in {"弱", "急跌"}:
+    if score >= 85 and trigger_ok and volume_ok and h4_ok and setup.ema52_held and setup.macd_zero_held and market_state in {"弱", "急跌", "震荡"}:
         grade = "A类"
-    elif score >= 70 and market_state in {"震荡", "弱", "急跌"} and (partial_trigger or entry_low <= price <= entry_high):
+    elif score >= 70 and market_state in {"震荡", "弱", "急跌"}:
         grade = "B类观察，不追空"
     else:
         return None
 
-    status = "入场区内" if entry_low <= price <= entry_high else "接近入场"
-    stage = "反弹承压" if rebounds >= 2 else "空头延续"
-    setup_state = f"{rebounds}段反弹 + {'动能转弱' if h1['hist'] <= h1['hist_prev'] else '等待确认'}"
-    reason = f"{market_state}环境；{setup_state}；{'1H承压确认' if trigger_ok else '等待1H确认'}；2H/4H压力位承压"
-    action = "等待反弹承压后按失效位执行" if grade == "A类" else "观察，不追空"
+    status = "触发确认" if trigger_ok else ("入场区内" if entry_low <= price <= entry_high else "接近入场")
+    stage = "空头第3浪启动" if trigger_ok else "空头第2浪反弹确认"
+    setup_state = f"第2浪反弹{setup.retracement * 100:.1f}% + {trigger.name}{'确认' if trigger.confirmed else '待突破'}"
+    reason = f"{market_state}环境；1H下跌启动后反弹未超61.8%；MACD{'守住' if setup.macd_zero_held else '接近'}0轴；{trigger.name}"
+    action = "按失效位控制风险，目标先看第1浪低点" if grade == "A类" else "等待15m结构确认，不追空"
 
     return Signal(
         model_name=model_name,
@@ -1643,8 +1902,8 @@ def evaluate_symbol(
     model_settings: dict[str, Any] | None = None,
 ) -> Signal | None:
     if variant == "legacy":
-        long_sig = evaluate_legacy_long(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
-        short_sig = evaluate_legacy_short(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
+        long_sig = evaluate_long(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name, model_settings)
+        short_sig = evaluate_short(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name, model_settings)
     elif variant == "macro":
         long_sig = evaluate_macro_long(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
         short_sig = evaluate_macro_short(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
@@ -1655,8 +1914,8 @@ def evaluate_symbol(
         long_sig = evaluate_liquidity_sweep(display_symbol, actual_symbol, bundle, market_state, "做多", settings, model_name)
         short_sig = evaluate_liquidity_sweep(display_symbol, actual_symbol, bundle, market_state, "做空", settings, model_name)
     else:
-        long_sig = evaluate_long(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
-        short_sig = evaluate_short(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name)
+        long_sig = evaluate_long(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name, model_settings)
+        short_sig = evaluate_short(display_symbol, actual_symbol, bundle, market_state, max_distance_pct, min_rr, model_name, model_settings)
     return choose_signal(long_sig, short_sig, market_state)
 
 
@@ -1664,6 +1923,7 @@ def scan_crypto(config: dict[str, Any], state: dict[str, Any], bundle_cache: dic
     crypto_cfg = config.get("crypto", {})
     macro_cfg = config.get("macro", {})
     sweep_cfg = config.get("liquidity_sweep", {})
+    trend_cfg = config.get("trend_pullback", {})
     if not crypto_cfg.get("enabled", True):
         return [], "震荡"
 
@@ -1692,6 +1952,8 @@ def scan_crypto(config: dict[str, Any], state: dict[str, Any], bundle_cache: dic
     market_state = detect_market_state(btc_bundle["4h"], eth_bundle["4h"], btc_bundle["1h"])
     signals: list[Signal] = []
     for model in models:
+        if not model.get("enabled", True):
+            continue
         model_name = str(model.get("name", MODEL_NAME))
         variant = str(model.get("variant", "breakout"))
         if variant == "macro" and not macro_cfg.get("enabled", True):
@@ -1712,293 +1974,4 @@ def scan_crypto(config: dict[str, Any], state: dict[str, Any], bundle_cache: dic
             try:
                 bundle = get_bundle(actual_symbol)
             except Exception as exc:  # noqa: BLE001
-                print(f"skip crypto {display_symbol}: {exc}", file=sys.stderr)
-                continue
-
-            chosen = evaluate_symbol(
-                display_symbol,
-                actual_symbol,
-                bundle,
-                market_state,
-                float(
-                    crypto_cfg.get(
-                        "v2_max_distance_to_entry_pct",
-                        crypto_cfg.get("max_distance_to_entry_pct", config["scan"]["v2_max_distance_to_entry_pct"]),
-                    )
-                ),
-                model_min_rr,
-                model_name,
-                variant,
-                sweep_cfg if variant == "liquidity_sweep" else None,
-            )
-            if chosen is None:
-                continue
-            signals.append(chosen)
-
-    return signals, market_state
-
-
-def notify_and_record(config: dict[str, Any], state: dict[str, Any], snapshot: dict[str, Any]) -> None:
-    payload = dict(snapshot)
-    payload["notified"] = True
-    signal = Signal(
-        model_name=payload["model_name"],
-        market=payload["market"],
-        symbol=payload["symbol"],
-        actual_symbol=payload.get("actual_symbol") or payload["symbol"],
-        direction=payload["direction"],
-        grade=payload["grade"],
-        stage=payload["stage"],
-        setup_state=payload["setup_state"],
-        status=payload["status"],
-        price=float(payload["price"]),
-        entry_low=float(payload["entry_low"]),
-        entry_high=float(payload["entry_high"]),
-        invalid=float(payload["invalid"]),
-        target1=float(payload["target1"]),
-        market_state=payload["market_state"],
-        reason=payload["reason"],
-        action=payload["action"],
-        score=int(payload["score"]),
-    )
-    message = render_signal_message(signal, event=payload.get("last_event", "push"), previous_status=payload.get("previous_status"))
-    feishu_send(config, message)
-
-
-def render_table(title: str, rows: list[tuple[str, Any]]) -> str:
-    if not rows:
-        return f"## {title}\n无样本\n"
-    lines = [f"## {title}", "| 项目 | 数值 |", "| --- | --- |"]
-    for key, value in rows:
-        lines.append(f"| {key} | {value} |")
-    lines.append("")
-    return "\n".join(lines)
-
-
-def render_group(title: str, group: dict[str, dict[str, Any]]) -> str:
-    if not group:
-        return f"## {title}\n无样本\n"
-    rows = [f"## {title}", "| 分组 | 样本 | 已触发 | 胜率 | 平均R |", "| --- | --- | --- | --- | --- |"]
-    for key in sorted(group):
-        item = group[key]
-        rows.append(f"| {key} | {item['families']} | {item['triggered']} | {item['win_rate'] * 100:.1f}% | {item['avg_r']:.2f} |")
-    rows.append("")
-    return "\n".join(rows)
-
-
-def compute_performance(trades: list[dict[str, Any]]) -> dict[str, Any]:
-    latest: dict[str, dict[str, Any]] = {}
-    for row in trades:
-        family = row.get("family_key")
-        if not family:
-            continue
-        ts = row.get("updated_at") or row.get("ledger_time") or row.get("created_at") or ""
-        current = latest.get(family)
-        if current is None:
-            latest[family] = row
-            continue
-        current_ts = current.get("updated_at") or current.get("ledger_time") or current.get("created_at") or ""
-        if ts >= current_ts:
-            latest[family] = row
-
-    families = list(latest.values())
-    pushed = [row for row in families if row.get("last_event") in {"push", "upgrade"}]
-    triggered = [row for row in families if row.get("triggered")]
-    wins = [row for row in families if row.get("status") == "目标1达成" and row.get("triggered")]
-    losses = [row for row in families if row.get("status") == "失效" and row.get("triggered")]
-    expired = [row for row in families if row.get("status") == "过期"]
-
-    closed_r = [float(row.get("final_r", 0.0) or 0.0) for row in families if row.get("status") in FINAL_STATES or row.get("triggered")]
-    max_float = [float(row.get("max_floating_r", 0.0) or 0.0) for row in families]
-    max_draw = [float(row.get("max_drawdown_r", 0.0) or 0.0) for row in families]
-
-    def grouped(field: str) -> dict[str, dict[str, Any]]:
-        buckets: dict[str, list[dict[str, Any]]] = {}
-        for row in families:
-            key = str(row.get(field, "未知"))
-            buckets.setdefault(key, []).append(row)
-        summary: dict[str, dict[str, Any]] = {}
-        for key, rows in buckets.items():
-            trig = [r for r in rows if r.get("triggered")]
-            win = [r for r in rows if r.get("status") == "目标1达成" and r.get("triggered")]
-            rvals = [float(r.get("final_r", 0.0) or 0.0) for r in rows if r.get("status") in FINAL_STATES or r.get("triggered")]
-            summary[key] = {
-                "families": len(rows),
-                "triggered": len(trig),
-                "win_rate": round(len(win) / len(trig) if trig else 0.0, 4),
-                "avg_r": round(mean(rvals) if rvals else 0.0, 4),
-            }
-        return summary
-
-    overall = {
-        "families": len(families),
-        "pushed": len(pushed),
-        "triggered": len(triggered),
-        "wins": len(wins),
-        "losses": len(losses),
-        "expired": len(expired),
-        "win_rate": round(len(wins) / len(triggered) if triggered else 0.0, 4),
-        "effective_rate": round(len(triggered) / len(pushed) if pushed else 0.0, 4),
-        "avg_r": round(mean(closed_r) if closed_r else 0.0, 4),
-        "max_floating_r": round(max(max_float) if max_float else 0.0, 4),
-        "max_drawdown_r": round(min(max_draw) if max_draw else 0.0, 4),
-    }
-
-    return {
-        "model_name": PORTFOLIO_NAME,
-        "updated_at": now_iso(),
-        "overall": overall,
-        "by_model": grouped("model_name"),
-        "by_grade": grouped("grade"),
-        "by_direction": grouped("direction"),
-        "by_stage": grouped("stage"),
-        "by_market_state": grouped("market_state"),
-    }
-
-
-def render_performance_report(perf: dict[str, Any]) -> str:
-    overall = perf.get("overall", {})
-    lines = [f"# 飞书机会胜率报告", "", f"更新时刻：{perf.get('updated_at', '')}", f"模型：{perf.get('model_name', PORTFOLIO_NAME)}", ""]
-    lines.append(
-        render_table(
-            "总体",
-            [
-                ("推送链路数", overall.get("families", 0)),
-                ("已推送", overall.get("pushed", 0)),
-                ("已触发", overall.get("triggered", 0)),
-                ("目标1达成", overall.get("wins", 0)),
-                ("失效", overall.get("losses", 0)),
-                ("过期", overall.get("expired", 0)),
-                ("胜率", f"{overall.get('win_rate', 0.0) * 100:.1f}%"),
-                ("机会有效率", f"{overall.get('effective_rate', 0.0) * 100:.1f}%"),
-                ("平均R", f"{overall.get('avg_r', 0.0):.2f}"),
-                ("最大浮盈R", f"{overall.get('max_floating_r', 0.0):.2f}"),
-                ("最大浮亏R", f"{overall.get('max_drawdown_r', 0.0):.2f}"),
-            ],
-        )
-    )
-    lines.append(render_group("按等级", perf.get("by_grade", {})))
-    lines.append(render_group("按模型", perf.get("by_model", {})))
-    lines.append(render_group("按方向", perf.get("by_direction", {})))
-    lines.append(render_group("按阶段", perf.get("by_stage", {})))
-    lines.append(render_group("按大盘环境", perf.get("by_market_state", {})))
-    return "\n".join(lines).strip() + "\n"
-
-
-def render_status_icon(sig: Signal, event: str = "push") -> str:
-    status = str(sig.status)
-    grade = str(sig.grade)
-    if event in {"invalid", "expire"} or status in {"失效", "过期"}:
-        return "🔴"
-    if event == "target1" or status == "目标1达成":
-        return "🔵"
-    if grade == "A类" or event in {"trigger", "touch_entry", "upgrade"} or status in {"入场区内", "触发确认", "接近入场"}:
-        return "🟢"
-    if grade == "B类":
-        return "🟡"
-    return "⚪"
-
-
-def render_signal_message(sig: Signal, event: str = "push", previous_status: str | None = None) -> str:
-    icon = render_status_icon(sig, event)
-    title = f"{icon} 趋势机会｜{sig.model_name}｜{sig.symbol}｜{sig.direction}｜{render_grade(sig)}"
-    lines = [
-        title,
-        "",
-        f"模型：{sig.model_name}",
-        f"现价：{fmt_price(sig.price)}",
-        f"状态：{sig.status}",
-        f"优先级：{icon}",
-    ]
-    if previous_status:
-        lines.append(f"原状态：{previous_status}")
-    if event != "push":
-        lines.append(f"事件：{event}")
-    lines.extend(
-        [
-            f"入场区：{fmt_price(sig.entry_low)}-{fmt_price(sig.entry_high)}",
-            f"失效位：{fmt_price(sig.invalid)}",
-            f"目标1：{fmt_price(sig.target1)}",
-            f"阶段：{sig.stage}",
-            f"原因：{sig.reason}",
-            f"处理：{sig.action}",
-        ]
-    )
-    return "\n".join(lines)
-
-
-def main() -> int:
-    config = load_config()
-    state_path = config["scan"]["state_file"]
-    ledger_path = config["scan"]["trade_ledger_file"]
-    perf_path = config["scan"]["performance_file"]
-    report_path = config["scan"]["performance_report"]
-
-    state = load_state(state_path)
-    ledger = load_jsonl(ledger_path)
-    bundle_cache: dict[str, dict[str, dict[str, float]]] = {}
-
-    run_full_scan = should_run_full_scan(state, config)
-    updates = update_open_signals(state, bundle_cache, config)
-    candidate_signals: list[Signal] = []
-    market_state = str(state.get("meta", {}).get("last_market_state", "未知"))
-    if run_full_scan:
-        candidate_signals, market_state = scan_crypto(config, state, bundle_cache)
-        state.setdefault("meta", {})["last_full_scan_at"] = now_iso()
-        state["meta"]["last_market_state"] = market_state
-        state["meta"]["scan_mode"] = "full"
-    else:
-        state.setdefault("meta", {})["last_open_refresh_at"] = now_iso()
-        state["meta"]["scan_mode"] = "open"
-    state.setdefault("meta", {})["last_cycle_at"] = now_iso()
-
-    candidate_events: list[dict[str, Any]] = []
-    for sig in candidate_signals:
-        old = state.setdefault("signals", {}).get(sig.family_key, {})
-        event_type = "upgrade" if old and old.get("grade") != sig.grade and old.get("open", True) else "push"
-        snapshot = make_snapshot(
-            sig,
-            event_type,
-            previous_status=old.get("status") if old else None,
-            open_=True,
-            triggered=bool(old.get("triggered")) if old else False,
-            notified=bool(old.get("notified")) if old else False,
-            origin_signal_id=old.get("signal_id") if old and old.get("grade") != sig.grade else None,
-        )
-        if old and not snapshot_changed(old, snapshot):
-            continue
-        state["signals"][sig.family_key] = snapshot
-        candidate_events.append(snapshot)
-
-    all_events = updates + candidate_events
-    pushed = 0
-    for event in sorted(all_events, key=lambda r: (r.get("grade") != "A类", -int(r.get("score", 0) or 0))):
-        append_jsonl(ledger_path, ledger_row(event))
-
-    external_events = select_external_events(all_events)
-    for event in sorted(
-        external_events,
-        key=lambda r: (r.get("grade") != "A类", -event_priority(r), -int(r.get("score", 0) or 0)),
-    ):
-        notify_and_record(config, state, event)
-        event["notified"] = True
-        state["signals"][event["family_key"]] = event
-        pushed += 1
-
-    save_state(state_path, state)
-
-    ledger = load_jsonl(ledger_path)
-    perf = compute_performance(ledger)
-    write_json(perf_path, perf)
-    write_text(report_path, render_performance_report(perf))
-
-    print(
-        f"scan done: mode={state.get('meta', {}).get('scan_mode', 'unknown')}, market={market_state}, "
-        f"candidates={len(candidate_signals)}, events={len(all_events)}, pushed={pushed}, "
-        f"open={sum(1 for v in state['signals'].values() if v.get('open', True))}"
-    )
-    return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+                print(f"skip crypto {display_symbol}: {exc}", file=sys.stde
