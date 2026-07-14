@@ -7,7 +7,7 @@
       "win_rate": 0.0303
     },
     "做空": {
-      "avg_r": -0.0614,
+      "avg_r": -0.0822,
       "families": 58,
       "triggered": 40,
       "win_rate": 0.025
@@ -27,7 +27,7 @@
       "win_rate": 0.0312
     },
     "B类观察，不追空": {
-      "avg_r": -0.0645,
+      "avg_r": -0.0858,
       "families": 57,
       "triggered": 39,
       "win_rate": 0.0256
@@ -47,7 +47,7 @@
       "win_rate": 0.0
     },
     "震荡": {
-      "avg_r": -0.0747,
+      "avg_r": -0.0897,
       "families": 80,
       "triggered": 57,
       "win_rate": 0.0351
@@ -55,7 +55,7 @@
   },
   "by_model": {
     "天机伏击·A/B趋势起爆模型": {
-      "avg_r": -0.2254,
+      "avg_r": -0.2458,
       "families": 61,
       "triggered": 37,
       "win_rate": 0.0541
@@ -99,7 +99,7 @@
       "win_rate": 0.0
     },
     "空头第2浪反弹确认": {
-      "avg_r": -0.3558,
+      "avg_r": -0.4183,
       "families": 20,
       "triggered": 15,
       "win_rate": 0.0667
@@ -119,17 +119,17 @@
   },
   "model_name": "四模型并行扫描",
   "overall": {
-    "avg_r": -0.155,
-    "effective_rate": 5.6154,
+    "avg_r": -0.1653,
+    "effective_rate": 6.0833,
     "expired": 72,
     "families": 112,
-    "losses": 19,
+    "losses": 20,
     "max_drawdown_r": -66.1111,
     "max_floating_r": 6.9742,
-    "pushed": 13,
+    "pushed": 12,
     "triggered": 73,
     "win_rate": 0.0274,
     "wins": 2
   },
-  "updated_at": "2026-07-14T23:03:22+08:00"
+  "updated_at": "2026-07-15T00:37:41+08:00"
 }
