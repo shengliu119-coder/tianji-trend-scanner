@@ -7,10 +7,10 @@
       "win_rate": 0.0
     },
     "做空": {
-      "avg_r": 0.1464,
+      "avg_r": 0.1433,
       "families": 58,
-      "triggered": 39,
-      "win_rate": 0.0256
+      "triggered": 40,
+      "win_rate": 0.025
     }
   },
   "by_grade": {
@@ -27,10 +27,10 @@
       "win_rate": 0.0
     },
     "B类观察，不追空": {
-      "avg_r": 0.1477,
+      "avg_r": 0.1445,
       "families": 57,
-      "triggered": 38,
-      "win_rate": 0.0263
+      "triggered": 39,
+      "win_rate": 0.0256
     }
   },
   "by_market_state": {
@@ -49,8 +49,8 @@
     "震荡": {
       "avg_r": -0.0017,
       "families": 80,
-      "triggered": 56,
-      "win_rate": 0.0179
+      "triggered": 57,
+      "win_rate": 0.0175
     }
   },
   "by_model": {
@@ -67,9 +67,9 @@
       "win_rate": 0.0
     },
     "流动性扫单后顺势策略": {
-      "avg_r": 0.1268,
+      "avg_r": 0.1109,
       "families": 8,
-      "triggered": 7,
+      "triggered": 8,
       "win_rate": 0.0
     }
   },
@@ -87,9 +87,9 @@
       "win_rate": 0.0
     },
     "流动性扫单后顺势": {
-      "avg_r": 0.1268,
+      "avg_r": 0.1109,
       "families": 8,
-      "triggered": 7,
+      "triggered": 8,
       "win_rate": 0.0
     },
     "空头延续": {
@@ -119,17 +119,17 @@
   },
   "model_name": "四模型并行扫描",
   "overall": {
-    "avg_r": -0.1068,
-    "effective_rate": 2.6296,
+    "avg_r": -0.1056,
+    "effective_rate": 2.7692,
     "expired": 70,
     "families": 112,
     "losses": 9,
     "max_drawdown_r": -2.4726,
     "max_floating_r": 5.9845,
-    "pushed": 27,
-    "triggered": 71,
-    "win_rate": 0.0141,
+    "pushed": 26,
+    "triggered": 72,
+    "win_rate": 0.0139,
     "wins": 1
   },
-  "updated_at": "2026-07-14T18:30:06+08:00"
+  "updated_at": "2026-07-14T19:55:51+08:00"
 }
