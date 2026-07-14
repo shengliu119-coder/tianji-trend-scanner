@@ -1,10 +1,10 @@
 {
   "by_direction": {
     "做多": {
-      "avg_r": -0.2468,
+      "avg_r": -0.3274,
       "families": 54,
       "triggered": 33,
-      "win_rate": 0.0303
+      "win_rate": 0.0
     },
     "做空": {
       "avg_r": -0.0822,
@@ -21,10 +21,10 @@
       "win_rate": 0.0
     },
     "B类观察，不追单": {
-      "avg_r": -0.273,
+      "avg_r": -0.3627,
       "families": 49,
       "triggered": 32,
-      "win_rate": 0.0312
+      "win_rate": 0.0
     },
     "B类观察，不追空": {
       "avg_r": -0.0858,
@@ -41,24 +41,24 @@
       "win_rate": 0.0
     },
     "强": {
-      "avg_r": -0.3114,
-      "families": 31,
-      "triggered": 15,
+      "avg_r": -0.301,
+      "families": 32,
+      "triggered": 16,
       "win_rate": 0.0
     },
     "震荡": {
-      "avg_r": -0.0897,
-      "families": 80,
-      "triggered": 57,
-      "win_rate": 0.0351
+      "avg_r": -0.1509,
+      "families": 79,
+      "triggered": 56,
+      "win_rate": 0.0179
     }
   },
   "by_model": {
     "天机伏击·A/B趋势起爆模型": {
-      "avg_r": -0.2458,
+      "avg_r": -0.3264,
       "families": 61,
       "triggered": 37,
-      "win_rate": 0.0541
+      "win_rate": 0.027
     },
     "天机伏击·趋势回踩模型": {
       "avg_r": -0.1428,
@@ -111,25 +111,25 @@
       "win_rate": 0.0
     },
     "第2浪回调确认": {
-      "avg_r": 0.983,
+      "avg_r": -0.3333,
       "families": 3,
       "triggered": 3,
-      "win_rate": 0.3333
+      "win_rate": 0.0
     }
   },
   "model_name": "四模型并行扫描",
   "overall": {
-    "avg_r": -0.1653,
-    "effective_rate": 6.0833,
+    "avg_r": -0.2061,
+    "effective_rate": 5.6154,
     "expired": 72,
     "families": 112,
     "losses": 20,
     "max_drawdown_r": -66.1111,
     "max_floating_r": 6.9742,
-    "pushed": 12,
+    "pushed": 13,
     "triggered": 73,
-    "win_rate": 0.0274,
-    "wins": 2
+    "win_rate": 0.0137,
+    "wins": 1
   },
-  "updated_at": "2026-07-15T00:37:41+08:00"
+  "updated_at": "2026-07-15T01:46:40+08:00"
 }
