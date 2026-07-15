@@ -8,8 +8,8 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-07-16T05:22:04+08:00",
-    "last_candidates": 10
+    "last_scan_at": "2026-07-16T06:20:29+08:00",
+    "last_candidates": 8
   },
   "signals": {
     "天机伏击·A/B趋势起爆模型:AAVEUSDT:做多": {
@@ -341,21 +341,22 @@
       "direction": "做空",
       "grade": "A",
       "status": "接近入场",
-      "price": 3.758e-06,
-      "entry_low": 3.77225e-06,
-      "entry_high": 3.7824714285714287e-06,
-      "invalid": 3.953471428571429e-06,
-      "target1": 3.367057142857141e-06,
-      "rr": 2.0,
-      "score": 100,
+      "price": 3.71e-06,
+      "entry_low": 3.71185e-06,
+      "entry_high": 3.721162857142857e-06,
+      "invalid": 3.953162857142857e-06,
+      "target1": 3.223674285714286e-06,
+      "target2": 2.980511428571429e-06,
+      "rr": 3.0,
+      "score": 96,
       "market_state": "震荡",
       "setup_tf": "2h",
       "trigger_tf": "15m",
       "setup_kind": "反弹承压",
-      "trigger_name": "15m双顶反转",
-      "reason": "2h 反弹承压，回调未超过61.8%，15m 出现15m双顶反转，高一级结构未强反向",
+      "trigger_name": "15m跌破反抽",
+      "reason": "2h 反弹承压，回调未超过61.8%，15m 出现15m跌破反抽，高一级结构未强反向",
       "action": "A类可按计划小仓试执行，必须挂失效位",
-      "created_at": "2026-07-15T15:47:46+08:00"
+      "created_at": "2026-07-16T06:16:43+08:00"
     },
     "天机伏击·A/B趋势起爆模型:BTCUSDT:做多": {
       "action": "等待15m结构确认，不追单",
