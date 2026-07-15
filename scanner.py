@@ -290,13 +290,70 @@ def binance_klines(symbol: str, interval: str, limit: int = 220) -> list[Candle]
     return [Candle(int(r[0]), float(r[1]), float(r[2]), float(r[3]), float(r[4]), float(r[5])) for r in rows]
 
 
+def okx_inst_id(symbol: str) -> str:
+    base = symbol[:-4] if symbol.endswith("USDT") else symbol
+    if base.startswith("1000"):
+        base = base[4:]
+    return f"{base}-USDT-SWAP"
+
+
+def okx_bar(interval: str) -> str:
+    return {
+        "15m": "15m",
+        "1h": "1H",
+        "2h": "2H",
+        "4h": "4H",
+        "1d": "1D",
+    }.get(interval, interval)
+
+
+def okx_klines(symbol: str, interval: str, limit: int = 220) -> list[Candle]:
+    qs = urllib.parse.urlencode({"instId": okx_inst_id(symbol), "bar": okx_bar(interval), "limit": limit})
+    url = f"https://www.okx.com/api/v5/market/mark-price-candles?{qs}"
+    payload = http_json(url)
+    if str(payload.get("code")) != "0":
+        raise RuntimeError(f"OKX kline failed: {payload}")
+    rows = sorted(payload.get("data", []), key=lambda r: int(r[0]))
+    candles: list[Candle] = []
+    for r in rows:
+        candles.append(Candle(int(r[0]), float(r[1]), float(r[2]), float(r[3]), float(r[4]), 0.0))
+    return candles
+
+
+def crypto_klines(symbol: str, interval: str, limit: int = 220) -> list[Candle]:
+    try:
+        return binance_klines(symbol, interval, limit)
+    except Exception as binance_exc:  # noqa: BLE001
+        try:
+            return okx_klines(symbol, interval, limit)
+        except Exception as okx_exc:  # noqa: BLE001
+            raise RuntimeError(f"Binance and OKX both failed: Binance={binance_exc}; OKX={okx_exc}") from okx_exc
+
+
 def binance_24h_tickers() -> dict[str, dict[str, Any]]:
-    rows = http_json("https://fapi.binance.com/fapi/v1/ticker/24hr")
-    return {str(row["symbol"]): row for row in rows}
+    try:
+        rows = http_json("https://fapi.binance.com/fapi/v1/ticker/24hr")
+        return {str(row["symbol"]): row for row in rows}
+    except Exception as exc:  # noqa: BLE001
+        print(f"Binance 24h ticker unavailable, using OKX fallback: {exc}", file=sys.stderr)
+        payload = http_json("https://www.okx.com/api/v5/market/tickers?instType=SWAP")
+        if str(payload.get("code")) != "0":
+            raise RuntimeError(f"OKX tickers failed: {payload}")
+        tickers: dict[str, dict[str, Any]] = {}
+        for row in payload.get("data", []):
+            inst_id = str(row.get("instId", ""))
+            if not inst_id.endswith("-USDT-SWAP"):
+                continue
+            base = inst_id.replace("-USDT-SWAP", "")
+            symbol = f"{base}USDT"
+            tickers[symbol] = row
+            if symbol in {"PEPEUSDT", "BONKUSDT"}:
+                tickers[f"1000{symbol}"] = row
+        return tickers
 
 
 def fetch_bundle(actual_symbol: str) -> tuple[dict[str, dict[str, float]], dict[str, list[Candle]]]:
-    candle_map = {tf: binance_klines(actual_symbol, tf, 240) for tf in ["15m", "1h", "2h", "4h", "1d"]}
+    candle_map = {tf: crypto_klines(actual_symbol, tf, 240) for tf in ["15m", "1h", "2h", "4h", "1d"]}
     return {tf: summarize(candles) for tf, candles in candle_map.items()}, candle_map
 
 
