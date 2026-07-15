@@ -97,6 +97,7 @@ class Signal:
     entry_high: float
     invalid: float
     target1: float
+    target2: float
     rr: float
     score: int
     market_state: str
@@ -159,7 +160,7 @@ def load_config() -> dict[str, Any]:
     config["scan"].setdefault("trade_ledger_file", "state/trades.jsonl")
     config["scan"].setdefault("performance_file", "state/performance.json")
     config["scan"].setdefault("performance_report", "reports/performance.md")
-    config["scan"].setdefault("min_rr", 2.0)
+    config["scan"].setdefault("min_rr", 3.0)
     config["scan"].setdefault("max_distance_to_entry_pct", 2.5)
     config["scan"].setdefault("expiry_hours", 12)
     config["crypto"].setdefault("enabled", True)
@@ -595,14 +596,18 @@ def evaluate_direction(
             entry_low = float(trigger["level"]) - atr * 0.18
             entry_high = float(trigger["level"]) + atr * 0.35
             invalid = min(float(trigger["invalid"]), float(setup["invalid_base"])) - buffer
-            target = max(float(setup["target"]), price + (price - invalid) * min_rr)
-            rr = rr_long(price, invalid, target)
+            risk = price - invalid
+            target1 = price + risk * 2.0
+            target2 = price + risk * 3.0
+            rr = rr_long(price, invalid, target2)
         else:
             entry_low = float(trigger["level"]) - atr * 0.35
             entry_high = float(trigger["level"]) + atr * 0.18
             invalid = max(float(trigger["invalid"]), float(setup["invalid_base"])) + buffer
-            target = min(float(setup["target"]), price - (invalid - price) * min_rr)
-            rr = rr_short(price, invalid, target)
+            risk = invalid - price
+            target1 = price - risk * 2.0
+            target2 = price - risk * 3.0
+            rr = rr_short(price, invalid, target2)
 
         gap = entry_gap_pct(price, entry_low, entry_high)
         if rr < min_rr or gap > max_gap:
@@ -641,7 +646,8 @@ def evaluate_direction(
             entry_low=entry_low,
             entry_high=entry_high,
             invalid=invalid,
-            target1=target,
+            target1=target1,
+            target2=target2,
             rr=rr,
             score=score,
             market_state=market_state,
@@ -664,21 +670,72 @@ def choose_signal(long_sig: Signal | None, short_sig: Signal | None) -> Signal |
     return long_sig or short_sig
 
 
+def priority_icon(sig: Signal) -> str:
+    if sig.grade == "A" and sig.status in {"入场区内", "鍏ュ満鍖哄唴"}:
+        return "🟢"
+    if sig.grade == "A":
+        return "🟡"
+    return "🟠"
+
+
 def render_signal_message(sig: Signal, event: str = "push") -> str:
-    icon = "绿色" if sig.grade == "A" and sig.status == "入场区内" else "黄色"
-    title = f"趋势机会｜{sig.symbol}｜{sig.direction}｜{sig.grade}类"
-    if sig.grade == "B":
-        title += "观察，不追单"
+    icon = priority_icon(sig)
+    title = f"{icon} 趋势机会｜{sig.symbol}｜{sig.direction}｜{sig.grade}类"
     return "\n".join(
         [
             title,
             "",
-            f"优先级：{icon}",
+            f"优先级：{icon} {sig.grade}类",
             f"现价：{sig.price:.6g}",
             f"状态：{sig.status}",
             f"入场区：{sig.entry_low:.6g}-{sig.entry_high:.6g}",
             f"失效位：{sig.invalid:.6g}",
-            f"目标1：{sig.target1:.6g}",
+            f"目标1：{sig.target1:.6g}（2R，减仓）",
+            f"目标2：{sig.target2:.6g}（3R，剩余仓位）",
+            f"盈亏比：{sig.rr:.2f}",
+            f"结构：{sig.setup_tf} {sig.setup_kind} / {sig.trigger_tf} {sig.trigger_name}",
+            "",
+            f"原因：{sig.reason}",
+            f"处理：{sig.action}",
+        ]
+    )
+
+
+def status_icon_v2(status: str) -> str:
+    if any(marker in status for marker in ("失效", "过期", "作废")):
+        return "🔴"
+    if status in {"入场区内", "接近入场"}:
+        return "🟢"
+    if "观察" in status:
+        return "🟡"
+    return "🟠"
+
+
+def render_signal_message_v2(sig: Signal, event: str = "push") -> str:
+    if event in {"invalid", "expire"}:
+        icon = "🔴"
+    elif sig.grade == "A" and sig.status == "入场区内":
+        icon = "🟢"
+    elif sig.grade == "A" and sig.status == "接近入场":
+        icon = "🟡"
+    elif sig.grade == "A":
+        icon = "🟠"
+    else:
+        icon = "🟡"
+    state_icon = status_icon_v2(sig.status)
+    title = f"{icon} 趋势机会｜{sig.symbol}｜{sig.direction}｜{sig.grade}类"
+    return "\n".join(
+        [
+            title,
+            "",
+            f"状态图标：{state_icon}",
+            f"优先级：{icon} {sig.grade}类",
+            f"现价：{sig.price:.6g}",
+            f"状态：{sig.status}",
+            f"入场区：{sig.entry_low:.6g}-{sig.entry_high:.6g}",
+            f"失效位：{sig.invalid:.6g}",
+            f"目标1：{sig.target1:.6g}（2R，减仓）",
+            f"目标2：{sig.target2:.6g}（3R，剩余仓位）",
             f"盈亏比：{sig.rr:.2f}",
             f"结构：{sig.setup_tf} {sig.setup_kind} / {sig.trigger_tf} {sig.trigger_name}",
             "",
@@ -790,13 +847,13 @@ def main() -> int:
 
     pushed = 0
     for sig in candidates:
-        if sig.grade not in {"A", "B"}:
+        if sig.grade != "A":
             continue
         if is_duplicate(state, sig, expiry_hours):
             continue
         state["signals"][sig.family_key] = asdict(sig)
         append_jsonl(config["scan"]["trade_ledger_file"], asdict(sig))
-        feishu_send(config, render_signal_message(sig))
+        feishu_send(config, render_signal_message_v2(sig))
         pushed += 1
         if pushed >= 3:
             break
