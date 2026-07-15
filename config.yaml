@@ -3,69 +3,24 @@ feishu:
   webhook_env: FEISHU_WEBHOOK
   dry_run_env: DRY_RUN
 
-model:
-  name: 天机伏击·A/B趋势起爆模型
-  output_grade: A/B类
-
-models:
-  - name: 天机伏击·趋势回踩模型
-    variant: legacy
-    output_grade: A/B类
-    enabled: false
-  - name: 天机伏击·A/B趋势起爆模型
-    variant: breakout
-    output_grade: A/B类
-  - name: 天机伏击·主流币大周期反转模型
-    variant: macro
-    output_grade: A/B类
-  - name: 流动性扫单后顺势策略
-    variant: liquidity_sweep
-    output_grade: A/B类
-
-liquidity_sweep:
-  enabled: true
-  min_rr: 2.0
-  max_distance_to_entry_pct: 1.5
-  max_stop_pct: 3.5
-  sweep_lookback: 20
-  min_sweep_pct: 0.12
-  invalidation_atr_buffer: 0.18
-
-trend_pullback:
-  max_retracement: 0.618
-  min_impulse_atr: 1.5
-  entry_trigger_atr_tolerance: 0.35
-  invalidation_atr_buffer: 0.15
-
-macro:
-  enabled: true
-  min_rr: 2.2
-  max_distance_to_entry_pct: 2.5
-  symbols:
-    - BTCUSDT
-    - ETHUSDT
-    - BNBUSDT
-    - SOLUSDT
-    - XRPUSDT
-    - ADAUSDT
-    - AVAXUSDT
-    - DOGEUSDT
-    - LINKUSDT
-    - LTCUSDT
-    - BCHUSDT
-    - ETCUSDT
-
 scan:
   timezone: Asia/Shanghai
   min_rr: 2.0
   max_distance_to_entry_pct: 2.5
+  expiry_hours: 12
   full_scan_interval_minutes: 60
   open_signal_refresh_minutes: 15
-  expiry_hours: 12
   state_file: state/signals.json
   trade_ledger_file: state/trades.jsonl
   performance_file: state/performance.json
   performance_report: reports/performance.md
+
+trend_pullback:
+  max_retracement: 0.618
+  min_impulse_atr: 1.35
+  entry_trigger_atr_tolerance: 0.35
+  ema52_retest_atr_tolerance: 0.55
+  invalidation_atr_buffer: 0.18
 
 crypto:
   enabled: true
