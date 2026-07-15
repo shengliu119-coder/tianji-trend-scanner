@@ -5,7 +5,7 @@ feishu:
 
 scan:
   timezone: Asia/Shanghai
-  min_rr: 2.0
+  min_rr: 3.0
   max_distance_to_entry_pct: 2.5
   expiry_hours: 12
   full_scan_interval_minutes: 60
