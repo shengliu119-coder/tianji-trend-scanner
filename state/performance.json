@@ -1,9 +1,9 @@
 {
   "by_direction": {
     "做多": {
-      "avg_r": -0.2762,
+      "avg_r": -0.2583,
       "families": 54,
-      "triggered": 33,
+      "triggered": 34,
       "win_rate": 0.0
     },
     "做空": {
@@ -21,9 +21,9 @@
       "win_rate": 0.0
     },
     "B类观察，不追单": {
-      "avg_r": -0.3079,
+      "avg_r": -0.2871,
       "families": 49,
-      "triggered": 32,
+      "triggered": 33,
       "win_rate": 0.0
     },
     "B类观察，不追空": {
@@ -41,13 +41,13 @@
       "win_rate": 0.0
     },
     "强": {
-      "avg_r": -0.2753,
+      "avg_r": -0.2658,
       "families": 33,
-      "triggered": 16,
+      "triggered": 17,
       "win_rate": 0.0
     },
     "震荡": {
-      "avg_r": -0.1197,
+      "avg_r": -0.1117,
       "families": 78,
       "triggered": 56,
       "win_rate": 0.0179
@@ -55,10 +55,10 @@
   },
   "by_model": {
     "天机伏击·A/B趋势起爆模型": {
-      "avg_r": -0.2482,
+      "avg_r": -0.2325,
       "families": 61,
-      "triggered": 37,
-      "win_rate": 0.027
+      "triggered": 38,
+      "win_rate": 0.0263
     },
     "天机伏击·趋势回踩模型": {
       "avg_r": -0.1428,
@@ -81,9 +81,9 @@
       "win_rate": 0.0
     },
     "平台突破回踩": {
-      "avg_r": -0.356,
-      "families": 39,
-      "triggered": 21,
+      "avg_r": -0.3497,
+      "families": 38,
+      "triggered": 20,
       "win_rate": 0.0
     },
     "流动性扫单后顺势": {
@@ -111,25 +111,25 @@
       "win_rate": 0.0
     },
     "第2浪回调确认": {
-      "avg_r": -0.0434,
-      "families": 13,
-      "triggered": 10,
+      "avg_r": -0.0362,
+      "families": 14,
+      "triggered": 12,
       "win_rate": 0.0
     }
   },
   "model_name": "四模型并行扫描",
   "overall": {
-    "avg_r": -0.1726,
-    "effective_rate": 4.2941,
-    "expired": 69,
+    "avg_r": -0.1652,
+    "effective_rate": 4.3529,
+    "expired": 68,
     "families": 112,
     "losses": 20,
     "max_drawdown_r": -66.1111,
     "max_floating_r": 6.9742,
     "pushed": 17,
-    "triggered": 73,
-    "win_rate": 0.0137,
+    "triggered": 74,
+    "win_rate": 0.0135,
     "wins": 1
   },
-  "updated_at": "2026-07-15T11:32:49+08:00"
+  "updated_at": "2026-07-15T13:58:30+08:00"
 }
