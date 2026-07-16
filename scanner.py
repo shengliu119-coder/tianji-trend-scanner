@@ -66,6 +66,9 @@ SYMBOL_MAP = {
     "BONKUSDT": "1000BONKUSDT",
 }
 
+PRIMARY_SYMBOL = "ETHUSDT"
+BTC_SYMBOL = "BTCUSDT"
+
 SETUP_PATHS = {
     "1h": {"trigger": "15m", "higher": ["2h", "4h"]},
     "2h": {"trigger": "15m", "higher": ["4h"]},
@@ -418,6 +421,62 @@ def local_direction_score(bundle: dict[str, dict[str, float]], direction: str) -
     return score
 
 
+def is_btc(symbol: str) -> bool:
+    return symbol == BTC_SYMBOL
+
+
+def is_eth(symbol: str) -> bool:
+    return symbol == PRIMARY_SYMBOL
+
+
+def is_alt(symbol: str) -> bool:
+    return symbol not in {BTC_SYMBOL, PRIMARY_SYMBOL}
+
+
+def has_any(text: str, keywords: tuple[str, ...]) -> bool:
+    return any(item in text for item in keywords)
+
+
+def disabled_c_trigger(trigger_name: str) -> bool:
+    return has_any(trigger_name, ("双底", "鍙屽簳", "假跌破", "鍋囪穼", "2b_false_breakdown", "double_bottom"))
+
+
+def weak_reversal_trigger(trigger_name: str) -> bool:
+    return has_any(
+        trigger_name,
+        (
+            "双底",
+            "双顶",
+            "抬高低点",
+            "降低高点",
+            "鍙屽簳",
+            "鍙岄《",
+            "鎶",
+            "闄",
+            "double_bottom",
+            "double_top",
+            "higher_low",
+            "lower_high",
+        ),
+    )
+
+
+def alt_long_confirmed(bundle: dict[str, dict[str, float]]) -> bool:
+    for tf in ("1h", "2h"):
+        frame = bundle.get(tf)
+        if not frame:
+            continue
+        if frame["ema24"] > frame["ema52"] and frame["close"] >= frame["ema52"] and frame["dif"] >= 0 and frame["hist"] >= frame["hist_prev"]:
+            return True
+    return False
+
+
+def alt_short_confirmed(bundle: dict[str, dict[str, float]], setup: dict[str, Any], trigger_name: str) -> bool:
+    pressure_retest = bool(setup.get("ema52")) or has_any(trigger_name, ("反抽", "承压", "鍙嶆娊", "鎵垮帇"))
+    local_short = local_direction_score(bundle, "short") > 0
+    return pressure_retest and local_short
+
+
 def detect_market_state(btc: dict[str, dict[str, float]], eth: dict[str, dict[str, float]]) -> str:
     btc_4h, eth_4h, btc_1h = btc["4h"], eth["4h"], btc["1h"]
     btc_weak = btc_4h["close"] < btc_4h["ema52"] and btc_4h["hist"] < btc_4h["hist_prev"]
@@ -683,6 +742,19 @@ def evaluate_direction(
         if trigger_tf != "15m" and str(trigger["name"]).startswith("15m"):
             trigger = dict(trigger)
             trigger["name"] = trigger_tf + str(trigger["name"])[3:]
+        trigger_name = str(trigger["name"])
+        if disabled_c_trigger(trigger_name):
+            continue
+        if is_btc(display_symbol):
+            if setup_tf != "4h" or weak_reversal_trigger(trigger_name):
+                continue
+        elif is_alt(display_symbol):
+            if weak_reversal_trigger(trigger_name):
+                continue
+            if direction == "long" and not alt_long_confirmed(bundle):
+                continue
+            if direction == "short" and not alt_short_confirmed(bundle, setup, trigger_name):
+                continue
         context = higher_context(bundle, setup_tf, direction)
         if context["hard_opposite"]:
             continue
@@ -716,7 +788,9 @@ def evaluate_direction(
         gap = entry_gap_pct(price, entry_low, entry_high)
         if rr < min_rr or gap > max_gap:
             continue
-        if near_prior_high_veto(bundle, str(trigger["name"]), direction):
+        if near_prior_high_veto(bundle, trigger_name, direction):
+            continue
+        if is_alt(display_symbol) and gap > 2.0:
             continue
         if direction == "long" and bundle[trigger_tf]["rsi"] > 76:
             continue
@@ -732,6 +806,10 @@ def evaluate_direction(
         score += 8 if rr >= 2.5 else 4
         score -= 8 if gap > 1.2 else 0
         grade = "A" if score >= 85 and context["a_ok"] and gap <= 1.2 else "B"
+        if is_btc(display_symbol) and not (setup_tf == "4h" and score >= 92 and gap <= 0.8):
+            grade = "B"
+        if is_alt(display_symbol) and not (context["a_ok"] and score >= 88 and gap <= 1.0):
+            grade = "B"
         status = "入场区内" if entry_low <= price <= entry_high else "接近入场"
         direction_text = "做多" if direction == "long" else "做空"
         reason = (
@@ -758,7 +836,7 @@ def evaluate_direction(
             setup_tf=setup_tf,
             trigger_tf=trigger_tf,
             setup_kind=str(setup["kind"]),
-            trigger_name=str(trigger["name"]),
+            trigger_name=trigger_name,
             reason=reason,
             action=action,
             created_at=now_iso(),
@@ -776,6 +854,20 @@ def choose_signal(long_sig: Signal | None, short_sig: Signal | None, bundle: dic
             return long_sig if long_score > short_score else short_sig
         return max([long_sig, short_sig], key=lambda s: (s.grade == "A", s.score, s.rr))
     return long_sig or short_sig
+
+
+def signal_priority(sig: Signal) -> tuple[int, int, float]:
+    if sig.grade != "A":
+        return (9, -sig.score, -sig.rr)
+    if is_eth(sig.symbol):
+        return (0, -sig.score, -sig.rr)
+    if is_alt(sig.symbol) and has_any(sig.setup_kind, ("箱体", "绠变綋", "box")):
+        return (1, -sig.score, -sig.rr)
+    if is_alt(sig.symbol):
+        return (2, -sig.score, -sig.rr)
+    if is_btc(sig.symbol):
+        return (3, -sig.score, -sig.rr)
+    return (4, -sig.score, -sig.rr)
 
 
 def priority_icon(sig: Signal) -> str:
@@ -917,7 +1009,7 @@ def scan_crypto(config: dict[str, Any], state: dict[str, Any]) -> list[Signal]:
             continue
         if chosen:
             signals.append(chosen)
-    return sorted(signals, key=lambda s: (s.grade != "A", -s.score, -s.rr))
+    return sorted(signals, key=signal_priority)
 
 
 def update_performance(config: dict[str, Any], state: dict[str, Any]) -> None:
