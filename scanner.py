@@ -605,7 +605,9 @@ def detect_trigger(candles: list[Candle], direction: str, tolerance_atr: float) 
         if swept and reject_ok and last.close < prev.low:
             candidates.append({"name": "15m 2B假突破回落", "level": prior_high, "invalid": max(highs[-8:]), "quality": 11, "confirmed": True})
         prior_low = min(lows[-18:-6])
-        retest = min(lows[-8:]) < prior_low - atr * 0.12 and max(highs[-6:]) >= prior_low - atr * 0.25 and last.close <= prior_low and last.close < prev.low
+        retest_touch = last.high >= prior_low - atr * 0.15
+        retest_reject = last.close <= prior_low and last.close < prev.low and (prior_low - last.close) <= atr * 0.45
+        retest = min(lows[-8:]) < prior_low - atr * 0.12 and retest_touch and retest_reject
         if retest:
             candidates.append({"name": "15m跌破反抽", "level": prior_low, "invalid": max(highs[-6:]), "quality": 10, "confirmed": True})
 
@@ -631,11 +633,17 @@ def entry_gap_pct(price: float, low: float, high: float) -> float:
 
 
 def near_prior_high_veto(bundle: dict[str, dict[str, float]], trigger_name: str, direction: str) -> bool:
-    frame = bundle["4h"]
-    if direction == "long" and "突破回踩" not in trigger_name:
+    if direction == "long" and "回踩" not in trigger_name:
+        frame = bundle["4h"]
         return frame["recent_high"] > 0 and (frame["recent_high"] - frame["close"]) / frame["close"] * 100 <= 1.5
-    if direction == "short" and "跌破反抽" not in trigger_name:
-        return frame["recent_low"] > 0 and (frame["close"] - frame["recent_low"]) / frame["close"] * 100 <= 1.5
+    if direction == "short":
+        for tf in ("1h", "4h"):
+            frame = bundle[tf]
+            support = frame["recent_low"]
+            close = frame["close"]
+            atr = frame["atr"]
+            if support > 0 and close > 0 and (close - support) <= max(atr * 0.8, close * 0.018):
+                return True
     return False
 
 
