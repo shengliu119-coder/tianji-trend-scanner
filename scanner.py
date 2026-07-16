@@ -70,7 +70,6 @@ SETUP_PATHS = {
     "1h": {"trigger": "15m", "higher": ["2h", "4h"]},
     "2h": {"trigger": "15m", "higher": ["4h"]},
     "4h": {"trigger": "15m", "higher": ["1d"]},
-    "1d": {"trigger": "1h", "higher": []},
 }
 
 
@@ -386,6 +385,39 @@ def higher_context(bundle: dict[str, dict[str, float]], setup_tf: str, direction
     }
 
 
+def local_start_protects_against(bundle: dict[str, dict[str, float]], direction: str) -> bool:
+    frames = [bundle[tf] for tf in ("1h", "2h") if tf in bundle]
+    if not frames:
+        return False
+    if direction == "short":
+        return any(
+            frame["close"] > frame["ema52"]
+            and frame["ema24"] >= frame["ema52"]
+            and frame["dif"] > 0
+            and frame["hist"] >= frame["hist_prev"]
+            and frame["low"] >= frame["ema52"] - frame["atr"] * 0.35
+            for frame in frames
+        )
+    return any(
+        frame["close"] < frame["ema52"]
+        and frame["ema24"] <= frame["ema52"]
+        and frame["dif"] < 0
+        and frame["hist"] <= frame["hist_prev"]
+        and frame["high"] <= frame["ema52"] + frame["atr"] * 0.35
+        for frame in frames
+    )
+
+
+def local_direction_score(bundle: dict[str, dict[str, float]], direction: str) -> int:
+    score = 0
+    for tf in ("1h", "2h", "4h"):
+        if tf not in bundle:
+            continue
+        if market_bias(bundle[tf], direction) == "aligned":
+            score += 1
+    return score
+
+
 def detect_market_state(btc: dict[str, dict[str, float]], eth: dict[str, dict[str, float]]) -> str:
     btc_4h, eth_4h, btc_1h = btc["4h"], eth["4h"], btc["1h"]
     btc_weak = btc_4h["close"] < btc_4h["ema52"] and btc_4h["hist"] < btc_4h["hist_prev"]
@@ -462,6 +494,55 @@ def find_trend_setup(candles: list[Candle], direction: str, cfg: dict[str, Any])
     return {"kind": "反弹承压", "target": impulse_low, "invalid_base": rebound_high, "retracement": retracement, "ema52": touched_ema52, "macd": macd_reset}
 
 
+def find_bottom_box_breakout_setup(candles: list[Candle], direction: str, cfg: dict[str, Any]) -> dict[str, Any] | None:
+    if direction != "long":
+        return None
+    completed = candles[:-1]
+    if len(completed) < 90:
+        return None
+    closes = [c.close for c in completed]
+    ema24 = ema(closes, 24)
+    ema52 = ema(closes, 52)
+    dif, dea, hist = macd(closes)
+    atr = average_true_range(candles)
+    if atr <= 0:
+        return None
+
+    box = completed[-72:-10]
+    recent = completed[-10:]
+    box_high = max(c.high for c in box)
+    box_low = min(c.low for c in box)
+    box_mid = (box_high + box_low) / 2
+    box_width = box_high - box_low
+    if box_width <= 0 or box_width > atr * 12:
+        return None
+
+    low_touches = sum(1 for c in box[-48:] if c.low <= box_low + atr * 0.8)
+    if low_touches < 2:
+        return None
+
+    breakout_seen = any(c.close > box_high + atr * 0.12 for c in recent[:-1])
+    last = completed[-1]
+    retest_ok = min(c.low for c in recent[-6:]) <= box_high + atr * 0.7 and last.close >= box_high - atr * 0.2
+    trend_turn = last.close > ema52[-1] and ema24[-1] >= ema52[-1] - atr * 0.12 and dif[-1] >= dea[-1] and dif[-1] > -atr * 0.08
+    not_overextended = (last.close - box_high) <= atr * 2.2
+    if not (breakout_seen and retest_ok and trend_turn and not_overextended):
+        return None
+
+    recent_lows = [c.low for c in recent]
+    return {
+        "kind": "底部箱体突破回踩",
+        "target": max(box_high + box_width, max(c.high for c in recent)),
+        "invalid_base": min(min(recent_lows), box_high - atr * 0.35),
+        "retracement": 0.0,
+        "ema52": True,
+        "macd": hist[-1] >= hist[-2],
+        "box_high": box_high,
+        "box_low": box_low,
+        "box_mid": box_mid,
+    }
+
+
 def detect_trigger(candles: list[Candle], direction: str, tolerance_atr: float) -> dict[str, Any] | None:
     completed = candles[:-1]
     if len(completed) < 40:
@@ -474,6 +555,8 @@ def detect_trigger(candles: list[Candle], direction: str, tolerance_atr: float) 
     lows = [c.low for c in sample]
     last, prev = sample[-1], sample[-2]
     candidates: list[dict[str, Any]] = []
+    recent3_high = max(c.high for c in sample[-3:])
+    recent3_low = min(c.low for c in sample[-3:])
 
     if direction == "long":
         post = dif[-18:]
@@ -493,10 +576,11 @@ def detect_trigger(candles: list[Candle], direction: str, tolerance_atr: float) 
                 candidates.append({"name": "15m抬高低点反转", "level": neckline, "invalid": lows[b], "quality": 9, "confirmed": last.close > neckline})
         prior_low = min(lows[-16:-3])
         swept = min(lows[-8:]) < prior_low - atr * 0.05 and last.close > prior_low
-        if swept:
+        reclaim_ok = last.close > max(prev.high, recent3_high - atr * 0.12) or (last.close > last.open and lower_wick >= body * 1.2)
+        if swept and reclaim_ok and last.close > prev.high:
             candidates.append({"name": "15m 2B假跌破收回", "level": prior_low, "invalid": min(lows[-8:]), "quality": 11, "confirmed": True})
         prior_high = max(highs[-18:-6])
-        retest = max(highs[-8:]) > prior_high + atr * 0.12 and min(lows[-6:]) <= prior_high + atr * 0.25 and last.close >= prior_high
+        retest = max(highs[-8:]) > prior_high + atr * 0.12 and min(lows[-6:]) <= prior_high + atr * 0.25 and last.close >= prior_high and last.close > prev.high
         if retest:
             candidates.append({"name": "15m突破回踩", "level": prior_high, "invalid": min(lows[-6:]), "quality": 10, "confirmed": True})
     else:
@@ -517,14 +601,15 @@ def detect_trigger(candles: list[Candle], direction: str, tolerance_atr: float) 
                 candidates.append({"name": "15m降低高点反转", "level": neckline, "invalid": highs[b], "quality": 9, "confirmed": last.close < neckline})
         prior_high = max(highs[-16:-3])
         swept = max(highs[-8:]) > prior_high + atr * 0.05 and last.close < prior_high
-        if swept:
+        reject_ok = last.close < min(prev.low, recent3_low + atr * 0.12) or (last.close < last.open and upper_wick >= body * 1.2)
+        if swept and reject_ok and last.close < prev.low:
             candidates.append({"name": "15m 2B假突破回落", "level": prior_high, "invalid": max(highs[-8:]), "quality": 11, "confirmed": True})
         prior_low = min(lows[-18:-6])
-        retest = min(lows[-8:]) < prior_low - atr * 0.12 and max(highs[-6:]) >= prior_low - atr * 0.25 and last.close <= prior_low
+        retest = min(lows[-8:]) < prior_low - atr * 0.12 and max(highs[-6:]) >= prior_low - atr * 0.25 and last.close <= prior_low and last.close < prev.low
         if retest:
             candidates.append({"name": "15m跌破反抽", "level": prior_low, "invalid": max(highs[-6:]), "quality": 10, "confirmed": True})
 
-    confirmed = [item for item in candidates if item["confirmed"]]
+    confirmed = [item for item in candidates if item["confirmed"] and item["quality"] >= 10]
     return max(confirmed, key=lambda x: x["quality"], default=None)
 
 
@@ -568,6 +653,11 @@ def evaluate_direction(
     if direction == "short" and market_state == "强":
         return None
 
+    if local_start_protects_against(bundle, direction):
+        return None
+    if direction == "short" and local_direction_score(bundle, direction) == 0:
+        return None
+
     scan_cfg = config["scan"]
     pb_cfg = config["trend_pullback"]
     min_rr = float(scan_cfg["min_rr"])
@@ -575,7 +665,7 @@ def evaluate_direction(
     best: Signal | None = None
 
     for setup_tf, path_cfg in SETUP_PATHS.items():
-        setup = find_trend_setup(candle_map[setup_tf], direction, pb_cfg)
+        setup = find_bottom_box_breakout_setup(candle_map[setup_tf], direction, pb_cfg) or find_trend_setup(candle_map[setup_tf], direction, pb_cfg)
         if not setup:
             continue
         trigger_tf = str(path_cfg["trigger"])
@@ -597,7 +687,13 @@ def evaluate_direction(
             entry_high = float(trigger["level"]) + atr * 0.35
             invalid = min(float(trigger["invalid"]), float(setup["invalid_base"])) - buffer
             risk = price - invalid
-            target1 = price + risk * 2.0
+            structure_target = float(setup.get("target", price + risk * 2.0))
+            if structure_target > price and rr_long(price, invalid, structure_target) >= 1.8:
+                target1 = structure_target
+            elif "box_high" in setup:
+                continue
+            else:
+                target1 = price + risk * 2.0
             target2 = price + risk * 3.0
             rr = rr_long(price, invalid, target2)
         else:
@@ -664,8 +760,12 @@ def evaluate_direction(
     return best
 
 
-def choose_signal(long_sig: Signal | None, short_sig: Signal | None) -> Signal | None:
+def choose_signal(long_sig: Signal | None, short_sig: Signal | None, bundle: dict[str, dict[str, float]]) -> Signal | None:
     if long_sig and short_sig:
+        long_score = local_direction_score(bundle, "long")
+        short_score = local_direction_score(bundle, "short")
+        if long_score != short_score:
+            return long_sig if long_score > short_score else short_sig
         return max([long_sig, short_sig], key=lambda s: (s.grade == "A", s.score, s.rr))
     return long_sig or short_sig
 
@@ -803,7 +903,7 @@ def scan_crypto(config: dict[str, Any], state: dict[str, Any]) -> list[Signal]:
             bundle, candle_map = get(actual)
             long_sig = evaluate_direction(display_symbol, actual, bundle, candle_map, market_state, "long", config)
             short_sig = evaluate_direction(display_symbol, actual, bundle, candle_map, market_state, "short", config)
-            chosen = choose_signal(long_sig, short_sig)
+            chosen = choose_signal(long_sig, short_sig, bundle)
         except Exception as exc:  # noqa: BLE001
             print(f"skip {display_symbol}: {exc}", file=sys.stderr)
             continue
