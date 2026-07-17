@@ -477,6 +477,22 @@ def alt_short_confirmed(bundle: dict[str, dict[str, float]], setup: dict[str, An
     return pressure_retest and local_short
 
 
+def long_key_level_acceptance(candles: list[Candle], level: float) -> bool:
+    completed = candles[:-1]
+    if len(completed) < 8:
+        return False
+    atr = average_true_range(candles)
+    last, prev = completed[-1], completed[-2]
+    body = max(abs(last.close - last.open), atr * 0.05)
+    candle_range = max(last.high - last.low, atr * 0.05)
+    lower_wick = min(last.close, last.open) - last.low
+    near_level = abs(last.low - level) <= atr * 0.35 or last.low <= level <= last.high
+    not_chasing = (last.close - level) <= atr * 0.85
+    pinbar = lower_wick >= body * 1.5 and last.close >= last.open and (last.close - last.low) / candle_range >= 0.55
+    reclaim = last.close > last.open and last.close > max(prev.high, level + atr * 0.03)
+    return near_level and not_chasing and (pinbar or reclaim)
+
+
 def detect_market_state(btc: dict[str, dict[str, float]], eth: dict[str, dict[str, float]]) -> str:
     btc_4h, eth_4h, btc_1h = btc["4h"], eth["4h"], btc["1h"]
     btc_weak = btc_4h["close"] < btc_4h["ema52"] and btc_4h["hist"] < btc_4h["hist_prev"]
@@ -752,6 +768,8 @@ def evaluate_direction(
             if weak_reversal_trigger(trigger_name):
                 continue
             if direction == "long" and not alt_long_confirmed(bundle):
+                continue
+            if direction == "long" and not long_key_level_acceptance(candle_map[trigger_tf], float(trigger["level"])):
                 continue
             if direction == "short" and not alt_short_confirmed(bundle, setup, trigger_name):
                 continue
