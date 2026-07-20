@@ -174,6 +174,9 @@ def load_config() -> dict[str, Any]:
     cfg.setdefault("entry_trigger_atr_tolerance", 0.35)
     cfg.setdefault("ema52_retest_atr_tolerance", 0.55)
     cfg.setdefault("invalidation_atr_buffer", 0.18)
+    cfg.setdefault("zero_axis_consolidation_min_bars", 8)
+    cfg.setdefault("zero_axis_consolidation_max_bars", 24)
+    cfg.setdefault("zero_axis_max_entry_atr", 1.25)
     return config
 
 
@@ -461,6 +464,35 @@ def weak_reversal_trigger(trigger_name: str) -> bool:
     )
 
 
+def macd_standalone_trigger(trigger_name: str) -> bool:
+    return "MACD" in trigger_name
+
+
+def pressure_short_trigger(trigger_name: str) -> bool:
+    return has_any(trigger_name, ("2B", "假突破", "跌破反抽", "反抽", "承压", "2b_false_breakout", "breakdown_retest"))
+
+
+def two_hour_a_allowed(
+    direction: str,
+    trigger_name: str,
+    setup: dict[str, Any],
+    bundle: dict[str, dict[str, float]],
+    gap: float,
+    score: int,
+) -> bool:
+    if direction == "long" and bool(setup.get("zero_axis_ignition")):
+        return gap <= 0.8 and score >= 90 and local_direction_score(bundle, direction) >= 2
+    if macd_standalone_trigger(trigger_name):
+        return False
+    if not bool(setup.get("ema52")) or not bool(setup.get("macd")):
+        return False
+    if gap > 0.8 or score < 92:
+        return False
+    if direction == "short" and pressure_short_trigger(trigger_name):
+        return local_direction_score(bundle, direction) >= 1
+    return local_direction_score(bundle, direction) >= 2
+
+
 def alt_long_confirmed(bundle: dict[str, dict[str, float]]) -> bool:
     for tf in ("1h", "2h"):
         frame = bundle.get(tf)
@@ -473,8 +505,67 @@ def alt_long_confirmed(bundle: dict[str, dict[str, float]]) -> bool:
 
 def alt_short_confirmed(bundle: dict[str, dict[str, float]], setup: dict[str, Any], trigger_name: str) -> bool:
     pressure_retest = bool(setup.get("ema52")) or has_any(trigger_name, ("反抽", "承压", "鍙嶆娊", "鎵垮帇"))
-    local_short = local_direction_score(bundle, "short") > 0
+    local_short = local_direction_score(bundle, "short") >= 2
     return pressure_retest and local_short
+
+
+def bottom_box_setup(setup: dict[str, Any]) -> bool:
+    return "box_high" in setup or has_any(str(setup.get("kind", "")), ("箱体", "绠变綋", "box"))
+
+
+def local_countertrend_veto(bundle: dict[str, dict[str, float]], direction: str) -> bool:
+    if direction == "short":
+        if local_direction_score(bundle, "long") >= 2:
+            return True
+        for tf in ("1h", "2h"):
+            frame = bundle.get(tf)
+            if frame and frame["close"] > frame["ema24"] > frame["ema52"] and frame["dif"] > 0:
+                return True
+        return False
+
+    if local_direction_score(bundle, "short") >= 2:
+        return True
+    for tf in ("1h", "2h"):
+        frame = bundle.get(tf)
+        if frame and frame["close"] < frame["ema24"] < frame["ema52"] and frame["dif"] < 0:
+            return True
+    return False
+
+
+def alt_stage_allows_a(setup_tf: str, setup: dict[str, Any], bundle: dict[str, dict[str, float]], direction: str) -> bool:
+    if direction == "long" and bool(setup.get("zero_axis_ignition")):
+        return setup_tf in {"2h", "4h"} and local_direction_score(bundle, "long") >= 2
+    if direction == "long" and bottom_box_setup(setup):
+        return local_direction_score(bundle, "long") >= 1
+    if setup_tf == "1h":
+        return False
+    return local_direction_score(bundle, direction) >= 2
+
+
+def trigger_near_setup_key(
+    setup_tf: str,
+    setup: dict[str, Any],
+    bundle: dict[str, dict[str, float]],
+    trigger: dict[str, Any],
+    direction: str,
+) -> bool:
+    level = float(trigger["level"])
+    trigger_name = str(trigger["name"])
+    setup_frame = bundle.get(setup_tf)
+    if not setup_frame:
+        return False
+
+    setup_atr = max(setup_frame["atr"], level * 0.002)
+    if bottom_box_setup(setup):
+        box_high = float(setup.get("box_high", level))
+        if direction == "long":
+            return abs(level - box_high) <= setup_atr * 0.9 or level >= box_high - setup_atr * 0.45
+        return False
+
+    near_setup_ema = abs(level - setup_frame["ema52"]) <= setup_atr * 1.2 or abs(level - setup_frame["ema24"]) <= setup_atr * 1.0
+    if direction == "long":
+        return near_setup_ema or has_any(trigger_name, ("回踩", "MACD"))
+    return near_setup_ema or has_any(trigger_name, ("反抽", "承压", "MACD"))
 
 
 def long_key_level_acceptance(candles: list[Candle], level: float) -> bool:
@@ -487,10 +578,26 @@ def long_key_level_acceptance(candles: list[Candle], level: float) -> bool:
     candle_range = max(last.high - last.low, atr * 0.05)
     lower_wick = min(last.close, last.open) - last.low
     near_level = abs(last.low - level) <= atr * 0.35 or last.low <= level <= last.high
-    not_chasing = (last.close - level) <= atr * 0.85
+    not_chasing = (last.close - level) <= atr * 0.55
     pinbar = lower_wick >= body * 1.5 and last.close >= last.open and (last.close - last.low) / candle_range >= 0.55
-    reclaim = last.close > last.open and last.close > max(prev.high, level + atr * 0.03)
+    reclaim = last.close > last.open and last.close > max(prev.high, level + atr * 0.03) and last.low <= level + atr * 0.35
     return near_level and not_chasing and (pinbar or reclaim)
+
+
+def short_key_level_rejection(candles: list[Candle], level: float) -> bool:
+    completed = candles[:-1]
+    if len(completed) < 8:
+        return False
+    atr = average_true_range(candles)
+    last, prev = completed[-1], completed[-2]
+    body = max(abs(last.close - last.open), atr * 0.05)
+    candle_range = max(last.high - last.low, atr * 0.05)
+    upper_wick = last.high - max(last.close, last.open)
+    near_level = abs(last.high - level) <= atr * 0.35 or last.low <= level <= last.high
+    not_chasing = (level - last.close) <= atr * 0.55
+    pinbar = upper_wick >= body * 1.5 and last.close <= last.open and (last.high - last.close) / candle_range >= 0.55
+    rejection = last.close < last.open and last.close < min(prev.low, level - atr * 0.03) and last.high >= level - atr * 0.35
+    return near_level and not_chasing and (pinbar or rejection)
 
 
 def detect_market_state(btc: dict[str, dict[str, float]], eth: dict[str, dict[str, float]]) -> str:
@@ -618,6 +725,102 @@ def find_bottom_box_breakout_setup(candles: list[Candle], direction: str, cfg: d
     }
 
 
+def find_zero_axis_ema52_ignition_setup(candles: list[Candle], direction: str, cfg: dict[str, Any]) -> dict[str, Any] | None:
+    if direction != "long":
+        return None
+    completed = candles[:-1]
+    if len(completed) < 100:
+        return None
+    closes = [c.close for c in completed]
+    ema24 = ema(closes, 24)
+    ema52 = ema(closes, 52)
+    dif, dea, hist = macd(closes)
+    atr = average_true_range(candles)
+    if atr <= 0:
+        return None
+
+    min_bars = int(cfg.get("zero_axis_consolidation_min_bars", 8))
+    max_bars = int(cfg.get("zero_axis_consolidation_max_bars", 24))
+    max_entry_atr = float(cfg.get("zero_axis_max_entry_atr", 1.25))
+    base = completed[-90:-max_bars]
+    if len(base) < 20:
+        return None
+
+    impulse_low = min(c.low for c in base[-48:])
+    impulse_high = max(c.high for c in base[-48:])
+    impulse = impulse_high - impulse_low
+    if impulse <= atr * float(cfg.get("min_impulse_atr", 1.35)):
+        return None
+
+    best: dict[str, Any] | None = None
+    for bars in range(min_bars, max_bars + 1):
+        cons = completed[-bars:]
+        prior = completed[-bars - 36 : -bars]
+        if len(prior) < 12:
+            continue
+        cons_high = max(c.high for c in cons)
+        cons_low = min(c.low for c in cons)
+        cons_width = cons_high - cons_low
+        prior_high = max(c.high for c in prior)
+        prior_low = min(c.low for c in prior)
+        prior_range = prior_high - prior_low
+        if cons_width <= 0 or cons_width > max(atr * 5.0, cons_high * 0.08):
+            continue
+        if prior_range <= 0 or (prior_high - prior_low) < atr * 1.8:
+            continue
+
+        first_breakout = any(c.close > prior_high + atr * 0.15 for c in cons[: max(2, bars // 3)])
+        if not first_breakout:
+            continue
+        ema_support_ok = all(
+            c.close >= ema52[-bars + i] - atr * 0.18 and c.low >= ema52[-bars + i] - atr * 0.85
+            for i, c in enumerate(cons)
+        )
+        if not ema_support_ok:
+            continue
+
+        macd_was_positive = max(dif[-bars - 10 : -bars + 1]) > atr * 0.05
+        zero_reset = min(abs(x) for x in dif[-min(8, bars) :]) <= atr * 0.12 or min(abs(x) for x in hist[-min(8, bars) :]) <= atr * 0.08
+        turn_up = dif[-1] >= dea[-1] or hist[-1] >= hist[-2]
+        if not (macd_was_positive and zero_reset and turn_up):
+            continue
+        if ema24[-1] < ema52[-1] - atr * 0.1:
+            continue
+
+        last = completed[-1]
+        support = max(ema52[-1], cons_low)
+        entry_level = max(support, min(last.close, ema52[-1] + atr * 0.35))
+        if last.close - entry_level > atr * max_entry_atr:
+            continue
+        if rsi(closes)[-1] > 76:
+            continue
+
+        quality = 14
+        if cons_width <= atr * 3.2:
+            quality += 1
+        if last.close >= cons_high - atr * 0.4:
+            quality += 1
+        candidate = {
+            "kind": "zero_axis_ema52_ignition",
+            "target": max(cons_high + cons_width, last.close + atr * 2.2),
+            "invalid_base": min(cons_low, ema52[-1] - atr * 0.25),
+            "retracement": 0.0,
+            "ema52": True,
+            "macd": True,
+            "zero_axis_ignition": True,
+            "direct_trigger": {
+                "name": "zero_axis_ema52_ignition",
+                "level": entry_level,
+                "invalid": min(cons_low, ema52[-1] - atr * 0.25),
+                "quality": quality,
+                "confirmed": True,
+            },
+        }
+        if best is None or candidate["direct_trigger"]["quality"] > best["direct_trigger"]["quality"]:
+            best = candidate
+    return best
+
+
 def detect_trigger(candles: list[Candle], direction: str, tolerance_atr: float) -> dict[str, Any] | None:
     completed = candles[:-1]
     if len(completed) < 40:
@@ -738,6 +941,8 @@ def evaluate_direction(
 
     if local_start_protects_against(bundle, direction):
         return None
+    if local_countertrend_veto(bundle, direction):
+        return None
     if direction == "short" and local_direction_score(bundle, direction) == 0:
         return None
 
@@ -748,11 +953,20 @@ def evaluate_direction(
     best: Signal | None = None
 
     for setup_tf, path_cfg in SETUP_PATHS.items():
-        setup = find_bottom_box_breakout_setup(candle_map[setup_tf], direction, pb_cfg) or find_trend_setup(candle_map[setup_tf], direction, pb_cfg)
+        setup = (
+            find_zero_axis_ema52_ignition_setup(candle_map[setup_tf], direction, pb_cfg)
+            or find_bottom_box_breakout_setup(candle_map[setup_tf], direction, pb_cfg)
+            or find_trend_setup(candle_map[setup_tf], direction, pb_cfg)
+        )
         if not setup:
             continue
-        trigger_tf = str(path_cfg["trigger"])
-        trigger = detect_trigger(candle_map[trigger_tf], direction, float(pb_cfg["entry_trigger_atr_tolerance"]))
+        direct_trigger = setup.get("direct_trigger")
+        if direct_trigger:
+            trigger_tf = setup_tf
+            trigger = dict(direct_trigger)
+        else:
+            trigger_tf = str(path_cfg["trigger"])
+            trigger = detect_trigger(candle_map[trigger_tf], direction, float(pb_cfg["entry_trigger_atr_tolerance"]))
         if not trigger:
             continue
         if trigger_tf != "15m" and str(trigger["name"]).startswith("15m"):
@@ -769,12 +983,16 @@ def evaluate_direction(
                 continue
             if direction == "long" and not alt_long_confirmed(bundle):
                 continue
-            if direction == "long" and not long_key_level_acceptance(candle_map[trigger_tf], float(trigger["level"])):
+            if direction == "long" and not bool(setup.get("zero_axis_ignition")) and not long_key_level_acceptance(candle_map[trigger_tf], float(trigger["level"])):
                 continue
             if direction == "short" and not alt_short_confirmed(bundle, setup, trigger_name):
                 continue
+            if direction == "short" and not short_key_level_rejection(candle_map[trigger_tf], float(trigger["level"])):
+                continue
+            if not trigger_near_setup_key(setup_tf, setup, bundle, trigger, direction):
+                continue
         context = higher_context(bundle, setup_tf, direction)
-        if context["hard_opposite"]:
+        if context["hard_opposite"] and not (is_alt(display_symbol) and direction == "long" and bottom_box_setup(setup) and local_direction_score(bundle, "long") >= 2):
             continue
 
         price = bundle[trigger_tf]["close"]
@@ -824,9 +1042,13 @@ def evaluate_direction(
         score += 8 if rr >= 2.5 else 4
         score -= 8 if gap > 1.2 else 0
         grade = "A" if score >= 85 and context["a_ok"] and gap <= 1.2 else "B"
+        if macd_standalone_trigger(trigger_name):
+            grade = "B"
+        if setup_tf == "2h" and not two_hour_a_allowed(direction, trigger_name, setup, bundle, gap, score):
+            grade = "B"
         if is_btc(display_symbol) and not (setup_tf == "4h" and score >= 92 and gap <= 0.8):
             grade = "B"
-        if is_alt(display_symbol) and not (context["a_ok"] and score >= 88 and gap <= 1.0):
+        if is_alt(display_symbol) and not (context["a_ok"] and score >= 88 and gap <= 1.0 and alt_stage_allows_a(setup_tf, setup, bundle, direction)):
             grade = "B"
         status = "入场区内" if entry_low <= price <= entry_high else "接近入场"
         direction_text = "做多" if direction == "long" else "做空"
@@ -930,32 +1152,17 @@ def status_icon_v2(status: str) -> str:
 
 
 def render_signal_message_v2(sig: Signal, event: str = "push") -> str:
-    if event in {"invalid", "expire"}:
-        icon = "🔴"
-    elif sig.grade == "A" and sig.status == "入场区内":
-        icon = "🟢"
-    elif sig.grade == "A" and sig.status == "接近入场":
-        icon = "🟡"
-    elif sig.grade == "A":
-        icon = "🟠"
-    else:
-        icon = "🟡"
-    state_icon = status_icon_v2(sig.status)
-    title = f"{icon} 趋势机会｜{sig.symbol}｜{sig.direction}｜{sig.grade}类"
+    suffix = "可执行" if sig.grade == "A" else "观察，不追单"
+    title = f"趋势机会｜{sig.symbol}｜{sig.direction}{suffix}"
     return "\n".join(
         [
             title,
             "",
-            f"状态图标：{state_icon}",
-            f"优先级：{icon} {sig.grade}类",
             f"现价：{sig.price:.6g}",
             f"状态：{sig.status}",
             f"入场区：{sig.entry_low:.6g}-{sig.entry_high:.6g}",
             f"失效位：{sig.invalid:.6g}",
-            f"目标1：{sig.target1:.6g}（2R，减仓）",
-            f"目标2：{sig.target2:.6g}（3R，剩余仓位）",
-            f"盈亏比：{sig.rr:.2f}",
-            f"结构：{sig.setup_tf} {sig.setup_kind} / {sig.trigger_tf} {sig.trigger_name}",
+            f"目标1：{sig.target1:.6g}",
             "",
             f"原因：{sig.reason}",
             f"处理：{sig.action}",
@@ -1065,7 +1272,7 @@ def main() -> int:
 
     pushed = 0
     for sig in candidates:
-        if sig.grade != "A":
+        if sig.grade != "A" and not (sig.grade == "B" and sig.status in {"入场区内", "接近入场"}):
             continue
         if is_duplicate(state, sig, expiry_hours):
             continue
