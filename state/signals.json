@@ -8,8 +8,8 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-07-20T07:46:07+08:00",
-    "last_candidates": 2
+    "last_scan_at": "2026-07-20T09:20:09+08:00",
+    "last_candidates": 1
   },
   "signals": {
     "天机伏击·A/B趋势起爆模型:AAVEUSDT:做多": {
@@ -1491,22 +1491,22 @@
       "direction": "做多",
       "grade": "A",
       "status": "入场区内",
-      "price": 0.7498,
-      "entry_low": 0.7486962857142857,
-      "entry_high": 0.749885,
-      "invalid": 0.7325962857142857,
-      "target1": 0.7842074285714287,
-      "target2": 0.801411142857143,
+      "price": 0.7547,
+      "entry_low": 0.753116,
+      "entry_high": 0.7551300000000001,
+      "invalid": 0.739416,
+      "target1": 0.7852680000000002,
+      "target2": 0.8005520000000003,
       "rr": 3.0,
-      "score": 106,
-      "market_state": "震荡",
-      "setup_tf": "2h",
+      "score": 111,
+      "market_state": "强",
+      "setup_tf": "1h",
       "trigger_tf": "15m",
       "setup_kind": "趋势回踩",
       "trigger_name": "MACD回踩0轴金K",
-      "reason": "2h 趋势回踩，回调未超过61.8%，15m 出现MACD回踩0轴金K，高一级结构未强反向",
+      "reason": "1h 趋势回踩，回调未超过61.8%，15m 出现MACD回踩0轴金K，高一级结构未强反向",
       "action": "A类可按计划小仓试执行，必须挂失效位",
-      "created_at": "2026-07-17T05:49:24+08:00"
+      "created_at": "2026-07-20T09:17:40+08:00"
     },
     "天机伏击·A/B趋势起爆模型:SUIUSDT:做空": {
       "action": "观察，不追空",
