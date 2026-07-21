@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-21T09:14:26+08:00",
+  "updated_at": "2026-07-21T12:37:42+08:00",
   "model_name": "crypto-trend-scanner",
   "overall": {
     "active_signals": 113,
-    "a_count": 25,
-    "b_count": 2
+    "a_count": 24,
+    "b_count": 4
   }
 }
