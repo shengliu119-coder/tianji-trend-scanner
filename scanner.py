@@ -1042,6 +1042,19 @@ def signal_selection_key(sig: Signal) -> tuple[int, int, int, float]:
     return (grade_rank, setup_timeframe_rank(sig.setup_tf), sig.score, sig.rr)
 
 
+def human_rule_name(name: str) -> str:
+    mapping = {
+        "zero_axis_ema52_ignition": "EMA52回踩企稳+MACD回归0轴起爆",
+        "15m_vegas_zero_axis_ignition": "突破Vegas通道回踩+MACD回归0轴起爆",
+        "4h_neckline_retest_zero_axis": "颈线回踩不破+MACD回归0轴起爆",
+        "2b_false_breakdown_reclaim": "2B假跌破收回",
+        "2b_false_breakout_rejection": "2B假突破承压",
+        "breakdown_retest_short": "跌破平台后反抽承压",
+        "double_bottom_reversal": "双底反转",
+    }
+    return mapping.get(name, name)
+
+
 def near_prior_high_veto(bundle: dict[str, dict[str, float]], trigger_name: str, direction: str) -> bool:
     if direction == "long" and "回踩" not in trigger_name:
         frame = bundle["4h"]
@@ -1193,9 +1206,11 @@ def evaluate_direction(
             grade = "B"
         status = "入场区内" if entry_low <= price <= entry_high else "接近入场"
         direction_text = "做多" if direction == "long" else "做空"
+        setup_label = human_rule_name(str(setup["kind"]))
+        trigger_label = human_rule_name(trigger_name)
         reason = (
-            f"{setup_tf} {setup['kind']}，回调未超过61.8%，"
-            f"{trigger_tf} 出现{trigger['name']}，高一级结构未强反向"
+            f"{setup_tf} {setup_label}，回调未超过61.8%，"
+            f"{trigger_tf} 出现{trigger_label}，高一级结构未强反向"
         )
         action = "A类可按计划小仓试执行，必须挂失效位" if grade == "A" else "B类观察，只在入场区确认后执行"
         signal = Signal(
@@ -1216,8 +1231,8 @@ def evaluate_direction(
             market_state=market_state,
             setup_tf=setup_tf,
             trigger_tf=trigger_tf,
-            setup_kind=str(setup["kind"]),
-            trigger_name=trigger_name,
+            setup_kind=setup_label,
+            trigger_name=trigger_label,
             reason=reason,
             action=action,
             created_at=now_iso(),
@@ -1310,10 +1325,20 @@ def status_badge(status: str, grade: str) -> str:
     return "可执行" if grade == "A" else "观察"
 
 
+def signal_icon_v2(sig: Signal) -> str:
+    if "失效" in sig.status or "过期" in sig.status or "作废" in sig.status:
+        return "🔴"
+    if sig.grade == "A" and sig.status == "入场区内":
+        return "🟢"
+    if sig.grade == "A":
+        return "🟠"
+    return "🟡"
+
+
 def render_signal_message_v2(sig: Signal, event: str = "push") -> str:
     suffix = "可执行" if sig.grade == "A" else "观察，不追单"
     badges = f"【{sig.grade}】【{direction_badge(sig.direction)}】【{status_badge(sig.status, sig.grade)}】"
-    title = f"{badges} 趋势机会｜{sig.symbol}｜{sig.direction}{suffix}"
+    title = f"{signal_icon_v2(sig)} {badges} 趋势机会｜{sig.symbol}｜{sig.direction}{suffix}"
     return "\n".join(
         [
             title,
