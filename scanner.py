@@ -70,6 +70,7 @@ PRIMARY_SYMBOL = "ETHUSDT"
 BTC_SYMBOL = "BTCUSDT"
 
 SETUP_PATHS = {
+    "15m": {"trigger": "15m", "higher": ["1h", "2h", "4h"]},
     "1h": {"trigger": "15m", "higher": ["2h", "4h"]},
     "2h": {"trigger": "15m", "higher": ["4h"]},
     "4h": {"trigger": "15m", "higher": ["1d"]},
@@ -177,6 +178,8 @@ def load_config() -> dict[str, Any]:
     cfg.setdefault("zero_axis_consolidation_min_bars", 8)
     cfg.setdefault("zero_axis_consolidation_max_bars", 24)
     cfg.setdefault("zero_axis_max_entry_atr", 1.25)
+    cfg.setdefault("vegas_zero_axis_max_entry_atr", 1.6)
+    cfg.setdefault("neckline_retest_max_entry_atr", 2.4)
     return config
 
 
@@ -725,6 +728,56 @@ def find_bottom_box_breakout_setup(candles: list[Candle], direction: str, cfg: d
     }
 
 
+def find_neckline_retest_zero_axis_setup(candles: list[Candle], direction: str, cfg: dict[str, Any]) -> dict[str, Any] | None:
+    if direction != "long":
+        return None
+    completed = candles[:-1]
+    if len(completed) < 160:
+        return None
+    closes = [c.close for c in completed]
+    ema24 = ema(closes, 24)
+    ema52 = ema(closes, 52)
+    ema144 = ema(closes, 144)
+    ema169 = ema(closes, 169)
+    dif, dea, hist = macd(closes)
+    atr = average_true_range(candles)
+    if atr <= 0:
+        return None
+
+    recent = completed[-30:]
+    prior = completed[-110:-30]
+    last = completed[-1]
+    vegas_top = max(ema144[-1], ema169[-1])
+    neckline = max(vegas_top, ema52[-1] - atr * 0.25)
+
+    impulse_high = max(c.high for c in recent[:-3])
+    retest_low = min(c.low for c in recent[-10:])
+    retest_close_low = min(c.close for c in recent[-10:])
+    old_low = min(c.low for c in prior)
+    old_high = max(c.high for c in prior)
+
+    broke_neckline = impulse_high >= neckline + atr * 1.6
+    retested_neckline = retest_low <= neckline + atr * 0.95 and retest_close_low >= neckline - atr * 0.45
+    not_chasing = last.close <= neckline + atr * float(cfg.get("neckline_retest_max_entry_atr", 2.4))
+    trend_repaired = last.close >= ema52[-1] - atr * 0.15 and ema24[-1] >= ema52[-1] - atr * 0.55
+    macd_zero_turn = abs(dif[-1]) <= atr * 0.55 and hist[-1] >= hist[-2] and hist[-1] > -atr * 0.12
+    reversal_context = old_high - old_low >= atr * 3.0 and neckline > old_low + atr * 1.2
+    if not (broke_neckline and retested_neckline and not_chasing and trend_repaired and macd_zero_turn and reversal_context):
+        return None
+
+    return {
+        "kind": "4h_neckline_retest_zero_axis",
+        "target": max(impulse_high, last.close + atr * 2.2),
+        "invalid_base": min(retest_low, neckline - atr * 0.65),
+        "retracement": 0.0,
+        "ema52": True,
+        "macd": True,
+        "neckline_retest": True,
+        "neckline": neckline,
+        "box_high": neckline,
+    }
+
+
 def find_zero_axis_ema52_ignition_setup(candles: list[Candle], direction: str, cfg: dict[str, Any]) -> dict[str, Any] | None:
     if direction != "long":
         return None
@@ -821,6 +874,76 @@ def find_zero_axis_ema52_ignition_setup(candles: list[Candle], direction: str, c
     return best
 
 
+def find_vegas_zero_axis_ignition_setup(candles: list[Candle], direction: str, cfg: dict[str, Any]) -> dict[str, Any] | None:
+    if direction != "long":
+        return None
+    completed = candles[:-1]
+    if len(completed) < 190:
+        return None
+    closes = [c.close for c in completed]
+    ema24 = ema(closes, 24)
+    ema52 = ema(closes, 52)
+    ema144 = ema(closes, 144)
+    ema169 = ema(closes, 169)
+    dif, dea, hist = macd(closes)
+    atr = average_true_range(candles)
+    if atr <= 0:
+        return None
+
+    last = completed[-1]
+    vegas_top = max(ema144[-1], ema169[-1])
+    vegas_bottom = min(ema144[-1], ema169[-1])
+    recent = completed[-48:]
+    recent_high = max(c.high for c in recent)
+    recent_low = min(c.low for c in recent)
+    crossed_from_below = any(
+        c.close < max(ema144[-len(recent) + i], ema169[-len(recent) + i]) - atr * 0.08
+        for i, c in enumerate(recent[:-4])
+    )
+    above_vegas = last.close >= vegas_top - atr * 0.08 and ema52[-1] >= vegas_top - atr * 0.35
+    if not (crossed_from_below and above_vegas):
+        return None
+
+    pullback = completed[-12:]
+    support_level = max(ema24[-1], ema52[-1], vegas_top)
+    support_touch = any(c.low <= support_level + atr * 0.45 for c in pullback[-8:])
+    support_hold = min(c.close for c in pullback[-8:]) >= vegas_bottom - atr * 0.55
+    if not (support_touch and support_hold):
+        return None
+
+    zero_reset = min(abs(x) for x in dif[-12:]) <= atr * 0.16 or min(abs(x) for x in hist[-12:]) <= atr * 0.10
+    turn_up = hist[-1] >= hist[-2] and (dif[-1] >= dea[-1] or dif[-1] > -atr * 0.08)
+    if not (zero_reset and turn_up):
+        return None
+
+    max_entry_atr = float(cfg.get("vegas_zero_axis_max_entry_atr", 1.6))
+    entry_level = max(support_level, min(last.close, support_level + atr * 0.35))
+    if last.close - entry_level > atr * max_entry_atr:
+        return None
+    if rsi(closes)[-1] > 76:
+        return None
+
+    invalid_base = min(recent_low, vegas_bottom - atr * 0.25)
+    target = max(recent_high, last.close + atr * 2.2)
+    return {
+        "kind": "15m_vegas_zero_axis_ignition",
+        "target": target,
+        "invalid_base": invalid_base,
+        "retracement": 0.0,
+        "ema52": True,
+        "macd": True,
+        "zero_axis_ignition": True,
+        "vegas_zero_axis_ignition": True,
+        "direct_trigger": {
+            "name": "15m_vegas_zero_axis_ignition",
+            "level": entry_level,
+            "invalid": invalid_base,
+            "quality": 12,
+            "confirmed": True,
+        },
+    }
+
+
 def detect_trigger(candles: list[Candle], direction: str, tolerance_atr: float) -> dict[str, Any] | None:
     completed = candles[:-1]
     if len(completed) < 40:
@@ -910,6 +1033,15 @@ def entry_gap_pct(price: float, low: float, high: float) -> float:
     return abs(price - ref) / price * 100
 
 
+def setup_timeframe_rank(tf: str) -> int:
+    return {"15m": 0, "1h": 1, "2h": 2, "4h": 3, "1d": 4}.get(tf, 0)
+
+
+def signal_selection_key(sig: Signal) -> tuple[int, int, int, float]:
+    grade_rank = 2 if sig.grade == "A" else 1
+    return (grade_rank, setup_timeframe_rank(sig.setup_tf), sig.score, sig.rr)
+
+
 def near_prior_high_veto(bundle: dict[str, dict[str, float]], trigger_name: str, direction: str) -> bool:
     if direction == "long" and "回踩" not in trigger_name:
         frame = bundle["4h"]
@@ -953,11 +1085,15 @@ def evaluate_direction(
     best: Signal | None = None
 
     for setup_tf, path_cfg in SETUP_PATHS.items():
-        setup = (
-            find_zero_axis_ema52_ignition_setup(candle_map[setup_tf], direction, pb_cfg)
-            or find_bottom_box_breakout_setup(candle_map[setup_tf], direction, pb_cfg)
-            or find_trend_setup(candle_map[setup_tf], direction, pb_cfg)
-        )
+        if setup_tf == "15m":
+            setup = find_vegas_zero_axis_ignition_setup(candle_map[setup_tf], direction, pb_cfg)
+        else:
+            setup = (
+                find_neckline_retest_zero_axis_setup(candle_map[setup_tf], direction, pb_cfg)
+                or find_zero_axis_ema52_ignition_setup(candle_map[setup_tf], direction, pb_cfg)
+                or find_bottom_box_breakout_setup(candle_map[setup_tf], direction, pb_cfg)
+                or find_trend_setup(candle_map[setup_tf], direction, pb_cfg)
+            )
         if not setup:
             continue
         direct_trigger = setup.get("direct_trigger")
@@ -967,6 +1103,10 @@ def evaluate_direction(
         else:
             trigger_tf = str(path_cfg["trigger"])
             trigger = detect_trigger(candle_map[trigger_tf], direction, float(pb_cfg["entry_trigger_atr_tolerance"]))
+            if not trigger and bool(setup.get("neckline_retest")) and trigger_tf == "15m":
+                vegas_setup = find_vegas_zero_axis_ignition_setup(candle_map[trigger_tf], direction, pb_cfg)
+                if vegas_setup:
+                    trigger = dict(vegas_setup["direct_trigger"])
         if not trigger:
             continue
         if trigger_tf != "15m" and str(trigger["name"]).startswith("15m"):
@@ -983,7 +1123,8 @@ def evaluate_direction(
                 continue
             if direction == "long" and not alt_long_confirmed(bundle):
                 continue
-            if direction == "long" and not bool(setup.get("zero_axis_ignition")) and not long_key_level_acceptance(candle_map[trigger_tf], float(trigger["level"])):
+            neckline_vegas_trigger = bool(setup.get("neckline_retest")) and "vegas" in str(trigger["name"])
+            if direction == "long" and not (bool(setup.get("zero_axis_ignition")) or neckline_vegas_trigger) and not long_key_level_acceptance(candle_map[trigger_tf], float(trigger["level"])):
                 continue
             if direction == "short" and not alt_short_confirmed(bundle, setup, trigger_name):
                 continue
@@ -1081,7 +1222,7 @@ def evaluate_direction(
             action=action,
             created_at=now_iso(),
         )
-        if best is None or (signal.grade, signal.score, signal.rr) > (best.grade, best.score, best.rr):
+        if best is None or signal_selection_key(signal) > signal_selection_key(best):
             best = signal
     return best
 
@@ -1151,9 +1292,28 @@ def status_icon_v2(status: str) -> str:
     return "🟠"
 
 
+def direction_badge(direction: str) -> str:
+    if "多" in direction or "long" in direction.lower():
+        return "多"
+    if "空" in direction or "short" in direction.lower():
+        return "空"
+    return direction
+
+
+def status_badge(status: str, grade: str) -> str:
+    if "入场" in status:
+        return "近入场" if "接近" in status else "入场区"
+    if "失效" in status:
+        return "失效"
+    if "目标" in status:
+        return "目标"
+    return "可执行" if grade == "A" else "观察"
+
+
 def render_signal_message_v2(sig: Signal, event: str = "push") -> str:
     suffix = "可执行" if sig.grade == "A" else "观察，不追单"
-    title = f"趋势机会｜{sig.symbol}｜{sig.direction}{suffix}"
+    badges = f"【{sig.grade}】【{direction_badge(sig.direction)}】【{status_badge(sig.status, sig.grade)}】"
+    title = f"{badges} 趋势机会｜{sig.symbol}｜{sig.direction}{suffix}"
     return "\n".join(
         [
             title,
