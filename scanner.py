@@ -175,6 +175,13 @@ def load_config() -> dict[str, Any]:
     cfg.setdefault("entry_trigger_atr_tolerance", 0.35)
     cfg.setdefault("ema52_retest_atr_tolerance", 0.55)
     cfg.setdefault("invalidation_atr_buffer", 0.18)
+    cfg.setdefault("min_trend_pullback_bars", 4)
+    cfg.setdefault("min_trend_pullback_depth_atr", 0.75)
+    cfg.setdefault("min_trend_pullback_legs", 2)
+    cfg.setdefault("trend_pullback_late_high_atr", 0.45)
+    cfg.setdefault("same_tf_zero_axis_dif_atr", 0.16)
+    cfg.setdefault("same_tf_zero_axis_hist_atr", 0.12)
+    cfg.setdefault("prior_level_retest_atr_tolerance", 0.65)
     cfg.setdefault("zero_axis_consolidation_min_bars", 8)
     cfg.setdefault("zero_axis_consolidation_max_bars", 24)
     cfg.setdefault("zero_axis_max_entry_atr", 1.25)
@@ -629,6 +636,79 @@ def pivot_indices(values: list[float], side: str, radius: int = 2) -> list[int]:
     return out
 
 
+def countertrend_leg_count(candles: list[Candle], direction: str, atr: float) -> int:
+    if len(candles) < 2:
+        return 0
+    threshold = max(atr * 0.25, candles[-1].close * 0.001)
+    legs = 0
+    move = 0.0
+    in_leg = False
+    for prev, cur in zip(candles, candles[1:]):
+        delta = cur.close - prev.close
+        counter = delta < 0 if direction == "long" else delta > 0
+        if counter:
+            move += abs(delta)
+            in_leg = True
+            continue
+        if in_leg and move >= threshold:
+            legs += 1
+        move = 0.0
+        in_leg = False
+    if in_leg and move >= threshold:
+        legs += 1
+    return legs
+
+
+def trend_pullback_mature(
+    pullback: list[Candle],
+    direction: str,
+    atr: float,
+    cfg: dict[str, Any],
+    impulse_extreme: float,
+) -> bool:
+    if not pullback or atr <= 0:
+        return False
+    min_bars = int(cfg.get("min_trend_pullback_bars", 4))
+    min_depth = atr * float(cfg.get("min_trend_pullback_depth_atr", 0.75))
+    min_legs = int(cfg.get("min_trend_pullback_legs", 2))
+    late_atr = atr * float(cfg.get("trend_pullback_late_high_atr", 0.45))
+    if len(pullback) < min_bars:
+        return False
+    if direction == "long":
+        depth = impulse_extreme - min(c.low for c in pullback)
+        if depth < min_depth:
+            return False
+        if impulse_extreme - pullback[-1].close < late_atr:
+            return False
+    else:
+        depth = max(c.high for c in pullback) - impulse_extreme
+        if depth < min_depth:
+            return False
+        if pullback[-1].close - impulse_extreme < late_atr:
+            return False
+    return countertrend_leg_count(pullback, direction, atr) >= min_legs
+
+
+def same_timeframe_zero_axis_turn(
+    dif: list[float],
+    dea: list[float],
+    hist: list[float],
+    direction: str,
+    atr: float,
+    cfg: dict[str, Any],
+) -> bool:
+    if len(dif) < 14 or atr <= 0:
+        return False
+    dif_tol = atr * float(cfg.get("same_tf_zero_axis_dif_atr", 0.16))
+    hist_tol = atr * float(cfg.get("same_tf_zero_axis_hist_atr", 0.12))
+    zero_reset = min(abs(x) for x in dif[-12:]) <= dif_tol or min(abs(x) for x in hist[-12:]) <= hist_tol
+    if direction == "long":
+        turn = hist[-1] > hist[-2] and dif[-1] >= dea[-1] - dif_tol * 0.25 and dif[-1] > -dif_tol
+    else:
+        turn = hist[-1] < hist[-2] and dif[-1] <= dea[-1] + dif_tol * 0.25 and dif[-1] < dif_tol
+    return zero_reset and turn
+
+
 def find_trend_setup(candles: list[Candle], direction: str, cfg: dict[str, Any]) -> dict[str, Any] | None:
     completed = candles[:-1]
     if len(completed) < 90:
@@ -636,7 +716,7 @@ def find_trend_setup(candles: list[Candle], direction: str, cfg: dict[str, Any])
     closes = [c.close for c in completed]
     ema24 = ema(closes, 24)
     ema52 = ema(closes, 52)
-    dif, _, hist = macd(closes)
+    dif, dea, hist = macd(closes)
     atr = average_true_range(candles)
     max_ret = float(cfg.get("max_retracement", 0.618))
     min_impulse_atr = float(cfg.get("min_impulse_atr", 1.35))
@@ -649,34 +729,51 @@ def find_trend_setup(candles: list[Candle], direction: str, cfg: dict[str, Any])
         if not trend_ok:
             return None
         impulse_start = min(c.low for c in recent[:-5])
-        impulse_high = max(c.high for c in recent[:-2])
+        peak_pos = recent.index(max(recent[:-2], key=lambda c: c.high))
+        impulse_high = recent[peak_pos].high
         amplitude = impulse_high - impulse_start
-        pullback_low = min(c.low for c in recent[recent.index(max(recent[:-2], key=lambda c: c.high)) + 1 :] or recent[-10:])
+        pullback = recent[peak_pos + 1 :]
+        pullback_low = min(c.low for c in pullback or recent[-10:])
         if amplitude <= atr * min_impulse_atr:
             return None
         retracement = (impulse_high - pullback_low) / amplitude
+        prior_high = max(c.high for c in recent[:peak_pos] or recent[:1])
+        prior_level_touch = (
+            pullback_low <= prior_high + atr * float(cfg.get("prior_level_retest_atr_tolerance", 0.65))
+            and min(c.close for c in pullback[-8:] or pullback or recent[-8:]) >= prior_high - atr * 0.35
+        )
         touched_ema52 = any(c.low <= ema52[-len(recent) + i] + atr * ema_tol and c.close >= ema52[-len(recent) + i] - atr * 0.25 for i, c in enumerate(recent[-12:], start=len(recent) - 12))
-        macd_reset = min(dif[-12:]) >= -atr * 0.12 and hist[-1] >= hist[-2]
-        if retracement > max_ret or retracement < 0.03 or not (touched_ema52 or macd_reset):
+        key_retest = touched_ema52 or prior_level_touch
+        macd_reset = same_timeframe_zero_axis_turn(dif, dea, hist, "long", atr, cfg)
+        mature_pullback = trend_pullback_mature(pullback, "long", atr, cfg, impulse_high)
+        if retracement > max_ret or retracement < 0.03 or not mature_pullback or not key_retest or not macd_reset:
             return None
-        return {"kind": "趋势回踩", "target": impulse_high, "invalid_base": pullback_low, "retracement": retracement, "ema52": touched_ema52, "macd": macd_reset}
+        return {"kind": "趋势回踩", "target": impulse_high, "invalid_base": pullback_low, "retracement": retracement, "ema52": key_retest, "macd": macd_reset, "pullback_legs": countertrend_leg_count(pullback, "long", atr)}
 
     trend_ok = ema52[-1] <= ema52[-8] and price <= ema52[-1] + atr * 0.2
     if not trend_ok:
         return None
     impulse_start = max(c.high for c in recent[:-5])
-    impulse_low = min(c.low for c in recent[:-2])
-    amplitude = impulse_start - impulse_low
     trough_pos = recent.index(min(recent[:-2], key=lambda c: c.low))
-    rebound_high = max(c.high for c in recent[trough_pos + 1 :] or recent[-10:])
+    impulse_low = recent[trough_pos].low
+    amplitude = impulse_start - impulse_low
+    pullback = recent[trough_pos + 1 :]
+    rebound_high = max(c.high for c in pullback or recent[-10:])
     if amplitude <= atr * min_impulse_atr:
         return None
     retracement = (rebound_high - impulse_low) / amplitude
+    prior_low = min(c.low for c in recent[:trough_pos] or recent[:1])
+    prior_level_touch = (
+        rebound_high >= prior_low - atr * float(cfg.get("prior_level_retest_atr_tolerance", 0.65))
+        and max(c.close for c in pullback[-8:] or pullback or recent[-8:]) <= prior_low + atr * 0.35
+    )
     touched_ema52 = any(c.high >= ema52[-len(recent) + i] - atr * ema_tol and c.close <= ema52[-len(recent) + i] + atr * 0.25 for i, c in enumerate(recent[-12:], start=len(recent) - 12))
-    macd_reset = max(dif[-12:]) <= atr * 0.12 and hist[-1] <= hist[-2]
-    if retracement > max_ret or retracement < 0.03 or not (touched_ema52 or macd_reset):
+    key_retest = touched_ema52 or prior_level_touch
+    macd_reset = same_timeframe_zero_axis_turn(dif, dea, hist, "short", atr, cfg)
+    mature_pullback = trend_pullback_mature(pullback, "short", atr, cfg, impulse_low)
+    if retracement > max_ret or retracement < 0.03 or not mature_pullback or not key_retest or not macd_reset:
         return None
-    return {"kind": "反弹承压", "target": impulse_low, "invalid_base": rebound_high, "retracement": retracement, "ema52": touched_ema52, "macd": macd_reset}
+    return {"kind": "反弹承压", "target": impulse_low, "invalid_base": rebound_high, "retracement": retracement, "ema52": key_retest, "macd": macd_reset, "pullback_legs": countertrend_leg_count(pullback, "short", atr)}
 
 
 def find_bottom_box_breakout_setup(candles: list[Candle], direction: str, cfg: dict[str, Any]) -> dict[str, Any] | None:
