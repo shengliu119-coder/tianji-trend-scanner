@@ -2,14 +2,14 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-07-23T15:24:19+08:00",
-    "last_candidates": 0
+    "last_scan_at": "2026-07-23T17:52:03+08:00",
+    "last_candidates": 1
   },
   "signals": {
     "天机伏击·A/B趋势起爆模型:AAVEUSDT:做多": {
@@ -1113,22 +1113,22 @@
       "direction": "做多",
       "grade": "B",
       "status": "接近入场",
-      "price": 0.4009,
-      "entry_low": 0.38859457142857146,
-      "entry_high": 0.394205,
-      "invalid": 0.36505824796670094,
-      "target1": 0.47258350406659805,
-      "target2": 0.5084252560998971,
+      "price": 0.4043,
+      "entry_low": 0.40759541888723383,
+      "entry_high": 0.40884470460151956,
+      "invalid": 0.3991757142857143,
+      "target1": 0.4186,
+      "target2": 0.41967285714285707,
       "rr": 3.0,
-      "score": 96,
+      "score": 106,
       "market_state": "震荡",
-      "setup_tf": "2h",
-      "trigger_tf": "2h",
-      "setup_kind": "EMA52回踩企稳+MACD回归0轴起爆",
-      "trigger_name": "EMA52回踩企稳+MACD回归0轴起爆",
-      "reason": "2h EMA52回踩企稳+MACD回归0轴起爆，回调未超过61.8%，2h 出现EMA52回踩企稳+MACD回归0轴起爆，高一级结构未强反向",
+      "setup_tf": "15m",
+      "trigger_tf": "15m",
+      "setup_kind": "突破Vegas通道回踩+MACD回归0轴起爆",
+      "trigger_name": "突破Vegas通道回踩+MACD回归0轴起爆",
+      "reason": "15m 突破Vegas通道回踩+MACD回归0轴起爆，回调未超过61.8%，15m 出现突破Vegas通道回踩+MACD回归0轴起爆，高一级结构未强反向",
       "action": "B类观察，只在入场区确认后执行",
-      "created_at": "2026-07-22T15:28:25+08:00"
+      "created_at": "2026-07-23T17:51:48+08:00"
     },
     "天机伏击·A/B趋势起爆模型:ONDOUSDT:做空": {
       "action": "等待15m结构确认，不追空",
