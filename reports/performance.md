@@ -1,5 +1,5 @@
 # Scanner Performance
 
-Updated: 2026-07-28T04:16:53+08:00
+Updated: 2026-07-28T05:29:31+08:00
 
 Active signals: 116
