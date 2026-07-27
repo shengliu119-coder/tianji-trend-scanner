@@ -164,7 +164,7 @@ def load_config() -> dict[str, Any]:
     config["scan"].setdefault("performance_file", "state/performance.json")
     config["scan"].setdefault("performance_report", "reports/performance.md")
     config["scan"].setdefault("min_rr", 3.0)
-    config["scan"].setdefault("max_distance_to_entry_pct", 2.5)
+    config["scan"].setdefault("max_distance_to_entry_pct", 2.0)
     config["scan"].setdefault("expiry_hours", 12)
     config["crypto"].setdefault("enabled", True)
     config["crypto"].setdefault("symbols", DEFAULT_SYMBOLS)
@@ -185,6 +185,9 @@ def load_config() -> dict[str, Any]:
     cfg.setdefault("zero_axis_consolidation_min_bars", 8)
     cfg.setdefault("zero_axis_consolidation_max_bars", 24)
     cfg.setdefault("zero_axis_max_entry_atr", 1.25)
+    cfg.setdefault("zero_axis_confirm_bars", 2)
+    cfg.setdefault("zero_axis_confirm_hist_atr", 0.025)
+    cfg.setdefault("zero_axis_confirm_dea_atr", 0.025)
     cfg.setdefault("vegas_zero_axis_max_entry_atr", 1.6)
     cfg.setdefault("neckline_retest_max_entry_atr", 2.4)
     return config
@@ -544,7 +547,9 @@ def local_countertrend_veto(bundle: dict[str, dict[str, float]], direction: str)
 
 def alt_stage_allows_a(setup_tf: str, setup: dict[str, Any], bundle: dict[str, dict[str, float]], direction: str) -> bool:
     if direction == "long" and bool(setup.get("zero_axis_ignition")):
-        return setup_tf in {"2h", "4h"} and local_direction_score(bundle, "long") >= 2
+        if setup_tf == "4h":
+            return False
+        return setup_tf == "2h" and local_direction_score(bundle, "long") >= 2
     if direction == "long" and bottom_box_setup(setup):
         return local_direction_score(bundle, "long") >= 1
     if setup_tf == "1h":
@@ -707,6 +712,51 @@ def same_timeframe_zero_axis_turn(
     else:
         turn = hist[-1] < hist[-2] and dif[-1] <= dea[-1] + dif_tol * 0.25 and dif[-1] < dif_tol
     return zero_reset and turn
+
+
+def higher_timeframe_zero_axis_support(
+    candle_map: dict[str, list[Candle]],
+    direction: str,
+    cfg: dict[str, Any],
+) -> bool:
+    if direction != "long":
+        return False
+    confirm_bars = max(2, int(cfg.get("zero_axis_confirm_bars", 2)))
+    for tf in ("1h", "2h", "4h"):
+        candles = candle_map.get(tf)
+        if not candles:
+            continue
+        completed = candles[:-1]
+        if len(completed) < 80:
+            continue
+        closes = [c.close for c in completed]
+        ema24 = ema(closes, 24)
+        ema52 = ema(closes, 52)
+        dif, dea, hist = macd(closes)
+        atr = average_true_range(candles)
+        if atr <= 0:
+            continue
+
+        reset_dif = dif[-(confirm_bars + 12) : -confirm_bars]
+        reset_hist = hist[-(confirm_bars + 12) : -confirm_bars]
+        if not reset_dif:
+            continue
+        zero_reset = (
+            min(abs(x) for x in reset_dif) <= atr * float(cfg.get("same_tf_zero_axis_dif_atr", 0.16))
+            or min(abs(x) for x in reset_hist) <= atr * float(cfg.get("same_tf_zero_axis_hist_atr", 0.12))
+        )
+        hist_confirm = all(
+            x > atr * float(cfg.get("zero_axis_confirm_hist_atr", 0.025))
+            for x in hist[-confirm_bars:]
+        )
+        dea_tol = atr * float(cfg.get("zero_axis_confirm_dea_atr", 0.025))
+        dif_dea_confirm = all(dif[-i] >= dea[-i] - dea_tol for i in range(1, confirm_bars + 1))
+        last = completed[-1]
+        key_level = max(ema24[-1], ema52[-1])
+        key_retest = last.low <= key_level + atr * 0.65 and last.close >= ema52[-1] - atr * 0.2
+        if zero_reset and hist_confirm and dif_dea_confirm and key_retest:
+            return True
+    return False
 
 
 def find_trend_setup(candles: list[Candle], direction: str, cfg: dict[str, Any]) -> dict[str, Any] | None:
@@ -892,6 +942,9 @@ def find_zero_axis_ema52_ignition_setup(candles: list[Candle], direction: str, c
     min_bars = int(cfg.get("zero_axis_consolidation_min_bars", 8))
     max_bars = int(cfg.get("zero_axis_consolidation_max_bars", 24))
     max_entry_atr = float(cfg.get("zero_axis_max_entry_atr", 1.25))
+    confirm_bars = max(2, int(cfg.get("zero_axis_confirm_bars", 2)))
+    hist_min = atr * float(cfg.get("zero_axis_confirm_hist_atr", 0.025))
+    dea_tol = atr * float(cfg.get("zero_axis_confirm_dea_atr", 0.025))
     base = completed[-90:-max_bars]
     if len(base) < 20:
         return None
@@ -930,8 +983,17 @@ def find_zero_axis_ema52_ignition_setup(candles: list[Candle], direction: str, c
             continue
 
         macd_was_positive = max(dif[-bars - 10 : -bars + 1]) > atr * 0.05
-        zero_reset = min(abs(x) for x in dif[-min(8, bars) :]) <= atr * 0.12 or min(abs(x) for x in hist[-min(8, bars) :]) <= atr * 0.08
-        turn_up = dif[-1] >= dea[-1] or hist[-1] >= hist[-2]
+        reset_end = -confirm_bars
+        reset_start = max(-bars, reset_end - 8)
+        reset_dif = dif[reset_start:reset_end]
+        reset_hist = hist[reset_start:reset_end]
+        zero_reset = bool(reset_dif) and (
+            min(abs(x) for x in reset_dif) <= atr * 0.12
+            or min(abs(x) for x in reset_hist) <= atr * 0.08
+        )
+        hist_confirm = all(x > hist_min for x in hist[-confirm_bars:])
+        dif_dea_confirm = all(dif[-i] >= dea[-i] - dea_tol for i in range(1, confirm_bars + 1))
+        turn_up = hist_confirm and dif_dea_confirm and hist[-1] >= hist[-2]
         if not (macd_was_positive and zero_reset and turn_up):
             continue
         if ema24[-1] < ema52[-1] - atr * 0.1:
@@ -1197,6 +1259,8 @@ def evaluate_direction(
     for setup_tf, path_cfg in SETUP_PATHS.items():
         if setup_tf == "15m":
             setup = find_vegas_zero_axis_ignition_setup(candle_map[setup_tf], direction, pb_cfg)
+            if setup and not higher_timeframe_zero_axis_support(candle_map, direction, pb_cfg):
+                continue
         else:
             setup = (
                 find_neckline_retest_zero_axis_setup(candle_map[setup_tf], direction, pb_cfg)
@@ -1293,6 +1357,8 @@ def evaluate_direction(
         score += 8 if rr >= 2.5 else 4
         score -= 8 if gap > 1.2 else 0
         grade = "A" if score >= 85 and context["a_ok"] and gap <= 1.2 else "B"
+        if setup_tf == "4h" and direction == "long" and bool(setup.get("zero_axis_ignition")) and not bool(setup.get("neckline_retest")) and not bottom_box_setup(setup):
+            grade = "B"
         if macd_standalone_trigger(trigger_name):
             grade = "B"
         if setup_tf == "2h" and not two_hour_a_allowed(direction, trigger_name, setup, bundle, gap, score):
