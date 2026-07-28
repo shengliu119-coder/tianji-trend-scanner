@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 import math
@@ -454,21 +454,30 @@ def has_any(text: str, keywords: tuple[str, ...]) -> bool:
 
 
 def disabled_c_trigger(trigger_name: str) -> bool:
-    return has_any(trigger_name, ("鍙屽簳", "閸欏苯绨?, "鍋囪穼鐮?, "閸嬪洩绌?, "2b_false_breakdown", "double_bottom"))
+    return has_any(
+        trigger_name,
+        (
+            "\u53cc\u5e95",
+            "\u5047\u8dcc\u7834",
+            "\u6536\u56de",
+            "2b_false_breakdown",
+            "double_bottom",
+        ),
+    )
 
 
 def weak_reversal_trigger(trigger_name: str) -> bool:
     return has_any(
         trigger_name,
         (
-            "鍙屽簳",
-            "鍙岄《",
-            "鎶珮浣庣偣",
-            "闄嶄綆楂樼偣",
-            "閸欏苯绨?,
-            "閸欏矂銆?,
-            "閹?,
-            "闂?,
+            "\u53cc\u5e95",
+            "\u53cc\u9876",
+            "\u62ac\u9ad8\u4f4e\u70b9",
+            "\u964d\u4f4e\u9ad8\u70b9",
+            "\u5047\u8dcc\u7834",
+            "\u5047\u7a81\u7834",
+            "\u6536\u56de",
+            "\u627f\u538b",
             "double_bottom",
             "double_top",
             "higher_low",
@@ -560,7 +569,10 @@ def alt_short_confirmed(bundle: dict[str, dict[str, float]], setup: dict[str, An
 
 
 def bottom_box_setup(setup: dict[str, Any]) -> bool:
-    return "box_high" in setup or has_any(str(setup.get("kind", "")), ("绠变綋", "缁犲彉缍?, "box"))
+    return "box_high" in setup or has_any(
+        str(setup.get("kind", "")),
+        ("\u7bb1\u4f53", "\u76d8\u6574\u7bb1\u4f53", "box"),
+    )
 
 
 def local_countertrend_veto(bundle: dict[str, dict[str, float]], direction: str) -> bool:
@@ -657,12 +669,12 @@ def detect_market_state(btc: dict[str, dict[str, float]], eth: dict[str, dict[st
     btc_strong = btc_4h["close"] > btc_4h["ema52"] and btc_4h["hist"] >= btc_4h["hist_prev"]
     eth_strong = eth_4h["close"] > eth_4h["ema52"] and eth_4h["hist"] >= eth_4h["hist_prev"]
     if btc_1h["close"] < btc_1h["ema52"] and btc_1h["rsi"] < 32:
-        return "鎬ヨ穼"
+        return "\u6025\u8dcc"
     if btc_weak and eth_weak:
-        return "寮?
+        return "\u5f31"
     if btc_strong and eth_strong:
-        return "寮?
-    return "闇囪崱"
+        return "\u5f3a"
+    return "\u9707\u8361"
 
 
 def pivot_indices(values: list[float], side: str, radius: int = 2) -> list[int]:
@@ -1244,7 +1256,7 @@ def detect_trigger(candles: list[Candle], direction: str, tolerance_atr: float) 
         swept = min(lows[-8:]) < prior_low - atr * 0.05 and last.close > prior_low
         reclaim_ok = last.close > max(prev.high, recent3_high - atr * 0.12) or (last.close > last.open and lower_wick >= body * 1.2)
         if swept and reclaim_ok and last.close > prev.high:
-            candidates.append({"name": "15m 2B鍋囪穼鐮存敹鍥?, "level": prior_low, "invalid": min(lows[-8:]), "quality": 11, "confirmed": True})
+            candidates.append({"name": "15m 2B\u5047\u8dcc\u7834\u6536\u56de", "level": prior_low, "invalid": min(lows[-8:]), "quality": 11, "confirmed": True})
         prior_high = max(highs[-18:-6])
         retest = max(highs[-8:]) > prior_high + atr * 0.12 and min(lows[-6:]) <= prior_high + atr * 0.25 and last.close >= prior_high and last.close > prev.high
         if retest:
@@ -1269,7 +1281,7 @@ def detect_trigger(candles: list[Candle], direction: str, tolerance_atr: float) 
         swept = max(highs[-8:]) > prior_high + atr * 0.05 and last.close < prior_high
         reject_ok = last.close < min(prev.low, recent3_low + atr * 0.12) or (last.close < last.open and upper_wick >= body * 1.2)
         if swept and reject_ok and last.close < prev.low:
-            candidates.append({"name": "15m 2B鍋囩獊鐮村洖钀?, "level": prior_high, "invalid": max(highs[-8:]), "quality": 11, "confirmed": True})
+            candidates.append({"name": "15m 2B\u5047\u7a81\u7834\u56de\u843d", "level": prior_high, "invalid": max(highs[-8:]), "quality": 11, "confirmed": True})
         prior_low = min(lows[-18:-6])
         retest_touch = last.high >= prior_low - atr * 0.15
         retest_reject = last.close <= prior_low and last.close < prev.low and (prior_low - last.close) <= atr * 0.45
@@ -1309,14 +1321,14 @@ def signal_selection_key(sig: Signal) -> tuple[int, int, int, float]:
 
 def human_rule_name(name: str) -> str:
     mapping = {
-        "zero_axis_ema52_ignition": "EMA52鍥炶俯浼佺ǔ+MACD鍥炲綊0杞磋捣鐖?,
-        "15m_vegas_zero_axis_ignition": "绐佺牬Vegas閫氶亾鍥炶俯+MACD鍥炲綊0杞磋捣鐖?,
-        "4h_neckline_retest_zero_axis": "棰堢嚎鍥炶俯涓嶇牬+MACD鍥炲綊0杞磋捣鐖?,
-        "2b_false_breakdown_reclaim": "2B鍋囪穼鐮存敹鍥?,
-        "2b_false_breakout_rejection": "2B鍋囩獊鐮存壙鍘?,
-        "breakdown_retest_short": "璺岀牬骞冲彴鍚庡弽鎶芥壙鍘?,
-        "double_bottom_reversal": "鍙屽簳鍙嶈浆",
-        "downtrend_retest_short": "4H涓嬭穼瓒嬪娍鍥炶抽噸鏂版壓鍘?",
+        "zero_axis_ema52_ignition": "EMA52\u56de\u8e29\u4f01\u7a33+MACD\u56de\u5f520\u8f74\u8d77\u7206",
+        "15m_vegas_zero_axis_ignition": "\u7a81\u7834Vegas\u901a\u9053\u56de\u8e29+MACD\u56de\u5f520\u8f74\u8d77\u7206",
+        "4h_neckline_retest_zero_axis": "\u9888\u7ebf\u56de\u8e29\u4e0d\u7834+MACD\u56de\u5f520\u8f74\u8d77\u7206",
+        "2b_false_breakdown_reclaim": "2B\u5047\u8dcc\u7834\u6536\u56de",
+        "2b_false_breakout_rejection": "2B\u5047\u7a81\u7834\u627f\u538b",
+        "breakdown_retest_short": "\u8dcc\u7834\u5e73\u53f0\u540e\u53cd\u62bd\u627f\u538b",
+        "double_bottom_reversal": "\u53cc\u5e95\u53cd\u8f6c",
+        "downtrend_retest_short": "4H\u4e0b\u8dcc\u8d8b\u52bf\u56de\u8e29\u91cd\u65b0\u627f\u538b",
     }
     return mapping.get(name, name)
 
@@ -1345,9 +1357,9 @@ def evaluate_direction(
     direction: str,
     config: dict[str, Any],
 ) -> Signal | None:
-    if direction == "long" and market_state in {"寮?, "鎬ヨ穼"} and display_symbol not in {"BTCUSDT", "ETHUSDT"}:
+    if direction == "long" and market_state in {"\u5f31", "\u6025\u8dcc"} and display_symbol not in {"BTCUSDT", "ETHUSDT"}:
         return None
-    if direction == "short" and market_state == "寮?:
+    if direction == "short" and market_state == "\u5f3a":
         return None
 
     if local_start_protects_against(bundle, direction):
@@ -1460,7 +1472,7 @@ def evaluate_direction(
             continue
 
         score = 55
-        score += 10 if market_state in {"寮?, "寮?} else 5
+        score += 10 if market_state in {"\u5f3a", "\u9707\u8361"} else 5
         score += 10 if context["a_ok"] else 5
         score += min(15, int(float(trigger["quality"])))
         score += 8 if setup["ema52"] else 0
@@ -1478,15 +1490,15 @@ def evaluate_direction(
             grade = "B"
         if is_alt(display_symbol) and not (context["a_ok"] and score >= 88 and gap <= 1.0 and alt_stage_allows_a(setup_tf, setup, bundle, direction)):
             grade = "B"
-        status = "鍏ュ満鍖哄唴" if entry_low <= price <= entry_high else "鎺ヨ繎鍏ュ満"
-        direction_text = "鍋氬" if direction == "long" else "鍋氱┖"
+        status = "\u5165\u573a\u533a\u5185" if entry_low <= price <= entry_high else "\u63a5\u8fd1\u5165\u573a"
+        direction_text = "\u505a\u591a" if direction == "long" else "\u505a\u7a7a"
         setup_label = human_rule_name(str(setup["kind"]))
         trigger_label = human_rule_name(trigger_name)
         reason = (
-            f"{setup_tf} {setup_label}锛屽洖璋冩湭瓒呰繃61.8%锛?
-            f"{trigger_tf} 鍑虹幇{trigger_label}锛岄珮涓€绾х粨鏋勬湭寮哄弽鍚?
+            f"{setup_tf} {setup_label}\uff0c\u56de\u8c03\u672a\u8d85\u8fc761.8%\uff0c"
+            f"{trigger_tf} \u51fa\u73b0{trigger_label}\uff0c\u9ad8\u4e00\u7ea7\u7ed3\u6784\u672a\u5f3a\u53cd\u5411"
         )
-        action = "A绫诲彲鎸夎鍒掑皬浠撹瘯鎵ц锛屽繀椤绘寕澶辨晥浣? if grade == "A" else "B绫昏瀵燂紝鍙湪鍏ュ満鍖虹‘璁ゅ悗鎵ц"
+        action = "\u0041\u7c7b\u53ef\u6309\u8ba1\u5212\u5c0f\u4ed3\u8bd5\u6267\u884c\uff0c\u5fc5\u987b\u6302\u5931\u6548\u4f4d" if grade == "A" else "\u0042\u7c7b\u89c2\u5bdf\uff0c\u53ea\u5728\u5165\u573a\u533a\u786e\u8ba4\u540e\u6267\u884c"
         signal = Signal(
             model_name=MODEL_NAME,
             symbol=display_symbol,
@@ -1531,7 +1543,7 @@ def signal_priority(sig: Signal) -> tuple[int, int, float]:
         return (9, -sig.score, -sig.rr)
     if is_eth(sig.symbol):
         return (0, -sig.score, -sig.rr)
-    if is_alt(sig.symbol) and has_any(sig.setup_kind, ("绠变綋", "缁犲彉缍?, "box")):
+    if is_alt(sig.symbol) and has_any(sig.setup_kind, ("\u7bb1\u4f53", "\u76d8\u6574\u7bb1\u4f53", "box")):
         return (1, -sig.score, -sig.rr)
     if is_alt(sig.symbol):
         return (2, -sig.score, -sig.rr)
@@ -1541,90 +1553,84 @@ def signal_priority(sig: Signal) -> tuple[int, int, float]:
 
 
 def priority_icon(sig: Signal) -> str:
-    if sig.grade == "A" and sig.status in {"鍏ュ満鍖哄唴", "閸忋儱婧€閸栧搫鍞?}:
-        return "馃煝"
+    if sig.grade == "A" and sig.status in {"\u5165\u573a\u533a\u5185", "\u63a5\u8fd1\u5165\u573a"}:
+        return "A"
     if sig.grade == "A":
-        return "馃煛"
-    return "馃煚"
+        return "A"
+    return "B"
 
 
 def render_signal_message(sig: Signal, event: str = "push") -> str:
-    icon = priority_icon(sig)
-    title = f"{icon} 瓒嬪娍鏈轰細锝渰sig.symbol}锝渰sig.direction}锝渰sig.grade}绫?
+    title = f"\u8d8b\u52bf\u673a\u4f1a\uff5c{sig.symbol}\uff5c{sig.direction}{sig.grade}\u7c7b"
     return "\n".join(
         [
             title,
             "",
-            f"浼樺厛绾э細{icon} {sig.grade}绫?,
-            f"鐜颁环锛歿sig.price:.6g}",
-            f"鐘舵€侊細{sig.status}",
-            f"鍏ュ満鍖猴細{sig.entry_low:.6g}-{sig.entry_high:.6g}",
-            f"澶辨晥浣嶏細{sig.invalid:.6g}",
-            f"鐩爣1锛歿sig.target1:.6g}锛?R锛屽噺浠擄級",
-            f"鐩爣2锛歿sig.target2:.6g}锛?R锛屽墿浣欎粨浣嶏級",
-            f"鐩堜簭姣旓細{sig.rr:.2f}",
-            f"缁撴瀯锛歿sig.setup_tf} {sig.setup_kind} / {sig.trigger_tf} {sig.trigger_name}",
+            f"\u73b0\u4ef7\uff1a{sig.price:.6g}",
+            f"\u72b6\u6001\uff1a{sig.status}",
+            f"\u5165\u573a\u533a\uff1a{sig.entry_low:.6g}-{sig.entry_high:.6g}",
+            f"\u5931\u6548\u4f4d\uff1a{sig.invalid:.6g}",
+            f"\u76ee\u68071\uff1a{sig.target1:.6g}",
             "",
-            f"鍘熷洜锛歿sig.reason}",
-            f"澶勭悊锛歿sig.action}",
+            f"\u539f\u56e0\uff1a{sig.reason}",
+            f"\u5904\u7406\uff1a{sig.action}",
         ]
     )
 
 
 def status_icon_v2(status: str) -> str:
-    if any(marker in status for marker in ("澶辨晥", "杩囨湡", "浣滃簾")):
-        return "馃敶"
-    if status in {"鍏ュ満鍖哄唴", "鎺ヨ繎鍏ュ満"}:
-        return "馃煝"
-    if "瑙傚療" in status:
-        return "馃煛"
-    return "馃煚"
+    if any(marker in status for marker in ("\u5931\u6548", "\u8fc7\u671f", "\u4f5c\u5e9f")):
+        return "X"
+    if status in {"\u5165\u573a\u533a\u5185", "\u63a5\u8fd1\u5165\u573a"}:
+        return "OK"
+    if "\u89c2\u5bdf" in status:
+        return "B"
+    return "I"
 
 
 def direction_badge(direction: str) -> str:
-    if "澶? in direction or "long" in direction.lower():
-        return "澶?
-    if "绌? in direction or "short" in direction.lower():
-        return "绌?
+    if "\u591a" in direction or "long" in direction.lower():
+        return "\u591a"
+    if "\u7a7a" in direction or "short" in direction.lower():
+        return "\u7a7a"
     return direction
 
 
 def status_badge(status: str, grade: str) -> str:
-    if "鍏ュ満" in status:
-        return "杩戝叆鍦? if "鎺ヨ繎" in status else "鍏ュ満鍖?
-    if "澶辨晥" in status:
-        return "澶辨晥"
-    if "鐩爣" in status:
-        return "鐩爣"
-    return "鍙墽琛? if grade == "A" else "瑙傚療"
+    if "\u5165\u573a" in status:
+        return "\u63a5\u8fd1\u5165\u573a" if "\u63a5\u8fd1" in status else "\u5165\u573a\u533a"
+    if "\u5931\u6548" in status:
+        return "\u5931\u6548"
+    if "\u76ee\u6807" in status:
+        return "\u76ee\u6807"
+    return "\u53ef\u6267\u884c" if grade == "A" else "\u89c2\u5bdf"
 
 
 def signal_icon_v2(sig: Signal) -> str:
-    if "澶辨晥" in sig.status or "杩囨湡" in sig.status or "浣滃簾" in sig.status:
-        return "馃敶"
-    if sig.grade == "A" and sig.status == "鍏ュ満鍖哄唴":
-        return "馃煝"
+    if "\u5931\u6548" in sig.status or "\u8fc7\u671f" in sig.status or "\u4f5c\u5e9f" in sig.status:
+        return "X"
+    if sig.grade == "A" and sig.status == "\u5165\u573a\u533a\u5185":
+        return "A"
     if sig.grade == "A":
-        return "馃煚"
-    return "馃煛"
+        return "A"
+    return "B"
 
 
 def render_signal_message_v2(sig: Signal, event: str = "push") -> str:
-    suffix = "鍙墽琛? if sig.grade == "A" else "瑙傚療锛屼笉杩藉崟"
-    badges = f"銆恵sig.grade}銆戙€恵direction_badge(sig.direction)}銆戙€恵status_badge(sig.status, sig.grade)}銆?
-    title = f"{signal_icon_v2(sig)} {badges} 瓒嬪娍鏈轰細锝渰sig.symbol}锝渰sig.direction}{suffix}"
+    suffix = "\u53ef\u6267\u884c" if sig.grade == "A" else "\u89c2\u5bdf\uff0c\u4e0d\u8ffd\u5355"
+    title = f"\u8d8b\u52bf\u673a\u4f1a\uff5c{sig.symbol}\uff5c{sig.direction}{suffix}"
     return "\n".join(
         [
             title,
             "",
-            f"鐜颁环锛歿sig.price:.6g}",
-            f"鐘舵€侊細{sig.status}",
-            f"鍏ュ満鍖猴細{sig.entry_low:.6g}-{sig.entry_high:.6g}",
-            f"澶辨晥浣嶏細{sig.invalid:.6g}",
-            f"鐩爣1锛歿sig.target1:.6g}",
+            f"\u73b0\u4ef7\uff1a{sig.price:.6g}",
+            f"\u72b6\u6001\uff1a{sig.status}",
+            f"\u5165\u573a\u533a\uff1a{sig.entry_low:.6g}-{sig.entry_high:.6g}",
+            f"\u5931\u6548\u4f4d\uff1a{sig.invalid:.6g}",
+            f"\u76ee\u68071\uff1a{sig.target1:.6g}",
             "",
-            f"鍘熷洜锛歿sig.reason}",
-            f"澶勭悊锛歿sig.action}",
+            f"\u539f\u56e0\uff1a{sig.reason}",
+            f"\u5904\u7406\uff1a{sig.action}",
         ]
     )
 
