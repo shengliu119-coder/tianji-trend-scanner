@@ -2,14 +2,14 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "强",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-07-29T15:25:41+08:00",
-    "last_candidates": 0
+    "last_scan_at": "2026-07-29T18:11:38+08:00",
+    "last_candidates": 1
   },
   "signals": {
     "天机伏击·A/B趋势起爆模型:AAVEUSDT:做多": {
@@ -3485,6 +3485,30 @@
       "reason": "1h EMA52回踩企稳+MACD回归0轴起爆，回调未超过61.8%，1h 出现EMA52回踩企稳+MACD回归0轴起爆，高一级结构未强反向",
       "action": "B类观察，只在入场区确认后执行",
       "created_at": "2026-07-23T06:49:30+08:00"
+    },
+    "澶╂満浼忓嚮路A/B瓒嬪娍璧风垎妯″瀷:ETHUSDT:做多": {
+      "model_name": "澶╂満浼忓嚮路A/B瓒嬪娍璧风垎妯″瀷",
+      "symbol": "ETHUSDT",
+      "actual_symbol": "ETHUSDT",
+      "direction": "做多",
+      "grade": "A",
+      "status": "接近入场",
+      "price": 1920.24,
+      "entry_low": 1915.6757411611686,
+      "entry_high": 1918.4692197325971,
+      "invalid": 1882.6612714285714,
+      "target1": 1995.3974571428573,
+      "target2": 2032.976185714286,
+      "rr": 3.0,
+      "score": 111,
+      "market_state": "强",
+      "setup_tf": "15m",
+      "trigger_tf": "15m",
+      "setup_kind": "突破Vegas通道回踩+MACD回归0轴起爆",
+      "trigger_name": "突破Vegas通道回踩+MACD回归0轴起爆",
+      "reason": "15m 突破Vegas通道回踩+MACD回归0轴起爆，回调未超过61.8%，15m 出现突破Vegas通道回踩+MACD回归0轴起爆，高一级结构未强反向",
+      "action": "A类可按计划小仓试执行，必须挂失效位",
+      "created_at": "2026-07-29T18:04:27+08:00"
     }
   }
 }
