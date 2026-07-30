@@ -8,8 +8,8 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-07-31T02:20:22+08:00",
-    "last_candidates": 2
+    "last_scan_at": "2026-07-31T03:59:02+08:00",
+    "last_candidates": 1
   },
   "signals": {
     "天机伏击·A/B趋势起爆模型:AAVEUSDT:做多": {
@@ -3492,13 +3492,13 @@
       "actual_symbol": "ETHUSDT",
       "direction": "做多",
       "grade": "A",
-      "status": "接近入场",
-      "price": 1925.5,
-      "entry_low": 1917.6872270141066,
-      "entry_high": 1920.0760127283922,
-      "invalid": 1895.7387142857142,
-      "target1": 1985.0225714285716,
-      "target2": 2014.7838571428574,
+      "status": "入场区内",
+      "price": 1922.55,
+      "entry_low": 1920.8320868584583,
+      "entry_high": 1923.4779225727439,
+      "invalid": 1898.5114142857144,
+      "target1": 1970.627171428571,
+      "target2": 1994.6657571428566,
       "rr": 3.0,
       "score": 111,
       "market_state": "强",
@@ -3508,7 +3508,7 @@
       "trigger_name": "突破Vegas通道回踩+MACD回归0轴起爆",
       "reason": "15m 突破Vegas通道回踩+MACD回归0轴起爆，回调未超过61.8%，15m 出现突破Vegas通道回踩+MACD回归0轴起爆，高一级结构未强反向",
       "action": "A类可按计划小仓试执行，必须挂失效位",
-      "created_at": "2026-07-30T21:14:30+08:00"
+      "created_at": "2026-07-31T03:51:37+08:00"
     }
   }
 }
