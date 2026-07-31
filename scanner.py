@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import json
 import math
@@ -59,6 +59,11 @@ DEFAULT_SYMBOLS = [
     "ETCUSDT",
     "ONDOUSDT",
     "HBARUSDT",
+    "GIGGLEUSDT",
+    "KOMAUSDT",
+    "GOATUSDT",
+    "LIGHTUSDT",
+    "NEIROUSDT",
 ]
 
 SYMBOL_MAP = {
@@ -169,6 +174,10 @@ def load_config() -> dict[str, Any]:
     config["crypto"].setdefault("enabled", True)
     config["crypto"].setdefault("symbols", DEFAULT_SYMBOLS)
     config["crypto"].setdefault("symbol_map", SYMBOL_MAP)
+    config["crypto"].setdefault("okx_discovery_enabled", True)
+    config["crypto"].setdefault("okx_discovery_max_symbols", 30)
+    config["crypto"].setdefault("okx_discovery_min_change_pct", 2.0)
+    config["crypto"].setdefault("okx_discovery_min_volume_ccy", 300000.0)
     cfg = config["trend_pullback"]
     cfg.setdefault("max_retracement", 0.618)
     cfg.setdefault("min_impulse_atr", 1.35)
@@ -190,6 +199,14 @@ def load_config() -> dict[str, Any]:
     cfg.setdefault("zero_axis_confirm_dea_atr", 0.025)
     cfg.setdefault("vegas_zero_axis_max_entry_atr", 1.6)
     cfg.setdefault("neckline_retest_max_entry_atr", 2.4)
+    cfg.setdefault("impulse_box_min_bars", 6)
+    cfg.setdefault("impulse_box_max_bars", 24)
+    cfg.setdefault("impulse_box_min_impulse_atr", 3.0)
+    cfg.setdefault("impulse_box_min_impulse_pct", 5.0)
+    cfg.setdefault("impulse_box_max_width_atr", 4.2)
+    cfg.setdefault("impulse_box_max_width_pct", 8.0)
+    cfg.setdefault("impulse_box_max_entry_atr", 1.35)
+    cfg.setdefault("impulse_box_max_rsi", 76.0)
     return config
 
 
@@ -369,6 +386,75 @@ def binance_24h_tickers() -> dict[str, dict[str, Any]]:
             if symbol in {"PEPEUSDT", "BONKUSDT"}:
                 tickers[f"1000{symbol}"] = row
         return tickers
+
+
+def okx_24h_tickers() -> dict[str, dict[str, Any]]:
+    payload = http_json("https://www.okx.com/api/v5/market/tickers?instType=SWAP")
+    if str(payload.get("code")) != "0":
+        raise RuntimeError(f"OKX tickers failed: {payload}")
+    tickers: dict[str, dict[str, Any]] = {}
+    for row in payload.get("data", []):
+        inst_id = str(row.get("instId", ""))
+        if not inst_id.endswith("-USDT-SWAP"):
+            continue
+        base = inst_id.replace("-USDT-SWAP", "")
+        symbol = f"{base}USDT"
+        tickers[symbol] = row
+    return tickers
+
+
+def okx_change_pct(row: dict[str, Any]) -> float:
+    try:
+        last = float(row.get("last") or 0)
+        open24h = float(row.get("open24h") or 0)
+    except (TypeError, ValueError):
+        return 0.0
+    return (last - open24h) / open24h * 100 if open24h > 0 else 0.0
+
+
+def okx_volume_ccy(row: dict[str, Any]) -> float:
+    for key in ("volCcy24h", "volCcy", "vol24h"):
+        try:
+            return float(row.get(key) or 0)
+        except (TypeError, ValueError):
+            continue
+    return 0.0
+
+
+def discover_okx_symbols(config: dict[str, Any]) -> list[str]:
+    crypto_cfg = config["crypto"]
+    if not crypto_cfg.get("okx_discovery_enabled", True):
+        return []
+    max_symbols = int(crypto_cfg.get("okx_discovery_max_symbols", 30))
+    min_change = float(crypto_cfg.get("okx_discovery_min_change_pct", 2.0))
+    min_volume = float(crypto_cfg.get("okx_discovery_min_volume_ccy", 300000.0))
+    try:
+        rows = okx_24h_tickers()
+    except Exception as exc:  # noqa: BLE001
+        print(f"OKX discovery unavailable: {exc}", file=sys.stderr)
+        return []
+    candidates = [
+        (symbol, okx_change_pct(row), okx_volume_ccy(row))
+        for symbol, row in rows.items()
+    ]
+    candidates = [
+        item
+        for item in candidates
+        if item[1] >= min_change and item[2] >= min_volume and item[0] not in {"BTCUSDT", "ETHUSDT"}
+    ]
+    candidates.sort(key=lambda item: (item[1], item[2]), reverse=True)
+    return [symbol for symbol, _, _ in candidates[:max_symbols]]
+
+
+def merge_symbols(primary: list[str], discovered: list[str]) -> list[str]:
+    out: list[str] = []
+    seen: set[str] = set()
+    for symbol in primary + discovered:
+        if symbol in seen:
+            continue
+        seen.add(symbol)
+        out.append(symbol)
+    return out
 
 
 def fetch_bundle(actual_symbol: str) -> tuple[dict[str, dict[str, float]], dict[str, list[Candle]]]:
@@ -620,6 +706,10 @@ def trigger_near_setup_key(
         return False
 
     setup_atr = max(setup_frame["atr"], level * 0.002)
+    if bool(setup.get("impulse_box")):
+        box_low = float(setup.get("box_low", level))
+        box_high = float(setup.get("box_high", level))
+        return direction == "long" and box_low - setup_atr * 0.75 <= level <= box_high + setup_atr * 0.45
     if bottom_box_setup(setup):
         box_high = float(setup.get("box_high", level))
         if direction == "long":
@@ -1151,6 +1241,120 @@ def find_zero_axis_ema52_ignition_setup(candles: list[Candle], direction: str, c
     return best
 
 
+def find_impulse_box_zero_axis_setup(candles: list[Candle], direction: str, cfg: dict[str, Any]) -> dict[str, Any] | None:
+    if direction != "long":
+        return None
+    completed = candles[:-1]
+    if len(completed) < 110:
+        return None
+    closes = [c.close for c in completed]
+    ema24 = ema(closes, 24)
+    ema52 = ema(closes, 52)
+    dif, dea, hist = macd(closes)
+    atr = average_true_range(candles)
+    if atr <= 0:
+        return None
+
+    min_bars = int(cfg.get("impulse_box_min_bars", 6))
+    max_bars = int(cfg.get("impulse_box_max_bars", 24))
+    min_impulse_atr = float(cfg.get("impulse_box_min_impulse_atr", 3.0))
+    min_impulse_pct = float(cfg.get("impulse_box_min_impulse_pct", 5.0))
+    max_width_atr = float(cfg.get("impulse_box_max_width_atr", 4.2))
+    max_width_pct = float(cfg.get("impulse_box_max_width_pct", 8.0))
+    max_entry_atr = float(cfg.get("impulse_box_max_entry_atr", 1.35))
+    max_rsi = float(cfg.get("impulse_box_max_rsi", 76.0))
+    last = completed[-1]
+    last_rsi = rsi(closes)[-1]
+    if last_rsi > max_rsi:
+        return None
+
+    best: dict[str, Any] | None = None
+    for bars in range(min_bars, max_bars + 1):
+        box = completed[-bars:]
+        prior = completed[-bars - 42 : -bars]
+        if len(prior) < 24:
+            continue
+
+        prior_lows = [c.low for c in prior]
+        prior_highs = [c.high for c in prior]
+        low_pos = prior_lows.index(min(prior_lows))
+        high_pos = prior_highs.index(max(prior_highs))
+        if low_pos >= high_pos or high_pos < len(prior) // 2:
+            continue
+
+        impulse_low = prior_lows[low_pos]
+        impulse_high = prior_highs[high_pos]
+        impulse = impulse_high - impulse_low
+        impulse_pct = impulse / impulse_low * 100 if impulse_low > 0 else 0.0
+        if impulse < atr * min_impulse_atr or impulse_pct < min_impulse_pct:
+            continue
+
+        box_high = max(c.high for c in box)
+        box_low = min(c.low for c in box)
+        box_width = box_high - box_low
+        if box_width <= 0:
+            continue
+        if box_width > atr * max_width_atr or box_width / box_high * 100 > max_width_pct:
+            continue
+        if box_low < impulse_low + impulse * 0.45:
+            continue
+        if box_high < impulse_high - max(atr * 1.2, box_high * 0.018):
+            continue
+        if last.close < box_low - atr * 0.15 or last.close > box_high + atr * 0.35:
+            continue
+
+        support_holds = all(
+            c.close >= ema52[-bars + i] - atr * 0.30 and c.low >= ema52[-bars + i] - atr * 1.10
+            for i, c in enumerate(box)
+        )
+        if not support_holds or ema24[-1] < ema52[-1] - atr * 0.20:
+            continue
+
+        macd_was_positive = max(dif[-bars - 24 : -bars + 1]) > atr * 0.06
+        zero_reset = min(abs(x) for x in dif[-bars:]) <= atr * 0.22 or min(abs(x) for x in hist[-bars:]) <= atr * 0.14
+        hist_turn = hist[-1] >= hist[-2] or (len(hist) >= 3 and hist[-1] >= hist[-3])
+        macd_ready = hist[-1] > -atr * 0.14 and dif[-1] >= dea[-1] - atr * 0.12 and hist_turn
+        if not (macd_was_positive and zero_reset and macd_ready):
+            continue
+
+        entry_base = max(ema24[-1], ema52[-1], box_low + box_width * 0.30)
+        entry_level = min(max(entry_base, last.close - atr * 0.20), box_high)
+        if abs(last.close - entry_level) > atr * max_entry_atr:
+            continue
+
+        quality = 11
+        if box_width <= atr * 3.2:
+            quality += 1
+        if box_low >= ema52[-1] - atr * 0.25:
+            quality += 1
+        if hist[-1] >= hist[-2] and dif[-1] >= dea[-1] - atr * 0.05:
+            quality += 1
+
+        invalid_base = min(box_low, ema52[-1] - atr * 0.25)
+        candidate = {
+            "kind": "impulse_box_zero_axis",
+            "target": max(box_high + box_width * 1.2, last.close + atr * 2.4),
+            "invalid_base": invalid_base,
+            "retracement": 0.0,
+            "ema52": True,
+            "macd": True,
+            "zero_axis_ignition": True,
+            "impulse_box": True,
+            "box_low": box_low,
+            "box_high": box_high,
+            "direct_trigger": {
+                "name": "impulse_box_zero_axis",
+                "level": entry_level,
+                "invalid": invalid_base,
+                "quality": quality,
+                "confirmed": True,
+            },
+        }
+        if best is None or candidate["direct_trigger"]["quality"] > best["direct_trigger"]["quality"]:
+            best = candidate
+    return best
+
+
 def find_vegas_zero_axis_ignition_setup(candles: list[Candle], direction: str, cfg: dict[str, Any]) -> dict[str, Any] | None:
     if direction != "long":
         return None
@@ -1321,6 +1525,7 @@ def signal_selection_key(sig: Signal) -> tuple[int, int, int, float]:
 
 def human_rule_name(name: str) -> str:
     mapping = {
+        "impulse_box_zero_axis": "\u9996\u6bb5\u62c9\u5347\u540e\u5e73\u53f0\u84c4\u529b+MACD\u96f6\u8f74\u4fee\u590d",
         "zero_axis_ema52_ignition": "EMA52\u56de\u8e29\u4f01\u7a33+MACD\u56de\u5f520\u8f74\u8d77\u7206",
         "15m_vegas_zero_axis_ignition": "\u7a81\u7834Vegas\u901a\u9053\u56de\u8e29+MACD\u56de\u5f520\u8f74\u8d77\u7206",
         "4h_neckline_retest_zero_axis": "\u9888\u7ebf\u56de\u8e29\u4e0d\u7834+MACD\u56de\u5f520\u8f74\u8d77\u7206",
@@ -1377,8 +1582,11 @@ def evaluate_direction(
 
     for setup_tf, path_cfg in SETUP_PATHS.items():
         if setup_tf == "15m":
-            setup = find_vegas_zero_axis_ignition_setup(candle_map[setup_tf], direction, pb_cfg)
-            if setup and not higher_timeframe_zero_axis_support(candle_map, direction, pb_cfg):
+            setup = (
+                find_impulse_box_zero_axis_setup(candle_map[setup_tf], direction, pb_cfg)
+                or find_vegas_zero_axis_ignition_setup(candle_map[setup_tf], direction, pb_cfg)
+            )
+            if setup and not bool(setup.get("impulse_box")) and not higher_timeframe_zero_axis_support(candle_map, direction, pb_cfg):
                 continue
         else:
             setup = None
@@ -1386,6 +1594,7 @@ def evaluate_direction(
                 setup = find_downtrend_retest_short_setup(candle_map[setup_tf], pb_cfg)
             setup = (
                 setup
+                or find_impulse_box_zero_axis_setup(candle_map[setup_tf], direction, pb_cfg)
                 or find_neckline_retest_zero_axis_setup(candle_map[setup_tf], direction, pb_cfg)
                 or find_zero_axis_ema52_ignition_setup(candle_map[setup_tf], direction, pb_cfg)
                 or find_bottom_box_breakout_setup(candle_map[setup_tf], direction, pb_cfg)
@@ -1480,6 +1689,8 @@ def evaluate_direction(
         score += 8 if rr >= 2.5 else 4
         score -= 8 if gap > 1.2 else 0
         grade = "A" if score >= 85 and context["a_ok"] and gap <= 1.2 else "B"
+        if bool(setup.get("impulse_box")):
+            grade = "B"
         if setup_tf == "4h" and direction == "long" and bool(setup.get("zero_axis_ignition")) and not bool(setup.get("neckline_retest")) and not bottom_box_setup(setup):
             grade = "B"
         if macd_standalone_trigger(trigger_name):
@@ -1669,9 +1880,10 @@ def is_duplicate(state: dict[str, Any], sig: Signal, expiry_hours: int) -> bool:
 def scan_crypto(config: dict[str, Any], state: dict[str, Any]) -> list[Signal]:
     if not config["crypto"].get("enabled", True):
         return []
-    symbols = list(config["crypto"].get("symbols", DEFAULT_SYMBOLS))
+    base_symbols = list(config["crypto"].get("symbols", DEFAULT_SYMBOLS))
+    discovered_symbols = discover_okx_symbols(config)
+    symbols = merge_symbols(base_symbols, discovered_symbols)
     symbol_map = dict(config["crypto"].get("symbol_map", SYMBOL_MAP))
-    ticker_map = binance_24h_tickers()
     bundle_cache: dict[str, tuple[dict[str, dict[str, float]], dict[str, list[Candle]]]] = {}
 
     def get(actual: str) -> tuple[dict[str, dict[str, float]], dict[str, list[Candle]]]:
@@ -1683,12 +1895,12 @@ def scan_crypto(config: dict[str, Any], state: dict[str, Any]) -> list[Signal]:
     eth_bundle, _ = get("ETHUSDT")
     market_state = detect_market_state(btc_bundle, eth_bundle)
     state.setdefault("meta", {})["last_market_state"] = market_state
+    state["meta"]["last_okx_discovery_count"] = len(discovered_symbols)
+    state["meta"]["last_okx_discovery_symbols"] = discovered_symbols
 
     signals: list[Signal] = []
     for display_symbol in symbols:
         actual = symbol_map.get(display_symbol, display_symbol)
-        if actual not in ticker_map:
-            continue
         try:
             bundle, candle_map = get(actual)
             long_sig = evaluate_direction(display_symbol, actual, bundle, candle_map, market_state, "long", config)
@@ -1737,7 +1949,7 @@ def main() -> int:
 
     pushed = 0
     for sig in candidates:
-        if sig.grade != "A" and not (sig.grade == "B" and sig.status in {"鍏ュ満鍖哄唴", "鎺ヨ繎鍏ュ満"}):
+        if sig.grade != "A" and not (sig.grade == "B" and sig.status in {"\u5165\u573a\u533a\u5185", "\u63a5\u8fd1\u5165\u573a"}):
             continue
         if is_duplicate(state, sig, expiry_hours):
             continue
