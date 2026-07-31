@@ -21,9 +21,21 @@ trend_pullback:
   entry_trigger_atr_tolerance: 0.35
   ema52_retest_atr_tolerance: 0.55
   invalidation_atr_buffer: 0.18
+  impulse_box_min_bars: 6
+  impulse_box_max_bars: 24
+  impulse_box_min_impulse_atr: 3.0
+  impulse_box_min_impulse_pct: 5.0
+  impulse_box_max_width_atr: 4.2
+  impulse_box_max_width_pct: 8.0
+  impulse_box_max_entry_atr: 1.35
+  impulse_box_max_rsi: 76.0
 
 crypto:
   enabled: true
+  okx_discovery_enabled: true
+  okx_discovery_max_symbols: 30
+  okx_discovery_min_change_pct: 2.0
+  okx_discovery_min_volume_ccy: 300000.0
   symbols:
     - FARTCOINUSDT
     - UNIUSDT
@@ -61,6 +73,11 @@ crypto:
     - ETCUSDT
     - ONDOUSDT
     - HBARUSDT
+    - GIGGLEUSDT
+    - KOMAUSDT
+    - GOATUSDT
+    - LIGHTUSDT
+    - NEIROUSDT
   symbol_map:
     PEPEUSDT: 1000PEPEUSDT
     BONKUSDT: 1000BONKUSDT
