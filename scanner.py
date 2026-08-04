@@ -181,6 +181,7 @@ def load_config() -> dict[str, Any]:
     cfg = config["trend_pullback"]
     cfg.setdefault("max_retracement", 0.618)
     cfg.setdefault("min_impulse_atr", 1.35)
+    cfg.setdefault("background_impulse_min_pct", 3.0)
     cfg.setdefault("entry_trigger_atr_tolerance", 0.35)
     cfg.setdefault("ema52_retest_atr_tolerance", 0.55)
     cfg.setdefault("invalidation_atr_buffer", 0.18)
@@ -590,6 +591,17 @@ def pressure_short_trigger(trigger_name: str) -> bool:
             "rejection",
         ),
     )
+
+
+def frame_long_bias(frame: dict[str, float]) -> bool:
+    return (
+        frame["close"] >= frame["ema52"]
+        and frame["ema24"] >= frame["ema52"]
+        and frame["dif"] >= frame["dea"] - frame["atr"] * 0.02
+        and frame["hist"] >= frame["hist_prev"]
+    )
+
+
 def two_hour_a_allowed(
     direction: str,
     trigger_name: str,
@@ -626,16 +638,38 @@ def alt_small_tf_long_reversal(bundle: dict[str, dict[str, float]]) -> bool:
     return False
 
 
-def alt_long_confirmed(bundle: dict[str, dict[str, float]]) -> bool:
-    if not alt_small_tf_long_reversal(bundle):
+def alt_long_confirmed(
+    bundle: dict[str, dict[str, float]],
+    candle_map: dict[str, list[Candle]],
+    setup_tf: str,
+    trigger_tf: str,
+    trigger_level: float,
+) -> bool:
+    trigger_candles = candle_map.get(trigger_tf, [])
+    trigger_accept = bool(trigger_candles) and long_key_level_acceptance(trigger_candles, trigger_level)
+    if not trigger_accept:
+        trigger_accept = alt_small_tf_long_reversal(bundle)
+    if not trigger_accept:
         return False
-    for tf in ("1h", "2h"):
+
+    if setup_tf in {"2h", "4h"}:
+        bias_tfs = ("2h", "4h")
+        min_bias = 1
+    elif setup_tf == "1h":
+        bias_tfs = ("1h", "2h")
+        min_bias = 2
+    else:
+        bias_tfs = ("1h", "2h")
+        min_bias = 2
+
+    aligned = 0
+    for tf in bias_tfs:
         frame = bundle.get(tf)
         if not frame:
             continue
-        if frame["ema24"] > frame["ema52"] and frame["close"] >= frame["ema52"] and frame["dif"] >= 0 and frame["hist"] >= frame["hist_prev"]:
-            return True
-    return False
+        if frame_long_bias(frame):
+            aligned += 1
+    return aligned >= min_bias
 
 
 def alt_short_confirmed(bundle: dict[str, dict[str, float]], setup: dict[str, Any], trigger_name: str) -> bool:
@@ -682,9 +716,9 @@ def local_countertrend_veto(bundle: dict[str, dict[str, float]], direction: str)
 
 def alt_stage_allows_a(setup_tf: str, setup: dict[str, Any], bundle: dict[str, dict[str, float]], direction: str) -> bool:
     if direction == "long" and bool(setup.get("zero_axis_ignition")):
-        if setup_tf == "4h":
-            return False
-        return setup_tf == "2h" and local_direction_score(bundle, "long") >= 2
+        if setup_tf in {"2h", "4h"}:
+            return local_direction_score(bundle, "long") >= 1
+        return False
     if direction == "short":
         return setup_tf in {"2h", "4h"} and local_direction_score(bundle, "short") >= 2
     if direction == "long" and bottom_box_setup(setup):
@@ -692,6 +726,50 @@ def alt_stage_allows_a(setup_tf: str, setup: dict[str, Any], bundle: dict[str, d
     if setup_tf == "1h":
         return False
     return local_direction_score(bundle, direction) >= 2
+
+
+def alt_long_path_gate(
+    setup_tf: str,
+    setup: dict[str, Any],
+    bundle: dict[str, dict[str, float]],
+    trigger_tf: str,
+    trigger_level: float,
+) -> bool:
+    setup_frame = bundle.get(setup_tf)
+    trigger_frame = bundle.get(trigger_tf)
+    if not setup_frame or not trigger_frame:
+        return False
+
+    setup_atr = max(setup_frame["atr"], trigger_level * 0.002)
+    anchor = float(
+        setup.get(
+            "entry_anchor",
+            max(setup_frame["ema24"], setup_frame["ema52"]),
+        )
+    )
+
+    if bool(setup.get("impulse_box")):
+        box_low = float(setup.get("box_low", anchor))
+        box_high = float(setup.get("box_high", anchor))
+        return box_low - setup_atr * 0.55 <= trigger_level <= box_high + setup_atr * 0.35
+
+    if bool(setup.get("neckline_retest")):
+        neckline = float(setup.get("neckline", anchor))
+        return abs(trigger_level - neckline) <= setup_atr * 0.65 and setup_frame["close"] >= neckline - setup_atr * 0.30
+
+    if bool(setup.get("zero_axis_ignition")):
+        return abs(trigger_level - anchor) <= setup_atr * 0.75
+
+    if str(setup.get("kind", "")) == "瓒嬪娍鍥炶俯":
+        return abs(trigger_level - anchor) <= setup_atr * 0.5 and anchor - setup_atr * 0.30 <= setup_frame["close"] <= anchor + setup_atr * 0.45
+
+    if bottom_box_setup(setup):
+        box_high = float(setup.get("box_high", anchor))
+        return abs(trigger_level - box_high) <= setup_atr * 0.8 or trigger_level >= box_high - setup_atr * 0.35
+
+    return abs(trigger_level - anchor) <= setup_atr * 0.7
+
+
 def trigger_near_setup_key(
     setup_tf: str,
     setup: dict[str, Any],
@@ -716,9 +794,32 @@ def trigger_near_setup_key(
             return abs(level - box_high) <= setup_atr * 0.9 or level >= box_high - setup_atr * 0.45
         return False
 
-    near_setup_ema = abs(level - setup_frame["ema52"]) <= setup_atr * 1.2 or abs(level - setup_frame["ema24"]) <= setup_atr * 1.0
+    if bool(setup.get("neckline_retest")):
+        neckline = float(setup.get("neckline", setup_frame["ema52"]))
+        if direction == "long":
+            return (
+                (
+                    (abs(level - neckline) <= setup_atr * 0.7 or abs(level - setup_frame["ema52"]) <= setup_atr * 0.85)
+                    and setup_frame["close"] >= neckline - setup_atr * 0.30
+                )
+                or (
+                    has_any(trigger_name, ("回踩", "MACD", "反转", "反包", "retest"))
+                    and abs(level - neckline) <= setup_atr * 0.7
+                )
+            )
+        return abs(level - neckline) <= setup_atr * 1.05
+
+    anchor = float(setup.get("entry_anchor", setup_frame["ema52"]))
+    near_anchor = abs(level - anchor) <= setup_atr * 1.0
+    near_setup_ema = near_anchor or abs(level - setup_frame["ema52"]) <= setup_atr * 0.8 or abs(level - setup_frame["ema24"]) <= setup_atr * 0.75
     if direction == "long":
-        return near_setup_ema or has_any(trigger_name, ("鍥炶俯", "MACD"))
+        return (
+            near_setup_ema and setup_frame["close"] <= anchor + setup_atr * 0.55
+        ) or (
+            has_any(trigger_name, ("鍥炶俯", "MACD"))
+            and abs(level - anchor) <= setup_atr * 0.55
+            and setup_frame["close"] <= anchor + setup_atr * 0.55
+        )
     return near_setup_ema or has_any(trigger_name, ("鍙嶆娊", "鎵垮帇", "MACD", "lower_high", "lower_high_retest", "breakdown_retest"))
 def long_key_level_acceptance(candles: list[Candle], level: float) -> bool:
     completed = candles[:-1]
@@ -750,6 +851,36 @@ def short_key_level_rejection(candles: list[Candle], level: float) -> bool:
     pinbar = upper_wick >= body * 1.5 and last.close <= last.open and (last.high - last.close) / candle_range >= 0.55
     rejection = last.close < last.open and last.close < min(prev.low, level - atr * 0.03) and last.high >= level - atr * 0.35
     return near_level and not_chasing and (pinbar or rejection)
+
+
+def background_impulse_ok(
+    candles: list[Candle],
+    direction: str,
+    atr: float,
+    min_impulse_atr: float,
+    min_impulse_pct: float,
+) -> bool:
+    completed = candles[:-1]
+    if len(completed) < 40 or atr <= 0:
+        return False
+    recent = completed[-72:]
+    if len(recent) < 20:
+        return False
+
+    if direction == "long":
+        swing_low = min(c.low for c in recent[:-5])
+        swing_high = max(c.high for c in recent[5:])
+        impulse = swing_high - swing_low
+        impulse_pct = impulse / swing_low * 100 if swing_low > 0 else 0.0
+    else:
+        swing_high = max(c.high for c in recent[:-5])
+        swing_low = min(c.low for c in recent[5:])
+        impulse = swing_high - swing_low
+        impulse_pct = impulse / swing_high * 100 if swing_high > 0 else 0.0
+
+    if impulse <= atr * min_impulse_atr:
+        return False
+    return impulse_pct >= min_impulse_pct
 
 
 def detect_market_state(btc: dict[str, dict[str, float]], eth: dict[str, dict[str, float]]) -> str:
@@ -907,6 +1038,7 @@ def find_trend_setup(candles: list[Candle], direction: str, cfg: dict[str, Any])
     atr = average_true_range(candles)
     max_ret = float(cfg.get("max_retracement", 0.618))
     min_impulse_atr = float(cfg.get("min_impulse_atr", 1.35))
+    min_impulse_pct = float(cfg.get("background_impulse_min_pct", 3.0))
     ema_tol = float(cfg.get("ema52_retest_atr_tolerance", 0.55))
     recent = completed[-72:]
     price = completed[-1].close
@@ -914,6 +1046,8 @@ def find_trend_setup(candles: list[Candle], direction: str, cfg: dict[str, Any])
     if direction == "long":
         trend_ok = ema52[-1] >= ema52[-8] and price >= ema52[-1] - atr * 0.2
         if not trend_ok:
+            return None
+        if not background_impulse_ok(candles, "long", atr, min_impulse_atr, min_impulse_pct):
             return None
         impulse_start = min(c.low for c in recent[:-5])
         peak_pos = recent.index(max(recent[:-2], key=lambda c: c.high))
@@ -935,10 +1069,21 @@ def find_trend_setup(candles: list[Candle], direction: str, cfg: dict[str, Any])
         mature_pullback = trend_pullback_mature(pullback, "long", atr, cfg, impulse_high)
         if retracement > max_ret or retracement < 0.03 or not mature_pullback or not key_retest or not macd_reset:
             return None
-        return {"kind": "瓒嬪娍鍥炶俯", "target": impulse_high, "invalid_base": pullback_low, "retracement": retracement, "ema52": key_retest, "macd": macd_reset, "pullback_legs": countertrend_leg_count(pullback, "long", atr)}
+        return {
+            "kind": "瓒嬪娍鍥炶俯",
+            "target": impulse_high,
+            "invalid_base": pullback_low,
+            "retracement": retracement,
+            "ema52": key_retest,
+            "macd": macd_reset,
+            "pullback_legs": countertrend_leg_count(pullback, "long", atr),
+            "entry_anchor": max(prior_high, ema52[-1]),
+        }
 
     trend_ok = ema52[-1] <= ema52[-8] and price <= ema52[-1] + atr * 0.2
     if not trend_ok:
+        return None
+    if not background_impulse_ok(candles, "short", atr, min_impulse_atr, min_impulse_pct):
         return None
     impulse_start = max(c.high for c in recent[:-5])
     trough_pos = recent.index(min(recent[:-2], key=lambda c: c.low))
@@ -1009,6 +1154,7 @@ def find_bottom_box_breakout_setup(candles: list[Candle], direction: str, cfg: d
         "box_high": box_high,
         "box_low": box_low,
         "box_mid": box_mid,
+        "entry_anchor": box_high,
     }
 
 
@@ -1025,6 +1171,7 @@ def find_downtrend_retest_short_setup(candles: list[Candle], cfg: dict[str, Any]
     atr = average_true_range(candles)
     if atr <= 0:
         return None
+    min_impulse_pct = float(cfg.get("background_impulse_min_pct", 3.0))
 
     recent = completed[-48:]
     prior = completed[-120:-48]
@@ -1040,6 +1187,9 @@ def find_downtrend_retest_short_setup(candles: list[Candle], cfg: dict[str, Any]
     impulse_low = recent[trough_pos].low
     amplitude = impulse_high - impulse_low
     if amplitude <= atr * float(cfg.get("min_impulse_atr", 1.35)):
+        return None
+    impulse_pct = amplitude / impulse_high * 100 if impulse_high > 0 else 0.0
+    if impulse_pct < min_impulse_pct:
         return None
 
     pullback = recent[trough_pos + 1 :]
@@ -1098,6 +1248,7 @@ def find_neckline_retest_zero_axis_setup(candles: list[Candle], direction: str, 
     atr = average_true_range(candles)
     if atr <= 0:
         return None
+    min_impulse_pct = float(cfg.get("background_impulse_min_pct", 3.0))
 
     recent = completed[-30:]
     prior = completed[-110:-30]
@@ -1110,6 +1261,7 @@ def find_neckline_retest_zero_axis_setup(candles: list[Candle], direction: str, 
     retest_close_low = min(c.close for c in recent[-10:])
     old_low = min(c.low for c in prior)
     old_high = max(c.high for c in prior)
+    prior_move_pct = (old_high - old_low) / old_low * 100 if old_low > 0 else 0.0
 
     broke_neckline = impulse_high >= neckline + atr * 1.6
     retested_neckline = retest_low <= neckline + atr * 0.95 and retest_close_low >= neckline - atr * 0.45
@@ -1117,7 +1269,7 @@ def find_neckline_retest_zero_axis_setup(candles: list[Candle], direction: str, 
     trend_repaired = last.close >= ema52[-1] - atr * 0.15 and ema24[-1] >= ema52[-1] - atr * 0.55
     macd_zero_turn = abs(dif[-1]) <= atr * 0.55 and hist[-1] >= hist[-2] and hist[-1] > -atr * 0.12
     reversal_context = old_high - old_low >= atr * 3.0 and neckline > old_low + atr * 1.2
-    if not (broke_neckline and retested_neckline and not_chasing and trend_repaired and macd_zero_turn and reversal_context):
+    if not (broke_neckline and retested_neckline and not_chasing and trend_repaired and macd_zero_turn and reversal_context and prior_move_pct >= min_impulse_pct):
         return None
 
     return {
@@ -1130,6 +1282,7 @@ def find_neckline_retest_zero_axis_setup(candles: list[Candle], direction: str, 
         "neckline_retest": True,
         "neckline": neckline,
         "box_high": neckline,
+        "entry_anchor": neckline,
     }
 
 
@@ -1146,6 +1299,7 @@ def find_zero_axis_ema52_ignition_setup(candles: list[Candle], direction: str, c
     atr = average_true_range(candles)
     if atr <= 0:
         return None
+    min_impulse_pct = float(cfg.get("background_impulse_min_pct", 3.0))
 
     min_bars = int(cfg.get("zero_axis_consolidation_min_bars", 8))
     max_bars = int(cfg.get("zero_axis_consolidation_max_bars", 24))
@@ -1161,6 +1315,9 @@ def find_zero_axis_ema52_ignition_setup(candles: list[Candle], direction: str, c
     impulse_high = max(c.high for c in base[-48:])
     impulse = impulse_high - impulse_low
     if impulse <= atr * float(cfg.get("min_impulse_atr", 1.35)):
+        return None
+    impulse_pct = impulse / impulse_low * 100 if impulse_low > 0 else 0.0
+    if impulse_pct < min_impulse_pct:
         return None
 
     best: dict[str, Any] | None = None
@@ -1228,6 +1385,7 @@ def find_zero_axis_ema52_ignition_setup(candles: list[Candle], direction: str, c
             "ema52": True,
             "macd": True,
             "zero_axis_ignition": True,
+            "entry_anchor": support,
             "direct_trigger": {
                 "name": "zero_axis_ema52_ignition",
                 "level": entry_level,
@@ -1526,9 +1684,9 @@ def signal_selection_key(sig: Signal) -> tuple[int, int, int, float]:
 def human_rule_name(name: str) -> str:
     mapping = {
         "impulse_box_zero_axis": "\u9996\u6bb5\u62c9\u5347\u540e\u5e73\u53f0\u84c4\u529b+MACD\u96f6\u8f74\u4fee\u590d",
-        "zero_axis_ema52_ignition": "EMA52\u56de\u8e29\u4f01\u7a33+MACD\u56de\u5f520\u8f74\u8d77\u7206",
+        "zero_axis_ema52_ignition": "EMA52/\u9888\u7ebf\u56de\u8e29\u4f01\u7a33+MACD\u56de\u5f520\u8f74\u8d77\u7206",
         "15m_vegas_zero_axis_ignition": "\u7a81\u7834Vegas\u901a\u9053\u56de\u8e29+MACD\u56de\u5f520\u8f74\u8d77\u7206",
-        "4h_neckline_retest_zero_axis": "\u9888\u7ebf\u56de\u8e29\u4e0d\u7834+MACD\u56de\u5f520\u8f74\u8d77\u7206",
+        "4h_neckline_retest_zero_axis": "\u9888\u7ebf/\u56de\u8e29\u4e0d\u7834+MACD\u56de\u5f520\u8f74\u8d77\u7206",
         "2b_false_breakdown_reclaim": "2B\u5047\u8dcc\u7834\u6536\u56de",
         "2b_false_breakout_rejection": "2B\u5047\u7a81\u7834\u627f\u538b",
         "breakdown_retest_short": "\u8dcc\u7834\u5e73\u53f0\u540e\u53cd\u62bd\u627f\u538b",
@@ -1627,11 +1785,23 @@ def evaluate_direction(
         elif is_alt(display_symbol):
             if weak_reversal_trigger(trigger_name):
                 continue
-            if direction == "long" and not alt_long_confirmed(bundle):
+            if direction == "long" and setup_tf == "1h" and not (
+                bottom_box_setup(setup) or bool(setup.get("neckline_retest")) or bool(setup.get("zero_axis_ignition"))
+            ):
+                continue
+            if direction == "long" and not alt_long_path_gate(setup_tf, setup, bundle, trigger_tf, float(trigger["level"])):
+                continue
+            if direction == "long" and not alt_long_confirmed(bundle, candle_map, setup_tf, trigger_tf, float(trigger["level"])):
                 continue
             neckline_vegas_trigger = bool(setup.get("neckline_retest")) and "vegas" in str(trigger["name"])
             if direction == "long" and not (bool(setup.get("zero_axis_ignition")) or neckline_vegas_trigger) and not long_key_level_acceptance(candle_map[trigger_tf], float(trigger["level"])):
                 continue
+            if direction == "long" and not (bool(setup.get("zero_axis_ignition")) or bool(setup.get("neckline_retest")) or bottom_box_setup(setup)):
+                setup_frame = bundle.get(setup_tf)
+                if setup_frame:
+                    key_anchor = max(setup_frame["ema24"], setup_frame["ema52"])
+                    if abs(float(trigger["level"]) - key_anchor) > setup_frame["atr"] * 0.8:
+                        continue
             if direction == "short" and not alt_short_confirmed(bundle, setup, trigger_name):
                 continue
             if direction == "short" and not short_key_level_rejection(candle_map[trigger_tf], float(trigger["level"])):
