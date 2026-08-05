@@ -182,6 +182,15 @@ def load_config() -> dict[str, Any]:
     cfg.setdefault("max_retracement", 0.618)
     cfg.setdefault("min_impulse_atr", 1.35)
     cfg.setdefault("background_impulse_min_pct", 3.0)
+    cfg.setdefault("alt_background_impulse_min_pct", 5.0)
+    cfg.setdefault("alt_long_impulse_age_min_bars_2h", 12)
+    cfg.setdefault("alt_long_impulse_age_max_bars_2h", 100)
+    cfg.setdefault("alt_long_impulse_age_min_bars_4h", 6)
+    cfg.setdefault("alt_long_impulse_age_max_bars_4h", 80)
+    cfg.setdefault("alt_short_impulse_age_min_bars_2h", 12)
+    cfg.setdefault("alt_short_impulse_age_max_bars_2h", 100)
+    cfg.setdefault("alt_short_impulse_age_min_bars_4h", 6)
+    cfg.setdefault("alt_short_impulse_age_max_bars_4h", 80)
     cfg.setdefault("entry_trigger_atr_tolerance", 0.35)
     cfg.setdefault("ema52_retest_atr_tolerance", 0.55)
     cfg.setdefault("invalidation_atr_buffer", 0.18)
@@ -688,6 +697,15 @@ def alt_short_confirmed(bundle: dict[str, dict[str, float]], setup: dict[str, An
     return pressure_retest and local_short
 
 
+def alt_setup_above_vegas(setup_frame: dict[str, float], direction: str) -> bool:
+    vegas_top = max(setup_frame["ema52"], setup_frame["ema144"], setup_frame["ema169"])
+    vegas_bottom = min(setup_frame["ema52"], setup_frame["ema144"], setup_frame["ema169"])
+    atr = setup_frame["atr"]
+    if direction == "long":
+        return setup_frame["close"] >= vegas_top - atr * 0.10
+    return setup_frame["close"] <= vegas_bottom + atr * 0.10
+
+
 def bottom_box_setup(setup: dict[str, Any]) -> bool:
     return "box_high" in setup or has_any(
         str(setup.get("kind", "")),
@@ -881,6 +899,28 @@ def background_impulse_ok(
     if impulse <= atr * min_impulse_atr:
         return False
     return impulse_pct >= min_impulse_pct
+
+
+def recent_impulse_age_ok(
+    candles: list[Candle],
+    direction: str,
+    min_bars_ago: int,
+    max_bars_ago: int,
+) -> bool:
+    completed = candles[:-1]
+    if len(completed) < max_bars_ago + 12:
+        return False
+    window = completed[-max_bars_ago:]
+    if len(window) < min_bars_ago + 6:
+        return False
+
+    if direction == "long":
+        extreme_idx = max(range(len(window)), key=lambda i: window[i].high)
+    else:
+        extreme_idx = min(range(len(window)), key=lambda i: window[i].low)
+
+    bars_ago = len(window) - 1 - extreme_idx
+    return min_bars_ago <= bars_ago <= max_bars_ago
 
 
 def detect_market_state(btc: dict[str, dict[str, float]], eth: dict[str, dict[str, float]]) -> str:
@@ -1785,6 +1825,29 @@ def evaluate_direction(
         elif is_alt(display_symbol):
             if weak_reversal_trigger(trigger_name):
                 continue
+            setup_frame = bundle.get(setup_tf)
+            if not setup_frame:
+                continue
+            if direction == "long" and setup_tf in {"2h", "4h"}:
+                alt_impulse_pct = float(pb_cfg.get("alt_background_impulse_min_pct", 5.0))
+                age_min = int(pb_cfg.get(f"alt_long_impulse_age_min_bars_{setup_tf}", 12 if setup_tf == "2h" else 6))
+                age_max = int(pb_cfg.get(f"alt_long_impulse_age_max_bars_{setup_tf}", 100 if setup_tf == "2h" else 80))
+                if not recent_impulse_age_ok(candle_map[setup_tf], "long", age_min, age_max):
+                    continue
+                if not background_impulse_ok(candle_map[setup_tf], "long", setup_frame["atr"], float(pb_cfg.get("min_impulse_atr", 1.35)), alt_impulse_pct):
+                    continue
+                if not alt_setup_above_vegas(setup_frame, "long"):
+                    continue
+            if direction == "short" and setup_tf in {"2h", "4h"}:
+                alt_impulse_pct = float(pb_cfg.get("alt_background_impulse_min_pct", 5.0))
+                age_min = int(pb_cfg.get(f"alt_short_impulse_age_min_bars_{setup_tf}", 12 if setup_tf == "2h" else 6))
+                age_max = int(pb_cfg.get(f"alt_short_impulse_age_max_bars_{setup_tf}", 100 if setup_tf == "2h" else 80))
+                if not recent_impulse_age_ok(candle_map[setup_tf], "short", age_min, age_max):
+                    continue
+                if not background_impulse_ok(candle_map[setup_tf], "short", setup_frame["atr"], float(pb_cfg.get("min_impulse_atr", 1.35)), alt_impulse_pct):
+                    continue
+                if not alt_setup_above_vegas(setup_frame, "short"):
+                    continue
             if direction == "long" and setup_tf == "1h" and not (
                 bottom_box_setup(setup) or bool(setup.get("neckline_retest")) or bool(setup.get("zero_axis_ignition"))
             ):
