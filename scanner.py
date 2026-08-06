@@ -1705,11 +1705,39 @@ def rr_short(price: float, invalid: float, target: float) -> float:
     return (price - target) / risk if risk > 0 else -1
 
 
+def target1_rr(sig: Signal) -> float:
+    if sig.direction == "\u505a\u591a":
+        return rr_long(sig.price, sig.invalid, sig.target1)
+    return rr_short(sig.price, sig.invalid, sig.target1)
+
+
 def entry_gap_pct(price: float, low: float, high: float) -> float:
     if low <= price <= high:
         return 0.0
     ref = low if price < low else high
     return abs(price - ref) / price * 100
+
+
+def push_self_check(sig: Signal, min_target1_rr: float = 2.0) -> tuple[bool, str]:
+    """Final notification gate: only push signals that still match the playbook."""
+    allowed_statuses = {"\u5165\u573a\u533a\u5185", "\u63a5\u8fd1\u5165\u573a"}
+    if sig.status not in allowed_statuses:
+        return False, "status_not_actionable"
+    real_rr = target1_rr(sig)
+    if real_rr < min_target1_rr:
+        return False, "target1_rr_too_low"
+    gap = entry_gap_pct(sig.price, sig.entry_low, sig.entry_high)
+    max_gap = 1.2 if sig.grade == "A" else 0.8
+    if gap > max_gap:
+        return False, "entry_gap_too_wide"
+    if sig.setup_kind == "impulse_box_zero_axis":
+        if sig.grade != "B":
+            return False, "impulse_box_cannot_be_a"
+        if sig.status != "\u5165\u573a\u533a\u5185":
+            return False, "impulse_box_needs_entry_zone"
+        if sig.direction == "\u505a\u591a" and sig.price > sig.entry_high:
+            return False, "impulse_box_pulled_away"
+    return True, "ok"
 
 
 def setup_timeframe_rank(tf: str) -> int:
@@ -1891,7 +1919,7 @@ def evaluate_direction(
             else:
                 target1 = price + risk * 2.0
             target2 = price + risk * 3.0
-            rr = rr_long(price, invalid, target2)
+            rr = rr_long(price, invalid, target1)
         else:
             entry_low = float(trigger["level"]) - atr * 0.35
             entry_high = float(trigger["level"]) + atr * 0.18
@@ -1899,7 +1927,7 @@ def evaluate_direction(
             risk = invalid - price
             target1 = price - risk * 2.0
             target2 = price - risk * 3.0
-            rr = rr_short(price, invalid, target2)
+            rr = rr_short(price, invalid, target1)
 
         gap = entry_gap_pct(price, entry_low, entry_high)
         if rr < min_rr or gap > max_gap:
@@ -2183,6 +2211,10 @@ def main() -> int:
     pushed = 0
     for sig in candidates:
         if sig.grade != "A" and not (sig.grade == "B" and sig.status in {"\u5165\u573a\u533a\u5185", "\u63a5\u8fd1\u5165\u573a"}):
+            continue
+        ok, veto_reason = push_self_check(sig)
+        if not ok:
+            print(f"skip push {sig.symbol} {sig.direction}: {veto_reason}", file=sys.stderr)
             continue
         if is_duplicate(state, sig, expiry_hours):
             continue
