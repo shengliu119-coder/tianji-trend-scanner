@@ -8,40 +8,104 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-07T08:51:11+08:00",
+    "last_scan_at": "2026-08-07T09:58:52+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 30,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "ZBTUSDT",
-      "BICOUSDT",
-      "RIVERUSDT",
-      "FLNCUSDT",
-      "BSBUSDT",
-      "UBUSDT",
-      "PLUMEUSDT",
-      "ALLOUSDT",
-      "RESOLVUSDT",
-      "ROBOUSDT",
-      "ACTUSDT",
-      "ENSOUSDT",
       "IRYSUSDT",
-      "HOMEUSDT",
-      "MMTUSDT",
-      "OPGUSDT",
-      "CAPUSDT",
-      "LITUSDT",
-      "EDENUSDT",
-      "SUSHIUSDT",
-      "ATUSDT",
-      "BASEDUSDT",
-      "KITEUSDT",
-      "BABYUSDT",
       "RECALLUSDT",
-      "PEOPLEUSDT",
-      "ADAUSDT",
+      "EDENUSDT",
       "ZKPUSDT",
-      "EDGEUSDT",
-      "FLOWUSDT"
+      "RIVERUSDT",
+      "BSBUSDT",
+      "LITUSDT"
+    ],
+    "alt_watchlist": [
+      {
+        "symbol": "IRYSUSDT",
+        "actual_symbol": "IRYSUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 10.790378006872842,
+        "volume_ccy": 56002000.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "RECALLUSDT",
+        "actual_symbol": "RECALLUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 9.001014198782954,
+        "volume_ccy": 4518600.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "EDENUSDT",
+        "actual_symbol": "EDENUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 8.936503788868565,
+        "volume_ccy": 27559690.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ZKPUSDT",
+        "actual_symbol": "ZKPUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 8.091468777484614,
+        "volume_ccy": 7047200.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "RIVERUSDT",
+        "actual_symbol": "RIVERUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 34.01574803149606,
+        "volume_ccy": 13081012.1,
+        "trend_score": 3
+      },
+      {
+        "symbol": "BSBUSDT",
+        "actual_symbol": "BSBUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 24.719101123595504,
+        "volume_ccy": 63316380.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "LITUSDT",
+        "actual_symbol": "LITUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 10.569886571533118,
+        "volume_ccy": 10553065.0,
+        "trend_score": 3
+      }
+    ],
+    "alt_watchlist_at": "2026-08-07T09:58:52+08:00",
+    "alt_watchlist_count": 7,
+    "alt_watchlist_symbols": [
+      "IRYSUSDT",
+      "RECALLUSDT",
+      "EDENUSDT",
+      "ZKPUSDT",
+      "RIVERUSDT",
+      "BSBUSDT",
+      "LITUSDT"
+    ],
+    "active_scan_symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "IRYSUSDT",
+      "RECALLUSDT",
+      "EDENUSDT",
+      "ZKPUSDT",
+      "RIVERUSDT",
+      "BSBUSDT",
+      "LITUSDT"
     ]
   },
   "signals": {
