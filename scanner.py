@@ -198,6 +198,8 @@ def load_config() -> dict[str, Any]:
     cfg.setdefault("alt_short_impulse_age_max_bars_2h", 100)
     cfg.setdefault("alt_short_impulse_age_min_bars_4h", 6)
     cfg.setdefault("alt_short_impulse_age_max_bars_4h", 80)
+    cfg.setdefault("alt_vegas_breakout_close_atr", 0.20)
+    cfg.setdefault("alt_vegas_pullback_hold_atr", 0.10)
     cfg.setdefault("entry_trigger_atr_tolerance", 0.35)
     cfg.setdefault("ema52_retest_atr_tolerance", 0.55)
     cfg.setdefault("invalidation_atr_buffer", 0.18)
@@ -857,6 +859,71 @@ def alt_setup_above_vegas(setup_frame: dict[str, float], direction: str) -> bool
     if direction == "long":
         return setup_frame["close"] >= vegas_top - atr * 0.10
     return setup_frame["close"] <= vegas_bottom + atr * 0.10
+
+
+def alt_vegas_breakout_pullback_ok(
+    candles: list[Candle],
+    setup_frame: dict[str, float],
+    direction: str,
+    min_impulse_atr: float,
+    min_impulse_pct: float,
+    breakout_close_atr: float,
+    pullback_hold_atr: float,
+) -> bool:
+    completed = candles[:-1]
+    if len(completed) < 24 or setup_frame["atr"] <= 0:
+        return False
+
+    recent = completed[-72:]
+    if len(recent) < 20:
+        return False
+
+    atr = setup_frame["atr"]
+    vegas_top = max(setup_frame["ema52"], setup_frame["ema144"], setup_frame["ema169"])
+    vegas_bottom = min(setup_frame["ema52"], setup_frame["ema144"], setup_frame["ema169"])
+
+    if direction == "long":
+        breakout_idx = None
+        for i in range(1, len(recent)):
+            prev = recent[i - 1]
+            cur = recent[i]
+            if prev.close <= vegas_top and cur.close >= vegas_top + atr * breakout_close_atr:
+                breakout_idx = i
+        if breakout_idx is None:
+            return False
+        breakout_slice = recent[: breakout_idx + 1]
+        post_breakout = recent[breakout_idx:]
+        impulse_low = min(c.low for c in breakout_slice)
+        impulse_high = max(c.high for c in post_breakout)
+        impulse = impulse_high - impulse_low
+        impulse_pct = impulse / impulse_low * 100 if impulse_low > 0 else 0.0
+        if impulse <= atr * min_impulse_atr or impulse_pct < min_impulse_pct:
+            return False
+        pullback_slice = post_breakout[1:] if len(post_breakout) > 1 else post_breakout
+        pullback_low = min(c.low for c in pullback_slice)
+        pullback_close = post_breakout[-1].close
+        return pullback_low >= vegas_top - atr * pullback_hold_atr and pullback_close >= vegas_top - atr * pullback_hold_atr
+
+    breakout_idx = None
+    for i in range(1, len(recent)):
+        prev = recent[i - 1]
+        cur = recent[i]
+        if prev.close >= vegas_bottom and cur.close <= vegas_bottom - atr * breakout_close_atr:
+            breakout_idx = i
+    if breakout_idx is None:
+        return False
+    breakout_slice = recent[: breakout_idx + 1]
+    post_breakout = recent[breakout_idx:]
+    impulse_high = max(c.high for c in breakout_slice)
+    impulse_low = min(c.low for c in post_breakout)
+    impulse = impulse_high - impulse_low
+    impulse_pct = impulse / impulse_high * 100 if impulse_high > 0 else 0.0
+    if impulse <= atr * min_impulse_atr or impulse_pct < min_impulse_pct:
+        return False
+    pullback_slice = post_breakout[1:] if len(post_breakout) > 1 else post_breakout
+    pullback_high = max(c.high for c in pullback_slice)
+    pullback_close = post_breakout[-1].close
+    return pullback_high <= vegas_bottom + atr * pullback_hold_atr and pullback_close <= vegas_bottom + atr * pullback_hold_atr
 
 
 def bottom_box_setup(setup: dict[str, Any]) -> bool:
@@ -2017,6 +2084,16 @@ def evaluate_direction(
                     continue
                 if not background_impulse_ok(candle_map[setup_tf], "long", setup_frame["atr"], float(pb_cfg.get("min_impulse_atr", 1.35)), alt_impulse_pct):
                     continue
+                if not alt_vegas_breakout_pullback_ok(
+                    candle_map[setup_tf],
+                    setup_frame,
+                    "long",
+                    float(pb_cfg.get("min_impulse_atr", 1.35)),
+                    alt_impulse_pct,
+                    float(pb_cfg.get("alt_vegas_breakout_close_atr", 0.20)),
+                    float(pb_cfg.get("alt_vegas_pullback_hold_atr", 0.10)),
+                ):
+                    continue
                 if not alt_setup_above_vegas(setup_frame, "long"):
                     continue
             if direction == "short" and setup_tf in {"2h", "4h"}:
@@ -2026,6 +2103,16 @@ def evaluate_direction(
                 if not recent_impulse_age_ok(candle_map[setup_tf], "short", age_min, age_max):
                     continue
                 if not background_impulse_ok(candle_map[setup_tf], "short", setup_frame["atr"], float(pb_cfg.get("min_impulse_atr", 1.35)), alt_impulse_pct):
+                    continue
+                if not alt_vegas_breakout_pullback_ok(
+                    candle_map[setup_tf],
+                    setup_frame,
+                    "short",
+                    float(pb_cfg.get("min_impulse_atr", 1.35)),
+                    alt_impulse_pct,
+                    float(pb_cfg.get("alt_vegas_breakout_close_atr", 0.20)),
+                    float(pb_cfg.get("alt_vegas_pullback_hold_atr", 0.10)),
+                ):
                     continue
                 if not alt_setup_above_vegas(setup_frame, "short"):
                     continue
