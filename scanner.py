@@ -183,6 +183,13 @@ def load_config() -> dict[str, Any]:
     cfg.setdefault("min_impulse_atr", 1.35)
     cfg.setdefault("background_impulse_min_pct", 3.0)
     cfg.setdefault("alt_background_impulse_min_pct", 5.0)
+    cfg.setdefault("alt_watchlist_enabled", True)
+    cfg.setdefault("alt_watchlist_scan_only", True)
+    cfg.setdefault("alt_watchlist_max_symbols", 8)
+    cfg.setdefault("alt_watchlist_seed_limit", 20)
+    cfg.setdefault("alt_watchlist_refresh_minutes", 1440)
+    cfg.setdefault("alt_watchlist_min_change_pct", 4.0)
+    cfg.setdefault("alt_watchlist_min_volume_ccy", 300000.0)
     cfg.setdefault("alt_long_impulse_age_min_bars_2h", 12)
     cfg.setdefault("alt_long_impulse_age_max_bars_2h", 100)
     cfg.setdefault("alt_long_impulse_age_min_bars_4h", 6)
@@ -432,12 +439,22 @@ def okx_volume_ccy(row: dict[str, Any]) -> float:
 
 
 def discover_okx_symbols(config: dict[str, Any]) -> list[str]:
+    return [symbol for symbol, _, _ in discover_okx_candidates(config)]
+
+
+def discover_okx_candidates(
+    config: dict[str, Any],
+    *,
+    max_symbols: int | None = None,
+    min_change: float | None = None,
+    min_volume: float | None = None,
+) -> list[tuple[str, float, float]]:
     crypto_cfg = config["crypto"]
     if not crypto_cfg.get("okx_discovery_enabled", True):
         return []
-    max_symbols = int(crypto_cfg.get("okx_discovery_max_symbols", 30))
-    min_change = float(crypto_cfg.get("okx_discovery_min_change_pct", 2.0))
-    min_volume = float(crypto_cfg.get("okx_discovery_min_volume_ccy", 300000.0))
+    max_symbols = int(max_symbols if max_symbols is not None else crypto_cfg.get("okx_discovery_max_symbols", 30))
+    min_change = float(min_change if min_change is not None else crypto_cfg.get("okx_discovery_min_change_pct", 2.0))
+    min_volume = float(min_volume if min_volume is not None else crypto_cfg.get("okx_discovery_min_volume_ccy", 300000.0))
     try:
         rows = okx_24h_tickers()
     except Exception as exc:  # noqa: BLE001
@@ -453,7 +470,7 @@ def discover_okx_symbols(config: dict[str, Any]) -> list[str]:
         if item[1] >= min_change and item[2] >= min_volume and item[0] not in {"BTCUSDT", "ETHUSDT"}
     ]
     candidates.sort(key=lambda item: (item[1], item[2]), reverse=True)
-    return [symbol for symbol, _, _ in candidates[:max_symbols]]
+    return candidates[:max_symbols]
 
 
 def merge_symbols(primary: list[str], discovered: list[str]) -> list[str]:
@@ -465,6 +482,142 @@ def merge_symbols(primary: list[str], discovered: list[str]) -> list[str]:
         seen.add(symbol)
         out.append(symbol)
     return out
+
+
+def alt_watchlist_side_scores(
+    bundle: dict[str, dict[str, float]],
+    candle_map: dict[str, list[Candle]],
+    pb_cfg: dict[str, Any],
+) -> tuple[int, int]:
+    long_score = local_direction_score(bundle, "long")
+    short_score = local_direction_score(bundle, "short")
+    for tf in ("2h", "4h"):
+        frame = bundle.get(tf)
+        candles = candle_map.get(tf, [])
+        if not frame or not candles:
+            continue
+        atr = frame["atr"]
+        if tf == "2h":
+            long_age_min = int(pb_cfg.get("alt_long_impulse_age_min_bars_2h", 12))
+            long_age_max = int(pb_cfg.get("alt_long_impulse_age_max_bars_2h", 100))
+            short_age_min = int(pb_cfg.get("alt_short_impulse_age_min_bars_2h", 12))
+            short_age_max = int(pb_cfg.get("alt_short_impulse_age_max_bars_2h", 100))
+        else:
+            long_age_min = int(pb_cfg.get("alt_long_impulse_age_min_bars_4h", 6))
+            long_age_max = int(pb_cfg.get("alt_long_impulse_age_max_bars_4h", 80))
+            short_age_min = int(pb_cfg.get("alt_short_impulse_age_min_bars_4h", 6))
+            short_age_max = int(pb_cfg.get("alt_short_impulse_age_max_bars_4h", 80))
+
+        long_ok = (
+            recent_impulse_age_ok(candles, "long", long_age_min, long_age_max)
+            and background_impulse_ok(
+                candles,
+                "long",
+                atr,
+                float(pb_cfg.get("min_impulse_atr", 1.35)),
+                float(pb_cfg.get("alt_background_impulse_min_pct", 5.0)),
+            )
+            and alt_setup_above_vegas(frame, "long")
+        )
+        short_ok = (
+            recent_impulse_age_ok(candles, "short", short_age_min, short_age_max)
+            and background_impulse_ok(
+                candles,
+                "short",
+                atr,
+                float(pb_cfg.get("min_impulse_atr", 1.35)),
+                float(pb_cfg.get("alt_background_impulse_min_pct", 5.0)),
+            )
+            and alt_setup_above_vegas(frame, "short")
+        )
+        if long_ok:
+            long_score += 2
+        if short_ok:
+            short_score += 2
+    return long_score, short_score
+
+
+def refresh_alt_watchlist(
+    config: dict[str, Any],
+    state: dict[str, Any],
+    get_bundle: Any,
+    symbol_map: dict[str, str],
+) -> list[str]:
+    crypto_cfg = config["crypto"]
+    if not crypto_cfg.get("alt_watchlist_enabled", True):
+        state.setdefault("meta", {})["alt_watchlist"] = []
+        state["meta"]["alt_watchlist_at"] = now_iso()
+        return []
+
+    refresh_minutes = int(crypto_cfg.get("alt_watchlist_refresh_minutes", 1440))
+    max_symbols = int(crypto_cfg.get("alt_watchlist_max_symbols", 8))
+    seed_limit = int(crypto_cfg.get("alt_watchlist_seed_limit", 20))
+    meta = state.setdefault("meta", {})
+    last_at_raw = meta.get("alt_watchlist_at")
+    if last_at_raw:
+        try:
+            last_at = datetime.fromisoformat(str(last_at_raw))
+            if datetime.now(CN_TZ) - last_at < timedelta(minutes=refresh_minutes):
+                cached = meta.get("alt_watchlist") or []
+                if cached:
+                    return [str(item["symbol"]) for item in cached if item.get("symbol")]
+        except Exception:
+            pass
+
+    pb_cfg = config["trend_pullback"]
+    raw_candidates = discover_okx_candidates(
+        config,
+        max_symbols=seed_limit,
+        min_change=float(crypto_cfg.get("alt_watchlist_min_change_pct", crypto_cfg.get("okx_discovery_min_change_pct", 2.0))),
+        min_volume=float(crypto_cfg.get("alt_watchlist_min_volume_ccy", crypto_cfg.get("okx_discovery_min_volume_ccy", 300000.0))),
+    )
+    scored: list[dict[str, Any]] = []
+    for display_symbol, change_pct, volume_ccy in raw_candidates:
+        actual_symbol = symbol_map.get(display_symbol, display_symbol)
+        try:
+            bundle, candle_map = get_bundle(actual_symbol)
+        except Exception as exc:  # noqa: BLE001
+            print(f"skip watchlist {display_symbol}: {exc}", file=sys.stderr)
+            continue
+        long_score, short_score = alt_watchlist_side_scores(bundle, candle_map, pb_cfg)
+        if long_score < 3 and short_score < 3:
+            continue
+        if long_score >= short_score:
+            side = "long"
+            side_score = long_score
+        else:
+            side = "short"
+            side_score = short_score
+        if side == "long" and bundle["4h"]["close"] < bundle["4h"]["ema52"] and bundle["2h"]["close"] < bundle["2h"]["ema52"]:
+            continue
+        if side == "short" and bundle["4h"]["close"] > bundle["4h"]["ema52"] and bundle["2h"]["close"] > bundle["2h"]["ema52"]:
+            continue
+        scored.append(
+            {
+                "symbol": display_symbol,
+                "actual_symbol": actual_symbol,
+                "side": side,
+                "side_score": side_score,
+                "change_pct": change_pct,
+                "volume_ccy": volume_ccy,
+                "trend_score": max(long_score, short_score),
+            }
+        )
+
+    scored.sort(
+        key=lambda item: (
+            item["trend_score"],
+            item["change_pct"],
+            item["volume_ccy"],
+        ),
+        reverse=True,
+    )
+    watchlist = scored[:max_symbols]
+    meta["alt_watchlist"] = watchlist
+    meta["alt_watchlist_at"] = now_iso()
+    meta["alt_watchlist_count"] = len(watchlist)
+    meta["alt_watchlist_symbols"] = [item["symbol"] for item in watchlist]
+    return [item["symbol"] for item in watchlist]
 
 
 def fetch_bundle(actual_symbol: str) -> tuple[dict[str, dict[str, float]], dict[str, list[Candle]]]:
@@ -2142,8 +2295,6 @@ def scan_crypto(config: dict[str, Any], state: dict[str, Any]) -> list[Signal]:
     if not config["crypto"].get("enabled", True):
         return []
     base_symbols = list(config["crypto"].get("symbols", DEFAULT_SYMBOLS))
-    discovered_symbols = discover_okx_symbols(config)
-    symbols = merge_symbols(base_symbols, discovered_symbols)
     symbol_map = dict(config["crypto"].get("symbol_map", SYMBOL_MAP))
     bundle_cache: dict[str, tuple[dict[str, dict[str, float]], dict[str, list[Candle]]]] = {}
 
@@ -2156,8 +2307,27 @@ def scan_crypto(config: dict[str, Any], state: dict[str, Any]) -> list[Signal]:
     eth_bundle, _ = get("ETHUSDT")
     market_state = detect_market_state(btc_bundle, eth_bundle)
     state.setdefault("meta", {})["last_market_state"] = market_state
-    state["meta"]["last_okx_discovery_count"] = len(discovered_symbols)
-    state["meta"]["last_okx_discovery_symbols"] = discovered_symbols
+
+    alt_watchlist_enabled = bool(config["crypto"].get("alt_watchlist_enabled", True))
+    alt_watchlist_scan_only = bool(config["crypto"].get("alt_watchlist_scan_only", True))
+    watchlist_symbols = refresh_alt_watchlist(config, state, get, symbol_map) if alt_watchlist_enabled else []
+    if alt_watchlist_enabled:
+        state["meta"]["last_okx_discovery_count"] = len(watchlist_symbols)
+        state["meta"]["last_okx_discovery_symbols"] = watchlist_symbols
+    core_symbols = [BTC_SYMBOL, PRIMARY_SYMBOL]
+    if alt_watchlist_enabled and watchlist_symbols:
+        symbols = merge_symbols(core_symbols, watchlist_symbols)
+    elif alt_watchlist_scan_only:
+        symbols = merge_symbols(core_symbols, base_symbols)
+        state["meta"]["last_okx_discovery_count"] = 0
+        state["meta"]["last_okx_discovery_symbols"] = []
+    else:
+        discovered_symbols = discover_okx_symbols(config)
+        symbols = merge_symbols(base_symbols, discovered_symbols)
+        state["meta"]["last_okx_discovery_count"] = len(discovered_symbols)
+        state["meta"]["last_okx_discovery_symbols"] = discovered_symbols
+
+    state["meta"]["active_scan_symbols"] = symbols
 
     signals: list[Signal] = []
     for display_symbol in symbols:
