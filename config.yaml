@@ -36,6 +36,13 @@ crypto:
   okx_discovery_max_symbols: 30
   okx_discovery_min_change_pct: 2.0
   okx_discovery_min_volume_ccy: 300000.0
+  alt_watchlist_enabled: true
+  alt_watchlist_scan_only: true
+  alt_watchlist_max_symbols: 8
+  alt_watchlist_seed_limit: 20
+  alt_watchlist_refresh_minutes: 1440
+  alt_watchlist_min_change_pct: 4.0
+  alt_watchlist_min_volume_ccy: 300000.0
   symbols:
     - FARTCOINUSDT
     - UNIUSDT
