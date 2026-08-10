@@ -119,11 +119,39 @@ class Signal:
 
     @property
     def family_key(self) -> str:
-        return f"{self.model_name}:{self.symbol}:{self.direction}"
+        return continuation_family_key(self)
 
 
 def now_iso() -> str:
     return datetime.now(CN_TZ).isoformat(timespec="seconds")
+
+
+def _price_episode_bucket(price: float, step_pct: float = 0.0125) -> str:
+    if price <= 0 or not math.isfinite(price):
+        return "0"
+    step_pct = max(0.0025, min(step_pct, 0.05))
+    base = math.log1p(step_pct)
+    if base <= 0:
+        return "0"
+    return str(int(math.floor(math.log(price) / base)))
+
+
+def continuation_family_key(sig: Signal) -> str:
+    entry_mid = (sig.entry_low + sig.entry_high) / 2.0
+    invalid_mid = sig.invalid
+    return ":".join(
+        [
+            sig.model_name,
+            sig.symbol,
+            sig.direction,
+            sig.setup_tf,
+            sig.trigger_tf,
+            sig.setup_kind,
+            sig.trigger_name,
+            _price_episode_bucket(entry_mid),
+            _price_episode_bucket(invalid_mid),
+        ]
+    )
 
 
 def http_json(url: str, retries: int = 3) -> Any:
@@ -896,8 +924,61 @@ def alt_setup_above_vegas(setup_frame: dict[str, float], direction: str) -> bool
     vegas_bottom = min(setup_frame["ema52"], setup_frame["ema144"], setup_frame["ema169"])
     atr = setup_frame["atr"]
     if direction == "long":
-        return setup_frame["close"] >= vegas_top - atr * 0.10
-    return setup_frame["close"] <= vegas_bottom + atr * 0.10
+        return setup_frame["close"] >= vegas_top + atr * 0.03
+    return setup_frame["close"] <= vegas_bottom - atr * 0.03
+
+
+def alt_vegas_anchor_timeframes(setup_tf: str) -> tuple[str, ...]:
+    if setup_tf in {"2h", "4h"}:
+        return (setup_tf,)
+    if setup_tf in {"1h", "15m"}:
+        return ("2h", "4h")
+    return ()
+
+
+def alt_vegas_context_ok(
+    candle_map: dict[str, list[Candle]],
+    setup_tf: str,
+    direction: str,
+    cfg: dict[str, Any],
+) -> bool:
+    candidate_tfs = alt_vegas_anchor_timeframes(setup_tf)
+    if not candidate_tfs:
+        return False
+
+    min_impulse_atr = float(cfg.get("min_impulse_atr", 1.35))
+    alt_impulse_pct = float(cfg.get("alt_background_impulse_min_pct", 5.0))
+    breakout_close_atr = max(float(cfg.get("alt_vegas_breakout_close_atr", 0.20)), 0.25)
+    pullback_hold_atr = min(float(cfg.get("alt_vegas_pullback_hold_atr", 0.10)), 0.03)
+
+    for tf in candidate_tfs:
+        candles = candle_map.get(tf)
+        if not candles:
+            continue
+        setup_frame = summarize(candles)
+        if setup_frame["atr"] <= 0:
+            continue
+        if tf in {"2h", "4h"}:
+            age_min = int(cfg.get(f"alt_{direction}_impulse_age_min_bars_{tf}", 12 if tf == "2h" else 6))
+            age_max = int(cfg.get(f"alt_{direction}_impulse_age_max_bars_{tf}", 100 if tf == "2h" else 80))
+            if not recent_impulse_age_ok(candles, direction, age_min, age_max):
+                continue
+        if not background_impulse_ok(candles, direction, setup_frame["atr"], min_impulse_atr, alt_impulse_pct):
+            continue
+        if not alt_vegas_breakout_pullback_ok(
+            candles,
+            setup_frame,
+            direction,
+            min_impulse_atr,
+            alt_impulse_pct,
+            breakout_close_atr,
+            pullback_hold_atr,
+        ):
+            continue
+        if not alt_setup_above_vegas(setup_frame, direction):
+            continue
+        return True
+    return False
 
 
 def alt_vegas_breakout_pullback_ok(
@@ -920,13 +1001,15 @@ def alt_vegas_breakout_pullback_ok(
     atr = setup_frame["atr"]
     vegas_top = max(setup_frame["ema52"], setup_frame["ema144"], setup_frame["ema169"])
     vegas_bottom = min(setup_frame["ema52"], setup_frame["ema144"], setup_frame["ema169"])
+    breakout_close_atr = max(breakout_close_atr, 0.25)
+    pullback_hold_atr = min(pullback_hold_atr, 0.03)
 
     if direction == "long":
         breakout_idx = None
         for i in range(1, len(recent)):
             prev = recent[i - 1]
             cur = recent[i]
-            if prev.close <= vegas_top and cur.close >= vegas_top + atr * breakout_close_atr:
+            if prev.close <= vegas_top and cur.close >= vegas_top + atr * breakout_close_atr and cur.low >= vegas_top - atr * 0.03:
                 breakout_idx = i
         if breakout_idx is None:
             return False
@@ -941,13 +1024,13 @@ def alt_vegas_breakout_pullback_ok(
         pullback_slice = post_breakout[1:] if len(post_breakout) > 1 else post_breakout
         pullback_low = min(c.low for c in pullback_slice)
         pullback_close = post_breakout[-1].close
-        return pullback_low >= vegas_top - atr * pullback_hold_atr and pullback_close >= vegas_top - atr * pullback_hold_atr
+        return pullback_low >= vegas_top - atr * pullback_hold_atr and pullback_close >= vegas_top + atr * 0.01
 
     breakout_idx = None
     for i in range(1, len(recent)):
         prev = recent[i - 1]
         cur = recent[i]
-        if prev.close >= vegas_bottom and cur.close <= vegas_bottom - atr * breakout_close_atr:
+        if prev.close >= vegas_bottom and cur.close <= vegas_bottom - atr * breakout_close_atr and cur.high <= vegas_bottom + atr * 0.03:
             breakout_idx = i
     if breakout_idx is None:
         return False
@@ -962,7 +1045,7 @@ def alt_vegas_breakout_pullback_ok(
     pullback_slice = post_breakout[1:] if len(post_breakout) > 1 else post_breakout
     pullback_high = max(c.high for c in pullback_slice)
     pullback_close = post_breakout[-1].close
-    return pullback_high <= vegas_bottom + atr * pullback_hold_atr and pullback_close <= vegas_bottom + atr * pullback_hold_atr
+    return pullback_high <= vegas_bottom + atr * pullback_hold_atr and pullback_close <= vegas_bottom - atr * 0.01
 
 
 def bottom_box_setup(setup: dict[str, Any]) -> bool:
@@ -2123,6 +2206,12 @@ def evaluate_direction(
                 continue
             setup_frame = bundle.get(setup_tf)
             if not setup_frame:
+                continue
+            # Alt plays now require a valid Vegas-channel impulse/pullback context on the
+            # anchor timeframe(s). This blocks early alerts that never truly broke and held
+            # the channel, especially when the setup is on 1h/15m but the real impulse is
+            # expected from 2h/4h.
+            if not alt_vegas_context_ok(candle_map, setup_tf, direction, pb_cfg):
                 continue
             if direction == "long" and setup_tf in {"2h", "4h"}:
                 alt_impulse_pct = float(pb_cfg.get("alt_background_impulse_min_pct", 5.0))
