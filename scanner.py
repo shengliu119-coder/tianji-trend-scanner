@@ -75,10 +75,10 @@ PRIMARY_SYMBOL = "ETHUSDT"
 BTC_SYMBOL = "BTCUSDT"
 
 SETUP_PATHS = {
-    "15m": {"trigger": "15m", "higher": ["1h", "2h", "4h"]},
-    "1h": {"trigger": "15m", "higher": ["2h", "4h"]},
-    "2h": {"trigger": "15m", "higher": ["4h"]},
-    "4h": {"trigger": "15m", "higher": ["1d"]},
+    "15m": {"triggers": ["15m", "30m"], "higher": ["1h", "2h", "4h"]},
+    "1h": {"triggers": ["30m", "15m"], "higher": ["2h", "4h"]},
+    "2h": {"triggers": ["30m", "15m"], "higher": ["4h"]},
+    "4h": {"triggers": ["30m", "15m"], "higher": ["1d"]},
 }
 
 
@@ -187,7 +187,7 @@ def load_config() -> dict[str, Any]:
     cfg.setdefault("alt_watchlist_scan_only", True)
     cfg.setdefault("alt_watchlist_max_symbols", 8)
     cfg.setdefault("alt_watchlist_seed_limit", 20)
-    cfg.setdefault("alt_watchlist_refresh_minutes", 1440)
+    cfg.setdefault("alt_watchlist_refresh_minutes", 60)
     cfg.setdefault("alt_watchlist_min_change_pct", 4.0)
     cfg.setdefault("alt_watchlist_min_volume_ccy", 300000.0)
     cfg.setdefault("alt_long_impulse_age_min_bars_2h", 12)
@@ -355,6 +355,7 @@ def okx_inst_id(symbol: str) -> str:
 def okx_bar(interval: str) -> str:
     return {
         "15m": "15m",
+        "30m": "30m",
         "1h": "1H",
         "2h": "2H",
         "4h": "4H",
@@ -551,7 +552,7 @@ def refresh_alt_watchlist(
         state["meta"]["alt_watchlist_at"] = now_iso()
         return []
 
-    refresh_minutes = int(crypto_cfg.get("alt_watchlist_refresh_minutes", 1440))
+    refresh_minutes = int(crypto_cfg.get("alt_watchlist_refresh_minutes", 60))
     max_symbols = int(crypto_cfg.get("alt_watchlist_max_symbols", 8))
     seed_limit = int(crypto_cfg.get("alt_watchlist_seed_limit", 20))
     meta = state.setdefault("meta", {})
@@ -623,8 +624,18 @@ def refresh_alt_watchlist(
 
 
 def fetch_bundle(actual_symbol: str) -> tuple[dict[str, dict[str, float]], dict[str, list[Candle]]]:
-    candle_map = {tf: crypto_klines(actual_symbol, tf, 240) for tf in ["15m", "1h", "2h", "4h", "1d"]}
+    candle_map = {tf: crypto_klines(actual_symbol, tf, 240) for tf in ["15m", "30m", "1h", "2h", "4h", "1d"]}
     return {tf: summarize(candles) for tf, candles in candle_map.items()}, candle_map
+
+
+def trigger_timeframes_for_setup(setup_tf: str) -> list[str]:
+    path_cfg = SETUP_PATHS.get(setup_tf, {})
+    triggers = path_cfg.get("triggers")
+    if isinstance(triggers, list) and triggers:
+        return [str(tf) for tf in triggers]
+    if isinstance(triggers, tuple) and triggers:
+        return [str(tf) for tf in triggers]
+    return ["15m"]
 
 
 def market_bias(frame: dict[str, float], direction: str) -> str:
@@ -788,15 +799,42 @@ def two_hour_a_allowed(
 
 
 def alt_small_tf_long_reversal(bundle: dict[str, dict[str, float]]) -> bool:
-    for tf in ("15m", "1h"):
+    for tf in ("30m", "15m", "1h"):
         frame = bundle.get(tf)
         if not frame:
             continue
+        ema24 = frame["ema24"]
+        ema52 = frame["ema52"]
+        band_low = min(ema24, ema52)
+        band_high = max(ema24, ema52)
+        band_tolerance = frame["atr"] * 0.10
         if (
-            frame["close"] >= frame["ema24"] >= frame["ema52"]
+            frame["close"] >= band_low - band_tolerance
+            and frame["close"] <= band_high + band_tolerance * 1.5
             and frame["dif"] >= frame["dea"] - frame["atr"] * 0.02
             and frame["hist"] >= frame["hist_prev"]
             and frame["rsi"] >= 45
+        ):
+            return True
+    return False
+
+
+def alt_small_tf_short_reversal(bundle: dict[str, dict[str, float]]) -> bool:
+    for tf in ("30m", "15m", "1h"):
+        frame = bundle.get(tf)
+        if not frame:
+            continue
+        ema24 = frame["ema24"]
+        ema52 = frame["ema52"]
+        band_low = min(ema24, ema52)
+        band_high = max(ema24, ema52)
+        band_tolerance = frame["atr"] * 0.10
+        if (
+            frame["close"] <= band_high + band_tolerance
+            and frame["close"] >= band_low - band_tolerance * 1.5
+            and frame["dif"] <= frame["dea"] + frame["atr"] * 0.02
+            and frame["hist"] <= frame["hist_prev"]
+            and frame["rsi"] <= 55
         ):
             return True
     return False
@@ -849,7 +887,8 @@ def alt_short_confirmed(bundle: dict[str, dict[str, float]], setup: dict[str, An
         ),
     )
     local_short = local_direction_score(bundle, "short") >= 2
-    return pressure_retest and local_short
+    small_tf_short = alt_small_tf_short_reversal(bundle)
+    return pressure_retest and local_short and small_tf_short
 
 
 def alt_setup_above_vegas(setup_frame: dict[str, float], direction: str) -> bool:
@@ -2053,12 +2092,21 @@ def evaluate_direction(
             trigger_tf = setup_tf
             trigger = dict(direct_trigger)
         else:
-            trigger_tf = str(path_cfg["trigger"])
-            trigger = detect_trigger(candle_map[trigger_tf], direction, float(pb_cfg["entry_trigger_atr_tolerance"]))
-            if not trigger and bool(setup.get("neckline_retest")) and trigger_tf == "15m":
-                vegas_setup = find_vegas_zero_axis_ignition_setup(candle_map[trigger_tf], direction, pb_cfg)
-                if vegas_setup:
-                    trigger = dict(vegas_setup["direct_trigger"])
+            trigger_tf = ""
+            trigger = None
+            for candidate_tf in trigger_timeframes_for_setup(setup_tf):
+                candidate_candles = candle_map.get(candidate_tf, [])
+                if not candidate_candles:
+                    continue
+                candidate = detect_trigger(candidate_candles, direction, float(pb_cfg["entry_trigger_atr_tolerance"]))
+                if not candidate and bool(setup.get("neckline_retest")) and candidate_tf in {"15m", "30m"}:
+                    vegas_setup = find_vegas_zero_axis_ignition_setup(candidate_candles, direction, pb_cfg)
+                    if vegas_setup:
+                        candidate = dict(vegas_setup["direct_trigger"])
+                if candidate:
+                    trigger_tf = candidate_tf
+                    trigger = candidate
+                    break
         if not trigger:
             continue
         if trigger_tf != "15m" and str(trigger["name"]).startswith("15m"):
