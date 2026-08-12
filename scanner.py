@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 import math
@@ -197,8 +197,9 @@ def load_config() -> dict[str, Any]:
     config["scan"].setdefault("performance_file", "state/performance.json")
     config["scan"].setdefault("performance_report", "reports/performance.md")
     config["scan"].setdefault("min_rr", 3.0)
-    config["scan"].setdefault("max_distance_to_entry_pct", 2.0)
+    config["scan"].setdefault("max_distance_to_entry_pct", 1.2)
     config["scan"].setdefault("expiry_hours", 12)
+    config["scan"].setdefault("push_only_grade_a", True)
     config["crypto"].setdefault("enabled", True)
     config["crypto"].setdefault("symbols", DEFAULT_SYMBOLS)
     config["crypto"].setdefault("symbol_map", SYMBOL_MAP)
@@ -2477,9 +2478,22 @@ def render_signal_message_v2(sig: Signal, event: str = "push") -> str:
             f"\u5165\u573a\u533a\uff1a{sig.entry_low:.6g}-{sig.entry_high:.6g}",
             f"\u5931\u6548\u4f4d\uff1a{sig.invalid:.6g}",
             f"\u76ee\u68071\uff1a{sig.target1:.6g}",
+            f"\u76ee\u68072\uff1a{sig.target2:.6g}",
+            "\u98ce\u9669\uff1a\u5355\u7b14\u98ce\u9669\u63a7\u5236\u57281%\u4ee5\u5185\uff0c2R\u5148\u51cf\u4ed3\uff0c3R\u770b\u5269\u4f59",
             "",
             f"\u539f\u56e0\uff1a{sig.reason}",
             f"\u5904\u7406\uff1a{sig.action}",
+        ]
+    )
+
+
+def render_playbook_note() -> str:
+    return "\n".join(
+        [
+            "\u64cd\u4f5c\u7ea2\u7ebf\uff1a\u53ea\u64cd\u4f5a\u7ea7\u673a\u4f1a\uff0c\u4e0d\u8ffd\u5355\u3001\u4e0d\u5957\u4ef7",
+            "\u5165\u573a\u5148\u770b\u5931\u6548\u4f4d\uff0c\u540e\u770b\u76ee\u68071/\u76ee\u68072",
+            "\u5355\u7b14\u98ce\u9669\u63a7\u5236\u57281%\u4ee5\u5185\uff0c\u4e25\u683c\u5206\u6279\u6267\u884c",
+            "2R\u5148\u51cf\u4ed3\uff0c3R\u770b\u5269\u4f59",
         ]
     )
 
@@ -2604,7 +2618,7 @@ def main() -> int:
 
     pushed = 0
     for sig in candidates:
-        if sig.grade != "A" and not (sig.grade == "B" and sig.status in {"\u5165\u573a\u533a\u5185", "\u63a5\u8fd1\u5165\u573a"}):
+        if bool(config["scan"].get("push_only_grade_a", True)) and sig.grade != "A":
             continue
         ok, veto_reason = push_self_check(sig)
         if not ok:
@@ -2614,7 +2628,7 @@ def main() -> int:
             continue
         state["signals"][sig.family_key] = asdict(sig)
         append_jsonl(config["scan"]["trade_ledger_file"], asdict(sig))
-        feishu_send(config, render_signal_message_v2(sig))
+        feishu_send(config, "\n\n".join([render_signal_message_v2(sig), render_playbook_note()]))
         pushed += 1
         if pushed >= 3:
             break
