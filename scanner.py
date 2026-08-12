@@ -781,6 +781,10 @@ def macd_standalone_trigger(trigger_name: str) -> bool:
     return "MACD" in trigger_name
 
 
+def continuation_setup(setup: dict[str, Any]) -> bool:
+    return str(setup.get("kind", "")) in {"趋势回踩", "反弹承压"}
+
+
 def pressure_short_trigger(trigger_name: str) -> bool:
     return has_any(
         trigger_name,
@@ -814,6 +818,10 @@ def two_hour_a_allowed(
     gap: float,
     score: int,
 ) -> bool:
+    if continuation_setup(setup):
+        if gap > 1.0 or score < 86:
+            return False
+        return local_direction_score(bundle, direction) >= 2
     if direction == "long" and bool(setup.get("zero_axis_ignition")):
         return gap <= 0.8 and score >= 90 and local_direction_score(bundle, direction) >= 2
     if macd_standalone_trigger(trigger_name):
@@ -1076,6 +1084,11 @@ def local_countertrend_veto(bundle: dict[str, dict[str, float]], direction: str)
 
 
 def alt_stage_allows_a(setup_tf: str, setup: dict[str, Any], bundle: dict[str, dict[str, float]], direction: str) -> bool:
+    if continuation_setup(setup):
+        if direction == "long" and setup_tf in {"1h", "2h", "4h"}:
+            return local_direction_score(bundle, "long") >= 2 if setup_tf == "1h" else local_direction_score(bundle, "long") >= 1
+        if direction == "short" and setup_tf in {"1h", "2h", "4h"}:
+            return local_direction_score(bundle, "short") >= 2 if setup_tf == "1h" else local_direction_score(bundle, "short") >= 1
     if direction == "long" and bool(setup.get("zero_axis_ignition")):
         if setup_tf in {"2h", "4h"}:
             return local_direction_score(bundle, "long") >= 1
@@ -2395,6 +2408,8 @@ def signal_priority(sig: Signal) -> tuple[int, int, float]:
         return (0, -sig.score, -sig.rr)
     if is_alt(sig.symbol) and has_any(sig.setup_kind, ("\u7bb1\u4f53", "\u76d8\u6574\u7bb1\u4f53", "box")):
         return (1, -sig.score, -sig.rr)
+    if is_alt(sig.symbol) and has_any(sig.setup_kind, ("趋势回踩", "反弹承压")):
+        return (1, -sig.score, -sig.rr)
     if is_alt(sig.symbol):
         return (2, -sig.score, -sig.rr)
     if is_btc(sig.symbol):
@@ -2467,8 +2482,9 @@ def signal_icon_v2(sig: Signal) -> str:
 
 
 def render_signal_message_v2(sig: Signal, event: str = "push") -> str:
+    continuation = "，顺势加仓/浮云加仓" if has_any(sig.setup_kind, ("趋势回踩", "反弹承压")) else ""
     suffix = "\u53ef\u6267\u884c" if sig.grade == "A" else "\u89c2\u5bdf\uff0c\u4e0d\u8ffd\u5355"
-    title = f"\u8d8b\u52bf\u673a\u4f1a\uff5c{sig.symbol}\uff5c{sig.direction}{suffix}"
+    title = f"\u8d8b\u52bf\u673a\u4f1a\uff5c{sig.symbol}\uff5c{sig.direction}{suffix}{continuation}"
     return "\n".join(
         [
             title,
@@ -2480,6 +2496,7 @@ def render_signal_message_v2(sig: Signal, event: str = "push") -> str:
             f"\u76ee\u68071\uff1a{sig.target1:.6g}",
             f"\u76ee\u68072\uff1a{sig.target2:.6g}",
             "\u98ce\u9669\uff1a\u5355\u7b14\u98ce\u9669\u63a7\u5236\u57281%\u4ee5\u5185\uff0c2R\u5148\u51cf\u4ed3\uff0c3R\u770b\u5269\u4f59",
+            "\u7c7b\u578b\uff1a" + ("\u5f3a\u8d8b\u52bf\u4e2d\u7ee7\u56de\u8e29" if has_any(sig.setup_kind, ("趋势回踩", "反弹承压")) else "\u9996\u6b21\u8d77\u7206/\u56de\u8e29"),
             "",
             f"\u539f\u56e0\uff1a{sig.reason}",
             f"\u5904\u7406\uff1a{sig.action}",
