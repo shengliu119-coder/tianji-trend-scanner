@@ -8,54 +8,52 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-13T16:09:47+08:00",
+    "last_scan_at": "2026-08-13T17:35:12+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "BOMEUSDT",
-      "PUMPUSDT",
-      "PIEVERSEUSDT",
-      "ONEUSDT",
+      "HOMEUSDT",
+      "ESPUSDT",
+      "BARDUSDT",
+      "TRIAUSDT",
       "AVNTUSDT",
-      "NOTUSDT",
-      "UPUSDT",
-      "ROBOUSDT"
+      "NOTUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "BOMEUSDT",
-        "actual_symbol": "BOMEUSDT",
+        "symbol": "HOMEUSDT",
+        "actual_symbol": "HOMEUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 9.769691870859178,
+        "volume_ccy": 2658398500.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "ESPUSDT",
+        "actual_symbol": "ESPUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 8.807102964341977,
+        "volume_ccy": 84316000.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "BARDUSDT",
+        "actual_symbol": "BARDUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.326128907757627,
-        "volume_ccy": 14575694000.0,
+        "change_pct": 6.204379562043796,
+        "volume_ccy": 15461900.0,
         "trend_score": 5
       },
       {
-        "symbol": "PUMPUSDT",
-        "actual_symbol": "PUMPUSDT",
+        "symbol": "TRIAUSDT",
+        "actual_symbol": "TRIAUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 4.964272282813095,
-        "volume_ccy": 23705082000.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "PIEVERSEUSDT",
-        "actual_symbol": "PIEVERSEUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 4.905300449652546,
-        "volume_ccy": 2893780.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "ONEUSDT",
-        "actual_symbol": "ONEUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 4.527296937416772,
-        "volume_ccy": 15411773600.0,
+        "change_pct": 4.346233671102434,
+        "volume_ccy": 42822500.0,
         "trend_score": 5
       },
       {
@@ -63,8 +61,8 @@
         "actual_symbol": "AVNTUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 7.144417740878309,
-        "volume_ccy": 19842931.0,
+        "change_pct": 9.263066767665833,
+        "volume_ccy": 33034664.0,
         "trend_score": 3
       },
       {
@@ -72,52 +70,30 @@
         "actual_symbol": "NOTUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 6.157704095848424,
-        "volume_ccy": 3456154500.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "UPUSDT",
-        "actual_symbol": "UPUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 4.543080939947773,
-        "volume_ccy": 818410.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ROBOUSDT",
-        "actual_symbol": "ROBOUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 4.140624999999994,
-        "volume_ccy": 585205300.0,
+        "change_pct": 5.996668517490294,
+        "volume_ccy": 4102748800.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-13T16:09:47+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-08-13T17:35:12+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "BOMEUSDT",
-      "PUMPUSDT",
-      "PIEVERSEUSDT",
-      "ONEUSDT",
+      "HOMEUSDT",
+      "ESPUSDT",
+      "BARDUSDT",
+      "TRIAUSDT",
       "AVNTUSDT",
-      "NOTUSDT",
-      "UPUSDT",
-      "ROBOUSDT"
+      "NOTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "BOMEUSDT",
-      "PUMPUSDT",
-      "PIEVERSEUSDT",
-      "ONEUSDT",
+      "HOMEUSDT",
+      "ESPUSDT",
+      "BARDUSDT",
+      "TRIAUSDT",
       "AVNTUSDT",
-      "NOTUSDT",
-      "UPUSDT",
-      "ROBOUSDT"
+      "NOTUSDT"
     ]
   },
   "signals": {
