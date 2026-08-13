@@ -6,7 +6,7 @@ feishu:
 scan:
   timezone: Asia/Shanghai
   min_rr: 3.0
-  max_distance_to_entry_pct: 2.0
+  max_distance_to_entry_pct: 1.2
   expiry_hours: 12
   full_scan_interval_minutes: 60
   open_signal_refresh_minutes: 15
@@ -14,13 +14,21 @@ scan:
   trade_ledger_file: state/trades.jsonl
   performance_file: state/performance.json
   performance_report: reports/performance.md
+  continuation_score_floor: 82
+  continuation_gap_max_pct: 1.6
+  continuation_min_rr: 2.2
+  hot_continuation_allow_near_high: true
+  hot_continuation_min_ltf_confirm: 2
 
 trend_pullback:
   max_retracement: 0.618
   min_impulse_atr: 1.35
+  background_impulse_min_pct: 3.0
+  alt_background_impulse_min_pct: 5.0
   entry_trigger_atr_tolerance: 0.35
   ema52_retest_atr_tolerance: 0.55
   invalidation_atr_buffer: 0.18
+  prior_level_retest_atr_tolerance: 0.65
   impulse_box_min_bars: 6
   impulse_box_max_bars: 24
   impulse_box_min_impulse_atr: 3.0
@@ -29,6 +37,16 @@ trend_pullback:
   impulse_box_max_width_pct: 8.0
   impulse_box_max_entry_atr: 1.35
   impulse_box_max_rsi: 76.0
+  zero_axis_consolidation_min_bars: 8
+  zero_axis_consolidation_max_bars: 24
+  zero_axis_max_entry_atr: 1.25
+  zero_axis_confirm_bars: 2
+  zero_axis_confirm_hist_atr: 0.025
+  zero_axis_confirm_dea_atr: 0.025
+  vegas_zero_axis_max_entry_atr: 1.6
+  neckline_retest_max_entry_atr: 2.4
+  alt_vegas_breakout_close_atr: 0.20
+  alt_vegas_pullback_hold_atr: 0.10
 
 crypto:
   enabled: true
@@ -40,7 +58,7 @@ crypto:
   alt_watchlist_scan_only: true
   alt_watchlist_max_symbols: 8
   alt_watchlist_seed_limit: 20
-  alt_watchlist_refresh_minutes: 1440
+  alt_watchlist_refresh_minutes: 60
   alt_watchlist_min_change_pct: 4.0
   alt_watchlist_min_volume_ccy: 300000.0
   symbols:
