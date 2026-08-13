@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import json
 import math
@@ -200,6 +200,11 @@ def load_config() -> dict[str, Any]:
     config["scan"].setdefault("max_distance_to_entry_pct", 1.2)
     config["scan"].setdefault("expiry_hours", 12)
     config["scan"].setdefault("push_only_grade_a", True)
+    config["scan"].setdefault("continuation_score_floor", 82)
+    config["scan"].setdefault("continuation_gap_max_pct", 1.6)
+    config["scan"].setdefault("continuation_min_rr", 2.2)
+    config["scan"].setdefault("hot_continuation_allow_near_high", True)
+    config["scan"].setdefault("hot_continuation_min_ltf_confirm", 2)
     config["crypto"].setdefault("enabled", True)
     config["crypto"].setdefault("symbols", DEFAULT_SYMBOLS)
     config["crypto"].setdefault("symbol_map", SYMBOL_MAP)
@@ -247,6 +252,8 @@ def load_config() -> dict[str, Any]:
     cfg.setdefault("zero_axis_confirm_dea_atr", 0.025)
     cfg.setdefault("vegas_zero_axis_max_entry_atr", 1.6)
     cfg.setdefault("neckline_retest_max_entry_atr", 2.4)
+    cfg.setdefault("alt_vegas_breakout_close_atr", 0.20)
+    cfg.setdefault("alt_vegas_pullback_hold_atr", 0.10)
     cfg.setdefault("impulse_box_min_bars", 6)
     cfg.setdefault("impulse_box_max_bars", 24)
     cfg.setdefault("impulse_box_min_impulse_atr", 3.0)
@@ -2120,7 +2127,14 @@ def human_rule_name(name: str) -> str:
     return mapping.get(name, name)
 
 
-def near_prior_high_veto(bundle: dict[str, dict[str, float]], trigger_name: str, direction: str) -> bool:
+def near_prior_high_veto(
+    bundle: dict[str, dict[str, float]],
+    trigger_name: str,
+    direction: str,
+    setup: dict[str, Any] | None = None,
+) -> bool:
+    if setup is not None and continuation_setup(setup):
+        return False
     if direction == "long" and "鍥炶俯" not in trigger_name:
         frame = bundle["4h"]
         return frame["recent_high"] > 0 and (frame["recent_high"] - frame["close"]) / frame["close"] * 100 <= 1.5
@@ -2284,7 +2298,7 @@ def evaluate_direction(
                     key_anchor = max(setup_frame["ema24"], setup_frame["ema52"])
                     if abs(float(trigger["level"]) - key_anchor) > setup_frame["atr"] * 0.8:
                         continue
-            if direction == "short" and not alt_short_confirmed(bundle, setup, trigger_name):
+        if direction == "short" and not alt_short_confirmed(bundle, setup, trigger_name):
                 continue
             if direction == "short" and not short_key_level_rejection(candle_map[trigger_tf], float(trigger["level"])):
                 continue
@@ -2321,9 +2335,12 @@ def evaluate_direction(
             rr = rr_short(price, invalid, target1)
 
         gap = entry_gap_pct(price, entry_low, entry_high)
-        if rr < min_rr or gap > max_gap:
+        cont = continuation_setup(setup)
+        effective_min_rr = min_rr if not cont else max(2.2, min_rr - 0.8)
+        effective_max_gap = max_gap if not cont else max(max_gap, 1.6)
+        if rr < effective_min_rr or gap > effective_max_gap:
             continue
-        if near_prior_high_veto(bundle, trigger_name, direction):
+        if near_prior_high_veto(bundle, trigger_name, direction, setup):
             continue
         if is_alt(display_symbol) and gap > 2.0:
             continue
@@ -2339,8 +2356,12 @@ def evaluate_direction(
         score += 8 if setup["ema52"] else 0
         score += 8 if setup["macd"] else 0
         score += 8 if rr >= 2.5 else 4
+        if cont:
+            score += 4
         score -= 8 if gap > 1.2 else 0
-        grade = "A" if score >= 85 and context["a_ok"] and gap <= 1.2 else "B"
+        grade_floor = 82 if cont else 85
+        grade_gap = 1.4 if cont else 1.2
+        grade = "A" if score >= grade_floor and context["a_ok"] and gap <= grade_gap else "B"
         if bool(setup.get("impulse_box")):
             grade = "B"
         if setup_tf == "4h" and direction == "long" and bool(setup.get("zero_axis_ignition")) and not bool(setup.get("neckline_retest")) and not bottom_box_setup(setup):
