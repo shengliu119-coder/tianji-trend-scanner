@@ -8,104 +8,82 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-14T04:22:36+08:00",
+    "last_scan_at": "2026-08-14T05:17:09+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
       "ROBOUSDT",
       "PLUMEUSDT",
       "HOMEUSDT",
-      "ETHFIUSDT",
+      "EDENUSDT",
       "HUSDT",
-      "SKHYNIXUSDT",
-      "ACUUSDT",
-      "EDENUSDT"
+      "CRCLUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "ROBOUSDT",
         "actual_symbol": "ROBOUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 7.4411541381928625,
-        "volume_ccy": 642385600.0,
-        "trend_score": 7
+        "side_score": 6,
+        "change_pct": 7.2072072072072,
+        "volume_ccy": 628291500.0,
+        "trend_score": 6
       },
       {
         "symbol": "PLUMEUSDT",
         "actual_symbol": "PLUMEUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 7.514995715509863,
-        "volume_ccy": 140794460.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 7.899086559373648,
+        "volume_ccy": 128446880.0,
+        "trend_score": 5
       },
       {
         "symbol": "HOMEUSDT",
         "actual_symbol": "HOMEUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 21.512081060015607,
-        "volume_ccy": 5209678900.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "ETHFIUSDT",
-        "actual_symbol": "ETHFIUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 13.884472708002118,
-        "volume_ccy": 16255871.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "HUSDT",
-        "actual_symbol": "HUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 11.466311466311458,
-        "volume_ccy": 56551030.0,
+        "change_pct": 19.34396764771961,
+        "volume_ccy": 5498701400.0,
         "trend_score": 4
-      },
-      {
-        "symbol": "SKHYNIXUSDT",
-        "actual_symbol": "SKHYNIXUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 6.072051913179675,
-        "volume_ccy": 426421.679,
-        "trend_score": 4
-      },
-      {
-        "symbol": "ACUUSDT",
-        "actual_symbol": "ACUUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 38.40125391849532,
-        "volume_ccy": 496480270.0,
-        "trend_score": 3
       },
       {
         "symbol": "EDENUSDT",
         "actual_symbol": "EDENUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 37.43327402135231,
-        "volume_ccy": 148748519.0,
+        "change_pct": 50.375441696113064,
+        "volume_ccy": 279894240.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "HUSDT",
+        "actual_symbol": "HUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 15.329670329670334,
+        "volume_ccy": 69065020.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "CRCLUSDT",
+        "actual_symbol": "CRCLUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 5.869106263194936,
+        "volume_ccy": 410700.1,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-14T03:48:55+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-08-14T05:17:09+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
       "ROBOUSDT",
       "PLUMEUSDT",
       "HOMEUSDT",
-      "ETHFIUSDT",
+      "EDENUSDT",
       "HUSDT",
-      "SKHYNIXUSDT",
-      "ACUUSDT",
-      "EDENUSDT"
+      "CRCLUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
@@ -113,11 +91,9 @@
       "ROBOUSDT",
       "PLUMEUSDT",
       "HOMEUSDT",
-      "ETHFIUSDT",
+      "EDENUSDT",
       "HUSDT",
-      "SKHYNIXUSDT",
-      "ACUUSDT",
-      "EDENUSDT"
+      "CRCLUSDT"
     ]
   },
   "signals": {
