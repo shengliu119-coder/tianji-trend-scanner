@@ -2,60 +2,51 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-14T02:37:32+08:00",
+    "last_scan_at": "2026-08-14T03:48:55+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "HUSDT",
+      "ROBOUSDT",
       "PLUMEUSDT",
       "HOMEUSDT",
-      "ROBOUSDT",
       "ETHFIUSDT",
+      "HUSDT",
       "SKHYNIXUSDT",
-      "AVNTUSDT",
+      "ACUUSDT",
       "EDENUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "HUSDT",
-        "actual_symbol": "HUSDT",
+        "symbol": "ROBOUSDT",
+        "actual_symbol": "ROBOUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 13.853680231265287,
-        "volume_ccy": 48430270.0,
+        "change_pct": 7.4411541381928625,
+        "volume_ccy": 642385600.0,
         "trend_score": 7
       },
       {
         "symbol": "PLUMEUSDT",
         "actual_symbol": "PLUMEUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 6.736717227353604,
-        "volume_ccy": 137685330.0,
-        "trend_score": 7
+        "side_score": 6,
+        "change_pct": 7.514995715509863,
+        "volume_ccy": 140794460.0,
+        "trend_score": 6
       },
       {
         "symbol": "HOMEUSDT",
         "actual_symbol": "HOMEUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 17.13164777680907,
-        "volume_ccy": 5001026700.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "ROBOUSDT",
-        "actual_symbol": "ROBOUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 9.629044988161,
-        "volume_ccy": 684857600.0,
+        "change_pct": 21.512081060015607,
+        "volume_ccy": 5209678900.0,
         "trend_score": 5
       },
       {
@@ -63,26 +54,35 @@
         "actual_symbol": "ETHFIUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 8.472332539052166,
-        "volume_ccy": 12260922.0,
+        "change_pct": 13.884472708002118,
+        "volume_ccy": 16255871.0,
         "trend_score": 5
+      },
+      {
+        "symbol": "HUSDT",
+        "actual_symbol": "HUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 11.466311466311458,
+        "volume_ccy": 56551030.0,
+        "trend_score": 4
       },
       {
         "symbol": "SKHYNIXUSDT",
         "actual_symbol": "SKHYNIXUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 7.7490808242319105,
-        "volume_ccy": 431541.239,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 6.072051913179675,
+        "volume_ccy": 426421.679,
+        "trend_score": 4
       },
       {
-        "symbol": "AVNTUSDT",
-        "actual_symbol": "AVNTUSDT",
+        "symbol": "ACUUSDT",
+        "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 22.663993763225314,
-        "volume_ccy": 370470857.0,
+        "change_pct": 38.40125391849532,
+        "volume_ccy": 496480270.0,
         "trend_score": 3
       },
       {
@@ -90,33 +90,33 @@
         "actual_symbol": "EDENUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 14.97005988023952,
-        "volume_ccy": 51667625.0,
+        "change_pct": 37.43327402135231,
+        "volume_ccy": 148748519.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-14T01:45:31+08:00",
+    "alt_watchlist_at": "2026-08-14T03:48:55+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "HUSDT",
+      "ROBOUSDT",
       "PLUMEUSDT",
       "HOMEUSDT",
-      "ROBOUSDT",
       "ETHFIUSDT",
+      "HUSDT",
       "SKHYNIXUSDT",
-      "AVNTUSDT",
+      "ACUUSDT",
       "EDENUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "HUSDT",
+      "ROBOUSDT",
       "PLUMEUSDT",
       "HOMEUSDT",
-      "ROBOUSDT",
       "ETHFIUSDT",
+      "HUSDT",
       "SKHYNIXUSDT",
-      "AVNTUSDT",
+      "ACUUSDT",
       "EDENUSDT"
     ]
   },
