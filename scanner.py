@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 import math
@@ -2298,7 +2298,7 @@ def evaluate_direction(
                     key_anchor = max(setup_frame["ema24"], setup_frame["ema52"])
                     if abs(float(trigger["level"]) - key_anchor) > setup_frame["atr"] * 0.8:
                         continue
-        if direction == "short" and not alt_short_confirmed(bundle, setup, trigger_name):
+            if direction == "short" and not alt_short_confirmed(bundle, setup, trigger_name):
                 continue
             if direction == "short" and not short_key_level_rejection(candle_map[trigger_tf], float(trigger["level"])):
                 continue
