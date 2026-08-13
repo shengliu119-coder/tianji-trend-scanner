@@ -8,80 +8,80 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-13T13:05:25+08:00",
+    "last_scan_at": "2026-08-13T14:48:05+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "MUBARAKUSDT",
+      "HOMEUSDT",
+      "LITUSDT",
       "ACUUSDT",
       "EDENUSDT",
-      "TRUSTUSDT",
-      "OKBUSDT"
+      "HYPEUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
+        "symbol": "HOMEUSDT",
+        "actual_symbol": "HOMEUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 11.928770650075093,
+        "volume_ccy": 2382883400.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "LITUSDT",
+        "actual_symbol": "LITUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 6.660248060259387,
-        "volume_ccy": 350298700.0,
+        "change_pct": 4.830045790771404,
+        "volume_ccy": 9878624.0,
         "trend_score": 6
       },
       {
         "symbol": "ACUUSDT",
         "actual_symbol": "ACUUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 5.417212756662289,
-        "volume_ccy": 8464250.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 25.581880805761394,
+        "volume_ccy": 147268840.0,
+        "trend_score": 5
       },
       {
         "symbol": "EDENUSDT",
         "actual_symbol": "EDENUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 4.6875,
-        "volume_ccy": 15110438.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 6.621004566210045,
+        "volume_ccy": 20508338.0,
+        "trend_score": 5
       },
       {
-        "symbol": "TRUSTUSDT",
-        "actual_symbol": "TRUSTUSDT",
+        "symbol": "HYPEUSDT",
+        "actual_symbol": "HYPEUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 13.305214723926383,
-        "volume_ccy": 64035290.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "OKBUSDT",
-        "actual_symbol": "OKBUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 8.503472953062511,
-        "volume_ccy": 431241.58,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 4.613671218870958,
+        "volume_ccy": 2230119.3,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-08-13T12:20:55+08:00",
+    "alt_watchlist_at": "2026-08-13T14:48:05+08:00",
     "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "MUBARAKUSDT",
+      "HOMEUSDT",
+      "LITUSDT",
       "ACUUSDT",
       "EDENUSDT",
-      "TRUSTUSDT",
-      "OKBUSDT"
+      "HYPEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "MUBARAKUSDT",
+      "HOMEUSDT",
+      "LITUSDT",
       "ACUUSDT",
       "EDENUSDT",
-      "TRUSTUSDT",
-      "OKBUSDT"
+      "HYPEUSDT"
     ]
   },
   "signals": {
