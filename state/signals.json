@@ -2,42 +2,31 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-13T19:29:53+08:00",
+    "last_scan_at": "2026-08-13T20:12:51+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "HOMEUSDT",
       "ESPUSDT",
       "PNUTUSDT",
-      "ONEUSDT",
-      "NOTUSDT",
-      "EDENUSDT",
+      "HOMEUSDT",
       "GPSUSDT",
+      "EDENUSDT",
       "TRIAUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "HOMEUSDT",
-        "actual_symbol": "HOMEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 15.098634294385436,
-        "volume_ccy": 3143378700.0,
-        "trend_score": 7
-      },
       {
         "symbol": "ESPUSDT",
         "actual_symbol": "ESPUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 9.653994019649714,
-        "volume_ccy": 91224000.0,
+        "change_pct": 12.872999855845457,
+        "volume_ccy": 97646800.0,
         "trend_score": 7
       },
       {
@@ -45,26 +34,26 @@
         "actual_symbol": "PNUTUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 4.546571639223408,
-        "volume_ccy": 81538280.0,
+        "change_pct": 4.612365063788027,
+        "volume_ccy": 93566990.0,
         "trend_score": 7
       },
       {
-        "symbol": "ONEUSDT",
-        "actual_symbol": "ONEUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 5.76923076923076,
-        "volume_ccy": 13261266200.0,
-        "trend_score": 5
+        "symbol": "HOMEUSDT",
+        "actual_symbol": "HOMEUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 18.17587446878066,
+        "volume_ccy": 3465771600.0,
+        "trend_score": 6
       },
       {
-        "symbol": "NOTUSDT",
-        "actual_symbol": "NOTUSDT",
+        "symbol": "GPSUSDT",
+        "actual_symbol": "GPSUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 8.367968966472715,
-        "volume_ccy": 4989396100.0,
+        "change_pct": 11.75757575757574,
+        "volume_ccy": 193798380.0,
         "trend_score": 3
       },
       {
@@ -72,17 +61,8 @@
         "actual_symbol": "EDENUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 7.043204320432045,
-        "volume_ccy": 25930022.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "GPSUSDT",
-        "actual_symbol": "GPSUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 4.860118439861129,
-        "volume_ccy": 53783790.0,
+        "change_pct": 9.451495920217589,
+        "volume_ccy": 32359439.0,
         "trend_score": 3
       },
       {
@@ -90,33 +70,29 @@
         "actual_symbol": "TRIAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 4.312767257177775,
-        "volume_ccy": 48448100.0,
+        "change_pct": 4.285714285714294,
+        "volume_ccy": 54710100.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-13T18:48:12+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-08-13T20:12:51+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "HOMEUSDT",
       "ESPUSDT",
       "PNUTUSDT",
-      "ONEUSDT",
-      "NOTUSDT",
-      "EDENUSDT",
+      "HOMEUSDT",
       "GPSUSDT",
+      "EDENUSDT",
       "TRIAUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "HOMEUSDT",
       "ESPUSDT",
       "PNUTUSDT",
-      "ONEUSDT",
-      "NOTUSDT",
-      "EDENUSDT",
+      "HOMEUSDT",
       "GPSUSDT",
+      "EDENUSDT",
       "TRIAUSDT"
     ]
   },
