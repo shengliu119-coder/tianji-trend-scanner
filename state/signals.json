@@ -8,80 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-13T14:48:05+08:00",
+    "last_scan_at": "2026-08-13T16:09:47+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "HOMEUSDT",
-      "LITUSDT",
-      "ACUUSDT",
-      "EDENUSDT",
-      "HYPEUSDT"
+      "BOMEUSDT",
+      "PUMPUSDT",
+      "PIEVERSEUSDT",
+      "ONEUSDT",
+      "AVNTUSDT",
+      "NOTUSDT",
+      "UPUSDT",
+      "ROBOUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "HOMEUSDT",
-        "actual_symbol": "HOMEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 11.928770650075093,
-        "volume_ccy": 2382883400.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "LITUSDT",
-        "actual_symbol": "LITUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 4.830045790771404,
-        "volume_ccy": 9878624.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "ACUUSDT",
-        "actual_symbol": "ACUUSDT",
+        "symbol": "BOMEUSDT",
+        "actual_symbol": "BOMEUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 25.581880805761394,
-        "volume_ccy": 147268840.0,
+        "change_pct": 5.326128907757627,
+        "volume_ccy": 14575694000.0,
         "trend_score": 5
       },
       {
-        "symbol": "EDENUSDT",
-        "actual_symbol": "EDENUSDT",
+        "symbol": "PUMPUSDT",
+        "actual_symbol": "PUMPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 6.621004566210045,
-        "volume_ccy": 20508338.0,
+        "change_pct": 4.964272282813095,
+        "volume_ccy": 23705082000.0,
         "trend_score": 5
       },
       {
-        "symbol": "HYPEUSDT",
-        "actual_symbol": "HYPEUSDT",
+        "symbol": "PIEVERSEUSDT",
+        "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 4.613671218870958,
-        "volume_ccy": 2230119.3,
+        "change_pct": 4.905300449652546,
+        "volume_ccy": 2893780.0,
         "trend_score": 5
+      },
+      {
+        "symbol": "ONEUSDT",
+        "actual_symbol": "ONEUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 4.527296937416772,
+        "volume_ccy": 15411773600.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "AVNTUSDT",
+        "actual_symbol": "AVNTUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 7.144417740878309,
+        "volume_ccy": 19842931.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "NOTUSDT",
+        "actual_symbol": "NOTUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 6.157704095848424,
+        "volume_ccy": 3456154500.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "UPUSDT",
+        "actual_symbol": "UPUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 4.543080939947773,
+        "volume_ccy": 818410.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ROBOUSDT",
+        "actual_symbol": "ROBOUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 4.140624999999994,
+        "volume_ccy": 585205300.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-13T14:48:05+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-08-13T16:09:47+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "HOMEUSDT",
-      "LITUSDT",
-      "ACUUSDT",
-      "EDENUSDT",
-      "HYPEUSDT"
+      "BOMEUSDT",
+      "PUMPUSDT",
+      "PIEVERSEUSDT",
+      "ONEUSDT",
+      "AVNTUSDT",
+      "NOTUSDT",
+      "UPUSDT",
+      "ROBOUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "HOMEUSDT",
-      "LITUSDT",
-      "ACUUSDT",
-      "EDENUSDT",
-      "HYPEUSDT"
+      "BOMEUSDT",
+      "PUMPUSDT",
+      "PIEVERSEUSDT",
+      "ONEUSDT",
+      "AVNTUSDT",
+      "NOTUSDT",
+      "UPUSDT",
+      "ROBOUSDT"
     ]
   },
   "signals": {
