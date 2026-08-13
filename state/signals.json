@@ -2,122 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-14T00:35:06+08:00",
+    "last_scan_at": "2026-08-14T01:45:31+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "SNDKUSDT",
-      "PUMPUSDT",
-      "SKHYNIXUSDT",
       "HUSDT",
-      "ROBOUSDT",
-      "ONEUSDT",
+      "PLUMEUSDT",
       "HOMEUSDT",
-      "ATOMUSDT"
+      "ROBOUSDT",
+      "ETHFIUSDT",
+      "SKHYNIXUSDT",
+      "AVNTUSDT",
+      "EDENUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "SNDKUSDT",
-        "actual_symbol": "SNDKUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 11.278959982569535,
-        "volume_ccy": 1557437.466,
-        "trend_score": 7
-      },
-      {
-        "symbol": "PUMPUSDT",
-        "actual_symbol": "PUMPUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 7.051046639735581,
-        "volume_ccy": 25411358000.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "SKHYNIXUSDT",
-        "actual_symbol": "SKHYNIXUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 6.528340539707574,
-        "volume_ccy": 387966.951,
-        "trend_score": 7
-      },
       {
         "symbol": "HUSDT",
         "actual_symbol": "HUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 6.013878180416353,
-        "volume_ccy": 40075350.0,
+        "change_pct": 13.853680231265287,
+        "volume_ccy": 48430270.0,
         "trend_score": 7
       },
       {
-        "symbol": "ROBOUSDT",
-        "actual_symbol": "ROBOUSDT",
+        "symbol": "PLUMEUSDT",
+        "actual_symbol": "PLUMEUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 20.18659881255301,
-        "volume_ccy": 739529800.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "ONEUSDT",
-        "actual_symbol": "ONEUSDT",
-        "side": "short",
-        "side_score": 6,
-        "change_pct": 7.857142857142863,
-        "volume_ccy": 10547985500.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 6.736717227353604,
+        "volume_ccy": 137685330.0,
+        "trend_score": 7
       },
       {
         "symbol": "HOMEUSDT",
         "actual_symbol": "HOMEUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 15.348326933625902,
-        "volume_ccy": 4570493800.0,
+        "change_pct": 17.13164777680907,
+        "volume_ccy": 5001026700.0,
         "trend_score": 5
       },
       {
-        "symbol": "ATOMUSDT",
-        "actual_symbol": "ATOMUSDT",
+        "symbol": "ROBOUSDT",
+        "actual_symbol": "ROBOUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 9.629044988161,
+        "volume_ccy": 684857600.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ETHFIUSDT",
+        "actual_symbol": "ETHFIUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 8.472332539052166,
+        "volume_ccy": 12260922.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "SKHYNIXUSDT",
+        "actual_symbol": "SKHYNIXUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 7.7490808242319105,
+        "volume_ccy": 431541.239,
+        "trend_score": 5
+      },
+      {
+        "symbol": "AVNTUSDT",
+        "actual_symbol": "AVNTUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 7.686832740213514,
-        "volume_ccy": 2876559.0,
+        "change_pct": 22.663993763225314,
+        "volume_ccy": 370470857.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "EDENUSDT",
+        "actual_symbol": "EDENUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 14.97005988023952,
+        "volume_ccy": 51667625.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-13T23:44:23+08:00",
+    "alt_watchlist_at": "2026-08-14T01:45:31+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "SNDKUSDT",
-      "PUMPUSDT",
-      "SKHYNIXUSDT",
       "HUSDT",
-      "ROBOUSDT",
-      "ONEUSDT",
+      "PLUMEUSDT",
       "HOMEUSDT",
-      "ATOMUSDT"
+      "ROBOUSDT",
+      "ETHFIUSDT",
+      "SKHYNIXUSDT",
+      "AVNTUSDT",
+      "EDENUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "SNDKUSDT",
-      "PUMPUSDT",
-      "SKHYNIXUSDT",
       "HUSDT",
-      "ROBOUSDT",
-      "ONEUSDT",
+      "PLUMEUSDT",
       "HOMEUSDT",
-      "ATOMUSDT"
+      "ROBOUSDT",
+      "ETHFIUSDT",
+      "SKHYNIXUSDT",
+      "AVNTUSDT",
+      "EDENUSDT"
     ]
   },
   "signals": {
