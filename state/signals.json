@@ -8,80 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-14T19:38:32+08:00",
+    "last_scan_at": "2026-08-14T20:33:40+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "APRUSDT",
       "ROBOUSDT",
-      "HUSDT",
-      "2ZUSDT",
-      "MUUSDT"
+      "APRUSDT",
+      "PIEVERSEUSDT",
+      "HUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "ROBOUSDT",
+        "actual_symbol": "ROBOUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 19.310344827586203,
+        "volume_ccy": 672530400.0,
+        "trend_score": 7
+      },
       {
         "symbol": "APRUSDT",
         "actual_symbol": "APRUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 6.77018633540374,
-        "volume_ccy": 541991460.0,
+        "change_pct": 12.530915086562247,
+        "volume_ccy": 547580880.0,
         "trend_score": 6
       },
       {
-        "symbol": "ROBOUSDT",
-        "actual_symbol": "ROBOUSDT",
+        "symbol": "PIEVERSEUSDT",
+        "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 13.505311077389972,
-        "volume_ccy": 596327200.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 8.423876592890672,
+        "volume_ccy": 6126360.0,
+        "trend_score": 6
       },
       {
         "symbol": "HUSDT",
         "actual_symbol": "HUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 21.150872542522645,
-        "volume_ccy": 173471700.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "2ZUSDT",
-        "actual_symbol": "2ZUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 19.324381032312203,
-        "volume_ccy": 400200960.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "MUUSDT",
-        "actual_symbol": "MUUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 7.071016938010819,
-        "volume_ccy": 326143.92,
+        "change_pct": 31.818181818181827,
+        "volume_ccy": 206668820.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-14T18:59:58+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-08-14T20:33:40+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "APRUSDT",
       "ROBOUSDT",
-      "HUSDT",
-      "2ZUSDT",
-      "MUUSDT"
+      "APRUSDT",
+      "PIEVERSEUSDT",
+      "HUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "APRUSDT",
       "ROBOUSDT",
-      "HUSDT",
-      "2ZUSDT",
-      "MUUSDT"
+      "APRUSDT",
+      "PIEVERSEUSDT",
+      "HUSDT"
     ]
   },
   "signals": {
