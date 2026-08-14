@@ -8,43 +8,43 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-14T22:46:07+08:00",
+    "last_scan_at": "2026-08-14T23:37:43+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "ROBOUSDT",
-      "PIEVERSEUSDT",
-      "MMTUSDT",
-      "RVNUSDT",
       "APRUSDT",
+      "MMTUSDT",
+      "ROBOUSDT",
+      "RVNUSDT",
+      "PIEVERSEUSDT",
       "HUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ROBOUSDT",
-        "actual_symbol": "ROBOUSDT",
+        "symbol": "APRUSDT",
+        "actual_symbol": "APRUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 8.309859154929567,
-        "volume_ccy": 584305600.0,
+        "change_pct": 8.663465386154462,
+        "volume_ccy": 548308080.0,
         "trend_score": 6
-      },
-      {
-        "symbol": "PIEVERSEUSDT",
-        "actual_symbol": "PIEVERSEUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 7.811656772800872,
-        "volume_ccy": 6247410.0,
-        "trend_score": 5
       },
       {
         "symbol": "MMTUSDT",
         "actual_symbol": "MMTUSDT",
         "side": "short",
+        "side_score": 6,
+        "change_pct": 6.5308568004793415,
+        "volume_ccy": 136748750.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "ROBOUSDT",
+        "actual_symbol": "ROBOUSDT",
+        "side": "long",
         "side_score": 4,
-        "change_pct": 7.751937984496131,
-        "volume_ccy": 137058720.0,
+        "change_pct": 5.070422535211256,
+        "volume_ccy": 543556700.0,
         "trend_score": 4
       },
       {
@@ -52,17 +52,17 @@
         "actual_symbol": "RVNUSDT",
         "side": "short",
         "side_score": 4,
-        "change_pct": 6.41751604379011,
-        "volume_ccy": 431948770.0,
+        "change_pct": 4.648568240981782,
+        "volume_ccy": 974270720.0,
         "trend_score": 4
       },
       {
-        "symbol": "APRUSDT",
-        "actual_symbol": "APRUSDT",
+        "symbol": "PIEVERSEUSDT",
+        "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 5.816412859560061,
-        "volume_ccy": 570442580.0,
+        "change_pct": 4.470108695652179,
+        "volume_ccy": 6657760.0,
         "trend_score": 4
       },
       {
@@ -70,29 +70,29 @@
         "actual_symbol": "HUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 24.16614222781624,
-        "volume_ccy": 243502680.0,
+        "change_pct": 22.886597938144327,
+        "volume_ccy": 263691020.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-14T21:57:39+08:00",
+    "alt_watchlist_at": "2026-08-14T23:37:43+08:00",
     "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "ROBOUSDT",
-      "PIEVERSEUSDT",
-      "MMTUSDT",
-      "RVNUSDT",
       "APRUSDT",
+      "MMTUSDT",
+      "ROBOUSDT",
+      "RVNUSDT",
+      "PIEVERSEUSDT",
       "HUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ROBOUSDT",
-      "PIEVERSEUSDT",
-      "MMTUSDT",
-      "RVNUSDT",
       "APRUSDT",
+      "MMTUSDT",
+      "ROBOUSDT",
+      "RVNUSDT",
+      "PIEVERSEUSDT",
       "HUSDT"
     ]
   },
