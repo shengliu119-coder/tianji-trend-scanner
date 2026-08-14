@@ -8,14 +8,12 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-14T11:17:07+08:00",
+    "last_scan_at": "2026-08-14T13:05:34+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 2,
     "last_okx_discovery_symbols": [
       "HOMEUSDT",
-      "PLUMEUSDT",
-      "PUMPUSDT",
-      "ATOMUSDT"
+      "PLUMEUSDT"
     ],
     "alt_watchlist": [
       {
@@ -23,53 +21,31 @@
         "actual_symbol": "HOMEUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 12.52972190633724,
-        "volume_ccy": 6023165300.0,
+        "change_pct": 15.394968423232225,
+        "volume_ccy": 6525599200.0,
         "trend_score": 7
       },
       {
         "symbol": "PLUMEUSDT",
         "actual_symbol": "PLUMEUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 9.054396228062513,
-        "volume_ccy": 140178290.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "PUMPUSDT",
-        "actual_symbol": "PUMPUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 8.020415603353982,
-        "volume_ccy": 29614182000.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "ATOMUSDT",
-        "actual_symbol": "ATOMUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 10.919540229885067,
-        "volume_ccy": 4264691.0,
-        "trend_score": 3
+        "side_score": 7,
+        "change_pct": 10.7946675900277,
+        "volume_ccy": 146691660.0,
+        "trend_score": 7
       }
     ],
-    "alt_watchlist_at": "2026-08-14T11:17:07+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-08-14T13:05:34+08:00",
+    "alt_watchlist_count": 2,
     "alt_watchlist_symbols": [
       "HOMEUSDT",
-      "PLUMEUSDT",
-      "PUMPUSDT",
-      "ATOMUSDT"
+      "PLUMEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "HOMEUSDT",
-      "PLUMEUSDT",
-      "PUMPUSDT",
-      "ATOMUSDT"
+      "PLUMEUSDT"
     ]
   },
   "signals": {
