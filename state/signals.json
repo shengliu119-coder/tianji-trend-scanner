@@ -8,43 +8,32 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-14T08:48:36+08:00",
+    "last_scan_at": "2026-08-14T11:17:07+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
+      "HOMEUSDT",
       "PLUMEUSDT",
-      "METUSDT",
-      "ROBOUSDT",
       "PUMPUSDT",
-      "EDENUSDT",
-      "FARTCOINUSDT"
+      "ATOMUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "HOMEUSDT",
+        "actual_symbol": "HOMEUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 12.52972190633724,
+        "volume_ccy": 6023165300.0,
+        "trend_score": 7
+      },
       {
         "symbol": "PLUMEUSDT",
         "actual_symbol": "PLUMEUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 11.581995261911029,
-        "volume_ccy": 130957540.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "METUSDT",
-        "actual_symbol": "METUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 8.280657395701644,
-        "volume_ccy": 4087332.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "ROBOUSDT",
-        "actual_symbol": "ROBOUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 7.669172932330828,
-        "volume_ccy": 609350800.0,
+        "change_pct": 9.054396228062513,
+        "volume_ccy": 140178290.0,
         "trend_score": 5
       },
       {
@@ -52,48 +41,35 @@
         "actual_symbol": "PUMPUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 6.126192223037419,
-        "volume_ccy": 27380037000.0,
+        "change_pct": 8.020415603353982,
+        "volume_ccy": 29614182000.0,
         "trend_score": 4
       },
       {
-        "symbol": "EDENUSDT",
-        "actual_symbol": "EDENUSDT",
+        "symbol": "ATOMUSDT",
+        "actual_symbol": "ATOMUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 64.92341356673963,
-        "volume_ccy": 680497182.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "FARTCOINUSDT",
-        "actual_symbol": "FARTCOINUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 8.612804878048761,
-        "volume_ccy": 30949714.0,
+        "change_pct": 10.919540229885067,
+        "volume_ccy": 4264691.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-14T08:48:36+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-08-14T11:17:07+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
+      "HOMEUSDT",
       "PLUMEUSDT",
-      "METUSDT",
-      "ROBOUSDT",
       "PUMPUSDT",
-      "EDENUSDT",
-      "FARTCOINUSDT"
+      "ATOMUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "HOMEUSDT",
       "PLUMEUSDT",
-      "METUSDT",
-      "ROBOUSDT",
       "PUMPUSDT",
-      "EDENUSDT",
-      "FARTCOINUSDT"
+      "ATOMUSDT"
     ]
   },
   "signals": {
