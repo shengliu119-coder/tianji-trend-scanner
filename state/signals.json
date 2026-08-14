@@ -8,79 +8,55 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-14T15:56:47+08:00",
+    "last_scan_at": "2026-08-14T17:03:39+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "HOMEUSDT",
-      "PLUMEUSDT",
       "ROBOUSDT",
-      "YBUSDT",
+      "HOMEUSDT",
       "GPSUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "HOMEUSDT",
-        "actual_symbol": "HOMEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 14.878962827914513,
-        "volume_ccy": 6577463500.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "PLUMEUSDT",
-        "actual_symbol": "PLUMEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 12.380790190735699,
-        "volume_ccy": 176338850.0,
-        "trend_score": 7
-      },
       {
         "symbol": "ROBOUSDT",
         "actual_symbol": "ROBOUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 10.165662650602414,
-        "volume_ccy": 532880100.0,
+        "change_pct": 11.671686746987946,
+        "volume_ccy": 557953800.0,
         "trend_score": 7
       },
       {
-        "symbol": "YBUSDT",
-        "actual_symbol": "YBUSDT",
+        "symbol": "HOMEUSDT",
+        "actual_symbol": "HOMEUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 5.426457224458008,
-        "volume_ccy": 6493103.0,
-        "trend_score": 6
+        "side_score": 4,
+        "change_pct": 11.584633853541428,
+        "volume_ccy": 6671546400.0,
+        "trend_score": 4
       },
       {
         "symbol": "GPSUSDT",
         "actual_symbol": "GPSUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 18.319891065256108,
-        "volume_ccy": 612928730.0,
+        "change_pct": 21.300847014535176,
+        "volume_ccy": 637354390.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-14T15:56:47+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-08-14T17:03:39+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "HOMEUSDT",
-      "PLUMEUSDT",
       "ROBOUSDT",
-      "YBUSDT",
+      "HOMEUSDT",
       "GPSUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "HOMEUSDT",
-      "PLUMEUSDT",
       "ROBOUSDT",
-      "YBUSDT",
+      "HOMEUSDT",
       "GPSUSDT"
     ]
   },
