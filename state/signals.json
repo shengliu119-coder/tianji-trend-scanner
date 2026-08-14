@@ -8,13 +8,15 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-14T20:33:40+08:00",
+    "last_scan_at": "2026-08-14T21:57:39+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
       "ROBOUSDT",
-      "APRUSDT",
       "PIEVERSEUSDT",
+      "MMTUSDT",
+      "RVNUSDT",
+      "APRUSDT",
       "HUSDT"
     ],
     "alt_watchlist": [
@@ -22,53 +24,75 @@
         "symbol": "ROBOUSDT",
         "actual_symbol": "ROBOUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 19.310344827586203,
-        "volume_ccy": 672530400.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "APRUSDT",
-        "actual_symbol": "APRUSDT",
-        "side": "long",
         "side_score": 6,
-        "change_pct": 12.530915086562247,
-        "volume_ccy": 547580880.0,
+        "change_pct": 8.309859154929567,
+        "volume_ccy": 584305600.0,
         "trend_score": 6
       },
       {
         "symbol": "PIEVERSEUSDT",
         "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 8.423876592890672,
-        "volume_ccy": 6126360.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 7.811656772800872,
+        "volume_ccy": 6247410.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "MMTUSDT",
+        "actual_symbol": "MMTUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 7.751937984496131,
+        "volume_ccy": 137058720.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "RVNUSDT",
+        "actual_symbol": "RVNUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 6.41751604379011,
+        "volume_ccy": 431948770.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "APRUSDT",
+        "actual_symbol": "APRUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 5.816412859560061,
+        "volume_ccy": 570442580.0,
+        "trend_score": 4
       },
       {
         "symbol": "HUSDT",
         "actual_symbol": "HUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 31.818181818181827,
-        "volume_ccy": 206668820.0,
+        "change_pct": 24.16614222781624,
+        "volume_ccy": 243502680.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-14T20:33:40+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-08-14T21:57:39+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
       "ROBOUSDT",
-      "APRUSDT",
       "PIEVERSEUSDT",
+      "MMTUSDT",
+      "RVNUSDT",
+      "APRUSDT",
       "HUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "ROBOUSDT",
-      "APRUSDT",
       "PIEVERSEUSDT",
+      "MMTUSDT",
+      "RVNUSDT",
+      "APRUSDT",
       "HUSDT"
     ]
   },
