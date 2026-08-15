@@ -8,116 +8,80 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-16T02:20:33+08:00",
+    "last_scan_at": "2026-08-16T02:58:43+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "BOMEUSDT",
       "ONEUSDT",
-      "JELLYJELLYUSDT",
-      "SYRUPUSDT",
-      "HUMAUSDT",
-      "HUSDT",
-      "LINKUSDT",
-      "BASEDUSDT"
+      "COREUSDT",
+      "BASEDUSDT",
+      "BOMEUSDT",
+      "HUMAUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "BOMEUSDT",
-        "actual_symbol": "BOMEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 16.59187235103466,
-        "volume_ccy": 22835638000.0,
-        "trend_score": 7
-      },
       {
         "symbol": "ONEUSDT",
         "actual_symbol": "ONEUSDT",
         "side": "short",
         "side_score": 7,
-        "change_pct": 11.612903225806454,
-        "volume_ccy": 11774746600.0,
+        "change_pct": 8.856682769726236,
+        "volume_ccy": 11809951100.0,
         "trend_score": 7
       },
       {
-        "symbol": "JELLYJELLYUSDT",
-        "actual_symbol": "JELLYJELLYUSDT",
+        "symbol": "COREUSDT",
+        "actual_symbol": "COREUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 5.318588730911002,
-        "volume_ccy": 5118200.0,
+        "change_pct": 10.486486486486491,
+        "volume_ccy": 117893798.0,
         "trend_score": 6
       },
       {
-        "symbol": "SYRUPUSDT",
-        "actual_symbol": "SYRUPUSDT",
+        "symbol": "BASEDUSDT",
+        "actual_symbol": "BASEDUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 5.570117955439042,
-        "volume_ccy": 3053730.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 8.09897241752298,
+        "volume_ccy": 109873800.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "BOMEUSDT",
+        "actual_symbol": "BOMEUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 10.401921132457026,
+        "volume_ccy": 29964442000.0,
+        "trend_score": 4
       },
       {
         "symbol": "HUMAUSDT",
         "actual_symbol": "HUMAUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 10.606860158311333,
-        "volume_ccy": 145869700.0,
+        "change_pct": 9.506107275624004,
+        "volume_ccy": 151818000.0,
         "trend_score": 4
-      },
-      {
-        "symbol": "HUSDT",
-        "actual_symbol": "HUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 28.58744394618834,
-        "volume_ccy": 426689910.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "LINKUSDT",
-        "actual_symbol": "LINKUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 7.525195968645024,
-        "volume_ccy": 11275146.1,
-        "trend_score": 3
-      },
-      {
-        "symbol": "BASEDUSDT",
-        "actual_symbol": "BASEDUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 5.186472396738397,
-        "volume_ccy": 97929380.0,
-        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-16T01:47:54+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-08-16T02:58:43+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "BOMEUSDT",
       "ONEUSDT",
-      "JELLYJELLYUSDT",
-      "SYRUPUSDT",
-      "HUMAUSDT",
-      "HUSDT",
-      "LINKUSDT",
-      "BASEDUSDT"
+      "COREUSDT",
+      "BASEDUSDT",
+      "BOMEUSDT",
+      "HUMAUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "BOMEUSDT",
       "ONEUSDT",
-      "JELLYJELLYUSDT",
-      "SYRUPUSDT",
-      "HUMAUSDT",
-      "HUSDT",
-      "LINKUSDT",
-      "BASEDUSDT"
+      "COREUSDT",
+      "BASEDUSDT",
+      "BOMEUSDT",
+      "HUMAUSDT"
     ]
   },
   "signals": {
