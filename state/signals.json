@@ -8,16 +8,14 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-16T05:18:09+08:00",
+    "last_scan_at": "2026-08-16T05:47:22+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
       "NOTUSDT",
+      "REUSDT",
       "BASEDUSDT",
-      "HUMAUSDT",
-      "SYRUPUSDT",
-      "CHIPUSDT",
-      "YBUSDT"
+      "CHIPUSDT"
     ],
     "alt_watchlist": [
       {
@@ -25,75 +23,53 @@
         "actual_symbol": "NOTUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 6.0542247959989375,
-        "volume_ccy": 2780251700.0,
+        "change_pct": 8.832059056156078,
+        "volume_ccy": 3971802300.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "REUSDT",
+        "actual_symbol": "REUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 5.405280862633053,
+        "volume_ccy": 26754060.0,
         "trend_score": 7
       },
       {
         "symbol": "BASEDUSDT",
         "actual_symbol": "BASEDUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 9.527676275544735,
-        "volume_ccy": 128292760.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "HUMAUSDT",
-        "actual_symbol": "HUMAUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 9.013785790031816,
-        "volume_ccy": 158666500.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "SYRUPUSDT",
-        "actual_symbol": "SYRUPUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 6.4748201438848865,
-        "volume_ccy": 3576280.0,
-        "trend_score": 4
+        "side_score": 6,
+        "change_pct": 11.904440545282755,
+        "volume_ccy": 167523530.0,
+        "trend_score": 6
       },
       {
         "symbol": "CHIPUSDT",
         "actual_symbol": "CHIPUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 18.23399558498897,
-        "volume_ccy": 283872400.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "YBUSDT",
-        "actual_symbol": "YBUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 6.37889073908031,
-        "volume_ccy": 3975840.0,
+        "change_pct": 17.431192660550458,
+        "volume_ccy": 353130000.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-16T04:16:57+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-08-16T05:47:22+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
       "NOTUSDT",
+      "REUSDT",
       "BASEDUSDT",
-      "HUMAUSDT",
-      "SYRUPUSDT",
-      "CHIPUSDT",
-      "YBUSDT"
+      "CHIPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "NOTUSDT",
+      "REUSDT",
       "BASEDUSDT",
-      "HUMAUSDT",
-      "SYRUPUSDT",
-      "CHIPUSDT",
-      "YBUSDT"
+      "CHIPUSDT"
     ]
   },
   "signals": {
