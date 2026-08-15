@@ -8,18 +8,16 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-15T23:58:49+08:00",
+    "last_scan_at": "2026-08-16T00:20:19+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
       "BOMEUSDT",
-      "PIEVERSEUSDT",
       "ONEUSDT",
-      "YGGUSDT",
       "HUMAUSDT",
-      "GRASSUSDT",
-      "CHIPUSDT",
-      "HUSDT"
+      "COREUSDT",
+      "OPNUSDT",
+      "BASEDUSDT"
     ],
     "alt_watchlist": [
       {
@@ -27,17 +25,8 @@
         "actual_symbol": "BOMEUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 9.245773732119627,
-        "volume_ccy": 15250251000.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "PIEVERSEUSDT",
-        "actual_symbol": "PIEVERSEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 9.16784203102962,
-        "volume_ccy": 8105280.0,
+        "change_pct": 8.125635808748726,
+        "volume_ccy": 15458409000.0,
         "trend_score": 7
       },
       {
@@ -45,79 +34,66 @@
         "actual_symbol": "ONEUSDT",
         "side": "short",
         "side_score": 6,
-        "change_pct": 12.578616352201259,
-        "volume_ccy": 11735185200.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "YGGUSDT",
-        "actual_symbol": "YGGUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 8.017334777898151,
-        "volume_ccy": 197026999.0,
+        "change_pct": 11.839999999999993,
+        "volume_ccy": 11819579900.0,
         "trend_score": 6
       },
       {
         "symbol": "HUMAUSDT",
         "actual_symbol": "HUMAUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 14.83253588516747,
-        "volume_ccy": 124404000.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "GRASSUSDT",
-        "actual_symbol": "GRASSUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 7.327174259318242,
-        "volume_ccy": 7667187.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "CHIPUSDT",
-        "actual_symbol": "CHIPUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 11.447661469933182,
-        "volume_ccy": 186265000.0,
+        "change_pct": 12.054507337526205,
+        "volume_ccy": 133599100.0,
         "trend_score": 4
       },
       {
-        "symbol": "HUSDT",
-        "actual_symbol": "HUSDT",
+        "symbol": "COREUSDT",
+        "actual_symbol": "COREUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 9.71922246220304,
+        "volume_ccy": 94637274.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "OPNUSDT",
+        "actual_symbol": "OPNUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 25.57135601828341,
-        "volume_ccy": 348384030.0,
+        "change_pct": 9.284497444633722,
+        "volume_ccy": 40487500.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "BASEDUSDT",
+        "actual_symbol": "BASEDUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 8.312925170068034,
+        "volume_ccy": 66746990.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-15T23:05:28+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-08-16T00:20:19+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
       "BOMEUSDT",
-      "PIEVERSEUSDT",
       "ONEUSDT",
-      "YGGUSDT",
       "HUMAUSDT",
-      "GRASSUSDT",
-      "CHIPUSDT",
-      "HUSDT"
+      "COREUSDT",
+      "OPNUSDT",
+      "BASEDUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "BOMEUSDT",
-      "PIEVERSEUSDT",
       "ONEUSDT",
-      "YGGUSDT",
       "HUMAUSDT",
-      "GRASSUSDT",
-      "CHIPUSDT",
-      "HUSDT"
+      "COREUSDT",
+      "OPNUSDT",
+      "BASEDUSDT"
     ]
   },
   "signals": {
