@@ -8,72 +8,63 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-15T14:22:29+08:00",
+    "last_scan_at": "2026-08-15T15:10:56+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "WETUSDT",
       "PIEVERSEUSDT",
       "YGGUSDT",
-      "MAGICUSDT",
-      "SATSUSDT",
-      "ICPUSDT",
-      "PIPPINUSDT",
+      "ACTUSDT",
+      "BOMEUSDT",
       "ACUUSDT",
-      "ONEUSDT"
+      "ONEUSDT",
+      "PIPPINUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "WETUSDT",
+        "actual_symbol": "WETUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 6.205493387589027,
+        "volume_ccy": 4476530.0,
+        "trend_score": 7
+      },
       {
         "symbol": "PIEVERSEUSDT",
         "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 8.260758196721312,
-        "volume_ccy": 6821350.0,
-        "trend_score": 7
+        "side_score": 6,
+        "change_pct": 5.174772981714154,
+        "volume_ccy": 7011100.0,
+        "trend_score": 6
       },
       {
         "symbol": "YGGUSDT",
         "actual_symbol": "YGGUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 8.175419599350302,
-        "volume_ccy": 170322884.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "MAGICUSDT",
-        "actual_symbol": "MAGICUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 6.552849610846099,
-        "volume_ccy": 19588680.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "SATSUSDT",
-        "actual_symbol": "SATSUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 5.5900000000000025,
-        "volume_ccy": 76163520000000.0,
+        "change_pct": 6.616052060737521,
+        "volume_ccy": 183344932.0,
         "trend_score": 5
       },
       {
-        "symbol": "ICPUSDT",
-        "actual_symbol": "ICPUSDT",
+        "symbol": "ACTUSDT",
+        "actual_symbol": "ACTUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.404157043879907,
-        "volume_ccy": 3003160.95,
+        "change_pct": 6.139339968569929,
+        "volume_ccy": 216731324.0,
         "trend_score": 5
       },
       {
-        "symbol": "PIPPINUSDT",
-        "actual_symbol": "PIPPINUSDT",
+        "symbol": "BOMEUSDT",
+        "actual_symbol": "BOMEUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.069402534701249,
-        "volume_ccy": 101286040.0,
+        "change_pct": 5.98095748960708,
+        "volume_ccy": 13675651000.0,
         "trend_score": 5
       },
       {
@@ -81,8 +72,8 @@
         "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 10.194319880418538,
-        "volume_ccy": 115745190.0,
+        "change_pct": 10.413611029627463,
+        "volume_ccy": 115304710.0,
         "trend_score": 4
       },
       {
@@ -90,34 +81,43 @@
         "actual_symbol": "ONEUSDT",
         "side": "short",
         "side_score": 4,
-        "change_pct": 10.05917159763314,
-        "volume_ccy": 9115020100.0,
+        "change_pct": 9.985096870342772,
+        "volume_ccy": 10090797200.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "PIPPINUSDT",
+        "actual_symbol": "PIPPINUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 6.24235006119951,
+        "volume_ccy": 101768670.0,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-08-15T13:22:13+08:00",
+    "alt_watchlist_at": "2026-08-15T15:10:56+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "WETUSDT",
       "PIEVERSEUSDT",
       "YGGUSDT",
-      "MAGICUSDT",
-      "SATSUSDT",
-      "ICPUSDT",
-      "PIPPINUSDT",
+      "ACTUSDT",
+      "BOMEUSDT",
       "ACUUSDT",
-      "ONEUSDT"
+      "ONEUSDT",
+      "PIPPINUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "WETUSDT",
       "PIEVERSEUSDT",
       "YGGUSDT",
-      "MAGICUSDT",
-      "SATSUSDT",
-      "ICPUSDT",
-      "PIPPINUSDT",
+      "ACTUSDT",
+      "BOMEUSDT",
       "ACUUSDT",
-      "ONEUSDT"
+      "ONEUSDT",
+      "PIPPINUSDT"
     ]
   },
   "signals": {
