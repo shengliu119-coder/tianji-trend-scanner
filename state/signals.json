@@ -8,17 +8,17 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-15T19:57:06+08:00",
+    "last_scan_at": "2026-08-15T20:23:10+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "ACUUSDT",
-      "ONEUSDT",
-      "WETUSDT",
+      "HUMAUSDT",
       "YGGUSDT",
-      "BOMEUSDT",
-      "JTOUSDT",
+      "ONEUSDT",
       "PIPPINUSDT",
+      "SOPHUSDT",
+      "RESOLVUSDT",
       "HUSDT"
     ],
     "alt_watchlist": [
@@ -27,53 +27,35 @@
         "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 13.179269000193388,
-        "volume_ccy": 113419760.0,
+        "change_pct": 8.085579327591,
+        "volume_ccy": 117275980.0,
         "trend_score": 6
       },
       {
-        "symbol": "ONEUSDT",
-        "actual_symbol": "ONEUSDT",
-        "side": "short",
-        "side_score": 6,
-        "change_pct": 11.949685534591197,
-        "volume_ccy": 10602806900.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "WETUSDT",
-        "actual_symbol": "WETUSDT",
+        "symbol": "HUMAUSDT",
+        "actual_symbol": "HUMAUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 7.736516357205998,
-        "volume_ccy": 6934530.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 13.117365905469994,
+        "volume_ccy": 83653100.0,
+        "trend_score": 5
       },
       {
         "symbol": "YGGUSDT",
         "actual_symbol": "YGGUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 6.4060803474484285,
-        "volume_ccy": 193194375.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "BOMEUSDT",
-        "actual_symbol": "BOMEUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 6.626914216018437,
-        "volume_ccy": 13839378000.0,
+        "change_pct": 6.081808396124861,
+        "volume_ccy": 193678818.0,
         "trend_score": 5
       },
       {
-        "symbol": "JTOUSDT",
-        "actual_symbol": "JTOUSDT",
-        "side": "long",
+        "symbol": "ONEUSDT",
+        "actual_symbol": "ONEUSDT",
+        "side": "short",
         "side_score": 4,
-        "change_pct": 8.518859245630177,
-        "volume_ccy": 15138246.0,
+        "change_pct": 18.92744479495268,
+        "volume_ccy": 11000390400.0,
         "trend_score": 4
       },
       {
@@ -81,8 +63,26 @@
         "actual_symbol": "PIPPINUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 6.770186335403731,
-        "volume_ccy": 104244290.0,
+        "change_pct": 6.5055762081784305,
+        "volume_ccy": 103541390.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "SOPHUSDT",
+        "actual_symbol": "SOPHUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 6.18127786032689,
+        "volume_ccy": 37671300.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "RESOLVUSDT",
+        "actual_symbol": "RESOLVUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 5.850091407678239,
+        "volume_ccy": 68080780.0,
         "trend_score": 4
       },
       {
@@ -90,33 +90,33 @@
         "actual_symbol": "HUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 24.93140662154746,
-        "volume_ccy": 293416140.0,
+        "change_pct": 13.13777630048196,
+        "volume_ccy": 314299980.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-15T19:02:50+08:00",
+    "alt_watchlist_at": "2026-08-15T20:23:10+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "ACUUSDT",
-      "ONEUSDT",
-      "WETUSDT",
+      "HUMAUSDT",
       "YGGUSDT",
-      "BOMEUSDT",
-      "JTOUSDT",
+      "ONEUSDT",
       "PIPPINUSDT",
+      "SOPHUSDT",
+      "RESOLVUSDT",
       "HUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "ACUUSDT",
-      "ONEUSDT",
-      "WETUSDT",
+      "HUMAUSDT",
       "YGGUSDT",
-      "BOMEUSDT",
-      "JTOUSDT",
+      "ONEUSDT",
       "PIPPINUSDT",
+      "SOPHUSDT",
+      "RESOLVUSDT",
       "HUSDT"
     ]
   },
