@@ -8,16 +8,18 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-17T00:14:44+08:00",
+    "last_scan_at": "2026-08-17T00:45:32+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "ROBOUSDT",
-      "ETHFIUSDT",
-      "USELESSUSDT",
-      "ACUUSDT",
+      "BSBUSDT",
+      "BICOUSDT",
+      "CRVUSDT",
       "BIGTIMEUSDT",
-      "CHIPUSDT"
+      "ACUUSDT",
+      "ETHFIUSDT",
+      "ATHUSDT"
     ],
     "alt_watchlist": [
       {
@@ -25,26 +27,44 @@
         "actual_symbol": "ROBOUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 14.577039274924466,
-        "volume_ccy": 2478445900.0,
+        "change_pct": 10.878962536023048,
+        "volume_ccy": 2563585600.0,
         "trend_score": 6
       },
       {
-        "symbol": "ETHFIUSDT",
-        "actual_symbol": "ETHFIUSDT",
+        "symbol": "BSBUSDT",
+        "actual_symbol": "BSBUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 7.123171507313963,
-        "volume_ccy": 17949967.0,
+        "change_pct": 13.3220910623946,
+        "volume_ccy": 60508000.0,
         "trend_score": 5
       },
       {
-        "symbol": "USELESSUSDT",
-        "actual_symbol": "USELESSUSDT",
+        "symbol": "BICOUSDT",
+        "actual_symbol": "BICOUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 7.9008882655446495,
+        "volume_ccy": 3009063809.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "CRVUSDT",
+        "actual_symbol": "CRVUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.091858037578289,
+        "volume_ccy": 28502345.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "BIGTIMEUSDT",
+        "actual_symbol": "BIGTIMEUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 9.011102504518462,
-        "volume_ccy": 61726840.0,
+        "change_pct": 8.837485172004751,
+        "volume_ccy": 225894860.0,
         "trend_score": 4
       },
       {
@@ -52,48 +72,52 @@
         "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 7.732578098180573,
-        "volume_ccy": 81125670.0,
+        "change_pct": 6.8460490463215296,
+        "volume_ccy": 84018930.0,
         "trend_score": 4
       },
       {
-        "symbol": "BIGTIMEUSDT",
-        "actual_symbol": "BIGTIMEUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 5.932864949258384,
-        "volume_ccy": 211618500.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "CHIPUSDT",
-        "actual_symbol": "CHIPUSDT",
+        "symbol": "ETHFIUSDT",
+        "actual_symbol": "ETHFIUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 21.200157915515213,
-        "volume_ccy": 2434129900.0,
+        "change_pct": 7.479572595851668,
+        "volume_ccy": 19412711.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ATHUSDT",
+        "actual_symbol": "ATHUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 5.56576529272776,
+        "volume_ccy": 115448600.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-16T23:37:44+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-08-17T00:45:32+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "ROBOUSDT",
-      "ETHFIUSDT",
-      "USELESSUSDT",
-      "ACUUSDT",
+      "BSBUSDT",
+      "BICOUSDT",
+      "CRVUSDT",
       "BIGTIMEUSDT",
-      "CHIPUSDT"
+      "ACUUSDT",
+      "ETHFIUSDT",
+      "ATHUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "ROBOUSDT",
-      "ETHFIUSDT",
-      "USELESSUSDT",
-      "ACUUSDT",
+      "BSBUSDT",
+      "BICOUSDT",
+      "CRVUSDT",
       "BIGTIMEUSDT",
-      "CHIPUSDT"
+      "ACUUSDT",
+      "ETHFIUSDT",
+      "ATHUSDT"
     ]
   },
   "signals": {
