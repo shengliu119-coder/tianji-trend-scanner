@@ -8,63 +8,36 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-16T11:13:59+08:00",
+    "last_scan_at": "2026-08-16T12:03:37+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "PIEVERSEUSDT",
-      "SHELLUSDT",
-      "WLFIUSDT",
       "ENSOUSDT",
-      "BATUSDT",
+      "SOPHUSDT",
       "BASEDUSDT",
-      "UPUSDT",
-      "WALUSDT"
+      "OPNUSDT",
+      "ACUUSDT",
+      "ONTUSDT",
+      "WALUSDT",
+      "OPGUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "PIEVERSEUSDT",
-        "actual_symbol": "PIEVERSEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 4.39156035328753,
-        "volume_ccy": 7722890.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "SHELLUSDT",
-        "actual_symbol": "SHELLUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 4.350025290844712,
-        "volume_ccy": 7402610.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "WLFIUSDT",
-        "actual_symbol": "WLFIUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 4.135946772163286,
-        "volume_ccy": 196313670.0,
-        "trend_score": 7
-      },
       {
         "symbol": "ENSOUSDT",
         "actual_symbol": "ENSOUSDT",
         "side": "short",
         "side_score": 6,
-        "change_pct": 10.793131643499583,
-        "volume_ccy": 31991754.0,
+        "change_pct": 6.0319958038290125,
+        "volume_ccy": 30824452.0,
         "trend_score": 6
       },
       {
-        "symbol": "BATUSDT",
-        "actual_symbol": "BATUSDT",
+        "symbol": "SOPHUSDT",
+        "actual_symbol": "SOPHUSDT",
         "side": "short",
         "side_score": 6,
-        "change_pct": 4.206945936269241,
-        "volume_ccy": 9863830.0,
+        "change_pct": 4.559884559884551,
+        "volume_ccy": 122359800.0,
         "trend_score": 6
       },
       {
@@ -72,52 +45,79 @@
         "actual_symbol": "BASEDUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 13.63938789088491,
-        "volume_ccy": 278160620.0,
+        "change_pct": 14.65471092077088,
+        "volume_ccy": 368655930.0,
         "trend_score": 5
       },
       {
-        "symbol": "UPUSDT",
-        "actual_symbol": "UPUSDT",
+        "symbol": "OPNUSDT",
+        "actual_symbol": "OPNUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 13.163113534952911,
-        "volume_ccy": 5114860.0,
-        "trend_score": 3
+        "side_score": 4,
+        "change_pct": 9.972648853355762,
+        "volume_ccy": 56789240.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "ACUUSDT",
+        "actual_symbol": "ACUUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 8.853410740203184,
+        "volume_ccy": 60859150.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "ONTUSDT",
+        "actual_symbol": "ONTUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 4.7101449275362235,
+        "volume_ccy": 33959320.0,
+        "trend_score": 4
       },
       {
         "symbol": "WALUSDT",
         "actual_symbol": "WALUSDT",
         "side": "short",
         "side_score": 3,
-        "change_pct": 9.235209235209243,
-        "volume_ccy": 926784680.0,
+        "change_pct": 9.068982151471314,
+        "volume_ccy": 949534700.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "OPGUSDT",
+        "actual_symbol": "OPGUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 7.128132798090476,
+        "volume_ccy": 8539370.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-16T10:16:49+08:00",
+    "alt_watchlist_at": "2026-08-16T12:03:37+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "PIEVERSEUSDT",
-      "SHELLUSDT",
-      "WLFIUSDT",
       "ENSOUSDT",
-      "BATUSDT",
+      "SOPHUSDT",
       "BASEDUSDT",
-      "UPUSDT",
-      "WALUSDT"
+      "OPNUSDT",
+      "ACUUSDT",
+      "ONTUSDT",
+      "WALUSDT",
+      "OPGUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "PIEVERSEUSDT",
-      "SHELLUSDT",
-      "WLFIUSDT",
       "ENSOUSDT",
-      "BATUSDT",
+      "SOPHUSDT",
       "BASEDUSDT",
-      "UPUSDT",
-      "WALUSDT"
+      "OPNUSDT",
+      "ACUUSDT",
+      "ONTUSDT",
+      "WALUSDT",
+      "OPGUSDT"
     ]
   },
   "signals": {
