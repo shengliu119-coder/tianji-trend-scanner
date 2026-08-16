@@ -8,18 +8,18 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-17T01:44:12+08:00",
+    "last_scan_at": "2026-08-17T01:59:49+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "ROBOUSDT",
-      "BSBUSDT",
-      "BICOUSDT",
       "CRVUSDT",
-      "BIGTIMEUSDT",
-      "ACUUSDT",
-      "ETHFIUSDT",
-      "ATHUSDT"
+      "BSBUSDT",
+      "ONEUSDT",
+      "LITUSDT",
+      "BICOUSDT",
+      "RIVERUSDT",
+      "ATUSDT"
     ],
     "alt_watchlist": [
       {
@@ -27,8 +27,17 @@
         "actual_symbol": "ROBOUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 10.878962536023048,
-        "volume_ccy": 2563585600.0,
+        "change_pct": 10.149041873669272,
+        "volume_ccy": 2593834500.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "CRVUSDT",
+        "actual_symbol": "CRVUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 5.434782608695646,
+        "volume_ccy": 32714109.0,
         "trend_score": 6
       },
       {
@@ -36,88 +45,79 @@
         "actual_symbol": "BSBUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 13.3220910623946,
-        "volume_ccy": 60508000.0,
+        "change_pct": 12.878787878787874,
+        "volume_ccy": 73286310.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ONEUSDT",
+        "actual_symbol": "ONEUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 4.486251808972503,
+        "volume_ccy": 2551774800.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "LITUSDT",
+        "actual_symbol": "LITUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.0819045926978905,
+        "volume_ccy": 3372923.0,
         "trend_score": 5
       },
       {
         "symbol": "BICOUSDT",
         "actual_symbol": "BICOUSDT",
         "side": "short",
-        "side_score": 5,
-        "change_pct": 7.9008882655446495,
-        "volume_ccy": 3009063809.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "CRVUSDT",
-        "actual_symbol": "CRVUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 4.091858037578289,
-        "volume_ccy": 28502345.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "BIGTIMEUSDT",
-        "actual_symbol": "BIGTIMEUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 8.837485172004751,
-        "volume_ccy": 225894860.0,
+        "change_pct": 6.354359925788495,
+        "volume_ccy": 3045898941.0,
         "trend_score": 4
       },
       {
-        "symbol": "ACUUSDT",
-        "actual_symbol": "ACUUSDT",
+        "symbol": "RIVERUSDT",
+        "actual_symbol": "RIVERUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 6.8460490463215296,
-        "volume_ccy": 84018930.0,
+        "change_pct": 5.948372615039275,
+        "volume_ccy": 1415124.5,
         "trend_score": 4
       },
       {
-        "symbol": "ETHFIUSDT",
-        "actual_symbol": "ETHFIUSDT",
+        "symbol": "ATUSDT",
+        "actual_symbol": "ATUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 7.479572595851668,
-        "volume_ccy": 19412711.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ATHUSDT",
-        "actual_symbol": "ATHUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 5.56576529272776,
-        "volume_ccy": 115448600.0,
-        "trend_score": 3
+        "side_score": 4,
+        "change_pct": 4.139290407358739,
+        "volume_ccy": 3216470.0,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-08-17T00:45:32+08:00",
+    "alt_watchlist_at": "2026-08-17T01:59:49+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "ROBOUSDT",
-      "BSBUSDT",
-      "BICOUSDT",
       "CRVUSDT",
-      "BIGTIMEUSDT",
-      "ACUUSDT",
-      "ETHFIUSDT",
-      "ATHUSDT"
+      "BSBUSDT",
+      "ONEUSDT",
+      "LITUSDT",
+      "BICOUSDT",
+      "RIVERUSDT",
+      "ATUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "ROBOUSDT",
-      "BSBUSDT",
-      "BICOUSDT",
       "CRVUSDT",
-      "BIGTIMEUSDT",
-      "ACUUSDT",
-      "ETHFIUSDT",
-      "ATHUSDT"
+      "BSBUSDT",
+      "ONEUSDT",
+      "LITUSDT",
+      "BICOUSDT",
+      "RIVERUSDT",
+      "ATUSDT"
     ]
   },
   "signals": {
