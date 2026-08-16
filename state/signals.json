@@ -8,53 +8,61 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-17T05:35:52+08:00",
+    "last_scan_at": "2026-08-17T05:59:17+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "SHELLUSDT",
-      "ROBOUSDT",
+      "ATUSDT",
       "ONEUSDT",
-      "CRVUSDT",
-      "BICOUSDT",
       "SOPHUSDT",
-      "MUBARAKUSDT"
+      "ROBOUSDT",
+      "MUBARAKUSDT",
+      "BICOUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "SHELLUSDT",
-        "actual_symbol": "SHELLUSDT",
+        "symbol": "ATUSDT",
+        "actual_symbol": "ATUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 5.46259842519685,
-        "volume_ccy": 12671520.0,
+        "change_pct": 5.301524188204113,
+        "volume_ccy": 3399300.0,
         "trend_score": 7
+      },
+      {
+        "symbol": "ONEUSDT",
+        "actual_symbol": "ONEUSDT",
+        "side": "short",
+        "side_score": 7,
+        "change_pct": 4.761904761904765,
+        "volume_ccy": 2530638900.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "SOPHUSDT",
+        "actual_symbol": "SOPHUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 6.4524838012959105,
+        "volume_ccy": 142366100.0,
+        "trend_score": 6
       },
       {
         "symbol": "ROBOUSDT",
         "actual_symbol": "ROBOUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 6.619217081850535,
-        "volume_ccy": 2418532300.0,
+        "change_pct": 6.26780626780626,
+        "volume_ccy": 2362122100.0,
         "trend_score": 6
       },
       {
-        "symbol": "ONEUSDT",
-        "actual_symbol": "ONEUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 6.696428571428573,
-        "volume_ccy": 2437385100.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "CRVUSDT",
-        "actual_symbol": "CRVUSDT",
+        "symbol": "MUBARAKUSDT",
+        "actual_symbol": "MUBARAKUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 4.660840615896791,
-        "volume_ccy": 33746411.0,
+        "change_pct": 5.713748118414442,
+        "volume_ccy": 143851600.0,
         "trend_score": 5
       },
       {
@@ -62,50 +70,30 @@
         "actual_symbol": "BICOUSDT",
         "side": "short",
         "side_score": 4,
-        "change_pct": 12.991538078646098,
-        "volume_ccy": 3117216191.0,
+        "change_pct": 15.361445783132533,
+        "volume_ccy": 3130212165.0,
         "trend_score": 4
-      },
-      {
-        "symbol": "SOPHUSDT",
-        "actual_symbol": "SOPHUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 4.372469635627537,
-        "volume_ccy": 57466500.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 5.297010972379875,
-        "volume_ccy": 140861000.0,
-        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-17T04:40:55+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-08-17T05:59:17+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "SHELLUSDT",
-      "ROBOUSDT",
+      "ATUSDT",
       "ONEUSDT",
-      "CRVUSDT",
-      "BICOUSDT",
       "SOPHUSDT",
-      "MUBARAKUSDT"
+      "ROBOUSDT",
+      "MUBARAKUSDT",
+      "BICOUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "SHELLUSDT",
-      "ROBOUSDT",
+      "ATUSDT",
       "ONEUSDT",
-      "CRVUSDT",
-      "BICOUSDT",
       "SOPHUSDT",
-      "MUBARAKUSDT"
+      "ROBOUSDT",
+      "MUBARAKUSDT",
+      "BICOUSDT"
     ]
   },
   "signals": {
