@@ -2,57 +2,49 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "强",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-18T03:07:47+08:00",
+    "last_scan_at": "2026-08-18T03:44:43+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
       "ACUUSDT",
-      "CRCLUSDT",
       "EDENUSDT",
-      "MUBARAKUSDT",
-      "GIGGLEUSDT"
+      "ZECUSDT",
+      "GIGGLEUSDT",
+      "ALLOUSDT",
+      "PIEVERSEUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "ACUUSDT",
         "actual_symbol": "ACUUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 8.0006737409466,
-        "volume_ccy": 78692780.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "CRCLUSDT",
-        "actual_symbol": "CRCLUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 4.271844660194192,
-        "volume_ccy": 461742.4,
-        "trend_score": 7
+        "side_score": 6,
+        "change_pct": 9.876754536117764,
+        "volume_ccy": 78986840.0,
+        "trend_score": 6
       },
       {
         "symbol": "EDENUSDT",
         "actual_symbol": "EDENUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 14.181818181818187,
-        "volume_ccy": 204819103.0,
+        "change_pct": 12.008234217749308,
+        "volume_ccy": 213805950.0,
         "trend_score": 5
       },
       {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
+        "symbol": "ZECUSDT",
+        "actual_symbol": "ZECUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 4.2852843815828905,
-        "volume_ccy": 320541100.0,
+        "change_pct": 4.813301624082759,
+        "volume_ccy": 323943.5,
         "trend_score": 5
       },
       {
@@ -60,28 +52,48 @@
         "actual_symbol": "GIGGLEUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 8.431860609831986,
-        "volume_ccy": 468163.78,
+        "change_pct": 9.099407915238373,
+        "volume_ccy": 478650.58,
         "trend_score": 4
+      },
+      {
+        "symbol": "ALLOUSDT",
+        "actual_symbol": "ALLOUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 10.36228916111257,
+        "volume_ccy": 58330400.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "PIEVERSEUSDT",
+        "actual_symbol": "PIEVERSEUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 5.20870076425632,
+        "volume_ccy": 5032880.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-18T02:29:05+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-08-18T03:44:43+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
       "ACUUSDT",
-      "CRCLUSDT",
       "EDENUSDT",
-      "MUBARAKUSDT",
-      "GIGGLEUSDT"
+      "ZECUSDT",
+      "GIGGLEUSDT",
+      "ALLOUSDT",
+      "PIEVERSEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "ACUUSDT",
-      "CRCLUSDT",
       "EDENUSDT",
-      "MUBARAKUSDT",
-      "GIGGLEUSDT"
+      "ZECUSDT",
+      "GIGGLEUSDT",
+      "ALLOUSDT",
+      "PIEVERSEUSDT"
     ]
   },
   "signals": {
