@@ -8,92 +8,32 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-17T18:55:56+08:00",
+    "last_scan_at": "2026-08-17T19:19:40+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 1,
     "last_okx_discovery_symbols": [
-      "MUBARAKUSDT",
-      "RIVERUSDT",
-      "ESPUSDT",
-      "COREUSDT",
-      "RVNUSDT",
-      "MORPHOUSDT"
+      "RIVERUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 9.519704433497528,
-        "volume_ccy": 283893600.0,
-        "trend_score": 5
-      },
       {
         "symbol": "RIVERUSDT",
         "actual_symbol": "RIVERUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 7.077276205049735,
-        "volume_ccy": 2491944.1,
-        "trend_score": 5
-      },
-      {
-        "symbol": "ESPUSDT",
-        "actual_symbol": "ESPUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 4.352183249821047,
-        "volume_ccy": 47658700.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "COREUSDT",
-        "actual_symbol": "COREUSDT",
-        "side": "long",
         "side_score": 3,
-        "change_pct": 11.857506361323148,
-        "volume_ccy": 133832915.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "RVNUSDT",
-        "actual_symbol": "RVNUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 5.592347314201628,
-        "volume_ccy": 729002060.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "MORPHOUSDT",
-        "actual_symbol": "MORPHOUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 4.6082717724508715,
-        "volume_ccy": 542231.0,
+        "change_pct": 5.570392979778707,
+        "volume_ccy": 2538848.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-17T18:00:07+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-08-17T19:19:40+08:00",
+    "alt_watchlist_count": 1,
     "alt_watchlist_symbols": [
-      "MUBARAKUSDT",
-      "RIVERUSDT",
-      "ESPUSDT",
-      "COREUSDT",
-      "RVNUSDT",
-      "MORPHOUSDT"
+      "RIVERUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "MUBARAKUSDT",
-      "RIVERUSDT",
-      "ESPUSDT",
-      "COREUSDT",
-      "RVNUSDT",
-      "MORPHOUSDT"
+      "RIVERUSDT"
     ]
   },
   "signals": {
