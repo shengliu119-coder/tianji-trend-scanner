@@ -8,15 +8,16 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-18T06:59:44+08:00",
+    "last_scan_at": "2026-08-18T07:26:19+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
       "ACUUSDT",
+      "VIRTUALUSDT",
+      "CRCLUSDT",
       "GIGGLEUSDT",
       "ZECUSDT",
-      "PIEVERSEUSDT",
-      "USELESSUSDT"
+      "LAUSDT"
     ],
     "alt_watchlist": [
       {
@@ -24,17 +25,35 @@
         "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 10.511484928699515,
-        "volume_ccy": 79016510.0,
+        "change_pct": 14.186490710192738,
+        "volume_ccy": 79698610.0,
         "trend_score": 6
+      },
+      {
+        "symbol": "VIRTUALUSDT",
+        "actual_symbol": "VIRTUALUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 5.50824424714624,
+        "volume_ccy": 6269806.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "CRCLUSDT",
+        "actual_symbol": "CRCLUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.789833822091897,
+        "volume_ccy": 487579.4,
+        "trend_score": 5
       },
       {
         "symbol": "GIGGLEUSDT",
         "actual_symbol": "GIGGLEUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 7.892264328217986,
-        "volume_ccy": 489019.3,
+        "change_pct": 8.757508694277584,
+        "volume_ccy": 491265.02,
         "trend_score": 4
       },
       {
@@ -42,46 +61,39 @@
         "actual_symbol": "ZECUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 5.620863989477572,
-        "volume_ccy": 336455.72,
+        "change_pct": 5.5612643347445445,
+        "volume_ccy": 339681.88,
         "trend_score": 4
       },
       {
-        "symbol": "PIEVERSEUSDT",
-        "actual_symbol": "PIEVERSEUSDT",
-        "side": "long",
+        "symbol": "LAUSDT",
+        "actual_symbol": "LAUSDT",
+        "side": "short",
         "side_score": 3,
-        "change_pct": 11.08354011579818,
-        "volume_ccy": 7418070.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "USELESSUSDT",
-        "actual_symbol": "USELESSUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 7.273181704573864,
-        "volume_ccy": 51314350.0,
+        "change_pct": 4.99578414839797,
+        "volume_ccy": 37746860.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-18T06:19:32+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-08-18T07:26:19+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
       "ACUUSDT",
+      "VIRTUALUSDT",
+      "CRCLUSDT",
       "GIGGLEUSDT",
       "ZECUSDT",
-      "PIEVERSEUSDT",
-      "USELESSUSDT"
+      "LAUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "ACUUSDT",
+      "VIRTUALUSDT",
+      "CRCLUSDT",
       "GIGGLEUSDT",
       "ZECUSDT",
-      "PIEVERSEUSDT",
-      "USELESSUSDT"
+      "LAUSDT"
     ]
   },
   "signals": {
