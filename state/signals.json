@@ -8,25 +8,33 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-18T01:53:42+08:00",
+    "last_scan_at": "2026-08-18T02:29:05+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "MUBARAKUSDT",
+      "ACUUSDT",
+      "CRCLUSDT",
       "EDENUSDT",
-      "GIGGLEUSDT",
-      "SNDKUSDT",
-      "SPCXUSDT",
-      "MORPHOUSDT"
+      "MUBARAKUSDT",
+      "GIGGLEUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
+        "symbol": "ACUUSDT",
+        "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 5.892599711677074,
-        "volume_ccy": 278476100.0,
+        "change_pct": 8.0006737409466,
+        "volume_ccy": 78692780.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "CRCLUSDT",
+        "actual_symbol": "CRCLUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 4.271844660194192,
+        "volume_ccy": 461742.4,
         "trend_score": 7
       },
       {
@@ -34,66 +42,46 @@
         "actual_symbol": "EDENUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 12.093541202672599,
-        "volume_ccy": 186050606.0,
+        "change_pct": 14.181818181818187,
+        "volume_ccy": 204819103.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "MUBARAKUSDT",
+        "actual_symbol": "MUBARAKUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.2852843815828905,
+        "volume_ccy": 320541100.0,
         "trend_score": 5
       },
       {
         "symbol": "GIGGLEUSDT",
         "actual_symbol": "GIGGLEUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 8.485229415461983,
-        "volume_ccy": 378819.33,
-        "trend_score": 5
-      },
-      {
-        "symbol": "SNDKUSDT",
-        "actual_symbol": "SNDKUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 7.907116645611506,
-        "volume_ccy": 1477282.579,
-        "trend_score": 3
-      },
-      {
-        "symbol": "SPCXUSDT",
-        "actual_symbol": "SPCXUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 5.841188231933738,
-        "volume_ccy": 3779505.17,
-        "trend_score": 3
-      },
-      {
-        "symbol": "MORPHOUSDT",
-        "actual_symbol": "MORPHOUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 5.838942907005722,
-        "volume_ccy": 764549.0,
-        "trend_score": 3
+        "side_score": 4,
+        "change_pct": 8.431860609831986,
+        "volume_ccy": 468163.78,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-08-18T00:52:13+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-08-18T02:29:05+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "MUBARAKUSDT",
+      "ACUUSDT",
+      "CRCLUSDT",
       "EDENUSDT",
-      "GIGGLEUSDT",
-      "SNDKUSDT",
-      "SPCXUSDT",
-      "MORPHOUSDT"
+      "MUBARAKUSDT",
+      "GIGGLEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "MUBARAKUSDT",
+      "ACUUSDT",
+      "CRCLUSDT",
       "EDENUSDT",
-      "GIGGLEUSDT",
-      "SNDKUSDT",
-      "SPCXUSDT",
-      "MORPHOUSDT"
+      "MUBARAKUSDT",
+      "GIGGLEUSDT"
     ]
   },
   "signals": {
