@@ -8,12 +8,11 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-19T07:14:25+08:00",
+    "last_scan_at": "2026-08-19T07:41:02+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
       "PUMPUSDT",
-      "LIGHTUSDT",
       "APRUSDT",
       "EDENUSDT",
       "OUSDT",
@@ -25,44 +24,35 @@
         "actual_symbol": "PUMPUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 9.01490367139222,
-        "volume_ccy": 27077015000.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "LIGHTUSDT",
-        "actual_symbol": "LIGHTUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 6.155632984901277,
-        "volume_ccy": 9529518.0,
+        "change_pct": 11.074681238615664,
+        "volume_ccy": 29534218000.0,
         "trend_score": 7
       },
       {
         "symbol": "APRUSDT",
         "actual_symbol": "APRUSDT",
         "side": "short",
-        "side_score": 5,
-        "change_pct": 11.240310077519371,
-        "volume_ccy": 348866550.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 9.325287986834896,
+        "volume_ccy": 342826630.0,
+        "trend_score": 6
       },
       {
         "symbol": "EDENUSDT",
         "actual_symbol": "EDENUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 9.827696234843648,
-        "volume_ccy": 623961352.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 7.708508845829816,
+        "volume_ccy": 627119409.0,
+        "trend_score": 4
       },
       {
         "symbol": "OUSDT",
         "actual_symbol": "OUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 5.327510917030563,
-        "volume_ccy": 8704530.0,
+        "change_pct": 5.674378000872986,
+        "volume_ccy": 8481500.0,
         "trend_score": 4
       },
       {
@@ -70,16 +60,15 @@
         "actual_symbol": "METUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 5.082669932639315,
-        "volume_ccy": 3708173.0,
+        "change_pct": 5.466830466830461,
+        "volume_ccy": 3482169.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-19T06:25:21+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-08-19T07:41:02+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
       "PUMPUSDT",
-      "LIGHTUSDT",
       "APRUSDT",
       "EDENUSDT",
       "OUSDT",
@@ -89,7 +78,6 @@
       "BTCUSDT",
       "ETHUSDT",
       "PUMPUSDT",
-      "LIGHTUSDT",
       "APRUSDT",
       "EDENUSDT",
       "OUSDT",
