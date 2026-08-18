@@ -8,116 +8,92 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-19T01:52:58+08:00",
+    "last_scan_at": "2026-08-19T02:27:35+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "EDENUSDT",
-      "PIPPINUSDT",
       "AEVOUSDT",
       "APRUSDT",
       "TRIAUSDT",
-      "ENSOUSDT",
-      "PEOPLEUSDT",
-      "LIGHTUSDT"
+      "EDENUSDT",
+      "PIPPINUSDT",
+      "POLUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "EDENUSDT",
-        "actual_symbol": "EDENUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 10.675944333996023,
-        "volume_ccy": 617945306.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "PIPPINUSDT",
-        "actual_symbol": "PIPPINUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 6.096131301289582,
-        "volume_ccy": 189240760.0,
-        "trend_score": 7
-      },
       {
         "symbol": "AEVOUSDT",
         "actual_symbol": "AEVOUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 4.7452547452547424,
-        "volume_ccy": 19345706.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 5.685785536159612,
+        "volume_ccy": 21790370.0,
+        "trend_score": 7
       },
       {
         "symbol": "APRUSDT",
         "actual_symbol": "APRUSDT",
         "side": "short",
-        "side_score": 5,
-        "change_pct": 11.466372657111346,
-        "volume_ccy": 341038110.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 8.773841961852863,
+        "volume_ccy": 344341710.0,
+        "trend_score": 6
       },
       {
         "symbol": "TRIAUSDT",
         "actual_symbol": "TRIAUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 6.128532252295205,
-        "volume_ccy": 81458700.0,
+        "change_pct": 7.971624383792237,
+        "volume_ccy": 114308800.0,
         "trend_score": 5
       },
       {
-        "symbol": "ENSOUSDT",
-        "actual_symbol": "ENSOUSDT",
-        "side": "short",
+        "symbol": "EDENUSDT",
+        "actual_symbol": "EDENUSDT",
+        "side": "long",
         "side_score": 5,
-        "change_pct": 4.413651526815497,
-        "volume_ccy": 4858475.0,
+        "change_pct": 7.3441842000793995,
+        "volume_ccy": 623058433.0,
         "trend_score": 5
       },
       {
-        "symbol": "PEOPLEUSDT",
-        "actual_symbol": "PEOPLEUSDT",
+        "symbol": "PIPPINUSDT",
+        "actual_symbol": "PIPPINUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 5.526315789473685,
-        "volume_ccy": 1104430000.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 6.18010594467333,
+        "volume_ccy": 196722310.0,
+        "trend_score": 3
       },
       {
-        "symbol": "LIGHTUSDT",
-        "actual_symbol": "LIGHTUSDT",
+        "symbol": "POLUSDT",
+        "actual_symbol": "POLUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 4.350348027842231,
-        "volume_ccy": 9065957.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 4.818204932621411,
+        "volume_ccy": 94219230.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-19T01:01:20+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-08-19T02:27:35+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "EDENUSDT",
-      "PIPPINUSDT",
       "AEVOUSDT",
       "APRUSDT",
       "TRIAUSDT",
-      "ENSOUSDT",
-      "PEOPLEUSDT",
-      "LIGHTUSDT"
+      "EDENUSDT",
+      "PIPPINUSDT",
+      "POLUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "EDENUSDT",
-      "PIPPINUSDT",
       "AEVOUSDT",
       "APRUSDT",
       "TRIAUSDT",
-      "ENSOUSDT",
-      "PEOPLEUSDT",
-      "LIGHTUSDT"
+      "EDENUSDT",
+      "PIPPINUSDT",
+      "POLUSDT"
     ]
   },
   "signals": {
