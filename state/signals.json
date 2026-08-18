@@ -8,11 +8,14 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-18T14:01:44+08:00",
+    "last_scan_at": "2026-08-18T15:07:14+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 2,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
       "EDENUSDT",
+      "MONUSDT",
+      "OPGUSDT",
+      "HUSDT",
       "OFCUSDT"
     ],
     "alt_watchlist": [
@@ -20,31 +23,64 @@
         "symbol": "EDENUSDT",
         "actual_symbol": "EDENUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 11.527248261942152,
-        "volume_ccy": 293247608.0,
-        "trend_score": 4
+        "side_score": 6,
+        "change_pct": 19.588744588744593,
+        "volume_ccy": 336407140.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "MONUSDT",
+        "actual_symbol": "MONUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.2902426944031715,
+        "volume_ccy": 161418470.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "OPGUSDT",
+        "actual_symbol": "OPGUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 5.91403312671477,
+        "volume_ccy": 19002130.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "HUSDT",
+        "actual_symbol": "HUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 14.688372093023256,
+        "volume_ccy": 485814900.0,
+        "trend_score": 3
       },
       {
         "symbol": "OFCUSDT",
         "actual_symbol": "OFCUSDT",
         "side": "short",
         "side_score": 3,
-        "change_pct": 8.744728355246847,
-        "volume_ccy": 470658800.0,
+        "change_pct": 6.78549477566073,
+        "volume_ccy": 477216100.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-18T13:09:49+08:00",
-    "alt_watchlist_count": 2,
+    "alt_watchlist_at": "2026-08-18T15:07:14+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
       "EDENUSDT",
+      "MONUSDT",
+      "OPGUSDT",
+      "HUSDT",
       "OFCUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "EDENUSDT",
+      "MONUSDT",
+      "OPGUSDT",
+      "HUSDT",
       "OFCUSDT"
     ]
   },
