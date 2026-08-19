@@ -8,7 +8,7 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-19T18:54:46+08:00",
+    "last_scan_at": "2026-08-19T19:21:26+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
@@ -16,10 +16,10 @@
       "ACUUSDT",
       "ESPUSDT",
       "APRUSDT",
-      "PROSUSDT",
+      "SIGNUSDT",
       "ZROUSDT",
-      "UBUSDT",
-      "KMNOUSDT"
+      "KAITOUSDT",
+      "PROSUSDT"
     ],
     "alt_watchlist": [
       {
@@ -27,8 +27,8 @@
         "actual_symbol": "MUBARAKUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 11.729503291442251,
-        "volume_ccy": 142881800.0,
+        "change_pct": 16.130580892942866,
+        "volume_ccy": 261483200.0,
         "trend_score": 7
       },
       {
@@ -36,8 +36,8 @@
         "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 7.613012251795526,
-        "volume_ccy": 24734220.0,
+        "change_pct": 8.404876373626367,
+        "volume_ccy": 24525140.0,
         "trend_score": 7
       },
       {
@@ -45,67 +45,67 @@
         "actual_symbol": "ESPUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 7.220066518846996,
-        "volume_ccy": 69711600.0,
+        "change_pct": 7.816187699569638,
+        "volume_ccy": 80966200.0,
         "trend_score": 7
       },
       {
         "symbol": "APRUSDT",
         "actual_symbol": "APRUSDT",
         "side": "short",
-        "side_score": 6,
-        "change_pct": 12.954796030871,
-        "volume_ccy": 340199850.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 6.057328285559755,
+        "volume_ccy": 350680320.0,
+        "trend_score": 7
       },
       {
-        "symbol": "PROSUSDT",
-        "actual_symbol": "PROSUSDT",
+        "symbol": "SIGNUSDT",
+        "actual_symbol": "SIGNUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 8.84573894282632,
-        "volume_ccy": 1491334.0,
+        "change_pct": 8.258418406216668,
+        "volume_ccy": 49170000.0,
         "trend_score": 6
       },
       {
         "symbol": "ZROUSDT",
         "actual_symbol": "ZROUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 8.677207867335133,
-        "volume_ccy": 4459740.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "UBUSDT",
-        "actual_symbol": "UBUSDT",
-        "side": "short",
-        "side_score": 6,
-        "change_pct": 7.544458415663738,
-        "volume_ccy": 115922200.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "KMNOUSDT",
-        "actual_symbol": "KMNOUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 5.64561207378424,
-        "volume_ccy": 19805300.0,
+        "change_pct": 8.386930794957555,
+        "volume_ccy": 5203276.0,
         "trend_score": 5
+      },
+      {
+        "symbol": "KAITOUSDT",
+        "actual_symbol": "KAITOUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 5.734223300970865,
+        "volume_ccy": 74196906.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "PROSUSDT",
+        "actual_symbol": "PROSUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 7.684040838259006,
+        "volume_ccy": 1823945.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-19T17:52:45+08:00",
+    "alt_watchlist_at": "2026-08-19T19:21:26+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "MUBARAKUSDT",
       "ACUUSDT",
       "ESPUSDT",
       "APRUSDT",
-      "PROSUSDT",
+      "SIGNUSDT",
       "ZROUSDT",
-      "UBUSDT",
-      "KMNOUSDT"
+      "KAITOUSDT",
+      "PROSUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
@@ -114,10 +114,10 @@
       "ACUUSDT",
       "ESPUSDT",
       "APRUSDT",
-      "PROSUSDT",
+      "SIGNUSDT",
       "ZROUSDT",
-      "UBUSDT",
-      "KMNOUSDT"
+      "KAITOUSDT",
+      "PROSUSDT"
     ]
   },
   "signals": {
