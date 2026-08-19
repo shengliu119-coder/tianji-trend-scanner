@@ -8,56 +8,104 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-19T11:10:34+08:00",
+    "last_scan_at": "2026-08-19T12:01:59+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
+      "KAITOUSDT",
+      "LIGHTUSDT",
       "APRUSDT",
-      "OUSDT",
-      "TRIAUSDT"
+      "TRIAUSDT",
+      "METUSDT",
+      "OLUSDT",
+      "PROSUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "KAITOUSDT",
+        "actual_symbol": "KAITOUSDT",
+        "side": "short",
+        "side_score": 6,
+        "change_pct": 5.940902021772941,
+        "volume_ccy": 79767512.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "LIGHTUSDT",
+        "actual_symbol": "LIGHTUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 5.072046109510088,
+        "volume_ccy": 11623170.0,
+        "trend_score": 6
+      },
       {
         "symbol": "APRUSDT",
         "actual_symbol": "APRUSDT",
         "side": "short",
-        "side_score": 7,
-        "change_pct": 7.449088960342992,
-        "volume_ccy": 346300040.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "OUSDT",
-        "actual_symbol": "OUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 10.245994132250056,
-        "volume_ccy": 7083840.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 6.940736785904972,
+        "volume_ccy": 338884190.0,
+        "trend_score": 5
       },
       {
         "symbol": "TRIAUSDT",
         "actual_symbol": "TRIAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 29.252782193958666,
-        "volume_ccy": 1633748800.0,
+        "change_pct": 30.133137901551244,
+        "volume_ccy": 2516165600.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "METUSDT",
+        "actual_symbol": "METUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 9.52084629744865,
+        "volume_ccy": 4627025.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "OLUSDT",
+        "actual_symbol": "OLUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 5.825017405430482,
+        "volume_ccy": 370322100.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "PROSUSDT",
+        "actual_symbol": "PROSUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 5.370774263904034,
+        "volume_ccy": 1171118.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-19T10:13:38+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-08-19T12:01:59+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
+      "KAITOUSDT",
+      "LIGHTUSDT",
       "APRUSDT",
-      "OUSDT",
-      "TRIAUSDT"
+      "TRIAUSDT",
+      "METUSDT",
+      "OLUSDT",
+      "PROSUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "KAITOUSDT",
+      "LIGHTUSDT",
       "APRUSDT",
-      "OUSDT",
-      "TRIAUSDT"
+      "TRIAUSDT",
+      "METUSDT",
+      "OLUSDT",
+      "PROSUSDT"
     ]
   },
   "signals": {
