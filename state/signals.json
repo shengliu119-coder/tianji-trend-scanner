@@ -8,27 +8,27 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-19T22:52:54+08:00",
+    "last_scan_at": "2026-08-19T23:26:48+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "EDENUSDT",
-      "ACUUSDT",
       "MUBARAKUSDT",
-      "ZROUSDT",
-      "RSRUSDT",
+      "ACUUSDT",
+      "EDENUSDT",
       "BIOUSDT",
+      "ZROUSDT",
       "CRCLUSDT",
-      "ESPUSDT"
+      "RSRUSDT",
+      "MSTRUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "EDENUSDT",
-        "actual_symbol": "EDENUSDT",
+        "symbol": "MUBARAKUSDT",
+        "actual_symbol": "MUBARAKUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 6.605019815059437,
-        "volume_ccy": 281240183.0,
+        "change_pct": 21.223299815553048,
+        "volume_ccy": 651265800.0,
         "trend_score": 7
       },
       {
@@ -36,35 +36,17 @@
         "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 5.38511749347258,
-        "volume_ccy": 22806730.0,
+        "change_pct": 11.983920944644504,
+        "volume_ccy": 25077540.0,
         "trend_score": 7
       },
       {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
+        "symbol": "EDENUSDT",
+        "actual_symbol": "EDENUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 17.516522160916747,
-        "volume_ccy": 466512600.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "ZROUSDT",
-        "actual_symbol": "ZROUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 10.079101811686648,
-        "volume_ccy": 6664716.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "RSRUSDT",
-        "actual_symbol": "RSRUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 9.402460456942013,
-        "volume_ccy": 527468800.0,
+        "change_pct": 9.914040114613181,
+        "volume_ccy": 332943534.0,
         "trend_score": 6
       },
       {
@@ -72,8 +54,17 @@
         "actual_symbol": "BIOUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 8.194048104362011,
-        "volume_ccy": 76160793.0,
+        "change_pct": 12.717699473471042,
+        "volume_ccy": 105992770.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ZROUSDT",
+        "actual_symbol": "ZROUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 9.700446144040797,
+        "volume_ccy": 7524833.0,
         "trend_score": 5
       },
       {
@@ -81,43 +72,52 @@
         "actual_symbol": "CRCLUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.118704542335652,
-        "volume_ccy": 523131.1,
+        "change_pct": 9.054465026264856,
+        "volume_ccy": 582087.6,
         "trend_score": 5
       },
       {
-        "symbol": "ESPUSDT",
-        "actual_symbol": "ESPUSDT",
+        "symbol": "RSRUSDT",
+        "actual_symbol": "RSRUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 9.748994591596185,
-        "volume_ccy": 108258200.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 8.006962576153164,
+        "volume_ccy": 653863000.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "MSTRUSDT",
+        "actual_symbol": "MSTRUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 7.626140774152939,
+        "volume_ccy": 318138.73,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-08-19T22:09:48+08:00",
+    "alt_watchlist_at": "2026-08-19T23:26:48+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "EDENUSDT",
-      "ACUUSDT",
       "MUBARAKUSDT",
-      "ZROUSDT",
-      "RSRUSDT",
+      "ACUUSDT",
+      "EDENUSDT",
       "BIOUSDT",
+      "ZROUSDT",
       "CRCLUSDT",
-      "ESPUSDT"
+      "RSRUSDT",
+      "MSTRUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "EDENUSDT",
-      "ACUUSDT",
       "MUBARAKUSDT",
-      "ZROUSDT",
-      "RSRUSDT",
+      "ACUUSDT",
+      "EDENUSDT",
       "BIOUSDT",
+      "ZROUSDT",
       "CRCLUSDT",
-      "ESPUSDT"
+      "RSRUSDT",
+      "MSTRUSDT"
     ]
   },
   "signals": {
