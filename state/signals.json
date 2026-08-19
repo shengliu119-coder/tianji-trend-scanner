@@ -8,17 +8,17 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-20T07:02:00+08:00",
+    "last_scan_at": "2026-08-20T07:29:41+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "BOMEUSDT",
       "TRUMPUSDT",
+      "ZAMAUSDT",
       "INJUSDT",
-      "ENAUSDT",
-      "MUBARAKUSDT",
-      "HYPEUSDT",
       "ARBUSDT",
+      "METUSDT",
+      "SPXUSDT",
       "BRETTUSDT"
     ],
     "alt_watchlist": [
@@ -27,8 +27,8 @@
         "actual_symbol": "BOMEUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 14.548778895128638,
-        "volume_ccy": 14903003000.0,
+        "change_pct": 13.993218570683366,
+        "volume_ccy": 15163925000.0,
         "trend_score": 6
       },
       {
@@ -36,8 +36,17 @@
         "actual_symbol": "TRUMPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 20.895522388059703,
-        "volume_ccy": 39936512.2,
+        "change_pct": 28.093883357041253,
+        "volume_ccy": 58621265.2,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ZAMAUSDT",
+        "actual_symbol": "ZAMAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 13.688305373206914,
+        "volume_ccy": 212128660.0,
         "trend_score": 5
       },
       {
@@ -45,44 +54,35 @@
         "actual_symbol": "INJUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 12.70853778213937,
-        "volume_ccy": 2471863.2,
+        "change_pct": 13.271073973949374,
+        "volume_ccy": 2499137.5,
         "trend_score": 5
-      },
-      {
-        "symbol": "ENAUSDT",
-        "actual_symbol": "ENAUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 12.843042850264805,
-        "volume_ccy": 203024200.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 22.91067128677981,
-        "volume_ccy": 2219246800.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "HYPEUSDT",
-        "actual_symbol": "HYPEUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 22.37931386911047,
-        "volume_ccy": 7565478.4,
-        "trend_score": 3
       },
       {
         "symbol": "ARBUSDT",
         "actual_symbol": "ARBUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 17.845744680851062,
-        "volume_ccy": 175488930.0,
+        "change_pct": 18.599417527137952,
+        "volume_ccy": 203168794.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "METUSDT",
+        "actual_symbol": "METUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 16.86114352392066,
+        "volume_ccy": 14256587.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "SPXUSDT",
+        "actual_symbol": "SPXUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 15.07064364207221,
+        "volume_ccy": 2475135.0,
         "trend_score": 3
       },
       {
@@ -90,21 +90,21 @@
         "actual_symbol": "BRETTUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 14.804698169898934,
-        "volume_ccy": 90771000.0,
+        "change_pct": 14.52054794520547,
+        "volume_ccy": 92444400.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-20T06:20:04+08:00",
+    "alt_watchlist_at": "2026-08-20T07:29:41+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "BOMEUSDT",
       "TRUMPUSDT",
+      "ZAMAUSDT",
       "INJUSDT",
-      "ENAUSDT",
-      "MUBARAKUSDT",
-      "HYPEUSDT",
       "ARBUSDT",
+      "METUSDT",
+      "SPXUSDT",
       "BRETTUSDT"
     ],
     "active_scan_symbols": [
@@ -112,11 +112,11 @@
       "ETHUSDT",
       "BOMEUSDT",
       "TRUMPUSDT",
+      "ZAMAUSDT",
       "INJUSDT",
-      "ENAUSDT",
-      "MUBARAKUSDT",
-      "HYPEUSDT",
       "ARBUSDT",
+      "METUSDT",
+      "SPXUSDT",
       "BRETTUSDT"
     ]
   },
