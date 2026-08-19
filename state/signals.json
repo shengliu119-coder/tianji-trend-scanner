@@ -8,54 +8,72 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-20T00:21:25+08:00",
+    "last_scan_at": "2026-08-20T00:59:29+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "MUBARAKUSDT",
       "ACUUSDT",
-      "EDENUSDT",
-      "BIOUSDT",
+      "MUBARAKUSDT",
+      "REUSDT",
+      "BOMEUSDT",
+      "ESPUSDT",
+      "ZAMAUSDT",
       "ZROUSDT",
-      "CRCLUSDT",
-      "RSRUSDT",
-      "MSTRUSDT"
+      "BIOUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 21.223299815553048,
-        "volume_ccy": 651265800.0,
-        "trend_score": 7
-      },
       {
         "symbol": "ACUUSDT",
         "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 11.983920944644504,
-        "volume_ccy": 25077540.0,
+        "change_pct": 11.437140309637673,
+        "volume_ccy": 25672430.0,
         "trend_score": 7
       },
       {
-        "symbol": "EDENUSDT",
-        "actual_symbol": "EDENUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 9.914040114613181,
-        "volume_ccy": 332943534.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "BIOUSDT",
-        "actual_symbol": "BIOUSDT",
+        "symbol": "MUBARAKUSDT",
+        "actual_symbol": "MUBARAKUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 12.717699473471042,
-        "volume_ccy": 105992770.0,
+        "change_pct": 47.58892337073286,
+        "volume_ccy": 1409692300.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "REUSDT",
+        "actual_symbol": "REUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 27.21833227243794,
+        "volume_ccy": 56540860.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "BOMEUSDT",
+        "actual_symbol": "BOMEUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 14.2002600780234,
+        "volume_ccy": 10306136000.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ESPUSDT",
+        "actual_symbol": "ESPUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 12.13954142636095,
+        "volume_ccy": 139315000.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ZAMAUSDT",
+        "actual_symbol": "ZAMAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 10.455192034139396,
+        "volume_ccy": 143385330.0,
         "trend_score": 5
       },
       {
@@ -63,61 +81,43 @@
         "actual_symbol": "ZROUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 9.700446144040797,
-        "volume_ccy": 7524833.0,
+        "change_pct": 9.451530612244891,
+        "volume_ccy": 8167060.0,
         "trend_score": 5
       },
       {
-        "symbol": "CRCLUSDT",
-        "actual_symbol": "CRCLUSDT",
+        "symbol": "BIOUSDT",
+        "actual_symbol": "BIOUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 9.054465026264856,
-        "volume_ccy": 582087.6,
-        "trend_score": 5
-      },
-      {
-        "symbol": "RSRUSDT",
-        "actual_symbol": "RSRUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 8.006962576153164,
-        "volume_ccy": 653863000.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "MSTRUSDT",
-        "actual_symbol": "MSTRUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 7.626140774152939,
-        "volume_ccy": 318138.73,
-        "trend_score": 5
+        "side_score": 3,
+        "change_pct": 15.546558704453439,
+        "volume_ccy": 234403945.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-19T23:26:48+08:00",
+    "alt_watchlist_at": "2026-08-20T00:59:29+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "MUBARAKUSDT",
       "ACUUSDT",
-      "EDENUSDT",
-      "BIOUSDT",
+      "MUBARAKUSDT",
+      "REUSDT",
+      "BOMEUSDT",
+      "ESPUSDT",
+      "ZAMAUSDT",
       "ZROUSDT",
-      "CRCLUSDT",
-      "RSRUSDT",
-      "MSTRUSDT"
+      "BIOUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "MUBARAKUSDT",
       "ACUUSDT",
-      "EDENUSDT",
-      "BIOUSDT",
+      "MUBARAKUSDT",
+      "REUSDT",
+      "BOMEUSDT",
+      "ESPUSDT",
+      "ZAMAUSDT",
       "ZROUSDT",
-      "CRCLUSDT",
-      "RSRUSDT",
-      "MSTRUSDT"
+      "BIOUSDT"
     ]
   },
   "signals": {
