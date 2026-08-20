@@ -8,42 +8,32 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-21T01:56:14+08:00",
+    "last_scan_at": "2026-08-21T02:32:03+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "ROBOUSDT",
       "PEOPLEUSDT",
-      "XRPUSDT",
+      "ENAUSDT",
       "MOODENGUSDT",
-      "GALAUSDT"
+      "COREUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "ROBOUSDT",
-        "actual_symbol": "ROBOUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 16.397228637413395,
-        "volume_ccy": 632265600.0,
-        "trend_score": 4
-      },
       {
         "symbol": "PEOPLEUSDT",
         "actual_symbol": "PEOPLEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 27.170938044289628,
-        "volume_ccy": 2299596700.0,
+        "change_pct": 28.605467770253323,
+        "volume_ccy": 3223429100.0,
         "trend_score": 3
       },
       {
-        "symbol": "XRPUSDT",
-        "actual_symbol": "XRPUSDT",
+        "symbol": "ENAUSDT",
+        "actual_symbol": "ENAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 23.43764683770321,
-        "volume_ccy": 732553807.0,
+        "change_pct": 21.177136389360506,
+        "volume_ccy": 339330380.0,
         "trend_score": 3
       },
       {
@@ -51,37 +41,35 @@
         "actual_symbol": "MOODENGUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 18.878101402373243,
-        "volume_ccy": 130733500.0,
+        "change_pct": 20.796943231441052,
+        "volume_ccy": 155893660.0,
         "trend_score": 3
       },
       {
-        "symbol": "GALAUSDT",
-        "actual_symbol": "GALAUSDT",
+        "symbol": "COREUSDT",
+        "actual_symbol": "COREUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 17.991329479768776,
-        "volume_ccy": 5057404320.0,
+        "change_pct": 16.156382477626014,
+        "volume_ccy": 212199944.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-21T01:04:45+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-08-21T02:32:03+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "ROBOUSDT",
       "PEOPLEUSDT",
-      "XRPUSDT",
+      "ENAUSDT",
       "MOODENGUSDT",
-      "GALAUSDT"
+      "COREUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ROBOUSDT",
       "PEOPLEUSDT",
-      "XRPUSDT",
+      "ENAUSDT",
       "MOODENGUSDT",
-      "GALAUSDT"
+      "COREUSDT"
     ]
   },
   "signals": {
