@@ -8,68 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-20T09:12:44+08:00",
+    "last_scan_at": "2026-08-20T10:27:50+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "ETHWUSDT",
-      "BOMEUSDT",
+      "AEROUSDT",
       "METUSDT",
-      "ENAUSDT"
+      "PENDLEUSDT",
+      "UPUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ETHWUSDT",
-        "actual_symbol": "ETHWUSDT",
+        "symbol": "AEROUSDT",
+        "actual_symbol": "AEROUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 13.459950454170103,
-        "volume_ccy": 3605813.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "BOMEUSDT",
-        "actual_symbol": "BOMEUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 13.481828839390397,
-        "volume_ccy": 15076627000.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 13.440320962888674,
+        "volume_ccy": 5686760.0,
+        "trend_score": 4
       },
       {
         "symbol": "METUSDT",
         "actual_symbol": "METUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 23.171445289643064,
-        "volume_ccy": 26037408.0,
+        "change_pct": 26.248548199767725,
+        "volume_ccy": 32010352.0,
         "trend_score": 3
       },
       {
-        "symbol": "ENAUSDT",
-        "actual_symbol": "ENAUSDT",
+        "symbol": "PENDLEUSDT",
+        "actual_symbol": "PENDLEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 12.598045130927964,
-        "volume_ccy": 221769070.0,
+        "change_pct": 14.809160305343507,
+        "volume_ccy": 2070866.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "UPUSDT",
+        "actual_symbol": "UPUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 13.625521765056655,
+        "volume_ccy": 6073790.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-20T09:12:44+08:00",
+    "alt_watchlist_at": "2026-08-20T10:27:50+08:00",
     "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "ETHWUSDT",
-      "BOMEUSDT",
+      "AEROUSDT",
       "METUSDT",
-      "ENAUSDT"
+      "PENDLEUSDT",
+      "UPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ETHWUSDT",
-      "BOMEUSDT",
+      "AEROUSDT",
       "METUSDT",
-      "ENAUSDT"
+      "PENDLEUSDT",
+      "UPUSDT"
     ]
   },
   "signals": {
