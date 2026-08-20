@@ -8,116 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-20T08:01:09+08:00",
+    "last_scan_at": "2026-08-20T09:12:44+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
+      "ETHWUSDT",
       "BOMEUSDT",
-      "TRUMPUSDT",
-      "ZAMAUSDT",
-      "INJUSDT",
-      "ARBUSDT",
       "METUSDT",
-      "SPXUSDT",
-      "BRETTUSDT"
+      "ENAUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "ETHWUSDT",
+        "actual_symbol": "ETHWUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 13.459950454170103,
+        "volume_ccy": 3605813.0,
+        "trend_score": 7
+      },
       {
         "symbol": "BOMEUSDT",
         "actual_symbol": "BOMEUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 13.993218570683366,
-        "volume_ccy": 15163925000.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "TRUMPUSDT",
-        "actual_symbol": "TRUMPUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 28.093883357041253,
-        "volume_ccy": 58621265.2,
+        "change_pct": 13.481828839390397,
+        "volume_ccy": 15076627000.0,
         "trend_score": 5
-      },
-      {
-        "symbol": "ZAMAUSDT",
-        "actual_symbol": "ZAMAUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 13.688305373206914,
-        "volume_ccy": 212128660.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "INJUSDT",
-        "actual_symbol": "INJUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 13.271073973949374,
-        "volume_ccy": 2499137.5,
-        "trend_score": 5
-      },
-      {
-        "symbol": "ARBUSDT",
-        "actual_symbol": "ARBUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 18.599417527137952,
-        "volume_ccy": 203168794.0,
-        "trend_score": 3
       },
       {
         "symbol": "METUSDT",
         "actual_symbol": "METUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 16.86114352392066,
-        "volume_ccy": 14256587.0,
+        "change_pct": 23.171445289643064,
+        "volume_ccy": 26037408.0,
         "trend_score": 3
       },
       {
-        "symbol": "SPXUSDT",
-        "actual_symbol": "SPXUSDT",
+        "symbol": "ENAUSDT",
+        "actual_symbol": "ENAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 15.07064364207221,
-        "volume_ccy": 2475135.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "BRETTUSDT",
-        "actual_symbol": "BRETTUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 14.52054794520547,
-        "volume_ccy": 92444400.0,
+        "change_pct": 12.598045130927964,
+        "volume_ccy": 221769070.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-20T07:29:41+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-08-20T09:12:44+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
+      "ETHWUSDT",
       "BOMEUSDT",
-      "TRUMPUSDT",
-      "ZAMAUSDT",
-      "INJUSDT",
-      "ARBUSDT",
       "METUSDT",
-      "SPXUSDT",
-      "BRETTUSDT"
+      "ENAUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "ETHWUSDT",
       "BOMEUSDT",
-      "TRUMPUSDT",
-      "ZAMAUSDT",
-      "INJUSDT",
-      "ARBUSDT",
       "METUSDT",
-      "SPXUSDT",
-      "BRETTUSDT"
+      "ENAUSDT"
     ]
   },
   "signals": {
