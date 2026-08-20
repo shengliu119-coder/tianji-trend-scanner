@@ -8,18 +8,18 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-20T18:26:44+08:00",
+    "last_scan_at": "2026-08-20T19:00:26+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "NEIROUSDT",
-      "EDGEUSDT",
-      "BRETTUSDT",
+      "ENAUSDT",
       "BOMEUSDT",
-      "BIOUSDT",
       "USELESSUSDT",
+      "ORDIUSDT",
       "MSTRUSDT",
-      "PEPEUSDT"
+      "SPXUSDT",
+      "BRETTUSDT"
     ],
     "alt_watchlist": [
       {
@@ -27,44 +27,26 @@
         "actual_symbol": "NEIROUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 19.805142948410804,
-        "volume_ccy": 35665514000.0,
+        "change_pct": 22.90573835638212,
+        "volume_ccy": 40658873000.0,
         "trend_score": 5
       },
       {
-        "symbol": "EDGEUSDT",
-        "actual_symbol": "EDGEUSDT",
+        "symbol": "ENAUSDT",
+        "actual_symbol": "ENAUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 30.59409462824616,
-        "volume_ccy": 19927650.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "BRETTUSDT",
-        "actual_symbol": "BRETTUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 17.62619372442019,
-        "volume_ccy": 101246700.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 17.966061469087457,
+        "volume_ccy": 287968690.0,
+        "trend_score": 5
       },
       {
         "symbol": "BOMEUSDT",
         "actual_symbol": "BOMEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 55.02666666666667,
-        "volume_ccy": 70746815000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "BIOUSDT",
-        "actual_symbol": "BIOUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 33.89021479713605,
-        "volume_ccy": 513256495.0,
+        "change_pct": 66.1645113984802,
+        "volume_ccy": 96049432000.0,
         "trend_score": 3
       },
       {
@@ -72,8 +54,17 @@
         "actual_symbol": "USELESSUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 30.08086253369271,
-        "volume_ccy": 94678540.0,
+        "change_pct": 32.64248704663213,
+        "volume_ccy": 110004610.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ORDIUSDT",
+        "actual_symbol": "ORDIUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 27.838719241031722,
+        "volume_ccy": 5942484.8,
         "trend_score": 3
       },
       {
@@ -81,43 +72,52 @@
         "actual_symbol": "MSTRUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 23.353743688903204,
-        "volume_ccy": 632730.53,
+        "change_pct": 23.54207015278674,
+        "volume_ccy": 662722.28,
         "trend_score": 3
       },
       {
-        "symbol": "PEPEUSDT",
-        "actual_symbol": "1000PEPEUSDT",
+        "symbol": "SPXUSDT",
+        "actual_symbol": "SPXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 22.52321981424147,
-        "volume_ccy": 78624127000000.0,
+        "change_pct": 20.647773279352236,
+        "volume_ccy": 3165941.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "BRETTUSDT",
+        "actual_symbol": "BRETTUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 19.09465020576133,
+        "volume_ccy": 112037200.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-20T17:29:07+08:00",
+    "alt_watchlist_at": "2026-08-20T19:00:26+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "NEIROUSDT",
-      "EDGEUSDT",
-      "BRETTUSDT",
+      "ENAUSDT",
       "BOMEUSDT",
-      "BIOUSDT",
       "USELESSUSDT",
+      "ORDIUSDT",
       "MSTRUSDT",
-      "PEPEUSDT"
+      "SPXUSDT",
+      "BRETTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "NEIROUSDT",
-      "EDGEUSDT",
-      "BRETTUSDT",
+      "ENAUSDT",
       "BOMEUSDT",
-      "BIOUSDT",
       "USELESSUSDT",
+      "ORDIUSDT",
       "MSTRUSDT",
-      "PEPEUSDT"
+      "SPXUSDT",
+      "BRETTUSDT"
     ]
   },
   "signals": {
