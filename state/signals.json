@@ -8,52 +8,22 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-20T21:27:40+08:00",
+    "last_scan_at": "2026-08-20T22:12:31+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "NEIROUSDT",
-      "ORDIUSDT",
-      "BRETTUSDT",
-      "PNUTUSDT",
+      "MEGAUSDT",
       "XRPUSDT",
-      "SUSDT"
+      "PUMPUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "NEIROUSDT",
-        "actual_symbol": "NEIROUSDT",
+        "symbol": "MEGAUSDT",
+        "actual_symbol": "MEGAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 38.213716108452935,
-        "volume_ccy": 74024671000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ORDIUSDT",
-        "actual_symbol": "ORDIUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 28.415783274440514,
-        "volume_ccy": 8753731.9,
-        "trend_score": 3
-      },
-      {
-        "symbol": "BRETTUSDT",
-        "actual_symbol": "BRETTUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 27.329530019016584,
-        "volume_ccy": 159973100.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "PNUTUSDT",
-        "actual_symbol": "PNUTUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 26.64721614393386,
-        "volume_ccy": 284184350.0,
+        "change_pct": 21.59624413145541,
+        "volume_ccy": 177997380.0,
         "trend_score": 3
       },
       {
@@ -61,39 +31,33 @@
         "actual_symbol": "XRPUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 18.12487572081924,
-        "volume_ccy": 614860800.0,
+        "change_pct": 20.204302131421272,
+        "volume_ccy": 662655353.0,
         "trend_score": 3
       },
       {
-        "symbol": "SUSDT",
-        "actual_symbol": "SUSDT",
+        "symbol": "PUMPUSDT",
+        "actual_symbol": "PUMPUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 17.616822429906552,
-        "volume_ccy": 64564760.0,
+        "change_pct": 19.793745841650036,
+        "volume_ccy": 77949106000.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-20T20:32:04+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-08-20T22:12:31+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "NEIROUSDT",
-      "ORDIUSDT",
-      "BRETTUSDT",
-      "PNUTUSDT",
+      "MEGAUSDT",
       "XRPUSDT",
-      "SUSDT"
+      "PUMPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "NEIROUSDT",
-      "ORDIUSDT",
-      "BRETTUSDT",
-      "PNUTUSDT",
+      "MEGAUSDT",
       "XRPUSDT",
-      "SUSDT"
+      "PUMPUSDT"
     ]
   },
   "signals": {
