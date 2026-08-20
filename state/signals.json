@@ -8,68 +8,56 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-21T06:01:15+08:00",
+    "last_scan_at": "2026-08-21T06:35:26+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "ONTUSDT",
-      "ENAUSDT",
-      "QTUMUSDT",
-      "GASUSDT"
+      "CHIPUSDT",
+      "YBUSDT",
+      "ENAUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ONTUSDT",
-        "actual_symbol": "ONTUSDT",
+        "symbol": "CHIPUSDT",
+        "actual_symbol": "CHIPUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 39.34304766609039,
-        "volume_ccy": 252332420.0,
-        "trend_score": 3
+        "side_score": 6,
+        "change_pct": 11.415196254951383,
+        "volume_ccy": 516176100.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "YBUSDT",
+        "actual_symbol": "YBUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 15.650485436893208,
+        "volume_ccy": 6454981.0,
+        "trend_score": 5
       },
       {
         "symbol": "ENAUSDT",
         "actual_symbol": "ENAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 20.52817277878755,
-        "volume_ccy": 406685460.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "QTUMUSDT",
-        "actual_symbol": "QTUMUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 12.428908309058123,
-        "volume_ccy": 1469578.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "GASUSDT",
-        "actual_symbol": "GASUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 11.099959855479732,
-        "volume_ccy": 1035785.0,
+        "change_pct": 23.039999999999992,
+        "volume_ccy": 460143540.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-21T05:10:18+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-08-21T06:35:26+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "ONTUSDT",
-      "ENAUSDT",
-      "QTUMUSDT",
-      "GASUSDT"
+      "CHIPUSDT",
+      "YBUSDT",
+      "ENAUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ONTUSDT",
-      "ENAUSDT",
-      "QTUMUSDT",
-      "GASUSDT"
+      "CHIPUSDT",
+      "YBUSDT",
+      "ENAUSDT"
     ]
   },
   "signals": {
