@@ -2,48 +2,50 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "强",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-20T15:23:20+08:00",
+    "last_scan_at": "2026-08-20T16:09:14+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "BOMEUSDT",
       "CHIPUSDT",
-      "LITUSDT",
+      "EDGEUSDT",
+      "BOMEUSDT",
       "BIOUSDT",
-      "MONUSDT"
+      "ETHFIUSDT",
+      "MONUSDT",
+      "BRETTUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "BOMEUSDT",
-        "actual_symbol": "BOMEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 26.7654059772547,
-        "volume_ccy": 19050409000.0,
-        "trend_score": 7
-      },
       {
         "symbol": "CHIPUSDT",
         "actual_symbol": "CHIPUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 15.35448491970231,
-        "volume_ccy": 389847800.0,
+        "change_pct": 14.720812182741113,
+        "volume_ccy": 413004200.0,
         "trend_score": 6
       },
       {
-        "symbol": "LITUSDT",
-        "actual_symbol": "LITUSDT",
+        "symbol": "EDGEUSDT",
+        "actual_symbol": "EDGEUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 30.391101542877646,
+        "volume_ccy": 13100320.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "BOMEUSDT",
+        "actual_symbol": "BOMEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 24.732877912068663,
-        "volume_ccy": 18193552.0,
+        "change_pct": 48.279512969825284,
+        "volume_ccy": 46332192000.0,
         "trend_score": 3
       },
       {
@@ -51,8 +53,17 @@
         "actual_symbol": "BIOUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 20.44907778668805,
-        "volume_ccy": 379699961.0,
+        "change_pct": 24.810530514559233,
+        "volume_ccy": 430176948.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ETHFIUSDT",
+        "actual_symbol": "ETHFIUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 17.529631940112296,
+        "volume_ccy": 24983648.0,
         "trend_score": 3
       },
       {
@@ -60,28 +71,41 @@
         "actual_symbol": "MONUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 15.072328511432573,
-        "volume_ccy": 358462740.0,
+        "change_pct": 15.635179153094473,
+        "volume_ccy": 398662310.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "BRETTUSDT",
+        "actual_symbol": "BRETTUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 14.765283842794766,
+        "volume_ccy": 91545000.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-20T14:32:33+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-08-20T16:09:14+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
-      "BOMEUSDT",
       "CHIPUSDT",
-      "LITUSDT",
+      "EDGEUSDT",
+      "BOMEUSDT",
       "BIOUSDT",
-      "MONUSDT"
+      "ETHFIUSDT",
+      "MONUSDT",
+      "BRETTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "BOMEUSDT",
       "CHIPUSDT",
-      "LITUSDT",
+      "EDGEUSDT",
+      "BOMEUSDT",
       "BIOUSDT",
-      "MONUSDT"
+      "ETHFIUSDT",
+      "MONUSDT",
+      "BRETTUSDT"
     ]
   },
   "signals": {
