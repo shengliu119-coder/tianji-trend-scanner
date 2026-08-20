@@ -8,14 +8,14 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-21T03:10:48+08:00",
+    "last_scan_at": "2026-08-21T03:49:08+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
       "PEOPLEUSDT",
       "ENAUSDT",
-      "MOODENGUSDT",
-      "COREUSDT"
+      "COREUSDT",
+      "TURBOUSDT"
     ],
     "alt_watchlist": [
       {
@@ -23,8 +23,8 @@
         "actual_symbol": "PEOPLEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 28.605467770253323,
-        "volume_ccy": 3223429100.0,
+        "change_pct": 34.21683705667045,
+        "volume_ccy": 3754577900.0,
         "trend_score": 3
       },
       {
@@ -32,17 +32,8 @@
         "actual_symbol": "ENAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 21.177136389360506,
-        "volume_ccy": 339330380.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "MOODENGUSDT",
-        "actual_symbol": "MOODENGUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 20.796943231441052,
-        "volume_ccy": 155893660.0,
+        "change_pct": 22.021741566737642,
+        "volume_ccy": 385992140.0,
         "trend_score": 3
       },
       {
@@ -50,26 +41,35 @@
         "actual_symbol": "COREUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 16.156382477626014,
-        "volume_ccy": 212199944.0,
+        "change_pct": 21.29367327667611,
+        "volume_ccy": 247199945.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "TURBOUSDT",
+        "actual_symbol": "TURBOUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 17.802746566791512,
+        "volume_ccy": 3687672000.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-21T02:32:03+08:00",
+    "alt_watchlist_at": "2026-08-21T03:49:08+08:00",
     "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
       "PEOPLEUSDT",
       "ENAUSDT",
-      "MOODENGUSDT",
-      "COREUSDT"
+      "COREUSDT",
+      "TURBOUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "PEOPLEUSDT",
       "ENAUSDT",
-      "MOODENGUSDT",
-      "COREUSDT"
+      "COREUSDT",
+      "TURBOUSDT"
     ]
   },
   "signals": {
