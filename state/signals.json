@@ -8,116 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-21T20:27:50+08:00",
+    "last_scan_at": "2026-08-21T21:30:46+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "RIVERUSDT",
-      "ROBOUSDT",
-      "GALAUSDT",
-      "BERAUSDT",
-      "PUMPUSDT",
-      "WIFUSDT",
-      "YGGUSDT",
-      "IMXUSDT"
+      "ZORAUSDT",
+      "PIEVERSEUSDT",
+      "FARTCOINUSDT",
+      "MEUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "RIVERUSDT",
-        "actual_symbol": "RIVERUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 17.686567164179095,
-        "volume_ccy": 2184658.8,
-        "trend_score": 5
-      },
-      {
-        "symbol": "ROBOUSDT",
-        "actual_symbol": "ROBOUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 15.326821938392188,
-        "volume_ccy": 1375676500.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "GALAUSDT",
-        "actual_symbol": "GALAUSDT",
+        "symbol": "ZORAUSDT",
+        "actual_symbol": "ZORAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 28.6968264686023,
-        "volume_ccy": 8865552480.0,
+        "change_pct": 42.27897838899804,
+        "volume_ccy": 1174976290.0,
         "trend_score": 3
       },
       {
-        "symbol": "BERAUSDT",
-        "actual_symbol": "BERAUSDT",
+        "symbol": "PIEVERSEUSDT",
+        "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 25.25252525252524,
-        "volume_ccy": 51227805.5,
+        "change_pct": 22.196507468966963,
+        "volume_ccy": 17858200.0,
         "trend_score": 3
       },
       {
-        "symbol": "PUMPUSDT",
-        "actual_symbol": "PUMPUSDT",
+        "symbol": "FARTCOINUSDT",
+        "actual_symbol": "FARTCOINUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 18.245409501603028,
-        "volume_ccy": 81769849000.0,
+        "change_pct": 17.27214786488208,
+        "volume_ccy": 90584803.0,
         "trend_score": 3
       },
       {
-        "symbol": "WIFUSDT",
-        "actual_symbol": "WIFUSDT",
+        "symbol": "MEUSDT",
+        "actual_symbol": "MEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 17.732742241925266,
-        "volume_ccy": 119751618.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "YGGUSDT",
-        "actual_symbol": "YGGUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 16.480311132717535,
-        "volume_ccy": 97745543.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "IMXUSDT",
-        "actual_symbol": "IMXUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 15.442561205273067,
-        "volume_ccy": 17954525.0,
+        "change_pct": 16.06567933032839,
+        "volume_ccy": 17237929.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-21T19:55:50+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-08-21T21:30:46+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "RIVERUSDT",
-      "ROBOUSDT",
-      "GALAUSDT",
-      "BERAUSDT",
-      "PUMPUSDT",
-      "WIFUSDT",
-      "YGGUSDT",
-      "IMXUSDT"
+      "ZORAUSDT",
+      "PIEVERSEUSDT",
+      "FARTCOINUSDT",
+      "MEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "RIVERUSDT",
-      "ROBOUSDT",
-      "GALAUSDT",
-      "BERAUSDT",
-      "PUMPUSDT",
-      "WIFUSDT",
-      "YGGUSDT",
-      "IMXUSDT"
+      "ZORAUSDT",
+      "PIEVERSEUSDT",
+      "FARTCOINUSDT",
+      "MEUSDT"
     ]
   },
   "signals": {
