@@ -8,61 +8,52 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-21T08:43:19+08:00",
+    "last_scan_at": "2026-08-21T10:18:14+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
       "CHIPUSDT",
-      "CRVUSDT",
+      "BICOUSDT",
+      "GASUSDT",
       "YBUSDT",
-      "PUMPUSDT",
-      "ENAUSDT",
-      "STXUSDT"
+      "STXUSDT",
+      "RSRUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "CHIPUSDT",
         "actual_symbol": "CHIPUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 12.40614944583484,
-        "volume_ccy": 519821700.0,
-        "trend_score": 7
+        "side_score": 5,
+        "change_pct": 18.46702317290554,
+        "volume_ccy": 569489200.0,
+        "trend_score": 5
       },
       {
-        "symbol": "CRVUSDT",
-        "actual_symbol": "CRVUSDT",
-        "side": "long",
+        "symbol": "BICOUSDT",
+        "actual_symbol": "BICOUSDT",
+        "side": "short",
         "side_score": 5,
-        "change_pct": 13.304382155546762,
-        "volume_ccy": 53934182.0,
+        "change_pct": 17.81643671265747,
+        "volume_ccy": 1232513781.0,
         "trend_score": 5
+      },
+      {
+        "symbol": "GASUSDT",
+        "actual_symbol": "GASUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 17.731854838709673,
+        "volume_ccy": 3370350.0,
+        "trend_score": 3
       },
       {
         "symbol": "YBUSDT",
         "actual_symbol": "YBUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 13.721142559019176,
-        "volume_ccy": 10198369.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "PUMPUSDT",
-        "actual_symbol": "PUMPUSDT",
-        "side": "long",
         "side_score": 3,
-        "change_pct": 30.224756793022472,
-        "volume_ccy": 80608892000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ENAUSDT",
-        "actual_symbol": "ENAUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 24.623382134521545,
-        "volume_ccy": 506834830.0,
+        "change_pct": 15.927263347949447,
+        "volume_ccy": 13324016.0,
         "trend_score": 3
       },
       {
@@ -70,30 +61,39 @@
         "actual_symbol": "STXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 12.75272161741835,
-        "volume_ccy": 18189268.0,
+        "change_pct": 15.202444614209323,
+        "volume_ccy": 19542821.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "RSRUSDT",
+        "actual_symbol": "RSRUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 14.734299516908212,
+        "volume_ccy": 548056700.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-21T07:47:33+08:00",
+    "alt_watchlist_at": "2026-08-21T10:18:13+08:00",
     "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
       "CHIPUSDT",
-      "CRVUSDT",
+      "BICOUSDT",
+      "GASUSDT",
       "YBUSDT",
-      "PUMPUSDT",
-      "ENAUSDT",
-      "STXUSDT"
+      "STXUSDT",
+      "RSRUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "CHIPUSDT",
-      "CRVUSDT",
+      "BICOUSDT",
+      "GASUSDT",
       "YBUSDT",
-      "PUMPUSDT",
-      "ENAUSDT",
-      "STXUSDT"
+      "STXUSDT",
+      "RSRUSDT"
     ]
   },
   "signals": {
