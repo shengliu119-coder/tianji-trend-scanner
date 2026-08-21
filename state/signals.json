@@ -8,25 +8,45 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-22T06:14:40+08:00",
+    "last_scan_at": "2026-08-22T06:46:26+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "USELESSUSDT",
       "STXUSDT",
+      "ENSUSDT",
       "ZECUSDT",
-      "TRBUSDT",
+      "FLOKIUSDT",
+      "PENGUUSDT",
       "AAVEUSDT",
-      "IOTAUSDT",
       "WIFUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "USELESSUSDT",
+        "actual_symbol": "USELESSUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 34.65284974093264,
+        "volume_ccy": 190915480.0,
+        "trend_score": 3
+      },
       {
         "symbol": "STXUSDT",
         "actual_symbol": "STXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 27.214741318214024,
-        "volume_ccy": 48403052.0,
+        "change_pct": 33.23963457484187,
+        "volume_ccy": 49973958.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ENSUSDT",
+        "actual_symbol": "ENSUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 28.85472370766488,
+        "volume_ccy": 1662482.2,
         "trend_score": 3
       },
       {
@@ -34,17 +54,26 @@
         "actual_symbol": "ZECUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 25.192944726755577,
-        "volume_ccy": 1200104.2,
+        "change_pct": 27.9521439175618,
+        "volume_ccy": 1280369.99,
         "trend_score": 3
       },
       {
-        "symbol": "TRBUSDT",
-        "actual_symbol": "TRBUSDT",
+        "symbol": "FLOKIUSDT",
+        "actual_symbol": "FLOKIUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 21.851599727705917,
-        "volume_ccy": 453476.7,
+        "change_pct": 27.806563039723674,
+        "volume_ccy": 276652300000.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "PENGUUSDT",
+        "actual_symbol": "PENGUUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 23.77141252457175,
+        "volume_ccy": 7957208900.0,
         "trend_score": 3
       },
       {
@@ -52,17 +81,8 @@
         "actual_symbol": "AAVEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 21.09206609873755,
-        "volume_ccy": 1012076.15,
-        "trend_score": 3
-      },
-      {
-        "symbol": "IOTAUSDT",
-        "actual_symbol": "IOTAUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 18.323901913230937,
-        "volume_ccy": 29783700.0,
+        "change_pct": 23.24395962891222,
+        "volume_ccy": 1085348.88,
         "trend_score": 3
       },
       {
@@ -70,29 +90,33 @@
         "actual_symbol": "WIFUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 18.29268292682927,
-        "volume_ccy": 118418339.0,
+        "change_pct": 20.873786407766982,
+        "volume_ccy": 119844817.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-22T05:29:24+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-08-22T06:46:26+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "USELESSUSDT",
       "STXUSDT",
+      "ENSUSDT",
       "ZECUSDT",
-      "TRBUSDT",
+      "FLOKIUSDT",
+      "PENGUUSDT",
       "AAVEUSDT",
-      "IOTAUSDT",
       "WIFUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "USELESSUSDT",
       "STXUSDT",
+      "ENSUSDT",
       "ZECUSDT",
-      "TRBUSDT",
+      "FLOKIUSDT",
+      "PENGUUSDT",
       "AAVEUSDT",
-      "IOTAUSDT",
       "WIFUSDT"
     ]
   },
