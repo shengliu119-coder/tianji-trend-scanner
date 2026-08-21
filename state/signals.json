@@ -8,56 +8,56 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-22T03:56:22+08:00",
+    "last_scan_at": "2026-08-22T04:19:47+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
       "ROBOUSDT",
-      "GPSUSDT",
-      "OLUSDT"
+      "STXUSDT",
+      "ZECUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "ROBOUSDT",
         "actual_symbol": "ROBOUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 31.70731707317074,
-        "volume_ccy": 1350424200.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 31.679389312977108,
+        "volume_ccy": 1447986400.0,
+        "trend_score": 5
       },
       {
-        "symbol": "GPSUSDT",
-        "actual_symbol": "GPSUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 27.768181032993617,
-        "volume_ccy": 1570339530.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "OLUSDT",
-        "actual_symbol": "OLUSDT",
+        "symbol": "STXUSDT",
+        "actual_symbol": "STXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 17.4101760308657,
-        "volume_ccy": 469266600.0,
+        "change_pct": 26.192170818505332,
+        "volume_ccy": 45084031.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ZECUSDT",
+        "actual_symbol": "ZECUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 20.44918078311581,
+        "volume_ccy": 1099290.86,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-22T03:10:48+08:00",
+    "alt_watchlist_at": "2026-08-22T04:19:47+08:00",
     "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
       "ROBOUSDT",
-      "GPSUSDT",
-      "OLUSDT"
+      "STXUSDT",
+      "ZECUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "ROBOUSDT",
-      "GPSUSDT",
-      "OLUSDT"
+      "STXUSDT",
+      "ZECUSDT"
     ]
   },
   "signals": {
