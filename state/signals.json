@@ -8,35 +8,31 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-21T23:57:54+08:00",
+    "last_scan_at": "2026-08-22T00:26:57+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "PIEVERSEUSDT",
-      "BERAUSDT",
-      "FARTCOINUSDT",
-      "BRETTUSDT",
-      "PENGUUSDT",
-      "PEPEUSDT",
-      "TRBUSDT"
+      "BCHUSDT",
+      "KMNOUSDT",
+      "FARTCOINUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "PIEVERSEUSDT",
-        "actual_symbol": "PIEVERSEUSDT",
+        "symbol": "BCHUSDT",
+        "actual_symbol": "BCHUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 25.264606265876377,
-        "volume_ccy": 19223320.0,
+        "change_pct": 29.4883303411131,
+        "volume_ccy": 729293.95,
         "trend_score": 3
       },
       {
-        "symbol": "BERAUSDT",
-        "actual_symbol": "BERAUSDT",
+        "symbol": "KMNOUSDT",
+        "actual_symbol": "KMNOUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 23.38217338217338,
-        "volume_ccy": 60548419.4,
+        "change_pct": 22.749273959341718,
+        "volume_ccy": 34847700.0,
         "trend_score": 3
       },
       {
@@ -44,68 +40,24 @@
         "actual_symbol": "FARTCOINUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 21.16368286445012,
-        "volume_ccy": 96288689.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "BRETTUSDT",
-        "actual_symbol": "BRETTUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 18.75703670344518,
-        "volume_ccy": 143270900.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "PENGUUSDT",
-        "actual_symbol": "PENGUUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 18.68462530448489,
-        "volume_ccy": 6204594600.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "PEPEUSDT",
-        "actual_symbol": "1000PEPEUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 18.663668486990044,
-        "volume_ccy": 92998225000000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "TRBUSDT",
-        "actual_symbol": "TRBUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 18.382861091914293,
-        "volume_ccy": 367439.0,
+        "change_pct": 20.792079207920803,
+        "volume_ccy": 96390879.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-21T22:57:12+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-08-22T00:26:57+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "PIEVERSEUSDT",
-      "BERAUSDT",
-      "FARTCOINUSDT",
-      "BRETTUSDT",
-      "PENGUUSDT",
-      "PEPEUSDT",
-      "TRBUSDT"
+      "BCHUSDT",
+      "KMNOUSDT",
+      "FARTCOINUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "PIEVERSEUSDT",
-      "BERAUSDT",
-      "FARTCOINUSDT",
-      "BRETTUSDT",
-      "PENGUUSDT",
-      "PEPEUSDT",
-      "TRBUSDT"
+      "BCHUSDT",
+      "KMNOUSDT",
+      "FARTCOINUSDT"
     ]
   },
   "signals": {
