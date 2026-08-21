@@ -2,42 +2,60 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "强",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-21T16:05:50+08:00",
+    "last_scan_at": "2026-08-21T17:01:20+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "GALAUSDT",
+      "PEOPLEUSDT",
+      "NEIROUSDT",
+      "ENAUSDT",
+      "BOMEUSDT",
       "SSVUSDT",
       "BCHUSDT",
-      "BOMEUSDT",
-      "GALAUSDT",
-      "MOODENGUSDT",
-      "XPLUSDT",
-      "PEPEUSDT",
-      "PYTHUSDT"
+      "SPKUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "SSVUSDT",
-        "actual_symbol": "SSVUSDT",
+        "symbol": "GALAUSDT",
+        "actual_symbol": "GALAUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 30.353430353430355,
+        "volume_ccy": 6080340000.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "PEOPLEUSDT",
+        "actual_symbol": "PEOPLEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 31.747443308136948,
-        "volume_ccy": 877086.2,
+        "change_pct": 57.801634744418706,
+        "volume_ccy": 7265928000.0,
         "trend_score": 3
       },
       {
-        "symbol": "BCHUSDT",
-        "actual_symbol": "BCHUSDT",
+        "symbol": "NEIROUSDT",
+        "actual_symbol": "NEIROUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 20.7236842105263,
-        "volume_ccy": 385762.31,
+        "change_pct": 57.42519901180344,
+        "volume_ccy": 632285351000.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ENAUSDT",
+        "actual_symbol": "ENAUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 47.77076652529223,
+        "volume_ccy": 1434157200.0,
         "trend_score": 3
       },
       {
@@ -45,79 +63,61 @@
         "actual_symbol": "BOMEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 20.671229024092995,
-        "volume_ccy": 240441028000.0,
+        "change_pct": 35.633286810886254,
+        "volume_ccy": 243325789000.0,
         "trend_score": 3
       },
       {
-        "symbol": "GALAUSDT",
-        "actual_symbol": "GALAUSDT",
+        "symbol": "SSVUSDT",
+        "actual_symbol": "SSVUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 20.113314447592064,
-        "volume_ccy": 5071946440.0,
+        "change_pct": 24.213286713286728,
+        "volume_ccy": 1998255.0,
         "trend_score": 3
       },
       {
-        "symbol": "MOODENGUSDT",
-        "actual_symbol": "MOODENGUSDT",
+        "symbol": "BCHUSDT",
+        "actual_symbol": "BCHUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 16.423637759017655,
-        "volume_ccy": 225424290.0,
+        "change_pct": 23.653934652554064,
+        "volume_ccy": 459596.85,
         "trend_score": 3
       },
       {
-        "symbol": "XPLUSDT",
-        "actual_symbol": "XPLUSDT",
+        "symbol": "SPKUSDT",
+        "actual_symbol": "SPKUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 16.363859562975687,
-        "volume_ccy": 358013910.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "PEPEUSDT",
-        "actual_symbol": "1000PEPEUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 16.189502385821392,
-        "volume_ccy": 90470827000000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "PYTHUSDT",
-        "actual_symbol": "PYTHUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 15.632346027268444,
-        "volume_ccy": 47626510.0,
+        "change_pct": 22.184531886024438,
+        "volume_ccy": 809739600.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-21T15:23:16+08:00",
+    "alt_watchlist_at": "2026-08-21T17:01:20+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "GALAUSDT",
+      "PEOPLEUSDT",
+      "NEIROUSDT",
+      "ENAUSDT",
+      "BOMEUSDT",
       "SSVUSDT",
       "BCHUSDT",
-      "BOMEUSDT",
-      "GALAUSDT",
-      "MOODENGUSDT",
-      "XPLUSDT",
-      "PEPEUSDT",
-      "PYTHUSDT"
+      "SPKUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "GALAUSDT",
+      "PEOPLEUSDT",
+      "NEIROUSDT",
+      "ENAUSDT",
+      "BOMEUSDT",
       "SSVUSDT",
       "BCHUSDT",
-      "BOMEUSDT",
-      "GALAUSDT",
-      "MOODENGUSDT",
-      "XPLUSDT",
-      "PEPEUSDT",
-      "PYTHUSDT"
+      "SPKUSDT"
     ]
   },
   "signals": {
