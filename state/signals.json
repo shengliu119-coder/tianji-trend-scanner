@@ -8,31 +8,25 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-22T05:00:14+08:00",
+    "last_scan_at": "2026-08-22T05:29:24+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "ROBOUSDT",
       "STXUSDT",
-      "ZECUSDT"
+      "ZECUSDT",
+      "TRBUSDT",
+      "AAVEUSDT",
+      "IOTAUSDT",
+      "WIFUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "ROBOUSDT",
-        "actual_symbol": "ROBOUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 31.679389312977108,
-        "volume_ccy": 1447986400.0,
-        "trend_score": 5
-      },
       {
         "symbol": "STXUSDT",
         "actual_symbol": "STXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 26.192170818505332,
-        "volume_ccy": 45084031.0,
+        "change_pct": 27.214741318214024,
+        "volume_ccy": 48403052.0,
         "trend_score": 3
       },
       {
@@ -40,24 +34,66 @@
         "actual_symbol": "ZECUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 20.44918078311581,
-        "volume_ccy": 1099290.86,
+        "change_pct": 25.192944726755577,
+        "volume_ccy": 1200104.2,
+        "trend_score": 3
+      },
+      {
+        "symbol": "TRBUSDT",
+        "actual_symbol": "TRBUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 21.851599727705917,
+        "volume_ccy": 453476.7,
+        "trend_score": 3
+      },
+      {
+        "symbol": "AAVEUSDT",
+        "actual_symbol": "AAVEUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 21.09206609873755,
+        "volume_ccy": 1012076.15,
+        "trend_score": 3
+      },
+      {
+        "symbol": "IOTAUSDT",
+        "actual_symbol": "IOTAUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 18.323901913230937,
+        "volume_ccy": 29783700.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "WIFUSDT",
+        "actual_symbol": "WIFUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 18.29268292682927,
+        "volume_ccy": 118418339.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-22T04:19:47+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-08-22T05:29:24+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "ROBOUSDT",
       "STXUSDT",
-      "ZECUSDT"
+      "ZECUSDT",
+      "TRBUSDT",
+      "AAVEUSDT",
+      "IOTAUSDT",
+      "WIFUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ROBOUSDT",
       "STXUSDT",
-      "ZECUSDT"
+      "ZECUSDT",
+      "TRBUSDT",
+      "AAVEUSDT",
+      "IOTAUSDT",
+      "WIFUSDT"
     ]
   },
   "signals": {
