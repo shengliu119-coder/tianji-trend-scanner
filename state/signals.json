@@ -8,52 +8,45 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-22T09:23:38+08:00",
+    "last_scan_at": "2026-08-22T10:37:05+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "TRBUSDT",
+      "ZECUSDT",
       "STXUSDT",
-      "ENSUSDT",
-      "FLOKIUSDT",
-      "ETCUSDT",
       "WIFUSDT",
-      "FARTCOINUSDT"
+      "ZENUSDT",
+      "DASHUSDT",
+      "TRUMPUSDT",
+      "ETCUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "TRBUSDT",
+        "actual_symbol": "TRBUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 51.846877098723965,
+        "volume_ccy": 814341.6,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ZECUSDT",
+        "actual_symbol": "ZECUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 42.51230413384116,
+        "volume_ccy": 1601014.71,
+        "trend_score": 3
+      },
       {
         "symbol": "STXUSDT",
         "actual_symbol": "STXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 36.55030800821355,
-        "volume_ccy": 62227579.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ENSUSDT",
-        "actual_symbol": "ENSUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 36.38564825005502,
-        "volume_ccy": 3256842.9,
-        "trend_score": 3
-      },
-      {
-        "symbol": "FLOKIUSDT",
-        "actual_symbol": "FLOKIUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 26.960576515472656,
-        "volume_ccy": 349371100000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ETCUSDT",
-        "actual_symbol": "ETCUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 25.83786880549985,
-        "volume_ccy": 5536081.8,
+        "change_pct": 35.98409542743538,
+        "volume_ccy": 67025222.0,
         "trend_score": 3
       },
       {
@@ -61,39 +54,70 @@
         "actual_symbol": "WIFUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 25.616355983162958,
-        "volume_ccy": 123995072.0,
+        "change_pct": 30.108827085852486,
+        "volume_ccy": 125566235.0,
         "trend_score": 3
       },
       {
-        "symbol": "FARTCOINUSDT",
-        "actual_symbol": "FARTCOINUSDT",
+        "symbol": "ZENUSDT",
+        "actual_symbol": "ZENUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 21.682464454976298,
-        "volume_ccy": 114767074.0,
+        "change_pct": 30.055370985603552,
+        "volume_ccy": 925162.5,
+        "trend_score": 3
+      },
+      {
+        "symbol": "DASHUSDT",
+        "actual_symbol": "DASHUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 28.915304606240728,
+        "volume_ccy": 589865.84,
+        "trend_score": 3
+      },
+      {
+        "symbol": "TRUMPUSDT",
+        "actual_symbol": "TRUMPUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 28.82991556091678,
+        "volume_ccy": 109571871.7,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ETCUSDT",
+        "actual_symbol": "ETCUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 24.795139870019778,
+        "volume_ccy": 6859301.6,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-22T09:23:38+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-08-22T10:37:05+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "TRBUSDT",
+      "ZECUSDT",
       "STXUSDT",
-      "ENSUSDT",
-      "FLOKIUSDT",
-      "ETCUSDT",
       "WIFUSDT",
-      "FARTCOINUSDT"
+      "ZENUSDT",
+      "DASHUSDT",
+      "TRUMPUSDT",
+      "ETCUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "TRBUSDT",
+      "ZECUSDT",
       "STXUSDT",
-      "ENSUSDT",
-      "FLOKIUSDT",
-      "ETCUSDT",
       "WIFUSDT",
-      "FARTCOINUSDT"
+      "ZENUSDT",
+      "DASHUSDT",
+      "TRUMPUSDT",
+      "ETCUSDT"
     ]
   },
   "signals": {
