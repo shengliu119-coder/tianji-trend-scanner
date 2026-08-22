@@ -8,12 +8,13 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-23T01:58:59+08:00",
+    "last_scan_at": "2026-08-23T02:28:33+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
       "STXUSDT",
-      "POPCATUSDT",
+      "DASHUSDT",
+      "ZENUSDT",
       "MUBARAKUSDT",
       "PYTHUSDT"
     ],
@@ -23,17 +24,26 @@
         "actual_symbol": "STXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 24.791914387633778,
-        "volume_ccy": 91726250.0,
+        "change_pct": 26.404169079328316,
+        "volume_ccy": 105826294.0,
         "trend_score": 3
       },
       {
-        "symbol": "POPCATUSDT",
-        "actual_symbol": "POPCATUSDT",
+        "symbol": "DASHUSDT",
+        "actual_symbol": "DASHUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 17.997616209773536,
-        "volume_ccy": 50776770.0,
+        "change_pct": 20.963172804532597,
+        "volume_ccy": 1448067.24,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ZENUSDT",
+        "actual_symbol": "ZENUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 14.749383730484796,
+        "volume_ccy": 2379969.7,
         "trend_score": 3
       },
       {
@@ -41,8 +51,8 @@
         "actual_symbol": "MUBARAKUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 14.22347153900211,
-        "volume_ccy": 969090300.0,
+        "change_pct": 12.569521690767516,
+        "volume_ccy": 964845100.0,
         "trend_score": 3
       },
       {
@@ -50,16 +60,17 @@
         "actual_symbol": "PYTHUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 8.711885500933406,
-        "volume_ccy": 97311920.0,
+        "change_pct": 11.115789473684211,
+        "volume_ccy": 102668510.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-23T01:05:06+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-08-23T02:28:33+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
       "STXUSDT",
-      "POPCATUSDT",
+      "DASHUSDT",
+      "ZENUSDT",
       "MUBARAKUSDT",
       "PYTHUSDT"
     ],
@@ -67,7 +78,8 @@
       "BTCUSDT",
       "ETHUSDT",
       "STXUSDT",
-      "POPCATUSDT",
+      "DASHUSDT",
+      "ZENUSDT",
       "MUBARAKUSDT",
       "PYTHUSDT"
     ]
