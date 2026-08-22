@@ -8,44 +8,34 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-22T08:05:41+08:00",
+    "last_scan_at": "2026-08-22T09:23:38+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
+      "STXUSDT",
       "ENSUSDT",
-      "PEPEUSDT",
-      "PENGUUSDT",
       "FLOKIUSDT",
-      "AAVEUSDT",
-      "APRUSDT",
-      "ETCUSDT"
+      "ETCUSDT",
+      "WIFUSDT",
+      "FARTCOINUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "STXUSDT",
+        "actual_symbol": "STXUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 36.55030800821355,
+        "volume_ccy": 62227579.0,
+        "trend_score": 3
+      },
       {
         "symbol": "ENSUSDT",
         "actual_symbol": "ENSUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 31.21810516973597,
-        "volume_ccy": 1981953.1,
-        "trend_score": 3
-      },
-      {
-        "symbol": "PEPEUSDT",
-        "actual_symbol": "1000PEPEUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 28.540237055520905,
-        "volume_ccy": 144270273000000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "PENGUUSDT",
-        "actual_symbol": "PENGUUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 24.40758293838864,
-        "volume_ccy": 8199398100.0,
+        "change_pct": 36.38564825005502,
+        "volume_ccy": 3256842.9,
         "trend_score": 3
       },
       {
@@ -53,26 +43,8 @@
         "actual_symbol": "FLOKIUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 24.391285775309687,
-        "volume_ccy": 322391100000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "AAVEUSDT",
-        "actual_symbol": "AAVEUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 23.837854189775136,
-        "volume_ccy": 1120367.38,
-        "trend_score": 3
-      },
-      {
-        "symbol": "APRUSDT",
-        "actual_symbol": "APRUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 20.74643249176729,
-        "volume_ccy": 99175700.0,
+        "change_pct": 26.960576515472656,
+        "volume_ccy": 349371100000.0,
         "trend_score": 3
       },
       {
@@ -80,32 +52,48 @@
         "actual_symbol": "ETCUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 20.164075993091533,
-        "volume_ccy": 3871425.2,
+        "change_pct": 25.83786880549985,
+        "volume_ccy": 5536081.8,
+        "trend_score": 3
+      },
+      {
+        "symbol": "WIFUSDT",
+        "actual_symbol": "WIFUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 25.616355983162958,
+        "volume_ccy": 123995072.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "FARTCOINUSDT",
+        "actual_symbol": "FARTCOINUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 21.682464454976298,
+        "volume_ccy": 114767074.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-22T08:05:41+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-08-22T09:23:38+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
+      "STXUSDT",
       "ENSUSDT",
-      "PEPEUSDT",
-      "PENGUUSDT",
       "FLOKIUSDT",
-      "AAVEUSDT",
-      "APRUSDT",
-      "ETCUSDT"
+      "ETCUSDT",
+      "WIFUSDT",
+      "FARTCOINUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "STXUSDT",
       "ENSUSDT",
-      "PEPEUSDT",
-      "PENGUUSDT",
       "FLOKIUSDT",
-      "AAVEUSDT",
-      "APRUSDT",
-      "ETCUSDT"
+      "ETCUSDT",
+      "WIFUSDT",
+      "FARTCOINUSDT"
     ]
   },
   "signals": {
