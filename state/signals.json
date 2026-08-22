@@ -8,41 +8,21 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-23T05:58:49+08:00",
+    "last_scan_at": "2026-08-23T06:22:58+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 2,
     "last_okx_discovery_symbols": [
-      "MUBARAKUSDT",
-      "STXUSDT",
       "PUMPUSDT",
       "ZROUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 19.33223606865742,
-        "volume_ccy": 1014355500.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "STXUSDT",
-        "actual_symbol": "STXUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 26.37969094922738,
-        "volume_ccy": 124479256.0,
-        "trend_score": 3
-      },
-      {
         "symbol": "PUMPUSDT",
         "actual_symbol": "PUMPUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 25.938050868798808,
-        "volume_ccy": 94402087000.0,
+        "change_pct": 23.59355638166046,
+        "volume_ccy": 96447851000.0,
         "trend_score": 3
       },
       {
@@ -50,24 +30,20 @@
         "actual_symbol": "ZROUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 15.77602942679064,
-        "volume_ccy": 15811165.0,
+        "change_pct": 16.673346693386783,
+        "volume_ccy": 17769297.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-23T05:04:14+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-08-23T06:22:58+08:00",
+    "alt_watchlist_count": 2,
     "alt_watchlist_symbols": [
-      "MUBARAKUSDT",
-      "STXUSDT",
       "PUMPUSDT",
       "ZROUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "MUBARAKUSDT",
-      "STXUSDT",
       "PUMPUSDT",
       "ZROUSDT"
     ]
