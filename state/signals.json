@@ -8,32 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-23T00:42:07+08:00",
+    "last_scan_at": "2026-08-23T01:05:06+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 1,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "SHELLUSDT"
+      "STXUSDT",
+      "POPCATUSDT",
+      "MUBARAKUSDT",
+      "PYTHUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "SHELLUSDT",
-        "actual_symbol": "SHELLUSDT",
+        "symbol": "STXUSDT",
+        "actual_symbol": "STXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 11.008366358432403,
-        "volume_ccy": 34063380.0,
+        "change_pct": 24.791914387633778,
+        "volume_ccy": 91726250.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "POPCATUSDT",
+        "actual_symbol": "POPCATUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 17.997616209773536,
+        "volume_ccy": 50776770.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "MUBARAKUSDT",
+        "actual_symbol": "MUBARAKUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 14.22347153900211,
+        "volume_ccy": 969090300.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "PYTHUSDT",
+        "actual_symbol": "PYTHUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 8.711885500933406,
+        "volume_ccy": 97311920.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-22T23:48:31+08:00",
-    "alt_watchlist_count": 1,
+    "alt_watchlist_at": "2026-08-23T01:05:06+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "SHELLUSDT"
+      "STXUSDT",
+      "POPCATUSDT",
+      "MUBARAKUSDT",
+      "PYTHUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "SHELLUSDT"
+      "STXUSDT",
+      "POPCATUSDT",
+      "MUBARAKUSDT",
+      "PYTHUSDT"
     ]
   },
   "signals": {
