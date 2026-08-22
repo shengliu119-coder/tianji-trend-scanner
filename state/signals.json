@@ -8,56 +8,32 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-22T21:08:41+08:00",
+    "last_scan_at": "2026-08-22T21:48:12+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 1,
     "last_okx_discovery_symbols": [
-      "BEATUSDT",
-      "LITUSDT",
-      "PUMPUSDT"
+      "BEATUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "BEATUSDT",
         "actual_symbol": "BEATUSDT",
         "side": "short",
-        "side_score": 6,
-        "change_pct": 17.042971595047344,
-        "volume_ccy": 964247453.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "LITUSDT",
-        "actual_symbol": "LITUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 19.744633604737235,
-        "volume_ccy": 30055072.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "PUMPUSDT",
-        "actual_symbol": "PUMPUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 15.401567091087177,
-        "volume_ccy": 79592677000.0,
-        "trend_score": 3
+        "side_score": 7,
+        "change_pct": 12.076583210603827,
+        "volume_ccy": 956080937.0,
+        "trend_score": 7
       }
     ],
-    "alt_watchlist_at": "2026-08-22T20:26:17+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-08-22T21:48:12+08:00",
+    "alt_watchlist_count": 1,
     "alt_watchlist_symbols": [
-      "BEATUSDT",
-      "LITUSDT",
-      "PUMPUSDT"
+      "BEATUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "BEATUSDT",
-      "LITUSDT",
-      "PUMPUSDT"
+      "BEATUSDT"
     ]
   },
   "signals": {
