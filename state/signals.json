@@ -8,53 +8,41 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-23T04:40:20+08:00",
+    "last_scan_at": "2026-08-23T05:04:14+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "STXUSDT",
-      "DASHUSDT",
-      "ZECUSDT",
       "MUBARAKUSDT",
-      "ZROUSDT",
-      "BONKUSDT",
-      "PYTHUSDT"
+      "STXUSDT",
+      "PUMPUSDT",
+      "ZROUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "MUBARAKUSDT",
+        "actual_symbol": "MUBARAKUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 19.33223606865742,
+        "volume_ccy": 1014355500.0,
+        "trend_score": 4
+      },
       {
         "symbol": "STXUSDT",
         "actual_symbol": "STXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 25.185608223872073,
-        "volume_ccy": 113915351.0,
+        "change_pct": 26.37969094922738,
+        "volume_ccy": 124479256.0,
         "trend_score": 3
       },
       {
-        "symbol": "DASHUSDT",
-        "actual_symbol": "DASHUSDT",
+        "symbol": "PUMPUSDT",
+        "actual_symbol": "PUMPUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 24.971264367816108,
-        "volume_ccy": 1575310.66,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ZECUSDT",
-        "actual_symbol": "ZECUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 24.20103473762011,
-        "volume_ccy": 2120316.36,
-        "trend_score": 3
-      },
-      {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 19.69147005444647,
-        "volume_ccy": 994528500.0,
+        "change_pct": 25.938050868798808,
+        "volume_ccy": 94402087000.0,
         "trend_score": 3
       },
       {
@@ -62,50 +50,26 @@
         "actual_symbol": "ZROUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 13.593847432966111,
-        "volume_ccy": 14807497.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "BONKUSDT",
-        "actual_symbol": "1000BONKUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 12.57606490872211,
-        "volume_ccy": 6214204500000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "PYTHUSDT",
-        "actual_symbol": "PYTHUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 12.366737739872068,
-        "volume_ccy": 103050330.0,
+        "change_pct": 15.77602942679064,
+        "volume_ccy": 15811165.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-23T03:49:11+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-08-23T05:04:14+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "STXUSDT",
-      "DASHUSDT",
-      "ZECUSDT",
       "MUBARAKUSDT",
-      "ZROUSDT",
-      "BONKUSDT",
-      "PYTHUSDT"
+      "STXUSDT",
+      "PUMPUSDT",
+      "ZROUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "STXUSDT",
-      "DASHUSDT",
-      "ZECUSDT",
       "MUBARAKUSDT",
-      "ZROUSDT",
-      "BONKUSDT",
-      "PYTHUSDT"
+      "STXUSDT",
+      "PUMPUSDT",
+      "ZROUSDT"
     ]
   },
   "signals": {
