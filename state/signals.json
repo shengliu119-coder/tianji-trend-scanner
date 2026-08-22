@@ -8,36 +8,54 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-22T11:26:46+08:00",
+    "last_scan_at": "2026-08-22T12:07:50+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "TRBUSDT",
-      "ZECUSDT",
-      "STXUSDT",
-      "WIFUSDT",
-      "ZENUSDT",
-      "DASHUSDT",
+      "BEATUSDT",
+      "MUBARAKUSDT",
       "TRUMPUSDT",
-      "ETCUSDT"
+      "TRBUSDT",
+      "STXUSDT",
+      "MOVEUSDT",
+      "BONKUSDT",
+      "BRETTUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "BEATUSDT",
+        "actual_symbol": "BEATUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 47.323704333050124,
+        "volume_ccy": 890409749.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "MUBARAKUSDT",
+        "actual_symbol": "MUBARAKUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 39.70912738214645,
+        "volume_ccy": 571631500.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "TRUMPUSDT",
+        "actual_symbol": "TRUMPUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 61.16098144823459,
+        "volume_ccy": 157059126.5,
+        "trend_score": 3
+      },
       {
         "symbol": "TRBUSDT",
         "actual_symbol": "TRBUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 51.846877098723965,
-        "volume_ccy": 814341.6,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ZECUSDT",
-        "actual_symbol": "ZECUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 42.51230413384116,
-        "volume_ccy": 1601014.71,
+        "change_pct": 38.840188806473364,
+        "volume_ccy": 1444721.9,
         "trend_score": 3
       },
       {
@@ -45,79 +63,61 @@
         "actual_symbol": "STXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 35.98409542743538,
-        "volume_ccy": 67025222.0,
+        "change_pct": 34.75728155339806,
+        "volume_ccy": 71701796.0,
         "trend_score": 3
       },
       {
-        "symbol": "WIFUSDT",
-        "actual_symbol": "WIFUSDT",
+        "symbol": "MOVEUSDT",
+        "actual_symbol": "MOVEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 30.108827085852486,
-        "volume_ccy": 125566235.0,
+        "change_pct": 29.85902819436112,
+        "volume_ccy": 868927280.0,
         "trend_score": 3
       },
       {
-        "symbol": "ZENUSDT",
-        "actual_symbol": "ZENUSDT",
+        "symbol": "BONKUSDT",
+        "actual_symbol": "1000BONKUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 30.055370985603552,
-        "volume_ccy": 925162.5,
+        "change_pct": 28.338391502276185,
+        "volume_ccy": 7539739100000.0,
         "trend_score": 3
       },
       {
-        "symbol": "DASHUSDT",
-        "actual_symbol": "DASHUSDT",
+        "symbol": "BRETTUSDT",
+        "actual_symbol": "BRETTUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 28.915304606240728,
-        "volume_ccy": 589865.84,
-        "trend_score": 3
-      },
-      {
-        "symbol": "TRUMPUSDT",
-        "actual_symbol": "TRUMPUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 28.82991556091678,
-        "volume_ccy": 109571871.7,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ETCUSDT",
-        "actual_symbol": "ETCUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 24.795139870019778,
-        "volume_ccy": 6859301.6,
+        "change_pct": 27.88461538461539,
+        "volume_ccy": 157862500.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-22T10:37:05+08:00",
+    "alt_watchlist_at": "2026-08-22T12:07:50+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "TRBUSDT",
-      "ZECUSDT",
-      "STXUSDT",
-      "WIFUSDT",
-      "ZENUSDT",
-      "DASHUSDT",
+      "BEATUSDT",
+      "MUBARAKUSDT",
       "TRUMPUSDT",
-      "ETCUSDT"
+      "TRBUSDT",
+      "STXUSDT",
+      "MOVEUSDT",
+      "BONKUSDT",
+      "BRETTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "TRBUSDT",
-      "ZECUSDT",
-      "STXUSDT",
-      "WIFUSDT",
-      "ZENUSDT",
-      "DASHUSDT",
+      "BEATUSDT",
+      "MUBARAKUSDT",
       "TRUMPUSDT",
-      "ETCUSDT"
+      "TRBUSDT",
+      "STXUSDT",
+      "MOVEUSDT",
+      "BONKUSDT",
+      "BRETTUSDT"
     ]
   },
   "signals": {
