@@ -8,27 +8,36 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-23T22:02:26+08:00",
+    "last_scan_at": "2026-08-23T22:30:50+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "PENDLEUSDT",
+      "TRUMPUSDT",
+      "EIGENUSDT",
       "SPKUSDT",
       "ZORAUSDT",
-      "INJUSDT",
-      "LDOUSDT",
-      "EDGEUSDT",
       "ZENUSDT",
-      "BOMEUSDT"
+      "METUSDT",
+      "XPLUSDT",
+      "DASHUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "PENDLEUSDT",
-        "actual_symbol": "PENDLEUSDT",
+        "symbol": "TRUMPUSDT",
+        "actual_symbol": "TRUMPUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 9.589867310012066,
-        "volume_ccy": 1749532.0,
+        "change_pct": 20.284399832705976,
+        "volume_ccy": 402673504.8,
+        "trend_score": 7
+      },
+      {
+        "symbol": "EIGENUSDT",
+        "actual_symbol": "EIGENUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 14.681970349115259,
+        "volume_ccy": 17659255.0,
         "trend_score": 7
       },
       {
@@ -36,8 +45,8 @@
         "actual_symbol": "SPKUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 8.849045691150954,
-        "volume_ccy": 117311700.0,
+        "change_pct": 12.68011527377522,
+        "volume_ccy": 184550400.0,
         "trend_score": 7
       },
       {
@@ -45,35 +54,8 @@
         "actual_symbol": "ZORAUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 6.743648960739031,
-        "volume_ccy": 298568000.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "INJUSDT",
-        "actual_symbol": "INJUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 6.093489148580964,
-        "volume_ccy": 1563123.3,
-        "trend_score": 7
-      },
-      {
-        "symbol": "LDOUSDT",
-        "actual_symbol": "LDOUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 6.085753803596132,
-        "volume_ccy": 16187320.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "EDGEUSDT",
-        "actual_symbol": "EDGEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 5.657748049052393,
-        "volume_ccy": 5916660.0,
+        "change_pct": 12.391749330814052,
+        "volume_ccy": 378079480.0,
         "trend_score": 7
       },
       {
@@ -81,43 +63,61 @@
         "actual_symbol": "ZENUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 5.559815950920246,
-        "volume_ccy": 998179.9,
+        "change_pct": 9.850517439632048,
+        "volume_ccy": 1053680.3,
         "trend_score": 7
       },
       {
-        "symbol": "BOMEUSDT",
-        "actual_symbol": "BOMEUSDT",
+        "symbol": "METUSDT",
+        "actual_symbol": "METUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 8.238006562028922,
-        "volume_ccy": 20989132000.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 9.543378995433791,
+        "volume_ccy": 12410254.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "XPLUSDT",
+        "actual_symbol": "XPLUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 9.410156660708653,
+        "volume_ccy": 348620540.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "DASHUSDT",
+        "actual_symbol": "DASHUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 9.38053097345133,
+        "volume_ccy": 940893.73,
+        "trend_score": 7
       }
     ],
-    "alt_watchlist_at": "2026-08-23T21:16:13+08:00",
+    "alt_watchlist_at": "2026-08-23T22:30:50+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "PENDLEUSDT",
+      "TRUMPUSDT",
+      "EIGENUSDT",
       "SPKUSDT",
       "ZORAUSDT",
-      "INJUSDT",
-      "LDOUSDT",
-      "EDGEUSDT",
       "ZENUSDT",
-      "BOMEUSDT"
+      "METUSDT",
+      "XPLUSDT",
+      "DASHUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "PENDLEUSDT",
+      "TRUMPUSDT",
+      "EIGENUSDT",
       "SPKUSDT",
       "ZORAUSDT",
-      "INJUSDT",
-      "LDOUSDT",
-      "EDGEUSDT",
       "ZENUSDT",
-      "BOMEUSDT"
+      "METUSDT",
+      "XPLUSDT",
+      "DASHUSDT"
     ]
   },
   "signals": {
