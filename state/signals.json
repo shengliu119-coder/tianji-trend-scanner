@@ -8,36 +8,45 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-24T04:13:42+08:00",
-    "last_candidates": 1,
+    "last_scan_at": "2026-08-24T04:42:37+08:00",
+    "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "ZAMAUSDT",
       "GRASSUSDT",
+      "BRETTUSDT",
+      "MINAUSDT",
       "CHIPUSDT",
-      "TRUMPUSDT",
-      "PENGUUSDT",
-      "ZORAUSDT",
-      "IMXUSDT",
-      "SPKUSDT"
+      "ZAMAUSDT",
+      "METUSDT",
+      "UBUSDT",
+      "PENGUUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "ZAMAUSDT",
-        "actual_symbol": "ZAMAUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 12.048192771084343,
-        "volume_ccy": 201672080.0,
-        "trend_score": 7
-      },
       {
         "symbol": "GRASSUSDT",
         "actual_symbol": "GRASSUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 11.321370309951064,
-        "volume_ccy": 9774111.0,
+        "change_pct": 18.229680816057915,
+        "volume_ccy": 12587319.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "BRETTUSDT",
+        "actual_symbol": "BRETTUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 10.962821734985702,
+        "volume_ccy": 66889300.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "MINAUSDT",
+        "actual_symbol": "MINAUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 7.742998352553551,
+        "volume_ccy": 13130667.0,
         "trend_score": 7
       },
       {
@@ -45,79 +54,70 @@
         "actual_symbol": "CHIPUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 12.465940054495912,
-        "volume_ccy": 511806500.0,
+        "change_pct": 11.347517730496449,
+        "volume_ccy": 519144100.0,
         "trend_score": 6
       },
       {
-        "symbol": "TRUMPUSDT",
-        "actual_symbol": "TRUMPUSDT",
+        "symbol": "ZAMAUSDT",
+        "actual_symbol": "ZAMAUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 9.890109890109903,
-        "volume_ccy": 384962713.2,
+        "change_pct": 8.750698194004833,
+        "volume_ccy": 210711650.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "METUSDT",
+        "actual_symbol": "METUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 8.703535811423402,
+        "volume_ccy": 12190846.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "UBUSDT",
+        "actual_symbol": "UBUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 8.507787640261265,
+        "volume_ccy": 55099100.0,
         "trend_score": 6
       },
       {
         "symbol": "PENGUUSDT",
         "actual_symbol": "PENGUUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 13.451511991657982,
-        "volume_ccy": 6404579800.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "ZORAUSDT",
-        "actual_symbol": "ZORAUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 14.450422751729436,
-        "volume_ccy": 755063610.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "IMXUSDT",
-        "actual_symbol": "IMXUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 8.76623376623377,
-        "volume_ccy": 9110900.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "SPKUSDT",
-        "actual_symbol": "SPKUSDT",
-        "side": "long",
         "side_score": 3,
-        "change_pct": 27.65237020316028,
-        "volume_ccy": 754216800.0,
+        "change_pct": 17.963307013469574,
+        "volume_ccy": 7457126900.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-24T03:20:49+08:00",
+    "alt_watchlist_at": "2026-08-24T04:42:37+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "ZAMAUSDT",
       "GRASSUSDT",
+      "BRETTUSDT",
+      "MINAUSDT",
       "CHIPUSDT",
-      "TRUMPUSDT",
-      "PENGUUSDT",
-      "ZORAUSDT",
-      "IMXUSDT",
-      "SPKUSDT"
+      "ZAMAUSDT",
+      "METUSDT",
+      "UBUSDT",
+      "PENGUUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ZAMAUSDT",
       "GRASSUSDT",
+      "BRETTUSDT",
+      "MINAUSDT",
       "CHIPUSDT",
-      "TRUMPUSDT",
-      "PENGUUSDT",
-      "ZORAUSDT",
-      "IMXUSDT",
-      "SPKUSDT"
+      "ZAMAUSDT",
+      "METUSDT",
+      "UBUSDT",
+      "PENGUUSDT"
     ]
   },
   "signals": {
