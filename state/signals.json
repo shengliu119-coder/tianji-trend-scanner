@@ -8,15 +8,17 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-23T16:47:38+08:00",
+    "last_scan_at": "2026-08-23T17:20:54+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
       "YBUSDT",
+      "ENAUSDT",
       "USELESSUSDT",
-      "BILLUSDT",
       "ZROUSDT",
-      "PUMPUSDT"
+      "PUMPUSDT",
+      "MONUSDT",
+      "LITUSDT"
     ],
     "alt_watchlist": [
       {
@@ -24,35 +26,35 @@
         "actual_symbol": "YBUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 6.25068900892955,
-        "volume_ccy": 14615163.0,
+        "change_pct": 13.14871102105144,
+        "volume_ccy": 25475968.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "ENAUSDT",
+        "actual_symbol": "ENAUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 9.8122587819716,
+        "volume_ccy": 1213088520.0,
         "trend_score": 7
       },
       {
         "symbol": "USELESSUSDT",
         "actual_symbol": "USELESSUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 5.527950310559018,
-        "volume_ccy": 70077340.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "BILLUSDT",
-        "actual_symbol": "BILLUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 4.669260700389118,
-        "volume_ccy": 142589000.0,
-        "trend_score": 4
+        "side_score": 6,
+        "change_pct": 4.194941394201111,
+        "volume_ccy": 70683880.0,
+        "trend_score": 6
       },
       {
         "symbol": "ZROUSDT",
         "actual_symbol": "ZROUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 22.434486897379468,
-        "volume_ccy": 40097394.0,
+        "change_pct": 21.793116933906933,
+        "volume_ccy": 46834658.0,
         "trend_score": 3
       },
       {
@@ -60,28 +62,50 @@
         "actual_symbol": "PUMPUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 10.734947503749726,
-        "volume_ccy": 96585735000.0,
+        "change_pct": 17.135147290308065,
+        "volume_ccy": 95848736000.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "MONUSDT",
+        "actual_symbol": "MONUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 7.076001497566452,
+        "volume_ccy": 330448770.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "LITUSDT",
+        "actual_symbol": "LITUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 6.1969111969112,
+        "volume_ccy": 15205615.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-23T15:47:53+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-08-23T17:20:54+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
       "YBUSDT",
+      "ENAUSDT",
       "USELESSUSDT",
-      "BILLUSDT",
       "ZROUSDT",
-      "PUMPUSDT"
+      "PUMPUSDT",
+      "MONUSDT",
+      "LITUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "YBUSDT",
+      "ENAUSDT",
       "USELESSUSDT",
-      "BILLUSDT",
       "ZROUSDT",
-      "PUMPUSDT"
+      "PUMPUSDT",
+      "MONUSDT",
+      "LITUSDT"
     ]
   },
   "signals": {
