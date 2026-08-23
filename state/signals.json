@@ -2,38 +2,86 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-23T15:09:23+08:00",
+    "last_scan_at": "2026-08-23T15:47:53+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 1,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "USELESSUSDT"
+      "YBUSDT",
+      "USELESSUSDT",
+      "BILLUSDT",
+      "ZROUSDT",
+      "PUMPUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "YBUSDT",
+        "actual_symbol": "YBUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 6.25068900892955,
+        "volume_ccy": 14615163.0,
+        "trend_score": 7
+      },
       {
         "symbol": "USELESSUSDT",
         "actual_symbol": "USELESSUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 6.207565470417064,
-        "volume_ccy": 71627730.0,
+        "change_pct": 5.527950310559018,
+        "volume_ccy": 70077340.0,
         "trend_score": 4
+      },
+      {
+        "symbol": "BILLUSDT",
+        "actual_symbol": "BILLUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 4.669260700389118,
+        "volume_ccy": 142589000.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "ZROUSDT",
+        "actual_symbol": "ZROUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 22.434486897379468,
+        "volume_ccy": 40097394.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "PUMPUSDT",
+        "actual_symbol": "PUMPUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 10.734947503749726,
+        "volume_ccy": 96585735000.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-23T14:25:04+08:00",
-    "alt_watchlist_count": 1,
+    "alt_watchlist_at": "2026-08-23T15:47:53+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "USELESSUSDT"
+      "YBUSDT",
+      "USELESSUSDT",
+      "BILLUSDT",
+      "ZROUSDT",
+      "PUMPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "USELESSUSDT"
+      "YBUSDT",
+      "USELESSUSDT",
+      "BILLUSDT",
+      "ZROUSDT",
+      "PUMPUSDT"
     ]
   },
   "signals": {
