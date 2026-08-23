@@ -8,21 +8,23 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-23T07:57:36+08:00",
+    "last_scan_at": "2026-08-23T09:01:04+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 2,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "ZROUSDT",
-      "BABYUSDT"
+      "UPUSDT",
+      "BABYUSDT",
+      "EGLDUSDT",
+      "METUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ZROUSDT",
-        "actual_symbol": "ZROUSDT",
+        "symbol": "UPUSDT",
+        "actual_symbol": "UPUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 17.022777665793193,
-        "volume_ccy": 21494634.0,
+        "change_pct": 29.472821633433487,
+        "volume_ccy": 13582630.0,
         "trend_score": 3
       },
       {
@@ -30,22 +32,44 @@
         "actual_symbol": "BABYUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 5.374523910283524,
-        "volume_ccy": 130095490.0,
+        "change_pct": 5.618919825561881,
+        "volume_ccy": 130361620.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "EGLDUSDT",
+        "actual_symbol": "EGLDUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 4.992343032159259,
+        "volume_ccy": 488918.6,
+        "trend_score": 3
+      },
+      {
+        "symbol": "METUSDT",
+        "actual_symbol": "METUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 4.411764705882365,
+        "volume_ccy": 26243474.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-23T07:48:25+08:00",
-    "alt_watchlist_count": 2,
+    "alt_watchlist_at": "2026-08-23T09:01:04+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "ZROUSDT",
-      "BABYUSDT"
+      "UPUSDT",
+      "BABYUSDT",
+      "EGLDUSDT",
+      "METUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ZROUSDT",
-      "BABYUSDT"
+      "UPUSDT",
+      "BABYUSDT",
+      "EGLDUSDT",
+      "METUSDT"
     ]
   },
   "signals": {
