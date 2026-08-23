@@ -8,54 +8,25 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-24T01:35:50+08:00",
+    "last_scan_at": "2026-08-24T02:00:29+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "ZORAUSDT",
-      "EDGEUSDT",
-      "INJUSDT",
       "CHIPUSDT",
       "PENGUUSDT",
-      "MOVEUSDT",
-      "MORPHOUSDT",
-      "STXUSDT"
+      "ZORAUSDT",
+      "EDGEUSDT",
+      "IMXUSDT",
+      "SPKUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "ZORAUSDT",
-        "actual_symbol": "ZORAUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 17.07812499999999,
-        "volume_ccy": 567453660.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "EDGEUSDT",
-        "actual_symbol": "EDGEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 9.789621318373083,
-        "volume_ccy": 7682860.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "INJUSDT",
-        "actual_symbol": "INJUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 8.558558558558543,
-        "volume_ccy": 1771601.3,
-        "trend_score": 7
-      },
       {
         "symbol": "CHIPUSDT",
         "actual_symbol": "CHIPUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 8.179684880992294,
-        "volume_ccy": 492275900.0,
+        "change_pct": 9.879032258064509,
+        "volume_ccy": 501948400.0,
         "trend_score": 7
       },
       {
@@ -63,61 +34,66 @@
         "actual_symbol": "PENGUUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 7.451478743068389,
-        "volume_ccy": 4490732800.0,
+        "change_pct": 7.586206896551735,
+        "volume_ccy": 5446656800.0,
         "trend_score": 7
       },
       {
-        "symbol": "MOVEUSDT",
-        "actual_symbol": "MOVEUSDT",
+        "symbol": "ZORAUSDT",
+        "actual_symbol": "ZORAUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 6.687422166874213,
-        "volume_ccy": 1680527960.0,
-        "trend_score": 7
+        "side_score": 6,
+        "change_pct": 13.620346254021756,
+        "volume_ccy": 699375130.0,
+        "trend_score": 6
       },
       {
-        "symbol": "MORPHOUSDT",
-        "actual_symbol": "MORPHOUSDT",
+        "symbol": "EDGEUSDT",
+        "actual_symbol": "EDGEUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 21.007226738934058,
-        "volume_ccy": 4087653.0,
-        "trend_score": 3
+        "side_score": 6,
+        "change_pct": 7.258514796203229,
+        "volume_ccy": 8023400.0,
+        "trend_score": 6
       },
       {
-        "symbol": "STXUSDT",
-        "actual_symbol": "STXUSDT",
+        "symbol": "IMXUSDT",
+        "actual_symbol": "IMXUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 6.6827697262479875,
+        "volume_ccy": 8267942.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "SPKUSDT",
+        "actual_symbol": "SPKUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 15.905814512253718,
-        "volume_ccy": 209479441.0,
+        "change_pct": 22.346368715083802,
+        "volume_ccy": 342899700.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-24T00:54:21+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-08-24T02:00:29+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "ZORAUSDT",
-      "EDGEUSDT",
-      "INJUSDT",
       "CHIPUSDT",
       "PENGUUSDT",
-      "MOVEUSDT",
-      "MORPHOUSDT",
-      "STXUSDT"
+      "ZORAUSDT",
+      "EDGEUSDT",
+      "IMXUSDT",
+      "SPKUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ZORAUSDT",
-      "EDGEUSDT",
-      "INJUSDT",
       "CHIPUSDT",
       "PENGUUSDT",
-      "MOVEUSDT",
-      "MORPHOUSDT",
-      "STXUSDT"
+      "ZORAUSDT",
+      "EDGEUSDT",
+      "IMXUSDT",
+      "SPKUSDT"
     ]
   },
   "signals": {
