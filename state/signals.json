@@ -8,35 +8,81 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-23T18:15:14+08:00",
+    "last_scan_at": "2026-08-23T18:44:46+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "YBUSDT",
-      "ENAUSDT",
-      "USELESSUSDT",
-      "ZROUSDT",
-      "PUMPUSDT",
-      "MONUSDT",
-      "LITUSDT"
+      "GIGGLEUSDT",
+      "ETHFIUSDT",
+      "BOMEUSDT",
+      "MORPHOUSDT",
+      "EDGEUSDT",
+      "SPXUSDT",
+      "EIGENUSDT",
+      "USELESSUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "YBUSDT",
-        "actual_symbol": "YBUSDT",
+        "symbol": "GIGGLEUSDT",
+        "actual_symbol": "GIGGLEUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 13.14871102105144,
-        "volume_ccy": 25475968.0,
+        "change_pct": 11.219648339380417,
+        "volume_ccy": 372968.93,
         "trend_score": 7
       },
       {
-        "symbol": "ENAUSDT",
-        "actual_symbol": "ENAUSDT",
+        "symbol": "ETHFIUSDT",
+        "actual_symbol": "ETHFIUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 9.8122587819716,
-        "volume_ccy": 1213088520.0,
+        "change_pct": 10.973265769701198,
+        "volume_ccy": 18571025.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "BOMEUSDT",
+        "actual_symbol": "BOMEUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 9.294335300854542,
+        "volume_ccy": 20934770000.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "MORPHOUSDT",
+        "actual_symbol": "MORPHOUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 7.718120805369143,
+        "volume_ccy": 1092726.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "EDGEUSDT",
+        "actual_symbol": "EDGEUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 5.437284234752581,
+        "volume_ccy": 5966430.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "SPXUSDT",
+        "actual_symbol": "SPXUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 5.405405405405408,
+        "volume_ccy": 1874143.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "EIGENUSDT",
+        "actual_symbol": "EIGENUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 4.691239827668743,
+        "volume_ccy": 11326025.0,
         "trend_score": 7
       },
       {
@@ -44,68 +90,34 @@
         "actual_symbol": "USELESSUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 4.194941394201111,
-        "volume_ccy": 70683880.0,
+        "change_pct": 5.344454742045089,
+        "volume_ccy": 66319510.0,
         "trend_score": 6
-      },
-      {
-        "symbol": "ZROUSDT",
-        "actual_symbol": "ZROUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 21.793116933906933,
-        "volume_ccy": 46834658.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "PUMPUSDT",
-        "actual_symbol": "PUMPUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 17.135147290308065,
-        "volume_ccy": 95848736000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "MONUSDT",
-        "actual_symbol": "MONUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 7.076001497566452,
-        "volume_ccy": 330448770.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "LITUSDT",
-        "actual_symbol": "LITUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 6.1969111969112,
-        "volume_ccy": 15205615.0,
-        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-23T17:20:54+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-08-23T18:44:46+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "YBUSDT",
-      "ENAUSDT",
-      "USELESSUSDT",
-      "ZROUSDT",
-      "PUMPUSDT",
-      "MONUSDT",
-      "LITUSDT"
+      "GIGGLEUSDT",
+      "ETHFIUSDT",
+      "BOMEUSDT",
+      "MORPHOUSDT",
+      "EDGEUSDT",
+      "SPXUSDT",
+      "EIGENUSDT",
+      "USELESSUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "YBUSDT",
-      "ENAUSDT",
-      "USELESSUSDT",
-      "ZROUSDT",
-      "PUMPUSDT",
-      "MONUSDT",
-      "LITUSDT"
+      "GIGGLEUSDT",
+      "ETHFIUSDT",
+      "BOMEUSDT",
+      "MORPHOUSDT",
+      "EDGEUSDT",
+      "SPXUSDT",
+      "EIGENUSDT",
+      "USELESSUSDT"
     ]
   },
   "signals": {
