@@ -8,45 +8,45 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-23T19:44:54+08:00",
+    "last_scan_at": "2026-08-23T20:03:28+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "GIGGLEUSDT",
       "ETHFIUSDT",
-      "BOMEUSDT",
+      "XPLUSDT",
+      "ZORAUSDT",
       "MORPHOUSDT",
-      "EDGEUSDT",
       "SPXUSDT",
-      "EIGENUSDT",
-      "USELESSUSDT"
+      "SPKUSDT",
+      "PENDLEUSDT",
+      "LDOUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "GIGGLEUSDT",
-        "actual_symbol": "GIGGLEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 11.219648339380417,
-        "volume_ccy": 372968.93,
-        "trend_score": 7
-      },
       {
         "symbol": "ETHFIUSDT",
         "actual_symbol": "ETHFIUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 10.973265769701198,
-        "volume_ccy": 18571025.0,
+        "change_pct": 12.636203866432352,
+        "volume_ccy": 25018775.0,
         "trend_score": 7
       },
       {
-        "symbol": "BOMEUSDT",
-        "actual_symbol": "BOMEUSDT",
+        "symbol": "XPLUSDT",
+        "actual_symbol": "XPLUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 9.294335300854542,
-        "volume_ccy": 20934770000.0,
+        "change_pct": 11.228070175438596,
+        "volume_ccy": 262636140.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "ZORAUSDT",
+        "actual_symbol": "ZORAUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 10.371298762337464,
+        "volume_ccy": 231152600.0,
         "trend_score": 7
       },
       {
@@ -54,17 +54,8 @@
         "actual_symbol": "MORPHOUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 7.718120805369143,
-        "volume_ccy": 1092726.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "EDGEUSDT",
-        "actual_symbol": "EDGEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 5.437284234752581,
-        "volume_ccy": 5966430.0,
+        "change_pct": 8.484415468429042,
+        "volume_ccy": 1172156.0,
         "trend_score": 7
       },
       {
@@ -72,52 +63,61 @@
         "actual_symbol": "SPXUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 5.405405405405408,
-        "volume_ccy": 1874143.0,
+        "change_pct": 7.87795992714026,
+        "volume_ccy": 1963892.0,
         "trend_score": 7
       },
       {
-        "symbol": "EIGENUSDT",
-        "actual_symbol": "EIGENUSDT",
+        "symbol": "SPKUSDT",
+        "actual_symbol": "SPKUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 4.691239827668743,
-        "volume_ccy": 11326025.0,
+        "change_pct": 7.282415630550633,
+        "volume_ccy": 112762200.0,
         "trend_score": 7
       },
       {
-        "symbol": "USELESSUSDT",
-        "actual_symbol": "USELESSUSDT",
+        "symbol": "PENDLEUSDT",
+        "actual_symbol": "PENDLEUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 5.344454742045089,
-        "volume_ccy": 66319510.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 6.674757281553405,
+        "volume_ccy": 1487621.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "LDOUSDT",
+        "actual_symbol": "LDOUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 5.986013986013995,
+        "volume_ccy": 15078357.0,
+        "trend_score": 7
       }
     ],
-    "alt_watchlist_at": "2026-08-23T18:44:46+08:00",
+    "alt_watchlist_at": "2026-08-23T20:03:28+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "GIGGLEUSDT",
       "ETHFIUSDT",
-      "BOMEUSDT",
+      "XPLUSDT",
+      "ZORAUSDT",
       "MORPHOUSDT",
-      "EDGEUSDT",
       "SPXUSDT",
-      "EIGENUSDT",
-      "USELESSUSDT"
+      "SPKUSDT",
+      "PENDLEUSDT",
+      "LDOUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "GIGGLEUSDT",
       "ETHFIUSDT",
-      "BOMEUSDT",
+      "XPLUSDT",
+      "ZORAUSDT",
       "MORPHOUSDT",
-      "EDGEUSDT",
       "SPXUSDT",
-      "EIGENUSDT",
-      "USELESSUSDT"
+      "SPKUSDT",
+      "PENDLEUSDT",
+      "LDOUSDT"
     ]
   },
   "signals": {
