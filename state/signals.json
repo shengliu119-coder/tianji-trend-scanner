@@ -8,116 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-24T08:54:57+08:00",
+    "last_scan_at": "2026-08-24T10:22:30+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "NEARUSDT",
-      "ATHUSDT",
       "TRUMPUSDT",
-      "ZAMAUSDT",
-      "ARXUSDT",
-      "METUSDT",
-      "LITUSDT",
-      "MONUSDT"
+      "TURBOUSDT",
+      "GRTUSDT",
+      "ETHFIUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "NEARUSDT",
-        "actual_symbol": "NEARUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 7.284079084287195,
-        "volume_ccy": 26454334.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "ATHUSDT",
-        "actual_symbol": "ATHUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 6.33561643835617,
-        "volume_ccy": 194083700.0,
-        "trend_score": 5
-      },
       {
         "symbol": "TRUMPUSDT",
         "actual_symbol": "TRUMPUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 8.449514152936214,
-        "volume_ccy": 363147587.2,
+        "change_pct": 9.727626459143952,
+        "volume_ccy": 365269467.7,
         "trend_score": 4
       },
       {
-        "symbol": "ZAMAUSDT",
-        "actual_symbol": "ZAMAUSDT",
+        "symbol": "TURBOUSDT",
+        "actual_symbol": "TURBOUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 6.805687203791474,
-        "volume_ccy": 221637850.0,
+        "change_pct": 7.789451342459944,
+        "volume_ccy": 2312645000.0,
         "trend_score": 4
       },
       {
-        "symbol": "ARXUSDT",
-        "actual_symbol": "ARXUSDT",
+        "symbol": "GRTUSDT",
+        "actual_symbol": "GRTUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 13.757861635220115,
-        "volume_ccy": 36207660.0,
-        "trend_score": 3
+        "side_score": 4,
+        "change_pct": 7.147296457426962,
+        "volume_ccy": 43751110.0,
+        "trend_score": 4
       },
       {
-        "symbol": "METUSDT",
-        "actual_symbol": "METUSDT",
+        "symbol": "ETHFIUSDT",
+        "actual_symbol": "ETHFIUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 9.387395328338481,
-        "volume_ccy": 14809715.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "LITUSDT",
-        "actual_symbol": "LITUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 7.987367388238178,
-        "volume_ccy": 16586559.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "MONUSDT",
-        "actual_symbol": "MONUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 6.699576868829333,
-        "volume_ccy": 394007740.0,
+        "change_pct": 10.47552202140728,
+        "volume_ccy": 34098211.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-24T08:54:57+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-08-24T10:22:30+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "NEARUSDT",
-      "ATHUSDT",
       "TRUMPUSDT",
-      "ZAMAUSDT",
-      "ARXUSDT",
-      "METUSDT",
-      "LITUSDT",
-      "MONUSDT"
+      "TURBOUSDT",
+      "GRTUSDT",
+      "ETHFIUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "NEARUSDT",
-      "ATHUSDT",
       "TRUMPUSDT",
-      "ZAMAUSDT",
-      "ARXUSDT",
-      "METUSDT",
-      "LITUSDT",
-      "MONUSDT"
+      "TURBOUSDT",
+      "GRTUSDT",
+      "ETHFIUSDT"
     ]
   },
   "signals": {
