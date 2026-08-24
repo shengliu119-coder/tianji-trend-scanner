@@ -8,80 +8,92 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-24T12:22:38+08:00",
+    "last_scan_at": "2026-08-24T13:14:33+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "TRUMPUSDT",
-      "EDGEUSDT",
       "NEARUSDT",
+      "POPCATUSDT",
       "GRTUSDT",
-      "ETHFIUSDT"
+      "NESUSDT",
+      "LITUSDT",
+      "KITEUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "TRUMPUSDT",
-        "actual_symbol": "TRUMPUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 12.544326241134767,
-        "volume_ccy": 361329063.5,
-        "trend_score": 5
-      },
-      {
-        "symbol": "EDGEUSDT",
-        "actual_symbol": "EDGEUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 9.065075305484509,
-        "volume_ccy": 7993950.0,
-        "trend_score": 5
-      },
       {
         "symbol": "NEARUSDT",
         "actual_symbol": "NEARUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 8.66013071895425,
-        "volume_ccy": 29821668.0,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 11.001100110010986,
+        "volume_ccy": 30031686.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "POPCATUSDT",
+        "actual_symbol": "POPCATUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 11.784248583154193,
+        "volume_ccy": 18828470.0,
+        "trend_score": 6
       },
       {
         "symbol": "GRTUSDT",
         "actual_symbol": "GRTUSDT",
         "side": "long",
+        "side_score": 5,
+        "change_pct": 12.144702842377258,
+        "volume_ccy": 41065560.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
+        "side": "long",
         "side_score": 4,
-        "change_pct": 8.275426405559056,
-        "volume_ccy": 42843750.0,
+        "change_pct": 12.7626050420168,
+        "volume_ccy": 8996160.0,
         "trend_score": 4
       },
       {
-        "symbol": "ETHFIUSDT",
-        "actual_symbol": "ETHFIUSDT",
+        "symbol": "LITUSDT",
+        "actual_symbol": "LITUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 11.320419406433265,
-        "volume_ccy": 36183913.0,
+        "change_pct": 22.00273811852141,
+        "volume_ccy": 29818420.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "KITEUSDT",
+        "actual_symbol": "KITEUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 11.37884872824631,
+        "volume_ccy": 7916410.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-24T11:35:10+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-08-24T13:14:33+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "TRUMPUSDT",
-      "EDGEUSDT",
       "NEARUSDT",
+      "POPCATUSDT",
       "GRTUSDT",
-      "ETHFIUSDT"
+      "NESUSDT",
+      "LITUSDT",
+      "KITEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "TRUMPUSDT",
-      "EDGEUSDT",
       "NEARUSDT",
+      "POPCATUSDT",
       "GRTUSDT",
-      "ETHFIUSDT"
+      "NESUSDT",
+      "LITUSDT",
+      "KITEUSDT"
     ]
   },
   "signals": {
