@@ -8,92 +8,92 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-24T13:52:49+08:00",
+    "last_scan_at": "2026-08-24T14:42:28+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "NEARUSDT",
-      "POPCATUSDT",
+      "CHIPUSDT",
+      "AEROUSDT",
+      "ZAMAUSDT",
       "GRTUSDT",
-      "NESUSDT",
-      "LITUSDT",
-      "KITEUSDT"
+      "TURBOUSDT",
+      "ARXUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "NEARUSDT",
-        "actual_symbol": "NEARUSDT",
+        "symbol": "CHIPUSDT",
+        "actual_symbol": "CHIPUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 11.001100110010986,
-        "volume_ccy": 30031686.0,
+        "change_pct": 12.84710605553698,
+        "volume_ccy": 301289000.0,
         "trend_score": 7
       },
       {
-        "symbol": "POPCATUSDT",
-        "actual_symbol": "POPCATUSDT",
+        "symbol": "AEROUSDT",
+        "actual_symbol": "AEROUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 11.784248583154193,
-        "volume_ccy": 18828470.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 9.333927378035195,
+        "volume_ccy": 5851750.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "ZAMAUSDT",
+        "actual_symbol": "ZAMAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 11.064924782264445,
+        "volume_ccy": 200020550.0,
+        "trend_score": 5
       },
       {
         "symbol": "GRTUSDT",
         "actual_symbol": "GRTUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 12.144702842377258,
-        "volume_ccy": 41065560.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "NESUSDT",
-        "actual_symbol": "NESUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 12.7626050420168,
-        "volume_ccy": 8996160.0,
+        "change_pct": 10.172744721689044,
+        "volume_ccy": 40041810.0,
         "trend_score": 4
       },
       {
-        "symbol": "LITUSDT",
-        "actual_symbol": "LITUSDT",
+        "symbol": "TURBOUSDT",
+        "actual_symbol": "TURBOUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 22.00273811852141,
-        "volume_ccy": 29818420.0,
-        "trend_score": 3
+        "side_score": 4,
+        "change_pct": 9.726477024070016,
+        "volume_ccy": 2168111000.0,
+        "trend_score": 4
       },
       {
-        "symbol": "KITEUSDT",
-        "actual_symbol": "KITEUSDT",
+        "symbol": "ARXUSDT",
+        "actual_symbol": "ARXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 11.37884872824631,
-        "volume_ccy": 7916410.0,
+        "change_pct": 12.099921935987522,
+        "volume_ccy": 37176790.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-24T13:14:33+08:00",
+    "alt_watchlist_at": "2026-08-24T14:42:28+08:00",
     "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "NEARUSDT",
-      "POPCATUSDT",
+      "CHIPUSDT",
+      "AEROUSDT",
+      "ZAMAUSDT",
       "GRTUSDT",
-      "NESUSDT",
-      "LITUSDT",
-      "KITEUSDT"
+      "TURBOUSDT",
+      "ARXUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "NEARUSDT",
-      "POPCATUSDT",
+      "CHIPUSDT",
+      "AEROUSDT",
+      "ZAMAUSDT",
       "GRTUSDT",
-      "NESUSDT",
-      "LITUSDT",
-      "KITEUSDT"
+      "TURBOUSDT",
+      "ARXUSDT"
     ]
   },
   "signals": {
