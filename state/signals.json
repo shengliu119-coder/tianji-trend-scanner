@@ -8,116 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-24T16:28:34+08:00",
-    "last_candidates": 1,
+    "last_scan_at": "2026-08-24T17:17:35+08:00",
+    "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "AEROUSDT",
-      "BLENDUSDT",
-      "ZAMAUSDT",
       "CHIPUSDT",
+      "AEROUSDT",
+      "ZAMAUSDT",
+      "BLENDUSDT",
+      "REUSDT",
       "GRTUSDT",
       "TURBOUSDT",
-      "GRASSUSDT",
-      "MONUSDT"
+      "KITEUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "CHIPUSDT",
+        "actual_symbol": "CHIPUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 13.98390342052314,
+        "volume_ccy": 319119100.0,
+        "trend_score": 7
+      },
       {
         "symbol": "AEROUSDT",
         "actual_symbol": "AEROUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 12.223463687150831,
-        "volume_ccy": 6382940.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "BLENDUSDT",
-        "actual_symbol": "BLENDUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 10.324863300096485,
-        "volume_ccy": 9542790.0,
+        "change_pct": 9.951348960636883,
+        "volume_ccy": 7247200.0,
         "trend_score": 7
       },
       {
         "symbol": "ZAMAUSDT",
         "actual_symbol": "ZAMAUSDT",
         "side": "long",
+        "side_score": 7,
+        "change_pct": 7.923960097873152,
+        "volume_ccy": 202595740.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "BLENDUSDT",
+        "actual_symbol": "BLENDUSDT",
+        "side": "long",
         "side_score": 6,
-        "change_pct": 11.898684468878844,
-        "volume_ccy": 202630180.0,
+        "change_pct": 10.285165011214346,
+        "volume_ccy": 11300220.0,
         "trend_score": 6
       },
       {
-        "symbol": "CHIPUSDT",
-        "actual_symbol": "CHIPUSDT",
+        "symbol": "REUSDT",
+        "actual_symbol": "REUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 12.892338845764428,
-        "volume_ccy": 307614800.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 8.077535134306038,
+        "volume_ccy": 42160290.0,
+        "trend_score": 6
       },
       {
         "symbol": "GRTUSDT",
         "actual_symbol": "GRTUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 10.890454836643167,
-        "volume_ccy": 40957370.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 9.571788413098242,
+        "volume_ccy": 41556260.0,
+        "trend_score": 5
       },
       {
         "symbol": "TURBOUSDT",
         "actual_symbol": "TURBOUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 9.722070844686638,
-        "volume_ccy": 2221965000.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 7.631296891747052,
+        "volume_ccy": 2234429000.0,
+        "trend_score": 5
       },
       {
-        "symbol": "GRASSUSDT",
-        "actual_symbol": "GRASSUSDT",
+        "symbol": "KITEUSDT",
+        "actual_symbol": "KITEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 25.949579831932773,
-        "volume_ccy": 42280309.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "MONUSDT",
-        "actual_symbol": "MONUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 10.454377539711855,
-        "volume_ccy": 424810630.0,
+        "change_pct": 10.057954757898663,
+        "volume_ccy": 8551970.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-24T15:54:04+08:00",
+    "alt_watchlist_at": "2026-08-24T17:17:35+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "AEROUSDT",
-      "BLENDUSDT",
-      "ZAMAUSDT",
       "CHIPUSDT",
+      "AEROUSDT",
+      "ZAMAUSDT",
+      "BLENDUSDT",
+      "REUSDT",
       "GRTUSDT",
       "TURBOUSDT",
-      "GRASSUSDT",
-      "MONUSDT"
+      "KITEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "AEROUSDT",
-      "BLENDUSDT",
-      "ZAMAUSDT",
       "CHIPUSDT",
+      "AEROUSDT",
+      "ZAMAUSDT",
+      "BLENDUSDT",
+      "REUSDT",
       "GRTUSDT",
       "TURBOUSDT",
-      "GRASSUSDT",
-      "MONUSDT"
+      "KITEUSDT"
     ]
   },
   "signals": {
