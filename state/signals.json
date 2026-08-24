@@ -8,12 +8,13 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-24T10:22:30+08:00",
+    "last_scan_at": "2026-08-24T11:35:10+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
       "TRUMPUSDT",
-      "TURBOUSDT",
+      "EDGEUSDT",
+      "NEARUSDT",
       "GRTUSDT",
       "ETHFIUSDT"
     ],
@@ -22,27 +23,36 @@
         "symbol": "TRUMPUSDT",
         "actual_symbol": "TRUMPUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 9.727626459143952,
-        "volume_ccy": 365269467.7,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 12.544326241134767,
+        "volume_ccy": 361329063.5,
+        "trend_score": 5
       },
       {
-        "symbol": "TURBOUSDT",
-        "actual_symbol": "TURBOUSDT",
+        "symbol": "EDGEUSDT",
+        "actual_symbol": "EDGEUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 7.789451342459944,
-        "volume_ccy": 2312645000.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 9.065075305484509,
+        "volume_ccy": 7993950.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "NEARUSDT",
+        "actual_symbol": "NEARUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 8.66013071895425,
+        "volume_ccy": 29821668.0,
+        "trend_score": 5
       },
       {
         "symbol": "GRTUSDT",
         "actual_symbol": "GRTUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 7.147296457426962,
-        "volume_ccy": 43751110.0,
+        "change_pct": 8.275426405559056,
+        "volume_ccy": 42843750.0,
         "trend_score": 4
       },
       {
@@ -50,16 +60,17 @@
         "actual_symbol": "ETHFIUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 10.47552202140728,
-        "volume_ccy": 34098211.0,
+        "change_pct": 11.320419406433265,
+        "volume_ccy": 36183913.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-24T10:22:30+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-08-24T11:35:10+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
       "TRUMPUSDT",
-      "TURBOUSDT",
+      "EDGEUSDT",
+      "NEARUSDT",
       "GRTUSDT",
       "ETHFIUSDT"
     ],
@@ -67,7 +78,8 @@
       "BTCUSDT",
       "ETHUSDT",
       "TRUMPUSDT",
-      "TURBOUSDT",
+      "EDGEUSDT",
+      "NEARUSDT",
       "GRTUSDT",
       "ETHFIUSDT"
     ]
