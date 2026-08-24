@@ -8,7 +8,7 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-25T03:10:42+08:00",
+    "last_scan_at": "2026-08-25T03:45:49+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
@@ -18,7 +18,7 @@
       "PIEVERSEUSDT",
       "POLUSDT",
       "BLENDUSDT",
-      "INJUSDT"
+      "EDGEUSDT"
     ],
     "alt_watchlist": [
       {
@@ -26,8 +26,8 @@
         "actual_symbol": "MEUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 5.665680473372782,
-        "volume_ccy": 22699596.0,
+        "change_pct": 6.605557980503423,
+        "volume_ccy": 26285082.0,
         "trend_score": 7
       },
       {
@@ -35,26 +35,26 @@
         "actual_symbol": "MONUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 5.030591434398364,
-        "volume_ccy": 415316040.0,
+        "change_pct": 5.522288755821684,
+        "volume_ccy": 562902050.0,
         "trend_score": 7
       },
       {
         "symbol": "ZAMAUSDT",
         "actual_symbol": "ZAMAUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 8.916177255739457,
-        "volume_ccy": 312857130.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 4.375523889354571,
+        "volume_ccy": 290338660.0,
+        "trend_score": 6
       },
       {
         "symbol": "PIEVERSEUSDT",
         "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 8.562691131498475,
-        "volume_ccy": 9212530.0,
+        "change_pct": 8.662083553675313,
+        "volume_ccy": 9313690.0,
         "trend_score": 5
       },
       {
@@ -62,8 +62,8 @@
         "actual_symbol": "POLUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 9.42843646669816,
-        "volume_ccy": 198605180.0,
+        "change_pct": 5.830796198911345,
+        "volume_ccy": 202016660.0,
         "trend_score": 4
       },
       {
@@ -71,21 +71,21 @@
         "actual_symbol": "BLENDUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 4.239401496259352,
-        "volume_ccy": 16929910.0,
+        "change_pct": 4.616588419405334,
+        "volume_ccy": 17070000.0,
         "trend_score": 4
       },
       {
-        "symbol": "INJUSDT",
-        "actual_symbol": "INJUSDT",
+        "symbol": "EDGEUSDT",
+        "actual_symbol": "EDGEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 9.939531368102793,
-        "volume_ccy": 4211776.3,
+        "change_pct": 4.676826064109296,
+        "volume_ccy": 6679120.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-25T02:29:54+08:00",
+    "alt_watchlist_at": "2026-08-25T03:45:49+08:00",
     "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
       "MEUSDT",
@@ -94,7 +94,7 @@
       "PIEVERSEUSDT",
       "POLUSDT",
       "BLENDUSDT",
-      "INJUSDT"
+      "EDGEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
@@ -105,7 +105,7 @@
       "PIEVERSEUSDT",
       "POLUSDT",
       "BLENDUSDT",
-      "INJUSDT"
+      "EDGEUSDT"
     ]
   },
   "signals": {
