@@ -2,122 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "强",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-25T15:27:26+08:00",
+    "last_scan_at": "2026-08-25T16:11:20+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "POLUSDT",
-      "BRETTUSDT",
+      "PARTIUSDT",
+      "SUSDT",
+      "KMNOUSDT",
+      "AVNTUSDT",
       "UBUSDT",
-      "SPXUSDT",
-      "OLUSDT",
-      "SLXUSDT",
-      "MEUSDT",
-      "JUPUSDT"
+      "HUSDT",
+      "POLUSDT",
+      "SLXUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "POLUSDT",
-        "actual_symbol": "POLUSDT",
+        "symbol": "PARTIUSDT",
+        "actual_symbol": "PARTIUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 13.490443496010391,
-        "volume_ccy": 201945510.0,
+        "change_pct": 6.410797132011813,
+        "volume_ccy": 69297840.0,
         "trend_score": 7
       },
       {
-        "symbol": "BRETTUSDT",
-        "actual_symbol": "BRETTUSDT",
+        "symbol": "SUSDT",
+        "actual_symbol": "SUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 9.810246679316872,
-        "volume_ccy": 77727900.0,
+        "change_pct": 6.382978723404245,
+        "volume_ccy": 32707280.0,
         "trend_score": 7
+      },
+      {
+        "symbol": "KMNOUSDT",
+        "actual_symbol": "KMNOUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 6.344658207122388,
+        "volume_ccy": 21782700.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "AVNTUSDT",
+        "actual_symbol": "AVNTUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 6.680244399185346,
+        "volume_ccy": 17480927.0,
+        "trend_score": 6
       },
       {
         "symbol": "UBUSDT",
         "actual_symbol": "UBUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 8.011769651113923,
-        "volume_ccy": 45900800.0,
-        "trend_score": 6
+        "side_score": 4,
+        "change_pct": 10.551314673452083,
+        "volume_ccy": 49761000.0,
+        "trend_score": 4
       },
       {
-        "symbol": "SPXUSDT",
-        "actual_symbol": "SPXUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 10.12826183104821,
-        "volume_ccy": 2327235.0,
-        "trend_score": 5
+        "symbol": "HUSDT",
+        "actual_symbol": "HUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 8.710096778853089,
+        "volume_ccy": 76399550.0,
+        "trend_score": 4
       },
       {
-        "symbol": "OLUSDT",
-        "actual_symbol": "OLUSDT",
+        "symbol": "POLUSDT",
+        "actual_symbol": "POLUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 9.021884769986597,
-        "volume_ccy": 402455700.0,
-        "trend_score": 5
+        "side_score": 3,
+        "change_pct": 11.027409693229256,
+        "volume_ccy": 208953590.0,
+        "trend_score": 3
       },
       {
         "symbol": "SLXUSDT",
         "actual_symbol": "SLXUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 9.473204797328064,
-        "volume_ccy": 160854190.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "MEUSDT",
-        "actual_symbol": "MEUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 8.857273978889404,
-        "volume_ccy": 40521030.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "JUPUSDT",
-        "actual_symbol": "JUPUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 8.699808795411087,
-        "volume_ccy": 24752220.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 9.570906877662818,
+        "volume_ccy": 181327310.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-25T14:34:07+08:00",
+    "alt_watchlist_at": "2026-08-25T16:11:20+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "POLUSDT",
-      "BRETTUSDT",
+      "PARTIUSDT",
+      "SUSDT",
+      "KMNOUSDT",
+      "AVNTUSDT",
       "UBUSDT",
-      "SPXUSDT",
-      "OLUSDT",
-      "SLXUSDT",
-      "MEUSDT",
-      "JUPUSDT"
+      "HUSDT",
+      "POLUSDT",
+      "SLXUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "POLUSDT",
-      "BRETTUSDT",
+      "PARTIUSDT",
+      "SUSDT",
+      "KMNOUSDT",
+      "AVNTUSDT",
       "UBUSDT",
-      "SPXUSDT",
-      "OLUSDT",
-      "SLXUSDT",
-      "MEUSDT",
-      "JUPUSDT"
+      "HUSDT",
+      "POLUSDT",
+      "SLXUSDT"
     ]
   },
   "signals": {
