@@ -8,27 +8,27 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-26T06:54:06+08:00",
+    "last_scan_at": "2026-08-26T07:22:22+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "ONTUSDT",
+      "FARTCOINUSDT",
       "YBUSDT",
-      "NESUSDT",
+      "EDENUSDT",
       "KORUUSDT",
-      "OLUSDT",
       "ACUUSDT",
-      "SOXLUSDT",
+      "NESUSDT",
+      "ONTUSDT",
       "HUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ONTUSDT",
-        "actual_symbol": "ONTUSDT",
+        "symbol": "FARTCOINUSDT",
+        "actual_symbol": "FARTCOINUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 5.5377848860455705,
-        "volume_ccy": 180430760.0,
+        "change_pct": 6.47727272727274,
+        "volume_ccy": 62751507.0,
         "trend_score": 6
       },
       {
@@ -36,17 +36,17 @@
         "actual_symbol": "YBUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 6.433721575152523,
-        "volume_ccy": 7141207.0,
+        "change_pct": 8.185890257558787,
+        "volume_ccy": 7241146.0,
         "trend_score": 5
       },
       {
-        "symbol": "NESUSDT",
-        "actual_symbol": "NESUSDT",
-        "side": "short",
+        "symbol": "EDENUSDT",
+        "actual_symbol": "EDENUSDT",
+        "side": "long",
         "side_score": 5,
-        "change_pct": 5.868544600938972,
-        "volume_ccy": 77458490.0,
+        "change_pct": 5.102040816326532,
+        "volume_ccy": 51399061.0,
         "trend_score": 5
       },
       {
@@ -54,17 +54,8 @@
         "actual_symbol": "KORUUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 11.323763955342917,
-        "volume_ccy": 3264243.8,
-        "trend_score": 4
-      },
-      {
-        "symbol": "OLUSDT",
-        "actual_symbol": "OLUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 8.142605633802809,
-        "volume_ccy": 541754800.0,
+        "change_pct": 11.390374331550797,
+        "volume_ccy": 3250911.74,
         "trend_score": 4
       },
       {
@@ -72,17 +63,26 @@
         "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 7.156986153569497,
-        "volume_ccy": 12761970.0,
+        "change_pct": 9.17356123283935,
+        "volume_ccy": 12113130.0,
         "trend_score": 4
       },
       {
-        "symbol": "SOXLUSDT",
-        "actual_symbol": "SOXLUSDT",
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
         "side": "short",
         "side_score": 4,
-        "change_pct": 5.2797265695268845,
-        "volume_ccy": 1269990.89,
+        "change_pct": 7.228915662650601,
+        "volume_ccy": 72199160.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "ONTUSDT",
+        "actual_symbol": "ONTUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 5.752212389380533,
+        "volume_ccy": 180123080.0,
         "trend_score": 4
       },
       {
@@ -90,33 +90,33 @@
         "actual_symbol": "HUSDT",
         "side": "short",
         "side_score": 3,
-        "change_pct": 15.47240681883848,
-        "volume_ccy": 248453730.0,
+        "change_pct": 14.766355140186919,
+        "volume_ccy": 252310250.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-26T05:56:45+08:00",
+    "alt_watchlist_at": "2026-08-26T07:22:22+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "ONTUSDT",
+      "FARTCOINUSDT",
       "YBUSDT",
-      "NESUSDT",
+      "EDENUSDT",
       "KORUUSDT",
-      "OLUSDT",
       "ACUUSDT",
-      "SOXLUSDT",
+      "NESUSDT",
+      "ONTUSDT",
       "HUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ONTUSDT",
+      "FARTCOINUSDT",
       "YBUSDT",
-      "NESUSDT",
+      "EDENUSDT",
       "KORUUSDT",
-      "OLUSDT",
       "ACUUSDT",
-      "SOXLUSDT",
+      "NESUSDT",
+      "ONTUSDT",
       "HUSDT"
     ]
   },
