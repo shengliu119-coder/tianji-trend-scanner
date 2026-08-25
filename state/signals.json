@@ -8,27 +8,27 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-25T12:37:04+08:00",
+    "last_scan_at": "2026-08-25T13:22:07+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "WIFUSDT",
+      "JUPUSDT",
       "SPXUSDT",
       "PENGUUSDT",
-      "POLUSDT",
-      "OLUSDT",
+      "MEUSDT",
       "SOLUSDT",
-      "RAYUSDT",
-      "POPCATUSDT"
+      "UBUSDT",
+      "POLUSDT",
+      "PIEVERSEUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "WIFUSDT",
-        "actual_symbol": "WIFUSDT",
+        "symbol": "JUPUSDT",
+        "actual_symbol": "JUPUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 14.725500256541817,
-        "volume_ccy": 87924150.0,
+        "change_pct": 8.234174202760581,
+        "volume_ccy": 22945810.0,
         "trend_score": 7
       },
       {
@@ -36,8 +36,8 @@
         "actual_symbol": "SPXUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 8.099688473520246,
-        "volume_ccy": 1671623.0,
+        "change_pct": 7.948040510788204,
+        "volume_ccy": 1858028.0,
         "trend_score": 7
       },
       {
@@ -45,26 +45,17 @@
         "actual_symbol": "PENGUUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 7.621983629212277,
-        "volume_ccy": 7577312800.0,
+        "change_pct": 7.939488784559202,
+        "volume_ccy": 7674770000.0,
         "trend_score": 7
       },
       {
-        "symbol": "POLUSDT",
-        "actual_symbol": "POLUSDT",
+        "symbol": "MEUSDT",
+        "actual_symbol": "MEUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 9.568304989721547,
-        "volume_ccy": 201316980.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "OLUSDT",
-        "actual_symbol": "OLUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 8.998417363780238,
-        "volume_ccy": 409931800.0,
+        "change_pct": 8.492148193322162,
+        "volume_ccy": 40014890.0,
         "trend_score": 6
       },
       {
@@ -72,52 +63,61 @@
         "actual_symbol": "SOLUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 8.351131994873978,
-        "volume_ccy": 15808379.44,
+        "change_pct": 7.825902785131829,
+        "volume_ccy": 16103744.91,
         "trend_score": 6
       },
       {
-        "symbol": "RAYUSDT",
-        "actual_symbol": "RAYUSDT",
+        "symbol": "UBUSDT",
+        "actual_symbol": "UBUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 7.743476036158967,
+        "volume_ccy": 45467600.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "POLUSDT",
+        "actual_symbol": "POLUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 12.1085313174946,
-        "volume_ccy": 6231383.0,
+        "change_pct": 8.778803992909788,
+        "volume_ccy": 202120160.0,
         "trend_score": 5
       },
       {
-        "symbol": "POPCATUSDT",
-        "actual_symbol": "POPCATUSDT",
+        "symbol": "PIEVERSEUSDT",
+        "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 11.8519842688595,
-        "volume_ccy": 38628210.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 9.051450349354226,
+        "volume_ccy": 10010100.0,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-08-25T12:03:59+08:00",
+    "alt_watchlist_at": "2026-08-25T13:22:07+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "WIFUSDT",
+      "JUPUSDT",
       "SPXUSDT",
       "PENGUUSDT",
-      "POLUSDT",
-      "OLUSDT",
+      "MEUSDT",
       "SOLUSDT",
-      "RAYUSDT",
-      "POPCATUSDT"
+      "UBUSDT",
+      "POLUSDT",
+      "PIEVERSEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "WIFUSDT",
+      "JUPUSDT",
       "SPXUSDT",
       "PENGUUSDT",
-      "POLUSDT",
-      "OLUSDT",
+      "MEUSDT",
       "SOLUSDT",
-      "RAYUSDT",
-      "POPCATUSDT"
+      "UBUSDT",
+      "POLUSDT",
+      "PIEVERSEUSDT"
     ]
   },
   "signals": {
