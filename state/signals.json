@@ -8,54 +8,45 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-26T05:20:20+08:00",
+    "last_scan_at": "2026-08-26T05:56:45+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "FARTCOINUSDT",
-      "NESUSDT",
       "ONTUSDT",
       "YBUSDT",
+      "NESUSDT",
       "KORUUSDT",
       "OLUSDT",
       "ACUUSDT",
+      "SOXLUSDT",
       "HUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "FARTCOINUSDT",
-        "actual_symbol": "FARTCOINUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 7.279029462738301,
-        "volume_ccy": 60562315.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "NESUSDT",
-        "actual_symbol": "NESUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 8.888888888888879,
-        "volume_ccy": 81792050.0,
-        "trend_score": 5
-      },
-      {
         "symbol": "ONTUSDT",
         "actual_symbol": "ONTUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 8.832612723903633,
-        "volume_ccy": 177616970.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 5.5377848860455705,
+        "volume_ccy": 180430760.0,
+        "trend_score": 6
       },
       {
         "symbol": "YBUSDT",
         "actual_symbol": "YBUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 6.504961411245869,
-        "volume_ccy": 6005753.0,
+        "change_pct": 6.433721575152523,
+        "volume_ccy": 7141207.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 5.868544600938972,
+        "volume_ccy": 77458490.0,
         "trend_score": 5
       },
       {
@@ -63,8 +54,8 @@
         "actual_symbol": "KORUUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 11.057947900053174,
-        "volume_ccy": 3256437.35,
+        "change_pct": 11.323763955342917,
+        "volume_ccy": 3264243.8,
         "trend_score": 4
       },
       {
@@ -72,8 +63,8 @@
         "actual_symbol": "OLUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 8.590989399293296,
-        "volume_ccy": 541806100.0,
+        "change_pct": 8.142605633802809,
+        "volume_ccy": 541754800.0,
         "trend_score": 4
       },
       {
@@ -81,8 +72,17 @@
         "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 8.467705612107022,
-        "volume_ccy": 12813760.0,
+        "change_pct": 7.156986153569497,
+        "volume_ccy": 12761970.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "SOXLUSDT",
+        "actual_symbol": "SOXLUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 5.2797265695268845,
+        "volume_ccy": 1269990.89,
         "trend_score": 4
       },
       {
@@ -90,33 +90,33 @@
         "actual_symbol": "HUSDT",
         "side": "short",
         "side_score": 3,
-        "change_pct": 14.780733285406178,
-        "volume_ccy": 242273100.0,
+        "change_pct": 15.47240681883848,
+        "volume_ccy": 248453730.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-26T04:22:45+08:00",
+    "alt_watchlist_at": "2026-08-26T05:56:45+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "FARTCOINUSDT",
-      "NESUSDT",
       "ONTUSDT",
       "YBUSDT",
+      "NESUSDT",
       "KORUUSDT",
       "OLUSDT",
       "ACUUSDT",
+      "SOXLUSDT",
       "HUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "FARTCOINUSDT",
-      "NESUSDT",
       "ONTUSDT",
       "YBUSDT",
+      "NESUSDT",
       "KORUUSDT",
       "OLUSDT",
       "ACUUSDT",
+      "SOXLUSDT",
       "HUSDT"
     ]
   },
