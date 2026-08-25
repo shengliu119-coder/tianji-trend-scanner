@@ -8,80 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-25T21:28:39+08:00",
+    "last_scan_at": "2026-08-25T22:17:49+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "ONTUSDT",
+      "PYTHUSDT",
+      "ZROUSDT",
       "KMNOUSDT",
-      "UBUSDT",
-      "AVNTUSDT",
-      "REUSDT",
-      "UPUSDT"
+      "OLUSDT",
+      "ESPUSDT",
+      "KORUUSDT",
+      "SOXLUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "ONTUSDT",
+        "actual_symbol": "ONTUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 9.270982234020835,
+        "volume_ccy": 152776470.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "PYTHUSDT",
+        "actual_symbol": "PYTHUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 4.318272690923621,
+        "volume_ccy": 49655770.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "ZROUSDT",
+        "actual_symbol": "ZROUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 9.9310832302527,
+        "volume_ccy": 24502735.0,
+        "trend_score": 6
+      },
       {
         "symbol": "KMNOUSDT",
         "actual_symbol": "KMNOUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 7.405908539053023,
-        "volume_ccy": 25829000.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "UBUSDT",
-        "actual_symbol": "UBUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 14.377700584597147,
-        "volume_ccy": 67711500.0,
+        "change_pct": 12.105263157894736,
+        "volume_ccy": 43812800.0,
         "trend_score": 5
       },
       {
-        "symbol": "AVNTUSDT",
-        "actual_symbol": "AVNTUSDT",
+        "symbol": "OLUSDT",
+        "actual_symbol": "OLUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 4.75002494761002,
-        "volume_ccy": 17530483.0,
+        "change_pct": 7.61478163493841,
+        "volume_ccy": 605832500.0,
         "trend_score": 5
       },
       {
-        "symbol": "REUSDT",
-        "actual_symbol": "REUSDT",
+        "symbol": "ESPUSDT",
+        "actual_symbol": "ESPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 4.329550989482803,
-        "volume_ccy": 38080010.0,
+        "change_pct": 5.98701880035811,
+        "volume_ccy": 30830500.0,
         "trend_score": 5
       },
       {
-        "symbol": "UPUSDT",
-        "actual_symbol": "UPUSDT",
+        "symbol": "KORUUSDT",
+        "actual_symbol": "KORUUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 6.78879310344827,
-        "volume_ccy": 5900350.0,
-        "trend_score": 3
+        "side_score": 4,
+        "change_pct": 11.153427638737764,
+        "volume_ccy": 3437729.84,
+        "trend_score": 4
+      },
+      {
+        "symbol": "SOXLUSDT",
+        "actual_symbol": "SOXLUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 8.792134831460675,
+        "volume_ccy": 1244761.76,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-08-25T20:30:39+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-08-25T22:17:49+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "ONTUSDT",
+      "PYTHUSDT",
+      "ZROUSDT",
       "KMNOUSDT",
-      "UBUSDT",
-      "AVNTUSDT",
-      "REUSDT",
-      "UPUSDT"
+      "OLUSDT",
+      "ESPUSDT",
+      "KORUUSDT",
+      "SOXLUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "ONTUSDT",
+      "PYTHUSDT",
+      "ZROUSDT",
       "KMNOUSDT",
-      "UBUSDT",
-      "AVNTUSDT",
-      "REUSDT",
-      "UPUSDT"
+      "OLUSDT",
+      "ESPUSDT",
+      "KORUUSDT",
+      "SOXLUSDT"
     ]
   },
   "signals": {
