@@ -8,81 +8,72 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-26T19:58:33+08:00",
+    "last_scan_at": "2026-08-26T20:38:48+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "HUMAUSDT",
-      "MINAUSDT",
-      "SIGNUSDT",
-      "LIGHTUSDT",
       "MERLUSDT",
-      "KITEUSDT",
       "CVXUSDT",
-      "FARTCOINUSDT"
+      "EDENUSDT",
+      "COREUSDT",
+      "USELESSUSDT",
+      "PLUMEUSDT",
+      "FARTCOINUSDT",
+      "LIGHTUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "HUMAUSDT",
-        "actual_symbol": "HUMAUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 8.538283062645018,
-        "volume_ccy": 38111300.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "MINAUSDT",
-        "actual_symbol": "MINAUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 5.868505128636287,
-        "volume_ccy": 12176147.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "SIGNUSDT",
-        "actual_symbol": "SIGNUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 4.7155105222135685,
-        "volume_ccy": 63897300.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "LIGHTUSDT",
-        "actual_symbol": "LIGHTUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 16.734143049932516,
-        "volume_ccy": 55421108.0,
-        "trend_score": 6
-      },
       {
         "symbol": "MERLUSDT",
         "actual_symbol": "MERLUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 6.67701863354037,
-        "volume_ccy": 137722090.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "KITEUSDT",
-        "actual_symbol": "KITEUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 4.0957446808510625,
-        "volume_ccy": 9002890.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 9.801876955161626,
+        "volume_ccy": 175306993.0,
+        "trend_score": 7
       },
       {
         "symbol": "CVXUSDT",
         "actual_symbol": "CVXUSDT",
         "side": "long",
+        "side_score": 7,
+        "change_pct": 8.708133971291863,
+        "volume_ccy": 696838.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "EDENUSDT",
+        "actual_symbol": "EDENUSDT",
+        "side": "long",
         "side_score": 6,
-        "change_pct": 4.031879981247063,
-        "volume_ccy": 482338.0,
+        "change_pct": 19.24264251903683,
+        "volume_ccy": 510761157.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "COREUSDT",
+        "actual_symbol": "COREUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 4.68998410174881,
+        "volume_ccy": 102155881.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "USELESSUSDT",
+        "actual_symbol": "USELESSUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 4.473097739573372,
+        "volume_ccy": 36667670.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "PLUMEUSDT",
+        "actual_symbol": "PLUMEUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 4.196944979979242,
+        "volume_ccy": 89352210.0,
         "trend_score": 6
       },
       {
@@ -90,34 +81,43 @@
         "actual_symbol": "FARTCOINUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 16.312849162011176,
-        "volume_ccy": 150701232.0,
+        "change_pct": 18.166479190101235,
+        "volume_ccy": 192429250.0,
         "trend_score": 5
+      },
+      {
+        "symbol": "LIGHTUSDT",
+        "actual_symbol": "LIGHTUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 18.293515358361788,
+        "volume_ccy": 67917888.0,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-08-26T19:04:01+08:00",
+    "alt_watchlist_at": "2026-08-26T20:38:48+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "HUMAUSDT",
-      "MINAUSDT",
-      "SIGNUSDT",
-      "LIGHTUSDT",
       "MERLUSDT",
-      "KITEUSDT",
       "CVXUSDT",
-      "FARTCOINUSDT"
+      "EDENUSDT",
+      "COREUSDT",
+      "USELESSUSDT",
+      "PLUMEUSDT",
+      "FARTCOINUSDT",
+      "LIGHTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "HUMAUSDT",
-      "MINAUSDT",
-      "SIGNUSDT",
-      "LIGHTUSDT",
       "MERLUSDT",
-      "KITEUSDT",
       "CVXUSDT",
-      "FARTCOINUSDT"
+      "EDENUSDT",
+      "COREUSDT",
+      "USELESSUSDT",
+      "PLUMEUSDT",
+      "FARTCOINUSDT",
+      "LIGHTUSDT"
     ]
   },
   "signals": {
