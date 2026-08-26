@@ -8,18 +8,18 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-26T17:02:15+08:00",
+    "last_scan_at": "2026-08-26T17:46:24+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "PYTHUSDT",
-      "MINAUSDT",
       "EDENUSDT",
       "LIGHTUSDT",
       "FARTCOINUSDT",
-      "CAPUSDT",
+      "MERLUSDT",
       "ACUUSDT",
-      "MOVEUSDT"
+      "RLSUSDT",
+      "BICOUSDT"
     ],
     "alt_watchlist": [
       {
@@ -27,97 +27,97 @@
         "actual_symbol": "PYTHUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 7.1385722855428995,
-        "volume_ccy": 61162190.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "MINAUSDT",
-        "actual_symbol": "MINAUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 4.781949823202563,
-        "volume_ccy": 11091003.0,
+        "change_pct": 9.3210361067504,
+        "volume_ccy": 108111070.0,
         "trend_score": 7
       },
       {
         "symbol": "EDENUSDT",
         "actual_symbol": "EDENUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 22.395508421709298,
-        "volume_ccy": 321141072.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 17.396745932415502,
+        "volume_ccy": 410151340.0,
+        "trend_score": 5
       },
       {
         "symbol": "LIGHTUSDT",
         "actual_symbol": "LIGHTUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 19.577080491132335,
-        "volume_ccy": 39068182.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 15.23358158429248,
+        "volume_ccy": 49073071.0,
+        "trend_score": 5
       },
       {
         "symbol": "FARTCOINUSDT",
         "actual_symbol": "FARTCOINUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 13.473219215902803,
-        "volume_ccy": 130915560.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 11.519473395501931,
+        "volume_ccy": 141360206.0,
+        "trend_score": 5
       },
       {
-        "symbol": "CAPUSDT",
-        "actual_symbol": "CAPUSDT",
+        "symbol": "MERLUSDT",
+        "actual_symbol": "MERLUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 4.892022917584838,
-        "volume_ccy": 244277400.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 4.712584153288439,
+        "volume_ccy": 124253922.0,
+        "trend_score": 5
       },
       {
         "symbol": "ACUUSDT",
         "actual_symbol": "ACUUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 14.179884957294748,
-        "volume_ccy": 32310050.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 9.1748610517315,
+        "volume_ccy": 33524240.0,
+        "trend_score": 4
       },
       {
-        "symbol": "MOVEUSDT",
-        "actual_symbol": "MOVEUSDT",
+        "symbol": "RLSUSDT",
+        "actual_symbol": "RLSUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 10.742857142857137,
-        "volume_ccy": 1277936040.0,
-        "trend_score": 5
+        "side_score": 3,
+        "change_pct": 7.374301675977664,
+        "volume_ccy": 572904500.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "BICOUSDT",
+        "actual_symbol": "BICOUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 6.20399579390116,
+        "volume_ccy": 554765607.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-26T16:14:20+08:00",
+    "alt_watchlist_at": "2026-08-26T17:46:24+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "PYTHUSDT",
-      "MINAUSDT",
       "EDENUSDT",
       "LIGHTUSDT",
       "FARTCOINUSDT",
-      "CAPUSDT",
+      "MERLUSDT",
       "ACUUSDT",
-      "MOVEUSDT"
+      "RLSUSDT",
+      "BICOUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "PYTHUSDT",
-      "MINAUSDT",
       "EDENUSDT",
       "LIGHTUSDT",
       "FARTCOINUSDT",
-      "CAPUSDT",
+      "MERLUSDT",
       "ACUUSDT",
-      "MOVEUSDT"
+      "RLSUSDT",
+      "BICOUSDT"
     ]
   },
   "signals": {
