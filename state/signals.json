@@ -2,122 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "强",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-27T00:46:47+08:00",
+    "last_scan_at": "2026-08-27T02:30:33+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "ONTUSDT",
-      "EDENUSDT",
-      "MERLUSDT",
       "ACUUSDT",
+      "SUSDT",
+      "COREUSDT",
+      "PUMPUSDT",
       "STXUSDT",
-      "BICOUSDT",
-      "LIGHTUSDT",
-      "FARTCOINUSDT"
+      "SOONUSDT",
+      "EDENUSDT",
+      "ONTUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "ONTUSDT",
-        "actual_symbol": "ONTUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 8.900226757369612,
-        "volume_ccy": 239052950.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "EDENUSDT",
-        "actual_symbol": "EDENUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 18.16539542352468,
-        "volume_ccy": 595789558.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "MERLUSDT",
-        "actual_symbol": "MERLUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 11.703239289446179,
-        "volume_ccy": 242978771.0,
-        "trend_score": 6
-      },
       {
         "symbol": "ACUUSDT",
         "actual_symbol": "ACUUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 10.226122173472836,
-        "volume_ccy": 38238530.0,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 16.429344658173033,
+        "volume_ccy": 51141790.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "SUSDT",
+        "actual_symbol": "SUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 7.832167832167829,
+        "volume_ccy": 52668630.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "COREUSDT",
+        "actual_symbol": "COREUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 6.103844629409432,
+        "volume_ccy": 140574956.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "PUMPUSDT",
+        "actual_symbol": "PUMPUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 7.441860465116287,
+        "volume_ccy": 61413195000.0,
+        "trend_score": 6
       },
       {
         "symbol": "STXUSDT",
         "actual_symbol": "STXUSDT",
         "side": "long",
+        "side_score": 6,
+        "change_pct": 4.707668944570981,
+        "volume_ccy": 183145402.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "SOONUSDT",
+        "actual_symbol": "SOONUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 4.059609455292918,
+        "volume_ccy": 5114366.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "EDENUSDT",
+        "actual_symbol": "EDENUSDT",
+        "side": "long",
         "side_score": 5,
-        "change_pct": 7.301835220616945,
-        "volume_ccy": 189969710.0,
+        "change_pct": 39.9271107511642,
+        "volume_ccy": 871725023.0,
         "trend_score": 5
       },
       {
-        "symbol": "BICOUSDT",
-        "actual_symbol": "BICOUSDT",
+        "symbol": "ONTUSDT",
+        "actual_symbol": "ONTUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 24.503311258278135,
-        "volume_ccy": 2771632019.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "LIGHTUSDT",
-        "actual_symbol": "LIGHTUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 17.813765182186238,
-        "volume_ccy": 77018055.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "FARTCOINUSDT",
-        "actual_symbol": "FARTCOINUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 6.692477876106196,
-        "volume_ccy": 235286227.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 18.145695364238414,
+        "volume_ccy": 308165550.0,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-08-27T00:00:55+08:00",
+    "alt_watchlist_at": "2026-08-27T02:30:33+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "ONTUSDT",
-      "EDENUSDT",
-      "MERLUSDT",
       "ACUUSDT",
+      "SUSDT",
+      "COREUSDT",
+      "PUMPUSDT",
       "STXUSDT",
-      "BICOUSDT",
-      "LIGHTUSDT",
-      "FARTCOINUSDT"
+      "SOONUSDT",
+      "EDENUSDT",
+      "ONTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ONTUSDT",
-      "EDENUSDT",
-      "MERLUSDT",
       "ACUUSDT",
+      "SUSDT",
+      "COREUSDT",
+      "PUMPUSDT",
       "STXUSDT",
-      "BICOUSDT",
-      "LIGHTUSDT",
-      "FARTCOINUSDT"
+      "SOONUSDT",
+      "EDENUSDT",
+      "ONTUSDT"
     ]
   },
   "signals": {
