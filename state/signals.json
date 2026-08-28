@@ -2,86 +2,98 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-28T20:52:24+08:00",
-    "last_candidates": 1,
-    "last_okx_discovery_count": 5,
+    "last_scan_at": "2026-08-29T06:52:20+08:00",
+    "last_candidates": 0,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "UBUSDT",
-      "BATUSDT",
-      "STXUSDT",
+      "ROBOUSDT",
       "TRUMPUSDT",
-      "CHIPUSDT"
+      "CAPUSDT",
+      "BEATUSDT",
+      "ENSOUSDT",
+      "SLXUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "UBUSDT",
-        "actual_symbol": "UBUSDT",
+        "symbol": "ROBOUSDT",
+        "actual_symbol": "ROBOUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 15.118069815195076,
-        "volume_ccy": 109011700.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "BATUSDT",
-        "actual_symbol": "BATUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 5.052136877661916,
-        "volume_ccy": 8170970.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "STXUSDT",
-        "actual_symbol": "STXUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 4.9282110981761695,
-        "volume_ccy": 66078898.0,
-        "trend_score": 7
+        "side_score": 5,
+        "change_pct": 7.468259895444354,
+        "volume_ccy": 505553700.0,
+        "trend_score": 5
       },
       {
         "symbol": "TRUMPUSDT",
         "actual_symbol": "TRUMPUSDT",
         "side": "long",
+        "side_score": 5,
+        "change_pct": 5.430932703659972,
+        "volume_ccy": 367009139.9,
+        "trend_score": 5
+      },
+      {
+        "symbol": "CAPUSDT",
+        "actual_symbol": "CAPUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.396758703481395,
+        "volume_ccy": 264084200.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "BEATUSDT",
+        "actual_symbol": "BEATUSDT",
+        "side": "short",
         "side_score": 4,
-        "change_pct": 15.65806178586543,
-        "volume_ccy": 378470132.0,
+        "change_pct": 6.234618539786718,
+        "volume_ccy": 188664340.0,
         "trend_score": 4
       },
       {
-        "symbol": "CHIPUSDT",
-        "actual_symbol": "CHIPUSDT",
+        "symbol": "ENSOUSDT",
+        "actual_symbol": "ENSOUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 5.457209131974113,
+        "volume_ccy": 4841077.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "SLXUSDT",
+        "actual_symbol": "SLXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 20.709258256632367,
-        "volume_ccy": 1544075200.0,
+        "change_pct": 5.002246517897274,
+        "volume_ccy": 156110020.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-08-28T20:52:23+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-08-29T06:52:20+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "UBUSDT",
-      "BATUSDT",
-      "STXUSDT",
+      "ROBOUSDT",
       "TRUMPUSDT",
-      "CHIPUSDT"
+      "CAPUSDT",
+      "BEATUSDT",
+      "ENSOUSDT",
+      "SLXUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "UBUSDT",
-      "BATUSDT",
-      "STXUSDT",
+      "ROBOUSDT",
       "TRUMPUSDT",
-      "CHIPUSDT"
+      "CAPUSDT",
+      "BEATUSDT",
+      "ENSOUSDT",
+      "SLXUSDT"
     ]
   },
   "signals": {
