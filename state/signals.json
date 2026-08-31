@@ -2,42 +2,31 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "强",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-08-31T06:10:14+08:00",
+    "last_scan_at": "2026-08-31T08:38:28+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "ZENUSDT",
-      "USELESSUSDT",
-      "0GUSDT",
       "ANIMEUSDT",
-      "ZORAUSDT",
-      "DASHUSDT",
-      "PENDLEUSDT",
-      "AEVOUSDT"
+      "0GUSDT",
+      "USELESSUSDT",
+      "PROVEUSDT",
+      "ZENUSDT",
+      "LAUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ZENUSDT",
-        "actual_symbol": "ZENUSDT",
+        "symbol": "ANIMEUSDT",
+        "actual_symbol": "ANIMEUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 10.599803343166169,
-        "volume_ccy": 398591.1,
-        "trend_score": 7
-      },
-      {
-        "symbol": "USELESSUSDT",
-        "actual_symbol": "USELESSUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 8.963763509218042,
-        "volume_ccy": 36913040.0,
+        "change_pct": 14.394807178312341,
+        "volume_ccy": 2034413440.0,
         "trend_score": 7
       },
       {
@@ -45,79 +34,66 @@
         "actual_symbol": "0GUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 5.834378920953578,
-        "volume_ccy": 6089077.0,
+        "change_pct": 6.566604127579743,
+        "volume_ccy": 9708216.0,
         "trend_score": 7
       },
       {
-        "symbol": "ANIMEUSDT",
-        "actual_symbol": "ANIMEUSDT",
+        "symbol": "USELESSUSDT",
+        "actual_symbol": "USELESSUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 5.7317539166985085,
-        "volume_ccy": 614455510.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 5.564001216175123,
+        "volume_ccy": 68424010.0,
+        "trend_score": 7
       },
       {
-        "symbol": "ZORAUSDT",
-        "actual_symbol": "ZORAUSDT",
+        "symbol": "PROVEUSDT",
+        "actual_symbol": "PROVEUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 34.97528830313016,
-        "volume_ccy": 2087031510.0,
+        "change_pct": 4.801422643746309,
+        "volume_ccy": 5406822.0,
         "trend_score": 5
       },
       {
-        "symbol": "DASHUSDT",
-        "actual_symbol": "DASHUSDT",
+        "symbol": "ZENUSDT",
+        "actual_symbol": "ZENUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 6.993177387914224,
-        "volume_ccy": 364506.5,
+        "change_pct": 4.794520547945207,
+        "volume_ccy": 671599.8,
         "trend_score": 5
       },
       {
-        "symbol": "PENDLEUSDT",
-        "actual_symbol": "PENDLEUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 5.176470588235299,
-        "volume_ccy": 900505.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "AEVOUSDT",
-        "actual_symbol": "AEVOUSDT",
+        "symbol": "LAUSDT",
+        "actual_symbol": "LAUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 9.438202247191017,
-        "volume_ccy": 92023946.0,
+        "change_pct": 6.685993839463668,
+        "volume_ccy": 44759480.0,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-08-31T06:10:14+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-08-31T08:38:28+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "ZENUSDT",
-      "USELESSUSDT",
-      "0GUSDT",
       "ANIMEUSDT",
-      "ZORAUSDT",
-      "DASHUSDT",
-      "PENDLEUSDT",
-      "AEVOUSDT"
+      "0GUSDT",
+      "USELESSUSDT",
+      "PROVEUSDT",
+      "ZENUSDT",
+      "LAUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ZENUSDT",
-      "USELESSUSDT",
-      "0GUSDT",
       "ANIMEUSDT",
-      "ZORAUSDT",
-      "DASHUSDT",
-      "PENDLEUSDT",
-      "AEVOUSDT"
+      "0GUSDT",
+      "USELESSUSDT",
+      "PROVEUSDT",
+      "ZENUSDT",
+      "LAUSDT"
     ]
   },
   "signals": {
