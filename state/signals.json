@@ -2,122 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-02T00:53:04+08:00",
+    "last_scan_at": "2026-09-02T03:46:50+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "ARUSDT",
-      "SYRUPUSDT",
       "CHIPUSDT",
-      "FILUSDT",
-      "PYTHUSDT",
-      "ENAUSDT",
+      "CVXUSDT",
+      "ARUSDT",
       "WUSDT",
-      "OPUSDT"
+      "TIAUSDT",
+      "ETHFIUSDT",
+      "STRKUSDT",
+      "FILUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "CHIPUSDT",
+        "actual_symbol": "CHIPUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 13.751946030098598,
+        "volume_ccy": 477579700.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "CVXUSDT",
+        "actual_symbol": "CVXUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 13.567839195979905,
+        "volume_ccy": 618197.0,
+        "trend_score": 7
+      },
       {
         "symbol": "ARUSDT",
         "actual_symbol": "ARUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 9.608884596813125,
-        "volume_ccy": 2344468.1,
+        "change_pct": 11.594202898550735,
+        "volume_ccy": 2830853.5,
         "trend_score": 7
-      },
-      {
-        "symbol": "SYRUPUSDT",
-        "actual_symbol": "SYRUPUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 8.305647840531554,
-        "volume_ccy": 4342730.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "CHIPUSDT",
-        "actual_symbol": "CHIPUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 10.179948586118266,
-        "volume_ccy": 419465000.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "FILUSDT",
-        "actual_symbol": "FILUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 7.095046854082994,
-        "volume_ccy": 42582882.5,
-        "trend_score": 5
-      },
-      {
-        "symbol": "PYTHUSDT",
-        "actual_symbol": "PYTHUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 6.486941870261161,
-        "volume_ccy": 40336980.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "ENAUSDT",
-        "actual_symbol": "ENAUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 6.366171003717483,
-        "volume_ccy": 585949580.0,
-        "trend_score": 5
       },
       {
         "symbol": "WUSDT",
         "actual_symbol": "WUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.868802106186913,
-        "volume_ccy": 196551790.0,
+        "change_pct": 7.246216723737992,
+        "volume_ccy": 219314969.0,
         "trend_score": 5
       },
       {
-        "symbol": "OPUSDT",
-        "actual_symbol": "OPUSDT",
+        "symbol": "TIAUSDT",
+        "actual_symbol": "TIAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.57134164891999,
+        "volume_ccy": 14395103.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ETHFIUSDT",
+        "actual_symbol": "ETHFIUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.066142883245022,
+        "volume_ccy": 14042791.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "STRKUSDT",
+        "actual_symbol": "STRKUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.065380070894052,
+        "volume_ccy": 170438945.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "FILUSDT",
+        "actual_symbol": "FILUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 13.703831549879189,
-        "volume_ccy": 462067164.0,
+        "change_pct": 17.124298789489224,
+        "volume_ccy": 121191825.8,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-09-02T00:53:04+08:00",
+    "alt_watchlist_at": "2026-09-02T03:46:50+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "ARUSDT",
-      "SYRUPUSDT",
       "CHIPUSDT",
-      "FILUSDT",
-      "PYTHUSDT",
-      "ENAUSDT",
+      "CVXUSDT",
+      "ARUSDT",
       "WUSDT",
-      "OPUSDT"
+      "TIAUSDT",
+      "ETHFIUSDT",
+      "STRKUSDT",
+      "FILUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ARUSDT",
-      "SYRUPUSDT",
       "CHIPUSDT",
-      "FILUSDT",
-      "PYTHUSDT",
-      "ENAUSDT",
+      "CVXUSDT",
+      "ARUSDT",
       "WUSDT",
-      "OPUSDT"
+      "TIAUSDT",
+      "ETHFIUSDT",
+      "STRKUSDT",
+      "FILUSDT"
     ]
   },
   "signals": {
