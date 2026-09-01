@@ -2,122 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-02T03:46:50+08:00",
+    "last_scan_at": "2026-09-02T06:07:16+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "SEIUSDT",
       "CHIPUSDT",
-      "CVXUSDT",
       "ARUSDT",
       "WUSDT",
+      "PIPPINUSDT",
       "TIAUSDT",
-      "ETHFIUSDT",
-      "STRKUSDT",
-      "FILUSDT"
+      "ENAUSDT",
+      "OPUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "SEIUSDT",
+        "actual_symbol": "SEIUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 6.167004276389826,
+        "volume_ccy": 51514260.0,
+        "trend_score": 7
+      },
       {
         "symbol": "CHIPUSDT",
         "actual_symbol": "CHIPUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 13.751946030098598,
-        "volume_ccy": 477579700.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "CVXUSDT",
-        "actual_symbol": "CVXUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 13.567839195979905,
-        "volume_ccy": 618197.0,
-        "trend_score": 7
+        "side_score": 5,
+        "change_pct": 15.736434108527146,
+        "volume_ccy": 565569100.0,
+        "trend_score": 5
       },
       {
         "symbol": "ARUSDT",
         "actual_symbol": "ARUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 11.594202898550735,
-        "volume_ccy": 2830853.5,
-        "trend_score": 7
+        "side_score": 5,
+        "change_pct": 9.725565719788154,
+        "volume_ccy": 3042370.7,
+        "trend_score": 5
       },
       {
         "symbol": "WUSDT",
         "actual_symbol": "WUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 7.246216723737992,
-        "volume_ccy": 219314969.0,
+        "change_pct": 6.489675516224197,
+        "volume_ccy": 255677490.0,
         "trend_score": 5
+      },
+      {
+        "symbol": "PIPPINUSDT",
+        "actual_symbol": "PIPPINUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 5.895821408128218,
+        "volume_ccy": 147952800.0,
+        "trend_score": 4
       },
       {
         "symbol": "TIAUSDT",
         "actual_symbol": "TIAUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 6.57134164891999,
-        "volume_ccy": 14395103.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 5.156482861400889,
+        "volume_ccy": 14411434.0,
+        "trend_score": 4
       },
       {
-        "symbol": "ETHFIUSDT",
-        "actual_symbol": "ETHFIUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 6.066142883245022,
-        "volume_ccy": 14042791.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "STRKUSDT",
-        "actual_symbol": "STRKUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 6.065380070894052,
-        "volume_ccy": 170438945.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "FILUSDT",
-        "actual_symbol": "FILUSDT",
+        "symbol": "ENAUSDT",
+        "actual_symbol": "ENAUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 17.124298789489224,
-        "volume_ccy": 121191825.8,
+        "change_pct": 5.141216532015766,
+        "volume_ccy": 647033600.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "OPUSDT",
+        "actual_symbol": "OPUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 5.003291639236334,
+        "volume_ccy": 504133269.0,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-09-02T03:46:50+08:00",
+    "alt_watchlist_at": "2026-09-02T06:07:16+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "SEIUSDT",
       "CHIPUSDT",
-      "CVXUSDT",
       "ARUSDT",
       "WUSDT",
+      "PIPPINUSDT",
       "TIAUSDT",
-      "ETHFIUSDT",
-      "STRKUSDT",
-      "FILUSDT"
+      "ENAUSDT",
+      "OPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "SEIUSDT",
       "CHIPUSDT",
-      "CVXUSDT",
       "ARUSDT",
       "WUSDT",
+      "PIPPINUSDT",
       "TIAUSDT",
-      "ETHFIUSDT",
-      "STRKUSDT",
-      "FILUSDT"
+      "ENAUSDT",
+      "OPUSDT"
     ]
   },
   "signals": {
