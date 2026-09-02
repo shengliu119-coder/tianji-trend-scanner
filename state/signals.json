@@ -8,36 +8,27 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-03T01:14:17+08:00",
+    "last_scan_at": "2026-09-03T03:52:02+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "KITEUSDT",
-      "CELOUSDT",
+      "EDGEUSDT",
       "SEIUSDT",
       "GPSUSDT",
-      "MUBARAKUSDT",
       "ZKPUSDT",
-      "ZETAUSDT",
-      "FILUSDT"
+      "CELOUSDT",
+      "MUBARAKUSDT",
+      "PIEVERSEUSDT",
+      "ASTERUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "KITEUSDT",
-        "actual_symbol": "KITEUSDT",
+        "symbol": "EDGEUSDT",
+        "actual_symbol": "EDGEUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 16.118233036662048,
-        "volume_ccy": 79807590.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "CELOUSDT",
-        "actual_symbol": "CELOUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 7.074175824175827,
-        "volume_ccy": 14812137.0,
+        "change_pct": 8.27147401908802,
+        "volume_ccy": 2947020.0,
         "trend_score": 7
       },
       {
@@ -45,8 +36,8 @@
         "actual_symbol": "SEIUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 4.663774403470714,
-        "volume_ccy": 60760960.0,
+        "change_pct": 6.178686759956953,
+        "volume_ccy": 58298020.0,
         "trend_score": 7
       },
       {
@@ -54,70 +45,79 @@
         "actual_symbol": "GPSUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 6.140699523052469,
-        "volume_ccy": 392038970.0,
+        "change_pct": 5.084911184852632,
+        "volume_ccy": 453769090.0,
         "trend_score": 6
-      },
-      {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 26.207286077379273,
-        "volume_ccy": 711975500.0,
-        "trend_score": 5
       },
       {
         "symbol": "ZKPUSDT",
         "actual_symbol": "ZKPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 6.4108352144469585,
-        "volume_ccy": 119795800.0,
+        "change_pct": 6.947608200455574,
+        "volume_ccy": 117946950.0,
         "trend_score": 5
       },
       {
-        "symbol": "ZETAUSDT",
-        "actual_symbol": "ZETAUSDT",
+        "symbol": "CELOUSDT",
+        "actual_symbol": "CELOUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 4.549703957619204,
-        "volume_ccy": 10729340.0,
+        "change_pct": 6.762886597938156,
+        "volume_ccy": 15473742.0,
         "trend_score": 5
       },
       {
-        "symbol": "FILUSDT",
-        "actual_symbol": "FILUSDT",
+        "symbol": "MUBARAKUSDT",
+        "actual_symbol": "MUBARAKUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 9.27070457354759,
-        "volume_ccy": 298939291.6,
+        "change_pct": 31.737306523940408,
+        "volume_ccy": 850513200.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "PIEVERSEUSDT",
+        "actual_symbol": "PIEVERSEUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 6.0906791204514485,
+        "volume_ccy": 5730180.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "ASTERUSDT",
+        "actual_symbol": "ASTERUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 5.826225242157005,
+        "volume_ccy": 24239152.0,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-09-03T01:14:17+08:00",
+    "alt_watchlist_at": "2026-09-03T03:52:02+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "KITEUSDT",
-      "CELOUSDT",
+      "EDGEUSDT",
       "SEIUSDT",
       "GPSUSDT",
-      "MUBARAKUSDT",
       "ZKPUSDT",
-      "ZETAUSDT",
-      "FILUSDT"
+      "CELOUSDT",
+      "MUBARAKUSDT",
+      "PIEVERSEUSDT",
+      "ASTERUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "KITEUSDT",
-      "CELOUSDT",
+      "EDGEUSDT",
       "SEIUSDT",
       "GPSUSDT",
-      "MUBARAKUSDT",
       "ZKPUSDT",
-      "ZETAUSDT",
-      "FILUSDT"
+      "CELOUSDT",
+      "MUBARAKUSDT",
+      "PIEVERSEUSDT",
+      "ASTERUSDT"
     ]
   },
   "signals": {
