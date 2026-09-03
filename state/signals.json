@@ -8,34 +8,54 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-04T06:05:29+08:00",
+    "last_scan_at": "2026-09-04T07:55:52+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "MERLUSDT",
       "SPXUSDT",
-      "ENAUSDT",
+      "MERLUSDT",
       "MOVEUSDT",
-      "XPLUSDT",
-      "COAIUSDT"
+      "ZROUSDT",
+      "ENAUSDT",
+      "COREUSDT",
+      "USELESSUSDT",
+      "LITUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "MERLUSDT",
-        "actual_symbol": "MERLUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 18.15068493150686,
-        "volume_ccy": 173956259.0,
-        "trend_score": 7
-      },
       {
         "symbol": "SPXUSDT",
         "actual_symbol": "SPXUSDT",
         "side": "long",
+        "side_score": 7,
+        "change_pct": 13.502898821769223,
+        "volume_ccy": 4691704.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "MERLUSDT",
+        "actual_symbol": "MERLUSDT",
+        "side": "long",
         "side_score": 6,
-        "change_pct": 13.26395458845791,
-        "volume_ccy": 4458440.0,
+        "change_pct": 16.74852652259332,
+        "volume_ccy": 244581432.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "MOVEUSDT",
+        "actual_symbol": "MOVEUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 14.827057018061627,
+        "volume_ccy": 426819090.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "ZROUSDT",
+        "actual_symbol": "ZROUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 11.330098048925429,
+        "volume_ccy": 8351839.0,
         "trend_score": 6
       },
       {
@@ -43,57 +63,61 @@
         "actual_symbol": "ENAUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 14.41982979873025,
-        "volume_ccy": 741040380.0,
+        "change_pct": 12.598953441567149,
+        "volume_ccy": 759200280.0,
         "trend_score": 5
       },
       {
-        "symbol": "MOVEUSDT",
-        "actual_symbol": "MOVEUSDT",
+        "symbol": "COREUSDT",
+        "actual_symbol": "COREUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 12.81383230696352,
-        "volume_ccy": 385922980.0,
+        "change_pct": 12.475442043222007,
+        "volume_ccy": 118914289.0,
         "trend_score": 5
       },
       {
-        "symbol": "XPLUSDT",
-        "actual_symbol": "XPLUSDT",
+        "symbol": "USELESSUSDT",
+        "actual_symbol": "USELESSUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 15.668759053597302,
-        "volume_ccy": 493786440.0,
+        "change_pct": 65.50594018844737,
+        "volume_ccy": 1563298250.0,
         "trend_score": 3
       },
       {
-        "symbol": "COAIUSDT",
-        "actual_symbol": "COAIUSDT",
+        "symbol": "LITUSDT",
+        "actual_symbol": "LITUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 14.820042342978137,
-        "volume_ccy": 5299046.6,
+        "change_pct": 17.02721930910911,
+        "volume_ccy": 31309535.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-04T06:05:29+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-09-04T07:55:51+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "MERLUSDT",
       "SPXUSDT",
-      "ENAUSDT",
+      "MERLUSDT",
       "MOVEUSDT",
-      "XPLUSDT",
-      "COAIUSDT"
+      "ZROUSDT",
+      "ENAUSDT",
+      "COREUSDT",
+      "USELESSUSDT",
+      "LITUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "MERLUSDT",
       "SPXUSDT",
-      "ENAUSDT",
+      "MERLUSDT",
       "MOVEUSDT",
-      "XPLUSDT",
-      "COAIUSDT"
+      "ZROUSDT",
+      "ENAUSDT",
+      "COREUSDT",
+      "USELESSUSDT",
+      "LITUSDT"
     ]
   },
   "signals": {
