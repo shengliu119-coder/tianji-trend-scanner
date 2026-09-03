@@ -8,54 +8,81 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-03T12:25:55+08:00",
+    "last_scan_at": "2026-09-03T17:08:31+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "STXUSDT",
-      "RLSUSDT",
-      "CELOUSDT",
-      "NIGHTUSDT",
-      "HUSDT",
       "ZAMAUSDT",
-      "SUIUSDT",
-      "ARUSDT"
+      "GPSUSDT",
+      "RLSUSDT",
+      "BLURUSDT",
+      "MEGAUSDT",
+      "FUSDT",
+      "ADAUSDT",
+      "HUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "STXUSDT",
-        "actual_symbol": "STXUSDT",
+        "symbol": "ZAMAUSDT",
+        "actual_symbol": "ZAMAUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 7.71616905777432,
-        "volume_ccy": 26929587.0,
+        "change_pct": 12.652652652652652,
+        "volume_ccy": 92267340.0,
         "trend_score": 7
+      },
+      {
+        "symbol": "GPSUSDT",
+        "actual_symbol": "GPSUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 10.136628491058884,
+        "volume_ccy": 395287470.0,
+        "trend_score": 6
       },
       {
         "symbol": "RLSUSDT",
         "actual_symbol": "RLSUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 5.137711864406773,
-        "volume_ccy": 184768900.0,
+        "change_pct": 7.4866310160427885,
+        "volume_ccy": 172531700.0,
         "trend_score": 6
       },
       {
-        "symbol": "CELOUSDT",
-        "actual_symbol": "CELOUSDT",
+        "symbol": "BLURUSDT",
+        "actual_symbol": "BLURUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 7.25388601036268,
+        "volume_ccy": 46219580.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "MEGAUSDT",
+        "actual_symbol": "MEGAUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 9.808189361991557,
-        "volume_ccy": 17941197.0,
+        "change_pct": 8.817145957677708,
+        "volume_ccy": 43828420.0,
         "trend_score": 5
       },
       {
-        "symbol": "NIGHTUSDT",
-        "actual_symbol": "NIGHTUSDT",
+        "symbol": "FUSDT",
+        "actual_symbol": "FUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 7.70740504986208,
-        "volume_ccy": 65392600.0,
+        "change_pct": 7.068803016022618,
+        "volume_ccy": 70856800.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ADAUSDT",
+        "actual_symbol": "ADAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.2436028659160785,
+        "volume_ccy": 231163360.0,
         "trend_score": 5
       },
       {
@@ -63,61 +90,34 @@
         "actual_symbol": "HUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 14.038248337028826,
-        "volume_ccy": 64713790.0,
+        "change_pct": 19.516908212560384,
+        "volume_ccy": 89938960.0,
         "trend_score": 4
-      },
-      {
-        "symbol": "ZAMAUSDT",
-        "actual_symbol": "ZAMAUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 6.869460112812255,
-        "volume_ccy": 72010820.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "SUIUSDT",
-        "actual_symbol": "SUIUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 5.681030899265628,
-        "volume_ccy": 133488767.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "ARUSDT",
-        "actual_symbol": "ARUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 8.047493403693924,
-        "volume_ccy": 2333679.2,
-        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-03T12:25:54+08:00",
+    "alt_watchlist_at": "2026-09-03T17:08:31+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "STXUSDT",
-      "RLSUSDT",
-      "CELOUSDT",
-      "NIGHTUSDT",
-      "HUSDT",
       "ZAMAUSDT",
-      "SUIUSDT",
-      "ARUSDT"
+      "GPSUSDT",
+      "RLSUSDT",
+      "BLURUSDT",
+      "MEGAUSDT",
+      "FUSDT",
+      "ADAUSDT",
+      "HUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "STXUSDT",
-      "RLSUSDT",
-      "CELOUSDT",
-      "NIGHTUSDT",
-      "HUSDT",
       "ZAMAUSDT",
-      "SUIUSDT",
-      "ARUSDT"
+      "GPSUSDT",
+      "RLSUSDT",
+      "BLURUSDT",
+      "MEGAUSDT",
+      "FUSDT",
+      "ADAUSDT",
+      "HUSDT"
     ]
   },
   "signals": {
