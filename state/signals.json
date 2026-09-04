@@ -8,80 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-04T14:58:10+08:00",
+    "last_scan_at": "2026-09-04T19:58:58+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "VANAUSDT",
+      "AZTECUSDT",
+      "SYRUPUSDT",
+      "KORUUSDT",
+      "ENAUSDT",
       "SPXUSDT",
+      "XPLUSDT",
       "MERLUSDT",
-      "USELESSUSDT",
-      "LPTUSDT"
+      "ZECUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "VANAUSDT",
-        "actual_symbol": "VANAUSDT",
+        "symbol": "AZTECUSDT",
+        "actual_symbol": "AZTECUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 10.15988207279737,
-        "volume_ccy": 1040957.0,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 40.2182385035074,
+        "volume_ccy": 296508700.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "SYRUPUSDT",
+        "actual_symbol": "SYRUPUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 12.747035573122526,
+        "volume_ccy": 9293410.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "KORUUSDT",
+        "actual_symbol": "KORUUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 10.165975103734425,
+        "volume_ccy": 2608978.83,
+        "trend_score": 6
+      },
+      {
+        "symbol": "ENAUSDT",
+        "actual_symbol": "ENAUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 10.134215133242561,
+        "volume_ccy": 840582650.0,
+        "trend_score": 6
       },
       {
         "symbol": "SPXUSDT",
         "actual_symbol": "SPXUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 10.395856455789868,
-        "volume_ccy": 4592083.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 21.06328182487124,
+        "volume_ccy": 8500831.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "XPLUSDT",
+        "actual_symbol": "XPLUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 16.472469728124274,
+        "volume_ccy": 503527130.0,
+        "trend_score": 5
       },
       {
         "symbol": "MERLUSDT",
         "actual_symbol": "MERLUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 9.750240153698352,
-        "volume_ccy": 337134511.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 12.094823415578126,
+        "volume_ccy": 373335536.0,
+        "trend_score": 5
       },
       {
-        "symbol": "USELESSUSDT",
-        "actual_symbol": "USELESSUSDT",
+        "symbol": "ZECUSDT",
+        "actual_symbol": "ZECUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 58.88183467219486,
-        "volume_ccy": 1790473090.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "LPTUSDT",
-        "actual_symbol": "LPTUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 10.75429424943989,
-        "volume_ccy": 5536358.3,
+        "change_pct": 19.949641911231993,
+        "volume_ccy": 1555085.06,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-04T14:58:10+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-09-04T19:58:58+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "VANAUSDT",
+      "AZTECUSDT",
+      "SYRUPUSDT",
+      "KORUUSDT",
+      "ENAUSDT",
       "SPXUSDT",
+      "XPLUSDT",
       "MERLUSDT",
-      "USELESSUSDT",
-      "LPTUSDT"
+      "ZECUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "VANAUSDT",
+      "AZTECUSDT",
+      "SYRUPUSDT",
+      "KORUUSDT",
+      "ENAUSDT",
       "SPXUSDT",
+      "XPLUSDT",
       "MERLUSDT",
-      "USELESSUSDT",
-      "LPTUSDT"
+      "ZECUSDT"
     ]
   },
   "signals": {
