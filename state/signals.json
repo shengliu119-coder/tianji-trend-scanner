@@ -2,122 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-04T19:58:58+08:00",
+    "last_scan_at": "2026-09-04T23:31:10+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "AZTECUSDT",
-      "SYRUPUSDT",
+      "ZORAUSDT",
+      "ACUUSDT",
+      "KGENUSDT",
+      "0GUSDT",
+      "SNDKUSDT",
+      "BICOUSDT",
       "KORUUSDT",
-      "ENAUSDT",
-      "SPXUSDT",
-      "XPLUSDT",
-      "MERLUSDT",
-      "ZECUSDT"
+      "LITUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "AZTECUSDT",
-        "actual_symbol": "AZTECUSDT",
+        "symbol": "ZORAUSDT",
+        "actual_symbol": "ZORAUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 40.2182385035074,
-        "volume_ccy": 296508700.0,
+        "change_pct": 14.605711291590248,
+        "volume_ccy": 1112517720.0,
         "trend_score": 7
       },
       {
-        "symbol": "SYRUPUSDT",
-        "actual_symbol": "SYRUPUSDT",
+        "symbol": "ACUUSDT",
+        "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 12.747035573122526,
-        "volume_ccy": 9293410.0,
+        "change_pct": 10.15544859149372,
+        "volume_ccy": 5499250.0,
         "trend_score": 7
+      },
+      {
+        "symbol": "KGENUSDT",
+        "actual_symbol": "KGENUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 6.620209059233462,
+        "volume_ccy": 4954380.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "0GUSDT",
+        "actual_symbol": "0GUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 6.209150326797381,
+        "volume_ccy": 29529547.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "SNDKUSDT",
+        "actual_symbol": "SNDKUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 9.859686818374195,
+        "volume_ccy": 970987.739,
+        "trend_score": 5
+      },
+      {
+        "symbol": "BICOUSDT",
+        "actual_symbol": "BICOUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.169429097605898,
+        "volume_ccy": 470438830.0,
+        "trend_score": 5
       },
       {
         "symbol": "KORUUSDT",
         "actual_symbol": "KORUUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 10.165975103734425,
-        "volume_ccy": 2608978.83,
-        "trend_score": 6
+        "side_score": 4,
+        "change_pct": 11.243781094527353,
+        "volume_ccy": 2543343.09,
+        "trend_score": 4
       },
       {
-        "symbol": "ENAUSDT",
-        "actual_symbol": "ENAUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 10.134215133242561,
-        "volume_ccy": 840582650.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "SPXUSDT",
-        "actual_symbol": "SPXUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 21.06328182487124,
-        "volume_ccy": 8500831.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "XPLUSDT",
-        "actual_symbol": "XPLUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 16.472469728124274,
-        "volume_ccy": 503527130.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "MERLUSDT",
-        "actual_symbol": "MERLUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 12.094823415578126,
-        "volume_ccy": 373335536.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "ZECUSDT",
-        "actual_symbol": "ZECUSDT",
+        "symbol": "LITUSDT",
+        "actual_symbol": "LITUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 19.949641911231993,
-        "volume_ccy": 1555085.06,
+        "change_pct": 15.299811777359496,
+        "volume_ccy": 33830095.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-04T19:58:58+08:00",
+    "alt_watchlist_at": "2026-09-04T23:31:10+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "AZTECUSDT",
-      "SYRUPUSDT",
+      "ZORAUSDT",
+      "ACUUSDT",
+      "KGENUSDT",
+      "0GUSDT",
+      "SNDKUSDT",
+      "BICOUSDT",
       "KORUUSDT",
-      "ENAUSDT",
-      "SPXUSDT",
-      "XPLUSDT",
-      "MERLUSDT",
-      "ZECUSDT"
+      "LITUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "AZTECUSDT",
-      "SYRUPUSDT",
+      "ZORAUSDT",
+      "ACUUSDT",
+      "KGENUSDT",
+      "0GUSDT",
+      "SNDKUSDT",
+      "BICOUSDT",
       "KORUUSDT",
-      "ENAUSDT",
-      "SPXUSDT",
-      "XPLUSDT",
-      "MERLUSDT",
-      "ZECUSDT"
+      "LITUSDT"
     ]
   },
   "signals": {
