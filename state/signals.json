@@ -8,45 +8,27 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-05T02:37:16+08:00",
+    "last_scan_at": "2026-09-05T05:07:46+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "ACUUSDT",
       "BICOUSDT",
-      "ZKPUSDT",
       "ZORAUSDT",
-      "RECALLUSDT",
-      "TRIAUSDT",
+      "ACUUSDT",
+      "ENJUSDT",
+      "LAUSDT",
       "DASHUSDT",
-      "LITUSDT"
+      "TRIAUSDT",
+      "ZENUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "ACUUSDT",
-        "actual_symbol": "ACUUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 13.509439949230517,
-        "volume_ccy": 7098270.0,
-        "trend_score": 7
-      },
       {
         "symbol": "BICOUSDT",
         "actual_symbol": "BICOUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 12.054794520547945,
-        "volume_ccy": 601315131.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "ZKPUSDT",
-        "actual_symbol": "ZKPUSDT",
-        "side": "long",
         "side_score": 6,
-        "change_pct": 6.149848419229109,
-        "volume_ccy": 49979360.0,
+        "change_pct": 10.602628001812423,
+        "volume_ccy": 612562198.0,
         "trend_score": 6
       },
       {
@@ -54,70 +36,88 @@
         "actual_symbol": "ZORAUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 15.118254279367568,
-        "volume_ccy": 1870812270.0,
+        "change_pct": 14.472987288135597,
+        "volume_ccy": 1943155170.0,
         "trend_score": 5
       },
       {
-        "symbol": "RECALLUSDT",
-        "actual_symbol": "RECALLUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 6.840474961280347,
-        "volume_ccy": 14415210.0,
-        "trend_score": 4
+        "symbol": "ACUUSDT",
+        "actual_symbol": "ACUUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 11.042753679619967,
+        "volume_ccy": 7269500.0,
+        "trend_score": 5
       },
       {
-        "symbol": "TRIAUSDT",
-        "actual_symbol": "TRIAUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 28.645563051375195,
-        "volume_ccy": 14175542500.0,
-        "trend_score": 3
+        "symbol": "ENJUSDT",
+        "actual_symbol": "ENJUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 7.91698693312836,
+        "volume_ccy": 31560190.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "LAUSDT",
+        "actual_symbol": "LAUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 7.06827309236948,
+        "volume_ccy": 160690400.0,
+        "trend_score": 4
       },
       {
         "symbol": "DASHUSDT",
         "actual_symbol": "DASHUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 20.71895424836601,
-        "volume_ccy": 1493219.27,
+        "change_pct": 24.22680412371134,
+        "volume_ccy": 1584984.96,
         "trend_score": 3
       },
       {
-        "symbol": "LITUSDT",
-        "actual_symbol": "LITUSDT",
+        "symbol": "TRIAUSDT",
+        "actual_symbol": "TRIAUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 23.749027741768217,
+        "volume_ccy": 14486318600.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ZENUSDT",
+        "actual_symbol": "ZENUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 13.374929630324633,
-        "volume_ccy": 33144073.0,
+        "change_pct": 13.062458025520476,
+        "volume_ccy": 2338345.9,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-05T02:37:16+08:00",
+    "alt_watchlist_at": "2026-09-05T05:07:46+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "ACUUSDT",
       "BICOUSDT",
-      "ZKPUSDT",
       "ZORAUSDT",
-      "RECALLUSDT",
-      "TRIAUSDT",
+      "ACUUSDT",
+      "ENJUSDT",
+      "LAUSDT",
       "DASHUSDT",
-      "LITUSDT"
+      "TRIAUSDT",
+      "ZENUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ACUUSDT",
       "BICOUSDT",
-      "ZKPUSDT",
       "ZORAUSDT",
-      "RECALLUSDT",
-      "TRIAUSDT",
+      "ACUUSDT",
+      "ENJUSDT",
+      "LAUSDT",
       "DASHUSDT",
-      "LITUSDT"
+      "TRIAUSDT",
+      "ZENUSDT"
     ]
   },
   "signals": {
