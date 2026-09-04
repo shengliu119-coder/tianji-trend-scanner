@@ -8,63 +8,42 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-04T10:03:07+08:00",
+    "last_scan_at": "2026-09-04T14:58:10+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "ENAUSDT",
+      "VANAUSDT",
       "SPXUSDT",
-      "DASHUSDT",
-      "COREUSDT",
-      "TRIAUSDT",
+      "MERLUSDT",
       "USELESSUSDT",
-      "CHIPUSDT",
-      "COAIUSDT"
+      "LPTUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ENAUSDT",
-        "actual_symbol": "ENAUSDT",
+        "symbol": "VANAUSDT",
+        "actual_symbol": "VANAUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 12.470885739003133,
-        "volume_ccy": 781747810.0,
+        "change_pct": 10.15988207279737,
+        "volume_ccy": 1040957.0,
         "trend_score": 5
       },
       {
         "symbol": "SPXUSDT",
         "actual_symbol": "SPXUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 10.928254437869832,
-        "volume_ccy": 4722939.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "DASHUSDT",
-        "actual_symbol": "DASHUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 10.589622641509438,
-        "volume_ccy": 327753.22,
-        "trend_score": 5
-      },
-      {
-        "symbol": "COREUSDT",
-        "actual_symbol": "COREUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 13.92031480570585,
-        "volume_ccy": 154623615.0,
+        "change_pct": 10.395856455789868,
+        "volume_ccy": 4592083.0,
         "trend_score": 4
       },
       {
-        "symbol": "TRIAUSDT",
-        "actual_symbol": "TRIAUSDT",
-        "side": "short",
+        "symbol": "MERLUSDT",
+        "actual_symbol": "MERLUSDT",
+        "side": "long",
         "side_score": 4,
-        "change_pct": 11.44251626898048,
-        "volume_ccy": 370190800.0,
+        "change_pct": 9.750240153698352,
+        "volume_ccy": 337134511.0,
         "trend_score": 4
       },
       {
@@ -72,52 +51,37 @@
         "actual_symbol": "USELESSUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 68.83886255924172,
-        "volume_ccy": 1698491790.0,
+        "change_pct": 58.88183467219486,
+        "volume_ccy": 1790473090.0,
         "trend_score": 3
       },
       {
-        "symbol": "CHIPUSDT",
-        "actual_symbol": "CHIPUSDT",
+        "symbol": "LPTUSDT",
+        "actual_symbol": "LPTUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 39.90708478513357,
-        "volume_ccy": 1710630400.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "COAIUSDT",
-        "actual_symbol": "COAIUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 13.884992987377268,
-        "volume_ccy": 5164093.4,
+        "change_pct": 10.75429424943989,
+        "volume_ccy": 5536358.3,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-04T10:03:07+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-04T14:58:10+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "ENAUSDT",
+      "VANAUSDT",
       "SPXUSDT",
-      "DASHUSDT",
-      "COREUSDT",
-      "TRIAUSDT",
+      "MERLUSDT",
       "USELESSUSDT",
-      "CHIPUSDT",
-      "COAIUSDT"
+      "LPTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ENAUSDT",
+      "VANAUSDT",
       "SPXUSDT",
-      "DASHUSDT",
-      "COREUSDT",
-      "TRIAUSDT",
+      "MERLUSDT",
       "USELESSUSDT",
-      "CHIPUSDT",
-      "COAIUSDT"
+      "LPTUSDT"
     ]
   },
   "signals": {
