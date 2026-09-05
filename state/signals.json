@@ -8,17 +8,17 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-05T07:07:34+08:00",
+    "last_scan_at": "2026-09-05T09:01:02+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "ACUUSDT",
+      "SOPHUSDT",
+      "LAUSDT",
       "LIGHTUSDT",
       "ZORAUSDT",
-      "ENJUSDT",
-      "LAUSDT",
-      "ICXUSDT",
       "DASHUSDT",
+      "ZENUSDT",
       "NEARUSDT"
     ],
     "alt_watchlist": [
@@ -27,62 +27,62 @@
         "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 11.97177697676201,
-        "volume_ccy": 7300870.0,
+        "change_pct": 13.535400277649245,
+        "volume_ccy": 7462980.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "SOPHUSDT",
+        "actual_symbol": "SOPHUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 7.7444589308996195,
+        "volume_ccy": 187562400.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "LAUSDT",
+        "actual_symbol": "LAUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 6.891723708774096,
+        "volume_ccy": 141288330.0,
         "trend_score": 7
       },
       {
         "symbol": "LIGHTUSDT",
         "actual_symbol": "LIGHTUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 6.855524079320113,
-        "volume_ccy": 9858088.0,
-        "trend_score": 7
+        "side_score": 6,
+        "change_pct": 7.5920679886685685,
+        "volume_ccy": 10357943.0,
+        "trend_score": 6
       },
       {
         "symbol": "ZORAUSDT",
         "actual_symbol": "ZORAUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 15.394702334120122,
-        "volume_ccy": 2001558170.0,
+        "change_pct": 16.789862724392815,
+        "volume_ccy": 2107386410.0,
         "trend_score": 5
-      },
-      {
-        "symbol": "ENJUSDT",
-        "actual_symbol": "ENJUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 14.67748165314794,
-        "volume_ccy": 56758310.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "LAUSDT",
-        "actual_symbol": "LAUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 7.0769720101781095,
-        "volume_ccy": 158599010.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "ICXUSDT",
-        "actual_symbol": "ICXUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 43.678160919540225,
-        "volume_ccy": 350392680.0,
-        "trend_score": 3
       },
       {
         "symbol": "DASHUSDT",
         "actual_symbol": "DASHUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 29.02323580034424,
-        "volume_ccy": 1780773.16,
+        "change_pct": 38.67379679144385,
+        "volume_ccy": 2167736.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ZENUSDT",
+        "actual_symbol": "ZENUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 18.9324437030859,
+        "volume_ccy": 2885352.1,
         "trend_score": 3
       },
       {
@@ -90,33 +90,33 @@
         "actual_symbol": "NEARUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 8.840061318344397,
-        "volume_ccy": 33969199.0,
+        "change_pct": 14.366341713699335,
+        "volume_ccy": 38916796.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-05T07:07:34+08:00",
+    "alt_watchlist_at": "2026-09-05T09:01:02+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "ACUUSDT",
+      "SOPHUSDT",
+      "LAUSDT",
       "LIGHTUSDT",
       "ZORAUSDT",
-      "ENJUSDT",
-      "LAUSDT",
-      "ICXUSDT",
       "DASHUSDT",
+      "ZENUSDT",
       "NEARUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "ACUUSDT",
+      "SOPHUSDT",
+      "LAUSDT",
       "LIGHTUSDT",
       "ZORAUSDT",
-      "ENJUSDT",
-      "LAUSDT",
-      "ICXUSDT",
       "DASHUSDT",
+      "ZENUSDT",
       "NEARUSDT"
     ]
   },
