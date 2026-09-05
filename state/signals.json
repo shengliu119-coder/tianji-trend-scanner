@@ -8,116 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-06T03:34:32+08:00",
+    "last_scan_at": "2026-09-06T05:34:49+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "ARBUSDT",
-      "SUSHIUSDT",
-      "UNIUSDT",
+      "OPUSDT",
+      "CRVUSDT",
       "APRUSDT",
-      "SIGNUSDT",
-      "MOODENGUSDT",
-      "OPNUSDT",
-      "USELESSUSDT"
+      "STRKUSDT",
+      "ENSOUSDT",
+      "AEROUSDT",
+      "BRETTUSDT",
+      "SIGNUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ARBUSDT",
-        "actual_symbol": "ARBUSDT",
+        "symbol": "OPUSDT",
+        "actual_symbol": "OPUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 9.020968471866041,
-        "volume_ccy": 467348088.0,
+        "change_pct": 9.323155216284988,
+        "volume_ccy": 105252023.0,
         "trend_score": 7
       },
       {
-        "symbol": "SUSHIUSDT",
-        "actual_symbol": "SUSHIUSDT",
+        "symbol": "CRVUSDT",
+        "actual_symbol": "CRVUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 44.375,
-        "volume_ccy": 127731117.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "UNIUSDT",
-        "actual_symbol": "UNIUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 15.621986499517831,
-        "volume_ccy": 23221088.0,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 7.861990950226241,
+        "volume_ccy": 27805611.0,
+        "trend_score": 7
       },
       {
         "symbol": "APRUSDT",
         "actual_symbol": "APRUSDT",
         "side": "long",
+        "side_score": 6,
+        "change_pct": 14.279069767441863,
+        "volume_ccy": 59696330.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "STRKUSDT",
+        "actual_symbol": "STRKUSDT",
+        "side": "long",
         "side_score": 5,
-        "change_pct": 11.162790697674415,
-        "volume_ccy": 58672750.0,
+        "change_pct": 15.044590926715774,
+        "volume_ccy": 459020537.0,
         "trend_score": 5
+      },
+      {
+        "symbol": "ENSOUSDT",
+        "actual_symbol": "ENSOUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 8.998100664767328,
+        "volume_ccy": 2125935.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "AEROUSDT",
+        "actual_symbol": "AEROUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 8.795832498497305,
+        "volume_ccy": 5107680.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "BRETTUSDT",
+        "actual_symbol": "BRETTUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 9.05216155875787,
+        "volume_ccy": 30984600.0,
+        "trend_score": 4
       },
       {
         "symbol": "SIGNUSDT",
         "actual_symbol": "SIGNUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 10.251001898333673,
-        "volume_ccy": 129815800.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "MOODENGUSDT",
-        "actual_symbol": "MOODENGUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 8.444656488549622,
-        "volume_ccy": 231638950.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "OPNUSDT",
-        "actual_symbol": "OPNUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 7.370737073707375,
-        "volume_ccy": 18055430.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "USELESSUSDT",
-        "actual_symbol": "USELESSUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 17.969389425437893,
-        "volume_ccy": 1322784090.0,
+        "change_pct": 7.842522974101922,
+        "volume_ccy": 132884700.0,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-09-06T03:34:32+08:00",
+    "alt_watchlist_at": "2026-09-06T05:34:48+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "ARBUSDT",
-      "SUSHIUSDT",
-      "UNIUSDT",
+      "OPUSDT",
+      "CRVUSDT",
       "APRUSDT",
-      "SIGNUSDT",
-      "MOODENGUSDT",
-      "OPNUSDT",
-      "USELESSUSDT"
+      "STRKUSDT",
+      "ENSOUSDT",
+      "AEROUSDT",
+      "BRETTUSDT",
+      "SIGNUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ARBUSDT",
-      "SUSHIUSDT",
-      "UNIUSDT",
+      "OPUSDT",
+      "CRVUSDT",
       "APRUSDT",
-      "SIGNUSDT",
-      "MOODENGUSDT",
-      "OPNUSDT",
-      "USELESSUSDT"
+      "STRKUSDT",
+      "ENSOUSDT",
+      "AEROUSDT",
+      "BRETTUSDT",
+      "SIGNUSDT"
     ]
   },
   "signals": {
