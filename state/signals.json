@@ -2,122 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "强",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-05T23:37:41+08:00",
+    "last_scan_at": "2026-09-06T01:42:41+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "MUBARAKUSDT",
-      "APRUSDT",
+      "USELESSUSDT",
       "SUSHIUSDT",
-      "ENSOUSDT",
-      "NMRUSDT",
       "SIGNUSDT",
+      "UNIUSDT",
       "CHIPUSDT",
-      "SOPHUSDT"
+      "BRETTUSDT",
+      "APRUSDT",
+      "MOODENGUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
+        "symbol": "USELESSUSDT",
+        "actual_symbol": "USELESSUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 13.438269250771409,
-        "volume_ccy": 233566000.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "APRUSDT",
-        "actual_symbol": "APRUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 10.786106032906769,
-        "volume_ccy": 55813750.0,
+        "change_pct": 27.130705743641574,
+        "volume_ccy": 1309994960.0,
         "trend_score": 7
       },
       {
         "symbol": "SUSHIUSDT",
         "actual_symbol": "SUSHIUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 9.215376513954705,
-        "volume_ccy": 11240983.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "ENSOUSDT",
-        "actual_symbol": "ENSOUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 8.57552924291354,
-        "volume_ccy": 1863967.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "NMRUSDT",
-        "actual_symbol": "NMRUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 14.110839083018014,
-        "volume_ccy": 394388.2,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 26.736842105263147,
+        "volume_ccy": 36738836.0,
+        "trend_score": 7
       },
       {
         "symbol": "SIGNUSDT",
         "actual_symbol": "SIGNUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 9.908859686307759,
-        "volume_ccy": 123420400.0,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 13.76166702843499,
+        "volume_ccy": 123351300.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "UNIUSDT",
+        "actual_symbol": "UNIUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 9.780148722922736,
+        "volume_ccy": 18290095.0,
+        "trend_score": 7
       },
       {
         "symbol": "CHIPUSDT",
         "actual_symbol": "CHIPUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 8.397665223121834,
-        "volume_ccy": 359479100.0,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 9.409108016560024,
+        "volume_ccy": 379815100.0,
+        "trend_score": 7
       },
       {
-        "symbol": "SOPHUSDT",
-        "actual_symbol": "SOPHUSDT",
+        "symbol": "BRETTUSDT",
+        "actual_symbol": "BRETTUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 15.063613231552154,
-        "volume_ccy": 1085326700.0,
-        "trend_score": 4
+        "side_score": 7,
+        "change_pct": 9.13705583756345,
+        "volume_ccy": 25100800.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "APRUSDT",
+        "actual_symbol": "APRUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 10.7756618671621,
+        "volume_ccy": 58809670.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "MOODENGUSDT",
+        "actual_symbol": "MOODENGUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 13.809871140286889,
+        "volume_ccy": 176886010.0,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-09-05T23:37:41+08:00",
+    "alt_watchlist_at": "2026-09-06T01:42:41+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "MUBARAKUSDT",
-      "APRUSDT",
+      "USELESSUSDT",
       "SUSHIUSDT",
-      "ENSOUSDT",
-      "NMRUSDT",
       "SIGNUSDT",
+      "UNIUSDT",
       "CHIPUSDT",
-      "SOPHUSDT"
+      "BRETTUSDT",
+      "APRUSDT",
+      "MOODENGUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "MUBARAKUSDT",
-      "APRUSDT",
+      "USELESSUSDT",
       "SUSHIUSDT",
-      "ENSOUSDT",
-      "NMRUSDT",
       "SIGNUSDT",
+      "UNIUSDT",
       "CHIPUSDT",
-      "SOPHUSDT"
+      "BRETTUSDT",
+      "APRUSDT",
+      "MOODENGUSDT"
     ]
   },
   "signals": {
