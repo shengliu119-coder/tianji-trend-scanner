@@ -8,92 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-05T13:08:42+08:00",
+    "last_scan_at": "2026-09-05T17:06:52+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "UBUSDT",
-      "ZKUSDT",
+      "AIXBTUSDT",
       "GIGGLEUSDT",
+      "MUBARAKUSDT",
+      "LQTYUSDT",
       "SOPHUSDT",
-      "STRKUSDT",
-      "ZORAUSDT"
+      "APRUSDT",
+      "ZORAUSDT",
+      "UPUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "UBUSDT",
-        "actual_symbol": "UBUSDT",
+        "symbol": "AIXBTUSDT",
+        "actual_symbol": "AIXBTUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 13.255360623781689,
-        "volume_ccy": 33887600.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "ZKUSDT",
-        "actual_symbol": "ZKUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 9.785867237687365,
-        "volume_ccy": 268163600.0,
+        "change_pct": 14.491315136476421,
+        "volume_ccy": 167573060.0,
         "trend_score": 7
       },
       {
         "symbol": "GIGGLEUSDT",
         "actual_symbol": "GIGGLEUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 8.912702561421861,
-        "volume_ccy": 374909.23,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 13.158584534731332,
+        "volume_ccy": 448693.28,
+        "trend_score": 7
+      },
+      {
+        "symbol": "MUBARAKUSDT",
+        "actual_symbol": "MUBARAKUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 7.6899808422680005,
+        "volume_ccy": 254447100.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "LQTYUSDT",
+        "actual_symbol": "LQTYUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 6.729475100942133,
+        "volume_ccy": 922060.0,
+        "trend_score": 7
       },
       {
         "symbol": "SOPHUSDT",
         "actual_symbol": "SOPHUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 7.35370274469188,
-        "volume_ccy": 163647600.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 10.548194336191221,
+        "volume_ccy": 145564000.0,
+        "trend_score": 6
       },
       {
-        "symbol": "STRKUSDT",
-        "actual_symbol": "STRKUSDT",
+        "symbol": "APRUSDT",
+        "actual_symbol": "APRUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 7.04277286135694,
-        "volume_ccy": 213369503.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 6.820276497695856,
+        "volume_ccy": 59850440.0,
+        "trend_score": 6
       },
       {
         "symbol": "ZORAUSDT",
         "actual_symbol": "ZORAUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 17.77354382144801,
-        "volume_ccy": 2245428320.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 8.307385726740577,
+        "volume_ccy": 2202620260.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "UPUSDT",
+        "actual_symbol": "UPUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 7.13986599664992,
+        "volume_ccy": 2471830.0,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-09-05T13:08:42+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-09-05T17:06:52+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "UBUSDT",
-      "ZKUSDT",
+      "AIXBTUSDT",
       "GIGGLEUSDT",
+      "MUBARAKUSDT",
+      "LQTYUSDT",
       "SOPHUSDT",
-      "STRKUSDT",
-      "ZORAUSDT"
+      "APRUSDT",
+      "ZORAUSDT",
+      "UPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "UBUSDT",
-      "ZKUSDT",
+      "AIXBTUSDT",
       "GIGGLEUSDT",
+      "MUBARAKUSDT",
+      "LQTYUSDT",
       "SOPHUSDT",
-      "STRKUSDT",
-      "ZORAUSDT"
+      "APRUSDT",
+      "ZORAUSDT",
+      "UPUSDT"
     ]
   },
   "signals": {
