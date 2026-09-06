@@ -8,16 +8,16 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-07T04:40:00+08:00",
-    "last_candidates": 0,
+    "last_scan_at": "2026-09-07T06:25:44+08:00",
+    "last_candidates": 1,
     "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
       "RLSUSDT",
-      "MONUSDT",
-      "DOODUSDT",
       "METISUSDT",
       "TIAUSDT",
-      "ENAUSDT"
+      "LINKUSDT",
+      "SOXLUSDT",
+      "ESPUSDT"
     ],
     "alt_watchlist": [
       {
@@ -25,35 +25,17 @@
         "actual_symbol": "RLSUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 8.062880324543626,
-        "volume_ccy": 831159000.0,
+        "change_pct": 8.490566037735835,
+        "volume_ccy": 893712800.0,
         "trend_score": 5
-      },
-      {
-        "symbol": "MONUSDT",
-        "actual_symbol": "MONUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 7.325860688550848,
-        "volume_ccy": 253937810.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "DOODUSDT",
-        "actual_symbol": "DOODUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 34.09090909090909,
-        "volume_ccy": 5221503000.0,
-        "trend_score": 3
       },
       {
         "symbol": "METISUSDT",
         "actual_symbol": "METISUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 25.490896108532663,
-        "volume_ccy": 1750608.7,
+        "change_pct": 25.415341109932832,
+        "volume_ccy": 1930551.6,
         "trend_score": 3
       },
       {
@@ -61,39 +43,57 @@
         "actual_symbol": "TIAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 11.781993053700232,
-        "volume_ccy": 20948000.0,
+        "change_pct": 10.777202072538852,
+        "volume_ccy": 25568046.0,
         "trend_score": 3
       },
       {
-        "symbol": "ENAUSDT",
-        "actual_symbol": "ENAUSDT",
+        "symbol": "LINKUSDT",
+        "actual_symbol": "LINKUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 6.585988810508396,
-        "volume_ccy": 576288750.0,
+        "change_pct": 6.162790697674427,
+        "volume_ccy": 6389259.9,
+        "trend_score": 3
+      },
+      {
+        "symbol": "SOXLUSDT",
+        "actual_symbol": "SOXLUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 5.7412605256442975,
+        "volume_ccy": 316671.17,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ESPUSDT",
+        "actual_symbol": "ESPUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 5.500292568753652,
+        "volume_ccy": 25039800.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-07T04:40:00+08:00",
+    "alt_watchlist_at": "2026-09-07T06:25:44+08:00",
     "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
       "RLSUSDT",
-      "MONUSDT",
-      "DOODUSDT",
       "METISUSDT",
       "TIAUSDT",
-      "ENAUSDT"
+      "LINKUSDT",
+      "SOXLUSDT",
+      "ESPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "RLSUSDT",
-      "MONUSDT",
-      "DOODUSDT",
       "METISUSDT",
       "TIAUSDT",
-      "ENAUSDT"
+      "LINKUSDT",
+      "SOXLUSDT",
+      "ESPUSDT"
     ]
   },
   "signals": {
