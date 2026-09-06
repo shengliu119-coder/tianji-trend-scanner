@@ -8,92 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-07T00:19:23+08:00",
+    "last_scan_at": "2026-09-07T02:22:59+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
+      "ENSUSDT",
+      "FARTCOINUSDT",
       "DOODUSDT",
-      "LAYERUSDT",
-      "ZKUSDT",
-      "METUSDT",
-      "LDOUSDT",
-      "ARXUSDT"
+      "ZECUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "ENSUSDT",
+        "actual_symbol": "ENSUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 6.098593935287147,
+        "volume_ccy": 526442.9,
+        "trend_score": 7
+      },
+      {
+        "symbol": "FARTCOINUSDT",
+        "actual_symbol": "FARTCOINUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 6.954997077732317,
+        "volume_ccy": 50311967.0,
+        "trend_score": 4
+      },
       {
         "symbol": "DOODUSDT",
         "actual_symbol": "DOODUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 23.044397463002117,
-        "volume_ccy": 2789738000.0,
+        "change_pct": 29.95867768595042,
+        "volume_ccy": 3677100000.0,
         "trend_score": 3
       },
       {
-        "symbol": "LAYERUSDT",
-        "actual_symbol": "LAYERUSDT",
+        "symbol": "ZECUSDT",
+        "actual_symbol": "ZECUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 19.635946681955,
-        "volume_ccy": 81703716.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ZKUSDT",
-        "actual_symbol": "ZKUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 14.498178874949415,
-        "volume_ccy": 380067940.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "METUSDT",
-        "actual_symbol": "METUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 13.896171997902462,
-        "volume_ccy": 16847627.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "LDOUSDT",
-        "actual_symbol": "LDOUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 12.578781512605042,
-        "volume_ccy": 24003848.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ARXUSDT",
-        "actual_symbol": "ARXUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 10.427606901725428,
-        "volume_ccy": 6820760.0,
+        "change_pct": 18.79497972881224,
+        "volume_ccy": 1735698.24,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-07T00:19:22+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-09-07T02:22:59+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
+      "ENSUSDT",
+      "FARTCOINUSDT",
       "DOODUSDT",
-      "LAYERUSDT",
-      "ZKUSDT",
-      "METUSDT",
-      "LDOUSDT",
-      "ARXUSDT"
+      "ZECUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "ENSUSDT",
+      "FARTCOINUSDT",
       "DOODUSDT",
-      "LAYERUSDT",
-      "ZKUSDT",
-      "METUSDT",
-      "LDOUSDT",
-      "ARXUSDT"
+      "ZECUSDT"
     ]
   },
   "signals": {
