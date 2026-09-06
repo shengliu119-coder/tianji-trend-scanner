@@ -8,81 +8,52 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-06T21:12:25+08:00",
+    "last_scan_at": "2026-09-07T00:19:23+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "FARTCOINUSDT",
-      "ZAMAUSDT",
-      "SNXUSDT",
+      "DOODUSDT",
+      "LAYERUSDT",
+      "ZKUSDT",
       "METUSDT",
-      "MONUSDT",
-      "SPKUSDT",
-      "RAYUSDT",
-      "LDOUSDT"
+      "LDOUSDT",
+      "ARXUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "FARTCOINUSDT",
-        "actual_symbol": "FARTCOINUSDT",
+        "symbol": "DOODUSDT",
+        "actual_symbol": "DOODUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 9.886837403216203,
-        "volume_ccy": 45689362.0,
-        "trend_score": 6
+        "side_score": 3,
+        "change_pct": 23.044397463002117,
+        "volume_ccy": 2789738000.0,
+        "trend_score": 3
       },
       {
-        "symbol": "ZAMAUSDT",
-        "actual_symbol": "ZAMAUSDT",
+        "symbol": "LAYERUSDT",
+        "actual_symbol": "LAYERUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 20.195694716242667,
-        "volume_ccy": 202634860.0,
-        "trend_score": 5
+        "side_score": 3,
+        "change_pct": 19.635946681955,
+        "volume_ccy": 81703716.0,
+        "trend_score": 3
       },
       {
-        "symbol": "SNXUSDT",
-        "actual_symbol": "SNXUSDT",
+        "symbol": "ZKUSDT",
+        "actual_symbol": "ZKUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 7.119437939110067,
-        "volume_ccy": 4603032.0,
-        "trend_score": 5
+        "side_score": 3,
+        "change_pct": 14.498178874949415,
+        "volume_ccy": 380067940.0,
+        "trend_score": 3
       },
       {
         "symbol": "METUSDT",
         "actual_symbol": "METUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 15.589155370177274,
-        "volume_ccy": 13988125.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "MONUSDT",
-        "actual_symbol": "MONUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 7.910507391130641,
-        "volume_ccy": 215793200.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "SPKUSDT",
-        "actual_symbol": "SPKUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 7.450411223996128,
-        "volume_ccy": 222666700.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "RAYUSDT",
-        "actual_symbol": "RAYUSDT",
-        "side": "long",
         "side_score": 3,
-        "change_pct": 60.204932681996894,
-        "volume_ccy": 55989796.0,
+        "change_pct": 13.896171997902462,
+        "volume_ccy": 16847627.0,
         "trend_score": 3
       },
       {
@@ -90,34 +61,39 @@
         "actual_symbol": "LDOUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 8.185146443514643,
-        "volume_ccy": 17393300.0,
+        "change_pct": 12.578781512605042,
+        "volume_ccy": 24003848.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ARXUSDT",
+        "actual_symbol": "ARXUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 10.427606901725428,
+        "volume_ccy": 6820760.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-06T21:12:25+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-07T00:19:22+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "FARTCOINUSDT",
-      "ZAMAUSDT",
-      "SNXUSDT",
+      "DOODUSDT",
+      "LAYERUSDT",
+      "ZKUSDT",
       "METUSDT",
-      "MONUSDT",
-      "SPKUSDT",
-      "RAYUSDT",
-      "LDOUSDT"
+      "LDOUSDT",
+      "ARXUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "FARTCOINUSDT",
-      "ZAMAUSDT",
-      "SNXUSDT",
+      "DOODUSDT",
+      "LAYERUSDT",
+      "ZKUSDT",
       "METUSDT",
-      "MONUSDT",
-      "SPKUSDT",
-      "RAYUSDT",
-      "LDOUSDT"
+      "LDOUSDT",
+      "ARXUSDT"
     ]
   },
   "signals": {
