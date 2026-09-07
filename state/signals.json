@@ -2,122 +2,86 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "强",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-07T23:21:39+08:00",
-    "last_candidates": 1,
-    "last_okx_discovery_count": 8,
+    "last_scan_at": "2026-09-08T03:11:37+08:00",
+    "last_candidates": 0,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
+      "INJUSDT",
       "ACUUSDT",
-      "AEROUSDT",
-      "PIEVERSEUSDT",
-      "FILUSDT",
       "PUMPUSDT",
-      "STXUSDT",
-      "DOTUSDT",
-      "INJUSDT"
+      "AEROUSDT",
+      "KORUUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "INJUSDT",
+        "actual_symbol": "INJUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 16.920672137553723,
+        "volume_ccy": 4536147.9,
+        "trend_score": 5
+      },
       {
         "symbol": "ACUUSDT",
         "actual_symbol": "ACUUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 6.875046960703276,
-        "volume_ccy": 6441870.0,
+        "change_pct": 8.628717332532291,
+        "volume_ccy": 8558890.0,
         "trend_score": 5
-      },
-      {
-        "symbol": "AEROUSDT",
-        "actual_symbol": "AEROUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 6.7928730512249595,
-        "volume_ccy": 4890440.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "PIEVERSEUSDT",
-        "actual_symbol": "PIEVERSEUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 23.3849751534639,
-        "volume_ccy": 19470450.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "FILUSDT",
-        "actual_symbol": "FILUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 9.319224885262628,
-        "volume_ccy": 82414669.7,
-        "trend_score": 4
       },
       {
         "symbol": "PUMPUSDT",
         "actual_symbol": "PUMPUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 8.236775818639801,
-        "volume_ccy": 51620090000.0,
+        "change_pct": 12.036316472114137,
+        "volume_ccy": 53397924000.0,
         "trend_score": 4
       },
       {
-        "symbol": "STXUSDT",
-        "actual_symbol": "STXUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 7.427055702917753,
-        "volume_ccy": 20635487.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "DOTUSDT",
-        "actual_symbol": "DOTUSDT",
+        "symbol": "AEROUSDT",
+        "actual_symbol": "AEROUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 12.568536482496844,
-        "volume_ccy": 41453723.0,
+        "change_pct": 13.47491761259612,
+        "volume_ccy": 10554880.0,
         "trend_score": 3
       },
       {
-        "symbol": "INJUSDT",
-        "actual_symbol": "INJUSDT",
+        "symbol": "KORUUSDT",
+        "actual_symbol": "KORUUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 11.847783444488037,
-        "volume_ccy": 3642840.8,
+        "change_pct": 5.2925989672977645,
+        "volume_ccy": 752692.79,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-07T23:21:39+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-08T03:11:37+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
+      "INJUSDT",
       "ACUUSDT",
-      "AEROUSDT",
-      "PIEVERSEUSDT",
-      "FILUSDT",
       "PUMPUSDT",
-      "STXUSDT",
-      "DOTUSDT",
-      "INJUSDT"
+      "AEROUSDT",
+      "KORUUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "INJUSDT",
       "ACUUSDT",
-      "AEROUSDT",
-      "PIEVERSEUSDT",
-      "FILUSDT",
       "PUMPUSDT",
-      "STXUSDT",
-      "DOTUSDT",
-      "INJUSDT"
+      "AEROUSDT",
+      "KORUUSDT"
     ]
   },
   "signals": {
