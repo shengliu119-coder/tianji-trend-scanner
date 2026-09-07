@@ -2,22 +2,24 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "强",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-07T06:25:44+08:00",
-    "last_candidates": 1,
-    "last_okx_discovery_count": 6,
+    "last_scan_at": "2026-09-07T08:11:48+08:00",
+    "last_candidates": 0,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "RLSUSDT",
-      "METISUSDT",
+      "INJUSDT",
+      "MONUSDT",
+      "DOODUSDT",
       "TIAUSDT",
+      "METUSDT",
       "LINKUSDT",
-      "SOXLUSDT",
-      "ESPUSDT"
+      "NIGHTUSDT"
     ],
     "alt_watchlist": [
       {
@@ -25,17 +27,35 @@
         "actual_symbol": "RLSUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 8.490566037735835,
-        "volume_ccy": 893712800.0,
+        "change_pct": 15.027735753908225,
+        "volume_ccy": 1005654100.0,
         "trend_score": 5
       },
       {
-        "symbol": "METISUSDT",
-        "actual_symbol": "METISUSDT",
+        "symbol": "INJUSDT",
+        "actual_symbol": "INJUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 7.866531850353879,
+        "volume_ccy": 2528591.7,
+        "trend_score": 5
+      },
+      {
+        "symbol": "MONUSDT",
+        "actual_symbol": "MONUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 8.356769787063085,
+        "volume_ccy": 186117310.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "DOODUSDT",
+        "actual_symbol": "DOODUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 25.415341109932832,
-        "volume_ccy": 1930551.6,
+        "change_pct": 32.515337423312886,
+        "volume_ccy": 7022712000.0,
         "trend_score": 3
       },
       {
@@ -43,8 +63,17 @@
         "actual_symbol": "TIAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 10.777202072538852,
-        "volume_ccy": 25568046.0,
+        "change_pct": 17.54293262879789,
+        "volume_ccy": 32349640.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "METUSDT",
+        "actual_symbol": "METUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 11.591148577449943,
+        "volume_ccy": 17905059.0,
         "trend_score": 3
       },
       {
@@ -52,48 +81,43 @@
         "actual_symbol": "LINKUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 6.162790697674427,
-        "volume_ccy": 6389259.9,
+        "change_pct": 9.585406301824202,
+        "volume_ccy": 6688417.7,
         "trend_score": 3
       },
       {
-        "symbol": "SOXLUSDT",
-        "actual_symbol": "SOXLUSDT",
+        "symbol": "NIGHTUSDT",
+        "actual_symbol": "NIGHTUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 5.7412605256442975,
-        "volume_ccy": 316671.17,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ESPUSDT",
-        "actual_symbol": "ESPUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 5.500292568753652,
-        "volume_ccy": 25039800.0,
+        "change_pct": 8.51397348620566,
+        "volume_ccy": 77355300.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-07T06:25:44+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-09-07T08:11:48+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "RLSUSDT",
-      "METISUSDT",
+      "INJUSDT",
+      "MONUSDT",
+      "DOODUSDT",
       "TIAUSDT",
+      "METUSDT",
       "LINKUSDT",
-      "SOXLUSDT",
-      "ESPUSDT"
+      "NIGHTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "RLSUSDT",
-      "METISUSDT",
+      "INJUSDT",
+      "MONUSDT",
+      "DOODUSDT",
       "TIAUSDT",
+      "METUSDT",
       "LINKUSDT",
-      "SOXLUSDT",
-      "ESPUSDT"
+      "NIGHTUSDT"
     ]
   },
   "signals": {
