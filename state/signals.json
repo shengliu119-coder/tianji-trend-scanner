@@ -8,26 +8,24 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-09T04:05:02+08:00",
+    "last_scan_at": "2026-09-09T06:30:15+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "XPLUSDT",
+      "EGLDUSDT",
       "USELESSUSDT",
-      "KMNOUSDT",
-      "VVVUSDT",
-      "OLUSDT",
-      "ZILUSDT",
-      "TRUTHUSDT"
+      "XPLUSDT",
+      "ZORAUSDT",
+      "OLUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "XPLUSDT",
-        "actual_symbol": "XPLUSDT",
+        "symbol": "EGLDUSDT",
+        "actual_symbol": "EGLDUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 8.384146341463412,
-        "volume_ccy": 486855280.0,
+        "change_pct": 6.915122791900037,
+        "volume_ccy": 308239.9,
         "trend_score": 7
       },
       {
@@ -35,77 +33,55 @@
         "actual_symbol": "USELESSUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 18.802174750631444,
-        "volume_ccy": 914780740.0,
+        "change_pct": 22.11383530026564,
+        "volume_ccy": 916763140.0,
         "trend_score": 5
       },
       {
-        "symbol": "KMNOUSDT",
-        "actual_symbol": "KMNOUSDT",
+        "symbol": "XPLUSDT",
+        "actual_symbol": "XPLUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.813953488372093,
-        "volume_ccy": 18226400.0,
+        "change_pct": 5.85638927764022,
+        "volume_ccy": 487474110.0,
         "trend_score": 5
       },
       {
-        "symbol": "VVVUSDT",
-        "actual_symbol": "VVVUSDT",
+        "symbol": "ZORAUSDT",
+        "actual_symbol": "ZORAUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 34.73040820781487,
-        "volume_ccy": 2719399.5,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 4.19688503150635,
+        "volume_ccy": 428583520.0,
+        "trend_score": 5
       },
       {
         "symbol": "OLUSDT",
         "actual_symbol": "OLUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 11.853537443111307,
-        "volume_ccy": 497839600.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ZILUSDT",
-        "actual_symbol": "ZILUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 4.927636113025495,
-        "volume_ccy": 402142600.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "TRUTHUSDT",
-        "actual_symbol": "TRUTHUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 4.784959251190187,
-        "volume_ccy": 21520900.0,
+        "change_pct": 18.505557842733626,
+        "volume_ccy": 569562900.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-09T04:05:02+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-09-09T06:30:14+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "XPLUSDT",
+      "EGLDUSDT",
       "USELESSUSDT",
-      "KMNOUSDT",
-      "VVVUSDT",
-      "OLUSDT",
-      "ZILUSDT",
-      "TRUTHUSDT"
+      "XPLUSDT",
+      "ZORAUSDT",
+      "OLUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "XPLUSDT",
+      "EGLDUSDT",
       "USELESSUSDT",
-      "KMNOUSDT",
-      "VVVUSDT",
-      "OLUSDT",
-      "ZILUSDT",
-      "TRUTHUSDT"
+      "XPLUSDT",
+      "ZORAUSDT",
+      "OLUSDT"
     ]
   },
   "signals": {
