@@ -2,98 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "强",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-09T21:54:15+08:00",
+    "last_scan_at": "2026-09-10T01:30:48+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "KMNOUSDT",
-      "IOSTUSDT",
-      "MINAUSDT",
+      "STRKUSDT",
+      "EGLDUSDT",
+      "ZENUSDT",
       "GRASSUSDT",
-      "ZECUSDT",
-      "GPSUSDT"
+      "PUMPUSDT",
+      "CHIPUSDT",
+      "HUMAUSDT",
+      "KMNOUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "KMNOUSDT",
-        "actual_symbol": "KMNOUSDT",
+        "symbol": "STRKUSDT",
+        "actual_symbol": "STRKUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 9.869494290375199,
-        "volume_ccy": 36374200.0,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 11.416280608868293,
+        "volume_ccy": 297856576.0,
+        "trend_score": 7
       },
       {
-        "symbol": "IOSTUSDT",
-        "actual_symbol": "IOSTUSDT",
+        "symbol": "EGLDUSDT",
+        "actual_symbol": "EGLDUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 50.55574267430111,
-        "volume_ccy": 68816380000.0,
-        "trend_score": 3
+        "side_score": 7,
+        "change_pct": 10.189075630252107,
+        "volume_ccy": 766068.7,
+        "trend_score": 7
       },
       {
-        "symbol": "MINAUSDT",
-        "actual_symbol": "MINAUSDT",
+        "symbol": "ZENUSDT",
+        "actual_symbol": "ZENUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 14.923376307467773,
-        "volume_ccy": 43282153.0,
-        "trend_score": 3
+        "side_score": 7,
+        "change_pct": 9.308885754583923,
+        "volume_ccy": 1380253.9,
+        "trend_score": 7
       },
       {
         "symbol": "GRASSUSDT",
         "actual_symbol": "GRASSUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 11.70641065345308,
-        "volume_ccy": 21377927.0,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 13.83363471971067,
+        "volume_ccy": 23848300.0,
+        "trend_score": 5
       },
       {
-        "symbol": "ZECUSDT",
-        "actual_symbol": "ZECUSDT",
+        "symbol": "PUMPUSDT",
+        "actual_symbol": "PUMPUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 11.152062463427633,
-        "volume_ccy": 1364766.28,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 8.45839017735334,
+        "volume_ccy": 38322369000.0,
+        "trend_score": 5
       },
       {
-        "symbol": "GPSUSDT",
-        "actual_symbol": "GPSUSDT",
+        "symbol": "CHIPUSDT",
+        "actual_symbol": "CHIPUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 9.859025997803002,
-        "volume_ccy": 408592670.0,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 7.995495495495495,
+        "volume_ccy": 240023100.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "HUMAUSDT",
+        "actual_symbol": "HUMAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.177260519247999,
+        "volume_ccy": 47224700.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "KMNOUSDT",
+        "actual_symbol": "KMNOUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 5.0984936268829735,
+        "volume_ccy": 39830500.0,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-09-09T21:54:14+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-09-10T01:30:48+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "KMNOUSDT",
-      "IOSTUSDT",
-      "MINAUSDT",
+      "STRKUSDT",
+      "EGLDUSDT",
+      "ZENUSDT",
       "GRASSUSDT",
-      "ZECUSDT",
-      "GPSUSDT"
+      "PUMPUSDT",
+      "CHIPUSDT",
+      "HUMAUSDT",
+      "KMNOUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "KMNOUSDT",
-      "IOSTUSDT",
-      "MINAUSDT",
+      "STRKUSDT",
+      "EGLDUSDT",
+      "ZENUSDT",
       "GRASSUSDT",
-      "ZECUSDT",
-      "GPSUSDT"
+      "PUMPUSDT",
+      "CHIPUSDT",
+      "HUMAUSDT",
+      "KMNOUSDT"
     ]
   },
   "signals": {
