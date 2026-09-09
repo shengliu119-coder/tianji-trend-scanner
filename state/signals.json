@@ -8,24 +8,45 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-09T06:30:15+08:00",
+    "last_scan_at": "2026-09-09T08:24:53+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "ARXUSDT",
       "EGLDUSDT",
+      "AZTECUSDT",
       "USELESSUSDT",
       "XPLUSDT",
-      "ZORAUSDT",
-      "OLUSDT"
+      "ATHUSDT",
+      "ORDERUSDT",
+      "CROUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "ARXUSDT",
+        "actual_symbol": "ARXUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 10.729312762973358,
+        "volume_ccy": 44040620.0,
+        "trend_score": 7
+      },
       {
         "symbol": "EGLDUSDT",
         "actual_symbol": "EGLDUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 6.915122791900037,
-        "volume_ccy": 308239.9,
+        "change_pct": 7.909245122985585,
+        "volume_ccy": 377009.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "AZTECUSDT",
+        "actual_symbol": "AZTECUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 5.590062111801243,
+        "volume_ccy": 40477200.0,
         "trend_score": 7
       },
       {
@@ -33,8 +54,8 @@
         "actual_symbol": "USELESSUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 22.11383530026564,
-        "volume_ccy": 916763140.0,
+        "change_pct": 24.85292195058176,
+        "volume_ccy": 924000250.0,
         "trend_score": 5
       },
       {
@@ -42,46 +63,61 @@
         "actual_symbol": "XPLUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.85638927764022,
-        "volume_ccy": 487474110.0,
+        "change_pct": 6.683859875349225,
+        "volume_ccy": 482401570.0,
         "trend_score": 5
       },
       {
-        "symbol": "ZORAUSDT",
-        "actual_symbol": "ZORAUSDT",
+        "symbol": "ATHUSDT",
+        "actual_symbol": "ATHUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 4.19688503150635,
-        "volume_ccy": 428583520.0,
+        "change_pct": 5.377021634110485,
+        "volume_ccy": 193705400.0,
         "trend_score": 5
       },
       {
-        "symbol": "OLUSDT",
-        "actual_symbol": "OLUSDT",
+        "symbol": "ORDERUSDT",
+        "actual_symbol": "ORDERUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 18.505557842733626,
-        "volume_ccy": 569562900.0,
+        "change_pct": 9.499852027226984,
+        "volume_ccy": 12085980.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "CROUSDT",
+        "actual_symbol": "CROUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 7.329934962207769,
+        "volume_ccy": 116874290.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-09T06:30:14+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-09-09T08:24:53+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "ARXUSDT",
       "EGLDUSDT",
+      "AZTECUSDT",
       "USELESSUSDT",
       "XPLUSDT",
-      "ZORAUSDT",
-      "OLUSDT"
+      "ATHUSDT",
+      "ORDERUSDT",
+      "CROUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "ARXUSDT",
       "EGLDUSDT",
+      "AZTECUSDT",
       "USELESSUSDT",
       "XPLUSDT",
-      "ZORAUSDT",
-      "OLUSDT"
+      "ATHUSDT",
+      "ORDERUSDT",
+      "CROUSDT"
     ]
   },
   "signals": {
