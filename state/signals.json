@@ -2,122 +2,62 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-10T03:59:58+08:00",
+    "last_scan_at": "2026-09-10T06:10:59+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "HUMAUSDT",
+      "RECALLUSDT",
       "EDGEUSDT",
-      "ZENUSDT",
-      "EGLDUSDT",
-      "CHIPUSDT",
-      "UPUSDT",
-      "SKHYUSDT",
-      "STRKUSDT"
+      "SAHARAUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "HUMAUSDT",
-        "actual_symbol": "HUMAUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 7.245724572457248,
-        "volume_ccy": 55523100.0,
-        "trend_score": 5
+        "symbol": "RECALLUSDT",
+        "actual_symbol": "RECALLUSDT",
+        "side": "short",
+        "side_score": 6,
+        "change_pct": 4.602615694165004,
+        "volume_ccy": 4902300.0,
+        "trend_score": 6
       },
       {
         "symbol": "EDGEUSDT",
         "actual_symbol": "EDGEUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.964535196131111,
-        "volume_ccy": 9480020.0,
+        "change_pct": 5.949209731841586,
+        "volume_ccy": 9561970.0,
         "trend_score": 5
       },
       {
-        "symbol": "ZENUSDT",
-        "actual_symbol": "ZENUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 5.572267583440771,
-        "volume_ccy": 1535359.8,
-        "trend_score": 5
-      },
-      {
-        "symbol": "EGLDUSDT",
-        "actual_symbol": "EGLDUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 4.793388429752071,
-        "volume_ccy": 813768.9,
-        "trend_score": 5
-      },
-      {
-        "symbol": "CHIPUSDT",
-        "actual_symbol": "CHIPUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 5.3816793893129695,
-        "volume_ccy": 244584800.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "UPUSDT",
-        "actual_symbol": "UPUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 4.707036038244667,
-        "volume_ccy": 3878550.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "SKHYUSDT",
-        "actual_symbol": "SKHYUSDT",
+        "symbol": "SAHARAUSDT",
+        "actual_symbol": "SAHARAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 7.464948844259201,
-        "volume_ccy": 701479.32,
-        "trend_score": 3
-      },
-      {
-        "symbol": "STRKUSDT",
-        "actual_symbol": "STRKUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 4.722859954083307,
-        "volume_ccy": 362605172.0,
+        "change_pct": 11.679831490258037,
+        "volume_ccy": 290729060.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-10T03:59:58+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-10T06:10:59+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "HUMAUSDT",
+      "RECALLUSDT",
       "EDGEUSDT",
-      "ZENUSDT",
-      "EGLDUSDT",
-      "CHIPUSDT",
-      "UPUSDT",
-      "SKHYUSDT",
-      "STRKUSDT"
+      "SAHARAUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "HUMAUSDT",
+      "RECALLUSDT",
       "EDGEUSDT",
-      "ZENUSDT",
-      "EGLDUSDT",
-      "CHIPUSDT",
-      "UPUSDT",
-      "SKHYUSDT",
-      "STRKUSDT"
+      "SAHARAUSDT"
     ]
   },
   "signals": {
