@@ -8,116 +8,80 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-09T13:02:15+08:00",
+    "last_scan_at": "2026-09-09T17:25:36+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "PROSUSDT",
-      "RAYUSDT",
-      "ZECUSDT",
-      "USELESSUSDT",
-      "EGLDUSDT",
-      "TRUTHUSDT",
-      "XPLUSDT",
-      "KATUSDT"
+      "CHIPUSDT",
+      "ZENUSDT",
+      "GRASSUSDT",
+      "IOSTUSDT",
+      "ATOMUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "PROSUSDT",
-        "actual_symbol": "PROSUSDT",
+        "symbol": "CHIPUSDT",
+        "actual_symbol": "CHIPUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 24.68015817632008,
-        "volume_ccy": 9849398.0,
+        "change_pct": 13.409359024773886,
+        "volume_ccy": 202241400.0,
         "trend_score": 7
       },
       {
-        "symbol": "RAYUSDT",
-        "actual_symbol": "RAYUSDT",
+        "symbol": "ZENUSDT",
+        "actual_symbol": "ZENUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 13.752509582040501,
-        "volume_ccy": 14464756.0,
+        "change_pct": 8.379968431625766,
+        "volume_ccy": 981750.6,
         "trend_score": 7
       },
       {
-        "symbol": "ZECUSDT",
-        "actual_symbol": "ZECUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 10.750207128794028,
-        "volume_ccy": 1116416.98,
-        "trend_score": 7
-      },
-      {
-        "symbol": "USELESSUSDT",
-        "actual_symbol": "USELESSUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 31.49372554311159,
-        "volume_ccy": 942645990.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "EGLDUSDT",
-        "actual_symbol": "EGLDUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 7.231493367565236,
-        "volume_ccy": 640147.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "TRUTHUSDT",
-        "actual_symbol": "TRUTHUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 7.200516628995807,
-        "volume_ccy": 25560300.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "XPLUSDT",
-        "actual_symbol": "XPLUSDT",
+        "symbol": "GRASSUSDT",
+        "actual_symbol": "GRASSUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 7.386487073647621,
-        "volume_ccy": 505784140.0,
+        "change_pct": 11.489107729036101,
+        "volume_ccy": 17262219.0,
         "trend_score": 4
       },
       {
-        "symbol": "KATUSDT",
-        "actual_symbol": "KATUSDT",
+        "symbol": "IOSTUSDT",
+        "actual_symbol": "IOSTUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 27.97202797202797,
-        "volume_ccy": 3836026100.0,
+        "change_pct": 26.310326933056572,
+        "volume_ccy": 29956709000.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ATOMUSDT",
+        "actual_symbol": "ATOMUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 18.22570911285456,
+        "volume_ccy": 6739245.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-09T13:02:15+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-09T17:25:36+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "PROSUSDT",
-      "RAYUSDT",
-      "ZECUSDT",
-      "USELESSUSDT",
-      "EGLDUSDT",
-      "TRUTHUSDT",
-      "XPLUSDT",
-      "KATUSDT"
+      "CHIPUSDT",
+      "ZENUSDT",
+      "GRASSUSDT",
+      "IOSTUSDT",
+      "ATOMUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "PROSUSDT",
-      "RAYUSDT",
-      "ZECUSDT",
-      "USELESSUSDT",
-      "EGLDUSDT",
-      "TRUTHUSDT",
-      "XPLUSDT",
-      "KATUSDT"
+      "CHIPUSDT",
+      "ZENUSDT",
+      "GRASSUSDT",
+      "IOSTUSDT",
+      "ATOMUSDT"
     ]
   },
   "signals": {
