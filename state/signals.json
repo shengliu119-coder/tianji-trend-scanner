@@ -8,68 +8,56 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-10T21:36:25+08:00",
+    "last_scan_at": "2026-09-11T01:14:40+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "STABLEUSDT",
-      "METUSDT",
       "PROSUSDT",
-      "ORDERUSDT"
+      "METUSDT",
+      "NESUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "STABLEUSDT",
-        "actual_symbol": "STABLEUSDT",
+        "symbol": "PROSUSDT",
+        "actual_symbol": "PROSUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 6.131744919411358,
-        "volume_ccy": 24756500.0,
-        "trend_score": 7
+        "side_score": 6,
+        "change_pct": 11.197916666666663,
+        "volume_ccy": 18754782.0,
+        "trend_score": 6
       },
       {
         "symbol": "METUSDT",
         "actual_symbol": "METUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 4.1996047430830075,
-        "volume_ccy": 12597163.0,
-        "trend_score": 7
+        "side_score": 6,
+        "change_pct": 6.484641638225259,
+        "volume_ccy": 15497709.0,
+        "trend_score": 6
       },
       {
-        "symbol": "PROSUSDT",
-        "actual_symbol": "PROSUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 4.1711002340923615,
-        "volume_ccy": 16240755.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "ORDERUSDT",
-        "actual_symbol": "ORDERUSDT",
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 8.305274971941651,
-        "volume_ccy": 62446990.0,
+        "change_pct": 23.185988323602995,
+        "volume_ccy": 448326190.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-10T21:36:25+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-09-11T01:14:40+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "STABLEUSDT",
-      "METUSDT",
       "PROSUSDT",
-      "ORDERUSDT"
+      "METUSDT",
+      "NESUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "STABLEUSDT",
-      "METUSDT",
       "PROSUSDT",
-      "ORDERUSDT"
+      "METUSDT",
+      "NESUSDT"
     ]
   },
   "signals": {
