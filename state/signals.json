@@ -8,80 +8,56 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-10T12:43:02+08:00",
+    "last_scan_at": "2026-09-10T17:12:15+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "METUSDT",
-      "ARXUSDT",
-      "EDGEUSDT",
+      "EGLDUSDT",
       "RAYUSDT",
-      "BREVUSDT"
+      "RLSUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "METUSDT",
-        "actual_symbol": "METUSDT",
+        "symbol": "EGLDUSDT",
+        "actual_symbol": "EGLDUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 6.811145510835908,
-        "volume_ccy": 11942494.0,
+        "change_pct": 10.62374245472838,
+        "volume_ccy": 786220.1,
         "trend_score": 7
-      },
-      {
-        "symbol": "ARXUSDT",
-        "actual_symbol": "ARXUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 5.522288755821691,
-        "volume_ccy": 20733600.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "EDGEUSDT",
-        "actual_symbol": "EDGEUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 4.704230296647367,
-        "volume_ccy": 11203780.0,
-        "trend_score": 4
       },
       {
         "symbol": "RAYUSDT",
         "actual_symbol": "RAYUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 9.840598568640207,
-        "volume_ccy": 48111065.0,
-        "trend_score": 3
+        "side_score": 7,
+        "change_pct": 6.845908773020443,
+        "volume_ccy": 39622750.0,
+        "trend_score": 7
       },
       {
-        "symbol": "BREVUSDT",
-        "actual_symbol": "BREVUSDT",
+        "symbol": "RLSUSDT",
+        "actual_symbol": "RLSUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 5.188134069603188,
-        "volume_ccy": 10074246.0,
+        "change_pct": 13.755868544600933,
+        "volume_ccy": 2690344100.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-10T12:43:02+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-09-10T17:12:15+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "METUSDT",
-      "ARXUSDT",
-      "EDGEUSDT",
+      "EGLDUSDT",
       "RAYUSDT",
-      "BREVUSDT"
+      "RLSUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "METUSDT",
-      "ARXUSDT",
-      "EDGEUSDT",
+      "EGLDUSDT",
       "RAYUSDT",
-      "BREVUSDT"
+      "RLSUSDT"
     ]
   },
   "signals": {
