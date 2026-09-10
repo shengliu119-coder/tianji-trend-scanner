@@ -8,15 +8,15 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-10T08:16:05+08:00",
+    "last_scan_at": "2026-09-10T12:43:02+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
       "METUSDT",
+      "ARXUSDT",
       "EDGEUSDT",
-      "RSRUSDT",
-      "MINAUSDT",
-      "PROSUSDT"
+      "RAYUSDT",
+      "BREVUSDT"
     ],
     "alt_watchlist": [
       {
@@ -24,64 +24,64 @@
         "actual_symbol": "METUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 6.81003584229391,
-        "volume_ccy": 10398887.0,
+        "change_pct": 6.811145510835908,
+        "volume_ccy": 11942494.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "ARXUSDT",
+        "actual_symbol": "ARXUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 5.522288755821691,
+        "volume_ccy": 20733600.0,
         "trend_score": 7
       },
       {
         "symbol": "EDGEUSDT",
         "actual_symbol": "EDGEUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 5.943510656731955,
-        "volume_ccy": 10052590.0,
-        "trend_score": 7
+        "side_score": 4,
+        "change_pct": 4.704230296647367,
+        "volume_ccy": 11203780.0,
+        "trend_score": 4
       },
       {
-        "symbol": "RSRUSDT",
-        "actual_symbol": "RSRUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 4.5582047685834475,
-        "volume_ccy": 558998000.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "MINAUSDT",
-        "actual_symbol": "MINAUSDT",
+        "symbol": "RAYUSDT",
+        "actual_symbol": "RAYUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 14.50484722051785,
-        "volume_ccy": 87043102.0,
+        "change_pct": 9.840598568640207,
+        "volume_ccy": 48111065.0,
         "trend_score": 3
       },
       {
-        "symbol": "PROSUSDT",
-        "actual_symbol": "PROSUSDT",
+        "symbol": "BREVUSDT",
+        "actual_symbol": "BREVUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 8.806038426349506,
-        "volume_ccy": 24169719.0,
+        "change_pct": 5.188134069603188,
+        "volume_ccy": 10074246.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-10T08:16:05+08:00",
+    "alt_watchlist_at": "2026-09-10T12:43:02+08:00",
     "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
       "METUSDT",
+      "ARXUSDT",
       "EDGEUSDT",
-      "RSRUSDT",
-      "MINAUSDT",
-      "PROSUSDT"
+      "RAYUSDT",
+      "BREVUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "METUSDT",
+      "ARXUSDT",
       "EDGEUSDT",
-      "RSRUSDT",
-      "MINAUSDT",
-      "PROSUSDT"
+      "RAYUSDT",
+      "BREVUSDT"
     ]
   },
   "signals": {
