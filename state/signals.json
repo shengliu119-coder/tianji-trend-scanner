@@ -8,35 +8,33 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-12T05:16:14+08:00",
+    "last_scan_at": "2026-09-12T07:20:35+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
       "OLUSDT",
-      "EDGEUSDT",
+      "KORUUSDT",
       "MERLUSDT",
-      "TRIAUSDT",
-      "APRUSDT",
-      "RAVEUSDT",
-      "KORUUSDT"
+      "EDGEUSDT",
+      "RAYUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "OLUSDT",
         "actual_symbol": "OLUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 6.6136062156528395,
-        "volume_ccy": 278050500.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 9.597823975131154,
+        "volume_ccy": 471928500.0,
+        "trend_score": 5
       },
       {
-        "symbol": "EDGEUSDT",
-        "actual_symbol": "EDGEUSDT",
+        "symbol": "KORUUSDT",
+        "actual_symbol": "KORUUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 10.226856933772423,
-        "volume_ccy": 11178000.0,
+        "change_pct": 9.57999056158564,
+        "volume_ccy": 2199328.31,
         "trend_score": 5
       },
       {
@@ -44,68 +42,46 @@
         "actual_symbol": "MERLUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 7.810320781032065,
-        "volume_ccy": 95254870.0,
+        "change_pct": 9.129612109744565,
+        "volume_ccy": 96589265.0,
         "trend_score": 5
       },
       {
-        "symbol": "TRIAUSDT",
-        "actual_symbol": "TRIAUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 7.419354838709684,
-        "volume_ccy": 501487100.0,
-        "trend_score": 4
+        "symbol": "EDGEUSDT",
+        "actual_symbol": "EDGEUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 9.100837277029495,
+        "volume_ccy": 11347370.0,
+        "trend_score": 5
       },
       {
-        "symbol": "APRUSDT",
-        "actual_symbol": "APRUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 6.882591093117418,
-        "volume_ccy": 18310570.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "RAVEUSDT",
-        "actual_symbol": "RAVEUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 6.587677725118482,
-        "volume_ccy": 18872358.8,
-        "trend_score": 4
-      },
-      {
-        "symbol": "KORUUSDT",
-        "actual_symbol": "KORUUSDT",
+        "symbol": "RAYUSDT",
+        "actual_symbol": "RAYUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 8.430913348946122,
-        "volume_ccy": 2263327.07,
+        "change_pct": 17.30822295805739,
+        "volume_ccy": 127678169.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-12T05:16:14+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-09-12T07:20:35+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
       "OLUSDT",
-      "EDGEUSDT",
+      "KORUUSDT",
       "MERLUSDT",
-      "TRIAUSDT",
-      "APRUSDT",
-      "RAVEUSDT",
-      "KORUUSDT"
+      "EDGEUSDT",
+      "RAYUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "OLUSDT",
-      "EDGEUSDT",
+      "KORUUSDT",
       "MERLUSDT",
-      "TRIAUSDT",
-      "APRUSDT",
-      "RAVEUSDT",
-      "KORUUSDT"
+      "EDGEUSDT",
+      "RAYUSDT"
     ]
   },
   "signals": {
