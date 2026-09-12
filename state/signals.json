@@ -8,104 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-12T09:13:13+08:00",
+    "last_scan_at": "2026-09-12T13:51:14+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "TRUTHUSDT",
+      "HUMAUSDT",
+      "BERAUSDT",
       "OLUSDT",
-      "SOPHUSDT",
-      "EDGEUSDT",
-      "MERLUSDT",
-      "BSBUSDT",
-      "RAYUSDT"
+      "HUSDT",
+      "API3USDT",
+      "MINAUSDT",
+      "SOPHUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "TRUTHUSDT",
         "actual_symbol": "TRUTHUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 11.375028919565056,
-        "volume_ccy": 20410900.0,
-        "trend_score": 7
+        "side_score": 6,
+        "change_pct": 9.735935706084964,
+        "volume_ccy": 27518200.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "HUMAUSDT",
+        "actual_symbol": "HUMAUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 8.833100883310083,
+        "volume_ccy": 70377000.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "BERAUSDT",
+        "actual_symbol": "BERAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 10.668229777256737,
+        "volume_ccy": 12408780.7,
+        "trend_score": 5
       },
       {
         "symbol": "OLUSDT",
         "actual_symbol": "OLUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 9.245977902694321,
-        "volume_ccy": 480958900.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 9.691800736576846,
+        "volume_ccy": 469959000.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "HUSDT",
+        "actual_symbol": "HUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 9.598072777989106,
+        "volume_ccy": 36298620.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "API3USDT",
+        "actual_symbol": "API3USDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.985128436232543,
+        "volume_ccy": 2307038.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "MINAUSDT",
+        "actual_symbol": "MINAUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 21.14222954420647,
+        "volume_ccy": 94528717.0,
+        "trend_score": 3
       },
       {
         "symbol": "SOPHUSDT",
         "actual_symbol": "SOPHUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 11.96161048689139,
-        "volume_ccy": 2193661700.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "EDGEUSDT",
-        "actual_symbol": "EDGEUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 9.567402620714416,
-        "volume_ccy": 11495410.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "MERLUSDT",
-        "actual_symbol": "MERLUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 8.011178388448997,
-        "volume_ccy": 98040215.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "BSBUSDT",
-        "actual_symbol": "BSBUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 7.894736842105261,
-        "volume_ccy": 28707940.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "RAYUSDT",
-        "actual_symbol": "RAYUSDT",
-        "side": "long",
         "side_score": 3,
-        "change_pct": 9.634035949825424,
-        "volume_ccy": 121608596.0,
+        "change_pct": 13.882182520521487,
+        "volume_ccy": 2789309800.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-12T09:13:13+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-09-12T13:51:14+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "TRUTHUSDT",
+      "HUMAUSDT",
+      "BERAUSDT",
       "OLUSDT",
-      "SOPHUSDT",
-      "EDGEUSDT",
-      "MERLUSDT",
-      "BSBUSDT",
-      "RAYUSDT"
+      "HUSDT",
+      "API3USDT",
+      "MINAUSDT",
+      "SOPHUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "TRUTHUSDT",
+      "HUMAUSDT",
+      "BERAUSDT",
       "OLUSDT",
-      "SOPHUSDT",
-      "EDGEUSDT",
-      "MERLUSDT",
-      "BSBUSDT",
-      "RAYUSDT"
+      "HUSDT",
+      "API3USDT",
+      "MINAUSDT",
+      "SOPHUSDT"
     ]
   },
   "signals": {
