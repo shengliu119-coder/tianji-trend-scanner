@@ -2,50 +2,69 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-13T18:19:36+08:00",
+    "last_scan_at": "2026-09-13T22:29:07+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "THETAUSDT",
+      "BLURUSDT",
+      "FILUSDT",
       "ZILUSDT",
-      "ANIMEUSDT",
+      "BABYUSDT",
+      "YGGUSDT",
       "BANDUSDT",
       "0GUSDT",
-      "VANAUSDT",
-      "API3USDT"
+      "XTZUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "THETAUSDT",
-        "actual_symbol": "THETAUSDT",
+        "symbol": "BLURUSDT",
+        "actual_symbol": "BLURUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 10.237467018469658,
-        "volume_ccy": 10918071.0,
+        "change_pct": 14.018691588785043,
+        "volume_ccy": 309388530.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "FILUSDT",
+        "actual_symbol": "FILUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 11.961367013372959,
+        "volume_ccy": 49462338.2,
         "trend_score": 7
       },
       {
         "symbol": "ZILUSDT",
         "actual_symbol": "ZILUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 8.397790055248615,
-        "volume_ccy": 659071400.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 10.768099963248817,
+        "volume_ccy": 1253924200.0,
+        "trend_score": 5
       },
       {
-        "symbol": "ANIMEUSDT",
-        "actual_symbol": "ANIMEUSDT",
+        "symbol": "BABYUSDT",
+        "actual_symbol": "BABYUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 6.358974358974358,
-        "volume_ccy": 415091970.0,
+        "change_pct": 9.401783395377025,
+        "volume_ccy": 42913570.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "YGGUSDT",
+        "actual_symbol": "YGGUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 7.518796992481187,
+        "volume_ccy": 47749847.0,
         "trend_score": 5
       },
       {
@@ -53,8 +72,8 @@
         "actual_symbol": "BANDUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 6.3048245614035,
-        "volume_ccy": 2103426.0,
+        "change_pct": 7.010869565217388,
+        "volume_ccy": 2466631.0,
         "trend_score": 5
       },
       {
@@ -62,50 +81,43 @@
         "actual_symbol": "0GUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 6.144957983193271,
-        "volume_ccy": 8722256.0,
+        "change_pct": 6.893004115226349,
+        "volume_ccy": 10635273.0,
         "trend_score": 5
       },
       {
-        "symbol": "VANAUSDT",
-        "actual_symbol": "VANAUSDT",
+        "symbol": "XTZUSDT",
+        "actual_symbol": "XTZUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 5.6271477663230245,
-        "volume_ccy": 315189.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "API3USDT",
-        "actual_symbol": "API3USDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 13.750000000000004,
-        "volume_ccy": 25204809.0,
-        "trend_score": 3
+        "side_score": 4,
+        "change_pct": 10.003954132068007,
+        "volume_ccy": 8948775.0,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-09-13T18:19:36+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-09-13T22:29:07+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "THETAUSDT",
+      "BLURUSDT",
+      "FILUSDT",
       "ZILUSDT",
-      "ANIMEUSDT",
+      "BABYUSDT",
+      "YGGUSDT",
       "BANDUSDT",
       "0GUSDT",
-      "VANAUSDT",
-      "API3USDT"
+      "XTZUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "THETAUSDT",
+      "BLURUSDT",
+      "FILUSDT",
       "ZILUSDT",
-      "ANIMEUSDT",
+      "BABYUSDT",
+      "YGGUSDT",
       "BANDUSDT",
       "0GUSDT",
-      "VANAUSDT",
-      "API3USDT"
+      "XTZUSDT"
     ]
   },
   "signals": {
