@@ -2,122 +2,110 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-13T13:09:30+08:00",
+    "last_scan_at": "2026-09-13T18:19:36+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "METUSDT",
-      "ZETAUSDT",
-      "BANDUSDT",
-      "ARXUSDT",
-      "PUMPUSDT",
+      "THETAUSDT",
       "ZILUSDT",
-      "SSVUSDT",
-      "QTUMUSDT"
+      "ANIMEUSDT",
+      "BANDUSDT",
+      "0GUSDT",
+      "VANAUSDT",
+      "API3USDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "METUSDT",
-        "actual_symbol": "METUSDT",
+        "symbol": "THETAUSDT",
+        "actual_symbol": "THETAUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 10.903426791277255,
-        "volume_ccy": 59727185.0,
+        "change_pct": 10.237467018469658,
+        "volume_ccy": 10918071.0,
         "trend_score": 7
-      },
-      {
-        "symbol": "ZETAUSDT",
-        "actual_symbol": "ZETAUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 6.257309941520456,
-        "volume_ccy": 4741700.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "BANDUSDT",
-        "actual_symbol": "BANDUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 6.318082788671023,
-        "volume_ccy": 1855934.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "ARXUSDT",
-        "actual_symbol": "ARXUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 8.831908831908828,
-        "volume_ccy": 9853790.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "PUMPUSDT",
-        "actual_symbol": "PUMPUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 6.961668545659534,
-        "volume_ccy": 29124004000.0,
-        "trend_score": 5
       },
       {
         "symbol": "ZILUSDT",
         "actual_symbol": "ZILUSDT",
         "side": "long",
+        "side_score": 6,
+        "change_pct": 8.397790055248615,
+        "volume_ccy": 659071400.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "ANIMEUSDT",
+        "actual_symbol": "ANIMEUSDT",
+        "side": "long",
         "side_score": 5,
-        "change_pct": 6.068313953488373,
-        "volume_ccy": 407455500.0,
+        "change_pct": 6.358974358974358,
+        "volume_ccy": 415091970.0,
         "trend_score": 5
       },
       {
-        "symbol": "SSVUSDT",
-        "actual_symbol": "SSVUSDT",
+        "symbol": "BANDUSDT",
+        "actual_symbol": "BANDUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 6.985161056822298,
-        "volume_ccy": 306921.3,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 6.3048245614035,
+        "volume_ccy": 2103426.0,
+        "trend_score": 5
       },
       {
-        "symbol": "QTUMUSDT",
-        "actual_symbol": "QTUMUSDT",
+        "symbol": "0GUSDT",
+        "actual_symbol": "0GUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.144957983193271,
+        "volume_ccy": 8722256.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "VANAUSDT",
+        "actual_symbol": "VANAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 5.6271477663230245,
+        "volume_ccy": 315189.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "API3USDT",
+        "actual_symbol": "API3USDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 9.803921568627453,
-        "volume_ccy": 934831.0,
+        "change_pct": 13.750000000000004,
+        "volume_ccy": 25204809.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-13T13:09:30+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-13T18:19:36+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
-      "METUSDT",
-      "ZETAUSDT",
-      "BANDUSDT",
-      "ARXUSDT",
-      "PUMPUSDT",
+      "THETAUSDT",
       "ZILUSDT",
-      "SSVUSDT",
-      "QTUMUSDT"
+      "ANIMEUSDT",
+      "BANDUSDT",
+      "0GUSDT",
+      "VANAUSDT",
+      "API3USDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "METUSDT",
-      "ZETAUSDT",
-      "BANDUSDT",
-      "ARXUSDT",
-      "PUMPUSDT",
+      "THETAUSDT",
       "ZILUSDT",
-      "SSVUSDT",
-      "QTUMUSDT"
+      "ANIMEUSDT",
+      "BANDUSDT",
+      "0GUSDT",
+      "VANAUSDT",
+      "API3USDT"
     ]
   },
   "signals": {
