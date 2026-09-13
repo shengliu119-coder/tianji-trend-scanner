@@ -8,18 +8,18 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-14T01:35:01+08:00",
+    "last_scan_at": "2026-09-14T03:45:37+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "ZILUSDT",
-      "ARXUSDT",
-      "ACHUSDT",
-      "BLURUSDT",
-      "ORDERUSDT",
-      "ARUSDT",
+      "FLOWUSDT",
       "UBUSDT",
-      "BANDUSDT"
+      "BLURUSDT",
+      "AUSDT",
+      "ARUSDT",
+      "RVNUSDT",
+      "MEUSDT"
     ],
     "alt_watchlist": [
       {
@@ -27,44 +27,44 @@
         "actual_symbol": "ZILUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 11.297989031078604,
-        "volume_ccy": 1412453700.0,
+        "change_pct": 15.706422018348624,
+        "volume_ccy": 2104697600.0,
         "trend_score": 7
       },
       {
-        "symbol": "ARXUSDT",
-        "actual_symbol": "ARXUSDT",
+        "symbol": "FLOWUSDT",
+        "actual_symbol": "FLOWUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 6.182065217391303,
-        "volume_ccy": 11803780.0,
+        "change_pct": 8.769397329483947,
+        "volume_ccy": 33724330.0,
         "trend_score": 7
       },
       {
-        "symbol": "ACHUSDT",
-        "actual_symbol": "ACHUSDT",
+        "symbol": "UBUSDT",
+        "actual_symbol": "UBUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 5.887016848364725,
-        "volume_ccy": 78115400.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 9.619538129257347,
+        "volume_ccy": 33907800.0,
+        "trend_score": 5
       },
       {
         "symbol": "BLURUSDT",
         "actual_symbol": "BLURUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 7.097149505526462,
-        "volume_ccy": 388821690.0,
+        "change_pct": 7.705986959098987,
+        "volume_ccy": 387340020.0,
         "trend_score": 5
       },
       {
-        "symbol": "ORDERUSDT",
-        "actual_symbol": "ORDERUSDT",
+        "symbol": "AUSDT",
+        "actual_symbol": "AUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.977146205684149,
-        "volume_ccy": 10344000.0,
+        "change_pct": 5.224071702944943,
+        "volume_ccy": 7324480.0,
         "trend_score": 5
       },
       {
@@ -72,52 +72,52 @@
         "actual_symbol": "ARUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 10.278207109737249,
-        "volume_ccy": 1388007.5,
+        "change_pct": 9.41267989109296,
+        "volume_ccy": 1945251.6,
         "trend_score": 4
       },
       {
-        "symbol": "UBUSDT",
-        "actual_symbol": "UBUSDT",
-        "side": "long",
+        "symbol": "RVNUSDT",
+        "actual_symbol": "RVNUSDT",
+        "side": "short",
         "side_score": 4,
-        "change_pct": 5.929407883885866,
-        "volume_ccy": 25182400.0,
+        "change_pct": 7.038391224862892,
+        "volume_ccy": 487019370.0,
         "trend_score": 4
       },
       {
-        "symbol": "BANDUSDT",
-        "actual_symbol": "BANDUSDT",
+        "symbol": "MEUSDT",
+        "actual_symbol": "MEUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 5.0619278406031185,
-        "volume_ccy": 2572281.0,
+        "change_pct": 5.298848762024921,
+        "volume_ccy": 10358717.0,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-09-14T01:35:01+08:00",
+    "alt_watchlist_at": "2026-09-14T03:45:37+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "ZILUSDT",
-      "ARXUSDT",
-      "ACHUSDT",
-      "BLURUSDT",
-      "ORDERUSDT",
-      "ARUSDT",
+      "FLOWUSDT",
       "UBUSDT",
-      "BANDUSDT"
+      "BLURUSDT",
+      "AUSDT",
+      "ARUSDT",
+      "RVNUSDT",
+      "MEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "ZILUSDT",
-      "ARXUSDT",
-      "ACHUSDT",
-      "BLURUSDT",
-      "ORDERUSDT",
-      "ARUSDT",
+      "FLOWUSDT",
       "UBUSDT",
-      "BANDUSDT"
+      "BLURUSDT",
+      "AUSDT",
+      "ARUSDT",
+      "RVNUSDT",
+      "MEUSDT"
     ]
   },
   "signals": {
