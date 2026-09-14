@@ -2,122 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "强",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-14T21:25:32+08:00",
+    "last_scan_at": "2026-09-15T02:52:25+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "UBUSDT",
-      "XLMUSDT",
       "NEARUSDT",
-      "SENTUSDT",
+      "PROSUSDT",
+      "XRPUSDT",
       "ZECUSDT",
-      "CAPUSDT",
-      "ARUSDT",
-      "UPUSDT"
+      "UPUSDT",
+      "SENTUSDT",
+      "OPUSDT",
+      "OUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "UBUSDT",
-        "actual_symbol": "UBUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 13.997319484000661,
-        "volume_ccy": 125524800.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "XLMUSDT",
-        "actual_symbol": "XLMUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 6.86329483009981,
-        "volume_ccy": 92381510.0,
-        "trend_score": 5
-      },
       {
         "symbol": "NEARUSDT",
         "actual_symbol": "NEARUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 5.3688345700567535,
-        "volume_ccy": 14825696.0,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 8.230801866779803,
+        "volume_ccy": 20132594.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "PROSUSDT",
+        "actual_symbol": "PROSUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 5.2020636285468616,
+        "volume_ccy": 2175639.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "XRPUSDT",
+        "actual_symbol": "XRPUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 8.621324883943702,
+        "volume_ccy": 366822663.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "ZECUSDT",
+        "actual_symbol": "ZECUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 7.080809081007107,
+        "volume_ccy": 1186513.81,
+        "trend_score": 6
+      },
+      {
+        "symbol": "UPUSDT",
+        "actual_symbol": "UPUSDT",
+        "side": "short",
+        "side_score": 6,
+        "change_pct": 6.494688922610008,
+        "volume_ccy": 11835680.0,
+        "trend_score": 6
       },
       {
         "symbol": "SENTUSDT",
         "actual_symbol": "SENTUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 4.901960784313732,
-        "volume_ccy": 91423800.0,
+        "change_pct": 20.498614958448748,
+        "volume_ccy": 420034200.0,
         "trend_score": 5
       },
       {
-        "symbol": "ZECUSDT",
-        "actual_symbol": "ZECUSDT",
+        "symbol": "OPUSDT",
+        "actual_symbol": "OPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 4.53075030183498,
-        "volume_ccy": 1016471.53,
+        "change_pct": 6.447034972123674,
+        "volume_ccy": 129779922.0,
         "trend_score": 5
       },
       {
-        "symbol": "CAPUSDT",
-        "actual_symbol": "CAPUSDT",
+        "symbol": "OUSDT",
+        "actual_symbol": "OUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 40.144281773817106,
-        "volume_ccy": 855773000.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "ARUSDT",
-        "actual_symbol": "ARUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 10.635792778649918,
-        "volume_ccy": 3591912.9,
-        "trend_score": 4
-      },
-      {
-        "symbol": "UPUSDT",
-        "actual_symbol": "UPUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 5.097582289542679,
-        "volume_ccy": 15928040.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 5.7021768445386165,
+        "volume_ccy": 1778380.0,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-09-14T21:25:32+08:00",
+    "alt_watchlist_at": "2026-09-15T02:52:25+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "UBUSDT",
-      "XLMUSDT",
       "NEARUSDT",
-      "SENTUSDT",
+      "PROSUSDT",
+      "XRPUSDT",
       "ZECUSDT",
-      "CAPUSDT",
-      "ARUSDT",
-      "UPUSDT"
+      "UPUSDT",
+      "SENTUSDT",
+      "OPUSDT",
+      "OUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "UBUSDT",
-      "XLMUSDT",
       "NEARUSDT",
-      "SENTUSDT",
+      "PROSUSDT",
+      "XRPUSDT",
       "ZECUSDT",
-      "CAPUSDT",
-      "ARUSDT",
-      "UPUSDT"
+      "UPUSDT",
+      "SENTUSDT",
+      "OPUSDT",
+      "OUSDT"
     ]
   },
   "signals": {
