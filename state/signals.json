@@ -8,72 +8,63 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-15T02:52:25+08:00",
+    "last_scan_at": "2026-09-15T06:17:48+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "NEARUSDT",
-      "PROSUSDT",
-      "XRPUSDT",
       "ZECUSDT",
-      "UPUSDT",
-      "SENTUSDT",
+      "INJUSDT",
+      "CAPUSDT",
+      "NEARUSDT",
+      "SIGNUSDT",
       "OPUSDT",
-      "OUSDT"
+      "LITUSDT",
+      "NOTUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "NEARUSDT",
-        "actual_symbol": "NEARUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 8.230801866779803,
-        "volume_ccy": 20132594.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "PROSUSDT",
-        "actual_symbol": "PROSUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 5.2020636285468616,
-        "volume_ccy": 2175639.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "XRPUSDT",
-        "actual_symbol": "XRPUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 8.621324883943702,
-        "volume_ccy": 366822663.0,
-        "trend_score": 6
-      },
       {
         "symbol": "ZECUSDT",
         "actual_symbol": "ZECUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 7.080809081007107,
-        "volume_ccy": 1186513.81,
+        "change_pct": 9.687447799699337,
+        "volume_ccy": 1308202.42,
         "trend_score": 6
       },
       {
-        "symbol": "UPUSDT",
-        "actual_symbol": "UPUSDT",
-        "side": "short",
+        "symbol": "INJUSDT",
+        "actual_symbol": "INJUSDT",
+        "side": "long",
         "side_score": 6,
-        "change_pct": 6.494688922610008,
-        "volume_ccy": 11835680.0,
+        "change_pct": 6.853426713356686,
+        "volume_ccy": 1817827.2,
         "trend_score": 6
       },
       {
-        "symbol": "SENTUSDT",
-        "actual_symbol": "SENTUSDT",
+        "symbol": "CAPUSDT",
+        "actual_symbol": "CAPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 20.498614958448748,
-        "volume_ccy": 420034200.0,
+        "change_pct": 33.496906336675906,
+        "volume_ccy": 2145662900.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "NEARUSDT",
+        "actual_symbol": "NEARUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 9.272097053726169,
+        "volume_ccy": 23181122.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "SIGNUSDT",
+        "actual_symbol": "SIGNUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 9.023623643921729,
+        "volume_ccy": 46948400.0,
         "trend_score": 5
       },
       {
@@ -81,43 +72,52 @@
         "actual_symbol": "OPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 6.447034972123674,
-        "volume_ccy": 129779922.0,
+        "change_pct": 7.685069008782931,
+        "volume_ccy": 147083320.0,
         "trend_score": 5
       },
       {
-        "symbol": "OUSDT",
-        "actual_symbol": "OUSDT",
+        "symbol": "LITUSDT",
+        "actual_symbol": "LITUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.7021768445386165,
-        "volume_ccy": 1778380.0,
+        "change_pct": 7.136711281070735,
+        "volume_ccy": 31414128.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "NOTUSDT",
+        "actual_symbol": "NOTUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.528258362168393,
+        "volume_ccy": 3376827500.0,
         "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-09-15T02:52:25+08:00",
+    "alt_watchlist_at": "2026-09-15T06:17:48+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "NEARUSDT",
-      "PROSUSDT",
-      "XRPUSDT",
       "ZECUSDT",
-      "UPUSDT",
-      "SENTUSDT",
+      "INJUSDT",
+      "CAPUSDT",
+      "NEARUSDT",
+      "SIGNUSDT",
       "OPUSDT",
-      "OUSDT"
+      "LITUSDT",
+      "NOTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "NEARUSDT",
-      "PROSUSDT",
-      "XRPUSDT",
       "ZECUSDT",
-      "UPUSDT",
-      "SENTUSDT",
+      "INJUSDT",
+      "CAPUSDT",
+      "NEARUSDT",
+      "SIGNUSDT",
       "OPUSDT",
-      "OUSDT"
+      "LITUSDT",
+      "NOTUSDT"
     ]
   },
   "signals": {
