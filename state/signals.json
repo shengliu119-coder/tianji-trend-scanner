@@ -8,104 +8,80 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-15T13:24:31+08:00",
+    "last_scan_at": "2026-09-15T18:18:05+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "INITUSDT",
+      "NESUSDT",
       "UNIUSDT",
-      "OPUSDT",
+      "INITUSDT",
       "ARXUSDT",
-      "GPSUSDT",
-      "ZILUSDT",
-      "ONEUSDT"
+      "OPUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "INITUSDT",
-        "actual_symbol": "INITUSDT",
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 5.800678802838629,
-        "volume_ccy": 3681420.0,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 7.532467532467532,
+        "volume_ccy": 26786400.0,
+        "trend_score": 7
       },
       {
         "symbol": "UNIUSDT",
         "actual_symbol": "UNIUSDT",
         "side": "long",
+        "side_score": 6,
+        "change_pct": 5.535231429934784,
+        "volume_ccy": 17899540.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "INITUSDT",
+        "actual_symbol": "INITUSDT",
+        "side": "long",
         "side_score": 5,
-        "change_pct": 4.098360655737701,
-        "volume_ccy": 15457568.0,
+        "change_pct": 5.351376287867133,
+        "volume_ccy": 5328010.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ARXUSDT",
+        "actual_symbol": "ARXUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.487608841259218,
+        "volume_ccy": 8856800.0,
         "trend_score": 5
       },
       {
         "symbol": "OPUSDT",
         "actual_symbol": "OPUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 6.064097193129455,
-        "volume_ccy": 173550048.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "ARXUSDT",
-        "actual_symbol": "ARXUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 4.682274247491644,
-        "volume_ccy": 8376350.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "GPSUSDT",
-        "actual_symbol": "GPSUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 4.023267086766849,
-        "volume_ccy": 176933660.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "ZILUSDT",
-        "actual_symbol": "ZILUSDT",
-        "side": "long",
         "side_score": 3,
-        "change_pct": 8.427157966564307,
-        "volume_ccy": 2251854800.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ONEUSDT",
-        "actual_symbol": "ONEUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 6.029232643118147,
-        "volume_ccy": 1002870000.0,
+        "change_pct": 4.010077682133114,
+        "volume_ccy": 188032425.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-15T13:24:31+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-09-15T18:18:05+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "INITUSDT",
+      "NESUSDT",
       "UNIUSDT",
-      "OPUSDT",
+      "INITUSDT",
       "ARXUSDT",
-      "GPSUSDT",
-      "ZILUSDT",
-      "ONEUSDT"
+      "OPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "INITUSDT",
+      "NESUSDT",
       "UNIUSDT",
-      "OPUSDT",
+      "INITUSDT",
       "ARXUSDT",
-      "GPSUSDT",
-      "ZILUSDT",
-      "ONEUSDT"
+      "OPUSDT"
     ]
   },
   "signals": {
