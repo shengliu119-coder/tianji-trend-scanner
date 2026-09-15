@@ -8,56 +8,44 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-15T23:03:35+08:00",
+    "last_scan_at": "2026-09-16T02:59:10+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 2,
     "last_okx_discovery_symbols": [
-      "ATUSDT",
       "NESUSDT",
-      "AIUSDT"
+      "CAPUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "ATUSDT",
-        "actual_symbol": "ATUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 4.169514695830482,
-        "volume_ccy": 1655790.0,
-        "trend_score": 7
-      },
       {
         "symbol": "NESUSDT",
         "actual_symbol": "NESUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 6.139777922926186,
-        "volume_ccy": 37385370.0,
-        "trend_score": 5
+        "side_score": 3,
+        "change_pct": 11.396574440052708,
+        "volume_ccy": 64233420.0,
+        "trend_score": 3
       },
       {
-        "symbol": "AIUSDT",
-        "actual_symbol": "AIUSDT",
+        "symbol": "CAPUSDT",
+        "actual_symbol": "CAPUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 4.254201680672259,
-        "volume_ccy": 45002100.0,
+        "change_pct": 5.3294239392894145,
+        "volume_ccy": 1743491200.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-15T23:03:35+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-09-16T02:59:10+08:00",
+    "alt_watchlist_count": 2,
     "alt_watchlist_symbols": [
-      "ATUSDT",
       "NESUSDT",
-      "AIUSDT"
+      "CAPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ATUSDT",
       "NESUSDT",
-      "AIUSDT"
+      "CAPUSDT"
     ]
   },
   "signals": {
