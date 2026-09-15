@@ -2,50 +2,38 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-16T02:59:10+08:00",
+    "last_scan_at": "2026-09-16T05:55:33+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 2,
+    "last_okx_discovery_count": 1,
     "last_okx_discovery_symbols": [
-      "NESUSDT",
-      "CAPUSDT"
+      "ARBUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "NESUSDT",
-        "actual_symbol": "NESUSDT",
+        "symbol": "ARBUSDT",
+        "actual_symbol": "ARBUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 11.396574440052708,
-        "volume_ccy": 64233420.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "CAPUSDT",
-        "actual_symbol": "CAPUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 5.3294239392894145,
-        "volume_ccy": 1743491200.0,
-        "trend_score": 3
+        "side_score": 4,
+        "change_pct": 5.761316872427972,
+        "volume_ccy": 1010155060.0,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-09-16T02:59:10+08:00",
-    "alt_watchlist_count": 2,
+    "alt_watchlist_at": "2026-09-16T05:55:33+08:00",
+    "alt_watchlist_count": 1,
     "alt_watchlist_symbols": [
-      "NESUSDT",
-      "CAPUSDT"
+      "ARBUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "NESUSDT",
-      "CAPUSDT"
+      "ARBUSDT"
     ]
   },
   "signals": {
