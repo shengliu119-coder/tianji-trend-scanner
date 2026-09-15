@@ -2,122 +2,110 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-15T08:42:55+08:00",
+    "last_scan_at": "2026-09-15T13:24:31+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "OUSDT",
-      "UNIUSDT",
-      "ZECUSDT",
-      "SIGNUSDT",
-      "VVVUSDT",
-      "NEARUSDT",
       "INITUSDT",
-      "CAPUSDT"
+      "UNIUSDT",
+      "OPUSDT",
+      "ARXUSDT",
+      "GPSUSDT",
+      "ZILUSDT",
+      "ONEUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "OUSDT",
-        "actual_symbol": "OUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 10.089020771513363,
-        "volume_ccy": 1941890.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "UNIUSDT",
-        "actual_symbol": "UNIUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 7.459056267228798,
-        "volume_ccy": 14115598.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "ZECUSDT",
-        "actual_symbol": "ZECUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 9.920548695808257,
-        "volume_ccy": 1228772.7,
-        "trend_score": 5
-      },
-      {
-        "symbol": "SIGNUSDT",
-        "actual_symbol": "SIGNUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 9.097384756283697,
-        "volume_ccy": 46842300.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "VVVUSDT",
-        "actual_symbol": "VVVUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 7.533448324087454,
-        "volume_ccy": 482010.8,
-        "trend_score": 5
-      },
-      {
-        "symbol": "NEARUSDT",
-        "actual_symbol": "NEARUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 7.266435986159177,
-        "volume_ccy": 23816202.0,
-        "trend_score": 5
-      },
       {
         "symbol": "INITUSDT",
         "actual_symbol": "INITUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 6.923315740453262,
-        "volume_ccy": 2927630.0,
+        "change_pct": 5.800678802838629,
+        "volume_ccy": 3681420.0,
         "trend_score": 5
       },
       {
-        "symbol": "CAPUSDT",
-        "actual_symbol": "CAPUSDT",
+        "symbol": "UNIUSDT",
+        "actual_symbol": "UNIUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.098360655737701,
+        "volume_ccy": 15457568.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "OPUSDT",
+        "actual_symbol": "OPUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 35.127659574468076,
-        "volume_ccy": 2266762500.0,
+        "change_pct": 6.064097193129455,
+        "volume_ccy": 173550048.0,
         "trend_score": 4
+      },
+      {
+        "symbol": "ARXUSDT",
+        "actual_symbol": "ARXUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 4.682274247491644,
+        "volume_ccy": 8376350.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "GPSUSDT",
+        "actual_symbol": "GPSUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 4.023267086766849,
+        "volume_ccy": 176933660.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "ZILUSDT",
+        "actual_symbol": "ZILUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 8.427157966564307,
+        "volume_ccy": 2251854800.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ONEUSDT",
+        "actual_symbol": "ONEUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 6.029232643118147,
+        "volume_ccy": 1002870000.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-15T08:42:55+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-15T13:24:31+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
-      "OUSDT",
-      "UNIUSDT",
-      "ZECUSDT",
-      "SIGNUSDT",
-      "VVVUSDT",
-      "NEARUSDT",
       "INITUSDT",
-      "CAPUSDT"
+      "UNIUSDT",
+      "OPUSDT",
+      "ARXUSDT",
+      "GPSUSDT",
+      "ZILUSDT",
+      "ONEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "OUSDT",
-      "UNIUSDT",
-      "ZECUSDT",
-      "SIGNUSDT",
-      "VVVUSDT",
-      "NEARUSDT",
       "INITUSDT",
-      "CAPUSDT"
+      "UNIUSDT",
+      "OPUSDT",
+      "ARXUSDT",
+      "GPSUSDT",
+      "ZILUSDT",
+      "ONEUSDT"
     ]
   },
   "signals": {
