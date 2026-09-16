@@ -8,56 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-16T07:50:52+08:00",
+    "last_scan_at": "2026-09-16T10:20:22+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
+      "ARXUSDT",
       "HUSDT",
-      "ARBUSDT",
-      "USELESSUSDT"
+      "USELESSUSDT",
+      "ARBUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "ARXUSDT",
+        "actual_symbol": "ARXUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 4.634920634920635,
+        "volume_ccy": 14309400.0,
+        "trend_score": 7
+      },
       {
         "symbol": "HUSDT",
         "actual_symbol": "HUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 5.08372485242742,
-        "volume_ccy": 42326160.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "ARBUSDT",
-        "actual_symbol": "ARBUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 13.997902935889764,
-        "volume_ccy": 1065758877.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 4.602866164683024,
+        "volume_ccy": 43217610.0,
+        "trend_score": 6
       },
       {
         "symbol": "USELESSUSDT",
         "actual_symbol": "USELESSUSDT",
         "side": "long",
+        "side_score": 5,
+        "change_pct": 9.57624619014846,
+        "volume_ccy": 279912860.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ARBUSDT",
+        "actual_symbol": "ARBUSDT",
+        "side": "long",
         "side_score": 4,
-        "change_pct": 10.163734982511286,
-        "volume_ccy": 261569830.0,
+        "change_pct": 13.381176646482768,
+        "volume_ccy": 1150541205.0,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-09-16T07:50:52+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-09-16T10:20:22+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
+      "ARXUSDT",
       "HUSDT",
-      "ARBUSDT",
-      "USELESSUSDT"
+      "USELESSUSDT",
+      "ARBUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "ARXUSDT",
       "HUSDT",
-      "ARBUSDT",
-      "USELESSUSDT"
+      "USELESSUSDT",
+      "ARBUSDT"
     ]
   },
   "signals": {
