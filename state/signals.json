@@ -2,74 +2,86 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-16T10:20:22+08:00",
+    "last_scan_at": "2026-09-16T15:50:22+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "ARXUSDT",
       "HUSDT",
       "USELESSUSDT",
-      "ARBUSDT"
+      "SIGNUSDT",
+      "ARBUSDT",
+      "SOXLUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "ARXUSDT",
-        "actual_symbol": "ARXUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 4.634920634920635,
-        "volume_ccy": 14309400.0,
-        "trend_score": 7
-      },
       {
         "symbol": "HUSDT",
         "actual_symbol": "HUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 4.602866164683024,
-        "volume_ccy": 43217610.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 10.129997547216094,
+        "volume_ccy": 53513990.0,
+        "trend_score": 7
       },
       {
         "symbol": "USELESSUSDT",
         "actual_symbol": "USELESSUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 9.57624619014846,
-        "volume_ccy": 279912860.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 20.750263646863857,
+        "volume_ccy": 357941500.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "SIGNUSDT",
+        "actual_symbol": "SIGNUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 6.112037672912769,
+        "volume_ccy": 36339700.0,
+        "trend_score": 6
       },
       {
         "symbol": "ARBUSDT",
         "actual_symbol": "ARBUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 13.381176646482768,
-        "volume_ccy": 1150541205.0,
+        "change_pct": 15.93013626439809,
+        "volume_ccy": 1428920016.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "SOXLUSDT",
+        "actual_symbol": "SOXLUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 4.6356315065802525,
+        "volume_ccy": 1216570.2,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-09-16T10:20:22+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-09-16T15:50:22+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "ARXUSDT",
       "HUSDT",
       "USELESSUSDT",
-      "ARBUSDT"
+      "SIGNUSDT",
+      "ARBUSDT",
+      "SOXLUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ARXUSDT",
       "HUSDT",
       "USELESSUSDT",
-      "ARBUSDT"
+      "SIGNUSDT",
+      "ARBUSDT",
+      "SOXLUSDT"
     ]
   },
   "signals": {
