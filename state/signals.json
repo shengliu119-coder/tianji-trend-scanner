@@ -2,78 +2,49 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-18T03:30:01+08:00",
+    "last_scan_at": "2026-09-18T06:24:23+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "SUSHIUSDT",
-      "MINAUSDT",
-      "WUSDT",
-      "UNIUSDT",
       "USELESSUSDT",
-      "ONDOUSDT",
+      "PUMPUSDT",
+      "MINAUSDT",
       "METUSDT",
-      "GALAUSDT"
+      "WUSDT",
+      "ONEUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "SUSHIUSDT",
-        "actual_symbol": "SUSHIUSDT",
+        "symbol": "USELESSUSDT",
+        "actual_symbol": "USELESSUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 12.346286276438752,
-        "volume_ccy": 17022818.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 11.771012006861065,
+        "volume_ccy": 456056740.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "PUMPUSDT",
+        "actual_symbol": "PUMPUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 10.074937552039968,
+        "volume_ccy": 24808958000.0,
+        "trend_score": 5
       },
       {
         "symbol": "MINAUSDT",
         "actual_symbol": "MINAUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 15.056612864370027,
-        "volume_ccy": 46438544.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "WUSDT",
-        "actual_symbol": "WUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 12.244431753283838,
-        "volume_ccy": 155963263.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "UNIUSDT",
-        "actual_symbol": "UNIUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 21.657370517928285,
-        "volume_ccy": 35671108.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "USELESSUSDT",
-        "actual_symbol": "USELESSUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 12.87477954144621,
-        "volume_ccy": 465632650.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "ONDOUSDT",
-        "actual_symbol": "ONDOUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 12.856713727846202,
-        "volume_ccy": 119223480.0,
+        "change_pct": 13.77514792899408,
+        "volume_ccy": 47481042.0,
         "trend_score": 4
       },
       {
@@ -81,43 +52,48 @@
         "actual_symbol": "METUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 12.104470115519844,
-        "volume_ccy": 12409480.0,
+        "change_pct": 12.424242424242415,
+        "volume_ccy": 12414359.0,
         "trend_score": 4
       },
       {
-        "symbol": "GALAUSDT",
-        "actual_symbol": "GALAUSDT",
+        "symbol": "WUSDT",
+        "actual_symbol": "WUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 11.328168855955983,
+        "volume_ccy": 186839559.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "ONEUSDT",
+        "actual_symbol": "ONEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 17.948717948717956,
-        "volume_ccy": 3789807440.0,
+        "change_pct": 159.35745477230194,
+        "volume_ccy": 123477679600.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-18T03:30:01+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-18T06:24:23+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "SUSHIUSDT",
-      "MINAUSDT",
-      "WUSDT",
-      "UNIUSDT",
       "USELESSUSDT",
-      "ONDOUSDT",
+      "PUMPUSDT",
+      "MINAUSDT",
       "METUSDT",
-      "GALAUSDT"
+      "WUSDT",
+      "ONEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "SUSHIUSDT",
-      "MINAUSDT",
-      "WUSDT",
-      "UNIUSDT",
       "USELESSUSDT",
-      "ONDOUSDT",
+      "PUMPUSDT",
+      "MINAUSDT",
       "METUSDT",
-      "GALAUSDT"
+      "WUSDT",
+      "ONEUSDT"
     ]
   },
   "signals": {
