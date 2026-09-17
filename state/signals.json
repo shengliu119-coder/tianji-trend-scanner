@@ -8,63 +8,36 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-17T14:23:24+08:00",
+    "last_scan_at": "2026-09-17T20:00:33+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "BOMEUSDT",
-      "EDGEUSDT",
-      "USELESSUSDT",
-      "ZAMAUSDT",
-      "NEARUSDT",
-      "VVVUSDT",
       "LITUSDT",
-      "ZENUSDT"
+      "USELESSUSDT",
+      "VVVUSDT",
+      "SUSHIUSDT",
+      "MINAUSDT",
+      "PEOPLEUSDT",
+      "KMNOUSDT",
+      "ASTERUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "BOMEUSDT",
-        "actual_symbol": "BOMEUSDT",
+        "symbol": "LITUSDT",
+        "actual_symbol": "LITUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 8.885524630255032,
-        "volume_ccy": 6906625000.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "EDGEUSDT",
-        "actual_symbol": "EDGEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 8.322102425876011,
-        "volume_ccy": 7349830.0,
-        "trend_score": 7
+        "side_score": 5,
+        "change_pct": 12.553851855283268,
+        "volume_ccy": 23803140.0,
+        "trend_score": 5
       },
       {
         "symbol": "USELESSUSDT",
         "actual_symbol": "USELESSUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 16.746685460071355,
-        "volume_ccy": 553864790.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "ZAMAUSDT",
-        "actual_symbol": "ZAMAUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 9.279661016949158,
-        "volume_ccy": 73384140.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "NEARUSDT",
-        "actual_symbol": "NEARUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 13.913785744771664,
-        "volume_ccy": 35476106.0,
+        "change_pct": 10.499809556054,
+        "volume_ccy": 479247800.0,
         "trend_score": 5
       },
       {
@@ -72,52 +45,79 @@
         "actual_symbol": "VVVUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 13.740562800274535,
-        "volume_ccy": 668067.0,
+        "change_pct": 8.960277838072498,
+        "volume_ccy": 719733.7,
         "trend_score": 5
       },
       {
-        "symbol": "LITUSDT",
-        "actual_symbol": "LITUSDT",
+        "symbol": "SUSHIUSDT",
+        "actual_symbol": "SUSHIUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 13.263969905478445,
-        "volume_ccy": 21013675.0,
+        "change_pct": 8.284600389863556,
+        "volume_ccy": 10817171.0,
         "trend_score": 5
       },
       {
-        "symbol": "ZENUSDT",
-        "actual_symbol": "ZENUSDT",
+        "symbol": "MINAUSDT",
+        "actual_symbol": "MINAUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 9.954033919797117,
-        "volume_ccy": 1126646.3,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 13.702979970688823,
+        "volume_ccy": 38963255.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "PEOPLEUSDT",
+        "actual_symbol": "PEOPLEUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 10.558252427184463,
+        "volume_ccy": 728799100.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "KMNOUSDT",
+        "actual_symbol": "KMNOUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 9.497206703910615,
+        "volume_ccy": 27064200.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "ASTERUSDT",
+        "actual_symbol": "ASTERUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 8.718100014751446,
+        "volume_ccy": 14606701.0,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-09-17T14:23:24+08:00",
+    "alt_watchlist_at": "2026-09-17T20:00:33+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "BOMEUSDT",
-      "EDGEUSDT",
-      "USELESSUSDT",
-      "ZAMAUSDT",
-      "NEARUSDT",
-      "VVVUSDT",
       "LITUSDT",
-      "ZENUSDT"
+      "USELESSUSDT",
+      "VVVUSDT",
+      "SUSHIUSDT",
+      "MINAUSDT",
+      "PEOPLEUSDT",
+      "KMNOUSDT",
+      "ASTERUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "BOMEUSDT",
-      "EDGEUSDT",
-      "USELESSUSDT",
-      "ZAMAUSDT",
-      "NEARUSDT",
-      "VVVUSDT",
       "LITUSDT",
-      "ZENUSDT"
+      "USELESSUSDT",
+      "VVVUSDT",
+      "SUSHIUSDT",
+      "MINAUSDT",
+      "PEOPLEUSDT",
+      "KMNOUSDT",
+      "ASTERUSDT"
     ]
   },
   "signals": {
