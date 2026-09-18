@@ -8,18 +8,18 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-18T13:16:54+08:00",
+    "last_scan_at": "2026-09-18T17:48:15+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "RAYUSDT",
+      "ARUSDT",
+      "DOTUSDT",
       "METUSDT",
-      "NIGHTUSDT",
-      "JUPUSDT",
-      "WLDUSDT",
       "STXUSDT",
-      "SNXXUSDT",
-      "ONEUSDT"
+      "DYDXUSDT",
+      "SUSDT",
+      "UNIUSDT"
     ],
     "alt_watchlist": [
       {
@@ -27,44 +27,35 @@
         "actual_symbol": "RAYUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 20.056717476072308,
-        "volume_ccy": 11979308.0,
+        "change_pct": 22.313935892144727,
+        "volume_ccy": 15670975.0,
         "trend_score": 7
+      },
+      {
+        "symbol": "ARUSDT",
+        "actual_symbol": "ARUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 20.00000000000001,
+        "volume_ccy": 1496544.6,
+        "trend_score": 7
+      },
+      {
+        "symbol": "DOTUSDT",
+        "actual_symbol": "DOTUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 15.253902390831861,
+        "volume_ccy": 25627112.0,
+        "trend_score": 6
       },
       {
         "symbol": "METUSDT",
         "actual_symbol": "METUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 18.804243008678885,
-        "volume_ccy": 13286282.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "NIGHTUSDT",
-        "actual_symbol": "NIGHTUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 14.56859971711457,
-        "volume_ccy": 53692800.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "JUPUSDT",
-        "actual_symbol": "JUPUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 18.15272062185643,
-        "volume_ccy": 20340270.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "WLDUSDT",
-        "actual_symbol": "WLDUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 13.924050632911383,
-        "volume_ccy": 225208314.0,
+        "change_pct": 15.511551155115505,
+        "volume_ccy": 19584374.0,
         "trend_score": 5
       },
       {
@@ -72,52 +63,61 @@
         "actual_symbol": "STXUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 13.068893528183715,
-        "volume_ccy": 16672868.0,
+        "change_pct": 15.056461731493101,
+        "volume_ccy": 19918902.0,
         "trend_score": 5
       },
       {
-        "symbol": "SNXXUSDT",
-        "actual_symbol": "SNXXUSDT",
+        "symbol": "DYDXUSDT",
+        "actual_symbol": "DYDXUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 12.780269058295957,
-        "volume_ccy": 3765879.3,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 18.26216392222533,
+        "volume_ccy": 27484049.0,
+        "trend_score": 4
       },
       {
-        "symbol": "ONEUSDT",
-        "actual_symbol": "ONEUSDT",
+        "symbol": "SUSDT",
+        "actual_symbol": "SUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 14.091424253872312,
+        "volume_ccy": 24564370.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "UNIUSDT",
+        "actual_symbol": "UNIUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 54.618959107806695,
-        "volume_ccy": 131627833800.0,
+        "change_pct": 30.191138140747174,
+        "volume_ccy": 56034379.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-18T13:16:54+08:00",
+    "alt_watchlist_at": "2026-09-18T17:48:15+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "RAYUSDT",
+      "ARUSDT",
+      "DOTUSDT",
       "METUSDT",
-      "NIGHTUSDT",
-      "JUPUSDT",
-      "WLDUSDT",
       "STXUSDT",
-      "SNXXUSDT",
-      "ONEUSDT"
+      "DYDXUSDT",
+      "SUSDT",
+      "UNIUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "RAYUSDT",
+      "ARUSDT",
+      "DOTUSDT",
       "METUSDT",
-      "NIGHTUSDT",
-      "JUPUSDT",
-      "WLDUSDT",
       "STXUSDT",
-      "SNXXUSDT",
-      "ONEUSDT"
+      "DYDXUSDT",
+      "SUSDT",
+      "UNIUSDT"
     ]
   },
   "signals": {
