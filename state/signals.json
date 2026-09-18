@@ -2,98 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "强",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-18T08:37:33+08:00",
+    "last_scan_at": "2026-09-18T13:16:54+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "FLOWUSDT",
-      "HYPEUSDT",
-      "BABYUSDT",
+      "RAYUSDT",
       "METUSDT",
-      "MINAUSDT",
-      "PUMPUSDT"
+      "NIGHTUSDT",
+      "JUPUSDT",
+      "WLDUSDT",
+      "STXUSDT",
+      "SNXXUSDT",
+      "ONEUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "FLOWUSDT",
-        "actual_symbol": "FLOWUSDT",
+        "symbol": "RAYUSDT",
+        "actual_symbol": "RAYUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 12.302483069977436,
-        "volume_ccy": 30075230.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "HYPEUSDT",
-        "actual_symbol": "HYPEUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 9.259306606668023,
-        "volume_ccy": 3434708.8,
-        "trend_score": 6
-      },
-      {
-        "symbol": "BABYUSDT",
-        "actual_symbol": "BABYUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 17.071106094808115,
-        "volume_ccy": 164685050.0,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 20.056717476072308,
+        "volume_ccy": 11979308.0,
+        "trend_score": 7
       },
       {
         "symbol": "METUSDT",
         "actual_symbol": "METUSDT",
         "side": "long",
+        "side_score": 7,
+        "change_pct": 18.804243008678885,
+        "volume_ccy": 13286282.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "NIGHTUSDT",
+        "actual_symbol": "NIGHTUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 14.56859971711457,
+        "volume_ccy": 53692800.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "JUPUSDT",
+        "actual_symbol": "JUPUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 18.15272062185643,
+        "volume_ccy": 20340270.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "WLDUSDT",
+        "actual_symbol": "WLDUSDT",
+        "side": "long",
         "side_score": 5,
-        "change_pct": 13.44999999999999,
-        "volume_ccy": 12907862.0,
+        "change_pct": 13.924050632911383,
+        "volume_ccy": 225208314.0,
         "trend_score": 5
       },
       {
-        "symbol": "MINAUSDT",
-        "actual_symbol": "MINAUSDT",
+        "symbol": "STXUSDT",
+        "actual_symbol": "STXUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 9.336665152203551,
-        "volume_ccy": 46298830.0,
+        "change_pct": 13.068893528183715,
+        "volume_ccy": 16672868.0,
         "trend_score": 5
       },
       {
-        "symbol": "PUMPUSDT",
-        "actual_symbol": "PUMPUSDT",
+        "symbol": "SNXXUSDT",
+        "actual_symbol": "SNXXUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 9.888008740781192,
-        "volume_ccy": 24612797000.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 12.780269058295957,
+        "volume_ccy": 3765879.3,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ONEUSDT",
+        "actual_symbol": "ONEUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 54.618959107806695,
+        "volume_ccy": 131627833800.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-18T08:37:33+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-09-18T13:16:54+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "FLOWUSDT",
-      "HYPEUSDT",
-      "BABYUSDT",
+      "RAYUSDT",
       "METUSDT",
-      "MINAUSDT",
-      "PUMPUSDT"
+      "NIGHTUSDT",
+      "JUPUSDT",
+      "WLDUSDT",
+      "STXUSDT",
+      "SNXXUSDT",
+      "ONEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "FLOWUSDT",
-      "HYPEUSDT",
-      "BABYUSDT",
+      "RAYUSDT",
       "METUSDT",
-      "MINAUSDT",
-      "PUMPUSDT"
+      "NIGHTUSDT",
+      "JUPUSDT",
+      "WLDUSDT",
+      "STXUSDT",
+      "SNXXUSDT",
+      "ONEUSDT"
     ]
   },
   "signals": {
