@@ -8,116 +8,80 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-18T17:48:15+08:00",
+    "last_scan_at": "2026-09-18T21:56:36+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "RAYUSDT",
-      "ARUSDT",
-      "DOTUSDT",
-      "METUSDT",
-      "STXUSDT",
-      "DYDXUSDT",
+      "ETHFIUSDT",
       "SUSDT",
-      "UNIUSDT"
+      "METUSDT",
+      "LPTUSDT",
+      "JUPUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "RAYUSDT",
-        "actual_symbol": "RAYUSDT",
+        "symbol": "ETHFIUSDT",
+        "actual_symbol": "ETHFIUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 22.313935892144727,
-        "volume_ccy": 15670975.0,
+        "change_pct": 16.476267095736112,
+        "volume_ccy": 17547241.0,
         "trend_score": 7
       },
       {
-        "symbol": "ARUSDT",
-        "actual_symbol": "ARUSDT",
+        "symbol": "SUSDT",
+        "actual_symbol": "SUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 20.00000000000001,
-        "volume_ccy": 1496544.6,
-        "trend_score": 7
-      },
-      {
-        "symbol": "DOTUSDT",
-        "actual_symbol": "DOTUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 15.253902390831861,
-        "volume_ccy": 25627112.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 19.271623672230657,
+        "volume_ccy": 98523840.0,
+        "trend_score": 5
       },
       {
         "symbol": "METUSDT",
         "actual_symbol": "METUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 15.511551155115505,
-        "volume_ccy": 19584374.0,
+        "change_pct": 17.942696101456075,
+        "volume_ccy": 20974659.0,
         "trend_score": 5
       },
       {
-        "symbol": "STXUSDT",
-        "actual_symbol": "STXUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 15.056461731493101,
-        "volume_ccy": 19918902.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "DYDXUSDT",
-        "actual_symbol": "DYDXUSDT",
+        "symbol": "LPTUSDT",
+        "actual_symbol": "LPTUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 18.26216392222533,
-        "volume_ccy": 27484049.0,
+        "change_pct": 16.056758775205385,
+        "volume_ccy": 1033922.6,
         "trend_score": 4
       },
       {
-        "symbol": "SUSDT",
-        "actual_symbol": "SUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 14.091424253872312,
-        "volume_ccy": 24564370.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "UNIUSDT",
-        "actual_symbol": "UNIUSDT",
+        "symbol": "JUPUSDT",
+        "actual_symbol": "JUPUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 30.191138140747174,
-        "volume_ccy": 56034379.0,
+        "change_pct": 16.106194690265493,
+        "volume_ccy": 26791090.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-18T17:48:15+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-18T21:56:36+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "RAYUSDT",
-      "ARUSDT",
-      "DOTUSDT",
-      "METUSDT",
-      "STXUSDT",
-      "DYDXUSDT",
+      "ETHFIUSDT",
       "SUSDT",
-      "UNIUSDT"
+      "METUSDT",
+      "LPTUSDT",
+      "JUPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "RAYUSDT",
-      "ARUSDT",
-      "DOTUSDT",
-      "METUSDT",
-      "STXUSDT",
-      "DYDXUSDT",
+      "ETHFIUSDT",
       "SUSDT",
-      "UNIUSDT"
+      "METUSDT",
+      "LPTUSDT",
+      "JUPUSDT"
     ]
   },
   "signals": {
