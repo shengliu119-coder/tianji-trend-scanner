@@ -8,36 +8,27 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-19T01:28:08+08:00",
+    "last_scan_at": "2026-09-19T03:53:59+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "OLUSDT",
-      "SNXXUSDT",
+      "METUSDT",
       "ETHFIUSDT",
+      "ZKUSDT",
       "ZAMAUSDT",
-      "FUSDT",
+      "STRKUSDT",
       "PIEVERSEUSDT",
-      "AUSDT",
-      "SKYUSDT"
+      "ARUSDT",
+      "SUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "OLUSDT",
-        "actual_symbol": "OLUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 15.279299014238774,
-        "volume_ccy": 309995800.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "SNXXUSDT",
-        "actual_symbol": "SNXXUSDT",
+        "symbol": "METUSDT",
+        "actual_symbol": "METUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 17.94871794871795,
-        "volume_ccy": 3739871.6,
+        "change_pct": 17.633828160143956,
+        "volume_ccy": 21228298.0,
         "trend_score": 6
       },
       {
@@ -45,26 +36,35 @@
         "actual_symbol": "ETHFIUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 16.511999999999993,
-        "volume_ccy": 23184178.0,
+        "change_pct": 21.289477990508917,
+        "volume_ccy": 24836315.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ZKUSDT",
+        "actual_symbol": "ZKUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 20.5657237936772,
+        "volume_ccy": 293682220.0,
         "trend_score": 5
       },
       {
         "symbol": "ZAMAUSDT",
         "actual_symbol": "ZAMAUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 16.49751243781094,
-        "volume_ccy": 208424750.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 21.210281319570928,
+        "volume_ccy": 218557140.0,
+        "trend_score": 4
       },
       {
-        "symbol": "FUSDT",
-        "actual_symbol": "FUSDT",
+        "symbol": "STRKUSDT",
+        "actual_symbol": "STRKUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 56.56786271450858,
-        "volume_ccy": 5011789300.0,
+        "change_pct": 46.07738729144479,
+        "volume_ccy": 1276917556.0,
         "trend_score": 3
       },
       {
@@ -72,52 +72,52 @@
         "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 38.31807977896739,
-        "volume_ccy": 19003290.0,
+        "change_pct": 38.13149922214034,
+        "volume_ccy": 20989690.0,
         "trend_score": 3
       },
       {
-        "symbol": "AUSDT",
-        "actual_symbol": "AUSDT",
+        "symbol": "ARUSDT",
+        "actual_symbol": "ARUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 21.50148598010079,
-        "volume_ccy": 16779830.0,
+        "change_pct": 34.28351309707242,
+        "volume_ccy": 3852303.0,
         "trend_score": 3
       },
       {
-        "symbol": "SKYUSDT",
-        "actual_symbol": "SKYUSDT",
+        "symbol": "SUSDT",
+        "actual_symbol": "SUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 16.374957926624038,
-        "volume_ccy": 62846200.0,
+        "change_pct": 24.437781109445282,
+        "volume_ccy": 183130300.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-19T01:28:08+08:00",
+    "alt_watchlist_at": "2026-09-19T03:53:59+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "OLUSDT",
-      "SNXXUSDT",
+      "METUSDT",
       "ETHFIUSDT",
+      "ZKUSDT",
       "ZAMAUSDT",
-      "FUSDT",
+      "STRKUSDT",
       "PIEVERSEUSDT",
-      "AUSDT",
-      "SKYUSDT"
+      "ARUSDT",
+      "SUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "OLUSDT",
-      "SNXXUSDT",
+      "METUSDT",
       "ETHFIUSDT",
+      "ZKUSDT",
       "ZAMAUSDT",
-      "FUSDT",
+      "STRKUSDT",
       "PIEVERSEUSDT",
-      "AUSDT",
-      "SKYUSDT"
+      "ARUSDT",
+      "SUSDT"
     ]
   },
   "signals": {
