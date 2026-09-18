@@ -8,80 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-18T21:56:36+08:00",
+    "last_scan_at": "2026-09-19T01:28:08+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "OLUSDT",
+      "SNXXUSDT",
       "ETHFIUSDT",
-      "SUSDT",
-      "METUSDT",
-      "LPTUSDT",
-      "JUPUSDT"
+      "ZAMAUSDT",
+      "FUSDT",
+      "PIEVERSEUSDT",
+      "AUSDT",
+      "SKYUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "OLUSDT",
+        "actual_symbol": "OLUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 15.279299014238774,
+        "volume_ccy": 309995800.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "SNXXUSDT",
+        "actual_symbol": "SNXXUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 17.94871794871795,
+        "volume_ccy": 3739871.6,
+        "trend_score": 6
+      },
       {
         "symbol": "ETHFIUSDT",
         "actual_symbol": "ETHFIUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 16.476267095736112,
-        "volume_ccy": 17547241.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "SUSDT",
-        "actual_symbol": "SUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 19.271623672230657,
-        "volume_ccy": 98523840.0,
+        "change_pct": 16.511999999999993,
+        "volume_ccy": 23184178.0,
         "trend_score": 5
       },
       {
-        "symbol": "METUSDT",
-        "actual_symbol": "METUSDT",
+        "symbol": "ZAMAUSDT",
+        "actual_symbol": "ZAMAUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 17.942696101456075,
-        "volume_ccy": 20974659.0,
+        "change_pct": 16.49751243781094,
+        "volume_ccy": 208424750.0,
         "trend_score": 5
       },
       {
-        "symbol": "LPTUSDT",
-        "actual_symbol": "LPTUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 16.056758775205385,
-        "volume_ccy": 1033922.6,
-        "trend_score": 4
-      },
-      {
-        "symbol": "JUPUSDT",
-        "actual_symbol": "JUPUSDT",
+        "symbol": "FUSDT",
+        "actual_symbol": "FUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 16.106194690265493,
-        "volume_ccy": 26791090.0,
+        "change_pct": 56.56786271450858,
+        "volume_ccy": 5011789300.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "PIEVERSEUSDT",
+        "actual_symbol": "PIEVERSEUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 38.31807977896739,
+        "volume_ccy": 19003290.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "AUSDT",
+        "actual_symbol": "AUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 21.50148598010079,
+        "volume_ccy": 16779830.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "SKYUSDT",
+        "actual_symbol": "SKYUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 16.374957926624038,
+        "volume_ccy": 62846200.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-18T21:56:36+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-09-19T01:28:08+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "OLUSDT",
+      "SNXXUSDT",
       "ETHFIUSDT",
-      "SUSDT",
-      "METUSDT",
-      "LPTUSDT",
-      "JUPUSDT"
+      "ZAMAUSDT",
+      "FUSDT",
+      "PIEVERSEUSDT",
+      "AUSDT",
+      "SKYUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "OLUSDT",
+      "SNXXUSDT",
       "ETHFIUSDT",
-      "SUSDT",
-      "METUSDT",
-      "LPTUSDT",
-      "JUPUSDT"
+      "ZAMAUSDT",
+      "FUSDT",
+      "PIEVERSEUSDT",
+      "AUSDT",
+      "SKYUSDT"
     ]
   },
   "signals": {
