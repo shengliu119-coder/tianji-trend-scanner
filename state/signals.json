@@ -8,25 +8,36 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-19T21:12:48+08:00",
+    "last_scan_at": "2026-09-20T00:32:47+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "CAPUSDT",
+      "OFCUSDT",
+      "NESUSDT",
       "FILUSDT",
-      "ALLOUSDT",
-      "STRKUSDT",
+      "ONEUSDT",
       "ENAUSDT",
-      "ARXUSDT"
+      "AVAXUSDT",
+      "AZTECUSDT",
+      "CELOUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "CAPUSDT",
-        "actual_symbol": "CAPUSDT",
+        "symbol": "OFCUSDT",
+        "actual_symbol": "OFCUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 21.754257462003288,
-        "volume_ccy": 374823800.0,
+        "change_pct": 36.10850006714112,
+        "volume_ccy": 456532100.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 10.515740120562638,
+        "volume_ccy": 7388540.0,
         "trend_score": 6
       },
       {
@@ -34,26 +45,17 @@
         "actual_symbol": "FILUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 15.081018518518515,
-        "volume_ccy": 127293836.9,
+        "change_pct": 12.160035963137778,
+        "volume_ccy": 133218012.8,
         "trend_score": 4
       },
       {
-        "symbol": "ALLOUSDT",
-        "actual_symbol": "ALLOUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 15.003863241259424,
-        "volume_ccy": 38916770.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "STRKUSDT",
-        "actual_symbol": "STRKUSDT",
+        "symbol": "ONEUSDT",
+        "actual_symbol": "ONEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 38.69169844529187,
-        "volume_ccy": 1882864244.0,
+        "change_pct": 89.3615730064328,
+        "volume_ccy": 60504133100.0,
         "trend_score": 3
       },
       {
@@ -61,39 +63,61 @@
         "actual_symbol": "ENAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 23.35595311536089,
-        "volume_ccy": 697887730.0,
+        "change_pct": 20.674372641791937,
+        "volume_ccy": 755769690.0,
         "trend_score": 3
       },
       {
-        "symbol": "ARXUSDT",
-        "actual_symbol": "ARXUSDT",
+        "symbol": "AVAXUSDT",
+        "actual_symbol": "AVAXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 16.743119266055047,
-        "volume_ccy": 15052740.0,
+        "change_pct": 19.44890646237489,
+        "volume_ccy": 7539319.3,
+        "trend_score": 3
+      },
+      {
+        "symbol": "AZTECUSDT",
+        "actual_symbol": "AZTECUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 12.459230267449437,
+        "volume_ccy": 76109000.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "CELOUSDT",
+        "actual_symbol": "CELOUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 11.348464619492653,
+        "volume_ccy": 12084724.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-19T21:12:48+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-09-20T00:32:47+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "CAPUSDT",
+      "OFCUSDT",
+      "NESUSDT",
       "FILUSDT",
-      "ALLOUSDT",
-      "STRKUSDT",
+      "ONEUSDT",
       "ENAUSDT",
-      "ARXUSDT"
+      "AVAXUSDT",
+      "AZTECUSDT",
+      "CELOUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "CAPUSDT",
+      "OFCUSDT",
+      "NESUSDT",
       "FILUSDT",
-      "ALLOUSDT",
-      "STRKUSDT",
+      "ONEUSDT",
       "ENAUSDT",
-      "ARXUSDT"
+      "AVAXUSDT",
+      "AZTECUSDT",
+      "CELOUSDT"
     ]
   },
   "signals": {
