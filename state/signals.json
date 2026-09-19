@@ -8,45 +8,45 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-20T00:32:47+08:00",
+    "last_scan_at": "2026-09-20T02:47:02+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "OFCUSDT",
-      "NESUSDT",
       "FILUSDT",
+      "ZILUSDT",
+      "OFCUSDT",
       "ONEUSDT",
-      "ENAUSDT",
-      "AVAXUSDT",
-      "AZTECUSDT",
-      "CELOUSDT"
+      "ZAMAUSDT",
+      "XTZUSDT",
+      "CELOUSDT",
+      "PEPEUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "OFCUSDT",
-        "actual_symbol": "OFCUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 36.10850006714112,
-        "volume_ccy": 456532100.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "NESUSDT",
-        "actual_symbol": "NESUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 10.515740120562638,
-        "volume_ccy": 7388540.0,
-        "trend_score": 6
-      },
       {
         "symbol": "FILUSDT",
         "actual_symbol": "FILUSDT",
         "side": "long",
+        "side_score": 5,
+        "change_pct": 20.897536835001684,
+        "volume_ccy": 192726918.7,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ZILUSDT",
+        "actual_symbol": "ZILUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 15.379581151832458,
+        "volume_ccy": 623777100.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "OFCUSDT",
+        "actual_symbol": "OFCUSDT",
+        "side": "long",
         "side_score": 4,
-        "change_pct": 12.160035963137778,
-        "volume_ccy": 133218012.8,
+        "change_pct": 36.640300308352316,
+        "volume_ccy": 2056682600.0,
         "trend_score": 4
       },
       {
@@ -54,35 +54,26 @@
         "actual_symbol": "ONEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 89.3615730064328,
-        "volume_ccy": 60504133100.0,
+        "change_pct": 132.66426589527128,
+        "volume_ccy": 67540001200.0,
         "trend_score": 3
       },
       {
-        "symbol": "ENAUSDT",
-        "actual_symbol": "ENAUSDT",
+        "symbol": "ZAMAUSDT",
+        "actual_symbol": "ZAMAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 20.674372641791937,
-        "volume_ccy": 755769690.0,
+        "change_pct": 46.675621222296826,
+        "volume_ccy": 1271216690.0,
         "trend_score": 3
       },
       {
-        "symbol": "AVAXUSDT",
-        "actual_symbol": "AVAXUSDT",
+        "symbol": "XTZUSDT",
+        "actual_symbol": "XTZUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 19.44890646237489,
-        "volume_ccy": 7539319.3,
-        "trend_score": 3
-      },
-      {
-        "symbol": "AZTECUSDT",
-        "actual_symbol": "AZTECUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 12.459230267449437,
-        "volume_ccy": 76109000.0,
+        "change_pct": 33.86695126289577,
+        "volume_ccy": 56999922.0,
         "trend_score": 3
       },
       {
@@ -90,34 +81,43 @@
         "actual_symbol": "CELOUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 11.348464619492653,
-        "volume_ccy": 12084724.0,
+        "change_pct": 12.845270105108764,
+        "volume_ccy": 14085690.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "PEPEUSDT",
+        "actual_symbol": "1000PEPEUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 11.379579111457518,
+        "volume_ccy": 45429817000000.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-20T00:32:47+08:00",
+    "alt_watchlist_at": "2026-09-20T02:47:02+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "OFCUSDT",
-      "NESUSDT",
       "FILUSDT",
+      "ZILUSDT",
+      "OFCUSDT",
       "ONEUSDT",
-      "ENAUSDT",
-      "AVAXUSDT",
-      "AZTECUSDT",
-      "CELOUSDT"
+      "ZAMAUSDT",
+      "XTZUSDT",
+      "CELOUSDT",
+      "PEPEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "OFCUSDT",
-      "NESUSDT",
       "FILUSDT",
+      "ZILUSDT",
+      "OFCUSDT",
       "ONEUSDT",
-      "ENAUSDT",
-      "AVAXUSDT",
-      "AZTECUSDT",
-      "CELOUSDT"
+      "ZAMAUSDT",
+      "XTZUSDT",
+      "CELOUSDT",
+      "PEPEUSDT"
     ]
   },
   "signals": {
