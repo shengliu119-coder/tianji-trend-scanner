@@ -8,80 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-19T08:23:09+08:00",
+    "last_scan_at": "2026-09-19T12:54:06+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "CHIPUSDT",
-      "ETHFIUSDT",
-      "APTUSDT",
-      "SNXXUSDT",
-      "OPUSDT"
+      "OLUSDT",
+      "FILUSDT",
+      "MORPHOUSDT",
+      "WALUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "CHIPUSDT",
-        "actual_symbol": "CHIPUSDT",
+        "symbol": "OLUSDT",
+        "actual_symbol": "OLUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 18.09523809523809,
-        "volume_ccy": 360278200.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 16.39142656359803,
+        "volume_ccy": 209128000.0,
+        "trend_score": 5
       },
       {
-        "symbol": "ETHFIUSDT",
-        "actual_symbol": "ETHFIUSDT",
+        "symbol": "FILUSDT",
+        "actual_symbol": "FILUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 16.602440590879887,
-        "volume_ccy": 26574389.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 13.391203703703708,
+        "volume_ccy": 102901262.3,
+        "trend_score": 5
       },
       {
-        "symbol": "APTUSDT",
-        "actual_symbol": "APTUSDT",
+        "symbol": "MORPHOUSDT",
+        "actual_symbol": "MORPHOUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 25.36715620827771,
-        "volume_ccy": 59669891.0,
+        "change_pct": 18.929633300297315,
+        "volume_ccy": 2136328.0,
         "trend_score": 3
       },
       {
-        "symbol": "SNXXUSDT",
-        "actual_symbol": "SNXXUSDT",
+        "symbol": "WALUSDT",
+        "actual_symbol": "WALUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 22.79511533242877,
-        "volume_ccy": 4226402.6,
-        "trend_score": 3
-      },
-      {
-        "symbol": "OPUSDT",
-        "actual_symbol": "OPUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 19.643211100099098,
-        "volume_ccy": 234354181.0,
+        "change_pct": 13.50677120456166,
+        "volume_ccy": 25917430.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-19T08:23:09+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-09-19T12:54:06+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "CHIPUSDT",
-      "ETHFIUSDT",
-      "APTUSDT",
-      "SNXXUSDT",
-      "OPUSDT"
+      "OLUSDT",
+      "FILUSDT",
+      "MORPHOUSDT",
+      "WALUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "CHIPUSDT",
-      "ETHFIUSDT",
-      "APTUSDT",
-      "SNXXUSDT",
-      "OPUSDT"
+      "OLUSDT",
+      "FILUSDT",
+      "MORPHOUSDT",
+      "WALUSDT"
     ]
   },
   "signals": {
