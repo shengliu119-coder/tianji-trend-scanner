@@ -8,68 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-19T12:54:06+08:00",
+    "last_scan_at": "2026-09-19T17:10:17+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "MINAUSDT",
       "OLUSDT",
+      "ENAUSDT",
       "FILUSDT",
-      "MORPHOUSDT",
-      "WALUSDT"
+      "ARUSDT",
+      "ZAMAUSDT",
+      "INJUSDT",
+      "BREVUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "MINAUSDT",
+        "actual_symbol": "MINAUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 18.909817952225612,
+        "volume_ccy": 35374280.0,
+        "trend_score": 7
+      },
       {
         "symbol": "OLUSDT",
         "actual_symbol": "OLUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 16.39142656359803,
-        "volume_ccy": 209128000.0,
+        "change_pct": 20.808045777700706,
+        "volume_ccy": 242432600.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ENAUSDT",
+        "actual_symbol": "ENAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 15.91817260094232,
+        "volume_ccy": 616445410.0,
         "trend_score": 5
       },
       {
         "symbol": "FILUSDT",
         "actual_symbol": "FILUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 13.391203703703708,
-        "volume_ccy": 102901262.3,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 12.191464821222608,
+        "volume_ccy": 121422866.3,
+        "trend_score": 4
       },
       {
-        "symbol": "MORPHOUSDT",
-        "actual_symbol": "MORPHOUSDT",
+        "symbol": "ARUSDT",
+        "actual_symbol": "ARUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 18.929633300297315,
-        "volume_ccy": 2136328.0,
+        "change_pct": 52.77036048064085,
+        "volume_ccy": 13562136.9,
         "trend_score": 3
       },
       {
-        "symbol": "WALUSDT",
-        "actual_symbol": "WALUSDT",
+        "symbol": "ZAMAUSDT",
+        "actual_symbol": "ZAMAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 13.50677120456166,
-        "volume_ccy": 25917430.0,
+        "change_pct": 37.32470334412082,
+        "volume_ccy": 499164950.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "INJUSDT",
+        "actual_symbol": "INJUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 19.15262246022996,
+        "volume_ccy": 5813537.8,
+        "trend_score": 3
+      },
+      {
+        "symbol": "BREVUSDT",
+        "actual_symbol": "BREVUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 13.464506172839515,
+        "volume_ccy": 10667555.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-19T12:54:06+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-09-19T17:10:17+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "MINAUSDT",
       "OLUSDT",
+      "ENAUSDT",
       "FILUSDT",
-      "MORPHOUSDT",
-      "WALUSDT"
+      "ARUSDT",
+      "ZAMAUSDT",
+      "INJUSDT",
+      "BREVUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "MINAUSDT",
       "OLUSDT",
+      "ENAUSDT",
       "FILUSDT",
-      "MORPHOUSDT",
-      "WALUSDT"
+      "ARUSDT",
+      "ZAMAUSDT",
+      "INJUSDT",
+      "BREVUSDT"
     ]
   },
   "signals": {
