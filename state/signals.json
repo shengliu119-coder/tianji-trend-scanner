@@ -8,56 +8,44 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-20T08:31:22+08:00",
+    "last_scan_at": "2026-09-20T13:11:35+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 2,
     "last_okx_discovery_symbols": [
-      "AVAXUSDT",
       "ZILUSDT",
-      "PIEVERSEUSDT"
+      "JTOUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "AVAXUSDT",
-        "actual_symbol": "AVAXUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 26.63109386369148,
-        "volume_ccy": 10561769.7,
-        "trend_score": 3
-      },
       {
         "symbol": "ZILUSDT",
         "actual_symbol": "ZILUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 16.672030897972327,
-        "volume_ccy": 1117310800.0,
+        "change_pct": 27.00612310667097,
+        "volume_ccy": 2905276200.0,
         "trend_score": 3
       },
       {
-        "symbol": "PIEVERSEUSDT",
-        "actual_symbol": "PIEVERSEUSDT",
+        "symbol": "JTOUSDT",
+        "actual_symbol": "JTOUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 12.41275231088474,
-        "volume_ccy": 15803680.0,
+        "change_pct": 8.592722490135909,
+        "volume_ccy": 31201201.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-20T08:31:22+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-09-20T13:11:35+08:00",
+    "alt_watchlist_count": 2,
     "alt_watchlist_symbols": [
-      "AVAXUSDT",
       "ZILUSDT",
-      "PIEVERSEUSDT"
+      "JTOUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "AVAXUSDT",
       "ZILUSDT",
-      "PIEVERSEUSDT"
+      "JTOUSDT"
     ]
   },
   "signals": {
