@@ -8,56 +8,56 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-20T06:50:17+08:00",
+    "last_scan_at": "2026-09-20T08:31:22+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "ONEUSDT",
-      "OFCUSDT",
-      "HOMEUSDT"
+      "AVAXUSDT",
+      "ZILUSDT",
+      "PIEVERSEUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ONEUSDT",
-        "actual_symbol": "ONEUSDT",
+        "symbol": "AVAXUSDT",
+        "actual_symbol": "AVAXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 133.93339333933392,
-        "volume_ccy": 75917741200.0,
+        "change_pct": 26.63109386369148,
+        "volume_ccy": 10561769.7,
         "trend_score": 3
       },
       {
-        "symbol": "OFCUSDT",
-        "actual_symbol": "OFCUSDT",
+        "symbol": "ZILUSDT",
+        "actual_symbol": "ZILUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 50.77740863787377,
-        "volume_ccy": 2450628100.0,
+        "change_pct": 16.672030897972327,
+        "volume_ccy": 1117310800.0,
         "trend_score": 3
       },
       {
-        "symbol": "HOMEUSDT",
-        "actual_symbol": "HOMEUSDT",
+        "symbol": "PIEVERSEUSDT",
+        "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 9.4810379241517,
-        "volume_ccy": 815101400.0,
+        "change_pct": 12.41275231088474,
+        "volume_ccy": 15803680.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-20T06:50:17+08:00",
+    "alt_watchlist_at": "2026-09-20T08:31:22+08:00",
     "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "ONEUSDT",
-      "OFCUSDT",
-      "HOMEUSDT"
+      "AVAXUSDT",
+      "ZILUSDT",
+      "PIEVERSEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ONEUSDT",
-      "OFCUSDT",
-      "HOMEUSDT"
+      "AVAXUSDT",
+      "ZILUSDT",
+      "PIEVERSEUSDT"
     ]
   },
   "signals": {
