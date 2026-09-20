@@ -8,80 +8,92 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-21T05:49:21+08:00",
+    "last_scan_at": "2026-09-21T07:38:23+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
+      "ARBUSDT",
       "SEIUSDT",
       "ZROUSDT",
-      "RENDERUSDT",
-      "ENSOUSDT",
-      "WUSDT"
+      "KMNOUSDT",
+      "VVVUSDT",
+      "IOSTUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "ARBUSDT",
+        "actual_symbol": "ARBUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 5.575539568345328,
+        "volume_ccy": 824516963.0,
+        "trend_score": 7
+      },
       {
         "symbol": "SEIUSDT",
         "actual_symbol": "SEIUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 8.032454361054779,
-        "volume_ccy": 104907910.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 7.676767676767672,
+        "volume_ccy": 115321090.0,
+        "trend_score": 4
       },
       {
         "symbol": "ZROUSDT",
         "actual_symbol": "ZROUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 7.693003891754907,
-        "volume_ccy": 7050363.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 5.392731535756162,
+        "volume_ccy": 7542118.0,
+        "trend_score": 4
       },
       {
-        "symbol": "RENDERUSDT",
-        "actual_symbol": "RENDERUSDT",
+        "symbol": "KMNOUSDT",
+        "actual_symbol": "KMNOUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 10.946555054732785,
-        "volume_ccy": 4609626.0,
+        "change_pct": 23.02132273220094,
+        "volume_ccy": 114306100.0,
         "trend_score": 3
       },
       {
-        "symbol": "ENSOUSDT",
-        "actual_symbol": "ENSOUSDT",
+        "symbol": "VVVUSDT",
+        "actual_symbol": "VVVUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 6.980416929879977,
-        "volume_ccy": 9001192.0,
+        "change_pct": 13.895771878072754,
+        "volume_ccy": 776362.4,
         "trend_score": 3
       },
       {
-        "symbol": "WUSDT",
-        "actual_symbol": "WUSDT",
+        "symbol": "IOSTUSDT",
+        "actual_symbol": "IOSTUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 6.534272901985918,
-        "volume_ccy": 175241079.0,
+        "change_pct": 5.6024096385542155,
+        "volume_ccy": 7783447000.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-21T05:49:21+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-09-21T07:38:23+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
+      "ARBUSDT",
       "SEIUSDT",
       "ZROUSDT",
-      "RENDERUSDT",
-      "ENSOUSDT",
-      "WUSDT"
+      "KMNOUSDT",
+      "VVVUSDT",
+      "IOSTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "ARBUSDT",
       "SEIUSDT",
       "ZROUSDT",
-      "RENDERUSDT",
-      "ENSOUSDT",
-      "WUSDT"
+      "KMNOUSDT",
+      "VVVUSDT",
+      "IOSTUSDT"
     ]
   },
   "signals": {
