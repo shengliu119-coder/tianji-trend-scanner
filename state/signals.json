@@ -8,116 +8,80 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-21T03:32:32+08:00",
+    "last_scan_at": "2026-09-21T05:49:21+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "MINAUSDT",
-      "KMNOUSDT",
-      "ARUSDT",
-      "LUNAUSDT",
-      "TRUTHUSDT",
+      "SEIUSDT",
+      "ZROUSDT",
       "RENDERUSDT",
-      "SUSDT",
-      "STRKUSDT"
+      "ENSOUSDT",
+      "WUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "MINAUSDT",
-        "actual_symbol": "MINAUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 5.947035645560337,
-        "volume_ccy": 27562416.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "KMNOUSDT",
-        "actual_symbol": "KMNOUSDT",
+        "symbol": "SEIUSDT",
+        "actual_symbol": "SEIUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 14.352856109905993,
-        "volume_ccy": 77684800.0,
+        "change_pct": 8.032454361054779,
+        "volume_ccy": 104907910.0,
         "trend_score": 5
       },
       {
-        "symbol": "ARUSDT",
-        "actual_symbol": "ARUSDT",
+        "symbol": "ZROUSDT",
+        "actual_symbol": "ZROUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 12.402366863905327,
-        "volume_ccy": 8133654.0,
+        "change_pct": 7.693003891754907,
+        "volume_ccy": 7050363.0,
         "trend_score": 5
-      },
-      {
-        "symbol": "LUNAUSDT",
-        "actual_symbol": "LUNAUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 13.578969157524329,
-        "volume_ccy": 404585254.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "TRUTHUSDT",
-        "actual_symbol": "TRUTHUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 4.652226967663204,
-        "volume_ccy": 44915000.0,
-        "trend_score": 4
       },
       {
         "symbol": "RENDERUSDT",
         "actual_symbol": "RENDERUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 4.2378241619228305,
-        "volume_ccy": 4454333.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "SUSDT",
-        "actual_symbol": "SUSDT",
-        "side": "long",
         "side_score": 3,
-        "change_pct": 17.82393056416617,
-        "volume_ccy": 152976420.0,
+        "change_pct": 10.946555054732785,
+        "volume_ccy": 4609626.0,
         "trend_score": 3
       },
       {
-        "symbol": "STRKUSDT",
-        "actual_symbol": "STRKUSDT",
+        "symbol": "ENSOUSDT",
+        "actual_symbol": "ENSOUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 15.822933835648687,
-        "volume_ccy": 850513597.0,
+        "change_pct": 6.980416929879977,
+        "volume_ccy": 9001192.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "WUSDT",
+        "actual_symbol": "WUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 6.534272901985918,
+        "volume_ccy": 175241079.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-21T03:32:32+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-21T05:49:21+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "MINAUSDT",
-      "KMNOUSDT",
-      "ARUSDT",
-      "LUNAUSDT",
-      "TRUTHUSDT",
+      "SEIUSDT",
+      "ZROUSDT",
       "RENDERUSDT",
-      "SUSDT",
-      "STRKUSDT"
+      "ENSOUSDT",
+      "WUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "MINAUSDT",
-      "KMNOUSDT",
-      "ARUSDT",
-      "LUNAUSDT",
-      "TRUTHUSDT",
+      "SEIUSDT",
+      "ZROUSDT",
       "RENDERUSDT",
-      "SUSDT",
-      "STRKUSDT"
+      "ENSOUSDT",
+      "WUSDT"
     ]
   },
   "signals": {
