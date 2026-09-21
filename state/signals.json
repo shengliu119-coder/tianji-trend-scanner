@@ -8,104 +8,92 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-21T09:45:52+08:00",
+    "last_scan_at": "2026-09-21T15:14:49+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "OLUSDT",
-      "VVVUSDT",
-      "MINAUSDT",
-      "SEIUSDT",
-      "SUIUSDT",
-      "JUPUSDT",
-      "ENSOUSDT"
+      "INITUSDT",
+      "PUMPUSDT",
+      "ARUSDT",
+      "OPGUSDT",
+      "ALLOUSDT",
+      "ZROUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "OLUSDT",
-        "actual_symbol": "OLUSDT",
+        "symbol": "INITUSDT",
+        "actual_symbol": "INITUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 7.2852645780242895,
-        "volume_ccy": 144975300.0,
-        "trend_score": 7
+        "side_score": 5,
+        "change_pct": 13.622164878446283,
+        "volume_ccy": 4527030.0,
+        "trend_score": 5
       },
       {
-        "symbol": "VVVUSDT",
-        "actual_symbol": "VVVUSDT",
+        "symbol": "PUMPUSDT",
+        "actual_symbol": "PUMPUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 10.022550739163123,
+        "volume_ccy": 21198550000.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "ARUSDT",
+        "actual_symbol": "ARUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 16.498773816261085,
-        "volume_ccy": 844578.8,
+        "change_pct": 17.199814557255447,
+        "volume_ccy": 7558497.7,
         "trend_score": 3
       },
       {
-        "symbol": "MINAUSDT",
-        "actual_symbol": "MINAUSDT",
+        "symbol": "OPGUSDT",
+        "actual_symbol": "OPGUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 13.567791815953234,
-        "volume_ccy": 36989382.0,
+        "change_pct": 10.93871217998449,
+        "volume_ccy": 15186320.0,
         "trend_score": 3
       },
       {
-        "symbol": "SEIUSDT",
-        "actual_symbol": "SEIUSDT",
+        "symbol": "ALLOUSDT",
+        "actual_symbol": "ALLOUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 11.915412769418458,
-        "volume_ccy": 144919570.0,
+        "change_pct": 10.02930096274591,
+        "volume_ccy": 69428450.0,
         "trend_score": 3
       },
       {
-        "symbol": "SUIUSDT",
-        "actual_symbol": "SUIUSDT",
+        "symbol": "ZROUSDT",
+        "actual_symbol": "ZROUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 9.753533465716623,
-        "volume_ccy": 247280131.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "JUPUSDT",
-        "actual_symbol": "JUPUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 9.268465909090894,
-        "volume_ccy": 33934320.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ENSOUSDT",
-        "actual_symbol": "ENSOUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 7.985347985347989,
-        "volume_ccy": 11067245.0,
+        "change_pct": 9.747695745275115,
+        "volume_ccy": 5587194.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-21T09:45:52+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-09-21T15:14:49+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "OLUSDT",
-      "VVVUSDT",
-      "MINAUSDT",
-      "SEIUSDT",
-      "SUIUSDT",
-      "JUPUSDT",
-      "ENSOUSDT"
+      "INITUSDT",
+      "PUMPUSDT",
+      "ARUSDT",
+      "OPGUSDT",
+      "ALLOUSDT",
+      "ZROUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "OLUSDT",
-      "VVVUSDT",
-      "MINAUSDT",
-      "SEIUSDT",
-      "SUIUSDT",
-      "JUPUSDT",
-      "ENSOUSDT"
+      "INITUSDT",
+      "PUMPUSDT",
+      "ARUSDT",
+      "OPGUSDT",
+      "ALLOUSDT",
+      "ZROUSDT"
     ]
   },
   "signals": {
