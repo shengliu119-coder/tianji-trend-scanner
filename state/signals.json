@@ -8,68 +8,80 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-21T22:09:06+08:00",
+    "last_scan_at": "2026-09-22T03:29:45+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "WIFUSDT",
-      "BOMEUSDT",
-      "ONEUSDT",
-      "PROVEUSDT"
+      "RAYUSDT",
+      "USELESSUSDT",
+      "UBUSDT",
+      "KORUUSDT",
+      "PENGUUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "WIFUSDT",
-        "actual_symbol": "WIFUSDT",
+        "symbol": "RAYUSDT",
+        "actual_symbol": "RAYUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 18.829516539440206,
-        "volume_ccy": 60635073.0,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 12.012121212121222,
+        "volume_ccy": 6990265.0,
+        "trend_score": 7
       },
       {
-        "symbol": "BOMEUSDT",
-        "actual_symbol": "BOMEUSDT",
+        "symbol": "USELESSUSDT",
+        "actual_symbol": "USELESSUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 17.62212803925942,
-        "volume_ccy": 10390492000.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 22.39267598663862,
+        "volume_ccy": 211436640.0,
+        "trend_score": 6
       },
       {
-        "symbol": "ONEUSDT",
-        "actual_symbol": "ONEUSDT",
+        "symbol": "UBUSDT",
+        "actual_symbol": "UBUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 15.058263581158712,
+        "volume_ccy": 107034300.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "KORUUSDT",
+        "actual_symbol": "KORUUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 13.089267803410227,
+        "volume_ccy": 1336409.78,
+        "trend_score": 4
+      },
+      {
+        "symbol": "PENGUUSDT",
+        "actual_symbol": "PENGUUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 21.670780512353502,
-        "volume_ccy": 52768166000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "PROVEUSDT",
-        "actual_symbol": "PROVEUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 21.265141318977122,
-        "volume_ccy": 25520826.0,
+        "change_pct": 14.33337610676248,
+        "volume_ccy": 5077349700.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-21T22:09:06+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-09-22T03:29:45+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "WIFUSDT",
-      "BOMEUSDT",
-      "ONEUSDT",
-      "PROVEUSDT"
+      "RAYUSDT",
+      "USELESSUSDT",
+      "UBUSDT",
+      "KORUUSDT",
+      "PENGUUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "WIFUSDT",
-      "BOMEUSDT",
-      "ONEUSDT",
-      "PROVEUSDT"
+      "RAYUSDT",
+      "USELESSUSDT",
+      "UBUSDT",
+      "KORUUSDT",
+      "PENGUUSDT"
     ]
   },
   "signals": {
