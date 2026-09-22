@@ -8,68 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-23T03:15:20+08:00",
+    "last_scan_at": "2026-09-23T06:10:56+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
       "USELESSUSDT",
+      "SENTUSDT",
       "GPSUSDT",
-      "METUSDT",
-      "FOGOUSDT"
+      "ARXUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "USELESSUSDT",
         "actual_symbol": "USELESSUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 11.93121238177128,
-        "volume_ccy": 280603340.0,
-        "trend_score": 5
+        "side_score": 3,
+        "change_pct": 25.03364737550472,
+        "volume_ccy": 287673710.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "SENTUSDT",
+        "actual_symbol": "SENTUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 13.120000000000005,
+        "volume_ccy": 78707500.0,
+        "trend_score": 3
       },
       {
         "symbol": "GPSUSDT",
         "actual_symbol": "GPSUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 9.230217761448154,
-        "volume_ccy": 106724960.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "METUSDT",
-        "actual_symbol": "METUSDT",
-        "side": "long",
         "side_score": 3,
-        "change_pct": 10.747663551401862,
-        "volume_ccy": 12163208.0,
+        "change_pct": 11.185399349475961,
+        "volume_ccy": 110719980.0,
         "trend_score": 3
       },
       {
-        "symbol": "FOGOUSDT",
-        "actual_symbol": "FOGOUSDT",
+        "symbol": "ARXUSDT",
+        "actual_symbol": "ARXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 9.879518072289162,
-        "volume_ccy": 154547430.0,
+        "change_pct": 10.549777117384851,
+        "volume_ccy": 10605870.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-23T03:15:20+08:00",
+    "alt_watchlist_at": "2026-09-23T06:10:56+08:00",
     "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
       "USELESSUSDT",
+      "SENTUSDT",
       "GPSUSDT",
-      "METUSDT",
-      "FOGOUSDT"
+      "ARXUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "USELESSUSDT",
+      "SENTUSDT",
       "GPSUSDT",
-      "METUSDT",
-      "FOGOUSDT"
+      "ARXUSDT"
     ]
   },
   "signals": {
