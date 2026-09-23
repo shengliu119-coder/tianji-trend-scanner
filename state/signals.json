@@ -2,122 +2,62 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-23T17:51:02+08:00",
+    "last_scan_at": "2026-09-23T22:33:02+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "COREUSDT",
+      "ACUUSDT",
       "KMNOUSDT",
-      "METUSDT",
-      "ALLOUSDT",
-      "TIAUSDT",
-      "BONKUSDT",
-      "GRTUSDT",
-      "0GUSDT"
+      "UPUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "COREUSDT",
-        "actual_symbol": "COREUSDT",
+        "symbol": "ACUUSDT",
+        "actual_symbol": "ACUUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 15.183486238532112,
-        "volume_ccy": 178872440.0,
-        "trend_score": 7
+        "side_score": 4,
+        "change_pct": 7.826887661141814,
+        "volume_ccy": 2863710.0,
+        "trend_score": 4
       },
       {
         "symbol": "KMNOUSDT",
         "actual_symbol": "KMNOUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 11.324200913242013,
-        "volume_ccy": 35914500.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "METUSDT",
-        "actual_symbol": "METUSDT",
-        "side": "long",
         "side_score": 3,
-        "change_pct": 33.958985053875566,
-        "volume_ccy": 66179281.0,
+        "change_pct": 12.79926335174954,
+        "volume_ccy": 44764800.0,
         "trend_score": 3
       },
       {
-        "symbol": "ALLOUSDT",
-        "actual_symbol": "ALLOUSDT",
-        "side": "long",
+        "symbol": "UPUSDT",
+        "actual_symbol": "UPUSDT",
+        "side": "short",
         "side_score": 3,
-        "change_pct": 26.330425507599692,
-        "volume_ccy": 102393360.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "TIAUSDT",
-        "actual_symbol": "TIAUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 20.42572463768117,
-        "volume_ccy": 43945518.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "BONKUSDT",
-        "actual_symbol": "1000BONKUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 18.076812012705744,
-        "volume_ccy": 6495179300000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "GRTUSDT",
-        "actual_symbol": "GRTUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 15.378079864061181,
-        "volume_ccy": 47172160.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "0GUSDT",
-        "actual_symbol": "0GUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 14.243197278911564,
-        "volume_ccy": 13335887.0,
+        "change_pct": 4.989676531314506,
+        "volume_ccy": 6580650.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-23T17:51:02+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-23T22:33:02+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "COREUSDT",
+      "ACUUSDT",
       "KMNOUSDT",
-      "METUSDT",
-      "ALLOUSDT",
-      "TIAUSDT",
-      "BONKUSDT",
-      "GRTUSDT",
-      "0GUSDT"
+      "UPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "COREUSDT",
+      "ACUUSDT",
       "KMNOUSDT",
-      "METUSDT",
-      "ALLOUSDT",
-      "TIAUSDT",
-      "BONKUSDT",
-      "GRTUSDT",
-      "0GUSDT"
+      "UPUSDT"
     ]
   },
   "signals": {
