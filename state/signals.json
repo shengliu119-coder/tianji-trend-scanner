@@ -8,68 +8,44 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-23T08:34:15+08:00",
+    "last_scan_at": "2026-09-23T13:04:57+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 2,
     "last_okx_discovery_symbols": [
-      "METUSDT",
-      "TIAUSDT",
-      "ALLOUSDT",
-      "UNIUSDT"
+      "PENGUUSDT",
+      "SENTUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "METUSDT",
-        "actual_symbol": "METUSDT",
+        "symbol": "PENGUUSDT",
+        "actual_symbol": "PENGUUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 18.26788218793828,
-        "volume_ccy": 13478834.0,
+        "change_pct": 22.770247180772284,
+        "volume_ccy": 7954726300.0,
         "trend_score": 3
       },
       {
-        "symbol": "TIAUSDT",
-        "actual_symbol": "TIAUSDT",
+        "symbol": "SENTUSDT",
+        "actual_symbol": "SENTUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 17.116087751371108,
-        "volume_ccy": 34356491.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ALLOUSDT",
-        "actual_symbol": "ALLOUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 15.64878270417628,
-        "volume_ccy": 47602950.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "UNIUSDT",
-        "actual_symbol": "UNIUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 12.825238508239373,
-        "volume_ccy": 43204176.0,
+        "change_pct": 19.092827004219398,
+        "volume_ccy": 115332600.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-23T08:34:15+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-09-23T13:04:57+08:00",
+    "alt_watchlist_count": 2,
     "alt_watchlist_symbols": [
-      "METUSDT",
-      "TIAUSDT",
-      "ALLOUSDT",
-      "UNIUSDT"
+      "PENGUUSDT",
+      "SENTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "METUSDT",
-      "TIAUSDT",
-      "ALLOUSDT",
-      "UNIUSDT"
+      "PENGUUSDT",
+      "SENTUSDT"
     ]
   },
   "signals": {
