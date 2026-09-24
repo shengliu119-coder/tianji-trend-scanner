@@ -8,7 +8,7 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-24T05:44:41+08:00",
+    "last_scan_at": "2026-09-24T08:00:03+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 2,
     "last_okx_discovery_symbols": [
@@ -21,8 +21,8 @@
         "actual_symbol": "STABLEUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 6.9910057236304155,
-        "volume_ccy": 27983100.0,
+        "change_pct": 7.116862110796609,
+        "volume_ccy": 32293400.0,
         "trend_score": 4
       },
       {
@@ -30,12 +30,12 @@
         "actual_symbol": "CAPUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 12.83971752621442,
-        "volume_ccy": 195620900.0,
+        "change_pct": 13.022165387894283,
+        "volume_ccy": 227767000.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-24T05:44:41+08:00",
+    "alt_watchlist_at": "2026-09-24T08:00:03+08:00",
     "alt_watchlist_count": 2,
     "alt_watchlist_symbols": [
       "STABLEUSDT",
