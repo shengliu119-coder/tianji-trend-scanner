@@ -8,16 +8,16 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-25T05:02:03+08:00",
+    "last_scan_at": "2026-09-25T07:42:15+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
       "CHIPUSDT",
       "LDOUSDT",
-      "KAITOUSDT",
       "DASHUSDT",
-      "PEOPLEUSDT",
-      "XPLUSDT"
+      "MOODENGUSDT",
+      "SNXUSDT",
+      "PYTHUSDT"
     ],
     "alt_watchlist": [
       {
@@ -25,8 +25,8 @@
         "actual_symbol": "CHIPUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 14.540202214732782,
-        "volume_ccy": 144117200.0,
+        "change_pct": 14.549376797698944,
+        "volume_ccy": 168253100.0,
         "trend_score": 6
       },
       {
@@ -34,17 +34,8 @@
         "actual_symbol": "LDOUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 13.47610342125881,
-        "volume_ccy": 20733195.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "KAITOUSDT",
-        "actual_symbol": "KAITOUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 10.16260162601627,
-        "volume_ccy": 31983926.0,
+        "change_pct": 14.322916666666666,
+        "volume_ccy": 22688850.0,
         "trend_score": 6
       },
       {
@@ -52,48 +43,57 @@
         "actual_symbol": "DASHUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 9.692548202188638,
-        "volume_ccy": 604165.63,
+        "change_pct": 10.813163851645482,
+        "volume_ccy": 606995.09,
         "trend_score": 6
       },
       {
-        "symbol": "PEOPLEUSDT",
-        "actual_symbol": "PEOPLEUSDT",
+        "symbol": "MOODENGUSDT",
+        "actual_symbol": "MOODENGUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 9.798657718120811,
+        "volume_ccy": 70535810.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "SNXUSDT",
+        "actual_symbol": "SNXUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 10.543018335684065,
-        "volume_ccy": 1023061000.0,
+        "change_pct": 9.28416485900217,
+        "volume_ccy": 6504845.0,
         "trend_score": 5
       },
       {
-        "symbol": "XPLUSDT",
-        "actual_symbol": "XPLUSDT",
+        "symbol": "PYTHUSDT",
+        "actual_symbol": "PYTHUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 21.08935404006303,
-        "volume_ccy": 610878020.0,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 9.136159280667952,
+        "volume_ccy": 57434310.0,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-09-25T05:02:03+08:00",
+    "alt_watchlist_at": "2026-09-25T07:42:15+08:00",
     "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
       "CHIPUSDT",
       "LDOUSDT",
-      "KAITOUSDT",
       "DASHUSDT",
-      "PEOPLEUSDT",
-      "XPLUSDT"
+      "MOODENGUSDT",
+      "SNXUSDT",
+      "PYTHUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "CHIPUSDT",
       "LDOUSDT",
-      "KAITOUSDT",
       "DASHUSDT",
-      "PEOPLEUSDT",
-      "XPLUSDT"
+      "MOODENGUSDT",
+      "SNXUSDT",
+      "PYTHUSDT"
     ]
   },
   "signals": {
