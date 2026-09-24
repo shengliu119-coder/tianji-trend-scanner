@@ -8,116 +8,92 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-25T01:57:35+08:00",
+    "last_scan_at": "2026-09-25T05:02:03+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "XPLUSDT",
+      "CHIPUSDT",
+      "LDOUSDT",
       "KAITOUSDT",
+      "DASHUSDT",
       "PEOPLEUSDT",
-      "MINAUSDT",
-      "LABUSDT",
-      "ARXUSDT",
-      "PLUMEUSDT",
-      "TRBUSDT"
+      "XPLUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "XPLUSDT",
-        "actual_symbol": "XPLUSDT",
+        "symbol": "CHIPUSDT",
+        "actual_symbol": "CHIPUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 14.640000000000002,
-        "volume_ccy": 516679710.0,
-        "trend_score": 7
+        "side_score": 6,
+        "change_pct": 14.540202214732782,
+        "volume_ccy": 144117200.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "LDOUSDT",
+        "actual_symbol": "LDOUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 13.47610342125881,
+        "volume_ccy": 20733195.0,
+        "trend_score": 6
       },
       {
         "symbol": "KAITOUSDT",
         "actual_symbol": "KAITOUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 9.85298717547702,
-        "volume_ccy": 32550488.0,
+        "change_pct": 10.16260162601627,
+        "volume_ccy": 31983926.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "DASHUSDT",
+        "actual_symbol": "DASHUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 9.692548202188638,
+        "volume_ccy": 604165.63,
         "trend_score": 6
       },
       {
         "symbol": "PEOPLEUSDT",
         "actual_symbol": "PEOPLEUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 9.171116786626412,
-        "volume_ccy": 1029968900.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 10.543018335684065,
+        "volume_ccy": 1023061000.0,
+        "trend_score": 5
       },
       {
-        "symbol": "MINAUSDT",
-        "actual_symbol": "MINAUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 9.161513015964333,
-        "volume_ccy": 45510541.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "LABUSDT",
-        "actual_symbol": "LABUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 11.095100864553311,
-        "volume_ccy": 128220854.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "ARXUSDT",
-        "actual_symbol": "ARXUSDT",
+        "symbol": "XPLUSDT",
+        "actual_symbol": "XPLUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 20.74346030289123,
-        "volume_ccy": 48466840.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "PLUMEUSDT",
-        "actual_symbol": "PLUMEUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 16.56136320122535,
-        "volume_ccy": 592263210.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "TRBUSDT",
-        "actual_symbol": "TRBUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 12.153518123667363,
-        "volume_ccy": 309726.4,
+        "change_pct": 21.08935404006303,
+        "volume_ccy": 610878020.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-25T01:57:35+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-25T05:02:03+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "XPLUSDT",
+      "CHIPUSDT",
+      "LDOUSDT",
       "KAITOUSDT",
+      "DASHUSDT",
       "PEOPLEUSDT",
-      "MINAUSDT",
-      "LABUSDT",
-      "ARXUSDT",
-      "PLUMEUSDT",
-      "TRBUSDT"
+      "XPLUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "XPLUSDT",
+      "CHIPUSDT",
+      "LDOUSDT",
       "KAITOUSDT",
+      "DASHUSDT",
       "PEOPLEUSDT",
-      "MINAUSDT",
-      "LABUSDT",
-      "ARXUSDT",
-      "PLUMEUSDT",
-      "TRBUSDT"
+      "XPLUSDT"
     ]
   },
   "signals": {
