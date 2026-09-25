@@ -8,92 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-25T07:42:15+08:00",
+    "last_scan_at": "2026-09-25T10:00:16+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "CHIPUSDT",
-      "LDOUSDT",
-      "DASHUSDT",
-      "MOODENGUSDT",
       "SNXUSDT",
-      "PYTHUSDT"
+      "AXSUSDT",
+      "ENAUSDT",
+      "ALGOUSDT",
+      "XLMUSDT",
+      "LDOUSDT",
+      "CHIPUSDT",
+      "JTOUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "CHIPUSDT",
-        "actual_symbol": "CHIPUSDT",
+        "symbol": "SNXUSDT",
+        "actual_symbol": "SNXUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 11.982758620689639,
+        "volume_ccy": 7646944.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "AXSUSDT",
+        "actual_symbol": "AXSUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 10.049615721373668,
+        "volume_ccy": 2341677.8,
+        "trend_score": 7
+      },
+      {
+        "symbol": "ENAUSDT",
+        "actual_symbol": "ENAUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 14.549376797698944,
-        "volume_ccy": 168253100.0,
+        "change_pct": 10.63144015236606,
+        "volume_ccy": 446502060.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "ALGOUSDT",
+        "actual_symbol": "ALGOUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 10.11203399652309,
+        "volume_ccy": 61054950.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "XLMUSDT",
+        "actual_symbol": "XLMUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 9.81245311327832,
+        "volume_ccy": 176526730.0,
         "trend_score": 6
       },
       {
         "symbol": "LDOUSDT",
         "actual_symbol": "LDOUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 14.322916666666666,
-        "volume_ccy": 22688850.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "DASHUSDT",
-        "actual_symbol": "DASHUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 10.813163851645482,
-        "volume_ccy": 606995.09,
-        "trend_score": 6
-      },
-      {
-        "symbol": "MOODENGUSDT",
-        "actual_symbol": "MOODENGUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 9.798657718120811,
-        "volume_ccy": 70535810.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "SNXUSDT",
-        "actual_symbol": "SNXUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 9.28416485900217,
-        "volume_ccy": 6504845.0,
+        "change_pct": 13.928664410309812,
+        "volume_ccy": 24174080.0,
         "trend_score": 5
       },
       {
-        "symbol": "PYTHUSDT",
-        "actual_symbol": "PYTHUSDT",
+        "symbol": "CHIPUSDT",
+        "actual_symbol": "CHIPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 9.136159280667952,
-        "volume_ccy": 57434310.0,
+        "change_pct": 11.823839157491625,
+        "volume_ccy": 186529200.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "JTOUSDT",
+        "actual_symbol": "JTOUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 9.92923485183547,
+        "volume_ccy": 21863775.0,
         "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-09-25T07:42:15+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-09-25T10:00:16+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "CHIPUSDT",
-      "LDOUSDT",
-      "DASHUSDT",
-      "MOODENGUSDT",
       "SNXUSDT",
-      "PYTHUSDT"
+      "AXSUSDT",
+      "ENAUSDT",
+      "ALGOUSDT",
+      "XLMUSDT",
+      "LDOUSDT",
+      "CHIPUSDT",
+      "JTOUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "CHIPUSDT",
-      "LDOUSDT",
-      "DASHUSDT",
-      "MOODENGUSDT",
       "SNXUSDT",
-      "PYTHUSDT"
+      "AXSUSDT",
+      "ENAUSDT",
+      "ALGOUSDT",
+      "XLMUSDT",
+      "LDOUSDT",
+      "CHIPUSDT",
+      "JTOUSDT"
     ]
   },
   "signals": {
