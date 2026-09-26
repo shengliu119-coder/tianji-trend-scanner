@@ -8,63 +8,61 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-26T15:10:04+08:00",
+    "last_scan_at": "2026-09-26T20:18:51+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "2ZUSDT",
-      "PUMPUSDT",
+      "OPGUSDT",
       "MUBARAKUSDT",
       "ONEUSDT",
-      "CCUSDT",
-      "EIGENUSDT",
-      "JUPUSDT",
-      "RESOLVUSDT"
+      "KMNOUSDT",
+      "PYTHUSDT",
+      "EIGENUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "2ZUSDT",
-        "actual_symbol": "2ZUSDT",
+        "symbol": "OPGUSDT",
+        "actual_symbol": "OPGUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 31.119719608928246,
-        "volume_ccy": 148349210.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "PUMPUSDT",
-        "actual_symbol": "PUMPUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 18.010335917312652,
-        "volume_ccy": 32085147000.0,
+        "change_pct": 14.088397790055252,
+        "volume_ccy": 10563740.0,
         "trend_score": 7
       },
       {
         "symbol": "MUBARAKUSDT",
         "actual_symbol": "MUBARAKUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 24.5318352059925,
-        "volume_ccy": 1771081800.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 26.100048353773804,
+        "volume_ccy": 1958737200.0,
+        "trend_score": 6
       },
       {
         "symbol": "ONEUSDT",
         "actual_symbol": "ONEUSDT",
         "side": "short",
+        "side_score": 4,
+        "change_pct": 24.610177015703893,
+        "volume_ccy": 47193789800.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "KMNOUSDT",
+        "actual_symbol": "KMNOUSDT",
+        "side": "long",
         "side_score": 3,
-        "change_pct": 25.838326500578155,
-        "volume_ccy": 49747538800.0,
+        "change_pct": 10.555421976436637,
+        "volume_ccy": 216636100.0,
         "trend_score": 3
       },
       {
-        "symbol": "CCUSDT",
-        "actual_symbol": "CCUSDT",
+        "symbol": "PYTHUSDT",
+        "actual_symbol": "PYTHUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 18.122644741349763,
-        "volume_ccy": 49706630.0,
+        "change_pct": 9.937018894331693,
+        "volume_ccy": 61131770.0,
         "trend_score": 3
       },
       {
@@ -72,52 +70,30 @@
         "actual_symbol": "EIGENUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 13.3134836239898,
-        "volume_ccy": 20904462.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "JUPUSDT",
-        "actual_symbol": "JUPUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 13.095623987034033,
-        "volume_ccy": 30698150.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "RESOLVUSDT",
-        "actual_symbol": "RESOLVUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 12.079426365140657,
-        "volume_ccy": 71332790.0,
+        "change_pct": 9.572301425661923,
+        "volume_ccy": 21385192.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-26T15:10:04+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-26T20:18:51+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "2ZUSDT",
-      "PUMPUSDT",
+      "OPGUSDT",
       "MUBARAKUSDT",
       "ONEUSDT",
-      "CCUSDT",
-      "EIGENUSDT",
-      "JUPUSDT",
-      "RESOLVUSDT"
+      "KMNOUSDT",
+      "PYTHUSDT",
+      "EIGENUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "2ZUSDT",
-      "PUMPUSDT",
+      "OPGUSDT",
       "MUBARAKUSDT",
       "ONEUSDT",
-      "CCUSDT",
-      "EIGENUSDT",
-      "JUPUSDT",
-      "RESOLVUSDT"
+      "KMNOUSDT",
+      "PYTHUSDT",
+      "EIGENUSDT"
     ]
   },
   "signals": {
