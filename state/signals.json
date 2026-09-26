@@ -8,92 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-26T20:18:51+08:00",
+    "last_scan_at": "2026-09-27T00:29:07+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "ORDIUSDT",
+      "SATSUSDT",
+      "LPTUSDT",
+      "TRIAUSDT",
       "OPGUSDT",
-      "MUBARAKUSDT",
       "ONEUSDT",
-      "KMNOUSDT",
-      "PYTHUSDT",
-      "EIGENUSDT"
+      "EDGEUSDT",
+      "WLDUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "ORDIUSDT",
+        "actual_symbol": "ORDIUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 14.239551917277026,
+        "volume_ccy": 2806468.9,
+        "trend_score": 7
+      },
+      {
+        "symbol": "SATSUSDT",
+        "actual_symbol": "SATSUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 11.649041639127553,
+        "volume_ccy": 177852460000000.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "LPTUSDT",
+        "actual_symbol": "LPTUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 8.711433756805802,
+        "volume_ccy": 1001561.3,
+        "trend_score": 7
+      },
+      {
+        "symbol": "TRIAUSDT",
+        "actual_symbol": "TRIAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 11.51713709677419,
+        "volume_ccy": 366541600.0,
+        "trend_score": 5
+      },
       {
         "symbol": "OPGUSDT",
         "actual_symbol": "OPGUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 14.088397790055252,
-        "volume_ccy": 10563740.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 26.100048353773804,
-        "volume_ccy": 1958737200.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 9.248062015503873,
+        "volume_ccy": 20156870.0,
+        "trend_score": 5
       },
       {
         "symbol": "ONEUSDT",
         "actual_symbol": "ONEUSDT",
         "side": "short",
         "side_score": 4,
-        "change_pct": 24.610177015703893,
-        "volume_ccy": 47193789800.0,
+        "change_pct": 14.292919104296958,
+        "volume_ccy": 44342438900.0,
         "trend_score": 4
       },
       {
-        "symbol": "KMNOUSDT",
-        "actual_symbol": "KMNOUSDT",
+        "symbol": "EDGEUSDT",
+        "actual_symbol": "EDGEUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 10.555421976436637,
-        "volume_ccy": 216636100.0,
-        "trend_score": 3
+        "side_score": 4,
+        "change_pct": 10.198915009041592,
+        "volume_ccy": 9617670.0,
+        "trend_score": 4
       },
       {
-        "symbol": "PYTHUSDT",
-        "actual_symbol": "PYTHUSDT",
+        "symbol": "WLDUSDT",
+        "actual_symbol": "WLDUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 9.937018894331693,
-        "volume_ccy": 61131770.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "EIGENUSDT",
-        "actual_symbol": "EIGENUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 9.572301425661923,
-        "volume_ccy": 21385192.0,
+        "change_pct": 18.318777292576424,
+        "volume_ccy": 405608913.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-26T20:18:51+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-09-27T00:29:07+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "ORDIUSDT",
+      "SATSUSDT",
+      "LPTUSDT",
+      "TRIAUSDT",
       "OPGUSDT",
-      "MUBARAKUSDT",
       "ONEUSDT",
-      "KMNOUSDT",
-      "PYTHUSDT",
-      "EIGENUSDT"
+      "EDGEUSDT",
+      "WLDUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "ORDIUSDT",
+      "SATSUSDT",
+      "LPTUSDT",
+      "TRIAUSDT",
       "OPGUSDT",
-      "MUBARAKUSDT",
       "ONEUSDT",
-      "KMNOUSDT",
-      "PYTHUSDT",
-      "EIGENUSDT"
+      "EDGEUSDT",
+      "WLDUSDT"
     ]
   },
   "signals": {
