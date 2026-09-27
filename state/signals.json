@@ -2,122 +2,74 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "强",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-27T18:52:59+08:00",
+    "last_scan_at": "2026-09-27T23:33:46+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
+      "PUMPUSDT",
+      "NESUSDT",
       "OLUSDT",
-      "ARXUSDT",
-      "RAYUSDT",
-      "EDGEUSDT",
-      "GRASSUSDT",
-      "WLDUSDT",
-      "GRAMUSDT",
-      "SATSUSDT"
+      "MAGICUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "PUMPUSDT",
+        "actual_symbol": "PUMPUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 6.531431119036999,
+        "volume_ccy": 27476891000.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 4.879555281037689,
+        "volume_ccy": 6835830.0,
+        "trend_score": 7
+      },
       {
         "symbol": "OLUSDT",
         "actual_symbol": "OLUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 8.728763913298186,
-        "volume_ccy": 62052700.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "ARXUSDT",
-        "actual_symbol": "ARXUSDT",
-        "side": "long",
         "side_score": 6,
-        "change_pct": 11.65540540540541,
-        "volume_ccy": 18021010.0,
+        "change_pct": 9.919531821506947,
+        "volume_ccy": 138913200.0,
         "trend_score": 6
       },
       {
-        "symbol": "RAYUSDT",
-        "actual_symbol": "RAYUSDT",
+        "symbol": "MAGICUSDT",
+        "actual_symbol": "MAGICUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 12.93467986667329,
-        "volume_ccy": 8596210.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "EDGEUSDT",
-        "actual_symbol": "EDGEUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 7.348353552859618,
-        "volume_ccy": 11123180.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "GRASSUSDT",
-        "actual_symbol": "GRASSUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 19.710531327366223,
-        "volume_ccy": 77724068.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "WLDUSDT",
-        "actual_symbol": "WLDUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 17.865237997115173,
-        "volume_ccy": 491139902.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "GRAMUSDT",
-        "actual_symbol": "GRAMUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 12.121212121212118,
-        "volume_ccy": 20873388.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "SATSUSDT",
-        "actual_symbol": "SATSUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 6.429262004511763,
-        "volume_ccy": 406125310000000.0,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 8.449074074074078,
+        "volume_ccy": 185266337.0,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-09-27T18:52:58+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-09-27T23:33:46+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
+      "PUMPUSDT",
+      "NESUSDT",
       "OLUSDT",
-      "ARXUSDT",
-      "RAYUSDT",
-      "EDGEUSDT",
-      "GRASSUSDT",
-      "WLDUSDT",
-      "GRAMUSDT",
-      "SATSUSDT"
+      "MAGICUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "PUMPUSDT",
+      "NESUSDT",
       "OLUSDT",
-      "ARXUSDT",
-      "RAYUSDT",
-      "EDGEUSDT",
-      "GRASSUSDT",
-      "WLDUSDT",
-      "GRAMUSDT",
-      "SATSUSDT"
+      "MAGICUSDT"
     ]
   },
   "signals": {
