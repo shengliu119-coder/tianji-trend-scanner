@@ -2,74 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "强",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-09-28T13:57:10+08:00",
+    "last_scan_at": "2026-09-28T20:25:10+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "ONEUSDT",
-      "UBUSDT",
-      "STABLEUSDT",
-      "AZTECUSDT"
+      "MUBARAKUSDT",
+      "CAPUSDT",
+      "HBARUSDT",
+      "NMRUSDT",
+      "ALGOUSDT",
+      "SEIUSDT",
+      "MONUSDT",
+      "IOTAUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ONEUSDT",
-        "actual_symbol": "ONEUSDT",
+        "symbol": "MUBARAKUSDT",
+        "actual_symbol": "MUBARAKUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 7.567963419426281,
+        "volume_ccy": 795782700.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "CAPUSDT",
+        "actual_symbol": "CAPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 28.8253262982505,
-        "volume_ccy": 27004242100.0,
+        "change_pct": 4.667931688804561,
+        "volume_ccy": 105805700.0,
         "trend_score": 5
       },
       {
-        "symbol": "UBUSDT",
-        "actual_symbol": "UBUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 5.919325873739463,
-        "volume_ccy": 16888100.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "STABLEUSDT",
-        "actual_symbol": "STABLEUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 4.796511627906983,
-        "volume_ccy": 12166400.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "AZTECUSDT",
-        "actual_symbol": "AZTECUSDT",
+        "symbol": "HBARUSDT",
+        "actual_symbol": "HBARUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 8.1967213114754,
-        "volume_ccy": 647616500.0,
+        "change_pct": 29.25598991172762,
+        "volume_ccy": 1291830410.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "NMRUSDT",
+        "actual_symbol": "NMRUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 13.45698093766099,
+        "volume_ccy": 603702.8,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ALGOUSDT",
+        "actual_symbol": "ALGOUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 12.993197278911566,
+        "volume_ccy": 126888390.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "SEIUSDT",
+        "actual_symbol": "SEIUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 11.180040458530014,
+        "volume_ccy": 602818540.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "MONUSDT",
+        "actual_symbol": "MONUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 9.939984996249061,
+        "volume_ccy": 818222810.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "IOTAUSDT",
+        "actual_symbol": "IOTAUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 7.5374901341752105,
+        "volume_ccy": 85303000.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-09-28T13:57:10+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-09-28T20:25:10+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "ONEUSDT",
-      "UBUSDT",
-      "STABLEUSDT",
-      "AZTECUSDT"
+      "MUBARAKUSDT",
+      "CAPUSDT",
+      "HBARUSDT",
+      "NMRUSDT",
+      "ALGOUSDT",
+      "SEIUSDT",
+      "MONUSDT",
+      "IOTAUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ONEUSDT",
-      "UBUSDT",
-      "STABLEUSDT",
-      "AZTECUSDT"
+      "MUBARAKUSDT",
+      "CAPUSDT",
+      "HBARUSDT",
+      "NMRUSDT",
+      "ALGOUSDT",
+      "SEIUSDT",
+      "MONUSDT",
+      "IOTAUSDT"
     ]
   },
   "signals": {
