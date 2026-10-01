@@ -8,54 +8,27 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-02T03:14:29+08:00",
+    "last_scan_at": "2026-10-02T07:15:26+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "SKYUSDT",
-      "MAGICUSDT",
-      "ZROUSDT",
-      "SYRUPUSDT",
-      "MINAUSDT",
-      "IMXUSDT",
       "RESOLVUSDT",
-      "KITEUSDT"
+      "MINAUSDT",
+      "AAVEUSDT",
+      "SKYUSDT",
+      "ACUUSDT",
+      "SYRUPUSDT",
+      "MUUUSDT",
+      "DYDXUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "SKYUSDT",
-        "actual_symbol": "SKYUSDT",
+        "symbol": "RESOLVUSDT",
+        "actual_symbol": "RESOLVUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 8.13953488372093,
-        "volume_ccy": 24372000.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "MAGICUSDT",
-        "actual_symbol": "MAGICUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 8.005324206122848,
-        "volume_ccy": 47162797.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "ZROUSDT",
-        "actual_symbol": "ZROUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 7.665650952978437,
-        "volume_ccy": 12851203.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "SYRUPUSDT",
-        "actual_symbol": "SYRUPUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 6.06463036741922,
-        "volume_ccy": 7113720.0,
+        "change_pct": 9.663641217298446,
+        "volume_ccy": 265779090.0,
         "trend_score": 7
       },
       {
@@ -63,61 +36,88 @@
         "actual_symbol": "MINAUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 4.845569267238383,
-        "volume_ccy": 21832791.0,
+        "change_pct": 6.033161488086945,
+        "volume_ccy": 22055472.0,
         "trend_score": 7
       },
       {
-        "symbol": "IMXUSDT",
-        "actual_symbol": "IMXUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 4.747756487994164,
-        "volume_ccy": 8003554.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "RESOLVUSDT",
-        "actual_symbol": "RESOLVUSDT",
+        "symbol": "AAVEUSDT",
+        "actual_symbol": "AAVEUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 6.425485961123112,
-        "volume_ccy": 219127220.0,
+        "change_pct": 7.469139670405406,
+        "volume_ccy": 609984.0,
         "trend_score": 6
       },
       {
-        "symbol": "KITEUSDT",
-        "actual_symbol": "KITEUSDT",
+        "symbol": "SKYUSDT",
+        "actual_symbol": "SKYUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 6.941309255079017,
-        "volume_ccy": 10816870.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 6.877490680036004,
+        "volume_ccy": 25662200.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "ACUUSDT",
+        "actual_symbol": "ACUUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 6.3282954820981185,
+        "volume_ccy": 4057730.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "SYRUPUSDT",
+        "actual_symbol": "SYRUPUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 4.732419283502882,
+        "volume_ccy": 7055550.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "MUUUSDT",
+        "actual_symbol": "MUUUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 4.694323144104801,
+        "volume_ccy": 305580.1,
+        "trend_score": 6
+      },
+      {
+        "symbol": "DYDXUSDT",
+        "actual_symbol": "DYDXUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 4.44058373870744,
+        "volume_ccy": 32656485.0,
+        "trend_score": 6
       }
     ],
-    "alt_watchlist_at": "2026-10-02T03:14:29+08:00",
+    "alt_watchlist_at": "2026-10-02T07:15:26+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "SKYUSDT",
-      "MAGICUSDT",
-      "ZROUSDT",
-      "SYRUPUSDT",
-      "MINAUSDT",
-      "IMXUSDT",
       "RESOLVUSDT",
-      "KITEUSDT"
+      "MINAUSDT",
+      "AAVEUSDT",
+      "SKYUSDT",
+      "ACUUSDT",
+      "SYRUPUSDT",
+      "MUUUSDT",
+      "DYDXUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "SKYUSDT",
-      "MAGICUSDT",
-      "ZROUSDT",
-      "SYRUPUSDT",
-      "MINAUSDT",
-      "IMXUSDT",
       "RESOLVUSDT",
-      "KITEUSDT"
+      "MINAUSDT",
+      "AAVEUSDT",
+      "SKYUSDT",
+      "ACUUSDT",
+      "SYRUPUSDT",
+      "MUUUSDT",
+      "DYDXUSDT"
     ]
   },
   "signals": {
