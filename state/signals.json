@@ -2,122 +2,86 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-02T23:00:26+08:00",
+    "last_scan_at": "2026-10-03T03:45:54+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
+      "PROSUSDT",
       "ATHUSDT",
-      "MAGICUSDT",
       "WLDUSDT",
-      "KORUUSDT",
-      "SOXLUSDT",
-      "APEUSDT",
-      "TIAUSDT",
-      "VVVUSDT"
+      "BOMEUSDT",
+      "KORUUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "PROSUSDT",
+        "actual_symbol": "PROSUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 6.549841999425449,
+        "volume_ccy": 2745566.0,
+        "trend_score": 7
+      },
       {
         "symbol": "ATHUSDT",
         "actual_symbol": "ATHUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 12.439362439362437,
-        "volume_ccy": 195077300.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "MAGICUSDT",
-        "actual_symbol": "MAGICUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 16.653846153846157,
-        "volume_ccy": 134682680.0,
-        "trend_score": 6
+        "side_score": 4,
+        "change_pct": 13.550600343053171,
+        "volume_ccy": 455869900.0,
+        "trend_score": 4
       },
       {
         "symbol": "WLDUSDT",
         "actual_symbol": "WLDUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 13.572732805842962,
-        "volume_ccy": 340357524.0,
-        "trend_score": 6
+        "side_score": 4,
+        "change_pct": 9.77930755213606,
+        "volume_ccy": 402615939.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "BOMEUSDT",
+        "actual_symbol": "BOMEUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 7.400439009093758,
+        "volume_ccy": 6599197000.0,
+        "trend_score": 4
       },
       {
         "symbol": "KORUUSDT",
         "actual_symbol": "KORUUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 13.49875930521093,
-        "volume_ccy": 2377171.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "SOXLUSDT",
-        "actual_symbol": "SOXLUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 11.51059833646364,
-        "volume_ccy": 1710956.89,
-        "trend_score": 5
-      },
-      {
-        "symbol": "APEUSDT",
-        "actual_symbol": "APEUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 15.355033649224001,
-        "volume_ccy": 73874204.3,
-        "trend_score": 4
-      },
-      {
-        "symbol": "TIAUSDT",
-        "actual_symbol": "TIAUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 10.39022096850024,
-        "volume_ccy": 22996679.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "VVVUSDT",
-        "actual_symbol": "VVVUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 10.154943707501953,
-        "volume_ccy": 548205.3,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 8.861362553596965,
+        "volume_ccy": 2191379.91,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-02T23:00:26+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-10-03T03:45:54+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
+      "PROSUSDT",
       "ATHUSDT",
-      "MAGICUSDT",
       "WLDUSDT",
-      "KORUUSDT",
-      "SOXLUSDT",
-      "APEUSDT",
-      "TIAUSDT",
-      "VVVUSDT"
+      "BOMEUSDT",
+      "KORUUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "PROSUSDT",
       "ATHUSDT",
-      "MAGICUSDT",
       "WLDUSDT",
-      "KORUUSDT",
-      "SOXLUSDT",
-      "APEUSDT",
-      "TIAUSDT",
-      "VVVUSDT"
+      "BOMEUSDT",
+      "KORUUSDT"
     ]
   },
   "signals": {
