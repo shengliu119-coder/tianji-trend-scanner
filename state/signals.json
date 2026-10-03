@@ -8,116 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-04T03:33:02+08:00",
+    "last_scan_at": "2026-10-04T06:22:19+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "AEROUSDT",
       "MERLUSDT",
-      "MEWUSDT",
-      "ZAMAUSDT",
       "JTOUSDT",
-      "EIGENUSDT",
-      "MEGAUSDT",
+      "OPUSDT",
       "MORPHOUSDT",
-      "RAYUSDT"
+      "EIGENUSDT",
+      "LDOUSDT",
+      "ZAMAUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "AEROUSDT",
+        "actual_symbol": "AEROUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 7.8235218673848985,
+        "volume_ccy": 5210980.0,
+        "trend_score": 7
+      },
       {
         "symbol": "MERLUSDT",
         "actual_symbol": "MERLUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 12.385823894775303,
-        "volume_ccy": 96130492.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "MEWUSDT",
-        "actual_symbol": "MEWUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 8.201323440946453,
-        "volume_ccy": 3459640000.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "ZAMAUSDT",
-        "actual_symbol": "ZAMAUSDT",
-        "side": "long",
         "side_score": 6,
-        "change_pct": 21.49406688241639,
-        "volume_ccy": 165913300.0,
+        "change_pct": 13.544668587896252,
+        "volume_ccy": 118908173.0,
         "trend_score": 6
       },
       {
         "symbol": "JTOUSDT",
         "actual_symbol": "JTOUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 14.726368159203995,
-        "volume_ccy": 17433501.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 11.512638230647713,
+        "volume_ccy": 15991241.0,
+        "trend_score": 5
       },
       {
-        "symbol": "EIGENUSDT",
-        "actual_symbol": "EIGENUSDT",
+        "symbol": "OPUSDT",
+        "actual_symbol": "OPUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 8.744769874477,
-        "volume_ccy": 12708004.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "MEGAUSDT",
-        "actual_symbol": "MEGAUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 7.9079956188389815,
-        "volume_ccy": 91355200.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 9.06373697390742,
+        "volume_ccy": 129064184.0,
+        "trend_score": 5
       },
       {
         "symbol": "MORPHOUSDT",
         "actual_symbol": "MORPHOUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 7.834482758620684,
-        "volume_ccy": 1014539.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 8.593042039320759,
+        "volume_ccy": 1058313.0,
+        "trend_score": 5
       },
       {
-        "symbol": "RAYUSDT",
-        "actual_symbol": "RAYUSDT",
+        "symbol": "EIGENUSDT",
+        "actual_symbol": "EIGENUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 12.853290183387255,
-        "volume_ccy": 5904962.0,
+        "change_pct": 8.427672955974847,
+        "volume_ccy": 12294603.0,
         "trend_score": 5
+      },
+      {
+        "symbol": "LDOUSDT",
+        "actual_symbol": "LDOUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 8.341121495327105,
+        "volume_ccy": 11154733.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ZAMAUSDT",
+        "actual_symbol": "ZAMAUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 19.50564212788822,
+        "volume_ccy": 192167980.0,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-10-04T03:33:02+08:00",
+    "alt_watchlist_at": "2026-10-04T06:22:19+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "AEROUSDT",
       "MERLUSDT",
-      "MEWUSDT",
-      "ZAMAUSDT",
       "JTOUSDT",
-      "EIGENUSDT",
-      "MEGAUSDT",
+      "OPUSDT",
       "MORPHOUSDT",
-      "RAYUSDT"
+      "EIGENUSDT",
+      "LDOUSDT",
+      "ZAMAUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "AEROUSDT",
       "MERLUSDT",
-      "MEWUSDT",
-      "ZAMAUSDT",
       "JTOUSDT",
-      "EIGENUSDT",
-      "MEGAUSDT",
+      "OPUSDT",
       "MORPHOUSDT",
-      "RAYUSDT"
+      "EIGENUSDT",
+      "LDOUSDT",
+      "ZAMAUSDT"
     ]
   },
   "signals": {
