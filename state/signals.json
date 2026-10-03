@@ -2,110 +2,110 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-03T10:04:44+08:00",
+    "last_scan_at": "2026-10-03T15:42:02+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
+      "INITUSDT",
+      "IMXUSDT",
       "MEWUSDT",
+      "APRUSDT",
       "WLDUSDT",
-      "PYTHUSDT",
-      "CVXUSDT",
-      "PROSUSDT",
-      "ATHUSDT",
-      "MINAUSDT"
+      "NIGHTUSDT",
+      "RESOLVUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "INITUSDT",
+        "actual_symbol": "INITUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 9.597734817418479,
+        "volume_ccy": 15030520.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "IMXUSDT",
+        "actual_symbol": "IMXUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 8.895331980284151,
+        "volume_ccy": 26379612.0,
+        "trend_score": 6
+      },
       {
         "symbol": "MEWUSDT",
         "actual_symbol": "MEWUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 6.345023312385961,
-        "volume_ccy": 4440221000.0,
-        "trend_score": 7
+        "side_score": 5,
+        "change_pct": 4.540928101971721,
+        "volume_ccy": 4302982000.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "APRUSDT",
+        "actual_symbol": "APRUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 5.860255447032308,
+        "volume_ccy": 10033500.0,
+        "trend_score": 4
       },
       {
         "symbol": "WLDUSDT",
         "actual_symbol": "WLDUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 10.429327582826902,
-        "volume_ccy": 443403769.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "PYTHUSDT",
-        "actual_symbol": "PYTHUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 5.5911395783293285,
-        "volume_ccy": 55930140.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "CVXUSDT",
-        "actual_symbol": "CVXUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 5.446009389671366,
-        "volume_ccy": 940962.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "PROSUSDT",
-        "actual_symbol": "PROSUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 5.513964871868701,
-        "volume_ccy": 2648578.0,
+        "change_pct": 4.664778092540143,
+        "volume_ccy": 442780523.0,
         "trend_score": 4
       },
       {
-        "symbol": "ATHUSDT",
-        "actual_symbol": "ATHUSDT",
+        "symbol": "NIGHTUSDT",
+        "actual_symbol": "NIGHTUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 16.003401360544217,
-        "volume_ccy": 701448400.0,
+        "change_pct": 25.355788049387478,
+        "volume_ccy": 2157360500.0,
         "trend_score": 3
       },
       {
-        "symbol": "MINAUSDT",
-        "actual_symbol": "MINAUSDT",
+        "symbol": "RESOLVUSDT",
+        "actual_symbol": "RESOLVUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 8.514397905759177,
-        "volume_ccy": 44798863.0,
+        "change_pct": 22.561576354679808,
+        "volume_ccy": 1032818320.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-03T10:04:44+08:00",
+    "alt_watchlist_at": "2026-10-03T15:42:02+08:00",
     "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
+      "INITUSDT",
+      "IMXUSDT",
       "MEWUSDT",
+      "APRUSDT",
       "WLDUSDT",
-      "PYTHUSDT",
-      "CVXUSDT",
-      "PROSUSDT",
-      "ATHUSDT",
-      "MINAUSDT"
+      "NIGHTUSDT",
+      "RESOLVUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "INITUSDT",
+      "IMXUSDT",
       "MEWUSDT",
+      "APRUSDT",
       "WLDUSDT",
-      "PYTHUSDT",
-      "CVXUSDT",
-      "PROSUSDT",
-      "ATHUSDT",
-      "MINAUSDT"
+      "NIGHTUSDT",
+      "RESOLVUSDT"
     ]
   },
   "signals": {
