@@ -8,104 +8,104 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-03T07:20:35+08:00",
+    "last_scan_at": "2026-10-03T10:04:44+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "INITUSDT",
-      "PROSUSDT",
-      "RLSUSDT",
+      "MEWUSDT",
       "WLDUSDT",
+      "PYTHUSDT",
       "CVXUSDT",
-      "BOMEUSDT",
-      "VVVUSDT"
+      "PROSUSDT",
+      "ATHUSDT",
+      "MINAUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "INITUSDT",
-        "actual_symbol": "INITUSDT",
+        "symbol": "MEWUSDT",
+        "actual_symbol": "MEWUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 7.913669064748209,
-        "volume_ccy": 9190680.0,
+        "change_pct": 6.345023312385961,
+        "volume_ccy": 4440221000.0,
         "trend_score": 7
-      },
-      {
-        "symbol": "PROSUSDT",
-        "actual_symbol": "PROSUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 6.649579951587635,
-        "volume_ccy": 2707976.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "RLSUSDT",
-        "actual_symbol": "RLSUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 6.203358208955217,
-        "volume_ccy": 444557700.0,
-        "trend_score": 5
       },
       {
         "symbol": "WLDUSDT",
         "actual_symbol": "WLDUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 7.854137447405332,
-        "volume_ccy": 421933388.0,
-        "trend_score": 4
+        "side_score": 6,
+        "change_pct": 10.429327582826902,
+        "volume_ccy": 443403769.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "PYTHUSDT",
+        "actual_symbol": "PYTHUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 5.5911395783293285,
+        "volume_ccy": 55930140.0,
+        "trend_score": 6
       },
       {
         "symbol": "CVXUSDT",
         "actual_symbol": "CVXUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 6.436119116234407,
-        "volume_ccy": 937688.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 5.446009389671366,
+        "volume_ccy": 940962.0,
+        "trend_score": 5
       },
       {
-        "symbol": "BOMEUSDT",
-        "actual_symbol": "BOMEUSDT",
+        "symbol": "PROSUSDT",
+        "actual_symbol": "PROSUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 6.136316119590211,
-        "volume_ccy": 6862440000.0,
+        "change_pct": 5.513964871868701,
+        "volume_ccy": 2648578.0,
         "trend_score": 4
       },
       {
-        "symbol": "VVVUSDT",
-        "actual_symbol": "VVVUSDT",
-        "side": "short",
+        "symbol": "ATHUSDT",
+        "actual_symbol": "ATHUSDT",
+        "side": "long",
         "side_score": 3,
-        "change_pct": 5.876304364384185,
-        "volume_ccy": 538876.3,
+        "change_pct": 16.003401360544217,
+        "volume_ccy": 701448400.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "MINAUSDT",
+        "actual_symbol": "MINAUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 8.514397905759177,
+        "volume_ccy": 44798863.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-03T07:20:35+08:00",
+    "alt_watchlist_at": "2026-10-03T10:04:44+08:00",
     "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
-      "INITUSDT",
-      "PROSUSDT",
-      "RLSUSDT",
+      "MEWUSDT",
       "WLDUSDT",
+      "PYTHUSDT",
       "CVXUSDT",
-      "BOMEUSDT",
-      "VVVUSDT"
+      "PROSUSDT",
+      "ATHUSDT",
+      "MINAUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "INITUSDT",
-      "PROSUSDT",
-      "RLSUSDT",
+      "MEWUSDT",
       "WLDUSDT",
+      "PYTHUSDT",
       "CVXUSDT",
-      "BOMEUSDT",
-      "VVVUSDT"
+      "PROSUSDT",
+      "ATHUSDT",
+      "MINAUSDT"
     ]
   },
   "signals": {
