@@ -8,104 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-03T15:42:02+08:00",
+    "last_scan_at": "2026-10-03T20:47:17+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "GRASSUSDT",
+      "RAYUSDT",
+      "ARUSDT",
+      "CAPUSDT",
       "INITUSDT",
-      "IMXUSDT",
-      "MEWUSDT",
-      "APRUSDT",
+      "ZROUSDT",
       "WLDUSDT",
-      "NIGHTUSDT",
-      "RESOLVUSDT"
+      "ONEUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "GRASSUSDT",
+        "actual_symbol": "GRASSUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 6.97237089541444,
+        "volume_ccy": 26944973.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "RAYUSDT",
+        "actual_symbol": "RAYUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 6.926718814326875,
+        "volume_ccy": 5181958.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "ARUSDT",
+        "actual_symbol": "ARUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 5.6940315572833216,
+        "volume_ccy": 2267469.6,
+        "trend_score": 6
+      },
+      {
+        "symbol": "CAPUSDT",
+        "actual_symbol": "CAPUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 13.68319381841597,
+        "volume_ccy": 791352100.0,
+        "trend_score": 4
+      },
       {
         "symbol": "INITUSDT",
         "actual_symbol": "INITUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 9.597734817418479,
-        "volume_ccy": 15030520.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "IMXUSDT",
-        "actual_symbol": "IMXUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 8.895331980284151,
-        "volume_ccy": 26379612.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "MEWUSDT",
-        "actual_symbol": "MEWUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 4.540928101971721,
-        "volume_ccy": 4302982000.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "APRUSDT",
-        "actual_symbol": "APRUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 5.860255447032308,
-        "volume_ccy": 10033500.0,
+        "change_pct": 7.606863036794601,
+        "volume_ccy": 15610790.0,
         "trend_score": 4
+      },
+      {
+        "symbol": "ZROUSDT",
+        "actual_symbol": "ZROUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 8.757261523426896,
+        "volume_ccy": 19778933.0,
+        "trend_score": 3
       },
       {
         "symbol": "WLDUSDT",
         "actual_symbol": "WLDUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 4.664778092540143,
-        "volume_ccy": 442780523.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "NIGHTUSDT",
-        "actual_symbol": "NIGHTUSDT",
-        "side": "long",
         "side_score": 3,
-        "change_pct": 25.355788049387478,
-        "volume_ccy": 2157360500.0,
+        "change_pct": 8.214736083588537,
+        "volume_ccy": 515791012.0,
         "trend_score": 3
       },
       {
-        "symbol": "RESOLVUSDT",
-        "actual_symbol": "RESOLVUSDT",
-        "side": "long",
+        "symbol": "ONEUSDT",
+        "actual_symbol": "ONEUSDT",
+        "side": "short",
         "side_score": 3,
-        "change_pct": 22.561576354679808,
-        "volume_ccy": 1032818320.0,
+        "change_pct": 4.349796103307654,
+        "volume_ccy": 8556456300.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-03T15:42:02+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-10-03T20:47:17+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "GRASSUSDT",
+      "RAYUSDT",
+      "ARUSDT",
+      "CAPUSDT",
       "INITUSDT",
-      "IMXUSDT",
-      "MEWUSDT",
-      "APRUSDT",
+      "ZROUSDT",
       "WLDUSDT",
-      "NIGHTUSDT",
-      "RESOLVUSDT"
+      "ONEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "GRASSUSDT",
+      "RAYUSDT",
+      "ARUSDT",
+      "CAPUSDT",
       "INITUSDT",
-      "IMXUSDT",
-      "MEWUSDT",
-      "APRUSDT",
+      "ZROUSDT",
       "WLDUSDT",
-      "NIGHTUSDT",
-      "RESOLVUSDT"
+      "ONEUSDT"
     ]
   },
   "signals": {
