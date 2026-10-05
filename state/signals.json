@@ -8,72 +8,81 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-05T07:32:06+08:00",
+    "last_scan_at": "2026-10-05T10:17:59+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "ADAUSDT",
-      "CHIPUSDT",
-      "HUMAUSDT",
       "VVVUSDT",
-      "GRTUSDT",
-      "WUSDT",
-      "PLUMEUSDT",
-      "FLOKIUSDT"
+      "FARTCOINUSDT",
+      "ZKPUSDT",
+      "REUSDT",
+      "PENGUUSDT",
+      "LAUSDT",
+      "MAGICUSDT",
+      "PLUMEUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "ADAUSDT",
-        "actual_symbol": "ADAUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 7.701761573125772,
-        "volume_ccy": 295280320.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "CHIPUSDT",
-        "actual_symbol": "CHIPUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 11.926397092230816,
-        "volume_ccy": 112292100.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "HUMAUSDT",
-        "actual_symbol": "HUMAUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 6.794948887552632,
-        "volume_ccy": 67674300.0,
-        "trend_score": 6
-      },
       {
         "symbol": "VVVUSDT",
         "actual_symbol": "VVVUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 6.792493068884628,
-        "volume_ccy": 302978.3,
+        "change_pct": 6.459809605611623,
+        "volume_ccy": 390866.8,
         "trend_score": 6
       },
       {
-        "symbol": "GRTUSDT",
-        "actual_symbol": "GRTUSDT",
+        "symbol": "FARTCOINUSDT",
+        "actual_symbol": "FARTCOINUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 5.352711804324711,
-        "volume_ccy": 12749960.0,
+        "change_pct": 6.242840778923249,
+        "volume_ccy": 31363898.0,
         "trend_score": 6
       },
       {
-        "symbol": "WUSDT",
-        "actual_symbol": "WUSDT",
+        "symbol": "ZKPUSDT",
+        "actual_symbol": "ZKPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.273097036606618,
-        "volume_ccy": 401469732.0,
+        "change_pct": 10.085574572127145,
+        "volume_ccy": 96187150.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "REUSDT",
+        "actual_symbol": "REUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 7.769935366192146,
+        "volume_ccy": 4433500.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "PENGUUSDT",
+        "actual_symbol": "PENGUUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 7.626009164302857,
+        "volume_ccy": 1971952300.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "LAUSDT",
+        "actual_symbol": "LAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 7.446647495080964,
+        "volume_ccy": 39033900.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "MAGICUSDT",
+        "actual_symbol": "MAGICUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 7.158953024787662,
+        "volume_ccy": 81218149.0,
         "trend_score": 5
       },
       {
@@ -81,43 +90,34 @@
         "actual_symbol": "PLUMEUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.141129032258057,
-        "volume_ccy": 52105420.0,
+        "change_pct": 6.304493628437273,
+        "volume_ccy": 61924800.0,
         "trend_score": 5
-      },
-      {
-        "symbol": "FLOKIUSDT",
-        "actual_symbol": "FLOKIUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 6.316173786053299,
-        "volume_ccy": 71169400000.0,
-        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-10-05T07:32:05+08:00",
+    "alt_watchlist_at": "2026-10-05T10:17:59+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "ADAUSDT",
-      "CHIPUSDT",
-      "HUMAUSDT",
       "VVVUSDT",
-      "GRTUSDT",
-      "WUSDT",
-      "PLUMEUSDT",
-      "FLOKIUSDT"
+      "FARTCOINUSDT",
+      "ZKPUSDT",
+      "REUSDT",
+      "PENGUUSDT",
+      "LAUSDT",
+      "MAGICUSDT",
+      "PLUMEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ADAUSDT",
-      "CHIPUSDT",
-      "HUMAUSDT",
       "VVVUSDT",
-      "GRTUSDT",
-      "WUSDT",
-      "PLUMEUSDT",
-      "FLOKIUSDT"
+      "FARTCOINUSDT",
+      "ZKPUSDT",
+      "REUSDT",
+      "PENGUUSDT",
+      "LAUSDT",
+      "MAGICUSDT",
+      "PLUMEUSDT"
     ]
   },
   "signals": {
