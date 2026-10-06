@@ -2,122 +2,110 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "强",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-06T20:18:51+08:00",
+    "last_scan_at": "2026-10-07T02:26:57+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "CAPUSDT",
-      "AVAXUSDT",
-      "RAYUSDT",
-      "AUSDT",
+      "RESOLVUSDT",
+      "EDENUSDT",
+      "FLOWUSDT",
       "BASEDUSDT",
       "METUSDT",
-      "INITUSDT",
-      "NMRUSDT"
+      "OKBUSDT",
+      "LQTYUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "CAPUSDT",
-        "actual_symbol": "CAPUSDT",
+        "symbol": "RESOLVUSDT",
+        "actual_symbol": "RESOLVUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 20.066889632107006,
-        "volume_ccy": 532509000.0,
+        "change_pct": 13.794926004228337,
+        "volume_ccy": 206839380.0,
         "trend_score": 7
       },
       {
-        "symbol": "AVAXUSDT",
-        "actual_symbol": "AVAXUSDT",
+        "symbol": "EDENUSDT",
+        "actual_symbol": "EDENUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 6.37871332239839,
-        "volume_ccy": 4575031.8,
+        "change_pct": 8.900523560209413,
+        "volume_ccy": 25730780.0,
         "trend_score": 7
       },
       {
-        "symbol": "RAYUSDT",
-        "actual_symbol": "RAYUSDT",
+        "symbol": "FLOWUSDT",
+        "actual_symbol": "FLOWUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 7.645963949843278,
-        "volume_ccy": 7579433.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "AUSDT",
-        "actual_symbol": "AUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 6.577626029323158,
-        "volume_ccy": 14144760.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 5.917532263141328,
+        "volume_ccy": 16989250.0,
+        "trend_score": 6
       },
       {
         "symbol": "BASEDUSDT",
         "actual_symbol": "BASEDUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 6.539379474940338,
-        "volume_ccy": 62399190.0,
+        "change_pct": 11.54096228868661,
+        "volume_ccy": 93783390.0,
         "trend_score": 5
       },
       {
         "symbol": "METUSDT",
         "actual_symbol": "METUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 6.277421532230849,
-        "volume_ccy": 9975590.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "INITUSDT",
-        "actual_symbol": "INITUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 6.646498798825509,
-        "volume_ccy": 5662680.0,
+        "change_pct": 16.968248548992836,
+        "volume_ccy": 26411003.0,
         "trend_score": 4
       },
       {
-        "symbol": "NMRUSDT",
-        "actual_symbol": "NMRUSDT",
+        "symbol": "OKBUSDT",
+        "actual_symbol": "OKBUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 29.18527255876654,
-        "volume_ccy": 1446716.7,
+        "change_pct": 7.948157401623968,
+        "volume_ccy": 917398.98,
+        "trend_score": 3
+      },
+      {
+        "symbol": "LQTYUSDT",
+        "actual_symbol": "LQTYUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 6.302876480541466,
+        "volume_ccy": 1300454.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-06T20:18:51+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-10-07T02:26:57+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
-      "CAPUSDT",
-      "AVAXUSDT",
-      "RAYUSDT",
-      "AUSDT",
+      "RESOLVUSDT",
+      "EDENUSDT",
+      "FLOWUSDT",
       "BASEDUSDT",
       "METUSDT",
-      "INITUSDT",
-      "NMRUSDT"
+      "OKBUSDT",
+      "LQTYUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "CAPUSDT",
-      "AVAXUSDT",
-      "RAYUSDT",
-      "AUSDT",
+      "RESOLVUSDT",
+      "EDENUSDT",
+      "FLOWUSDT",
       "BASEDUSDT",
       "METUSDT",
-      "INITUSDT",
-      "NMRUSDT"
+      "OKBUSDT",
+      "LQTYUSDT"
     ]
   },
   "signals": {
