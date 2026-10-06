@@ -8,54 +8,54 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-06T02:08:48+08:00",
+    "last_scan_at": "2026-10-06T08:06:22+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "GRASSUSDT",
-      "JUPUSDT",
-      "ICPUSDT",
-      "EDENUSDT",
+      "NIGHTUSDT",
+      "YGGUSDT",
+      "NEARUSDT",
+      "ARXUSDT",
       "CAPUSDT",
-      "AEONUSDT",
-      "OPNUSDT",
-      "SUSDT"
+      "GRASSUSDT",
+      "FILUSDT",
+      "ESPUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "GRASSUSDT",
-        "actual_symbol": "GRASSUSDT",
+        "symbol": "NIGHTUSDT",
+        "actual_symbol": "NIGHTUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 7.194452470384276,
-        "volume_ccy": 24470930.0,
+        "change_pct": 16.97092630155511,
+        "volume_ccy": 705826800.0,
         "trend_score": 7
       },
       {
-        "symbol": "JUPUSDT",
-        "actual_symbol": "JUPUSDT",
+        "symbol": "YGGUSDT",
+        "actual_symbol": "YGGUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 5.980570734669093,
-        "volume_ccy": 17110250.0,
+        "change_pct": 6.697377746279244,
+        "volume_ccy": 59690763.0,
         "trend_score": 7
       },
       {
-        "symbol": "ICPUSDT",
-        "actual_symbol": "ICPUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 5.489260143198096,
-        "volume_ccy": 5225962.25,
-        "trend_score": 7
-      },
-      {
-        "symbol": "EDENUSDT",
-        "actual_symbol": "EDENUSDT",
+        "symbol": "NEARUSDT",
+        "actual_symbol": "NEARUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 6.075250258888509,
-        "volume_ccy": 18316144.0,
+        "change_pct": 7.78955954323001,
+        "volume_ccy": 50153050.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "ARXUSDT",
+        "actual_symbol": "ARXUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 6.763636363636365,
+        "volume_ccy": 15959270.0,
         "trend_score": 6
       },
       {
@@ -63,61 +63,61 @@
         "actual_symbol": "CAPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 11.802773497688753,
-        "volume_ccy": 144865600.0,
+        "change_pct": 13.304721030042908,
+        "volume_ccy": 196850400.0,
         "trend_score": 5
       },
       {
-        "symbol": "AEONUSDT",
-        "actual_symbol": "AEONUSDT",
+        "symbol": "GRASSUSDT",
+        "actual_symbol": "GRASSUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 10.537992235163623,
-        "volume_ccy": 73530010.0,
+        "change_pct": 6.520800345472868,
+        "volume_ccy": 29712689.0,
         "trend_score": 5
       },
       {
-        "symbol": "OPNUSDT",
-        "actual_symbol": "OPNUSDT",
+        "symbol": "FILUSDT",
+        "actual_symbol": "FILUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 6.8085887318774185,
-        "volume_ccy": 62228900.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 11.783048284985357,
+        "volume_ccy": 82757362.8,
+        "trend_score": 4
       },
       {
-        "symbol": "SUSDT",
-        "actual_symbol": "SUSDT",
+        "symbol": "ESPUSDT",
+        "actual_symbol": "ESPUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 6.11234842860678,
-        "volume_ccy": 51658830.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 7.496450544249892,
+        "volume_ccy": 14529800.0,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-10-06T02:08:48+08:00",
+    "alt_watchlist_at": "2026-10-06T08:06:22+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "GRASSUSDT",
-      "JUPUSDT",
-      "ICPUSDT",
-      "EDENUSDT",
+      "NIGHTUSDT",
+      "YGGUSDT",
+      "NEARUSDT",
+      "ARXUSDT",
       "CAPUSDT",
-      "AEONUSDT",
-      "OPNUSDT",
-      "SUSDT"
+      "GRASSUSDT",
+      "FILUSDT",
+      "ESPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "GRASSUSDT",
-      "JUPUSDT",
-      "ICPUSDT",
-      "EDENUSDT",
+      "NIGHTUSDT",
+      "YGGUSDT",
+      "NEARUSDT",
+      "ARXUSDT",
       "CAPUSDT",
-      "AEONUSDT",
-      "OPNUSDT",
-      "SUSDT"
+      "GRASSUSDT",
+      "FILUSDT",
+      "ESPUSDT"
     ]
   },
   "signals": {
