@@ -8,104 +8,56 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-07T15:57:37+08:00",
+    "last_scan_at": "2026-10-07T22:55:44+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
       "SANDUSDT",
-      "MUBARAKUSDT",
-      "STXUSDT",
-      "RAYUSDT",
-      "RESOLVUSDT",
-      "METUSDT",
-      "PARTIUSDT"
+      "NGUSDT",
+      "RAYUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "SANDUSDT",
         "actual_symbol": "SANDUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 11.02929897223501,
-        "volume_ccy": 1909980220.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 11.631786472550798,
+        "volume_ccy": 2630499130.0,
+        "trend_score": 7
       },
       {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
+        "symbol": "NGUSDT",
+        "actual_symbol": "NGUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 6.593117577032756,
-        "volume_ccy": 880903000.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "STXUSDT",
-        "actual_symbol": "STXUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 6.572645023948908,
-        "volume_ccy": 24295486.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 4.893754024468774,
+        "volume_ccy": 1951832.0,
+        "trend_score": 5
       },
       {
         "symbol": "RAYUSDT",
         "actual_symbol": "RAYUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 4.801123069723903,
-        "volume_ccy": 10714586.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "RESOLVUSDT",
-        "actual_symbol": "RESOLVUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 6.102564102564103,
-        "volume_ccy": 737935510.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "METUSDT",
-        "actual_symbol": "METUSDT",
-        "side": "long",
         "side_score": 3,
-        "change_pct": 7.655172413793103,
-        "volume_ccy": 35102752.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "PARTIUSDT",
-        "actual_symbol": "PARTIUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 5.253677574302016,
-        "volume_ccy": 283913810.0,
+        "change_pct": 11.59426902719473,
+        "volume_ccy": 31598730.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-07T15:57:37+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-10-07T22:55:44+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
       "SANDUSDT",
-      "MUBARAKUSDT",
-      "STXUSDT",
-      "RAYUSDT",
-      "RESOLVUSDT",
-      "METUSDT",
-      "PARTIUSDT"
+      "NGUSDT",
+      "RAYUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "SANDUSDT",
-      "MUBARAKUSDT",
-      "STXUSDT",
-      "RAYUSDT",
-      "RESOLVUSDT",
-      "METUSDT",
-      "PARTIUSDT"
+      "NGUSDT",
+      "RAYUSDT"
     ]
   },
   "signals": {
