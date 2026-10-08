@@ -8,56 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-08T04:20:53+08:00",
+    "last_scan_at": "2026-10-08T08:19:59+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
       "NEARUSDT",
-      "METUSDT",
-      "RAYUSDT"
+      "NGUSDT",
+      "CRVUSDT",
+      "WUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "NEARUSDT",
         "actual_symbol": "NEARUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 5.413826679649474,
-        "volume_ccy": 53968132.0,
-        "trend_score": 7
+        "side_score": 6,
+        "change_pct": 5.166994106090372,
+        "volume_ccy": 58632335.0,
+        "trend_score": 6
       },
       {
-        "symbol": "METUSDT",
-        "actual_symbol": "METUSDT",
+        "symbol": "NGUSDT",
+        "actual_symbol": "NGUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 30.641258318209317,
-        "volume_ccy": 140139095.0,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 6.479412703479088,
+        "volume_ccy": 3797730.0,
+        "trend_score": 5
       },
       {
-        "symbol": "RAYUSDT",
-        "actual_symbol": "RAYUSDT",
+        "symbol": "CRVUSDT",
+        "actual_symbol": "CRVUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 7.934752557367986,
+        "volume_ccy": 46054916.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "WUSDT",
+        "actual_symbol": "WUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 15.648924535180456,
-        "volume_ccy": 35460474.0,
+        "change_pct": 11.509073543457493,
+        "volume_ccy": 392954371.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-08T04:20:53+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-10-08T08:19:59+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
       "NEARUSDT",
-      "METUSDT",
-      "RAYUSDT"
+      "NGUSDT",
+      "CRVUSDT",
+      "WUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "NEARUSDT",
-      "METUSDT",
-      "RAYUSDT"
+      "NGUSDT",
+      "CRVUSDT",
+      "WUSDT"
     ]
   },
   "signals": {
