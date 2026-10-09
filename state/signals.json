@@ -8,63 +8,54 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-10T01:35:22+08:00",
+    "last_scan_at": "2026-10-10T05:56:10+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "ZKUSDT",
-      "AEVOUSDT",
-      "JUPUSDT",
-      "LIGHTUSDT",
-      "API3USDT",
-      "HUMAUSDT",
+      "CAPUSDT",
       "IMXUSDT",
-      "DOTUSDT"
+      "GMTUSDT",
+      "AEONUSDT",
+      "HUMAUSDT",
+      "JUPUSDT",
+      "DOTUSDT",
+      "APTUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ZKUSDT",
-        "actual_symbol": "ZKUSDT",
+        "symbol": "CAPUSDT",
+        "actual_symbol": "CAPUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 33.8920270395407,
-        "volume_ccy": 774653890.0,
+        "change_pct": 11.01694915254237,
+        "volume_ccy": 139465300.0,
         "trend_score": 7
       },
       {
-        "symbol": "AEVOUSDT",
-        "actual_symbol": "AEVOUSDT",
+        "symbol": "IMXUSDT",
+        "actual_symbol": "IMXUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 14.450391107451624,
-        "volume_ccy": 54360919.0,
+        "change_pct": 7.597173144876322,
+        "volume_ccy": 23924079.0,
         "trend_score": 7
       },
       {
-        "symbol": "JUPUSDT",
-        "actual_symbol": "JUPUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 13.283582089552235,
-        "volume_ccy": 44970920.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "LIGHTUSDT",
-        "actual_symbol": "LIGHTUSDT",
+        "symbol": "GMTUSDT",
+        "actual_symbol": "GMTUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 20.608899297423875,
-        "volume_ccy": 17508127.0,
+        "change_pct": 16.73057259713703,
+        "volume_ccy": 253161334.0,
         "trend_score": 5
       },
       {
-        "symbol": "API3USDT",
-        "actual_symbol": "API3USDT",
+        "symbol": "AEONUSDT",
+        "actual_symbol": "AEONUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 15.97122302158273,
-        "volume_ccy": 15278898.0,
+        "change_pct": 10.269387755102047,
+        "volume_ccy": 48561320.0,
         "trend_score": 5
       },
       {
@@ -72,17 +63,17 @@
         "actual_symbol": "HUMAUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 13.173241852487136,
-        "volume_ccy": 78665000.0,
+        "change_pct": 9.576242909576246,
+        "volume_ccy": 95020000.0,
         "trend_score": 5
       },
       {
-        "symbol": "IMXUSDT",
-        "actual_symbol": "IMXUSDT",
+        "symbol": "JUPUSDT",
+        "actual_symbol": "JUPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 11.908099213846043,
-        "volume_ccy": 26568841.0,
+        "change_pct": 9.27347903130537,
+        "volume_ccy": 42623370.0,
         "trend_score": 5
       },
       {
@@ -90,34 +81,43 @@
         "actual_symbol": "DOTUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 17.75600195982362,
-        "volume_ccy": 36576379.0,
+        "change_pct": 12.071027693440058,
+        "volume_ccy": 35649040.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "APTUSDT",
+        "actual_symbol": "APTUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 9.50121984277581,
+        "volume_ccy": 37831949.0,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-10-10T01:35:22+08:00",
+    "alt_watchlist_at": "2026-10-10T05:56:10+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "ZKUSDT",
-      "AEVOUSDT",
-      "JUPUSDT",
-      "LIGHTUSDT",
-      "API3USDT",
-      "HUMAUSDT",
+      "CAPUSDT",
       "IMXUSDT",
-      "DOTUSDT"
+      "GMTUSDT",
+      "AEONUSDT",
+      "HUMAUSDT",
+      "JUPUSDT",
+      "DOTUSDT",
+      "APTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ZKUSDT",
-      "AEVOUSDT",
-      "JUPUSDT",
-      "LIGHTUSDT",
-      "API3USDT",
-      "HUMAUSDT",
+      "CAPUSDT",
       "IMXUSDT",
-      "DOTUSDT"
+      "GMTUSDT",
+      "AEONUSDT",
+      "HUMAUSDT",
+      "JUPUSDT",
+      "DOTUSDT",
+      "APTUSDT"
     ]
   },
   "signals": {
