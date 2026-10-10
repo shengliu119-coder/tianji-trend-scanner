@@ -8,18 +8,18 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-11T02:12:41+08:00",
+    "last_scan_at": "2026-10-11T05:43:28+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "NIGHTUSDT",
-      "TIAUSDT",
+      "AZTECUSDT",
+      "BRETTUSDT",
       "CAPUSDT",
-      "MINAUSDT",
-      "CHIPUSDT",
       "NEARUSDT",
-      "INJUSDT",
-      "INITUSDT"
+      "INITUSDT",
+      "WLDUSDT",
+      "INJUSDT"
     ],
     "alt_watchlist": [
       {
@@ -27,44 +27,35 @@
         "actual_symbol": "NIGHTUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 11.373888669907599,
-        "volume_ccy": 480794300.0,
+        "change_pct": 11.870828468841548,
+        "volume_ccy": 542304400.0,
         "trend_score": 7
       },
       {
-        "symbol": "TIAUSDT",
-        "actual_symbol": "TIAUSDT",
+        "symbol": "AZTECUSDT",
+        "actual_symbol": "AZTECUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 7.989038785834736,
-        "volume_ccy": 32343211.0,
-        "trend_score": 7
+        "side_score": 5,
+        "change_pct": 15.708556149732619,
+        "volume_ccy": 102077200.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "BRETTUSDT",
+        "actual_symbol": "BRETTUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 14.202407825432648,
+        "volume_ccy": 69805100.0,
+        "trend_score": 5
       },
       {
         "symbol": "CAPUSDT",
         "actual_symbol": "CAPUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 20.698712897294453,
-        "volume_ccy": 1186607700.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "MINAUSDT",
-        "actual_symbol": "MINAUSDT",
-        "side": "short",
-        "side_score": 6,
-        "change_pct": 8.264462809917363,
-        "volume_ccy": 411678616.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "CHIPUSDT",
-        "actual_symbol": "CHIPUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 18.848167539267017,
-        "volume_ccy": 295857300.0,
+        "change_pct": 12.561697926949646,
+        "volume_ccy": 1165477800.0,
         "trend_score": 5
       },
       {
@@ -72,17 +63,8 @@
         "actual_symbol": "NEARUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 12.468407750631837,
-        "volume_ccy": 50276555.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "INJUSDT",
-        "actual_symbol": "INJUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 9.100043060140669,
-        "volume_ccy": 1605755.5,
+        "change_pct": 12.458053691275174,
+        "volume_ccy": 49908202.0,
         "trend_score": 5
       },
       {
@@ -90,34 +72,52 @@
         "actual_symbol": "INITUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 8.03059273422563,
-        "volume_ccy": 6017240.0,
+        "change_pct": 8.574845891986392,
+        "volume_ccy": 6213570.0,
         "trend_score": 5
+      },
+      {
+        "symbol": "WLDUSDT",
+        "actual_symbol": "WLDUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 11.46661367249602,
+        "volume_ccy": 290884983.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "INJUSDT",
+        "actual_symbol": "INJUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 10.082334248158318,
+        "volume_ccy": 1816742.5,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-10-11T02:12:41+08:00",
+    "alt_watchlist_at": "2026-10-11T05:43:28+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "NIGHTUSDT",
-      "TIAUSDT",
+      "AZTECUSDT",
+      "BRETTUSDT",
       "CAPUSDT",
-      "MINAUSDT",
-      "CHIPUSDT",
       "NEARUSDT",
-      "INJUSDT",
-      "INITUSDT"
+      "INITUSDT",
+      "WLDUSDT",
+      "INJUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "NIGHTUSDT",
-      "TIAUSDT",
+      "AZTECUSDT",
+      "BRETTUSDT",
       "CAPUSDT",
-      "MINAUSDT",
-      "CHIPUSDT",
       "NEARUSDT",
-      "INJUSDT",
-      "INITUSDT"
+      "INITUSDT",
+      "WLDUSDT",
+      "INJUSDT"
     ]
   },
   "signals": {
