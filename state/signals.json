@@ -2,122 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-11T20:48:45+08:00",
+    "last_scan_at": "2026-10-12T01:53:23+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "PLUMEUSDT",
       "MAGICUSDT",
+      "WUSDT",
       "GRASSUSDT",
-      "ZROUSDT",
-      "SENTUSDT",
       "EIGENUSDT",
-      "ARBUSDT",
-      "SUSDT"
+      "MEGAUSDT",
+      "OLUSDT",
+      "ETHFIUSDT",
+      "PLUMEUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "PLUMEUSDT",
-        "actual_symbol": "PLUMEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 6.107483138850228,
-        "volume_ccy": 77657240.0,
-        "trend_score": 7
-      },
       {
         "symbol": "MAGICUSDT",
         "actual_symbol": "MAGICUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 12.664366315396805,
-        "volume_ccy": 2902904891.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 31.84590068725196,
+        "volume_ccy": 3164802446.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "WUSDT",
+        "actual_symbol": "WUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 11.673746813933732,
+        "volume_ccy": 321972227.0,
+        "trend_score": 7
       },
       {
         "symbol": "GRASSUSDT",
         "actual_symbol": "GRASSUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 10.630043451272503,
-        "volume_ccy": 17609025.0,
+        "change_pct": 16.460012399256037,
+        "volume_ccy": 29818942.0,
         "trend_score": 6
-      },
-      {
-        "symbol": "ZROUSDT",
-        "actual_symbol": "ZROUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 6.159254164756228,
-        "volume_ccy": 5664692.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "SENTUSDT",
-        "actual_symbol": "SENTUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 15.912481352560922,
-        "volume_ccy": 447668000.0,
-        "trend_score": 4
       },
       {
         "symbol": "EIGENUSDT",
         "actual_symbol": "EIGENUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 8.605472197705215,
-        "volume_ccy": 17606306.0,
-        "trend_score": 4
+        "side_score": 6,
+        "change_pct": 9.191489361702132,
+        "volume_ccy": 18000248.0,
+        "trend_score": 6
       },
       {
-        "symbol": "ARBUSDT",
-        "actual_symbol": "ARBUSDT",
+        "symbol": "MEGAUSDT",
+        "actual_symbol": "MEGAUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 7.022744421688038,
-        "volume_ccy": 265365560.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 11.568488289567066,
+        "volume_ccy": 82127890.0,
+        "trend_score": 5
       },
       {
-        "symbol": "SUSDT",
-        "actual_symbol": "SUSDT",
+        "symbol": "OLUSDT",
+        "actual_symbol": "OLUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 13.99859780322504,
-        "volume_ccy": 150781860.0,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 11.5052582012243,
+        "volume_ccy": 349298200.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ETHFIUSDT",
+        "actual_symbol": "ETHFIUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 10.955263546434361,
+        "volume_ccy": 13268047.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "PLUMEUSDT",
+        "actual_symbol": "PLUMEUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 9.00929280201606,
+        "volume_ccy": 136349780.0,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-10-11T20:48:45+08:00",
+    "alt_watchlist_at": "2026-10-12T01:53:23+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "PLUMEUSDT",
       "MAGICUSDT",
+      "WUSDT",
       "GRASSUSDT",
-      "ZROUSDT",
-      "SENTUSDT",
       "EIGENUSDT",
-      "ARBUSDT",
-      "SUSDT"
+      "MEGAUSDT",
+      "OLUSDT",
+      "ETHFIUSDT",
+      "PLUMEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "PLUMEUSDT",
       "MAGICUSDT",
+      "WUSDT",
       "GRASSUSDT",
-      "ZROUSDT",
-      "SENTUSDT",
       "EIGENUSDT",
-      "ARBUSDT",
-      "SUSDT"
+      "MEGAUSDT",
+      "OLUSDT",
+      "ETHFIUSDT",
+      "PLUMEUSDT"
     ]
   },
   "signals": {
