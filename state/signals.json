@@ -2,51 +2,41 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-12T05:18:50+08:00",
+    "last_scan_at": "2026-10-12T08:37:31+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "FILUSDT",
-      "GRASSUSDT",
       "ICPUSDT",
+      "ENAUSDT",
       "MAGICUSDT",
-      "EIGENUSDT",
-      "SENTUSDT",
-      "ETHFIUSDT",
-      "ENAUSDT"
+      "MEGAUSDT",
+      "AZTECUSDT",
+      "GRASSUSDT",
+      "EIGENUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "FILUSDT",
-        "actual_symbol": "FILUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 10.402059110677197,
-        "volume_ccy": 79080983.5,
-        "trend_score": 7
-      },
-      {
-        "symbol": "GRASSUSDT",
-        "actual_symbol": "GRASSUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 20.26862026862027,
-        "volume_ccy": 34791562.0,
-        "trend_score": 6
-      },
       {
         "symbol": "ICPUSDT",
         "actual_symbol": "ICPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 7.885532591414937,
-        "volume_ccy": 3464789.72,
+        "change_pct": 12.98828125,
+        "volume_ccy": 4589021.68,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ENAUSDT",
+        "actual_symbol": "ENAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 9.166742225043063,
+        "volume_ccy": 213424470.0,
         "trend_score": 5
       },
       {
@@ -54,70 +44,68 @@
         "actual_symbol": "MAGICUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 29.360465116279066,
-        "volume_ccy": 3290172573.0,
+        "change_pct": 42.30729112339627,
+        "volume_ccy": 3366099150.0,
         "trend_score": 4
+      },
+      {
+        "symbol": "MEGAUSDT",
+        "actual_symbol": "MEGAUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 9.029398040130655,
+        "volume_ccy": 87203860.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "AZTECUSDT",
+        "actual_symbol": "AZTECUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 8.366993652625505,
+        "volume_ccy": 112638700.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "GRASSUSDT",
+        "actual_symbol": "GRASSUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 28.14937012597482,
+        "volume_ccy": 41950486.0,
+        "trend_score": 3
       },
       {
         "symbol": "EIGENUSDT",
         "actual_symbol": "EIGENUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 8.108108108108116,
-        "volume_ccy": 18616150.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "SENTUSDT",
-        "actual_symbol": "SENTUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 7.556427870461235,
-        "volume_ccy": 526682300.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "ETHFIUSDT",
-        "actual_symbol": "ETHFIUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 6.872451951077465,
-        "volume_ccy": 14128379.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "ENAUSDT",
-        "actual_symbol": "ENAUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 6.109411552996212,
-        "volume_ccy": 193403890.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 13.577675968346517,
+        "volume_ccy": 19263096.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-12T05:18:50+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-10-12T08:37:31+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
-      "FILUSDT",
-      "GRASSUSDT",
       "ICPUSDT",
+      "ENAUSDT",
       "MAGICUSDT",
-      "EIGENUSDT",
-      "SENTUSDT",
-      "ETHFIUSDT",
-      "ENAUSDT"
+      "MEGAUSDT",
+      "AZTECUSDT",
+      "GRASSUSDT",
+      "EIGENUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "FILUSDT",
-      "GRASSUSDT",
       "ICPUSDT",
+      "ENAUSDT",
       "MAGICUSDT",
-      "EIGENUSDT",
-      "SENTUSDT",
-      "ETHFIUSDT",
-      "ENAUSDT"
+      "MEGAUSDT",
+      "AZTECUSDT",
+      "GRASSUSDT",
+      "EIGENUSDT"
     ]
   },
   "signals": {
