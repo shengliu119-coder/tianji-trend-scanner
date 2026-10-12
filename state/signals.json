@@ -8,35 +8,44 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-12T08:37:31+08:00",
+    "last_scan_at": "2026-10-12T14:36:41+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
+      "RSRUSDT",
+      "ZROUSDT",
       "ICPUSDT",
-      "ENAUSDT",
       "MAGICUSDT",
-      "MEGAUSDT",
-      "AZTECUSDT",
-      "GRASSUSDT",
-      "EIGENUSDT"
+      "ARXUSDT",
+      "DATAUSDT",
+      "LABUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "RSRUSDT",
+        "actual_symbol": "RSRUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 50.751879699248136,
+        "volume_ccy": 8780720900.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ZROUSDT",
+        "actual_symbol": "ZROUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 17.957994171440053,
+        "volume_ccy": 10538358.0,
+        "trend_score": 5
+      },
       {
         "symbol": "ICPUSDT",
         "actual_symbol": "ICPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 12.98828125,
-        "volume_ccy": 4589021.68,
-        "trend_score": 5
-      },
-      {
-        "symbol": "ENAUSDT",
-        "actual_symbol": "ENAUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 9.166742225043063,
-        "volume_ccy": 213424470.0,
+        "change_pct": 12.847335730630919,
+        "volume_ccy": 5195789.88,
         "trend_score": 5
       },
       {
@@ -44,68 +53,59 @@
         "actual_symbol": "MAGICUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 42.30729112339627,
-        "volume_ccy": 3366099150.0,
+        "change_pct": 9.965067107924252,
+        "volume_ccy": 3281911462.0,
         "trend_score": 4
       },
       {
-        "symbol": "MEGAUSDT",
-        "actual_symbol": "MEGAUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 9.029398040130655,
-        "volume_ccy": 87203860.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "AZTECUSDT",
-        "actual_symbol": "AZTECUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 8.366993652625505,
-        "volume_ccy": 112638700.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "GRASSUSDT",
-        "actual_symbol": "GRASSUSDT",
+        "symbol": "ARXUSDT",
+        "actual_symbol": "ARXUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 28.14937012597482,
-        "volume_ccy": 41950486.0,
+        "change_pct": 12.49092229484388,
+        "volume_ccy": 14958910.0,
         "trend_score": 3
       },
       {
-        "symbol": "EIGENUSDT",
-        "actual_symbol": "EIGENUSDT",
+        "symbol": "DATAUSDT",
+        "actual_symbol": "DATAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 13.577675968346517,
-        "volume_ccy": 19263096.0,
+        "change_pct": 11.213991769547333,
+        "volume_ccy": 37800410.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "LABUSDT",
+        "actual_symbol": "LABUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 10.655423533921047,
+        "volume_ccy": 164120249.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-12T08:37:31+08:00",
+    "alt_watchlist_at": "2026-10-12T14:36:41+08:00",
     "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
+      "RSRUSDT",
+      "ZROUSDT",
       "ICPUSDT",
-      "ENAUSDT",
       "MAGICUSDT",
-      "MEGAUSDT",
-      "AZTECUSDT",
-      "GRASSUSDT",
-      "EIGENUSDT"
+      "ARXUSDT",
+      "DATAUSDT",
+      "LABUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "RSRUSDT",
+      "ZROUSDT",
       "ICPUSDT",
-      "ENAUSDT",
       "MAGICUSDT",
-      "MEGAUSDT",
-      "AZTECUSDT",
-      "GRASSUSDT",
-      "EIGENUSDT"
+      "ARXUSDT",
+      "DATAUSDT",
+      "LABUSDT"
     ]
   },
   "signals": {
