@@ -8,44 +8,44 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-12T23:59:47+08:00",
+    "last_scan_at": "2026-10-13T06:43:19+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 2,
     "last_okx_discovery_symbols": [
-      "CAPUSDT",
-      "PYTHUSDT"
+      "TRUTHUSDT",
+      "RENDERUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "CAPUSDT",
-        "actual_symbol": "CAPUSDT",
+        "symbol": "TRUTHUSDT",
+        "actual_symbol": "TRUTHUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 4.200600085726524,
-        "volume_ccy": 703998000.0,
-        "trend_score": 4
+        "side_score": 7,
+        "change_pct": 10.054870662010968,
+        "volume_ccy": 83308000.0,
+        "trend_score": 7
       },
       {
-        "symbol": "PYTHUSDT",
-        "actual_symbol": "PYTHUSDT",
+        "symbol": "RENDERUSDT",
+        "actual_symbol": "RENDERUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 15.064061084508861,
-        "volume_ccy": 177104170.0,
-        "trend_score": 3
+        "side_score": 7,
+        "change_pct": 5.455455455455466,
+        "volume_ccy": 7047764.0,
+        "trend_score": 7
       }
     ],
-    "alt_watchlist_at": "2026-10-12T23:59:47+08:00",
+    "alt_watchlist_at": "2026-10-13T06:43:19+08:00",
     "alt_watchlist_count": 2,
     "alt_watchlist_symbols": [
-      "CAPUSDT",
-      "PYTHUSDT"
+      "TRUTHUSDT",
+      "RENDERUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "CAPUSDT",
-      "PYTHUSDT"
+      "TRUTHUSDT",
+      "RENDERUSDT"
     ]
   },
   "signals": {
