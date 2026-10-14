@@ -8,15 +8,15 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-14T08:55:46+08:00",
+    "last_scan_at": "2026-10-14T13:41:48+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
       "WALUSDT",
-      "BERAUSDT",
+      "KITEUSDT",
       "KMNOUSDT",
-      "TIAUSDT",
-      "PEPEUSDT"
+      "TRUTHUSDT",
+      "XIAOMIUSDT"
     ],
     "alt_watchlist": [
       {
@@ -24,17 +24,17 @@
         "actual_symbol": "WALUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 16.278392545136857,
-        "volume_ccy": 44042100.0,
+        "change_pct": 15.513126491646782,
+        "volume_ccy": 101378890.0,
         "trend_score": 7
       },
       {
-        "symbol": "BERAUSDT",
-        "actual_symbol": "BERAUSDT",
+        "symbol": "KITEUSDT",
+        "actual_symbol": "KITEUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 10.526315789473694,
-        "volume_ccy": 9478157.6,
+        "change_pct": 4.351902492382233,
+        "volume_ccy": 5031860.0,
         "trend_score": 5
       },
       {
@@ -42,46 +42,46 @@
         "actual_symbol": "KMNOUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 15.235862877234094,
-        "volume_ccy": 32739000.0,
+        "change_pct": 8.29442460862401,
+        "volume_ccy": 36960900.0,
         "trend_score": 4
       },
       {
-        "symbol": "TIAUSDT",
-        "actual_symbol": "TIAUSDT",
+        "symbol": "TRUTHUSDT",
+        "actual_symbol": "TRUTHUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 11.697965571205001,
-        "volume_ccy": 105025910.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 44.445179646661806,
+        "volume_ccy": 3302709800.0,
+        "trend_score": 3
       },
       {
-        "symbol": "PEPEUSDT",
-        "actual_symbol": "1000PEPEUSDT",
+        "symbol": "XIAOMIUSDT",
+        "actual_symbol": "XIAOMIUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 11.058326735286359,
-        "volume_ccy": 29161824000000.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 6.222362602653192,
+        "volume_ccy": 2327345.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-14T08:55:46+08:00",
+    "alt_watchlist_at": "2026-10-14T13:41:48+08:00",
     "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
       "WALUSDT",
-      "BERAUSDT",
+      "KITEUSDT",
       "KMNOUSDT",
-      "TIAUSDT",
-      "PEPEUSDT"
+      "TRUTHUSDT",
+      "XIAOMIUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "WALUSDT",
-      "BERAUSDT",
+      "KITEUSDT",
       "KMNOUSDT",
-      "TIAUSDT",
-      "PEPEUSDT"
+      "TRUTHUSDT",
+      "XIAOMIUSDT"
     ]
   },
   "signals": {
