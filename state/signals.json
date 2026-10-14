@@ -8,56 +8,56 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-14T23:31:55+08:00",
+    "last_scan_at": "2026-10-15T03:38:44+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
+      "AUSDT",
       "BERAUSDT",
-      "BSPUSDT",
-      "AUSDT"
+      "VVVUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "BERAUSDT",
-        "actual_symbol": "BERAUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 8.082622361921862,
-        "volume_ccy": 20812053.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "BSPUSDT",
-        "actual_symbol": "BSPUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 39.92645127396901,
-        "volume_ccy": 363463.8,
-        "trend_score": 5
-      },
       {
         "symbol": "AUSDT",
         "actual_symbol": "AUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 4.837246800362792,
-        "volume_ccy": 9027180.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 5.898394101605897,
+        "volume_ccy": 15210760.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "BERAUSDT",
+        "actual_symbol": "BERAUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 5.526544821583982,
+        "volume_ccy": 29071408.2,
+        "trend_score": 4
+      },
+      {
+        "symbol": "VVVUSDT",
+        "actual_symbol": "VVVUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 4.424979577017344,
+        "volume_ccy": 434733.3,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-10-14T23:31:55+08:00",
+    "alt_watchlist_at": "2026-10-15T03:38:44+08:00",
     "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
+      "AUSDT",
       "BERAUSDT",
-      "BSPUSDT",
-      "AUSDT"
+      "VVVUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "AUSDT",
       "BERAUSDT",
-      "BSPUSDT",
-      "AUSDT"
+      "VVVUSDT"
     ]
   },
   "signals": {
