@@ -2,86 +2,74 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-14T13:41:48+08:00",
+    "last_scan_at": "2026-10-14T18:40:48+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "WALUSDT",
+      "BERAUSDT",
+      "NESUSDT",
       "KITEUSDT",
-      "KMNOUSDT",
-      "TRUTHUSDT",
-      "XIAOMIUSDT"
+      "WALUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "WALUSDT",
-        "actual_symbol": "WALUSDT",
+        "symbol": "BERAUSDT",
+        "actual_symbol": "BERAUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 15.513126491646782,
-        "volume_ccy": 101378890.0,
-        "trend_score": 7
+        "side_score": 5,
+        "change_pct": 6.871278057718742,
+        "volume_ccy": 13621982.5,
+        "trend_score": 5
+      },
+      {
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 7.692307692307695,
+        "volume_ccy": 9560080.0,
+        "trend_score": 4
       },
       {
         "symbol": "KITEUSDT",
         "actual_symbol": "KITEUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 4.351902492382233,
-        "volume_ccy": 5031860.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "KMNOUSDT",
-        "actual_symbol": "KMNOUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 8.29442460862401,
-        "volume_ccy": 36960900.0,
+        "change_pct": 7.571451129006802,
+        "volume_ccy": 14548870.0,
         "trend_score": 4
       },
       {
-        "symbol": "TRUTHUSDT",
-        "actual_symbol": "TRUTHUSDT",
+        "symbol": "WALUSDT",
+        "actual_symbol": "WALUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 44.445179646661806,
-        "volume_ccy": 3302709800.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "XIAOMIUSDT",
-        "actual_symbol": "XIAOMIUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 6.222362602653192,
-        "volume_ccy": 2327345.0,
+        "change_pct": 37.44780793319416,
+        "volume_ccy": 568726570.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-14T13:41:48+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-10-14T18:40:48+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "WALUSDT",
+      "BERAUSDT",
+      "NESUSDT",
       "KITEUSDT",
-      "KMNOUSDT",
-      "TRUTHUSDT",
-      "XIAOMIUSDT"
+      "WALUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "WALUSDT",
+      "BERAUSDT",
+      "NESUSDT",
       "KITEUSDT",
-      "KMNOUSDT",
-      "TRUTHUSDT",
-      "XIAOMIUSDT"
+      "WALUSDT"
     ]
   },
   "signals": {
