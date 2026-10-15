@@ -2,50 +2,74 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-15T08:53:35+08:00",
+    "last_scan_at": "2026-10-15T13:26:48+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 2,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
+      "ZKUSDT",
       "PYTHUSDT",
-      "SKDDUSDT"
+      "RSRUSDT",
+      "MEGAUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "ZKUSDT",
+        "actual_symbol": "ZKUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 15.28013582342953,
+        "volume_ccy": 1230782340.0,
+        "trend_score": 7
+      },
       {
         "symbol": "PYTHUSDT",
         "actual_symbol": "PYTHUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 4.979356937320152,
-        "volume_ccy": 138921170.0,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 7.191738210775174,
+        "volume_ccy": 170981180.0,
+        "trend_score": 7
       },
       {
-        "symbol": "SKDDUSDT",
-        "actual_symbol": "SKDDUSDT",
+        "symbol": "RSRUSDT",
+        "actual_symbol": "RSRUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 23.536237999789027,
-        "volume_ccy": 610830.4,
-        "trend_score": 3
+        "side_score": 7,
+        "change_pct": 5.9812160158180925,
+        "volume_ccy": 7272041200.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "MEGAUSDT",
+        "actual_symbol": "MEGAUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 5.379959650302638,
+        "volume_ccy": 139057090.0,
+        "trend_score": 7
       }
     ],
-    "alt_watchlist_at": "2026-10-15T08:53:35+08:00",
-    "alt_watchlist_count": 2,
+    "alt_watchlist_at": "2026-10-15T13:26:48+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
+      "ZKUSDT",
       "PYTHUSDT",
-      "SKDDUSDT"
+      "RSRUSDT",
+      "MEGAUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "ZKUSDT",
       "PYTHUSDT",
-      "SKDDUSDT"
+      "RSRUSDT",
+      "MEGAUSDT"
     ]
   },
   "signals": {
