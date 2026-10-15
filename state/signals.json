@@ -8,56 +8,44 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-15T06:38:12+08:00",
+    "last_scan_at": "2026-10-15T08:53:35+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 2,
     "last_okx_discovery_symbols": [
       "PYTHUSDT",
-      "WCTUSDT",
-      "SOXSUSDT"
+      "SKDDUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "PYTHUSDT",
         "actual_symbol": "PYTHUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 10.148451497312507,
-        "volume_ccy": 141340780.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "WCTUSDT",
-        "actual_symbol": "WCTUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 7.187578261958421,
-        "volume_ccy": 39839670.0,
+        "change_pct": 4.979356937320152,
+        "volume_ccy": 138921170.0,
         "trend_score": 5
       },
       {
-        "symbol": "SOXSUSDT",
-        "actual_symbol": "SOXSUSDT",
+        "symbol": "SKDDUSDT",
+        "actual_symbol": "SKDDUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 19.649595687331534,
-        "volume_ccy": 978132.5,
+        "change_pct": 23.536237999789027,
+        "volume_ccy": 610830.4,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-15T06:38:12+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-10-15T08:53:35+08:00",
+    "alt_watchlist_count": 2,
     "alt_watchlist_symbols": [
       "PYTHUSDT",
-      "WCTUSDT",
-      "SOXSUSDT"
+      "SKDDUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "PYTHUSDT",
-      "WCTUSDT",
-      "SOXSUSDT"
+      "SKDDUSDT"
     ]
   },
   "signals": {
