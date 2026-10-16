@@ -8,68 +8,104 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-16T11:15:42+08:00",
+    "last_scan_at": "2026-10-16T16:12:13+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "TIAUSDT",
       "ZROUSDT",
-      "NEARUSDT",
-      "INJUSDT"
+      "AEROUSDT",
+      "ETHFIUSDT",
+      "ARBUSDT",
+      "EIGENUSDT",
+      "TIAUSDT",
+      "POPCATUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "TIAUSDT",
-        "actual_symbol": "TIAUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 12.88989101841413,
-        "volume_ccy": 50328482.0,
-        "trend_score": 7
-      },
       {
         "symbol": "ZROUSDT",
         "actual_symbol": "ZROUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 18.262238141756214,
-        "volume_ccy": 13901454.0,
+        "change_pct": 18.062813407231452,
+        "volume_ccy": 15884918.0,
         "trend_score": 5
       },
       {
-        "symbol": "NEARUSDT",
-        "actual_symbol": "NEARUSDT",
+        "symbol": "AEROUSDT",
+        "actual_symbol": "AEROUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 13.805792972459633,
+        "volume_ccy": 13185230.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ETHFIUSDT",
+        "actual_symbol": "ETHFIUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 11.134542387178396,
-        "volume_ccy": 63626332.0,
+        "change_pct": 13.723561239547466,
+        "volume_ccy": 13287015.0,
         "trend_score": 4
       },
       {
-        "symbol": "INJUSDT",
-        "actual_symbol": "INJUSDT",
+        "symbol": "ARBUSDT",
+        "actual_symbol": "ARBUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 11.099088838268797,
+        "volume_ccy": 249998252.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "EIGENUSDT",
+        "actual_symbol": "EIGENUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 10.953436807095331,
+        "volume_ccy": 19333390.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "TIAUSDT",
+        "actual_symbol": "TIAUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 20.909090909090907,
-        "volume_ccy": 5785436.0,
+        "change_pct": 24.853524853524846,
+        "volume_ccy": 88413839.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "POPCATUSDT",
+        "actual_symbol": "POPCATUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 11.679000925069378,
+        "volume_ccy": 9477500.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-16T11:15:42+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-10-16T16:12:13+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
-      "TIAUSDT",
       "ZROUSDT",
-      "NEARUSDT",
-      "INJUSDT"
+      "AEROUSDT",
+      "ETHFIUSDT",
+      "ARBUSDT",
+      "EIGENUSDT",
+      "TIAUSDT",
+      "POPCATUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "TIAUSDT",
       "ZROUSDT",
-      "NEARUSDT",
-      "INJUSDT"
+      "AEROUSDT",
+      "ETHFIUSDT",
+      "ARBUSDT",
+      "EIGENUSDT",
+      "TIAUSDT",
+      "POPCATUSDT"
     ]
   },
   "signals": {
