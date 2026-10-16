@@ -8,45 +8,36 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-16T05:58:33+08:00",
+    "last_scan_at": "2026-10-16T08:04:28+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "SUSDT",
       "STRKUSDT",
-      "FILUSDT",
-      "METISUSDT",
-      "GRVTUSDT",
-      "NEARUSDT",
       "ZROUSDT",
-      "BATUSDT"
+      "METISUSDT",
+      "TIAUSDT",
+      "NEARUSDT",
+      "ARBUSDT",
+      "GRVTUSDT",
+      "INITUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "SUSDT",
-        "actual_symbol": "SUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 7.133346014837366,
-        "volume_ccy": 168979110.0,
-        "trend_score": 6
-      },
       {
         "symbol": "STRKUSDT",
         "actual_symbol": "STRKUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 13.119266055045859,
-        "volume_ccy": 5116392230.0,
+        "change_pct": 12.620348685922458,
+        "volume_ccy": 5194840573.0,
         "trend_score": 5
       },
       {
-        "symbol": "FILUSDT",
-        "actual_symbol": "FILUSDT",
+        "symbol": "ZROUSDT",
+        "actual_symbol": "ZROUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 8.593749999999991,
-        "volume_ccy": 107376828.3,
+        "change_pct": 10.14148453172843,
+        "volume_ccy": 12769136.0,
         "trend_score": 5
       },
       {
@@ -54,17 +45,17 @@
         "actual_symbol": "METISUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 7.722114586216438,
-        "volume_ccy": 414970.5,
+        "change_pct": 8.25432236475182,
+        "volume_ccy": 411116.6,
         "trend_score": 5
       },
       {
-        "symbol": "GRVTUSDT",
-        "actual_symbol": "GRVTUSDT",
+        "symbol": "TIAUSDT",
+        "actual_symbol": "TIAUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 7.2902594680206825,
-        "volume_ccy": 15077450.0,
+        "change_pct": 6.920289855072445,
+        "volume_ccy": 53113956.0,
         "trend_score": 5
       },
       {
@@ -72,52 +63,61 @@
         "actual_symbol": "NEARUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 10.524135073544645,
-        "volume_ccy": 67737627.0,
+        "change_pct": 7.6765609007164795,
+        "volume_ccy": 68475584.0,
         "trend_score": 4
       },
       {
-        "symbol": "ZROUSDT",
-        "actual_symbol": "ZROUSDT",
+        "symbol": "ARBUSDT",
+        "actual_symbol": "ARBUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 8.726550661023163,
-        "volume_ccy": 12776808.0,
+        "change_pct": 7.660136473695804,
+        "volume_ccy": 276852462.0,
         "trend_score": 4
       },
       {
-        "symbol": "BATUSDT",
-        "actual_symbol": "BATUSDT",
+        "symbol": "GRVTUSDT",
+        "actual_symbol": "GRVTUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 7.1671401294649035,
+        "volume_ccy": 15496320.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "INITUSDT",
+        "actual_symbol": "INITUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 29.833599810505127,
-        "volume_ccy": 305887240.0,
+        "change_pct": 11.994322214336409,
+        "volume_ccy": 11214460.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-16T05:58:33+08:00",
+    "alt_watchlist_at": "2026-10-16T08:04:28+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "SUSDT",
       "STRKUSDT",
-      "FILUSDT",
-      "METISUSDT",
-      "GRVTUSDT",
-      "NEARUSDT",
       "ZROUSDT",
-      "BATUSDT"
+      "METISUSDT",
+      "TIAUSDT",
+      "NEARUSDT",
+      "ARBUSDT",
+      "GRVTUSDT",
+      "INITUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "SUSDT",
       "STRKUSDT",
-      "FILUSDT",
-      "METISUSDT",
-      "GRVTUSDT",
-      "NEARUSDT",
       "ZROUSDT",
-      "BATUSDT"
+      "METISUSDT",
+      "TIAUSDT",
+      "NEARUSDT",
+      "ARBUSDT",
+      "GRVTUSDT",
+      "INITUSDT"
     ]
   },
   "signals": {
