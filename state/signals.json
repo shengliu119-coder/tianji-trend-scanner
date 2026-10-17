@@ -2,49 +2,49 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-17T06:44:03+08:00",
+    "last_scan_at": "2026-10-17T08:51:34+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "SKDDUSDT",
+      "MEGAUSDT",
       "TRUTHUSDT",
-      "RECALLUSDT",
+      "LABUSDT",
       "LIGHTUSDT",
-      "PROSUSDT",
-      "APEUSDT"
+      "BASEDUSDT",
+      "ACUUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "SKDDUSDT",
-        "actual_symbol": "SKDDUSDT",
+        "symbol": "MEGAUSDT",
+        "actual_symbol": "MEGAUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 12.526480611587006,
-        "volume_ccy": 766281.4,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 5.314654213920383,
+        "volume_ccy": 67313540.0,
+        "trend_score": 7
       },
       {
         "symbol": "TRUTHUSDT",
         "actual_symbol": "TRUTHUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 11.603270970140004,
-        "volume_ccy": 835993800.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 11.150000000000006,
+        "volume_ccy": 816061000.0,
+        "trend_score": 5
       },
       {
-        "symbol": "RECALLUSDT",
-        "actual_symbol": "RECALLUSDT",
+        "symbol": "LABUSDT",
+        "actual_symbol": "LABUSDT",
         "side": "short",
         "side_score": 5,
-        "change_pct": 5.324959038776625,
-        "volume_ccy": 6931380.0,
+        "change_pct": 4.056795131845849,
+        "volume_ccy": 104095578.0,
         "trend_score": 5
       },
       {
@@ -52,48 +52,48 @@
         "actual_symbol": "LIGHTUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 11.231101511879041,
-        "volume_ccy": 21420334.0,
+        "change_pct": 9.192348565355994,
+        "volume_ccy": 21540061.0,
         "trend_score": 4
       },
       {
-        "symbol": "PROSUSDT",
-        "actual_symbol": "PROSUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 9.106182795698931,
-        "volume_ccy": 2659864.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "APEUSDT",
-        "actual_symbol": "APEUSDT",
-        "side": "long",
+        "symbol": "BASEDUSDT",
+        "actual_symbol": "BASEDUSDT",
+        "side": "short",
         "side_score": 3,
-        "change_pct": 4.260651629072692,
-        "volume_ccy": 18677730.2,
+        "change_pct": 19.37724014336917,
+        "volume_ccy": 487562080.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ACUUSDT",
+        "actual_symbol": "ACUUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 4.009244372990361,
+        "volume_ccy": 3033800.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-17T06:44:03+08:00",
+    "alt_watchlist_at": "2026-10-17T08:51:34+08:00",
     "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "SKDDUSDT",
+      "MEGAUSDT",
       "TRUTHUSDT",
-      "RECALLUSDT",
+      "LABUSDT",
       "LIGHTUSDT",
-      "PROSUSDT",
-      "APEUSDT"
+      "BASEDUSDT",
+      "ACUUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "SKDDUSDT",
+      "MEGAUSDT",
       "TRUTHUSDT",
-      "RECALLUSDT",
+      "LABUSDT",
       "LIGHTUSDT",
-      "PROSUSDT",
-      "APEUSDT"
+      "BASEDUSDT",
+      "ACUUSDT"
     ]
   },
   "signals": {
