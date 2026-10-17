@@ -8,16 +8,16 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-18T05:00:28+08:00",
+    "last_scan_at": "2026-10-18T06:52:15+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
       "OLUSDT",
       "RSRUSDT",
-      "KMNOUSDT",
+      "AEONUSDT",
       "TRUTHUSDT",
-      "SANDUSDT",
-      "AEONUSDT"
+      "KMNOUSDT",
+      "SKDDUSDT"
     ],
     "alt_watchlist": [
       {
@@ -25,8 +25,8 @@
         "actual_symbol": "OLUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 6.9644431384072805,
-        "volume_ccy": 158203800.0,
+        "change_pct": 6.96553738317757,
+        "volume_ccy": 190080500.0,
         "trend_score": 7
       },
       {
@@ -34,17 +34,17 @@
         "actual_symbol": "RSRUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 5.799373040752351,
-        "volume_ccy": 4283845000.0,
+        "change_pct": 4.613789528252974,
+        "volume_ccy": 4469092500.0,
         "trend_score": 7
       },
       {
-        "symbol": "KMNOUSDT",
-        "actual_symbol": "KMNOUSDT",
-        "side": "long",
+        "symbol": "AEONUSDT",
+        "actual_symbol": "AEONUSDT",
+        "side": "short",
         "side_score": 5,
-        "change_pct": 4.913294797687871,
-        "volume_ccy": 409686900.0,
+        "change_pct": 7.452387524151259,
+        "volume_ccy": 325448810.0,
         "trend_score": 5
       },
       {
@@ -52,48 +52,48 @@
         "actual_symbol": "TRUTHUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 4.424632656430571,
-        "volume_ccy": 501890400.0,
+        "change_pct": 5.823950302290747,
+        "volume_ccy": 504935800.0,
         "trend_score": 5
       },
       {
-        "symbol": "SANDUSDT",
-        "actual_symbol": "SANDUSDT",
+        "symbol": "KMNOUSDT",
+        "actual_symbol": "KMNOUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 11.534918002579698,
-        "volume_ccy": 2913770060.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 5.128879537085745,
+        "volume_ccy": 415152000.0,
+        "trend_score": 5
       },
       {
-        "symbol": "AEONUSDT",
-        "actual_symbol": "AEONUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 9.322508398656213,
-        "volume_ccy": 315703940.0,
-        "trend_score": 4
+        "symbol": "SKDDUSDT",
+        "actual_symbol": "SKDDUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 5.363293422994914,
+        "volume_ccy": 334360.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-18T05:00:28+08:00",
+    "alt_watchlist_at": "2026-10-18T06:52:15+08:00",
     "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
       "OLUSDT",
       "RSRUSDT",
-      "KMNOUSDT",
+      "AEONUSDT",
       "TRUTHUSDT",
-      "SANDUSDT",
-      "AEONUSDT"
+      "KMNOUSDT",
+      "SKDDUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "OLUSDT",
       "RSRUSDT",
-      "KMNOUSDT",
+      "AEONUSDT",
       "TRUTHUSDT",
-      "SANDUSDT",
-      "AEONUSDT"
+      "KMNOUSDT",
+      "SKDDUSDT"
     ]
   },
   "signals": {
