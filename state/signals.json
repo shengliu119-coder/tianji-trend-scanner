@@ -8,13 +8,14 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-18T17:20:11+08:00",
+    "last_scan_at": "2026-10-18T21:25:36+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
       "AEONUSDT",
       "SANDUSDT",
-      "MUBARAKUSDT"
+      "SENTUSDT",
+      "SPXUSDT"
     ],
     "alt_watchlist": [
       {
@@ -22,42 +23,53 @@
         "actual_symbol": "AEONUSDT",
         "side": "short",
         "side_score": 5,
-        "change_pct": 6.036108865534913,
-        "volume_ccy": 407700420.0,
+        "change_pct": 8.803488689016072,
+        "volume_ccy": 471663980.0,
         "trend_score": 5
       },
       {
         "symbol": "SANDUSDT",
         "actual_symbol": "SANDUSDT",
         "side": "long",
+        "side_score": 5,
+        "change_pct": 6.047147249743768,
+        "volume_ccy": 4420798760.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "SENTUSDT",
+        "actual_symbol": "SENTUSDT",
+        "side": "long",
         "side_score": 4,
-        "change_pct": 7.914790439903009,
-        "volume_ccy": 4718595780.0,
+        "change_pct": 4.239766081871341,
+        "volume_ccy": 176130100.0,
         "trend_score": 4
       },
       {
-        "symbol": "MUBARAKUSDT",
-        "actual_symbol": "MUBARAKUSDT",
+        "symbol": "SPXUSDT",
+        "actual_symbol": "SPXUSDT",
         "side": "short",
-        "side_score": 4,
-        "change_pct": 4.606254363723212,
-        "volume_ccy": 212193300.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 4.114285714285722,
+        "volume_ccy": 10027971.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-18T17:20:11+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-10-18T21:25:36+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
       "AEONUSDT",
       "SANDUSDT",
-      "MUBARAKUSDT"
+      "SENTUSDT",
+      "SPXUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "AEONUSDT",
       "SANDUSDT",
-      "MUBARAKUSDT"
+      "SENTUSDT",
+      "SPXUSDT"
     ]
   },
   "signals": {
