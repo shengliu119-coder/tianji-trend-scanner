@@ -8,32 +8,56 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-19T07:09:30+08:00",
+    "last_scan_at": "2026-10-19T09:14:17+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 1,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "SENTUSDT"
+      "SENTUSDT",
+      "SNXXUSDT",
+      "SOXLUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "SENTUSDT",
         "actual_symbol": "SENTUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 5.489824893516334,
-        "volume_ccy": 227730400.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 8.333333333333323,
+        "volume_ccy": 277853600.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "SNXXUSDT",
+        "actual_symbol": "SNXXUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 10.532407407407408,
+        "volume_ccy": 1234469.7,
+        "trend_score": 4
+      },
+      {
+        "symbol": "SOXLUSDT",
+        "actual_symbol": "SOXLUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 8.256382400869104,
+        "volume_ccy": 1680307.44,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-10-19T07:09:30+08:00",
-    "alt_watchlist_count": 1,
+    "alt_watchlist_at": "2026-10-19T09:14:17+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "SENTUSDT"
+      "SENTUSDT",
+      "SNXXUSDT",
+      "SOXLUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "SENTUSDT"
+      "SENTUSDT",
+      "SNXXUSDT",
+      "SOXLUSDT"
     ]
   },
   "signals": {
