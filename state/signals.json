@@ -8,56 +8,104 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-19T09:14:17+08:00",
+    "last_scan_at": "2026-10-19T14:16:18+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
       "SENTUSDT",
-      "SNXXUSDT",
-      "SOXLUSDT"
+      "ETHFIUSDT",
+      "INITUSDT",
+      "CRVUSDT",
+      "LIGHTUSDT",
+      "ARBUSDT",
+      "UNITREEUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "SENTUSDT",
         "actual_symbol": "SENTUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 8.333333333333323,
-        "volume_ccy": 277853600.0,
-        "trend_score": 7
+        "side_score": 5,
+        "change_pct": 7.95507721104352,
+        "volume_ccy": 323625600.0,
+        "trend_score": 5
       },
       {
-        "symbol": "SNXXUSDT",
-        "actual_symbol": "SNXXUSDT",
-        "side": "short",
+        "symbol": "ETHFIUSDT",
+        "actual_symbol": "ETHFIUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.2191657945881245,
+        "volume_ccy": 12275415.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "INITUSDT",
+        "actual_symbol": "INITUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.968375499334212,
+        "volume_ccy": 11164540.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "CRVUSDT",
+        "actual_symbol": "CRVUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.721156683387434,
+        "volume_ccy": 31402494.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "LIGHTUSDT",
+        "actual_symbol": "LIGHTUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.400000000000001,
+        "volume_ccy": 5742086.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "ARBUSDT",
+        "actual_symbol": "ARBUSDT",
+        "side": "long",
         "side_score": 4,
-        "change_pct": 10.532407407407408,
-        "volume_ccy": 1234469.7,
+        "change_pct": 7.170852884349987,
+        "volume_ccy": 177980831.0,
         "trend_score": 4
       },
       {
-        "symbol": "SOXLUSDT",
-        "actual_symbol": "SOXLUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 8.256382400869104,
-        "volume_ccy": 1680307.44,
-        "trend_score": 4
+        "symbol": "UNITREEUSDT",
+        "actual_symbol": "UNITREEUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 13.696238692271073,
+        "volume_ccy": 401803.57,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-19T09:14:17+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-10-19T14:16:18+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
       "SENTUSDT",
-      "SNXXUSDT",
-      "SOXLUSDT"
+      "ETHFIUSDT",
+      "INITUSDT",
+      "CRVUSDT",
+      "LIGHTUSDT",
+      "ARBUSDT",
+      "UNITREEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "SENTUSDT",
-      "SNXXUSDT",
-      "SOXLUSDT"
+      "ETHFIUSDT",
+      "INITUSDT",
+      "CRVUSDT",
+      "LIGHTUSDT",
+      "ARBUSDT",
+      "UNITREEUSDT"
     ]
   },
   "signals": {
