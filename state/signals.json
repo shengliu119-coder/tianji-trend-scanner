@@ -2,62 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-19T21:09:15+08:00",
+    "last_scan_at": "2026-10-20T03:23:32+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "SUSDT",
+      "SOXLUSDT",
+      "GRVTUSDT",
+      "CRVUSDT",
+      "BATUSDT",
+      "VVVUSDT",
       "ARBUSDT",
-      "PEPEUSDT",
-      "ETHFIUSDT"
+      "CVXUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "SUSDT",
+        "actual_symbol": "SUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 11.895043731778426,
+        "volume_ccy": 147161680.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "SOXLUSDT",
+        "actual_symbol": "SOXLUSDT",
+        "side": "short",
+        "side_score": 6,
+        "change_pct": 11.513525598032654,
+        "volume_ccy": 4179390.19,
+        "trend_score": 6
+      },
+      {
+        "symbol": "GRVTUSDT",
+        "actual_symbol": "GRVTUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 7.007698729245888,
+        "volume_ccy": 13883660.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "CRVUSDT",
+        "actual_symbol": "CRVUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 9.025702331141664,
+        "volume_ccy": 61899532.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "BATUSDT",
+        "actual_symbol": "BATUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 8.83932259396943,
+        "volume_ccy": 148423530.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "VVVUSDT",
+        "actual_symbol": "VVVUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 11.213285753499864,
+        "volume_ccy": 937367.5,
+        "trend_score": 4
+      },
       {
         "symbol": "ARBUSDT",
         "actual_symbol": "ARBUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 8.81033161869321,
-        "volume_ccy": 293398119.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "PEPEUSDT",
-        "actual_symbol": "1000PEPEUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 6.22279129321383,
-        "volume_ccy": 27376996000000.0,
+        "change_pct": 7.553796409856159,
+        "volume_ccy": 369395934.0,
         "trend_score": 4
       },
       {
-        "symbol": "ETHFIUSDT",
-        "actual_symbol": "ETHFIUSDT",
+        "symbol": "CVXUSDT",
+        "actual_symbol": "CVXUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 6.057852491291842,
-        "volume_ccy": 14136136.0,
+        "change_pct": 7.182883341823739,
+        "volume_ccy": 327123.0,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-10-19T21:09:15+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-10-20T03:23:32+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "SUSDT",
+      "SOXLUSDT",
+      "GRVTUSDT",
+      "CRVUSDT",
+      "BATUSDT",
+      "VVVUSDT",
       "ARBUSDT",
-      "PEPEUSDT",
-      "ETHFIUSDT"
+      "CVXUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "SUSDT",
+      "SOXLUSDT",
+      "GRVTUSDT",
+      "CRVUSDT",
+      "BATUSDT",
+      "VVVUSDT",
       "ARBUSDT",
-      "PEPEUSDT",
-      "ETHFIUSDT"
+      "CVXUSDT"
     ]
   },
   "signals": {
