@@ -2,122 +2,110 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "强",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-21T01:03:30+08:00",
+    "last_scan_at": "2026-10-21T04:21:37+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "COMPUSDT",
-      "THETAUSDT",
-      "AEROUSDT",
       "APRUSDT",
-      "WLDUSDT",
-      "ARKMUSDT",
-      "SPXUSDT",
-      "DOODUSDT"
+      "RAYUSDT",
+      "DOSUSDT",
+      "APTUSDT",
+      "AEROUSDT",
+      "EDENUSDT",
+      "WLDUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "COMPUSDT",
-        "actual_symbol": "COMPUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 27.64076314564915,
-        "volume_ccy": 414092.0,
-        "trend_score": 6
+        "symbol": "APRUSDT",
+        "actual_symbol": "APRUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 18.497913769123777,
+        "volume_ccy": 2064785540.0,
+        "trend_score": 5
       },
       {
-        "symbol": "THETAUSDT",
-        "actual_symbol": "THETAUSDT",
+        "symbol": "RAYUSDT",
+        "actual_symbol": "RAYUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 15.47169811320755,
-        "volume_ccy": 13011574.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 10.378719085518918,
+        "volume_ccy": 5225785.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "DOSUSDT",
+        "actual_symbol": "DOSUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 10.42780748663101,
+        "volume_ccy": 40542420.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "APTUSDT",
+        "actual_symbol": "APTUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 9.209143457698378,
+        "volume_ccy": 21938521.0,
+        "trend_score": 4
       },
       {
         "symbol": "AEROUSDT",
         "actual_symbol": "AEROUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 10.475217169136428,
-        "volume_ccy": 12553850.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 9.157088122605362,
+        "volume_ccy": 11531850.0,
+        "trend_score": 4
       },
       {
-        "symbol": "APRUSDT",
-        "actual_symbol": "APRUSDT",
-        "side": "short",
+        "symbol": "EDENUSDT",
+        "actual_symbol": "EDENUSDT",
+        "side": "long",
         "side_score": 4,
-        "change_pct": 27.057926829268304,
-        "volume_ccy": 2060903010.0,
+        "change_pct": 9.080717488789244,
+        "volume_ccy": 9938073.0,
         "trend_score": 4
       },
       {
         "symbol": "WLDUSDT",
         "actual_symbol": "WLDUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 10.637465780211187,
-        "volume_ccy": 522915357.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "ARKMUSDT",
-        "actual_symbol": "ARKMUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 9.602994950374368,
-        "volume_ccy": 3966633.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "SPXUSDT",
-        "actual_symbol": "SPXUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 8.600000000000005,
-        "volume_ccy": 4663138.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "DOODUSDT",
-        "actual_symbol": "DOODUSDT",
-        "side": "long",
         "side_score": 3,
-        "change_pct": 74.01812688821752,
-        "volume_ccy": 35771790000.0,
+        "change_pct": 12.60928696327957,
+        "volume_ccy": 547548483.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-21T01:03:30+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-10-21T04:21:37+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
-      "COMPUSDT",
-      "THETAUSDT",
-      "AEROUSDT",
       "APRUSDT",
-      "WLDUSDT",
-      "ARKMUSDT",
-      "SPXUSDT",
-      "DOODUSDT"
+      "RAYUSDT",
+      "DOSUSDT",
+      "APTUSDT",
+      "AEROUSDT",
+      "EDENUSDT",
+      "WLDUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "COMPUSDT",
-      "THETAUSDT",
-      "AEROUSDT",
       "APRUSDT",
-      "WLDUSDT",
-      "ARKMUSDT",
-      "SPXUSDT",
-      "DOODUSDT"
+      "RAYUSDT",
+      "DOSUSDT",
+      "APTUSDT",
+      "AEROUSDT",
+      "EDENUSDT",
+      "WLDUSDT"
     ]
   },
   "signals": {
