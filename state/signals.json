@@ -2,68 +2,51 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "强",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-21T04:21:37+08:00",
+    "last_scan_at": "2026-10-21T07:21:32+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "APRUSDT",
-      "RAYUSDT",
-      "DOSUSDT",
-      "APTUSDT",
+      "CVXUSDT",
+      "ZECUSDT",
       "AEROUSDT",
       "EDENUSDT",
-      "WLDUSDT"
+      "LITUSDT",
+      "AUSDT",
+      "WLDUSDT",
+      "UBUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "APRUSDT",
-        "actual_symbol": "APRUSDT",
-        "side": "short",
+        "symbol": "CVXUSDT",
+        "actual_symbol": "CVXUSDT",
+        "side": "long",
         "side_score": 5,
-        "change_pct": 18.497913769123777,
-        "volume_ccy": 2064785540.0,
+        "change_pct": 14.101338432122368,
+        "volume_ccy": 425395.0,
         "trend_score": 5
       },
       {
-        "symbol": "RAYUSDT",
-        "actual_symbol": "RAYUSDT",
+        "symbol": "ZECUSDT",
+        "actual_symbol": "ZECUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 10.378719085518918,
-        "volume_ccy": 5225785.0,
+        "change_pct": 10.017573155911482,
+        "volume_ccy": 1133178.55,
         "trend_score": 5
-      },
-      {
-        "symbol": "DOSUSDT",
-        "actual_symbol": "DOSUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 10.42780748663101,
-        "volume_ccy": 40542420.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "APTUSDT",
-        "actual_symbol": "APTUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 9.209143457698378,
-        "volume_ccy": 21938521.0,
-        "trend_score": 4
       },
       {
         "symbol": "AEROUSDT",
         "actual_symbol": "AEROUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 9.157088122605362,
-        "volume_ccy": 11531850.0,
+        "change_pct": 11.220249338874192,
+        "volume_ccy": 13159160.0,
         "trend_score": 4
       },
       {
@@ -71,41 +54,70 @@
         "actual_symbol": "EDENUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 9.080717488789244,
-        "volume_ccy": 9938073.0,
+        "change_pct": 10.315985130111523,
+        "volume_ccy": 10214974.0,
         "trend_score": 4
+      },
+      {
+        "symbol": "LITUSDT",
+        "actual_symbol": "LITUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 10.139894186763602,
+        "volume_ccy": 15912888.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "AUSDT",
+        "actual_symbol": "AUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 11.801453884597922,
+        "volume_ccy": 102788790.0,
+        "trend_score": 3
       },
       {
         "symbol": "WLDUSDT",
         "actual_symbol": "WLDUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 12.60928696327957,
-        "volume_ccy": 547548483.0,
+        "change_pct": 11.566811566811573,
+        "volume_ccy": 570479825.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "UBUSDT",
+        "actual_symbol": "UBUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 10.184080449974424,
+        "volume_ccy": 20027000.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-21T04:21:37+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-10-21T07:21:32+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "APRUSDT",
-      "RAYUSDT",
-      "DOSUSDT",
-      "APTUSDT",
+      "CVXUSDT",
+      "ZECUSDT",
       "AEROUSDT",
       "EDENUSDT",
-      "WLDUSDT"
+      "LITUSDT",
+      "AUSDT",
+      "WLDUSDT",
+      "UBUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "APRUSDT",
-      "RAYUSDT",
-      "DOSUSDT",
-      "APTUSDT",
+      "CVXUSDT",
+      "ZECUSDT",
       "AEROUSDT",
       "EDENUSDT",
-      "WLDUSDT"
+      "LITUSDT",
+      "AUSDT",
+      "WLDUSDT",
+      "UBUSDT"
     ]
   },
   "signals": {
