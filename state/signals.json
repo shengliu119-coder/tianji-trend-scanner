@@ -8,41 +8,41 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-22T15:50:28+08:00",
+    "last_scan_at": "2026-10-22T21:20:37+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "SKDDUSDT",
       "SOXSUSDT",
-      "BILLUSDT",
+      "SKDDUSDT",
+      "LITUSDT",
       "TRIAUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "SOXSUSDT",
+        "actual_symbol": "SOXSUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 12.67100246692083,
+        "volume_ccy": 1134793.6,
+        "trend_score": 6
+      },
       {
         "symbol": "SKDDUSDT",
         "actual_symbol": "SKDDUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 12.91495264517365,
-        "volume_ccy": 483455.5,
+        "change_pct": 13.122342938119974,
+        "volume_ccy": 523671.5,
         "trend_score": 5
       },
       {
-        "symbol": "SOXSUSDT",
-        "actual_symbol": "SOXSUSDT",
+        "symbol": "LITUSDT",
+        "actual_symbol": "LITUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 11.293634496919925,
-        "volume_ccy": 1101425.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "BILLUSDT",
-        "actual_symbol": "BILLUSDT",
-        "side": "short",
         "side_score": 3,
-        "change_pct": 10.367477365524593,
-        "volume_ccy": 4684180200.0,
+        "change_pct": 7.976448532427207,
+        "volume_ccy": 33373736.0,
         "trend_score": 3
       },
       {
@@ -50,25 +50,25 @@
         "actual_symbol": "TRIAUSDT",
         "side": "short",
         "side_score": 3,
-        "change_pct": 5.988745980707389,
-        "volume_ccy": 1238733500.0,
+        "change_pct": 6.532258064516122,
+        "volume_ccy": 1443257800.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-22T15:50:28+08:00",
+    "alt_watchlist_at": "2026-10-22T21:20:37+08:00",
     "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "SKDDUSDT",
       "SOXSUSDT",
-      "BILLUSDT",
+      "SKDDUSDT",
+      "LITUSDT",
       "TRIAUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "SKDDUSDT",
       "SOXSUSDT",
-      "BILLUSDT",
+      "SKDDUSDT",
+      "LITUSDT",
       "TRIAUSDT"
     ]
   },
