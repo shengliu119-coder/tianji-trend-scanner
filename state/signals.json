@@ -8,116 +8,92 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-23T17:40:17+08:00",
+    "last_scan_at": "2026-10-23T22:31:24+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "TRUTHUSDT",
-      "PEPEUSDT",
-      "BSBUSDT",
-      "INITUSDT",
       "DOSUSDT",
-      "PROSUSDT",
       "MEWUSDT",
-      "ATHUSDT"
+      "TRUTHUSDT",
+      "MERLUSDT",
+      "BONKUSDT",
+      "BEATUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "TRUTHUSDT",
-        "actual_symbol": "TRUTHUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 11.040991846308518,
-        "volume_ccy": 127942500.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "PEPEUSDT",
-        "actual_symbol": "1000PEPEUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 10.85533739562176,
-        "volume_ccy": 36063993000000.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "BSBUSDT",
-        "actual_symbol": "BSBUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 7.452078397587762,
-        "volume_ccy": 16613110.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "INITUSDT",
-        "actual_symbol": "INITUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 6.842312229650008,
-        "volume_ccy": 6017170.0,
-        "trend_score": 7
-      },
       {
         "symbol": "DOSUSDT",
         "actual_symbol": "DOSUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 14.403093281778634,
-        "volume_ccy": 32146470.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "PROSUSDT",
-        "actual_symbol": "PROSUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 9.041141340411412,
-        "volume_ccy": 4774547.0,
+        "change_pct": 21.753713464302827,
+        "volume_ccy": 44981430.0,
         "trend_score": 5
       },
       {
         "symbol": "MEWUSDT",
         "actual_symbol": "MEWUSDT",
         "side": "long",
+        "side_score": 5,
+        "change_pct": 8.468271334792114,
+        "volume_ccy": 27775510000.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "TRUTHUSDT",
+        "actual_symbol": "TRUTHUSDT",
+        "side": "long",
         "side_score": 4,
-        "change_pct": 11.926192619261911,
-        "volume_ccy": 26100123000.0,
+        "change_pct": 6.575710131961529,
+        "volume_ccy": 141942800.0,
         "trend_score": 4
       },
       {
-        "symbol": "ATHUSDT",
-        "actual_symbol": "ATHUSDT",
+        "symbol": "MERLUSDT",
+        "actual_symbol": "MERLUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 9.711554872845198,
-        "volume_ccy": 251474300.0,
+        "change_pct": 5.8801213960546255,
+        "volume_ccy": 111365837.0,
         "trend_score": 4
+      },
+      {
+        "symbol": "BONKUSDT",
+        "actual_symbol": "1000BONKUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 6.638464041653109,
+        "volume_ccy": 1741051100000.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "BEATUSDT",
+        "actual_symbol": "BEATUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 5.8995327102803765,
+        "volume_ccy": 107738959.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-23T17:40:16+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-10-23T22:31:24+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "TRUTHUSDT",
-      "PEPEUSDT",
-      "BSBUSDT",
-      "INITUSDT",
       "DOSUSDT",
-      "PROSUSDT",
       "MEWUSDT",
-      "ATHUSDT"
+      "TRUTHUSDT",
+      "MERLUSDT",
+      "BONKUSDT",
+      "BEATUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "TRUTHUSDT",
-      "PEPEUSDT",
-      "BSBUSDT",
-      "INITUSDT",
       "DOSUSDT",
-      "PROSUSDT",
       "MEWUSDT",
-      "ATHUSDT"
+      "TRUTHUSDT",
+      "MERLUSDT",
+      "BONKUSDT",
+      "BEATUSDT"
     ]
   },
   "signals": {
