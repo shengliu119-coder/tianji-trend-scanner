@@ -8,44 +8,56 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-23T05:33:14+08:00",
+    "last_scan_at": "2026-10-23T08:11:44+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 2,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
       "SKDDUSDT",
-      "MEWUSDT"
+      "MEWUSDT",
+      "SOXSUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "SKDDUSDT",
         "actual_symbol": "SKDDUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 15.607886089813809,
-        "volume_ccy": 761720.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 17.552466612155904,
+        "volume_ccy": 788066.0,
+        "trend_score": 7
       },
       {
         "symbol": "MEWUSDT",
         "actual_symbol": "MEWUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 6.138828633405648,
-        "volume_ccy": 15164343000.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 12.065894924309875,
+        "volume_ccy": 16859646000.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "SOXSUSDT",
+        "actual_symbol": "SOXSUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 20.544662309368192,
+        "volume_ccy": 1571995.6,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-23T05:33:14+08:00",
-    "alt_watchlist_count": 2,
+    "alt_watchlist_at": "2026-10-23T08:11:44+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
       "SKDDUSDT",
-      "MEWUSDT"
+      "MEWUSDT",
+      "SOXSUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "SKDDUSDT",
-      "MEWUSDT"
+      "MEWUSDT",
+      "SOXSUSDT"
     ]
   },
   "signals": {
