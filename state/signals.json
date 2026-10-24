@@ -8,16 +8,18 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-25T05:24:06+08:00",
+    "last_scan_at": "2026-10-25T07:34:29+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "TRUTHUSDT",
-      "ANIMEUSDT",
-      "APRUSDT",
-      "DOSUSDT",
+      "SHELLUSDT",
+      "SAHARAUSDT",
       "PARTIUSDT",
-      "CAPUSDT"
+      "AIUSDT",
+      "DOSUSDT",
+      "ORDERUSDT",
+      "LIGHTUSDT"
     ],
     "alt_watchlist": [
       {
@@ -25,75 +27,97 @@
         "actual_symbol": "TRUTHUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 7.973799599415356,
-        "volume_ccy": 79242800.0,
+        "change_pct": 10.73391529259617,
+        "volume_ccy": 96127600.0,
         "trend_score": 7
       },
       {
-        "symbol": "ANIMEUSDT",
-        "actual_symbol": "ANIMEUSDT",
+        "symbol": "SHELLUSDT",
+        "actual_symbol": "SHELLUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 25.89031339031338,
-        "volume_ccy": 4890861160.0,
-        "trend_score": 4
+        "side_score": 7,
+        "change_pct": 6.481481481481474,
+        "volume_ccy": 9196400.0,
+        "trend_score": 7
       },
       {
-        "symbol": "APRUSDT",
-        "actual_symbol": "APRUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 11.389715257118581,
-        "volume_ccy": 273728040.0,
-        "trend_score": 4
+        "symbol": "SAHARAUSDT",
+        "actual_symbol": "SAHARAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 9.72559029993619,
+        "volume_ccy": 460179530.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "PARTIUSDT",
+        "actual_symbol": "PARTIUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 8.126984126984125,
+        "volume_ccy": 74712440.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "AIUSDT",
+        "actual_symbol": "AIUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 5.356156819436767,
+        "volume_ccy": 150121700.0,
+        "trend_score": 5
       },
       {
         "symbol": "DOSUSDT",
         "actual_symbol": "DOSUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 7.338675664276676,
-        "volume_ccy": 88508750.0,
+        "change_pct": 6.375695335900726,
+        "volume_ccy": 85831070.0,
         "trend_score": 4
       },
       {
-        "symbol": "PARTIUSDT",
-        "actual_symbol": "PARTIUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 4.3223217042296955,
-        "volume_ccy": 75044170.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "CAPUSDT",
-        "actual_symbol": "CAPUSDT",
+        "symbol": "ORDERUSDT",
+        "actual_symbol": "ORDERUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 10.163518466309549,
-        "volume_ccy": 140973200.0,
+        "change_pct": 114.9317147192716,
+        "volume_ccy": 5319159790.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "LIGHTUSDT",
+        "actual_symbol": "LIGHTUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 36.58859920459566,
+        "volume_ccy": 112122794.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-25T05:24:06+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-10-25T07:34:29+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "TRUTHUSDT",
-      "ANIMEUSDT",
-      "APRUSDT",
-      "DOSUSDT",
+      "SHELLUSDT",
+      "SAHARAUSDT",
       "PARTIUSDT",
-      "CAPUSDT"
+      "AIUSDT",
+      "DOSUSDT",
+      "ORDERUSDT",
+      "LIGHTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "TRUTHUSDT",
-      "ANIMEUSDT",
-      "APRUSDT",
-      "DOSUSDT",
+      "SHELLUSDT",
+      "SAHARAUSDT",
       "PARTIUSDT",
-      "CAPUSDT"
+      "AIUSDT",
+      "DOSUSDT",
+      "ORDERUSDT",
+      "LIGHTUSDT"
     ]
   },
   "signals": {
