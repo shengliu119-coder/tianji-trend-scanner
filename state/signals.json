@@ -2,50 +2,86 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-25T00:24:15+08:00",
+    "last_scan_at": "2026-10-25T02:57:36+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 2,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
       "CAPUSDT",
-      "ANIMEUSDT"
+      "ANIMEUSDT",
+      "PARTIUSDT",
+      "LIGHTUSDT",
+      "APRUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "CAPUSDT",
         "actual_symbol": "CAPUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 4.877365101611769,
-        "volume_ccy": 143414600.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 10.266969610905994,
+        "volume_ccy": 149626900.0,
+        "trend_score": 6
       },
       {
         "symbol": "ANIMEUSDT",
         "actual_symbol": "ANIMEUSDT",
         "side": "long",
+        "side_score": 5,
+        "change_pct": 27.6647966339411,
+        "volume_ccy": 3635889370.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "PARTIUSDT",
+        "actual_symbol": "PARTIUSDT",
+        "side": "long",
         "side_score": 4,
-        "change_pct": 13.265663283164159,
-        "volume_ccy": 2820607550.0,
+        "change_pct": 4.16156670746634,
+        "volume_ccy": 81311060.0,
         "trend_score": 4
+      },
+      {
+        "symbol": "LIGHTUSDT",
+        "actual_symbol": "LIGHTUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 28.558435652569347,
+        "volume_ccy": 96524413.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "APRUSDT",
+        "actual_symbol": "APRUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 5.726141078838172,
+        "volume_ccy": 283276670.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-25T00:24:15+08:00",
-    "alt_watchlist_count": 2,
+    "alt_watchlist_at": "2026-10-25T02:57:36+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
       "CAPUSDT",
-      "ANIMEUSDT"
+      "ANIMEUSDT",
+      "PARTIUSDT",
+      "LIGHTUSDT",
+      "APRUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "CAPUSDT",
-      "ANIMEUSDT"
+      "ANIMEUSDT",
+      "PARTIUSDT",
+      "LIGHTUSDT",
+      "APRUSDT"
     ]
   },
   "signals": {
