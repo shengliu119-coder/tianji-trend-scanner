@@ -8,80 +8,44 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-24T05:45:36+08:00",
+    "last_scan_at": "2026-10-24T08:05:08+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 2,
     "last_okx_discovery_symbols": [
       "KMNOUSDT",
-      "LAUSDT",
-      "COREUSDT",
-      "INITUSDT",
-      "BLENDUSDT"
+      "OLUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "KMNOUSDT",
         "actual_symbol": "KMNOUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 8.560209424083776,
-        "volume_ccy": 47234500.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 10.020931449502879,
+        "volume_ccy": 55051700.0,
+        "trend_score": 5
       },
       {
-        "symbol": "LAUSDT",
-        "actual_symbol": "LAUSDT",
+        "symbol": "OLUSDT",
+        "actual_symbol": "OLUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 14.238165680473369,
-        "volume_ccy": 33793590.0,
+        "change_pct": 8.108536972389706,
+        "volume_ccy": 243046900.0,
         "trend_score": 4
-      },
-      {
-        "symbol": "COREUSDT",
-        "actual_symbol": "COREUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 9.526592635885445,
-        "volume_ccy": 128915171.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "INITUSDT",
-        "actual_symbol": "INITUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 16.885496183206104,
-        "volume_ccy": 60031670.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "BLENDUSDT",
-        "actual_symbol": "BLENDUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 14.51612903225806,
-        "volume_ccy": 19527470.0,
-        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-24T05:45:36+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-10-24T08:05:08+08:00",
+    "alt_watchlist_count": 2,
     "alt_watchlist_symbols": [
       "KMNOUSDT",
-      "LAUSDT",
-      "COREUSDT",
-      "INITUSDT",
-      "BLENDUSDT"
+      "OLUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "KMNOUSDT",
-      "LAUSDT",
-      "COREUSDT",
-      "INITUSDT",
-      "BLENDUSDT"
+      "OLUSDT"
     ]
   },
   "signals": {
