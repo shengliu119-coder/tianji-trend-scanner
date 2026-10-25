@@ -8,104 +8,80 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-26T05:05:14+08:00",
+    "last_scan_at": "2026-10-26T07:16:34+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "KMNOUSDT",
-      "OUSDT",
       "GRASSUSDT",
       "ENAUSDT",
-      "SNXXUSDT",
-      "CAPUSDT",
-      "INJUSDT"
+      "KMNOUSDT",
+      "DOSUSDT",
+      "CAPUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "KMNOUSDT",
-        "actual_symbol": "KMNOUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 8.108108108108107,
-        "volume_ccy": 50425700.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "OUSDT",
-        "actual_symbol": "OUSDT",
-        "side": "short",
-        "side_score": 6,
-        "change_pct": 5.050761421319789,
-        "volume_ccy": 4568130.0,
-        "trend_score": 6
-      },
       {
         "symbol": "GRASSUSDT",
         "actual_symbol": "GRASSUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 10.993129294191133,
-        "volume_ccy": 20319770.0,
-        "trend_score": 4
+        "side_score": 7,
+        "change_pct": 10.560048832595765,
+        "volume_ccy": 21676233.0,
+        "trend_score": 7
       },
       {
         "symbol": "ENAUSDT",
         "actual_symbol": "ENAUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 8.672958295987764,
-        "volume_ccy": 250296760.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 7.368857128061723,
+        "volume_ccy": 265986750.0,
+        "trend_score": 5
       },
       {
-        "symbol": "SNXXUSDT",
-        "actual_symbol": "SNXXUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 5.087064676616924,
-        "volume_ccy": 962178.0,
-        "trend_score": 4
+        "symbol": "KMNOUSDT",
+        "actual_symbol": "KMNOUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 5.372914622178618,
+        "volume_ccy": 50380400.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "DOSUSDT",
+        "actual_symbol": "DOSUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.578313253012057,
+        "volume_ccy": 42545840.0,
+        "trend_score": 5
       },
       {
         "symbol": "CAPUSDT",
         "actual_symbol": "CAPUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 36.7191467750127,
-        "volume_ccy": 1180074400.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "INJUSDT",
-        "actual_symbol": "INJUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 4.904812268640925,
-        "volume_ccy": 2020581.8,
+        "change_pct": 38.84152457372117,
+        "volume_ccy": 1207572200.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-26T05:05:14+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-10-26T07:16:34+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "KMNOUSDT",
-      "OUSDT",
       "GRASSUSDT",
       "ENAUSDT",
-      "SNXXUSDT",
-      "CAPUSDT",
-      "INJUSDT"
+      "KMNOUSDT",
+      "DOSUSDT",
+      "CAPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "KMNOUSDT",
-      "OUSDT",
       "GRASSUSDT",
       "ENAUSDT",
-      "SNXXUSDT",
-      "CAPUSDT",
-      "INJUSDT"
+      "KMNOUSDT",
+      "DOSUSDT",
+      "CAPUSDT"
     ]
   },
   "signals": {
