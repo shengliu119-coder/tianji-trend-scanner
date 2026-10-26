@@ -2,87 +2,69 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-26T20:58:40+08:00",
+    "last_scan_at": "2026-10-27T03:02:01+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "LIGHTUSDT",
-      "KMNOUSDT",
-      "KATUSDT",
+      "PARTIUSDT",
+      "RLSUSDT",
+      "TRUTHUSDT",
+      "METUSDT",
+      "DOODUSDT",
       "CHIPUSDT",
-      "ENAUSDT",
-      "GRASSUSDT",
-      "EDGEUSDT",
-      "DOODUSDT"
+      "KATUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "LIGHTUSDT",
         "actual_symbol": "LIGHTUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 16.95127030403998,
-        "volume_ccy": 37196751.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "KMNOUSDT",
-        "actual_symbol": "KMNOUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 5.574740996546616,
-        "volume_ccy": 51400300.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "KATUSDT",
-        "actual_symbol": "KATUSDT",
-        "side": "long",
         "side_score": 6,
-        "change_pct": 11.732263725244414,
-        "volume_ccy": 3168015300.0,
+        "change_pct": 18.316412859560067,
+        "volume_ccy": 43171959.0,
         "trend_score": 6
       },
       {
-        "symbol": "CHIPUSDT",
-        "actual_symbol": "CHIPUSDT",
+        "symbol": "PARTIUSDT",
+        "actual_symbol": "PARTIUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 9.646588130695703,
-        "volume_ccy": 271032200.0,
+        "change_pct": 13.56949864905435,
+        "volume_ccy": 93544780.0,
         "trend_score": 6
       },
       {
-        "symbol": "ENAUSDT",
-        "actual_symbol": "ENAUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 6.419196062346187,
-        "volume_ccy": 399600920.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "GRASSUSDT",
-        "actual_symbol": "GRASSUSDT",
+        "symbol": "RLSUSDT",
+        "actual_symbol": "RLSUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.03932420623361,
-        "volume_ccy": 20426003.0,
+        "change_pct": 19.09825606125054,
+        "volume_ccy": 11022806200.0,
         "trend_score": 5
       },
       {
-        "symbol": "EDGEUSDT",
-        "actual_symbol": "EDGEUSDT",
+        "symbol": "TRUTHUSDT",
+        "actual_symbol": "TRUTHUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 4.84790874524716,
-        "volume_ccy": 5411960.0,
+        "change_pct": 6.242644425113846,
+        "volume_ccy": 187297700.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "METUSDT",
+        "actual_symbol": "METUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 4.710992315402606,
+        "volume_ccy": 12206426.0,
         "trend_score": 5
       },
       {
@@ -90,34 +72,52 @@
         "actual_symbol": "DOODUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 54.21348314606743,
-        "volume_ccy": 80443422000.0,
+        "change_pct": 38.55337078651686,
+        "volume_ccy": 123923439000.0,
         "trend_score": 4
+      },
+      {
+        "symbol": "CHIPUSDT",
+        "actual_symbol": "CHIPUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 21.24306326304107,
+        "volume_ccy": 616388100.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "KATUSDT",
+        "actual_symbol": "KATUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 7.157157157157151,
+        "volume_ccy": 4483147800.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-26T20:58:40+08:00",
+    "alt_watchlist_at": "2026-10-27T03:02:01+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "LIGHTUSDT",
-      "KMNOUSDT",
-      "KATUSDT",
+      "PARTIUSDT",
+      "RLSUSDT",
+      "TRUTHUSDT",
+      "METUSDT",
+      "DOODUSDT",
       "CHIPUSDT",
-      "ENAUSDT",
-      "GRASSUSDT",
-      "EDGEUSDT",
-      "DOODUSDT"
+      "KATUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "LIGHTUSDT",
-      "KMNOUSDT",
-      "KATUSDT",
+      "PARTIUSDT",
+      "RLSUSDT",
+      "TRUTHUSDT",
+      "METUSDT",
+      "DOODUSDT",
       "CHIPUSDT",
-      "ENAUSDT",
-      "GRASSUSDT",
-      "EDGEUSDT",
-      "DOODUSDT"
+      "KATUSDT"
     ]
   },
   "signals": {
