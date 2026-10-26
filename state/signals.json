@@ -2,74 +2,86 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-26T09:12:29+08:00",
+    "last_scan_at": "2026-10-26T14:11:10+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "KMNOUSDT",
+      "BREVUSDT",
       "DOSUSDT",
-      "RLSUSDT",
-      "IRYSUSDT"
+      "ENAUSDT",
+      "BABYUSDT",
+      "PYTHUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "KMNOUSDT",
-        "actual_symbol": "KMNOUSDT",
+        "symbol": "BREVUSDT",
+        "actual_symbol": "BREVUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 4.1068777832756105,
-        "volume_ccy": 48114200.0,
-        "trend_score": 4
+        "side_score": 7,
+        "change_pct": 10.229409552463334,
+        "volume_ccy": 76604738.0,
+        "trend_score": 7
       },
       {
         "symbol": "DOSUSDT",
         "actual_symbol": "DOSUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 4.027664768104146,
-        "volume_ccy": 38923720.0,
+        "change_pct": 13.098770665536236,
+        "volume_ccy": 56706090.0,
         "trend_score": 4
       },
       {
-        "symbol": "RLSUSDT",
-        "actual_symbol": "RLSUSDT",
+        "symbol": "ENAUSDT",
+        "actual_symbol": "ENAUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 8.423460898502507,
+        "volume_ccy": 333690210.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "BABYUSDT",
+        "actual_symbol": "BABYUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 28.92603850050658,
-        "volume_ccy": 10693995700.0,
+        "change_pct": 5.919645585090142,
+        "volume_ccy": 540659310.0,
         "trend_score": 3
       },
       {
-        "symbol": "IRYSUSDT",
-        "actual_symbol": "IRYSUSDT",
-        "side": "long",
+        "symbol": "PYTHUSDT",
+        "actual_symbol": "PYTHUSDT",
+        "side": "short",
         "side_score": 3,
-        "change_pct": 4.536376604850218,
-        "volume_ccy": 4090344800.0,
+        "change_pct": 4.102782509937541,
+        "volume_ccy": 53365530.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-26T09:12:29+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-10-26T14:11:10+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "KMNOUSDT",
+      "BREVUSDT",
       "DOSUSDT",
-      "RLSUSDT",
-      "IRYSUSDT"
+      "ENAUSDT",
+      "BABYUSDT",
+      "PYTHUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "KMNOUSDT",
+      "BREVUSDT",
       "DOSUSDT",
-      "RLSUSDT",
-      "IRYSUSDT"
+      "ENAUSDT",
+      "BABYUSDT",
+      "PYTHUSDT"
     ]
   },
   "signals": {
