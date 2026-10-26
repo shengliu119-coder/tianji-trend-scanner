@@ -8,80 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-26T14:11:10+08:00",
+    "last_scan_at": "2026-10-26T20:58:40+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "BREVUSDT",
-      "DOSUSDT",
+      "LIGHTUSDT",
+      "KMNOUSDT",
+      "KATUSDT",
+      "CHIPUSDT",
       "ENAUSDT",
-      "BABYUSDT",
-      "PYTHUSDT"
+      "GRASSUSDT",
+      "EDGEUSDT",
+      "DOODUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "BREVUSDT",
-        "actual_symbol": "BREVUSDT",
+        "symbol": "LIGHTUSDT",
+        "actual_symbol": "LIGHTUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 10.229409552463334,
-        "volume_ccy": 76604738.0,
+        "change_pct": 16.95127030403998,
+        "volume_ccy": 37196751.0,
         "trend_score": 7
       },
       {
-        "symbol": "DOSUSDT",
-        "actual_symbol": "DOSUSDT",
+        "symbol": "KMNOUSDT",
+        "actual_symbol": "KMNOUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 13.098770665536236,
-        "volume_ccy": 56706090.0,
-        "trend_score": 4
+        "side_score": 7,
+        "change_pct": 5.574740996546616,
+        "volume_ccy": 51400300.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "KATUSDT",
+        "actual_symbol": "KATUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 11.732263725244414,
+        "volume_ccy": 3168015300.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "CHIPUSDT",
+        "actual_symbol": "CHIPUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 9.646588130695703,
+        "volume_ccy": 271032200.0,
+        "trend_score": 6
       },
       {
         "symbol": "ENAUSDT",
         "actual_symbol": "ENAUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 8.423460898502507,
-        "volume_ccy": 333690210.0,
-        "trend_score": 4
+        "side_score": 6,
+        "change_pct": 6.419196062346187,
+        "volume_ccy": 399600920.0,
+        "trend_score": 6
       },
       {
-        "symbol": "BABYUSDT",
-        "actual_symbol": "BABYUSDT",
+        "symbol": "GRASSUSDT",
+        "actual_symbol": "GRASSUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 5.919645585090142,
-        "volume_ccy": 540659310.0,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 5.03932420623361,
+        "volume_ccy": 20426003.0,
+        "trend_score": 5
       },
       {
-        "symbol": "PYTHUSDT",
-        "actual_symbol": "PYTHUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 4.102782509937541,
-        "volume_ccy": 53365530.0,
-        "trend_score": 3
+        "symbol": "EDGEUSDT",
+        "actual_symbol": "EDGEUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.84790874524716,
+        "volume_ccy": 5411960.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "DOODUSDT",
+        "actual_symbol": "DOODUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 54.21348314606743,
+        "volume_ccy": 80443422000.0,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-10-26T14:11:10+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-10-26T20:58:40+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "BREVUSDT",
-      "DOSUSDT",
+      "LIGHTUSDT",
+      "KMNOUSDT",
+      "KATUSDT",
+      "CHIPUSDT",
       "ENAUSDT",
-      "BABYUSDT",
-      "PYTHUSDT"
+      "GRASSUSDT",
+      "EDGEUSDT",
+      "DOODUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "BREVUSDT",
-      "DOSUSDT",
+      "LIGHTUSDT",
+      "KMNOUSDT",
+      "KATUSDT",
+      "CHIPUSDT",
       "ENAUSDT",
-      "BABYUSDT",
-      "PYTHUSDT"
+      "GRASSUSDT",
+      "EDGEUSDT",
+      "DOODUSDT"
     ]
   },
   "signals": {
