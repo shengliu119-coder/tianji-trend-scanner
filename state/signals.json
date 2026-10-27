@@ -8,26 +8,53 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-27T07:02:33+08:00",
+    "last_scan_at": "2026-10-27T09:52:08+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "BLENDUSDT",
-      "PARTIUSDT",
-      "KATUSDT",
       "DOODUSDT",
-      "LIGHTUSDT",
       "RLSUSDT",
-      "TRUTHUSDT"
+      "KATUSDT",
+      "METUSDT",
+      "PARTIUSDT",
+      "LIGHTUSDT",
+      "BLENDUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "BLENDUSDT",
-        "actual_symbol": "BLENDUSDT",
+        "symbol": "DOODUSDT",
+        "actual_symbol": "DOODUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 64.44605358435915,
+        "volume_ccy": 145699013000.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "RLSUSDT",
+        "actual_symbol": "RLSUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 16.994777018883095,
+        "volume_ccy": 10963514900.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "KATUSDT",
+        "actual_symbol": "KATUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 11.011293634496912,
+        "volume_ccy": 5023165300.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "METUSDT",
+        "actual_symbol": "METUSDT",
         "side": "short",
         "side_score": 6,
-        "change_pct": 4.723262588431131,
-        "volume_ccy": 26252760.0,
+        "change_pct": 7.2105619498984375,
+        "volume_ccy": 12934218.0,
         "trend_score": 6
       },
       {
@@ -35,77 +62,50 @@
         "actual_symbol": "PARTIUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 15.470111144487838,
-        "volume_ccy": 103285300.0,
+        "change_pct": 15.882174309140595,
+        "volume_ccy": 111197820.0,
         "trend_score": 5
-      },
-      {
-        "symbol": "KATUSDT",
-        "actual_symbol": "KATUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 10.335195530726264,
-        "volume_ccy": 4592591400.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "DOODUSDT",
-        "actual_symbol": "DOODUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 39.16725476358502,
-        "volume_ccy": 130089772000.0,
-        "trend_score": 4
       },
       {
         "symbol": "LIGHTUSDT",
         "actual_symbol": "LIGHTUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 19.070373588184196,
-        "volume_ccy": 43944331.0,
+        "change_pct": 15.784946236559131,
+        "volume_ccy": 44755803.0,
         "trend_score": 4
       },
       {
-        "symbol": "RLSUSDT",
-        "actual_symbol": "RLSUSDT",
-        "side": "long",
+        "symbol": "BLENDUSDT",
+        "actual_symbol": "BLENDUSDT",
+        "side": "short",
         "side_score": 4,
-        "change_pct": 17.805200528867335,
-        "volume_ccy": 11154395800.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "TRUTHUSDT",
-        "actual_symbol": "TRUTHUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 5.013286999182353,
-        "volume_ccy": 206761400.0,
+        "change_pct": 8.975175047740303,
+        "volume_ccy": 15988320.0,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-10-27T07:02:33+08:00",
+    "alt_watchlist_at": "2026-10-27T09:52:08+08:00",
     "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
-      "BLENDUSDT",
-      "PARTIUSDT",
-      "KATUSDT",
       "DOODUSDT",
-      "LIGHTUSDT",
       "RLSUSDT",
-      "TRUTHUSDT"
+      "KATUSDT",
+      "METUSDT",
+      "PARTIUSDT",
+      "LIGHTUSDT",
+      "BLENDUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "BLENDUSDT",
-      "PARTIUSDT",
-      "KATUSDT",
       "DOODUSDT",
-      "LIGHTUSDT",
       "RLSUSDT",
-      "TRUTHUSDT"
+      "KATUSDT",
+      "METUSDT",
+      "PARTIUSDT",
+      "LIGHTUSDT",
+      "BLENDUSDT"
     ]
   },
   "signals": {
