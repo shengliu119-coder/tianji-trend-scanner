@@ -8,116 +8,104 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-28T02:46:04+08:00",
+    "last_scan_at": "2026-10-28T06:41:58+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
+      "DOSUSDT",
       "LIGHTUSDT",
-      "LABUSDT",
       "GRVTUSDT",
       "AZTECUSDT",
       "ZAMAUSDT",
       "APRUSDT",
-      "UPUSDT",
-      "INITUSDT"
+      "GRASSUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "DOSUSDT",
+        "actual_symbol": "DOSUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 12.178676780446683,
+        "volume_ccy": 39894650.0,
+        "trend_score": 6
+      },
       {
         "symbol": "LIGHTUSDT",
         "actual_symbol": "LIGHTUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 8.816120906801016,
-        "volume_ccy": 16302564.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "LABUSDT",
-        "actual_symbol": "LABUSDT",
-        "side": "long",
         "side_score": 6,
-        "change_pct": 18.973837947675886,
-        "volume_ccy": 184002380.0,
+        "change_pct": 10.382513661202173,
+        "volume_ccy": 15568980.0,
         "trend_score": 6
       },
       {
         "symbol": "GRVTUSDT",
         "actual_symbol": "GRVTUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 23.286515459824304,
-        "volume_ccy": 95418930.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 12.85386381025248,
+        "volume_ccy": 99336080.0,
+        "trend_score": 4
       },
       {
         "symbol": "AZTECUSDT",
         "actual_symbol": "AZTECUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 10.507025045815514,
-        "volume_ccy": 25977000.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 8.54700854700856,
+        "volume_ccy": 30281800.0,
+        "trend_score": 4
       },
       {
         "symbol": "ZAMAUSDT",
         "actual_symbol": "ZAMAUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 7.766853932584279,
-        "volume_ccy": 61072980.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 8.102434928631407,
+        "volume_ccy": 76482000.0,
+        "trend_score": 4
       },
       {
         "symbol": "APRUSDT",
         "actual_symbol": "APRUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 40.99939795304034,
-        "volume_ccy": 1795324690.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 50.26161895967992,
+        "volume_ccy": 2056414490.0,
+        "trend_score": 3
       },
       {
-        "symbol": "UPUSDT",
-        "actual_symbol": "UPUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 15.286624203821642,
-        "volume_ccy": 13257690.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "INITUSDT",
-        "actual_symbol": "INITUSDT",
+        "symbol": "GRASSUSDT",
+        "actual_symbol": "GRASSUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 31.953867028493892,
-        "volume_ccy": 33426590.0,
+        "change_pct": 10.662695457930008,
+        "volume_ccy": 17133340.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-28T02:46:04+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-10-28T06:41:58+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
+      "DOSUSDT",
       "LIGHTUSDT",
-      "LABUSDT",
       "GRVTUSDT",
       "AZTECUSDT",
       "ZAMAUSDT",
       "APRUSDT",
-      "UPUSDT",
-      "INITUSDT"
+      "GRASSUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "DOSUSDT",
       "LIGHTUSDT",
-      "LABUSDT",
       "GRVTUSDT",
       "AZTECUSDT",
       "ZAMAUSDT",
       "APRUSDT",
-      "UPUSDT",
-      "INITUSDT"
+      "GRASSUSDT"
     ]
   },
   "signals": {
