@@ -2,68 +2,41 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-27T09:52:08+08:00",
+    "last_scan_at": "2026-10-27T15:07:09+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "DOODUSDT",
-      "RLSUSDT",
-      "KATUSDT",
-      "METUSDT",
       "PARTIUSDT",
+      "DOODUSDT",
       "LIGHTUSDT",
-      "BLENDUSDT"
+      "TRUTHUSDT",
+      "NIGHTUSDT",
+      "KORUUSDT",
+      "SOXLUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "DOODUSDT",
-        "actual_symbol": "DOODUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 64.44605358435915,
-        "volume_ccy": 145699013000.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "RLSUSDT",
-        "actual_symbol": "RLSUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 16.994777018883095,
-        "volume_ccy": 10963514900.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "KATUSDT",
-        "actual_symbol": "KATUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 11.011293634496912,
-        "volume_ccy": 5023165300.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "METUSDT",
-        "actual_symbol": "METUSDT",
-        "side": "short",
-        "side_score": 6,
-        "change_pct": 7.2105619498984375,
-        "volume_ccy": 12934218.0,
-        "trend_score": 6
-      },
       {
         "symbol": "PARTIUSDT",
         "actual_symbol": "PARTIUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 15.882174309140595,
-        "volume_ccy": 111197820.0,
+        "change_pct": 15.442278860569722,
+        "volume_ccy": 119557980.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "DOODUSDT",
+        "actual_symbol": "DOODUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 13.391038696537667,
+        "volume_ccy": 173504571000.0,
         "trend_score": 5
       },
       {
@@ -71,41 +44,68 @@
         "actual_symbol": "LIGHTUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 15.784946236559131,
-        "volume_ccy": 44755803.0,
+        "change_pct": 9.423868312757214,
+        "volume_ccy": 43117686.0,
         "trend_score": 4
       },
       {
-        "symbol": "BLENDUSDT",
-        "actual_symbol": "BLENDUSDT",
+        "symbol": "TRUTHUSDT",
+        "actual_symbol": "TRUTHUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 7.653559496273456,
+        "volume_ccy": 219157400.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "NIGHTUSDT",
+        "actual_symbol": "NIGHTUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 7.570883315158129,
+        "volume_ccy": 147861000.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "KORUUSDT",
+        "actual_symbol": "KORUUSDT",
         "side": "short",
-        "side_score": 4,
-        "change_pct": 8.975175047740303,
-        "volume_ccy": 15988320.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 7.485604606525905,
+        "volume_ccy": 7197608.99,
+        "trend_score": 3
+      },
+      {
+        "symbol": "SOXLUSDT",
+        "actual_symbol": "SOXLUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 6.200337105706708,
+        "volume_ccy": 5289502.78,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-27T09:52:08+08:00",
+    "alt_watchlist_at": "2026-10-27T15:07:09+08:00",
     "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
-      "DOODUSDT",
-      "RLSUSDT",
-      "KATUSDT",
-      "METUSDT",
       "PARTIUSDT",
+      "DOODUSDT",
       "LIGHTUSDT",
-      "BLENDUSDT"
+      "TRUTHUSDT",
+      "NIGHTUSDT",
+      "KORUUSDT",
+      "SOXLUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "DOODUSDT",
-      "RLSUSDT",
-      "KATUSDT",
-      "METUSDT",
       "PARTIUSDT",
+      "DOODUSDT",
       "LIGHTUSDT",
-      "BLENDUSDT"
+      "TRUTHUSDT",
+      "NIGHTUSDT",
+      "KORUUSDT",
+      "SOXLUSDT"
     ]
   },
   "signals": {
