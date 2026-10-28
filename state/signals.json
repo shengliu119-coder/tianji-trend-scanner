@@ -8,35 +8,54 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-28T06:41:58+08:00",
+    "last_scan_at": "2026-10-28T09:47:47+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "PEPEUSDT",
+      "ANIMEUSDT",
+      "HUMAUSDT",
       "DOSUSDT",
-      "LIGHTUSDT",
       "GRVTUSDT",
-      "AZTECUSDT",
-      "ZAMAUSDT",
-      "APRUSDT",
-      "GRASSUSDT"
+      "LIGHTUSDT",
+      "KORUUSDT",
+      "SOXLUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "PEPEUSDT",
+        "actual_symbol": "1000PEPEUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 13.282548476454284,
+        "volume_ccy": 30072911000000.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "ANIMEUSDT",
+        "actual_symbol": "ANIMEUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 9.608411892675853,
+        "volume_ccy": 3780362670.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "HUMAUSDT",
+        "actual_symbol": "HUMAUSDT",
+        "side": "short",
+        "side_score": 6,
+        "change_pct": 17.29500471253534,
+        "volume_ccy": 1657607300.0,
+        "trend_score": 6
+      },
       {
         "symbol": "DOSUSDT",
         "actual_symbol": "DOSUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 12.178676780446683,
-        "volume_ccy": 39894650.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "LIGHTUSDT",
-        "actual_symbol": "LIGHTUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 10.382513661202173,
-        "volume_ccy": 15568980.0,
+        "change_pct": 11.720698254364079,
+        "volume_ccy": 41489240.0,
         "trend_score": 6
       },
       {
@@ -44,68 +63,61 @@
         "actual_symbol": "GRVTUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 12.85386381025248,
-        "volume_ccy": 99336080.0,
+        "change_pct": 11.835691637878002,
+        "volume_ccy": 97974690.0,
         "trend_score": 4
       },
       {
-        "symbol": "AZTECUSDT",
-        "actual_symbol": "AZTECUSDT",
+        "symbol": "LIGHTUSDT",
+        "actual_symbol": "LIGHTUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 8.54700854700856,
-        "volume_ccy": 30281800.0,
+        "change_pct": 10.751488095238109,
+        "volume_ccy": 14283657.0,
         "trend_score": 4
       },
       {
-        "symbol": "ZAMAUSDT",
-        "actual_symbol": "ZAMAUSDT",
+        "symbol": "KORUUSDT",
+        "actual_symbol": "KORUUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 8.102434928631407,
-        "volume_ccy": 76482000.0,
+        "change_pct": 10.186757215619705,
+        "volume_ccy": 7723497.26,
         "trend_score": 4
       },
       {
-        "symbol": "APRUSDT",
-        "actual_symbol": "APRUSDT",
+        "symbol": "SOXLUSDT",
+        "actual_symbol": "SOXLUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 50.26161895967992,
-        "volume_ccy": 2056414490.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "GRASSUSDT",
-        "actual_symbol": "GRASSUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 10.662695457930008,
-        "volume_ccy": 17133340.0,
-        "trend_score": 3
+        "side_score": 4,
+        "change_pct": 10.026780931976432,
+        "volume_ccy": 5724380.83,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-10-28T06:41:58+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-10-28T09:47:47+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "PEPEUSDT",
+      "ANIMEUSDT",
+      "HUMAUSDT",
       "DOSUSDT",
-      "LIGHTUSDT",
       "GRVTUSDT",
-      "AZTECUSDT",
-      "ZAMAUSDT",
-      "APRUSDT",
-      "GRASSUSDT"
+      "LIGHTUSDT",
+      "KORUUSDT",
+      "SOXLUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "PEPEUSDT",
+      "ANIMEUSDT",
+      "HUMAUSDT",
       "DOSUSDT",
-      "LIGHTUSDT",
       "GRVTUSDT",
-      "AZTECUSDT",
-      "ZAMAUSDT",
-      "APRUSDT",
-      "GRASSUSDT"
+      "LIGHTUSDT",
+      "KORUUSDT",
+      "SOXLUSDT"
     ]
   },
   "signals": {
