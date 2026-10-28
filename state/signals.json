@@ -8,116 +8,104 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-28T09:47:47+08:00",
+    "last_scan_at": "2026-10-28T15:29:50+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "PEPEUSDT",
-      "ANIMEUSDT",
-      "HUMAUSDT",
+      "ZAMAUSDT",
+      "ETHWUSDT",
       "DOSUSDT",
+      "PEPEUSDT",
       "GRVTUSDT",
-      "LIGHTUSDT",
-      "KORUUSDT",
-      "SOXLUSDT"
+      "BEATUSDT",
+      "SNXXUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "PEPEUSDT",
-        "actual_symbol": "1000PEPEUSDT",
+        "symbol": "ZAMAUSDT",
+        "actual_symbol": "ZAMAUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 13.282548476454284,
-        "volume_ccy": 30072911000000.0,
+        "change_pct": 9.385879403982726,
+        "volume_ccy": 94610170.0,
         "trend_score": 7
       },
       {
-        "symbol": "ANIMEUSDT",
-        "actual_symbol": "ANIMEUSDT",
+        "symbol": "ETHWUSDT",
+        "actual_symbol": "ETHWUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 9.608411892675853,
-        "volume_ccy": 3780362670.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "HUMAUSDT",
-        "actual_symbol": "HUMAUSDT",
-        "side": "short",
         "side_score": 6,
-        "change_pct": 17.29500471253534,
-        "volume_ccy": 1657607300.0,
+        "change_pct": 22.429481346678802,
+        "volume_ccy": 5970607.3,
         "trend_score": 6
       },
       {
         "symbol": "DOSUSDT",
         "actual_symbol": "DOSUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 11.720698254364079,
-        "volume_ccy": 41489240.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 15.474696779590131,
+        "volume_ccy": 45458260.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "PEPEUSDT",
+        "actual_symbol": "1000PEPEUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 10.813068498236483,
+        "volume_ccy": 47680169000000.0,
+        "trend_score": 5
       },
       {
         "symbol": "GRVTUSDT",
         "actual_symbol": "GRVTUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 11.835691637878002,
-        "volume_ccy": 97974690.0,
+        "change_pct": 9.385511915478274,
+        "volume_ccy": 100395160.0,
         "trend_score": 4
       },
       {
-        "symbol": "LIGHTUSDT",
-        "actual_symbol": "LIGHTUSDT",
+        "symbol": "BEATUSDT",
+        "actual_symbol": "BEATUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 10.751488095238109,
-        "volume_ccy": 14283657.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 27.78512198053117,
+        "volume_ccy": 665896656.0,
+        "trend_score": 3
       },
       {
-        "symbol": "KORUUSDT",
-        "actual_symbol": "KORUUSDT",
+        "symbol": "SNXXUSDT",
+        "actual_symbol": "SNXXUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 10.186757215619705,
-        "volume_ccy": 7723497.26,
-        "trend_score": 4
-      },
-      {
-        "symbol": "SOXLUSDT",
-        "actual_symbol": "SOXLUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 10.026780931976432,
-        "volume_ccy": 5724380.83,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 17.820254066247173,
+        "volume_ccy": 10769092.5,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-28T09:47:47+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-10-28T15:29:49+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
-      "PEPEUSDT",
-      "ANIMEUSDT",
-      "HUMAUSDT",
+      "ZAMAUSDT",
+      "ETHWUSDT",
       "DOSUSDT",
+      "PEPEUSDT",
       "GRVTUSDT",
-      "LIGHTUSDT",
-      "KORUUSDT",
-      "SOXLUSDT"
+      "BEATUSDT",
+      "SNXXUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "PEPEUSDT",
-      "ANIMEUSDT",
-      "HUMAUSDT",
+      "ZAMAUSDT",
+      "ETHWUSDT",
       "DOSUSDT",
+      "PEPEUSDT",
       "GRVTUSDT",
-      "LIGHTUSDT",
-      "KORUUSDT",
-      "SOXLUSDT"
+      "BEATUSDT",
+      "SNXXUSDT"
     ]
   },
   "signals": {
