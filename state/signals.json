@@ -2,86 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "强",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-29T17:07:48+08:00",
+    "last_scan_at": "2026-10-30T00:09:49+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "OFCUSDT",
-      "BLENDUSDT",
-      "APRUSDT",
-      "KATUSDT",
-      "OLUSDT"
+      "ENAUSDT",
+      "ZECUSDT",
+      "PENGUUSDT",
+      "INITUSDT",
+      "HUMAUSDT",
+      "VVVUSDT",
+      "PUMPUSDT",
+      "BEATUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "OFCUSDT",
-        "actual_symbol": "OFCUSDT",
+        "symbol": "ENAUSDT",
+        "actual_symbol": "ENAUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 5.219565557118301,
-        "volume_ccy": 192251200.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 9.08859470468432,
+        "volume_ccy": 414251100.0,
+        "trend_score": 7
       },
       {
-        "symbol": "BLENDUSDT",
-        "actual_symbol": "BLENDUSDT",
+        "symbol": "ZECUSDT",
+        "actual_symbol": "ZECUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 6.40149793954968,
+        "volume_ccy": 1037291.49,
+        "trend_score": 7
+      },
+      {
+        "symbol": "PENGUUSDT",
+        "actual_symbol": "PENGUUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 5.060676478182276,
+        "volume_ccy": 2866550300.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "INITUSDT",
+        "actual_symbol": "INITUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 13.669346930770734,
-        "volume_ccy": 115467740.0,
+        "change_pct": 14.781530833591574,
+        "volume_ccy": 405904400.0,
         "trend_score": 5
       },
       {
-        "symbol": "APRUSDT",
-        "actual_symbol": "APRUSDT",
+        "symbol": "HUMAUSDT",
+        "actual_symbol": "HUMAUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 10.937499999999995,
-        "volume_ccy": 1202228700.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 8.059149722735667,
+        "volume_ccy": 441564400.0,
+        "trend_score": 4
       },
       {
-        "symbol": "KATUSDT",
-        "actual_symbol": "KATUSDT",
+        "symbol": "VVVUSDT",
+        "actual_symbol": "VVVUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 5.391022674687637,
-        "volume_ccy": 3258507000.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 8.00300739317489,
+        "volume_ccy": 415511.7,
+        "trend_score": 4
       },
       {
-        "symbol": "OLUSDT",
-        "actual_symbol": "OLUSDT",
+        "symbol": "PUMPUSDT",
+        "actual_symbol": "PUMPUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 7.774607703281028,
+        "volume_ccy": 35484333000.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "BEATUSDT",
+        "actual_symbol": "BEATUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 18.91046741277156,
-        "volume_ccy": 1298639100.0,
+        "change_pct": 29.26205552849488,
+        "volume_ccy": 707263003.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-29T17:07:48+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-10-30T00:09:49+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "OFCUSDT",
-      "BLENDUSDT",
-      "APRUSDT",
-      "KATUSDT",
-      "OLUSDT"
+      "ENAUSDT",
+      "ZECUSDT",
+      "PENGUUSDT",
+      "INITUSDT",
+      "HUMAUSDT",
+      "VVVUSDT",
+      "PUMPUSDT",
+      "BEATUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "OFCUSDT",
-      "BLENDUSDT",
-      "APRUSDT",
-      "KATUSDT",
-      "OLUSDT"
+      "ENAUSDT",
+      "ZECUSDT",
+      "PENGUUSDT",
+      "INITUSDT",
+      "HUMAUSDT",
+      "VVVUSDT",
+      "PUMPUSDT",
+      "BEATUSDT"
     ]
   },
   "signals": {
