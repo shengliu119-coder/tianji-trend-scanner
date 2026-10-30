@@ -8,68 +8,56 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-30T08:58:23+08:00",
+    "last_scan_at": "2026-10-30T14:41:28+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "SOXSUSDT",
       "SKDDUSDT",
-      "TRXUSDT",
-      "CAPUSDT"
+      "DOODUSDT",
+      "SOXSUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "SOXSUSDT",
-        "actual_symbol": "SOXSUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 15.856838113297004,
-        "volume_ccy": 1164007.1,
-        "trend_score": 5
-      },
       {
         "symbol": "SKDDUSDT",
         "actual_symbol": "SKDDUSDT",
         "side": "short",
-        "side_score": 4,
-        "change_pct": 16.07258587167855,
-        "volume_ccy": 899635.7,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 10.636386964331535,
+        "volume_ccy": 960701.9,
+        "trend_score": 5
       },
       {
-        "symbol": "TRXUSDT",
-        "actual_symbol": "TRXUSDT",
+        "symbol": "DOODUSDT",
+        "actual_symbol": "DOODUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 8.834523628627863,
-        "volume_ccy": 279674210.0,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 5.521811154058534,
+        "volume_ccy": 16514995000.0,
+        "trend_score": 5
       },
       {
-        "symbol": "CAPUSDT",
-        "actual_symbol": "CAPUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 8.80584192439863,
-        "volume_ccy": 306698500.0,
-        "trend_score": 3
+        "symbol": "SOXSUSDT",
+        "actual_symbol": "SOXSUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 10.647181628392492,
+        "volume_ccy": 1209627.5,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-10-30T08:58:23+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-10-30T14:41:28+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "SOXSUSDT",
       "SKDDUSDT",
-      "TRXUSDT",
-      "CAPUSDT"
+      "DOODUSDT",
+      "SOXSUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "SOXSUSDT",
       "SKDDUSDT",
-      "TRXUSDT",
-      "CAPUSDT"
+      "DOODUSDT",
+      "SOXSUSDT"
     ]
   },
   "signals": {
