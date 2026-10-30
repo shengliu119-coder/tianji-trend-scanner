@@ -2,50 +2,74 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-30T05:07:27+08:00",
+    "last_scan_at": "2026-10-30T08:58:23+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 2,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
       "SOXSUSDT",
-      "SKDDUSDT"
+      "SKDDUSDT",
+      "TRXUSDT",
+      "CAPUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "SOXSUSDT",
         "actual_symbol": "SOXSUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 11.145584725536997,
-        "volume_ccy": 1135549.2,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 15.856838113297004,
+        "volume_ccy": 1164007.1,
+        "trend_score": 5
       },
       {
         "symbol": "SKDDUSDT",
         "actual_symbol": "SKDDUSDT",
         "side": "short",
         "side_score": 4,
-        "change_pct": 6.093552465233873,
-        "volume_ccy": 790171.8,
+        "change_pct": 16.07258587167855,
+        "volume_ccy": 899635.7,
         "trend_score": 4
+      },
+      {
+        "symbol": "TRXUSDT",
+        "actual_symbol": "TRXUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 8.834523628627863,
+        "volume_ccy": 279674210.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "CAPUSDT",
+        "actual_symbol": "CAPUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 8.80584192439863,
+        "volume_ccy": 306698500.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-30T05:07:27+08:00",
-    "alt_watchlist_count": 2,
+    "alt_watchlist_at": "2026-10-30T08:58:23+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
       "SOXSUSDT",
-      "SKDDUSDT"
+      "SKDDUSDT",
+      "TRXUSDT",
+      "CAPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "SOXSUSDT",
-      "SKDDUSDT"
+      "SKDDUSDT",
+      "TRXUSDT",
+      "CAPUSDT"
     ]
   },
   "signals": {
