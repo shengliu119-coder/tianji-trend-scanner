@@ -2,98 +2,98 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-30T21:36:04+08:00",
+    "last_scan_at": "2026-10-31T02:53:39+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "BREVUSDT",
-      "SKDDUSDT",
-      "DOODUSDT",
       "SOXSUSDT",
-      "CAPUSDT",
-      "BEATUSDT"
+      "DOODUSDT",
+      "BREVUSDT",
+      "BLURUSDT",
+      "DOSUSDT",
+      "CAPUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "BREVUSDT",
-        "actual_symbol": "BREVUSDT",
+        "symbol": "SOXSUSDT",
+        "actual_symbol": "SOXSUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 6.217488233837003,
-        "volume_ccy": 16928218.0,
+        "change_pct": 28.225616921269108,
+        "volume_ccy": 1805414.6,
         "trend_score": 6
-      },
-      {
-        "symbol": "SKDDUSDT",
-        "actual_symbol": "SKDDUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 13.258398262868837,
-        "volume_ccy": 999173.1,
-        "trend_score": 5
       },
       {
         "symbol": "DOODUSDT",
         "actual_symbol": "DOODUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 9.310151430173859,
-        "volume_ccy": 18389602000.0,
+        "change_pct": 11.920903954802261,
+        "volume_ccy": 20694141000.0,
         "trend_score": 5
       },
       {
-        "symbol": "SOXSUSDT",
-        "actual_symbol": "SOXSUSDT",
+        "symbol": "BREVUSDT",
+        "actual_symbol": "BREVUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.7721564406171435,
+        "volume_ccy": 19603132.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "BLURUSDT",
+        "actual_symbol": "BLURUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 18.513290990355223,
-        "volume_ccy": 1382490.3,
+        "change_pct": 16.846057571964952,
+        "volume_ccy": 2114962390.0,
         "trend_score": 4
+      },
+      {
+        "symbol": "DOSUSDT",
+        "actual_symbol": "DOSUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 7.700421940928272,
+        "volume_ccy": 42819980.0,
+        "trend_score": 3
       },
       {
         "symbol": "CAPUSDT",
         "actual_symbol": "CAPUSDT",
         "side": "short",
         "side_score": 3,
-        "change_pct": 9.379235565193813,
-        "volume_ccy": 285290800.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "BEATUSDT",
-        "actual_symbol": "BEATUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 4.338989940046739,
-        "volume_ccy": 631578554.0,
+        "change_pct": 7.304045934036591,
+        "volume_ccy": 282377900.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-30T21:36:04+08:00",
+    "alt_watchlist_at": "2026-10-31T02:53:39+08:00",
     "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "BREVUSDT",
-      "SKDDUSDT",
-      "DOODUSDT",
       "SOXSUSDT",
-      "CAPUSDT",
-      "BEATUSDT"
+      "DOODUSDT",
+      "BREVUSDT",
+      "BLURUSDT",
+      "DOSUSDT",
+      "CAPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "BREVUSDT",
-      "SKDDUSDT",
-      "DOODUSDT",
       "SOXSUSDT",
-      "CAPUSDT",
-      "BEATUSDT"
+      "DOODUSDT",
+      "BREVUSDT",
+      "BLURUSDT",
+      "DOSUSDT",
+      "CAPUSDT"
     ]
   },
   "signals": {
