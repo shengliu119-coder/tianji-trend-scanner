@@ -8,116 +8,92 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-31T21:59:59+08:00",
+    "last_scan_at": "2026-11-01T02:08:11+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "WOOUSDT",
+      "TRIAUSDT",
       "PYTHUSDT",
-      "EDENUSDT",
+      "CELOUSDT",
       "WETUSDT",
-      "GLMUSDT",
-      "EIGENUSDT",
-      "PENDLEUSDT",
-      "COAIUSDT"
+      "MORPHOUSDT",
+      "PENDLEUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "WOOUSDT",
-        "actual_symbol": "WOOUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 12.322274881516579,
-        "volume_ccy": 171630060.0,
-        "trend_score": 7
+        "symbol": "TRIAUSDT",
+        "actual_symbol": "TRIAUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 8.684965178205651,
+        "volume_ccy": 167678200.0,
+        "trend_score": 5
       },
       {
         "symbol": "PYTHUSDT",
         "actual_symbol": "PYTHUSDT",
         "side": "short",
-        "side_score": 6,
-        "change_pct": 5.982201713909045,
-        "volume_ccy": 67553870.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 8.074636723910157,
+        "volume_ccy": 67369530.0,
+        "trend_score": 5
       },
       {
-        "symbol": "EDENUSDT",
-        "actual_symbol": "EDENUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 18.439158639669746,
-        "volume_ccy": 85530507.0,
-        "trend_score": 4
+        "symbol": "CELOUSDT",
+        "actual_symbol": "CELOUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 7.269881917769226,
+        "volume_ccy": 10151369.0,
+        "trend_score": 5
       },
       {
         "symbol": "WETUSDT",
         "actual_symbol": "WETUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 15.197393637408968,
-        "volume_ccy": 930375180.0,
+        "change_pct": 15.15151515151516,
+        "volume_ccy": 1120358100.0,
         "trend_score": 4
       },
       {
-        "symbol": "GLMUSDT",
-        "actual_symbol": "GLMUSDT",
+        "symbol": "MORPHOUSDT",
+        "actual_symbol": "MORPHOUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 9.82184937317372,
-        "volume_ccy": 4946800.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "EIGENUSDT",
-        "actual_symbol": "EIGENUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 9.355026147588614,
-        "volume_ccy": 18501661.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 15.638080404944995,
+        "volume_ccy": 3916036.0,
+        "trend_score": 3
       },
       {
         "symbol": "PENDLEUSDT",
         "actual_symbol": "PENDLEUSDT",
         "side": "short",
         "side_score": 3,
-        "change_pct": 10.638297872340436,
-        "volume_ccy": 3127978.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "COAIUSDT",
-        "actual_symbol": "COAIUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 9.638554216867483,
-        "volume_ccy": 1400360.0,
+        "change_pct": 6.545247581104167,
+        "volume_ccy": 2626583.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-31T21:59:59+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-11-01T02:08:11+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "WOOUSDT",
+      "TRIAUSDT",
       "PYTHUSDT",
-      "EDENUSDT",
+      "CELOUSDT",
       "WETUSDT",
-      "GLMUSDT",
-      "EIGENUSDT",
-      "PENDLEUSDT",
-      "COAIUSDT"
+      "MORPHOUSDT",
+      "PENDLEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "WOOUSDT",
+      "TRIAUSDT",
       "PYTHUSDT",
-      "EDENUSDT",
+      "CELOUSDT",
       "WETUSDT",
-      "GLMUSDT",
-      "EIGENUSDT",
-      "PENDLEUSDT",
-      "COAIUSDT"
+      "MORPHOUSDT",
+      "PENDLEUSDT"
     ]
   },
   "signals": {
