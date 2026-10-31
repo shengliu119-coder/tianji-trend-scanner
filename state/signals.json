@@ -8,44 +8,52 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-10-31T06:49:13+08:00",
+    "last_scan_at": "2026-10-31T09:55:19+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
+      "WETUSDT",
+      "SHELLUSDT",
       "WOOUSDT",
-      "CAPUSDT",
-      "DOODUSDT",
+      "TRUSTUSDT",
       "BREVUSDT",
-      "SOXSUSDT",
-      "PEPEUSDT",
-      "PROVEUSDT"
+      "ZKPUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "WETUSDT",
+        "actual_symbol": "WETUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 26.698356110120812,
+        "volume_ccy": 130469310.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "SHELLUSDT",
+        "actual_symbol": "SHELLUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 14.580529385374605,
+        "volume_ccy": 24265750.0,
+        "trend_score": 7
+      },
       {
         "symbol": "WOOUSDT",
         "actual_symbol": "WOOUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 13.71371371371371,
-        "volume_ccy": 60265920.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 18.756476683937816,
+        "volume_ccy": 96155810.0,
+        "trend_score": 5
       },
       {
-        "symbol": "CAPUSDT",
-        "actual_symbol": "CAPUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 7.681402242557021,
-        "volume_ccy": 265869200.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "DOODUSDT",
-        "actual_symbol": "DOODUSDT",
+        "symbol": "TRUSTUSDT",
+        "actual_symbol": "TRUSTUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 11.363636363636358,
-        "volume_ccy": 19802499000.0,
+        "change_pct": 13.958762886597933,
+        "volume_ccy": 8649220.0,
         "trend_score": 5
       },
       {
@@ -53,59 +61,39 @@
         "actual_symbol": "BREVUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 8.907231735863002,
-        "volume_ccy": 17388177.0,
+        "change_pct": 12.125409216821959,
+        "volume_ccy": 14686914.0,
         "trend_score": 5
       },
       {
-        "symbol": "SOXSUSDT",
-        "actual_symbol": "SOXSUSDT",
+        "symbol": "ZKPUSDT",
+        "actual_symbol": "ZKPUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 9.115731989077933,
-        "volume_ccy": 1577608.9,
-        "trend_score": 4
-      },
-      {
-        "symbol": "PEPEUSDT",
-        "actual_symbol": "1000PEPEUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 8.922544163415594,
-        "volume_ccy": 124353622000000.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "PROVEUSDT",
-        "actual_symbol": "PROVEUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 6.604264170566817,
-        "volume_ccy": 9998983.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 11.714727085478884,
+        "volume_ccy": 10190060.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-10-31T06:49:13+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-10-31T09:55:19+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
+      "WETUSDT",
+      "SHELLUSDT",
       "WOOUSDT",
-      "CAPUSDT",
-      "DOODUSDT",
+      "TRUSTUSDT",
       "BREVUSDT",
-      "SOXSUSDT",
-      "PEPEUSDT",
-      "PROVEUSDT"
+      "ZKPUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "WETUSDT",
+      "SHELLUSDT",
       "WOOUSDT",
-      "CAPUSDT",
-      "DOODUSDT",
+      "TRUSTUSDT",
       "BREVUSDT",
-      "SOXSUSDT",
-      "PEPEUSDT",
-      "PROVEUSDT"
+      "ZKPUSDT"
     ]
   },
   "signals": {
