@@ -2,86 +2,74 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-02T16:19:57+08:00",
+    "last_scan_at": "2026-11-03T02:39:04+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "TRUTHUSDT",
-      "CASHCATUSDT",
-      "CSOPSKHYNIX2LUSDT",
-      "UPUSDT",
-      "NESUSDT"
+      "GRVTUSDT",
+      "NESUSDT",
+      "SOXSUSDT",
+      "KORUUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "TRUTHUSDT",
-        "actual_symbol": "TRUTHUSDT",
+        "symbol": "GRVTUSDT",
+        "actual_symbol": "GRVTUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 4.3512894553420285,
-        "volume_ccy": 58257800.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "CASHCATUSDT",
-        "actual_symbol": "CASHCATUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 7.1184631803628555,
-        "volume_ccy": 39229520.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "CSOPSKHYNIX2LUSDT",
-        "actual_symbol": "CSOPSKHYNIX2LUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 10.170092133238835,
-        "volume_ccy": 991707.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "UPUSDT",
-        "actual_symbol": "UPUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 8.04140127388535,
-        "volume_ccy": 15719280.0,
-        "trend_score": 3
+        "side_score": 6,
+        "change_pct": 5.655642197723399,
+        "volume_ccy": 15632120.0,
+        "trend_score": 6
       },
       {
         "symbol": "NESUSDT",
         "actual_symbol": "NESUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 6.291946308724839,
-        "volume_ccy": 9760980.0,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 6.5822784810126596,
+        "volume_ccy": 11403860.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "SOXSUSDT",
+        "actual_symbol": "SOXSUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.352299298519092,
+        "volume_ccy": 880984.6,
+        "trend_score": 5
+      },
+      {
+        "symbol": "KORUUSDT",
+        "actual_symbol": "KORUUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 4.779756326148076,
+        "volume_ccy": 8400565.51,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-11-02T16:19:57+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-11-03T02:39:04+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "TRUTHUSDT",
-      "CASHCATUSDT",
-      "CSOPSKHYNIX2LUSDT",
-      "UPUSDT",
-      "NESUSDT"
+      "GRVTUSDT",
+      "NESUSDT",
+      "SOXSUSDT",
+      "KORUUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "TRUTHUSDT",
-      "CASHCATUSDT",
-      "CSOPSKHYNIX2LUSDT",
-      "UPUSDT",
-      "NESUSDT"
+      "GRVTUSDT",
+      "NESUSDT",
+      "SOXSUSDT",
+      "KORUUSDT"
     ]
   },
   "signals": {
