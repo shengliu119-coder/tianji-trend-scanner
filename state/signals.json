@@ -8,68 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-03T09:17:23+08:00",
+    "last_scan_at": "2026-11-03T15:59:18+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "TRUSTUSDT",
-      "WETUSDT",
-      "CAPUSDT",
-      "GPROUSDT"
+      "BEATUSDT",
+      "LABUSDT",
+      "MEGAUSDT",
+      "IRYSUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "TRUSTUSDT",
-        "actual_symbol": "TRUSTUSDT",
+        "symbol": "BEATUSDT",
+        "actual_symbol": "BEATUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 5.808722863289654,
-        "volume_ccy": 30273170.0,
+        "change_pct": 7.846092023307211,
+        "volume_ccy": 135947075.0,
         "trend_score": 7
       },
       {
-        "symbol": "WETUSDT",
-        "actual_symbol": "WETUSDT",
+        "symbol": "LABUSDT",
+        "actual_symbol": "LABUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 4.323725055432376,
-        "volume_ccy": 39427520.0,
-        "trend_score": 6
+        "side_score": 7,
+        "change_pct": 5.428117192823083,
+        "volume_ccy": 96039256.0,
+        "trend_score": 7
       },
       {
-        "symbol": "CAPUSDT",
-        "actual_symbol": "CAPUSDT",
+        "symbol": "MEGAUSDT",
+        "actual_symbol": "MEGAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 8.675153229608682,
+        "volume_ccy": 248581430.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "IRYSUSDT",
+        "actual_symbol": "IRYSUSDT",
         "side": "short",
-        "side_score": 4,
-        "change_pct": 7.43693824296897,
-        "volume_ccy": 261886200.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "GPROUSDT",
-        "actual_symbol": "GPROUSDT",
-        "side": "long",
         "side_score": 3,
-        "change_pct": 13.991640543364683,
-        "volume_ccy": 1124744.0,
+        "change_pct": 9.048361934477372,
+        "volume_ccy": 654999800.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-03T09:17:23+08:00",
+    "alt_watchlist_at": "2026-11-03T15:59:18+08:00",
     "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "TRUSTUSDT",
-      "WETUSDT",
-      "CAPUSDT",
-      "GPROUSDT"
+      "BEATUSDT",
+      "LABUSDT",
+      "MEGAUSDT",
+      "IRYSUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "TRUSTUSDT",
-      "WETUSDT",
-      "CAPUSDT",
-      "GPROUSDT"
+      "BEATUSDT",
+      "LABUSDT",
+      "MEGAUSDT",
+      "IRYSUSDT"
     ]
   },
   "signals": {
