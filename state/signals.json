@@ -2,74 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-03T15:59:18+08:00",
+    "last_scan_at": "2026-11-03T23:43:02+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "BEATUSDT",
-      "LABUSDT",
-      "MEGAUSDT",
-      "IRYSUSDT"
+      "NIGHTUSDT",
+      "ZROUSDT",
+      "WOOUSDT",
+      "HOMEUSDT",
+      "CAPUSDT",
+      "IRYSUSDT",
+      "TRUSTUSDT",
+      "LITUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "BEATUSDT",
-        "actual_symbol": "BEATUSDT",
+        "symbol": "NIGHTUSDT",
+        "actual_symbol": "NIGHTUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 7.846092023307211,
-        "volume_ccy": 135947075.0,
+        "change_pct": 5.9975732362627845,
+        "volume_ccy": 122195600.0,
         "trend_score": 7
       },
       {
-        "symbol": "LABUSDT",
-        "actual_symbol": "LABUSDT",
+        "symbol": "ZROUSDT",
+        "actual_symbol": "ZROUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 5.428117192823083,
-        "volume_ccy": 96039256.0,
+        "change_pct": 5.242707512107217,
+        "volume_ccy": 9078132.0,
         "trend_score": 7
       },
       {
-        "symbol": "MEGAUSDT",
-        "actual_symbol": "MEGAUSDT",
+        "symbol": "WOOUSDT",
+        "actual_symbol": "WOOUSDT",
         "side": "long",
+        "side_score": 7,
+        "change_pct": 4.568571674855609,
+        "volume_ccy": 31930440.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "HOMEUSDT",
+        "actual_symbol": "HOMEUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 4.323094425483502,
+        "volume_ccy": 303633600.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "CAPUSDT",
+        "actual_symbol": "CAPUSDT",
+        "side": "short",
         "side_score": 5,
-        "change_pct": 8.675153229608682,
-        "volume_ccy": 248581430.0,
+        "change_pct": 9.386973180076629,
+        "volume_ccy": 260472700.0,
         "trend_score": 5
       },
       {
         "symbol": "IRYSUSDT",
         "actual_symbol": "IRYSUSDT",
         "side": "short",
-        "side_score": 3,
-        "change_pct": 9.048361934477372,
-        "volume_ccy": 654999800.0,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 6.534653465346543,
+        "volume_ccy": 1171514600.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "TRUSTUSDT",
+        "actual_symbol": "TRUSTUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 5.146491904394755,
+        "volume_ccy": 7952150.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "LITUSDT",
+        "actual_symbol": "LITUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 5.140127388535031,
+        "volume_ccy": 24616831.0,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-11-03T15:59:18+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-11-03T23:43:02+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "BEATUSDT",
-      "LABUSDT",
-      "MEGAUSDT",
-      "IRYSUSDT"
+      "NIGHTUSDT",
+      "ZROUSDT",
+      "WOOUSDT",
+      "HOMEUSDT",
+      "CAPUSDT",
+      "IRYSUSDT",
+      "TRUSTUSDT",
+      "LITUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "BEATUSDT",
-      "LABUSDT",
-      "MEGAUSDT",
-      "IRYSUSDT"
+      "NIGHTUSDT",
+      "ZROUSDT",
+      "WOOUSDT",
+      "HOMEUSDT",
+      "CAPUSDT",
+      "IRYSUSDT",
+      "TRUSTUSDT",
+      "LITUSDT"
     ]
   },
   "signals": {
