@@ -2,78 +2,78 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "强",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-04T15:46:09+08:00",
+    "last_scan_at": "2026-11-04T23:51:29+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "ZROUSDT",
-      "SPXUSDT",
-      "ZECUSDT",
-      "CASHCATUSDT",
-      "PUMPUSDT",
-      "AXTIUSDT",
+      "CAPUSDT",
+      "ARXUSDT",
+      "SKDDUSDT",
+      "BONKUSDT",
+      "BEATUSDT",
+      "MEGAUSDT",
       "USELESSUSDT",
-      "VVVUSDT"
+      "SOXSUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ZROUSDT",
-        "actual_symbol": "ZROUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 12.042960267621343,
-        "volume_ccy": 11549722.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "SPXUSDT",
-        "actual_symbol": "SPXUSDT",
+        "symbol": "CAPUSDT",
+        "actual_symbol": "CAPUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 8.477011494252881,
-        "volume_ccy": 3309154.0,
+        "change_pct": 26.436471540329116,
+        "volume_ccy": 534663600.0,
         "trend_score": 6
       },
       {
-        "symbol": "ZECUSDT",
-        "actual_symbol": "ZECUSDT",
+        "symbol": "ARXUSDT",
+        "actual_symbol": "ARXUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 12.485475863525945,
-        "volume_ccy": 1466280.39,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 24.850985786336544,
+        "volume_ccy": 30968040.0,
+        "trend_score": 6
       },
       {
-        "symbol": "CASHCATUSDT",
-        "actual_symbol": "CASHCATUSDT",
+        "symbol": "SKDDUSDT",
+        "actual_symbol": "SKDDUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 9.452253999030532,
-        "volume_ccy": 130487660.0,
-        "trend_score": 5
+        "side_score": 6,
+        "change_pct": 10.750932835820882,
+        "volume_ccy": 1625360.0,
+        "trend_score": 6
       },
       {
-        "symbol": "PUMPUSDT",
-        "actual_symbol": "PUMPUSDT",
+        "symbol": "BONKUSDT",
+        "actual_symbol": "1000BONKUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 10.570824524312885,
+        "volume_ccy": 1794703600000.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "BEATUSDT",
+        "actual_symbol": "BEATUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 8.769493697927803,
+        "volume_ccy": 221494061.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "MEGAUSDT",
+        "actual_symbol": "MEGAUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 11.610772357723576,
-        "volume_ccy": 36703341000.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "AXTIUSDT",
-        "actual_symbol": "AXTIUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 10.133444537114261,
-        "volume_ccy": 533121.57,
+        "change_pct": 8.242506811989088,
+        "volume_ccy": 151325740.0,
         "trend_score": 4
       },
       {
@@ -81,43 +81,43 @@
         "actual_symbol": "USELESSUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 18.43325604504803,
-        "volume_ccy": 128384900.0,
+        "change_pct": 14.81920101057951,
+        "volume_ccy": 200748470.0,
         "trend_score": 3
       },
       {
-        "symbol": "VVVUSDT",
-        "actual_symbol": "VVVUSDT",
+        "symbol": "SOXSUSDT",
+        "actual_symbol": "SOXSUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 14.180583073874894,
-        "volume_ccy": 503965.6,
+        "change_pct": 12.336412625096221,
+        "volume_ccy": 3275684.9,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-04T15:46:09+08:00",
+    "alt_watchlist_at": "2026-11-04T23:51:29+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "ZROUSDT",
-      "SPXUSDT",
-      "ZECUSDT",
-      "CASHCATUSDT",
-      "PUMPUSDT",
-      "AXTIUSDT",
+      "CAPUSDT",
+      "ARXUSDT",
+      "SKDDUSDT",
+      "BONKUSDT",
+      "BEATUSDT",
+      "MEGAUSDT",
       "USELESSUSDT",
-      "VVVUSDT"
+      "SOXSUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ZROUSDT",
-      "SPXUSDT",
-      "ZECUSDT",
-      "CASHCATUSDT",
-      "PUMPUSDT",
-      "AXTIUSDT",
+      "CAPUSDT",
+      "ARXUSDT",
+      "SKDDUSDT",
+      "BONKUSDT",
+      "BEATUSDT",
+      "MEGAUSDT",
       "USELESSUSDT",
-      "VVVUSDT"
+      "SOXSUSDT"
     ]
   },
   "signals": {
