@@ -8,80 +8,56 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-07T01:06:48+08:00",
+    "last_scan_at": "2026-11-07T06:09:57+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "NBISUSDT",
-      "PEPEUSDT",
-      "ZECUSDT",
-      "IRENUSDT",
-      "ETHFIUSDT"
+      "ACTUSDT",
+      "TRIAUSDT",
+      "XTZUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "NBISUSDT",
-        "actual_symbol": "NBISUSDT",
-        "side": "short",
-        "side_score": 6,
-        "change_pct": 9.562934101304414,
-        "volume_ccy": 364530.63,
-        "trend_score": 6
-      },
-      {
-        "symbol": "PEPEUSDT",
-        "actual_symbol": "1000PEPEUSDT",
+        "symbol": "ACTUSDT",
+        "actual_symbol": "ACTUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 9.295978849516025,
-        "volume_ccy": 49453088000000.0,
-        "trend_score": 6
+        "side_score": 3,
+        "change_pct": 15.699658703071654,
+        "volume_ccy": 653695677.0,
+        "trend_score": 3
       },
       {
-        "symbol": "ZECUSDT",
-        "actual_symbol": "ZECUSDT",
+        "symbol": "TRIAUSDT",
+        "actual_symbol": "TRIAUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 13.033707865168534,
+        "volume_ccy": 705463200.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "XTZUSDT",
+        "actual_symbol": "XTZUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 9.075539109353064,
-        "volume_ccy": 1465611.52,
-        "trend_score": 6
-      },
-      {
-        "symbol": "IRENUSDT",
-        "actual_symbol": "IRENUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 17.128874388254477,
-        "volume_ccy": 453054.2,
-        "trend_score": 5
-      },
-      {
-        "symbol": "ETHFIUSDT",
-        "actual_symbol": "ETHFIUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 10.449181575942152,
-        "volume_ccy": 14372608.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 13.008457511075322,
+        "volume_ccy": 9337877.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-07T01:06:48+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-11-07T06:09:57+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "NBISUSDT",
-      "PEPEUSDT",
-      "ZECUSDT",
-      "IRENUSDT",
-      "ETHFIUSDT"
+      "ACTUSDT",
+      "TRIAUSDT",
+      "XTZUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "NBISUSDT",
-      "PEPEUSDT",
-      "ZECUSDT",
-      "IRENUSDT",
-      "ETHFIUSDT"
+      "ACTUSDT",
+      "TRIAUSDT",
+      "XTZUSDT"
     ]
   },
   "signals": {
