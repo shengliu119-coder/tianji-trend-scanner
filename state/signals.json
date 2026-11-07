@@ -8,44 +8,80 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-07T22:44:23+08:00",
+    "last_scan_at": "2026-11-08T03:05:35+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 2,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "SOXSUSDT",
-      "UPUSDT"
+      "UPUSDT",
+      "MEGAUSDT",
+      "METUSDT",
+      "NIGHTUSDT",
+      "ACTUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "SOXSUSDT",
-        "actual_symbol": "SOXSUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 7.634505560565071,
-        "volume_ccy": 1310228.1,
-        "trend_score": 6
-      },
       {
         "symbol": "UPUSDT",
         "actual_symbol": "UPUSDT",
         "side": "short",
+        "side_score": 6,
+        "change_pct": 6.666666666666663,
+        "volume_ccy": 41017940.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "MEGAUSDT",
+        "actual_symbol": "MEGAUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.792531120331949,
+        "volume_ccy": 102625770.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "METUSDT",
+        "actual_symbol": "METUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 17.25631768953067,
+        "volume_ccy": 24428799.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "NIGHTUSDT",
+        "actual_symbol": "NIGHTUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 5.342490418499358,
+        "volume_ccy": 65584100.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "ACTUSDT",
+        "actual_symbol": "ACTUSDT",
+        "side": "long",
         "side_score": 3,
-        "change_pct": 6.448508180943212,
-        "volume_ccy": 37955580.0,
+        "change_pct": 14.475378975527601,
+        "volume_ccy": 2373915602.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-07T22:44:23+08:00",
-    "alt_watchlist_count": 2,
+    "alt_watchlist_at": "2026-11-08T03:05:35+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "SOXSUSDT",
-      "UPUSDT"
+      "UPUSDT",
+      "MEGAUSDT",
+      "METUSDT",
+      "NIGHTUSDT",
+      "ACTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "SOXSUSDT",
-      "UPUSDT"
+      "UPUSDT",
+      "MEGAUSDT",
+      "METUSDT",
+      "NIGHTUSDT",
+      "ACTUSDT"
     ]
   },
   "signals": {
