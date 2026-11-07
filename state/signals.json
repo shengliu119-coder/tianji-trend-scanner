@@ -8,56 +8,80 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-07T06:09:57+08:00",
+    "last_scan_at": "2026-11-07T09:58:28+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
-      "ACTUSDT",
-      "TRIAUSDT",
-      "XTZUSDT"
+      "RIVERUSDT",
+      "INTWUSDT",
+      "AAOIUSDT",
+      "BASEDUSDT",
+      "PONSUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ACTUSDT",
-        "actual_symbol": "ACTUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 15.699658703071654,
-        "volume_ccy": 653695677.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "TRIAUSDT",
-        "actual_symbol": "TRIAUSDT",
+        "symbol": "RIVERUSDT",
+        "actual_symbol": "RIVERUSDT",
         "side": "short",
-        "side_score": 3,
-        "change_pct": 13.033707865168534,
-        "volume_ccy": 705463200.0,
-        "trend_score": 3
+        "side_score": 6,
+        "change_pct": 7.51600512163892,
+        "volume_ccy": 3128014.2,
+        "trend_score": 6
       },
       {
-        "symbol": "XTZUSDT",
-        "actual_symbol": "XTZUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 13.008457511075322,
-        "volume_ccy": 9337877.0,
-        "trend_score": 3
+        "symbol": "INTWUSDT",
+        "actual_symbol": "INTWUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 12.012257405515834,
+        "volume_ccy": 2355496.1,
+        "trend_score": 5
+      },
+      {
+        "symbol": "AAOIUSDT",
+        "actual_symbol": "AAOIUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 10.667842186466835,
+        "volume_ccy": 1352116.75,
+        "trend_score": 5
+      },
+      {
+        "symbol": "BASEDUSDT",
+        "actual_symbol": "BASEDUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 7.522849777361137,
+        "volume_ccy": 71052110.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "PONSUSDT",
+        "actual_symbol": "PONSUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 7.251082251082249,
+        "volume_ccy": 61066430.0,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-11-07T06:09:57+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-11-07T09:58:28+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
-      "ACTUSDT",
-      "TRIAUSDT",
-      "XTZUSDT"
+      "RIVERUSDT",
+      "INTWUSDT",
+      "AAOIUSDT",
+      "BASEDUSDT",
+      "PONSUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ACTUSDT",
-      "TRIAUSDT",
-      "XTZUSDT"
+      "RIVERUSDT",
+      "INTWUSDT",
+      "AAOIUSDT",
+      "BASEDUSDT",
+      "PONSUSDT"
     ]
   },
   "signals": {
