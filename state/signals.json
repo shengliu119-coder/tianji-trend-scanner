@@ -8,80 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-07T09:58:28+08:00",
+    "last_scan_at": "2026-11-07T16:04:35+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "RIVERUSDT",
       "INTWUSDT",
+      "LITUSDT",
       "AAOIUSDT",
-      "BASEDUSDT",
-      "PONSUSDT"
+      "CSOPSKHYNIX2LUSDT",
+      "SLXUSDT",
+      "STXUSDT",
+      "METUSDT",
+      "ACTUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "RIVERUSDT",
-        "actual_symbol": "RIVERUSDT",
-        "side": "short",
-        "side_score": 6,
-        "change_pct": 7.51600512163892,
-        "volume_ccy": 3128014.2,
-        "trend_score": 6
-      },
       {
         "symbol": "INTWUSDT",
         "actual_symbol": "INTWUSDT",
         "side": "short",
-        "side_score": 5,
-        "change_pct": 12.012257405515834,
-        "volume_ccy": 2355496.1,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 7.309236947791161,
+        "volume_ccy": 2017932.1,
+        "trend_score": 7
+      },
+      {
+        "symbol": "LITUSDT",
+        "actual_symbol": "LITUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 5.946749962814219,
+        "volume_ccy": 17970946.0,
+        "trend_score": 7
       },
       {
         "symbol": "AAOIUSDT",
         "actual_symbol": "AAOIUSDT",
         "side": "short",
+        "side_score": 6,
+        "change_pct": 6.1499039077514475,
+        "volume_ccy": 1235956.79,
+        "trend_score": 6
+      },
+      {
+        "symbol": "CSOPSKHYNIX2LUSDT",
+        "actual_symbol": "CSOPSKHYNIX2LUSDT",
+        "side": "short",
+        "side_score": 6,
+        "change_pct": 4.991948470209338,
+        "volume_ccy": 1094691.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "SLXUSDT",
+        "actual_symbol": "SLXUSDT",
+        "side": "short",
+        "side_score": 6,
+        "change_pct": 4.853600633078347,
+        "volume_ccy": 53878020.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "STXUSDT",
+        "actual_symbol": "STXUSDT",
+        "side": "long",
         "side_score": 5,
-        "change_pct": 10.667842186466835,
-        "volume_ccy": 1352116.75,
+        "change_pct": 4.6008531383302875,
+        "volume_ccy": 13764145.0,
         "trend_score": 5
       },
       {
-        "symbol": "BASEDUSDT",
-        "actual_symbol": "BASEDUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 7.522849777361137,
-        "volume_ccy": 71052110.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "PONSUSDT",
-        "actual_symbol": "PONSUSDT",
-        "side": "short",
+        "symbol": "METUSDT",
+        "actual_symbol": "METUSDT",
+        "side": "long",
         "side_score": 4,
-        "change_pct": 7.251082251082249,
-        "volume_ccy": 61066430.0,
+        "change_pct": 8.199121522693988,
+        "volume_ccy": 7668039.0,
         "trend_score": 4
+      },
+      {
+        "symbol": "ACTUSDT",
+        "actual_symbol": "ACTUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 18.673812526271533,
+        "volume_ccy": 1071788071.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-07T09:58:28+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-11-07T16:04:35+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "RIVERUSDT",
       "INTWUSDT",
+      "LITUSDT",
       "AAOIUSDT",
-      "BASEDUSDT",
-      "PONSUSDT"
+      "CSOPSKHYNIX2LUSDT",
+      "SLXUSDT",
+      "STXUSDT",
+      "METUSDT",
+      "ACTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "RIVERUSDT",
       "INTWUSDT",
+      "LITUSDT",
       "AAOIUSDT",
-      "BASEDUSDT",
-      "PONSUSDT"
+      "CSOPSKHYNIX2LUSDT",
+      "SLXUSDT",
+      "STXUSDT",
+      "METUSDT",
+      "ACTUSDT"
     ]
   },
   "signals": {
