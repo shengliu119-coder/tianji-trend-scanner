@@ -8,44 +8,92 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-08T23:27:35+08:00",
+    "last_scan_at": "2026-11-09T03:52:12+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 2,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
+      "MERLUSDT",
+      "PEPEUSDT",
+      "BLENDUSDT",
       "RSRUSDT",
-      "PIEVERSEUSDT"
+      "PIEVERSEUSDT",
+      "OUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "MERLUSDT",
+        "actual_symbol": "MERLUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 7.829059829059817,
+        "volume_ccy": 93741685.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "PEPEUSDT",
+        "actual_symbol": "1000PEPEUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 4.501224053158869,
+        "volume_ccy": 30974321000000.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "BLENDUSDT",
+        "actual_symbol": "BLENDUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 13.502673796791445,
+        "volume_ccy": 125441240.0,
+        "trend_score": 5
+      },
       {
         "symbol": "RSRUSDT",
         "actual_symbol": "RSRUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 9.338521400778212,
-        "volume_ccy": 5785227500.0,
-        "trend_score": 7
+        "side_score": 4,
+        "change_pct": 11.096774193548391,
+        "volume_ccy": 10980614500.0,
+        "trend_score": 4
       },
       {
         "symbol": "PIEVERSEUSDT",
         "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 4.863979490101127,
-        "volume_ccy": 10017350.0,
-        "trend_score": 6
+        "side_score": 4,
+        "change_pct": 5.412334425295548,
+        "volume_ccy": 12273590.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "OUSDT",
+        "actual_symbol": "OUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 5.128205128205133,
+        "volume_ccy": 7023420.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-08T23:27:35+08:00",
-    "alt_watchlist_count": 2,
+    "alt_watchlist_at": "2026-11-09T03:52:12+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
+      "MERLUSDT",
+      "PEPEUSDT",
+      "BLENDUSDT",
       "RSRUSDT",
-      "PIEVERSEUSDT"
+      "PIEVERSEUSDT",
+      "OUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "MERLUSDT",
+      "PEPEUSDT",
+      "BLENDUSDT",
       "RSRUSDT",
-      "PIEVERSEUSDT"
+      "PIEVERSEUSDT",
+      "OUSDT"
     ]
   },
   "signals": {
