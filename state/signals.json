@@ -8,12 +8,16 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-09T07:17:52+08:00",
+    "last_scan_at": "2026-11-09T10:51:21+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 2,
+    "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
       "PEPEUSDT",
-      "MERLUSDT"
+      "PARTIUSDT",
+      "PIEVERSEUSDT",
+      "OUSDT",
+      "STABLEUSDT",
+      "RSRUSDT"
     ],
     "alt_watchlist": [
       {
@@ -21,31 +25,75 @@
         "actual_symbol": "1000PEPEUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 4.727415294457514,
-        "volume_ccy": 40191291000000.0,
+        "change_pct": 6.4259626421788605,
+        "volume_ccy": 51534340000000.0,
         "trend_score": 7
       },
       {
-        "symbol": "MERLUSDT",
-        "actual_symbol": "MERLUSDT",
+        "symbol": "PARTIUSDT",
+        "actual_symbol": "PARTIUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 5.604203152364273,
+        "volume_ccy": 43071190.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "PIEVERSEUSDT",
+        "actual_symbol": "PIEVERSEUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 5.908960367604828,
+        "volume_ccy": 14120450.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "OUSDT",
+        "actual_symbol": "OUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 7.192807192807205,
+        "volume_ccy": 7434340.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "STABLEUSDT",
+        "actual_symbol": "STABLEUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.732283464566928,
+        "volume_ccy": 24059400.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "RSRUSDT",
+        "actual_symbol": "RSRUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 7.300736771600796,
-        "volume_ccy": 247005578.0,
+        "change_pct": 10.583707504810775,
+        "volume_ccy": 15174471100.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-09T07:17:52+08:00",
-    "alt_watchlist_count": 2,
+    "alt_watchlist_at": "2026-11-09T10:51:21+08:00",
+    "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
       "PEPEUSDT",
-      "MERLUSDT"
+      "PARTIUSDT",
+      "PIEVERSEUSDT",
+      "OUSDT",
+      "STABLEUSDT",
+      "RSRUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "PEPEUSDT",
-      "MERLUSDT"
+      "PARTIUSDT",
+      "PIEVERSEUSDT",
+      "OUSDT",
+      "STABLEUSDT",
+      "RSRUSDT"
     ]
   },
   "signals": {
