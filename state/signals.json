@@ -8,116 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-10T19:41:15+08:00",
+    "last_scan_at": "2026-11-11T02:55:09+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
       "ONEUSDT",
-      "SNXXUSDT",
-      "KORUUSDT",
-      "CSOPSKHYNIX2LUSDT",
       "ACTUSDT",
       "PIUSDT",
-      "SOXLUSDT",
-      "ZHIPUUSDT"
+      "SKDDUSDT",
+      "NIGHTUSDT",
+      "INITUSDT",
+      "SOPHUSDT",
+      "OUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "ONEUSDT",
         "actual_symbol": "ONEUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 25.132170235263025,
-        "volume_ccy": 31769541800.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "SNXXUSDT",
-        "actual_symbol": "SNXXUSDT",
-        "side": "short",
-        "side_score": 6,
-        "change_pct": 14.954157445463178,
-        "volume_ccy": 23501764.7,
-        "trend_score": 6
-      },
-      {
-        "symbol": "KORUUSDT",
-        "actual_symbol": "KORUUSDT",
-        "side": "short",
-        "side_score": 6,
-        "change_pct": 12.931811354761185,
-        "volume_ccy": 12059170.74,
-        "trend_score": 6
-      },
-      {
-        "symbol": "CSOPSKHYNIX2LUSDT",
-        "actual_symbol": "CSOPSKHYNIX2LUSDT",
-        "side": "short",
-        "side_score": 6,
-        "change_pct": 12.174405436013593,
-        "volume_ccy": 1009245.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 17.680415850941742,
+        "volume_ccy": 37629097100.0,
+        "trend_score": 5
       },
       {
         "symbol": "ACTUSDT",
         "actual_symbol": "ACTUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 10.80056331925035,
-        "volume_ccy": 1242562772.0,
+        "change_pct": 13.981659685271142,
+        "volume_ccy": 1358331021.0,
         "trend_score": 5
       },
       {
         "symbol": "PIUSDT",
         "actual_symbol": "PIUSDT",
         "side": "short",
-        "side_score": 4,
-        "change_pct": 8.984921498523251,
-        "volume_ccy": 106616215.0,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 6.679823895551847,
+        "volume_ccy": 109682505.0,
+        "trend_score": 5
       },
       {
-        "symbol": "SOXLUSDT",
-        "actual_symbol": "SOXLUSDT",
-        "side": "short",
+        "symbol": "SKDDUSDT",
+        "actual_symbol": "SKDDUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 5.987853482634279,
+        "volume_ccy": 466022.8,
+        "trend_score": 5
+      },
+      {
+        "symbol": "NIGHTUSDT",
+        "actual_symbol": "NIGHTUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 5.7830532496456835,
+        "volume_ccy": 179161300.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "INITUSDT",
+        "actual_symbol": "INITUSDT",
+        "side": "long",
         "side_score": 3,
-        "change_pct": 19.515885022692874,
-        "volume_ccy": 17625563.58,
+        "change_pct": 87.1500309554929,
+        "volume_ccy": 1188999210.0,
         "trend_score": 3
       },
       {
-        "symbol": "ZHIPUUSDT",
-        "actual_symbol": "ZHIPUUSDT",
+        "symbol": "SOPHUSDT",
+        "actual_symbol": "SOPHUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 8.571428571428577,
+        "volume_ccy": 5273724600.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "OUSDT",
+        "actual_symbol": "OUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 14.566284779050731,
-        "volume_ccy": 319514.41,
+        "change_pct": 4.7735346358792095,
+        "volume_ccy": 3206310.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-10T19:41:15+08:00",
+    "alt_watchlist_at": "2026-11-11T02:55:09+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
       "ONEUSDT",
-      "SNXXUSDT",
-      "KORUUSDT",
-      "CSOPSKHYNIX2LUSDT",
       "ACTUSDT",
       "PIUSDT",
-      "SOXLUSDT",
-      "ZHIPUUSDT"
+      "SKDDUSDT",
+      "NIGHTUSDT",
+      "INITUSDT",
+      "SOPHUSDT",
+      "OUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "ONEUSDT",
-      "SNXXUSDT",
-      "KORUUSDT",
-      "CSOPSKHYNIX2LUSDT",
       "ACTUSDT",
       "PIUSDT",
-      "SOXLUSDT",
-      "ZHIPUUSDT"
+      "SKDDUSDT",
+      "NIGHTUSDT",
+      "INITUSDT",
+      "SOPHUSDT",
+      "OUSDT"
     ]
   },
   "signals": {
