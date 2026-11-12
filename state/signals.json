@@ -2,110 +2,86 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-12T09:14:29+08:00",
+    "last_scan_at": "2026-11-12T16:19:27+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 5,
     "last_okx_discovery_symbols": [
+      "DGAIUSDT",
+      "ONEUSDT",
+      "DOSUSDT",
       "UPUSDT",
-      "AEONUSDT",
-      "SNXXUSDT",
-      "AAOIUSDT",
-      "KORUUSDT",
-      "MVLLUSDT",
-      "INTWUSDT"
+      "SNXXUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "DGAIUSDT",
+        "actual_symbol": "DGAIUSDT",
+        "side": "short",
+        "side_score": 6,
+        "change_pct": 4.042704626334516,
+        "volume_ccy": 12643120.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "ONEUSDT",
+        "actual_symbol": "ONEUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 6.7941084299592625,
+        "volume_ccy": 13028791900.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "DOSUSDT",
+        "actual_symbol": "DOSUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 5.107692307692309,
+        "volume_ccy": 19738100.0,
+        "trend_score": 5
+      },
       {
         "symbol": "UPUSDT",
         "actual_symbol": "UPUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 20.482930890924226,
-        "volume_ccy": 115771300.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "AEONUSDT",
-        "actual_symbol": "AEONUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 4.13517118719431,
-        "volume_ccy": 189745180.0,
-        "trend_score": 4
+        "side_score": 3,
+        "change_pct": 13.70738636363635,
+        "volume_ccy": 113651410.0,
+        "trend_score": 3
       },
       {
         "symbol": "SNXXUSDT",
         "actual_symbol": "SNXXUSDT",
         "side": "short",
         "side_score": 3,
-        "change_pct": 16.09483960948396,
-        "volume_ccy": 36893205.2,
-        "trend_score": 3
-      },
-      {
-        "symbol": "AAOIUSDT",
-        "actual_symbol": "AAOIUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 8.266129032258068,
-        "volume_ccy": 586567.85,
-        "trend_score": 3
-      },
-      {
-        "symbol": "KORUUSDT",
-        "actual_symbol": "KORUUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 6.5586621374444825,
-        "volume_ccy": 12806704.73,
-        "trend_score": 3
-      },
-      {
-        "symbol": "MVLLUSDT",
-        "actual_symbol": "MVLLUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 5.865921787709487,
-        "volume_ccy": 579926.2,
-        "trend_score": 3
-      },
-      {
-        "symbol": "INTWUSDT",
-        "actual_symbol": "INTWUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 5.773829859924839,
-        "volume_ccy": 944463.8,
+        "change_pct": 4.19866871479775,
+        "volume_ccy": 37899816.9,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-12T09:14:29+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-11-12T16:19:27+08:00",
+    "alt_watchlist_count": 5,
     "alt_watchlist_symbols": [
+      "DGAIUSDT",
+      "ONEUSDT",
+      "DOSUSDT",
       "UPUSDT",
-      "AEONUSDT",
-      "SNXXUSDT",
-      "AAOIUSDT",
-      "KORUUSDT",
-      "MVLLUSDT",
-      "INTWUSDT"
+      "SNXXUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "DGAIUSDT",
+      "ONEUSDT",
+      "DOSUSDT",
       "UPUSDT",
-      "AEONUSDT",
-      "SNXXUSDT",
-      "AAOIUSDT",
-      "KORUUSDT",
-      "MVLLUSDT",
-      "INTWUSDT"
+      "SNXXUSDT"
     ]
   },
   "signals": {
