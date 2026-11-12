@@ -8,44 +8,44 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-13T00:52:24+08:00",
+    "last_scan_at": "2026-11-13T06:32:42+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 2,
     "last_okx_discovery_symbols": [
-      "ARXUSDT",
-      "SKDDUSDT"
+      "PARTIUSDT",
+      "HMSTRUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ARXUSDT",
-        "actual_symbol": "ARXUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 12.153759185980775,
-        "volume_ccy": 32921190.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "SKDDUSDT",
-        "actual_symbol": "SKDDUSDT",
+        "symbol": "PARTIUSDT",
+        "actual_symbol": "PARTIUSDT",
         "side": "short",
         "side_score": 4,
-        "change_pct": 13.859249490468779,
-        "volume_ccy": 945264.8,
+        "change_pct": 5.308168681804766,
+        "volume_ccy": 118284600.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "HMSTRUSDT",
+        "actual_symbol": "HMSTRUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 4.185692541856924,
+        "volume_ccy": 8246766600.0,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-11-13T00:52:24+08:00",
+    "alt_watchlist_at": "2026-11-13T06:32:42+08:00",
     "alt_watchlist_count": 2,
     "alt_watchlist_symbols": [
-      "ARXUSDT",
-      "SKDDUSDT"
+      "PARTIUSDT",
+      "HMSTRUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ARXUSDT",
-      "SKDDUSDT"
+      "PARTIUSDT",
+      "HMSTRUSDT"
     ]
   },
   "signals": {
