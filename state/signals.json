@@ -8,80 +8,44 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-12T16:19:27+08:00",
+    "last_scan_at": "2026-11-13T00:52:24+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 2,
     "last_okx_discovery_symbols": [
-      "DGAIUSDT",
-      "ONEUSDT",
-      "DOSUSDT",
-      "UPUSDT",
-      "SNXXUSDT"
+      "ARXUSDT",
+      "SKDDUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "DGAIUSDT",
-        "actual_symbol": "DGAIUSDT",
+        "symbol": "ARXUSDT",
+        "actual_symbol": "ARXUSDT",
         "side": "short",
-        "side_score": 6,
-        "change_pct": 4.042704626334516,
-        "volume_ccy": 12643120.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "ONEUSDT",
-        "actual_symbol": "ONEUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 6.7941084299592625,
-        "volume_ccy": 13028791900.0,
+        "change_pct": 12.153759185980775,
+        "volume_ccy": 32921190.0,
         "trend_score": 5
       },
       {
-        "symbol": "DOSUSDT",
-        "actual_symbol": "DOSUSDT",
+        "symbol": "SKDDUSDT",
+        "actual_symbol": "SKDDUSDT",
         "side": "short",
-        "side_score": 5,
-        "change_pct": 5.107692307692309,
-        "volume_ccy": 19738100.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "UPUSDT",
-        "actual_symbol": "UPUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 13.70738636363635,
-        "volume_ccy": 113651410.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "SNXXUSDT",
-        "actual_symbol": "SNXXUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 4.19866871479775,
-        "volume_ccy": 37899816.9,
-        "trend_score": 3
+        "side_score": 4,
+        "change_pct": 13.859249490468779,
+        "volume_ccy": 945264.8,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-11-12T16:19:27+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-11-13T00:52:24+08:00",
+    "alt_watchlist_count": 2,
     "alt_watchlist_symbols": [
-      "DGAIUSDT",
-      "ONEUSDT",
-      "DOSUSDT",
-      "UPUSDT",
-      "SNXXUSDT"
+      "ARXUSDT",
+      "SKDDUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "DGAIUSDT",
-      "ONEUSDT",
-      "DOSUSDT",
-      "UPUSDT",
-      "SNXXUSDT"
+      "ARXUSDT",
+      "SKDDUSDT"
     ]
   },
   "signals": {
