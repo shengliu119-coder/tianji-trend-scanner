@@ -8,44 +8,32 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-13T06:32:42+08:00",
+    "last_scan_at": "2026-11-13T10:51:42+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 2,
+    "last_okx_discovery_count": 1,
     "last_okx_discovery_symbols": [
-      "PARTIUSDT",
-      "HMSTRUSDT"
+      "MERLUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "PARTIUSDT",
-        "actual_symbol": "PARTIUSDT",
+        "symbol": "MERLUSDT",
+        "actual_symbol": "MERLUSDT",
         "side": "short",
         "side_score": 4,
-        "change_pct": 5.308168681804766,
-        "volume_ccy": 118284600.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "HMSTRUSDT",
-        "actual_symbol": "HMSTRUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 4.185692541856924,
-        "volume_ccy": 8246766600.0,
+        "change_pct": 4.1534670890531515,
+        "volume_ccy": 75948225.0,
         "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-11-13T06:32:42+08:00",
-    "alt_watchlist_count": 2,
+    "alt_watchlist_at": "2026-11-13T10:51:42+08:00",
+    "alt_watchlist_count": 1,
     "alt_watchlist_symbols": [
-      "PARTIUSDT",
-      "HMSTRUSDT"
+      "MERLUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "PARTIUSDT",
-      "HMSTRUSDT"
+      "MERLUSDT"
     ]
   },
   "signals": {
