@@ -8,36 +8,53 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-14T11:15:21+08:00",
+    "last_scan_at": "2026-11-14T18:18:31+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
+      "NIGHTUSDT",
+      "PIEVERSEUSDT",
       "MERLUSDT",
-      "CAPUSDT",
+      "ARXUSDT",
       "SKDDUSDT",
       "INJUSDT",
-      "HMSTRUSDT",
-      "ATUSDT",
-      "FOGOUSDT",
-      "LABUSDT"
+      "SOPHUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "NIGHTUSDT",
+        "actual_symbol": "NIGHTUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 8.038388238497152,
+        "volume_ccy": 165411600.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "PIEVERSEUSDT",
+        "actual_symbol": "PIEVERSEUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 5.157055789967187,
+        "volume_ccy": 16355670.0,
+        "trend_score": 7
+      },
       {
         "symbol": "MERLUSDT",
         "actual_symbol": "MERLUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 5.987821380243563,
-        "volume_ccy": 89304356.0,
-        "trend_score": 7
+        "side_score": 6,
+        "change_pct": 5.456349206349214,
+        "volume_ccy": 93514009.0,
+        "trend_score": 6
       },
       {
-        "symbol": "CAPUSDT",
-        "actual_symbol": "CAPUSDT",
+        "symbol": "ARXUSDT",
+        "actual_symbol": "ARXUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 5.388986870468357,
-        "volume_ccy": 223175200.0,
+        "change_pct": 8.657587548638123,
+        "volume_ccy": 17202150.0,
         "trend_score": 5
       },
       {
@@ -45,8 +62,8 @@
         "actual_symbol": "SKDDUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 10.806536636794943,
-        "volume_ccy": 612031.3,
+        "change_pct": 6.586582510434696,
+        "volume_ccy": 337412.2,
         "trend_score": 4
       },
       {
@@ -54,70 +71,41 @@
         "actual_symbol": "INJUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 7.710973308169318,
-        "volume_ccy": 5136446.5,
+        "change_pct": 5.001979675333251,
+        "volume_ccy": 5187180.7,
         "trend_score": 4
       },
       {
-        "symbol": "HMSTRUSDT",
-        "actual_symbol": "HMSTRUSDT",
+        "symbol": "SOPHUSDT",
+        "actual_symbol": "SOPHUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 5.040770941438105,
-        "volume_ccy": 8564346900.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "ATUSDT",
-        "actual_symbol": "ATUSDT",
-        "side": "short",
         "side_score": 3,
-        "change_pct": 5.87709497206704,
-        "volume_ccy": 3196300.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "FOGOUSDT",
-        "actual_symbol": "FOGOUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 5.681220410310364,
-        "volume_ccy": 491284170.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "LABUSDT",
-        "actual_symbol": "LABUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 5.40767722050995,
-        "volume_ccy": 195952825.0,
+        "change_pct": 27.09677419354839,
+        "volume_ccy": 20042190900.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-14T11:15:21+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-11-14T18:18:31+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
+      "NIGHTUSDT",
+      "PIEVERSEUSDT",
       "MERLUSDT",
-      "CAPUSDT",
+      "ARXUSDT",
       "SKDDUSDT",
       "INJUSDT",
-      "HMSTRUSDT",
-      "ATUSDT",
-      "FOGOUSDT",
-      "LABUSDT"
+      "SOPHUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "NIGHTUSDT",
+      "PIEVERSEUSDT",
       "MERLUSDT",
-      "CAPUSDT",
+      "ARXUSDT",
       "SKDDUSDT",
       "INJUSDT",
-      "HMSTRUSDT",
-      "ATUSDT",
-      "FOGOUSDT",
-      "LABUSDT"
+      "SOPHUSDT"
     ]
   },
   "signals": {
