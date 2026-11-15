@@ -2,38 +2,74 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-15T08:32:46+08:00",
+    "last_scan_at": "2026-11-15T15:12:38+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 1,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "PIEVERSEUSDT"
+      "PIEVERSEUSDT",
+      "NESUSDT",
+      "MEGAUSDT",
+      "NIGHTUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "PIEVERSEUSDT",
         "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
+        "side_score": 5,
+        "change_pct": 10.074006081119842,
+        "volume_ccy": 21605410.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
+        "side": "long",
         "side_score": 4,
-        "change_pct": 10.43875685557587,
-        "volume_ccy": 22213440.0,
+        "change_pct": 18.57246904588492,
+        "volume_ccy": 38445400.0,
         "trend_score": 4
+      },
+      {
+        "symbol": "MEGAUSDT",
+        "actual_symbol": "MEGAUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 7.948490230905862,
+        "volume_ccy": 100572290.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "NIGHTUSDT",
+        "actual_symbol": "NIGHTUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 7.807872722163387,
+        "volume_ccy": 465236600.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-15T08:32:46+08:00",
-    "alt_watchlist_count": 1,
+    "alt_watchlist_at": "2026-11-15T15:12:38+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "PIEVERSEUSDT"
+      "PIEVERSEUSDT",
+      "NESUSDT",
+      "MEGAUSDT",
+      "NIGHTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "PIEVERSEUSDT"
+      "PIEVERSEUSDT",
+      "NESUSDT",
+      "MEGAUSDT",
+      "NIGHTUSDT"
     ]
   },
   "signals": {
