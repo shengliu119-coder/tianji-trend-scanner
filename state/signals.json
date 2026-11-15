@@ -8,56 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-15T22:45:33+08:00",
+    "last_scan_at": "2026-11-16T04:02:49+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "UPUSDT",
       "NESUSDT",
-      "MEGAUSDT"
+      "LIGHTUSDT",
+      "UPUSDT",
+      "SIGNUSDT",
+      "MEGAUSDT",
+      "INITUSDT",
+      "NIGHTUSDT",
+      "KITEUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 30.271084337349386,
+        "volume_ccy": 84807490.0,
+        "trend_score": 7
+      },
+      {
+        "symbol": "LIGHTUSDT",
+        "actual_symbol": "LIGHTUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 4.368308351177724,
+        "volume_ccy": 1951479.0,
+        "trend_score": 6
+      },
       {
         "symbol": "UPUSDT",
         "actual_symbol": "UPUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 10.180012414649285,
-        "volume_ccy": 99119170.0,
+        "change_pct": 11.574074074074066,
+        "volume_ccy": 97401630.0,
         "trend_score": 5
       },
       {
-        "symbol": "NESUSDT",
-        "actual_symbol": "NESUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 17.67337807606264,
-        "volume_ccy": 62046670.0,
-        "trend_score": 4
+        "symbol": "SIGNUSDT",
+        "actual_symbol": "SIGNUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 6.049518233930966,
+        "volume_ccy": 54111700.0,
+        "trend_score": 5
       },
       {
         "symbol": "MEGAUSDT",
         "actual_symbol": "MEGAUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 9.673144876325091,
-        "volume_ccy": 164200460.0,
+        "change_pct": 14.96614522530936,
+        "volume_ccy": 176222790.0,
         "trend_score": 4
+      },
+      {
+        "symbol": "INITUSDT",
+        "actual_symbol": "INITUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 6.139489194499009,
+        "volume_ccy": 571180880.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "NIGHTUSDT",
+        "actual_symbol": "NIGHTUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 4.2183883862823475,
+        "volume_ccy": 318379000.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "KITEUSDT",
+        "actual_symbol": "KITEUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 10.071830106183631,
+        "volume_ccy": 14228740.0,
+        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-15T22:45:33+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-11-16T04:02:49+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "UPUSDT",
       "NESUSDT",
-      "MEGAUSDT"
+      "LIGHTUSDT",
+      "UPUSDT",
+      "SIGNUSDT",
+      "MEGAUSDT",
+      "INITUSDT",
+      "NIGHTUSDT",
+      "KITEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "UPUSDT",
       "NESUSDT",
-      "MEGAUSDT"
+      "LIGHTUSDT",
+      "UPUSDT",
+      "SIGNUSDT",
+      "MEGAUSDT",
+      "INITUSDT",
+      "NIGHTUSDT",
+      "KITEUSDT"
     ]
   },
   "signals": {
