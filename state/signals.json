@@ -2,122 +2,74 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-17T20:17:02+08:00",
+    "last_scan_at": "2026-11-18T04:54:58+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "HMSTRUSDT",
-      "ASTERUSDT",
-      "NIGHTUSDT",
-      "FLOCKUSDT",
-      "NESUSDT",
-      "BASEDUSDT",
+      "SOXSUSDT",
       "UVXYUSDT",
-      "VVVUSDT"
+      "SKYUSDT",
+      "HOMEUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "HMSTRUSDT",
-        "actual_symbol": "HMSTRUSDT",
+        "symbol": "SOXSUSDT",
+        "actual_symbol": "SOXSUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 10.194902548725642,
-        "volume_ccy": 19280529000.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "ASTERUSDT",
-        "actual_symbol": "ASTERUSDT",
-        "side": "short",
         "side_score": 6,
-        "change_pct": 8.656716417910447,
-        "volume_ccy": 50703687.0,
+        "change_pct": 4.7245437489339865,
+        "volume_ccy": 3497323.7,
         "trend_score": 6
-      },
-      {
-        "symbol": "NIGHTUSDT",
-        "actual_symbol": "NIGHTUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 9.158529845246873,
-        "volume_ccy": 283683100.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "FLOCKUSDT",
-        "actual_symbol": "FLOCKUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 8.195055875380962,
-        "volume_ccy": 19542900.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "NESUSDT",
-        "actual_symbol": "NESUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 10.171496156120636,
-        "volume_ccy": 25706350.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "BASEDUSDT",
-        "actual_symbol": "BASEDUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 9.600210415570753,
-        "volume_ccy": 139441500.0,
-        "trend_score": 4
       },
       {
         "symbol": "UVXYUSDT",
         "actual_symbol": "UVXYUSDT",
         "side": "long",
-        "side_score": 4,
-        "change_pct": 8.764289602612953,
-        "volume_ccy": 304022.2,
-        "trend_score": 4
+        "side_score": 5,
+        "change_pct": 8.540076335877858,
+        "volume_ccy": 472110.7,
+        "trend_score": 5
       },
       {
-        "symbol": "VVVUSDT",
-        "actual_symbol": "VVVUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 8.089853912347413,
-        "volume_ccy": 790996.8,
-        "trend_score": 4
+        "symbol": "SKYUSDT",
+        "actual_symbol": "SKYUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 4.501480750246786,
+        "volume_ccy": 13686600.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "HOMEUSDT",
+        "actual_symbol": "HOMEUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 4.29897410845139,
+        "volume_ccy": 559980000.0,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-11-17T20:17:02+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-11-18T04:54:58+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "HMSTRUSDT",
-      "ASTERUSDT",
-      "NIGHTUSDT",
-      "FLOCKUSDT",
-      "NESUSDT",
-      "BASEDUSDT",
+      "SOXSUSDT",
       "UVXYUSDT",
-      "VVVUSDT"
+      "SKYUSDT",
+      "HOMEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "HMSTRUSDT",
-      "ASTERUSDT",
-      "NIGHTUSDT",
-      "FLOCKUSDT",
-      "NESUSDT",
-      "BASEDUSDT",
+      "SOXSUSDT",
       "UVXYUSDT",
-      "VVVUSDT"
+      "SKYUSDT",
+      "HOMEUSDT"
     ]
   },
   "signals": {
