@@ -2,98 +2,62 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-18T18:48:28+08:00",
+    "last_scan_at": "2026-11-19T03:09:18+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "PIEVERSEUSDT",
-      "PIPPINUSDT",
-      "IRYSUSDT",
-      "BLENDUSDT",
-      "INTWUSDT",
-      "TRUSTUSDT"
+      "SOPHUSDT",
+      "SOONUSDT",
+      "PROSUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "PIEVERSEUSDT",
-        "actual_symbol": "PIEVERSEUSDT",
-        "side": "long",
+        "symbol": "SOPHUSDT",
+        "actual_symbol": "SOPHUSDT",
+        "side": "short",
         "side_score": 5,
-        "change_pct": 33.762715612560825,
-        "volume_ccy": 22362700.0,
+        "change_pct": 16.5903890160183,
+        "volume_ccy": 9102092600.0,
         "trend_score": 5
       },
       {
-        "symbol": "PIPPINUSDT",
-        "actual_symbol": "PIPPINUSDT",
+        "symbol": "SOONUSDT",
+        "actual_symbol": "SOONUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 22.566371681415937,
+        "volume_ccy": 23679059.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "PROSUSDT",
+        "actual_symbol": "PROSUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 91.09090909090911,
-        "volume_ccy": 2339270170.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "IRYSUSDT",
-        "actual_symbol": "IRYSUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 17.54266211604095,
-        "volume_ccy": 465862000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "BLENDUSDT",
-        "actual_symbol": "BLENDUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 9.62532299741601,
-        "volume_ccy": 18816500.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "INTWUSDT",
-        "actual_symbol": "INTWUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 9.441433930804507,
-        "volume_ccy": 848355.8,
-        "trend_score": 3
-      },
-      {
-        "symbol": "TRUSTUSDT",
-        "actual_symbol": "TRUSTUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 9.400921658986174,
-        "volume_ccy": 36523670.0,
+        "change_pct": 28.14229249011857,
+        "volume_ccy": 15351347.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-18T18:48:28+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-11-19T03:09:18+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "PIEVERSEUSDT",
-      "PIPPINUSDT",
-      "IRYSUSDT",
-      "BLENDUSDT",
-      "INTWUSDT",
-      "TRUSTUSDT"
+      "SOPHUSDT",
+      "SOONUSDT",
+      "PROSUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "PIEVERSEUSDT",
-      "PIPPINUSDT",
-      "IRYSUSDT",
-      "BLENDUSDT",
-      "INTWUSDT",
-      "TRUSTUSDT"
+      "SOPHUSDT",
+      "SOONUSDT",
+      "PROSUSDT"
     ]
   },
   "signals": {
