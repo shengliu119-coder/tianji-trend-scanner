@@ -8,43 +8,61 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-18T10:45:37+08:00",
+    "last_scan_at": "2026-11-18T18:48:28+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
       "PIEVERSEUSDT",
-      "OPGUSDT",
-      "JUPUSDT",
-      "TRUSTUSDT",
-      "BEATUSDT",
-      "ZECUSDT"
+      "PIPPINUSDT",
+      "IRYSUSDT",
+      "BLENDUSDT",
+      "INTWUSDT",
+      "TRUSTUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "PIEVERSEUSDT",
         "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 7.857971453069055,
-        "volume_ccy": 19219070.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "OPGUSDT",
-        "actual_symbol": "OPGUSDT",
-        "side": "long",
         "side_score": 5,
-        "change_pct": 5.273264401772532,
-        "volume_ccy": 2907320.0,
+        "change_pct": 33.762715612560825,
+        "volume_ccy": 22362700.0,
         "trend_score": 5
       },
       {
-        "symbol": "JUPUSDT",
-        "actual_symbol": "JUPUSDT",
+        "symbol": "PIPPINUSDT",
+        "actual_symbol": "PIPPINUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 7.163561076604548,
-        "volume_ccy": 38413250.0,
+        "change_pct": 91.09090909090911,
+        "volume_ccy": 2339270170.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "IRYSUSDT",
+        "actual_symbol": "IRYSUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 17.54266211604095,
+        "volume_ccy": 465862000.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "BLENDUSDT",
+        "actual_symbol": "BLENDUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 9.62532299741601,
+        "volume_ccy": 18816500.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "INTWUSDT",
+        "actual_symbol": "INTWUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 9.441433930804507,
+        "volume_ccy": 848355.8,
         "trend_score": 3
       },
       {
@@ -52,48 +70,30 @@
         "actual_symbol": "TRUSTUSDT",
         "side": "short",
         "side_score": 3,
-        "change_pct": 5.518200788314399,
-        "volume_ccy": 33060510.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "BEATUSDT",
-        "actual_symbol": "BEATUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 5.438459536820197,
-        "volume_ccy": 89664191.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ZECUSDT",
-        "actual_symbol": "ZECUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 5.427783902976849,
-        "volume_ccy": 1317575.64,
+        "change_pct": 9.400921658986174,
+        "volume_ccy": 36523670.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-18T10:45:37+08:00",
+    "alt_watchlist_at": "2026-11-18T18:48:28+08:00",
     "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
       "PIEVERSEUSDT",
-      "OPGUSDT",
-      "JUPUSDT",
-      "TRUSTUSDT",
-      "BEATUSDT",
-      "ZECUSDT"
+      "PIPPINUSDT",
+      "IRYSUSDT",
+      "BLENDUSDT",
+      "INTWUSDT",
+      "TRUSTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "PIEVERSEUSDT",
-      "OPGUSDT",
-      "JUPUSDT",
-      "TRUSTUSDT",
-      "BEATUSDT",
-      "ZECUSDT"
+      "PIPPINUSDT",
+      "IRYSUSDT",
+      "BLENDUSDT",
+      "INTWUSDT",
+      "TRUSTUSDT"
     ]
   },
   "signals": {
