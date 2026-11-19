@@ -2,74 +2,110 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-19T16:49:33+08:00",
+    "last_scan_at": "2026-11-20T01:45:31+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "NESUSDT",
-      "SOPHUSDT",
+      "UVXYUSDT",
+      "KGENUSDT",
       "TRUSTUSDT",
-      "HUMAUSDT"
+      "RAVEUSDT",
+      "BILLUSDT",
+      "MMTUSDT",
+      "INTWUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "NESUSDT",
-        "actual_symbol": "NESUSDT",
+        "symbol": "UVXYUSDT",
+        "actual_symbol": "UVXYUSDT",
         "side": "long",
-        "side_score": 5,
-        "change_pct": 7.3434125269978345,
-        "volume_ccy": 23171040.0,
-        "trend_score": 5
+        "side_score": 7,
+        "change_pct": 12.355769230769232,
+        "volume_ccy": 348523.3,
+        "trend_score": 7
       },
       {
-        "symbol": "SOPHUSDT",
-        "actual_symbol": "SOPHUSDT",
-        "side": "short",
-        "side_score": 4,
-        "change_pct": 8.620689655172416,
-        "volume_ccy": 9079625300.0,
-        "trend_score": 4
+        "symbol": "KGENUSDT",
+        "actual_symbol": "KGENUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 8.676489107165354,
+        "volume_ccy": 7082380.0,
+        "trend_score": 6
       },
       {
         "symbol": "TRUSTUSDT",
         "actual_symbol": "TRUSTUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 7.845210403890881,
-        "volume_ccy": 7399040.0,
+        "change_pct": 12.667869312487486,
+        "volume_ccy": 10344110.0,
         "trend_score": 4
       },
       {
-        "symbol": "HUMAUSDT",
-        "actual_symbol": "HUMAUSDT",
+        "symbol": "RAVEUSDT",
+        "actual_symbol": "RAVEUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 12.630579297245955,
+        "volume_ccy": 82400476.5,
+        "trend_score": 4
+      },
+      {
+        "symbol": "BILLUSDT",
+        "actual_symbol": "BILLUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 11.380323054331868,
+        "volume_ccy": 416437100.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "MMTUSDT",
+        "actual_symbol": "MMTUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 21.0108604845447,
+        "volume_ccy": 1092230630.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "INTWUSDT",
+        "actual_symbol": "INTWUSDT",
         "side": "short",
         "side_score": 3,
-        "change_pct": 15.647507414207041,
-        "volume_ccy": 4378598100.0,
+        "change_pct": 7.596961215513792,
+        "volume_ccy": 815002.1,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-19T16:49:33+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-11-20T01:45:31+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
-      "NESUSDT",
-      "SOPHUSDT",
+      "UVXYUSDT",
+      "KGENUSDT",
       "TRUSTUSDT",
-      "HUMAUSDT"
+      "RAVEUSDT",
+      "BILLUSDT",
+      "MMTUSDT",
+      "INTWUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "NESUSDT",
-      "SOPHUSDT",
+      "UVXYUSDT",
+      "KGENUSDT",
       "TRUSTUSDT",
-      "HUMAUSDT"
+      "RAVEUSDT",
+      "BILLUSDT",
+      "MMTUSDT",
+      "INTWUSDT"
     ]
   },
   "signals": {
