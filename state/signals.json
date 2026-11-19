@@ -8,116 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-19T09:14:56+08:00",
+    "last_scan_at": "2026-11-19T16:49:33+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 8,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "IRYSUSDT",
+      "NESUSDT",
       "SOPHUSDT",
       "TRUSTUSDT",
-      "UPUSDT",
-      "SENTUSDT",
-      "MEGAUSDT",
-      "RAVEUSDT",
-      "LABUSDT"
+      "HUMAUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "IRYSUSDT",
-        "actual_symbol": "IRYSUSDT",
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 45.02046384720329,
-        "volume_ccy": 1319170500.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 7.3434125269978345,
+        "volume_ccy": 23171040.0,
+        "trend_score": 5
       },
       {
         "symbol": "SOPHUSDT",
         "actual_symbol": "SOPHUSDT",
         "side": "short",
-        "side_score": 5,
-        "change_pct": 13.281250000000009,
-        "volume_ccy": 10343739100.0,
-        "trend_score": 5
+        "side_score": 4,
+        "change_pct": 8.620689655172416,
+        "volume_ccy": 9079625300.0,
+        "trend_score": 4
       },
       {
         "symbol": "TRUSTUSDT",
         "actual_symbol": "TRUSTUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 11.113522899934882,
-        "volume_ccy": 8528870.0,
+        "change_pct": 7.845210403890881,
+        "volume_ccy": 7399040.0,
         "trend_score": 4
       },
       {
-        "symbol": "UPUSDT",
-        "actual_symbol": "UPUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 16.3811563169165,
-        "volume_ccy": 65846600.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "SENTUSDT",
-        "actual_symbol": "SENTUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 14.502164502164513,
-        "volume_ccy": 123398200.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "MEGAUSDT",
-        "actual_symbol": "MEGAUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 11.533216442626147,
-        "volume_ccy": 79506310.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "RAVEUSDT",
-        "actual_symbol": "RAVEUSDT",
+        "symbol": "HUMAUSDT",
+        "actual_symbol": "HUMAUSDT",
         "side": "short",
         "side_score": 3,
-        "change_pct": 7.775590551181106,
-        "volume_ccy": 50625395.2,
-        "trend_score": 3
-      },
-      {
-        "symbol": "LABUSDT",
-        "actual_symbol": "LABUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 7.101137411620042,
-        "volume_ccy": 85013331.0,
+        "change_pct": 15.647507414207041,
+        "volume_ccy": 4378598100.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-19T09:14:56+08:00",
-    "alt_watchlist_count": 8,
+    "alt_watchlist_at": "2026-11-19T16:49:33+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "IRYSUSDT",
+      "NESUSDT",
       "SOPHUSDT",
       "TRUSTUSDT",
-      "UPUSDT",
-      "SENTUSDT",
-      "MEGAUSDT",
-      "RAVEUSDT",
-      "LABUSDT"
+      "HUMAUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "IRYSUSDT",
+      "NESUSDT",
       "SOPHUSDT",
       "TRUSTUSDT",
-      "UPUSDT",
-      "SENTUSDT",
-      "MEGAUSDT",
-      "RAVEUSDT",
-      "LABUSDT"
+      "HUMAUSDT"
     ]
   },
   "signals": {
