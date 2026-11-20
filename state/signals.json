@@ -2,86 +2,62 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-20T21:46:55+08:00",
+    "last_scan_at": "2026-11-21T05:35:26+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 5,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
+      "OUSDT",
       "BARDUSDT",
-      "PIPPINUSDT",
-      "SOXSUSDT",
-      "UVXYUSDT",
-      "SKDDUSDT"
+      "UVXYUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "OUSDT",
+        "actual_symbol": "OUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 5.982109578829672,
+        "volume_ccy": 2010730.0,
+        "trend_score": 6
+      },
       {
         "symbol": "BARDUSDT",
         "actual_symbol": "BARDUSDT",
         "side": "short",
-        "side_score": 6,
-        "change_pct": 5.244465490706764,
-        "volume_ccy": 545981736.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "PIPPINUSDT",
-        "actual_symbol": "PIPPINUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 6.555491661874653,
-        "volume_ccy": 2258935150.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "SOXSUSDT",
-        "actual_symbol": "SOXSUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 31.840421528039144,
-        "volume_ccy": 3837983.3,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 6.028662797583793,
+        "volume_ccy": 628850157.0,
+        "trend_score": 5
       },
       {
         "symbol": "UVXYUSDT",
         "actual_symbol": "UVXYUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 29.70391595033428,
-        "volume_ccy": 646256.3,
-        "trend_score": 3
-      },
-      {
-        "symbol": "SKDDUSDT",
-        "actual_symbol": "SKDDUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 24.799168320574623,
-        "volume_ccy": 1078495.0,
+        "change_pct": 16.54223968565816,
+        "volume_ccy": 816509.1,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-20T21:46:55+08:00",
-    "alt_watchlist_count": 5,
+    "alt_watchlist_at": "2026-11-21T05:35:26+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
+      "OUSDT",
       "BARDUSDT",
-      "PIPPINUSDT",
-      "SOXSUSDT",
-      "UVXYUSDT",
-      "SKDDUSDT"
+      "UVXYUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "OUSDT",
       "BARDUSDT",
-      "PIPPINUSDT",
-      "SOXSUSDT",
-      "UVXYUSDT",
-      "SKDDUSDT"
+      "UVXYUSDT"
     ]
   },
   "signals": {
