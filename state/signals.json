@@ -8,68 +8,68 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-20T07:53:54+08:00",
+    "last_scan_at": "2026-11-20T12:55:14+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "RAVEUSDT",
-      "SOXSUSDT",
       "SKDDUSDT",
-      "TRUSTUSDT"
+      "PIPPINUSDT",
+      "STABLEUSDT",
+      "SOXSUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "RAVEUSDT",
-        "actual_symbol": "RAVEUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 18.124436429215514,
-        "volume_ccy": 118466744.9,
-        "trend_score": 6
-      },
-      {
-        "symbol": "SOXSUSDT",
-        "actual_symbol": "SOXSUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 15.375044436544613,
-        "volume_ccy": 3347126.5,
-        "trend_score": 6
-      },
       {
         "symbol": "SKDDUSDT",
         "actual_symbol": "SKDDUSDT",
         "side": "long",
         "side_score": 6,
-        "change_pct": 8.351381789829338,
-        "volume_ccy": 889583.6,
+        "change_pct": 12.929564827276813,
+        "volume_ccy": 972463.1,
         "trend_score": 6
       },
       {
-        "symbol": "TRUSTUSDT",
-        "actual_symbol": "TRUSTUSDT",
+        "symbol": "PIPPINUSDT",
+        "actual_symbol": "PIPPINUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 8.366993652625505,
+        "volume_ccy": 1911137150.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "STABLEUSDT",
+        "actual_symbol": "STABLEUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 4.146011716989622,
+        "volume_ccy": 13591700.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "SOXSUSDT",
+        "actual_symbol": "SOXSUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 14.4191714053615,
-        "volume_ccy": 12700190.0,
+        "change_pct": 17.91703442188879,
+        "volume_ccy": 3446624.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-20T07:53:54+08:00",
+    "alt_watchlist_at": "2026-11-20T12:55:14+08:00",
     "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "RAVEUSDT",
-      "SOXSUSDT",
       "SKDDUSDT",
-      "TRUSTUSDT"
+      "PIPPINUSDT",
+      "STABLEUSDT",
+      "SOXSUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "RAVEUSDT",
-      "SOXSUSDT",
       "SKDDUSDT",
-      "TRUSTUSDT"
+      "PIPPINUSDT",
+      "STABLEUSDT",
+      "SOXSUSDT"
     ]
   },
   "signals": {
