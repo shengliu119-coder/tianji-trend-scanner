@@ -8,68 +8,56 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-22T06:28:16+08:00",
+    "last_scan_at": "2026-11-22T10:31:01+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
       "PIEVERSEUSDT",
-      "PIUSDT",
       "NIGHTUSDT",
-      "DGAIUSDT"
+      "BARDUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "PIEVERSEUSDT",
         "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
-        "side_score": 6,
-        "change_pct": 15.290468323274556,
-        "volume_ccy": 37316370.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "PIUSDT",
-        "actual_symbol": "PIUSDT",
-        "side": "short",
-        "side_score": 6,
-        "change_pct": 5.621840242669358,
-        "volume_ccy": 104831391.0,
-        "trend_score": 6
+        "side_score": 5,
+        "change_pct": 15.196178778573858,
+        "volume_ccy": 39353040.0,
+        "trend_score": 5
       },
       {
         "symbol": "NIGHTUSDT",
         "actual_symbol": "NIGHTUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 5.37182361733932,
-        "volume_ccy": 233994100.0,
+        "change_pct": 5.468045737059358,
+        "volume_ccy": 236012700.0,
         "trend_score": 4
       },
       {
-        "symbol": "DGAIUSDT",
-        "actual_symbol": "DGAIUSDT",
-        "side": "long",
+        "symbol": "BARDUSDT",
+        "actual_symbol": "BARDUSDT",
+        "side": "short",
         "side_score": 3,
-        "change_pct": 13.293481354967271,
-        "volume_ccy": 6006740.0,
+        "change_pct": 4.766146993318476,
+        "volume_ccy": 191611280.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-22T06:28:16+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-11-22T10:31:01+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
       "PIEVERSEUSDT",
-      "PIUSDT",
       "NIGHTUSDT",
-      "DGAIUSDT"
+      "BARDUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "PIEVERSEUSDT",
-      "PIUSDT",
       "NIGHTUSDT",
-      "DGAIUSDT"
+      "BARDUSDT"
     ]
   },
   "signals": {
