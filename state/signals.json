@@ -8,92 +8,104 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-23T01:43:45+08:00",
+    "last_scan_at": "2026-11-23T06:52:50+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 6,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
       "UPUSDT",
-      "NIGHTUSDT",
       "SNXXUSDT",
-      "DGAIUSDT",
-      "CAPUSDT",
-      "PARTIUSDT"
+      "NIGHTUSDT",
+      "HUSDT",
+      "KITEUSDT",
+      "KAITOUSDT",
+      "EDGEUSDT"
     ],
     "alt_watchlist": [
       {
         "symbol": "UPUSDT",
         "actual_symbol": "UPUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 12.602607436021238,
-        "volume_ccy": 37601390.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "NIGHTUSDT",
-        "actual_symbol": "NIGHTUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 10.136853043266782,
-        "volume_ccy": 303667300.0,
-        "trend_score": 7
+        "side_score": 6,
+        "change_pct": 19.98036327933236,
+        "volume_ccy": 37199130.0,
+        "trend_score": 6
       },
       {
         "symbol": "SNXXUSDT",
         "actual_symbol": "SNXXUSDT",
         "side": "short",
         "side_score": 6,
-        "change_pct": 6.480446927374295,
-        "volume_ccy": 4547218.1,
+        "change_pct": 5.901820187534472,
+        "volume_ccy": 5239221.5,
         "trend_score": 6
       },
       {
-        "symbol": "DGAIUSDT",
-        "actual_symbol": "DGAIUSDT",
+        "symbol": "NIGHTUSDT",
+        "actual_symbol": "NIGHTUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 36.32604055496264,
-        "volume_ccy": 45459180.0,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 9.936905000780333,
+        "volume_ccy": 305304900.0,
+        "trend_score": 5
       },
       {
-        "symbol": "CAPUSDT",
-        "actual_symbol": "CAPUSDT",
+        "symbol": "HUSDT",
+        "actual_symbol": "HUSDT",
         "side": "short",
-        "side_score": 3,
-        "change_pct": 8.34142787761049,
-        "volume_ccy": 95125500.0,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 8.847926267281098,
+        "volume_ccy": 464110710.0,
+        "trend_score": 5
       },
       {
-        "symbol": "PARTIUSDT",
-        "actual_symbol": "PARTIUSDT",
+        "symbol": "KITEUSDT",
+        "actual_symbol": "KITEUSDT",
         "side": "long",
-        "side_score": 3,
-        "change_pct": 6.679654884497653,
-        "volume_ccy": 93281000.0,
-        "trend_score": 3
+        "side_score": 5,
+        "change_pct": 5.875773618671238,
+        "volume_ccy": 6715600.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "KAITOUSDT",
+        "actual_symbol": "KAITOUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 4.996712689020378,
+        "volume_ccy": 14863389.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "EDGEUSDT",
+        "actual_symbol": "EDGEUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 4.918733960650121,
+        "volume_ccy": 5040100.0,
+        "trend_score": 5
       }
     ],
-    "alt_watchlist_at": "2026-11-23T01:43:45+08:00",
-    "alt_watchlist_count": 6,
+    "alt_watchlist_at": "2026-11-23T06:52:50+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
       "UPUSDT",
-      "NIGHTUSDT",
       "SNXXUSDT",
-      "DGAIUSDT",
-      "CAPUSDT",
-      "PARTIUSDT"
+      "NIGHTUSDT",
+      "HUSDT",
+      "KITEUSDT",
+      "KAITOUSDT",
+      "EDGEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
       "UPUSDT",
-      "NIGHTUSDT",
       "SNXXUSDT",
-      "DGAIUSDT",
-      "CAPUSDT",
-      "PARTIUSDT"
+      "NIGHTUSDT",
+      "HUSDT",
+      "KITEUSDT",
+      "KAITOUSDT",
+      "EDGEUSDT"
     ]
   },
   "signals": {
