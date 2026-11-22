@@ -8,56 +8,116 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-22T10:31:01+08:00",
+    "last_scan_at": "2026-11-22T18:04:34+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "PIEVERSEUSDT",
+      "ENSOUSDT",
+      "OFCUSDT",
+      "USELESSUSDT",
+      "CASHCATUSDT",
       "NIGHTUSDT",
-      "BARDUSDT"
+      "BSBUSDT",
+      "NEARUSDT",
+      "JTOUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "PIEVERSEUSDT",
-        "actual_symbol": "PIEVERSEUSDT",
+        "symbol": "ENSOUSDT",
+        "actual_symbol": "ENSOUSDT",
         "side": "long",
+        "side_score": 6,
+        "change_pct": 14.12162162162163,
+        "volume_ccy": 81519003.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "OFCUSDT",
+        "actual_symbol": "OFCUSDT",
+        "side": "short",
         "side_score": 5,
-        "change_pct": 15.196178778573858,
-        "volume_ccy": 39353040.0,
+        "change_pct": 15.420251489080089,
+        "volume_ccy": 794396600.0,
         "trend_score": 5
+      },
+      {
+        "symbol": "USELESSUSDT",
+        "actual_symbol": "USELESSUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 8.989361702127662,
+        "volume_ccy": 74097150.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "CASHCATUSDT",
+        "actual_symbol": "CASHCATUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 14.714881780250336,
+        "volume_ccy": 99688260.0,
+        "trend_score": 4
       },
       {
         "symbol": "NIGHTUSDT",
         "actual_symbol": "NIGHTUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 5.468045737059358,
-        "volume_ccy": 236012700.0,
+        "change_pct": 12.523350519315562,
+        "volume_ccy": 192472600.0,
         "trend_score": 4
       },
       {
-        "symbol": "BARDUSDT",
-        "actual_symbol": "BARDUSDT",
+        "symbol": "BSBUSDT",
+        "actual_symbol": "BSBUSDT",
         "side": "short",
-        "side_score": 3,
-        "change_pct": 4.766146993318476,
-        "volume_ccy": 191611280.0,
-        "trend_score": 3
+        "side_score": 4,
+        "change_pct": 8.763449243723684,
+        "volume_ccy": 9892760.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "NEARUSDT",
+        "actual_symbol": "NEARUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 8.544187752108549,
+        "volume_ccy": 28572268.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "JTOUSDT",
+        "actual_symbol": "JTOUSDT",
+        "side": "short",
+        "side_score": 4,
+        "change_pct": 8.37166513339466,
+        "volume_ccy": 12831639.0,
+        "trend_score": 4
       }
     ],
-    "alt_watchlist_at": "2026-11-22T10:31:01+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-11-22T18:04:34+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "PIEVERSEUSDT",
+      "ENSOUSDT",
+      "OFCUSDT",
+      "USELESSUSDT",
+      "CASHCATUSDT",
       "NIGHTUSDT",
-      "BARDUSDT"
+      "BSBUSDT",
+      "NEARUSDT",
+      "JTOUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "PIEVERSEUSDT",
+      "ENSOUSDT",
+      "OFCUSDT",
+      "USELESSUSDT",
+      "CASHCATUSDT",
       "NIGHTUSDT",
-      "BARDUSDT"
+      "BSBUSDT",
+      "NEARUSDT",
+      "JTOUSDT"
     ]
   },
   "signals": {
