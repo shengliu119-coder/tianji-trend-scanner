@@ -8,92 +8,92 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-23T21:27:04+08:00",
+    "last_scan_at": "2026-11-24T09:09:23+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 6,
     "last_okx_discovery_symbols": [
-      "PIPPINUSDT",
-      "SOXLUSDT",
-      "KGENUSDT",
-      "TRUSTUSDT",
-      "MINIMAXUSDT",
-      "ZHIPUUSDT"
+      "ZHIPUUSDT",
+      "FLNCUSDT",
+      "UNITREEUSDT",
+      "ZHONGJIUSDT",
+      "INTWUSDT",
+      "MUUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "PIPPINUSDT",
-        "actual_symbol": "PIPPINUSDT",
-        "side": "long",
-        "side_score": 6,
-        "change_pct": 9.162621359223284,
-        "volume_ccy": 306009730.0,
-        "trend_score": 6
-      },
-      {
-        "symbol": "SOXLUSDT",
-        "actual_symbol": "SOXLUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 7.149161518093555,
-        "volume_ccy": 16639391.07,
-        "trend_score": 5
-      },
-      {
-        "symbol": "KGENUSDT",
-        "actual_symbol": "KGENUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 6.846226862838173,
-        "volume_ccy": 4666460.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "TRUSTUSDT",
-        "actual_symbol": "TRUSTUSDT",
+        "symbol": "ZHIPUUSDT",
+        "actual_symbol": "ZHIPUUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 6.231033785150717,
-        "volume_ccy": 3391410.0,
+        "change_pct": 24.738493723849373,
+        "volume_ccy": 630064.54,
         "trend_score": 4
       },
       {
-        "symbol": "MINIMAXUSDT",
-        "actual_symbol": "MINIMAXUSDT",
-        "side": "short",
+        "symbol": "FLNCUSDT",
+        "actual_symbol": "FLNCUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 22.197802197802204,
+        "volume_ccy": 490609.2,
+        "trend_score": 4
+      },
+      {
+        "symbol": "UNITREEUSDT",
+        "actual_symbol": "UNITREEUSDT",
+        "side": "long",
         "side_score": 3,
-        "change_pct": 14.149305555555564,
-        "volume_ccy": 691931.9,
+        "change_pct": 24.48842670244883,
+        "volume_ccy": 536790.53,
         "trend_score": 3
       },
       {
-        "symbol": "ZHIPUUSDT",
-        "actual_symbol": "ZHIPUUSDT",
-        "side": "short",
+        "symbol": "ZHONGJIUSDT",
+        "actual_symbol": "ZHONGJIUSDT",
+        "side": "long",
         "side_score": 3,
-        "change_pct": 10.62628336755647,
-        "volume_ccy": 535009.06,
+        "change_pct": 23.475917817446934,
+        "volume_ccy": 719535.3,
+        "trend_score": 3
+      },
+      {
+        "symbol": "INTWUSDT",
+        "actual_symbol": "INTWUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 18.750000000000007,
+        "volume_ccy": 1167288.7,
+        "trend_score": 3
+      },
+      {
+        "symbol": "MUUSDT",
+        "actual_symbol": "MUUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 14.62052138179015,
+        "volume_ccy": 634452.99,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-23T21:27:04+08:00",
+    "alt_watchlist_at": "2026-11-24T09:09:23+08:00",
     "alt_watchlist_count": 6,
     "alt_watchlist_symbols": [
-      "PIPPINUSDT",
-      "SOXLUSDT",
-      "KGENUSDT",
-      "TRUSTUSDT",
-      "MINIMAXUSDT",
-      "ZHIPUUSDT"
+      "ZHIPUUSDT",
+      "FLNCUSDT",
+      "UNITREEUSDT",
+      "ZHONGJIUSDT",
+      "INTWUSDT",
+      "MUUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "PIPPINUSDT",
-      "SOXLUSDT",
-      "KGENUSDT",
-      "TRUSTUSDT",
-      "MINIMAXUSDT",
-      "ZHIPUUSDT"
+      "ZHIPUUSDT",
+      "FLNCUSDT",
+      "UNITREEUSDT",
+      "ZHONGJIUSDT",
+      "INTWUSDT",
+      "MUUSDT"
     ]
   },
   "signals": {
