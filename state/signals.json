@@ -2,122 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-24T18:58:23+08:00",
+    "last_scan_at": "2026-11-25T05:01:42+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
-      "PROSUSDT",
-      "ALLOUSDT",
-      "NESUSDT",
       "SHELLUSDT",
-      "NVDLUSDT",
-      "LIGHTUSDT",
-      "ZILUSDT",
-      "MVLLUSDT"
+      "NESUSDT",
+      "AIUSDT",
+      "PIPPINUSDT",
+      "SKDDUSDT",
+      "OPGUSDT",
+      "NGUSDT",
+      "STABLEUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "PROSUSDT",
-        "actual_symbol": "PROSUSDT",
+        "symbol": "SHELLUSDT",
+        "actual_symbol": "SHELLUSDT",
         "side": "long",
         "side_score": 7,
-        "change_pct": 7.72554441755962,
-        "volume_ccy": 1950279.0,
+        "change_pct": 10.061855670103084,
+        "volume_ccy": 31685150.0,
         "trend_score": 7
-      },
-      {
-        "symbol": "ALLOUSDT",
-        "actual_symbol": "ALLOUSDT",
-        "side": "short",
-        "side_score": 6,
-        "change_pct": 5.481457384515298,
-        "volume_ccy": 32675660.0,
-        "trend_score": 6
       },
       {
         "symbol": "NESUSDT",
         "actual_symbol": "NESUSDT",
         "side": "short",
+        "side_score": 6,
+        "change_pct": 13.989637305699468,
+        "volume_ccy": 38953070.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "AIUSDT",
+        "actual_symbol": "AIUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 7.235142118863045,
+        "volume_ccy": 257766900.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "PIPPINUSDT",
+        "actual_symbol": "PIPPINUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 5.3042992741485175,
+        "volume_ccy": 289022170.0,
+        "trend_score": 6
+      },
+      {
+        "symbol": "SKDDUSDT",
+        "actual_symbol": "SKDDUSDT",
+        "side": "short",
         "side_score": 5,
-        "change_pct": 6.654343807763404,
-        "volume_ccy": 48715470.0,
+        "change_pct": 18.234857324705647,
+        "volume_ccy": 1376841.2,
         "trend_score": 5
       },
       {
-        "symbol": "SHELLUSDT",
-        "actual_symbol": "SHELLUSDT",
+        "symbol": "OPGUSDT",
+        "actual_symbol": "OPGUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 16.11278952668681,
+        "volume_ccy": 11159780.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "NGUSDT",
+        "actual_symbol": "NGUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 4.508080521689816,
+        "volume_ccy": 1380940.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "STABLEUSDT",
+        "actual_symbol": "STABLEUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 7.15754833401893,
-        "volume_ccy": 21579160.0,
+        "change_pct": 6.625980819529209,
+        "volume_ccy": 11011600.0,
         "trend_score": 4
-      },
-      {
-        "symbol": "NVDLUSDT",
-        "actual_symbol": "NVDLUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 22.74247491638795,
-        "volume_ccy": 1121505.8,
-        "trend_score": 3
-      },
-      {
-        "symbol": "LIGHTUSDT",
-        "actual_symbol": "LIGHTUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 11.093585699263922,
-        "volume_ccy": 11920782.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "ZILUSDT",
-        "actual_symbol": "ZILUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 7.668474051123166,
-        "volume_ccy": 3573554000.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "MVLLUSDT",
-        "actual_symbol": "MVLLUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 7.074733096085407,
-        "volume_ccy": 535479.0,
-        "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-24T18:58:23+08:00",
+    "alt_watchlist_at": "2026-11-25T05:01:42+08:00",
     "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
-      "PROSUSDT",
-      "ALLOUSDT",
-      "NESUSDT",
       "SHELLUSDT",
-      "NVDLUSDT",
-      "LIGHTUSDT",
-      "ZILUSDT",
-      "MVLLUSDT"
+      "NESUSDT",
+      "AIUSDT",
+      "PIPPINUSDT",
+      "SKDDUSDT",
+      "OPGUSDT",
+      "NGUSDT",
+      "STABLEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "PROSUSDT",
-      "ALLOUSDT",
-      "NESUSDT",
       "SHELLUSDT",
-      "NVDLUSDT",
-      "LIGHTUSDT",
-      "ZILUSDT",
-      "MVLLUSDT"
+      "NESUSDT",
+      "AIUSDT",
+      "PIPPINUSDT",
+      "SKDDUSDT",
+      "OPGUSDT",
+      "NGUSDT",
+      "STABLEUSDT"
     ]
   },
   "signals": {
