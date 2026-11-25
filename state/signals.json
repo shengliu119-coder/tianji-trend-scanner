@@ -2,110 +2,110 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "震荡",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-25T21:48:24+08:00",
+    "last_scan_at": "2026-11-26T06:52:19+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
+      "NESUSDT",
+      "PIEVERSEUSDT",
+      "OLUSDT",
       "MMTUSDT",
-      "UVXYUSDT",
-      "SOXSUSDT",
-      "SKDDUSDT",
-      "PIPPINUSDT",
-      "SSVUSDT",
-      "AIUSDT"
+      "MONUSDT",
+      "VVVUSDT",
+      "SPACEUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 36.83914510686163,
+        "volume_ccy": 21319010.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "PIEVERSEUSDT",
+        "actual_symbol": "PIEVERSEUSDT",
+        "side": "long",
+        "side_score": 5,
+        "change_pct": 14.146968966071707,
+        "volume_ccy": 39608540.0,
+        "trend_score": 5
+      },
+      {
+        "symbol": "OLUSDT",
+        "actual_symbol": "OLUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 8.26558265582656,
+        "volume_ccy": 279616900.0,
+        "trend_score": 5
+      },
       {
         "symbol": "MMTUSDT",
         "actual_symbol": "MMTUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 14.070567986230639,
-        "volume_ccy": 440992240.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "UVXYUSDT",
-        "actual_symbol": "UVXYUSDT",
-        "side": "long",
-        "side_score": 7,
-        "change_pct": 4.8937784522003005,
-        "volume_ccy": 458145.3,
-        "trend_score": 7
-      },
-      {
-        "symbol": "SOXSUSDT",
-        "actual_symbol": "SOXSUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 25.647852325168625,
-        "volume_ccy": 4917819.2,
-        "trend_score": 5
-      },
-      {
-        "symbol": "SKDDUSDT",
-        "actual_symbol": "SKDDUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 22.618013321749203,
-        "volume_ccy": 1409656.8,
-        "trend_score": 5
-      },
-      {
-        "symbol": "PIPPINUSDT",
-        "actual_symbol": "PIPPINUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 8.156424581005584,
-        "volume_ccy": 418818590.0,
+        "change_pct": 44.55172413793104,
+        "volume_ccy": 556342650.0,
         "trend_score": 4
       },
       {
-        "symbol": "SSVUSDT",
-        "actual_symbol": "SSVUSDT",
-        "side": "long",
+        "symbol": "MONUSDT",
+        "actual_symbol": "MONUSDT",
+        "side": "short",
         "side_score": 3,
-        "change_pct": 19.280205655526995,
-        "volume_ccy": 1721332.0,
+        "change_pct": 15.756302521008397,
+        "volume_ccy": 2911481640.0,
         "trend_score": 3
       },
       {
-        "symbol": "AIUSDT",
-        "actual_symbol": "AIUSDT",
+        "symbol": "VVVUSDT",
+        "actual_symbol": "VVVUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 8.438287153652398,
-        "volume_ccy": 220993400.0,
+        "change_pct": 15.599389362044027,
+        "volume_ccy": 1070866.2,
+        "trend_score": 3
+      },
+      {
+        "symbol": "SPACEUSDT",
+        "actual_symbol": "SPACEUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 6.991525423728809,
+        "volume_ccy": 295900700.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-25T21:48:24+08:00",
+    "alt_watchlist_at": "2026-11-26T06:52:19+08:00",
     "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
+      "NESUSDT",
+      "PIEVERSEUSDT",
+      "OLUSDT",
       "MMTUSDT",
-      "UVXYUSDT",
-      "SOXSUSDT",
-      "SKDDUSDT",
-      "PIPPINUSDT",
-      "SSVUSDT",
-      "AIUSDT"
+      "MONUSDT",
+      "VVVUSDT",
+      "SPACEUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "NESUSDT",
+      "PIEVERSEUSDT",
+      "OLUSDT",
       "MMTUSDT",
-      "UVXYUSDT",
-      "SOXSUSDT",
-      "SKDDUSDT",
-      "PIPPINUSDT",
-      "SSVUSDT",
-      "AIUSDT"
+      "MONUSDT",
+      "VVVUSDT",
+      "SPACEUSDT"
     ]
   },
   "signals": {
