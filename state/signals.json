@@ -8,104 +8,56 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-26T06:52:19+08:00",
+    "last_scan_at": "2026-11-26T12:41:02+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 3,
     "last_okx_discovery_symbols": [
-      "NESUSDT",
       "PIEVERSEUSDT",
-      "OLUSDT",
-      "MMTUSDT",
-      "MONUSDT",
-      "VVVUSDT",
-      "SPACEUSDT"
+      "NESUSDT",
+      "BABYUSDT"
     ],
     "alt_watchlist": [
-      {
-        "symbol": "NESUSDT",
-        "actual_symbol": "NESUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 36.83914510686163,
-        "volume_ccy": 21319010.0,
-        "trend_score": 5
-      },
       {
         "symbol": "PIEVERSEUSDT",
         "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 14.146968966071707,
-        "volume_ccy": 39608540.0,
+        "change_pct": 19.54196966207101,
+        "volume_ccy": 46441610.0,
         "trend_score": 5
       },
       {
-        "symbol": "OLUSDT",
-        "actual_symbol": "OLUSDT",
-        "side": "short",
-        "side_score": 5,
-        "change_pct": 8.26558265582656,
-        "volume_ccy": 279616900.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "MMTUSDT",
-        "actual_symbol": "MMTUSDT",
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 44.55172413793104,
-        "volume_ccy": 556342650.0,
+        "change_pct": 24.24075096631695,
+        "volume_ccy": 36087160.0,
         "trend_score": 4
       },
       {
-        "symbol": "MONUSDT",
-        "actual_symbol": "MONUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 15.756302521008397,
-        "volume_ccy": 2911481640.0,
-        "trend_score": 3
-      },
-      {
-        "symbol": "VVVUSDT",
-        "actual_symbol": "VVVUSDT",
+        "symbol": "BABYUSDT",
+        "actual_symbol": "BABYUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 15.599389362044027,
-        "volume_ccy": 1070866.2,
-        "trend_score": 3
-      },
-      {
-        "symbol": "SPACEUSDT",
-        "actual_symbol": "SPACEUSDT",
-        "side": "long",
-        "side_score": 3,
-        "change_pct": 6.991525423728809,
-        "volume_ccy": 295900700.0,
+        "change_pct": 10.757345194896402,
+        "volume_ccy": 353636800.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-26T06:52:19+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-11-26T12:41:02+08:00",
+    "alt_watchlist_count": 3,
     "alt_watchlist_symbols": [
-      "NESUSDT",
       "PIEVERSEUSDT",
-      "OLUSDT",
-      "MMTUSDT",
-      "MONUSDT",
-      "VVVUSDT",
-      "SPACEUSDT"
+      "NESUSDT",
+      "BABYUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "NESUSDT",
       "PIEVERSEUSDT",
-      "OLUSDT",
-      "MMTUSDT",
-      "MONUSDT",
-      "VVVUSDT",
-      "SPACEUSDT"
+      "NESUSDT",
+      "BABYUSDT"
     ]
   },
   "signals": {
