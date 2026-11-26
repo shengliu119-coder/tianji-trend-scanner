@@ -8,56 +8,104 @@
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-26T12:41:02+08:00",
+    "last_scan_at": "2026-11-26T22:31:57+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 3,
+    "last_okx_discovery_count": 7,
     "last_okx_discovery_symbols": [
-      "PIEVERSEUSDT",
       "NESUSDT",
-      "BABYUSDT"
+      "PIEVERSEUSDT",
+      "INITUSDT",
+      "UPUSDT",
+      "SEIUSDT",
+      "CASHCATUSDT",
+      "WIFUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "NESUSDT",
+        "actual_symbol": "NESUSDT",
+        "side": "long",
+        "side_score": 6,
+        "change_pct": 50.834772596430646,
+        "volume_ccy": 90637990.0,
+        "trend_score": 6
+      },
       {
         "symbol": "PIEVERSEUSDT",
         "actual_symbol": "PIEVERSEUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 19.54196966207101,
-        "volume_ccy": 46441610.0,
+        "change_pct": 25.894861561486664,
+        "volume_ccy": 67627750.0,
         "trend_score": 5
       },
       {
-        "symbol": "NESUSDT",
-        "actual_symbol": "NESUSDT",
+        "symbol": "INITUSDT",
+        "actual_symbol": "INITUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 24.24075096631695,
-        "volume_ccy": 36087160.0,
+        "change_pct": 53.36264258555132,
+        "volume_ccy": 384639320.0,
         "trend_score": 4
       },
       {
-        "symbol": "BABYUSDT",
-        "actual_symbol": "BABYUSDT",
+        "symbol": "UPUSDT",
+        "actual_symbol": "UPUSDT",
+        "side": "long",
+        "side_score": 4,
+        "change_pct": 17.52516281823565,
+        "volume_ccy": 19288010.0,
+        "trend_score": 4
+      },
+      {
+        "symbol": "SEIUSDT",
+        "actual_symbol": "SEIUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 10.757345194896402,
-        "volume_ccy": 353636800.0,
+        "change_pct": 19.37639198218262,
+        "volume_ccy": 200135010.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "CASHCATUSDT",
+        "actual_symbol": "CASHCATUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 15.96037424325812,
+        "volume_ccy": 85867200.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "WIFUSDT",
+        "actual_symbol": "WIFUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 15.299145299145286,
+        "volume_ccy": 48771941.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-26T12:41:02+08:00",
-    "alt_watchlist_count": 3,
+    "alt_watchlist_at": "2026-11-26T22:31:57+08:00",
+    "alt_watchlist_count": 7,
     "alt_watchlist_symbols": [
-      "PIEVERSEUSDT",
       "NESUSDT",
-      "BABYUSDT"
+      "PIEVERSEUSDT",
+      "INITUSDT",
+      "UPUSDT",
+      "SEIUSDT",
+      "CASHCATUSDT",
+      "WIFUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "PIEVERSEUSDT",
       "NESUSDT",
-      "BABYUSDT"
+      "PIEVERSEUSDT",
+      "INITUSDT",
+      "UPUSDT",
+      "SEIUSDT",
+      "CASHCATUSDT",
+      "WIFUSDT"
     ]
   },
   "signals": {
