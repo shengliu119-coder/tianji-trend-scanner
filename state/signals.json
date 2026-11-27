@@ -2,74 +2,74 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "弱",
+    "last_market_state": "急跌",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-27T22:48:46+08:00",
+    "last_scan_at": "2026-11-28T07:02:54+08:00",
     "last_candidates": 0,
     "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
+      "SNDKUSDT",
       "YBUSDT",
-      "SENTUSDT",
-      "KORUUSDT",
-      "CSOPSKHYNIX2LUSDT"
+      "BILLUSDT",
+      "ACTUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "SNDKUSDT",
+        "actual_symbol": "SNDKUSDT",
+        "side": "short",
+        "side_score": 6,
+        "change_pct": 13.91828533154722,
+        "volume_ccy": 12637454.857,
+        "trend_score": 6
+      },
       {
         "symbol": "YBUSDT",
         "actual_symbol": "YBUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 13.456569270522756,
-        "volume_ccy": 121490810.0,
+        "change_pct": 9.369061193462557,
+        "volume_ccy": 127518637.0,
         "trend_score": 5
       },
       {
-        "symbol": "SENTUSDT",
-        "actual_symbol": "SENTUSDT",
+        "symbol": "BILLUSDT",
+        "actual_symbol": "BILLUSDT",
         "side": "long",
         "side_score": 4,
-        "change_pct": 7.389635316698655,
-        "volume_ccy": 101551600.0,
+        "change_pct": 9.067357512953368,
+        "volume_ccy": 212467500.0,
         "trend_score": 4
       },
       {
-        "symbol": "KORUUSDT",
-        "actual_symbol": "KORUUSDT",
-        "side": "short",
+        "symbol": "ACTUSDT",
+        "actual_symbol": "ACTUSDT",
+        "side": "long",
         "side_score": 3,
-        "change_pct": 8.342835423793236,
-        "volume_ccy": 13633150.39,
-        "trend_score": 3
-      },
-      {
-        "symbol": "CSOPSKHYNIX2LUSDT",
-        "actual_symbol": "CSOPSKHYNIX2LUSDT",
-        "side": "short",
-        "side_score": 3,
-        "change_pct": 8.200138985406525,
-        "volume_ccy": 972803.0,
+        "change_pct": 8.658591296545538,
+        "volume_ccy": 139167102.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-27T22:48:46+08:00",
+    "alt_watchlist_at": "2026-11-28T07:02:54+08:00",
     "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
+      "SNDKUSDT",
       "YBUSDT",
-      "SENTUSDT",
-      "KORUUSDT",
-      "CSOPSKHYNIX2LUSDT"
+      "BILLUSDT",
+      "ACTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "SNDKUSDT",
       "YBUSDT",
-      "SENTUSDT",
-      "KORUUSDT",
-      "CSOPSKHYNIX2LUSDT"
+      "BILLUSDT",
+      "ACTUSDT"
     ]
   },
   "signals": {
