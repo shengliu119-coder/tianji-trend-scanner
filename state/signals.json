@@ -2,110 +2,74 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "震荡",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-27T13:04:35+08:00",
+    "last_scan_at": "2026-11-27T22:48:46+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 7,
+    "last_okx_discovery_count": 4,
     "last_okx_discovery_symbols": [
-      "ZHONGJIUSDT",
+      "YBUSDT",
       "SENTUSDT",
-      "SPACEUSDT",
-      "NESUSDT",
-      "SKYUSDT",
-      "JUPUSDT",
-      "WUSDT"
+      "KORUUSDT",
+      "CSOPSKHYNIX2LUSDT"
     ],
     "alt_watchlist": [
       {
-        "symbol": "ZHONGJIUSDT",
-        "actual_symbol": "ZHONGJIUSDT",
+        "symbol": "YBUSDT",
+        "actual_symbol": "YBUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 10.855760508013294,
-        "volume_ccy": 581038.78,
-        "trend_score": 7
+        "side_score": 5,
+        "change_pct": 13.456569270522756,
+        "volume_ccy": 121490810.0,
+        "trend_score": 5
       },
       {
         "symbol": "SENTUSDT",
         "actual_symbol": "SENTUSDT",
         "side": "long",
-        "side_score": 7,
-        "change_pct": 9.411764705882343,
-        "volume_ccy": 81418400.0,
-        "trend_score": 7
-      },
-      {
-        "symbol": "SPACEUSDT",
-        "actual_symbol": "SPACEUSDT",
-        "side": "long",
-        "side_score": 5,
-        "change_pct": 12.405488658639044,
-        "volume_ccy": 337856600.0,
-        "trend_score": 5
-      },
-      {
-        "symbol": "NESUSDT",
-        "actual_symbol": "NESUSDT",
-        "side": "long",
         "side_score": 4,
-        "change_pct": 21.87925556059919,
-        "volume_ccy": 112962020.0,
+        "change_pct": 7.389635316698655,
+        "volume_ccy": 101551600.0,
         "trend_score": 4
       },
       {
-        "symbol": "SKYUSDT",
-        "actual_symbol": "SKYUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 11.630079402148542,
-        "volume_ccy": 152804100.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "JUPUSDT",
-        "actual_symbol": "JUPUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 7.735522904062229,
-        "volume_ccy": 19060320.0,
-        "trend_score": 4
-      },
-      {
-        "symbol": "WUSDT",
-        "actual_symbol": "WUSDT",
-        "side": "long",
+        "symbol": "KORUUSDT",
+        "actual_symbol": "KORUUSDT",
+        "side": "short",
         "side_score": 3,
-        "change_pct": 12.125102112265141,
-        "volume_ccy": 373750910.0,
+        "change_pct": 8.342835423793236,
+        "volume_ccy": 13633150.39,
+        "trend_score": 3
+      },
+      {
+        "symbol": "CSOPSKHYNIX2LUSDT",
+        "actual_symbol": "CSOPSKHYNIX2LUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 8.200138985406525,
+        "volume_ccy": 972803.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-27T13:04:35+08:00",
-    "alt_watchlist_count": 7,
+    "alt_watchlist_at": "2026-11-27T22:48:46+08:00",
+    "alt_watchlist_count": 4,
     "alt_watchlist_symbols": [
-      "ZHONGJIUSDT",
+      "YBUSDT",
       "SENTUSDT",
-      "SPACEUSDT",
-      "NESUSDT",
-      "SKYUSDT",
-      "JUPUSDT",
-      "WUSDT"
+      "KORUUSDT",
+      "CSOPSKHYNIX2LUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
-      "ZHONGJIUSDT",
+      "YBUSDT",
       "SENTUSDT",
-      "SPACEUSDT",
-      "NESUSDT",
-      "SKYUSDT",
-      "JUPUSDT",
-      "WUSDT"
+      "KORUUSDT",
+      "CSOPSKHYNIX2LUSDT"
     ]
   },
   "signals": {
