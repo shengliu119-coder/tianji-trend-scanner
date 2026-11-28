@@ -2,74 +2,122 @@
   "meta": {
     "last_cycle_at": "2026-07-15T13:58:30+08:00",
     "last_full_scan_at": "2026-07-15T13:58:30+08:00",
-    "last_market_state": "急跌",
+    "last_market_state": "弱",
     "last_open_refresh_at": "2026-07-15T07:25:52+08:00",
     "model_name": "四模型并行扫描",
     "scan_mode": "full",
     "schema": 2,
     "updated_at": "2026-07-15T13:58:30+08:00",
-    "last_scan_at": "2026-11-28T07:02:54+08:00",
+    "last_scan_at": "2026-11-28T12:34:15+08:00",
     "last_candidates": 0,
-    "last_okx_discovery_count": 4,
+    "last_okx_discovery_count": 8,
     "last_okx_discovery_symbols": [
+      "SLXUSDT",
       "SNDKUSDT",
-      "YBUSDT",
-      "BILLUSDT",
-      "ACTUSDT"
+      "SENTUSDT",
+      "ATUSDT",
+      "ROBOUSDT",
+      "SNXXUSDT",
+      "ZHIPUUSDT",
+      "CXMTUSDT"
     ],
     "alt_watchlist": [
+      {
+        "symbol": "SLXUSDT",
+        "actual_symbol": "SLXUSDT",
+        "side": "long",
+        "side_score": 7,
+        "change_pct": 6.368483412322272,
+        "volume_ccy": 177243470.0,
+        "trend_score": 7
+      },
       {
         "symbol": "SNDKUSDT",
         "actual_symbol": "SNDKUSDT",
         "side": "short",
         "side_score": 6,
-        "change_pct": 13.91828533154722,
-        "volume_ccy": 12637454.857,
+        "change_pct": 6.805434376168508,
+        "volume_ccy": 11477789.148,
         "trend_score": 6
       },
       {
-        "symbol": "YBUSDT",
-        "actual_symbol": "YBUSDT",
+        "symbol": "SENTUSDT",
+        "actual_symbol": "SENTUSDT",
         "side": "long",
         "side_score": 5,
-        "change_pct": 9.369061193462557,
-        "volume_ccy": 127518637.0,
+        "change_pct": 10.062893081761018,
+        "volume_ccy": 139178200.0,
         "trend_score": 5
       },
       {
-        "symbol": "BILLUSDT",
-        "actual_symbol": "BILLUSDT",
-        "side": "long",
-        "side_score": 4,
-        "change_pct": 9.067357512953368,
-        "volume_ccy": 212467500.0,
-        "trend_score": 4
+        "symbol": "ATUSDT",
+        "actual_symbol": "ATUSDT",
+        "side": "short",
+        "side_score": 5,
+        "change_pct": 9.263477600607446,
+        "volume_ccy": 14995320.0,
+        "trend_score": 5
       },
       {
-        "symbol": "ACTUSDT",
-        "actual_symbol": "ACTUSDT",
+        "symbol": "ROBOUSDT",
+        "actual_symbol": "ROBOUSDT",
         "side": "long",
         "side_score": 3,
-        "change_pct": 8.658591296545538,
-        "volume_ccy": 139167102.0,
+        "change_pct": 25.097783572359837,
+        "volume_ccy": 3373266200.0,
+        "trend_score": 3
+      },
+      {
+        "symbol": "SNXXUSDT",
+        "actual_symbol": "SNXXUSDT",
+        "side": "short",
+        "side_score": 3,
+        "change_pct": 12.42707117852976,
+        "volume_ccy": 66155277.8,
+        "trend_score": 3
+      },
+      {
+        "symbol": "ZHIPUUSDT",
+        "actual_symbol": "ZHIPUUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 11.650723571253371,
+        "volume_ccy": 369515.18,
+        "trend_score": 3
+      },
+      {
+        "symbol": "CXMTUSDT",
+        "actual_symbol": "CXMTUSDT",
+        "side": "long",
+        "side_score": 3,
+        "change_pct": 10.344149459193703,
+        "volume_ccy": 2025735.0,
         "trend_score": 3
       }
     ],
-    "alt_watchlist_at": "2026-11-28T07:02:54+08:00",
-    "alt_watchlist_count": 4,
+    "alt_watchlist_at": "2026-11-28T12:34:15+08:00",
+    "alt_watchlist_count": 8,
     "alt_watchlist_symbols": [
+      "SLXUSDT",
       "SNDKUSDT",
-      "YBUSDT",
-      "BILLUSDT",
-      "ACTUSDT"
+      "SENTUSDT",
+      "ATUSDT",
+      "ROBOUSDT",
+      "SNXXUSDT",
+      "ZHIPUUSDT",
+      "CXMTUSDT"
     ],
     "active_scan_symbols": [
       "BTCUSDT",
       "ETHUSDT",
+      "SLXUSDT",
       "SNDKUSDT",
-      "YBUSDT",
-      "BILLUSDT",
-      "ACTUSDT"
+      "SENTUSDT",
+      "ATUSDT",
+      "ROBOUSDT",
+      "SNXXUSDT",
+      "ZHIPUUSDT",
+      "CXMTUSDT"
     ]
   },
   "signals": {
